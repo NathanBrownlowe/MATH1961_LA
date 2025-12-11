@@ -1,0 +1,17 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<chapter xml:id="ch-chapter-title" xmlns:xi="http://www.w3.org/2001/XInclude">
+  <title>Vectors</title>
+
+  <introduction>
+    <p> Text before the first section. </p>
+  </introduction>
+
+  <!-- include sections -->
+  <xi:include href="sec-vectors-in-the-plane.ptx" />
+  <xi:include href="sec-vector-algebra.ptx" />
+  <xi:include href="sec-vectors-in-Rn.ptx" />
+  <xi:include href="sec-length-of-a-vector.ptx" />
+  <xi:include href="sec-vector-spaces.ptx" />
+
+</chapter>

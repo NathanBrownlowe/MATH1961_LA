@@ -12,8 +12,31 @@
     <xi:include href="./frontmatter.ptx" />
 
     <!-- Include chapters -->
-    <xi:include href="./ch-chapter-title.ptx" />
+    <xi:include href="./ch-vectors.ptx" />
 
+    <xi:include href="./ch-dotprods-and-projs.ptx" />
+
+    <xi:include href="./ch-cross-prods.ptx" />
+
+    <xi:include href="./ch-lines-and-planes.ptx" />
+
+    <xi:include href="./ch-systems.ptx" />
+
+    <xi:include href="./ch-matrices.ptx" />
+
+    <xi:include href="./ch-matrix-inverses.ptx" />
+
+    <xi:include href="./ch-determinants.ptx" />
+
+    <xi:include href="./ch-span-and-li.ptx" />
+
+    <xi:include href="./ch-subspaces.ptx" />
+
+    <xi:include href="./ch-basis-dim-ranknullity.ptx" />
+
+    <xi:include href="./ch-eigenvectors.ptx" />
+
+    <xi:include href="./ch-sim-and-diag.ptx" />
 
     <!-- Include backmatter -->
     <xi:include href="./backmatter.ptx" />
