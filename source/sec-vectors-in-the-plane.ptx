@@ -3,6 +3,29 @@
 <section xml:id="sec-vectors-in-the-plane" xmlns:xi="http://www.w3.org/2001/XInclude">
   <title>Vectors in the plane</title>
 
-  <p> Text of section. </p>
+  <definition xml:id="def-vector-plane">
+    <statement>
+      <p>
+        A <term>vector</term> in the <m>(x, y)-</m>plane is a directed line segment, which is also called 
+        an `arrow'. The set of all vectors in the plane is denoted by <m>\mathbb{R}^2</m>.
+      </p>
+    </statement>
+  </definition>
+
+  <figure xml:id="fig-tikz">
+  <caption>A figure generated with TikZ in
+  <latex /></caption>
+  <image width="15%" xml:id="poset">
+  <latex-image >
+\begin{tikzpicture}
+\draw (0, 0) node [anchor = north east] {$O$};
+\draw [thick,&lt;-&gt;] (0, -0.5) -- (0,1) node [above] {$y$};
+\end{tikzpicture}
+</latex-image>
+  </image>
+</figure>
+
+
+
 
 </section>
