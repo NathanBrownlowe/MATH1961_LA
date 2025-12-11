@@ -16,7 +16,25 @@ var ptx_lunr_docs = [
   "type": "Section",
   "number": "1.1",
   "title": "Vectors in the plane",
-  "body": " Vectors in the plane  Text of section.  "
+  "body": " Vectors in the plane    A vector in the plane is a directed line segment, which is also called an `arrow'. The set of all vectors in the plane is denoted by .     A figure generated with TikZ in latex      "
+},
+{
+  "id": "def-vector-plane",
+  "level": "2",
+  "url": "sec-vectors-in-the-plane.html#def-vector-plane",
+  "type": "Definition",
+  "number": "1.1.1",
+  "title": "",
+  "body": "  A vector in the plane is a directed line segment, which is also called an `arrow'. The set of all vectors in the plane is denoted by .   "
+},
+{
+  "id": "fig-tikz",
+  "level": "2",
+  "url": "sec-vectors-in-the-plane.html#fig-tikz",
+  "type": "Figure",
+  "number": "1.1.2",
+  "title": "",
+  "body": " A figure generated with TikZ in latex     "
 },
 {
   "id": "sec-vector-algebra",
