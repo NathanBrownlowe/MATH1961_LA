@@ -8,6 +8,10 @@
   </introduction>
 
   <!-- include sections -->
-  <xi:include href="sec-section-name.ptx" />
+  <xi:include href="sec-properties-of-inverses.ptx" />
+  <xi:include href="sec-calculating-2x2-inverses.ptx" />
+  <xi:include href="sec-calculating-nxn-inverses.ptx" />
+  <xi:include href="sec-elementary-matrices.ptx" />
+  <xi:include href="sec-characterisations-of-invertibility.ptx" />
 
 </chapter>

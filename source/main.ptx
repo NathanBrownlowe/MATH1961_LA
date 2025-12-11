@@ -38,6 +38,11 @@
 
     <xi:include href="./ch-sim-and-diag.ptx" />
 
+    <xi:include href="./ch-markov-chains.ptx" />
+
+    <xi:include href="./ch-pop-models.ptx" />
+
+
     <!-- Include backmatter -->
     <xi:include href="./backmatter.ptx" />
 

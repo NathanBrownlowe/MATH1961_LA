@@ -8,6 +8,8 @@
   </introduction>
 
   <!-- include sections -->
-  <xi:include href="sec-section-name.ptx" />
+  <xi:include href="sec-subspaces.ptx" />
+  <xi:include href="sec-row-and-column-spaces.ptx" />
+  <xi:include href="sec-null-spaces.ptx" />
 
 </chapter>

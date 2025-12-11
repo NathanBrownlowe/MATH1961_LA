@@ -8,6 +8,9 @@
   </introduction>
 
   <!-- include sections -->
-  <xi:include href="sec-section-name.ptx" />
+  <xi:include href="sec-evalues-evectors-espaces.ptx" />
+  <xi:include href="sec-evalue-examples.ptx" />
+  <xi:include href="sec-evalue-multiplicities.ptx" />
+  <xi:include href="sec-characterisations-of-invertibility-take2.ptx" />
 
 </chapter>

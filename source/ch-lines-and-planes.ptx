@@ -8,6 +8,9 @@
   </introduction>
 
   <!-- include sections -->
-  <xi:include href="sec-section-name.ptx" />
+  <xi:include href="sec-lines-in-R2.ptx" />
+  <xi:include href="sec-lines-in-R3-and-Rn.ptx" />
+  <xi:include href="sec-planes.ptx" />
+  <xi:include href="sec-shortest-distance.ptx" />
 
 </chapter>

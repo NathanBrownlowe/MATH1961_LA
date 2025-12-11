@@ -1,0 +1,17 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<chapter xml:id="ch-markov-chains" xmlns:xi="http://www.w3.org/2001/XInclude">
+  <title>Markov Chains</title>
+
+  <introduction>
+    <p> Text before the first section. </p>
+  </introduction>
+
+  <!-- include sections -->
+  <xi:include href="sec-prob-vectors-and-stochastic-matrices.ptx" />
+  <xi:include href="sec-markov-chains.ptx" />
+  <xi:include href="sec-steady-state-vectors.ptx" />
+  <xi:include href="sec-regular-markov-chains.ptx" />
+
+
+</chapter>

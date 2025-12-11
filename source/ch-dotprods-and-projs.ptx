@@ -8,6 +8,8 @@
   </introduction>
 
   <!-- include sections -->
-  <xi:include href="sec-section-name.ptx" />
+  <xi:include href="sec-dot-products.ptx" />
+  <xi:include href="sec-angle-between-vectors.ptx" />
+  <xi:include href="sec-projections.ptx" />
 
 </chapter>

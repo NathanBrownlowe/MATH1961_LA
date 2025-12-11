@@ -8,6 +8,9 @@
   </introduction>
 
   <!-- include sections -->
-  <xi:include href="sec-section-name.ptx" />
+  <xi:include href="sec-matrices.ptx" />
+  <xi:include href="sec-matrix-add-and-scale.ptx" />
+  <xi:include href="sec-matrix-mult.ptx" />
+  <xi:include href="sec-transpose.ptx" />
 
 </chapter>

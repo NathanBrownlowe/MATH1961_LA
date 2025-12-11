@@ -8,6 +8,9 @@
   </introduction>
 
   <!-- include sections -->
-  <xi:include href="sec-section-name.ptx" />
+  <xi:include href="sec-similarity.ptx" />
+  <xi:include href="sec-diagonalisation.ptx" />
+  <xi:include href="sec-examples-of-diagonalisation.ptx" />
+  <xi:include href="sec-apps-of-diagonalisation.ptx" />
 
 </chapter>

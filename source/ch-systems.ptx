@@ -8,6 +8,9 @@
   </introduction>
 
   <!-- include sections -->
-  <xi:include href="sec-section-name.ptx" />
+  <xi:include href="sec-systems.ptx" />
+  <xi:include href="sec-gaussian-elimination.ptx" />
+  <xi:include href="sec-number-of-solutions.ptx" />
+  <xi:include href="sec-gauss-jordan-elimination.ptx" />
 
 </chapter>
