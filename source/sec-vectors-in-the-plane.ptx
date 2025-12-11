@@ -19,7 +19,9 @@
   <latex-image >
 \begin{tikzpicture}
 \draw (0, 0) node [anchor = north east] {$O$};
+\draw [thick,&lt;-&gt;] (-0.5, 0) -- (1,0) node [right] {$x$};
 \draw [thick,&lt;-&gt;] (0, -0.5) -- (0,1) node [above] {$y$};
+\draw [very thick,-&gt;] (0, 0) -- (0.85, 0.60);
 \end{tikzpicture}
 </latex-image>
   </image>
