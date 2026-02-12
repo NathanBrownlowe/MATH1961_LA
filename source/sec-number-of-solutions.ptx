@@ -80,11 +80,33 @@ harder to visualise.
       <sidebyside widths="45% 45%" margins="auto" valign="middle">
 	<figure xml:id="fig-plane_int1">
 	  <caption>Single intersection.</caption>
-		<!--plane_intersect1.tikz-->
+		<image width="60%">
+<latex-image>
+\tdplotsetmaincoords{60}{120} %set view angle for 3D plot
+\begin{tikzpicture}[tdplot_main_coords, scale = 0.65]
+    % x-y plane
+    \filldraw[fill=blue!20,opacity=0.5] (3,3,0) -- (-3,3,0) -- (-3,-3,0) -- (3,-3,0) -- cycle;
+    \filldraw[fill=red!20,opacity=0.5] (3,0,3) -- (-3,0,3) -- (-3,0,-3) -- (3,0,-3) -- cycle;
+    \filldraw[fill=green!20,opacity=0.5] (0,3,3) -- (0,3,-3) -- (0,-3,-3) -- (0,-3,3) -- cycle;
+    \fill (0,0, 0) circle (3pt);
+
+\end{tikzpicture}
+</latex-image>
+</image>
 	</figure>
 	<figure xml:id="fig-plane_int2">
 	  <caption>Infinitely many intersection points.</caption>
-	  <!--plane_intersect2.tikz-->
+	  <image width="60%">
+<latex-image>
+\tdplotsetmaincoords{60}{120} % set view angle for 3D plot
+\begin{tikzpicture}[tdplot_main_coords, scale = 0.65]
+    \filldraw[fill=green!20,opacity=0.5] (0,3,3) -- (0,3,-3) -- (0,-3,-3) -- (0,-3,3) -- cycle;
+    \filldraw[fill=blue!20,opacity=0.5] (0,3,3) -- (0,3,-3) -- (-1.5,-3,-3) -- (-1.5,-3,3) -- cycle;
+    \filldraw[fill=red!20,opacity=0.5] (0,3,3) -- (0,3,-3) -- (-3,-3,-3) -- (-3,-3,3) -- cycle;
+    \draw[very thick] (0, 3, -4) -- (0, 3, 4);
+\end{tikzpicture}
+</latex-image>
+</image>
 	</figure>
 </sidebyside>
     </figure>
@@ -93,13 +115,43 @@ harder to visualise.
       <caption>Three planes in <m>\R^3</m> with no common intersection</caption>
       <sidebyside widths="30% 30% 30%" margins="auto" valign="middle">
 	<figure xml:id="">
-	  <!--plane_intersect3a.tikz-->
+	  <image width="60%">
+<latex-image>
+\tdplotsetmaincoords{60}{120} % set view angle for 3D plot
+\begin{tikzpicture}[tdplot_main_coords, scale = 0.5]
+    \filldraw[fill=green!20,opacity=0.5] (0,3,3) -- (0,3,-3) -- (0,-3,-3) -- (0,-3,3) -- cycle;
+    \filldraw[fill=blue!20,opacity=0.5] (-1.5,3,3) -- (-1.5,3,-3) -- (-1.5,-3,-3) -- (-1.5,-3,3) -- cycle;
+    \filldraw[fill=red!20,opacity=0.5] (-3,3,3) -- (-3,3,-3) -- (-3,-3,-3) -- (-3,-3,3) -- cycle;
+\end{tikzpicture}
+</latex-image>
+</image>
 	</figure>
 	<figure xml:id="">
-	  <!--plane_intersect3b.tikz-->
+	  <image width="60%">
+<latex-image>
+\tdplotsetmaincoords{60}{120} % set view angle for 3D plot
+\begin{tikzpicture}[tdplot_main_coords, scale = 0.5]
+    \filldraw[fill=green!20,opacity=0.5] (0,3,3) -- (0,3,-3) -- (0,-3,-3) -- (0,-3,3) -- cycle;
+    \filldraw[fill=blue!20,opacity=0.5] (-1.5,3,3) -- (-1.5,3,-3) -- (-1.5,-3,-3) -- (-1.5,-3,3) -- cycle;
+    \filldraw[fill=red!20,opacity=0.5] (3,0,3) -- (-3,0,3) -- (-3,0,-3) -- (3,0,-3) -- cycle;
+\end{tikzpicture}
+</latex-image>
+</image>
 	</figure>
 	<figure xml:id="">
-	  <!--plane_intersect3c.tikz-->
+	  <image width="60%">
+<latex-image>
+\tdplotsetmaincoords{60}{120} % set view angle for 3D plot
+\begin{tikzpicture}[tdplot_main_coords, scale = 0.5]
+    \filldraw[fill=green!20,opacity=0.5] (0,3,3) -- (0,3,-3) -- (3,-3,-3) -- (3,-3,3) -- cycle;
+    \filldraw[fill=blue!20,opacity=0.5] (0,3,3) -- (0,3,-3) -- (-3,-3,-3) -- (-3,-3,3) -- cycle;
+    \filldraw[fill=red!20,opacity=0.5] (-3,-3,-3) -- (-3,-3,3) -- (3, -3, 3) -- (3, -3, -3) -- cycle;
+    \draw[very thick, gray] (0, 3, -3) -- (0, 3, 3);
+    \draw[very thick, gray] (-3, -3, -3) -- (-3, -3, 3);
+    \draw[very thick, gray] (3, -3, -3) -- (3, -3, 3);
+\end{tikzpicture}
+</latex-image>
+</image>
 	</figure>
 </sidebyside>
     </figure>
