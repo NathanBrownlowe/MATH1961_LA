@@ -101,15 +101,15 @@ eBookConfig.allow_pairs = false;
 eBookConfig.enableScratchAC = false;
 eBookConfig.build_info = "";
 eBookConfig.python3 = null;
-eBookConfig.runestone_version = '7.11.0';
+eBookConfig.runestone_version = '7.11.14';
 eBookConfig.jobehost = '';
 eBookConfig.proxyuri_runs = '';
 eBookConfig.proxyuri_files = '';
 eBookConfig.enable_chatcodes =  false;
 </script>
 <!--*** Runestone Services ***-->
-<script src="_static/prefix-runtime.f91c1a4dc12163f2.bundle.js"></script><script src="_static/prefix-723.3e6434f80549315a.bundle.js"></script><script src="_static/prefix-runestone.731d8387162b79c1.bundle.js"></script><link rel="stylesheet" type="text/css" href="_static/prefix-723.3bccd435914aa0ff.css">
-<link rel="stylesheet" type="text/css" href="_static/prefix-runestone.557d81b04b3ec0e4.css">
+<script src="_static/prefix-runtime.d892923478694492.bundle.js"></script><script src="_static/prefix-723.3e6434f80549315a.bundle.js"></script><script src="_static/prefix-runestone.1d6e4aba17c2c7f2.bundle.js"></script><link rel="stylesheet" type="text/css" href="_static/prefix-723.3bccd435914aa0ff.css">
+<link rel="stylesheet" type="text/css" href="_static/prefix-runestone.6ec5960970d8b364.css">
 <script src="_static/pretext/js/lti_iframe_resizer.js"></script><script src="https://cdnjs.cloudflare.com/ajax/libs/lunr.js/2.3.9/lunr.min.js" integrity="sha512-4xUl/d6D6THrAnXAwGajXkoWaeMNwEKK4iNfq5DotEbLPAfk6FSxSP3ydNxqDgCw1c/0Z1Jg6L8h2j+++9BZmg==" crossorigin="anonymous" referrerpolicy="no-referrer"></script><script src="lunr-pretext-search-index.js" async=""></script><script src="_static/pretext/js/pretext_search.js"></script><script src="_static/pretext/js/lib/knowl.js"></script><!--knowl.js code controls Sage Cells within knowls--><script>sagecellEvalName='Evaluate (Sage)';
 </script>
 </head>
@@ -130,7 +130,34 @@ eBookConfig.enable_chatcodes =  false;
 </div>
 </div>
 <span class="nav-other-controls"><button id="light-dark-button" class="light-dark-button button" title="Dark Mode"><span class="icon material-symbols-outlined" aria-hidden="true">&#xe51c;</span><span class="name">Dark Mode</span></button></span><span class="treebuttons"><a class="previous-button button" href="ch-matrix-inverses.html" title="Previous"><span class="icon material-symbols-outlined" aria-hidden="true">&#xe5cb;</span><span class="name">Prev</span></a><a class="up-button button" href="ch-matrix-inverses.html" title="Up"><span class="icon material-symbols-outlined" aria-hidden="true">&#xe5ce;</span><span class="name">Up</span></a><a class="next-button button" href="sec-calculating-2x2-inverses.html" title="Next"><span class="name">Next</span><span class="icon material-symbols-outlined" aria-hidden="true">&#xe5cc;</span></a></span>
-</div></nav><div id="latex-macros" class="hidden-content process-math" style="display:none"><span class="process-math">\(\newcommand{\N}{\mathbb N} \newcommand{\Z}{\mathbb Z} \newcommand{\Q}{\mathbb Q} \newcommand{\R}{\mathbb R}
+</div></nav><div id="latex-macros" class="hidden-content process-math" style="display:none"><span class="process-math">\(\require{mathtools}\newcommand{\N}{\mathbb N} 
+\newcommand{\Z}{\mathbb Z} 
+\newcommand{\Q}{\mathbb Q} 
+\newcommand{\R}{\mathbb R} 
+\newcommand{\C}{\mathbb C}
+\newcommand{\vect}[1]{\mathbf{#1}}
+\newcommand{\proj}[2]{\operatorname{proj}_{#1}\!\left(#2\right)}
+\newcommand{\p}{\mathcal P}
+\newcommand{\inv}{^{-1}}
+
+\newcommand{\colvec}[2]{\begin{bmatrix}#1\\#2\end{bmatrix}}
+\newenvironment{amatrix}[1]{
+\left[\begin{array}{#1|c}
+}{
+\end{array}\right]
+  }
+
+\newenvironment{aamatrix}{
+    \left[\begin{array}{cc|cc@{}}
+      }{
+  \end{array}\right]
+      }
+
+\newenvironment{aaamatrix}{
+      \left[\begin{array}{ccc|ccc@{}}
+      }{
+    \end{array}\right]
+    }
 \newcommand{\lt}{&lt;}
 \newcommand{\gt}{&gt;}
 \newcommand{\amp}{&amp;}
@@ -198,8 +225,9 @@ eBookConfig.enable_chatcodes =  false;
 <li class="toc-item toc-section active"><div class="toc-title-box"><a href="sec-properties-of-inverses.html" class="internal"><span class="codenumber">7.1</span> <span class="title">Properties of inverses</span></a></div></li>
 <li class="toc-item toc-section"><div class="toc-title-box"><a href="sec-calculating-2x2-inverses.html" class="internal"><span class="codenumber">7.2</span> <span class="title">Calculating <span class="process-math">\(2\times 2\)</span> inverses</span></a></div></li>
 <li class="toc-item toc-section"><div class="toc-title-box"><a href="sec-calculating-nxn-inverses.html" class="internal"><span class="codenumber">7.3</span> <span class="title">Calculating <span class="process-math">\(n\times n\)</span> inverses</span></a></div></li>
-<li class="toc-item toc-section"><div class="toc-title-box"><a href="sec-elementary-matrices.html" class="internal"><span class="codenumber">7.4</span> <span class="title">Elementary matrices</span></a></div></li>
-<li class="toc-item toc-section"><div class="toc-title-box"><a href="sec-characterisations-of-invertibility.html" class="internal"><span class="codenumber">7.5</span> <span class="title">Characterisations of invertibility</span></a></div></li>
+<li class="toc-item toc-section"><div class="toc-title-box"><a href="sec-inverses-and-equations.html" class="internal"><span class="codenumber">7.4</span> <span class="title">Inverses and matrix equations</span></a></div></li>
+<li class="toc-item toc-section"><div class="toc-title-box"><a href="sec-elementary-matrices.html" class="internal"><span class="codenumber">7.5</span> <span class="title">Elementary matrices</span></a></div></li>
+<li class="toc-item toc-section"><div class="toc-title-box"><a href="sec-characterisations-of-invertibility.html" class="internal"><span class="codenumber">7.6</span> <span class="title">Characterisations of invertibility</span></a></div></li>
 </ul>
 </li>
 <li class="toc-item toc-chapter">
@@ -271,9 +299,262 @@ eBookConfig.enable_chatcodes =  false;
 <main class="ptx-main"><div id="ptx-content" class="ptx-content"><section class="section" id="sec-properties-of-inverses"><h2 class="heading hide-type">
 <span class="type">Section</span><span class="space heading-divison-mark heading-divison-mark__space"> </span><span class="codenumber">7.1</span><span class="space heading-divison-mark heading-divison-mark__space"> </span><span class="title">Properties of inverses</span>
 </h2>
-<div class="para" id="sec-properties-of-inverses-2">Text of section.<div class="autopermalink" data-description="Paragraph"><a href="#sec-properties-of-inverses-2" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
+<div class="para logical" id="sec-properties-of-inverses-2">
+<div class="para">Let <span class="process-math">\(a, b, x \in \R\)</span> and consider the equation of real numbers</div>
+<div class="displaymath process-math" id="sec-properties-of-inverses-2-2">
+\begin{equation*}
+ax = b\text{.}
+\end{equation*}
 </div>
-<div class="autopermalink" data-description="Section 7.1: Properties of inverses"><a href="#sec-properties-of-inverses" title="Copy heading and permalink for Section 7.1: Properties of inverses" aria-label="Copy heading and permalink for Section 7.1: Properties of inverses">🔗</a></div></section></div>
+<div class="para">If <span class="process-math">\(a\ne 0\text{,}\)</span> then <span class="process-math">\(a\)</span> has the inverse <span class="process-math">\(a\inv = 1/a\text{,}\)</span> and there is a unique solution</div>
+<div class="displaymath process-math" id="sec-properties-of-inverses-2-6">
+\begin{equation*}
+x = a\inv b = \frac{1}{a}b = \frac{b}{a}\text{.}
+\end{equation*}
+</div>
+<div class="para">This works because</div>
+<div class="displaymath process-math" id="sec-properties-of-inverses-2-7">
+\begin{align*}
+ax = b \amp  \implies a\inv a x = a\inv b \\
+\amp  \implies 1x = x = a\inv b\text{.}
+\end{align*}
+</div>
+<div class="autopermalink" data-description="Paragraph"><a href="#sec-properties-of-inverses-2" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
+</div>
+<div class="para" id="sec-properties-of-inverses-3">We see that the key property of <span class="process-math">\(a\inv\)</span> is that <span class="process-math">\(a\inv a = 1\text{,}\)</span> and similarly it’s useful that <span class="process-math">\(a\inv a = 1\text{.}\)</span> (For real numbers this is essentially the same thing, because multiplication is commutative, but remember that matrix multiplication is not commutative.) We will define matrix inverses to have these properties, so that we can likewise solve the matrix equation <span class="process-math">\(AX = B\)</span> to get <span class="process-math">\(X = A\inv B\text{.}\)</span><div class="autopermalink" data-description="Paragraph"><a href="#sec-properties-of-inverses-3" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
+</div>
+<article class="definition definition-like" id="def-inverse"><h3 class="heading">
+<span class="type">Definition</span><span class="space heading-divison-mark heading-divison-mark__space"> </span><span class="codenumber">7.1.1</span><span class="period heading-divison-mark heading-divison-mark__period">.</span>
+</h3>
+<div class="para logical" id="def-inverse-1-1">
+<div class="para">An <dfn class="terminology">inverse</dfn> of an <span class="process-math">\(n\times n\)</span> matrix <span class="process-math">\(A\)</span> is an <span class="process-math">\(n\times n\)</span> matrix <span class="process-math">\(B\)</span> such that</div>
+<div class="displaymath process-math" id="def-inverse-1-1-6">
+\begin{equation*}
+AB = BA = I_n\text{.}
+\end{equation*}
+</div>
+<div class="para">If such a matrix <span class="process-math">\(B\)</span> exists, then we say that <span class="process-math">\(A\)</span> is <dfn class="terminology">invertible</dfn>.</div>
+<div class="autopermalink" data-description="Paragraph"><a href="#def-inverse-1-1" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
+</div>
+<div class="autopermalink" data-description="Definition 7.1.1"><a href="#def-inverse" title="Copy heading and permalink for Definition 7.1.1" aria-label="Copy heading and permalink for Definition 7.1.1">🔗</a></div></article><div class="para" id="sec-properties-of-inverses-5">Note that we require <span class="process-math">\(A\)</span> and <span class="process-math">\(B\)</span> to both be <span class="process-math">\(n\times n\)</span> so that <span class="process-math">\(AB\)</span> and <span class="process-math">\(BA\)</span> are both defined.<div class="autopermalink" data-description="Paragraph"><a href="#sec-properties-of-inverses-5" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
+</div>
+<details id="ex-inverse-check" class="example example-like born-hidden-knowl"><summary class="knowl__link"><h3 class="heading">
+<span class="type">Example</span><span class="space heading-divison-mark heading-divison-mark__space"> </span><span class="codenumber">7.1.2</span><span class="period heading-divison-mark heading-divison-mark__period">.</span>
+</h3></summary><article class="example example-like knowl__content"><div class="para logical" id="ex-inverse-check-1-1">
+<div class="para">Let</div>
+<div class="displaymath process-math" id="ex-inverse-check-1-1-1">
+\begin{equation*}
+A =
+\begin{bmatrix}
+2 \amp  5 \\ 1\amp  3
+\end{bmatrix}
+, \qquad B =
+\begin{bmatrix}
+3 \amp  -5 \\ -1 \amp  2
+\end{bmatrix}\text{.}
+\end{equation*}
+</div>
+<div class="para">Then</div>
+<div class="displaymath process-math" id="ex-inverse-check-1-1-2">
+\begin{align*}
+AB \amp  =
+\begin{bmatrix}
+2 \amp  5 \\ 1\amp  3
+\end{bmatrix}
+\begin{bmatrix}
+3 \amp  -5 \\ -1 \amp  2
+\end{bmatrix}
+=
+\begin{bmatrix}
+1 \amp  0 \\ 0 \amp  1
+\end{bmatrix}
+= I_2, \\
+BA \amp  =
+\begin{bmatrix}
+3 \amp  -5 \\ -1 \amp  2
+\end{bmatrix}
+\begin{bmatrix}
+2 \amp  5 \\ 1\amp  3
+\end{bmatrix}
+=
+\begin{bmatrix}
+1 \amp  0 \\ 0 \amp  1
+\end{bmatrix}
+= I_2\text{.}
+\end{align*}
+</div>
+<div class="para">So by definition, <span class="process-math">\(B\)</span> is an inverse of <span class="process-math">\(A\)</span> (and <span class="process-math">\(A\)</span> is an inverse of <span class="process-math">\(B\)</span>).</div>
+<div class="autopermalink" data-description="Paragraph"><a href="#ex-inverse-check-1-1" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
+</div>
+<div class="autopermalink" data-description="Example 7.1.2"><a href="#ex-inverse-check" title="Copy heading and permalink for Example 7.1.2" aria-label="Copy heading and permalink for Example 7.1.2">🔗</a></div></article></details><div class="para" id="sec-properties-of-inverses-7">The zero matrix is not invertible since for any matrix <span class="process-math">\(B\text{,}\)</span> we have <span class="process-math">\(0B = B0 = 0 \ne I_n\text{.}\)</span> However, unlike real numbers, there are nonzero matrices which are not invertible.<div class="autopermalink" data-description="Paragraph"><a href="#sec-properties-of-inverses-7" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
+</div>
+<details id="ex-non-invertible" class="example example-like born-hidden-knowl"><summary class="knowl__link"><h3 class="heading">
+<span class="type">Example</span><span class="space heading-divison-mark heading-divison-mark__space"> </span><span class="codenumber">7.1.3</span><span class="period heading-divison-mark heading-divison-mark__period">.</span>
+</h3></summary><article class="example example-like knowl__content"><div class="para logical" id="ex-non-invertible-1-1">
+<div class="para">Let</div>
+<div class="displaymath process-math" id="ex-non-invertible-1-1-1">
+\begin{equation*}
+A =
+\begin{bmatrix}
+1 \amp  -1 \\ -2 \amp  2
+\end{bmatrix}
+, \qquad B =
+\begin{bmatrix}
+a \amp  b \\ c\amp  d
+\end{bmatrix}\text{.}
+\end{equation*}
+</div>
+<div class="para">Calculate <span class="process-math">\(AB\)</span> and show that <span class="process-math">\(A\)</span> is not invertible.</div>
+<div class="autopermalink" data-description="Paragraph"><a href="#ex-non-invertible-1-1" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
+</div> <div class="para logical" id="ex-non-invertible-1-2">
+<div class="para">We have</div>
+<div class="displaymath process-math" id="ex-non-invertible-1-2-1">
+\begin{align*}
+AB \amp  =
+\begin{bmatrix}
+1 \amp  -1 \\ -2 \amp  2
+\end{bmatrix}
+\begin{bmatrix}
+a \amp  b \\ c\amp  d
+\end{bmatrix}
+\\
+\amp  =
+\begin{bmatrix}
+a-c \amp  b-d \\ -2a+2c\amp  -2(b-d)
+\end{bmatrix}\text{.}
+\end{align*}
+</div>
+<div class="para">If the <span class="process-math">\((1, 2)\)</span>-entry is zero, then the <span class="process-math">\((2, 2)\)</span>-entry is also zero, so is not equal to 1. This shows that</div>
+<div class="displaymath process-math" id="ex-non-invertible-1-2-4">
+\begin{equation*}
+AB \ne I_2 =
+\begin{bmatrix}
+1 \amp  0 \\
+0 \amp  1
+\end{bmatrix}
+,
+\end{equation*}
+</div>
+<div class="para">regardless of the value of <span class="process-math">\(a, b, c, d\in \R\text{.}\)</span> Therefore <span class="process-math">\(A\)</span> has no inverse.</div>
+<div class="autopermalink" data-description="Paragraph"><a href="#ex-non-invertible-1-2" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
+</div>
+<div class="autopermalink" data-description="Example 7.1.3"><a href="#ex-non-invertible" title="Copy heading and permalink for Example 7.1.3" aria-label="Copy heading and permalink for Example 7.1.3">🔗</a></div></article></details><article class="theorem theorem-like" id="thm-unique"><h3 class="heading">
+<span class="type">Theorem</span><span class="space heading-divison-mark heading-divison-mark__space"> </span><span class="codenumber">7.1.4</span><span class="period heading-divison-mark heading-divison-mark__period">.</span>
+</h3>
+<div class="para" id="thm-unique-1-1">If an <span class="process-math">\(n\times n\)</span> matrix <span class="process-math">\(A\)</span> is invertible, then it has a unique inverse.<div class="autopermalink" data-description="Paragraph"><a href="#thm-unique-1-1" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
+</div>
+<div class="autopermalink" data-description="Theorem 7.1.4"><a href="#thm-unique" title="Copy heading and permalink for Theorem 7.1.4" aria-label="Copy heading and permalink for Theorem 7.1.4">🔗</a></div></article><details id="thm-unique-2" class="hiddenproof born-hidden-knowl"><summary class="knowl__link"><h3 class="heading"><span class="type">Proof<span class="period heading-divison-mark heading-divison-mark__period">.</span></span></h3></summary><article class="hiddenproof knowl__content"><div class="para logical" id="thm-unique-2-1">
+<div class="para">Suppose <span class="process-math">\(B\)</span> and <span class="process-math">\(C\)</span> are any two inverses of <span class="process-math">\(A\text{.}\)</span> Then</div>
+<div class="displaymath process-math" id="thm-unique-2-1-4">
+\begin{equation*}
+B = BI = B(AC)
+\end{equation*}
+</div>
+<div class="para">since <span class="process-math">\(C\)</span> is an inverse of <span class="process-math">\(A\text{.}\)</span> But then</div>
+<div class="displaymath process-math" id="thm-unique-2-1-7">
+\begin{equation*}
+B(AC) = (BA)C = IC = C
+\end{equation*}
+</div>
+<div class="para">using associativity and that <span class="process-math">\(B\)</span> is an inverse of <span class="process-math">\(A\text{.}\)</span> Thus <span class="process-math">\(B=C\text{.}\)</span>
+</div>
+<div class="autopermalink" data-description="Paragraph"><a href="#thm-unique-2-1" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
+</div>
+<div class="autopermalink" data-description="Proof 7.1.4.1"><a href="#thm-unique-2" title="Copy heading and permalink for Proof 7.1.4.1" aria-label="Copy heading and permalink for Proof 7.1.4.1">🔗</a></div></article></details><div class="para" id="sec-properties-of-inverses-10">Since if <span class="process-math">\(A\)</span> is invertible it only has one inverse, we will now refer to it as the inverse of <span class="process-math">\(A\text{,}\)</span> and denote it by <span class="process-math">\(A\inv\text{.}\)</span><div class="autopermalink" data-description="Paragraph"><a href="#sec-properties-of-inverses-10" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
+</div>
+<article class="remark remark-like" id="rem-inverse-notation"><h3 class="heading">
+<span class="type">Remark</span><span class="space heading-divison-mark heading-divison-mark__space"> </span><span class="codenumber">7.1.5</span><span class="period heading-divison-mark heading-divison-mark__period">.</span><span class="space heading-divison-mark heading-divison-mark__space"> </span><span class="title">.</span>
+</h3>
+<div class="para" id="rem-inverse-notation-2">Do not write <span class="process-math">\(1/A\)</span> for the inverse <span class="process-math">\(A\inv\text{.}\)</span> This is a number divided by a matrix, so it makes no sense. Therefore, if we have a matrix equation <span class="process-math">\(AX = B\)</span> where <span class="process-math">\(A\)</span> is invertible, and solve it to get <span class="process-math">\(X = A\inv B\text{,}\)</span> you should think of this as multiplication by <span class="process-math">\(A\inv\)</span> rather than division by <span class="process-math">\(A\text{.}\)</span> Even though for real numbers this is the same thing, to avoid confusion it is best to never think about division when working with matrices.<div class="autopermalink" data-description="Paragraph"><a href="#rem-inverse-notation-2" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
+</div>
+<div class="autopermalink" data-description="Remark 7.1.5: "><a href="#rem-inverse-notation" title="Copy heading and permalink for Remark 7.1.5: " aria-label="Copy heading and permalink for Remark 7.1.5: ">🔗</a></div></article><div class="para" id="sec-properties-of-inverses-12">Matrix inversion has the following properties, which are similar to the properties for the matrix transpose.<div class="autopermalink" data-description="Paragraph"><a href="#sec-properties-of-inverses-12" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
+</div>
+<article class="theorem theorem-like" id="thm-inv"><h3 class="heading">
+<span class="type">Theorem</span><span class="space heading-divison-mark heading-divison-mark__space"> </span><span class="codenumber">7.1.6</span><span class="period heading-divison-mark heading-divison-mark__period">.</span>
+</h3>
+<div class="para logical" id="thm-inv-1-1">
+<div class="para">Suppose <span class="process-math">\(A\)</span> and <span class="process-math">\(B\)</span> are invertible <span class="process-math">\(n\times n\)</span> matrices, and <span class="process-math">\(c\in \R\)</span> is a nonzero scalar. Then</div>
+<ol class="decimal" id="thm-inv-1-1-5">
+<li id="thm-inv-1-1-5-1">
+<div class="para" id="thm-inv-1-1-5-1-1">
+<span class="process-math">\(A\inv\)</span> is invertible, and <span class="process-math">\((A\inv)\inv = A\)</span><div class="autopermalink" data-description="Paragraph"><a href="#thm-inv-1-1-5-1-1" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
+</div>
+<div class="autopermalink" data-description="Item 1"><a href="#thm-inv-1-1-5-1" title="Copy heading and permalink for Item 1" aria-label="Copy heading and permalink for Item 1">🔗</a></div>
+</li>
+<li id="thm-inv-1-1-5-2">
+<div class="para" id="thm-inv-1-1-5-2-1">
+<span class="process-math">\(cA\)</span> is invertible, and <span class="process-math">\((cA)\inv = \frac{1}{c}A\inv\)</span><div class="autopermalink" data-description="Paragraph"><a href="#thm-inv-1-1-5-2-1" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
+</div>
+<div class="autopermalink" data-description="Item 2"><a href="#thm-inv-1-1-5-2" title="Copy heading and permalink for Item 2" aria-label="Copy heading and permalink for Item 2">🔗</a></div>
+</li>
+<li id="thm-inv-1-1-5-3">
+<div class="para" id="thm-inv-1-1-5-3-1">
+<span class="process-math">\(AB\)</span> is invertible, and <span class="process-math">\((AB)\inv = B\inv A\inv\)</span><div class="autopermalink" data-description="Paragraph"><a href="#thm-inv-1-1-5-3-1" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
+</div>
+<div class="autopermalink" data-description="Item 3"><a href="#thm-inv-1-1-5-3" title="Copy heading and permalink for Item 3" aria-label="Copy heading and permalink for Item 3">🔗</a></div>
+</li>
+<li id="thm-inv-1-1-5-4">
+<div class="para" id="thm-inv-1-1-5-4-1">
+<span class="process-math">\(A^T\)</span> is invertible, and <span class="process-math">\((A^T)\inv = (A\inv)^T\)</span><div class="autopermalink" data-description="Paragraph"><a href="#thm-inv-1-1-5-4-1" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
+</div>
+<div class="autopermalink" data-description="Item 4"><a href="#thm-inv-1-1-5-4" title="Copy heading and permalink for Item 4" aria-label="Copy heading and permalink for Item 4">🔗</a></div>
+</li>
+<li id="thm-inv-1-1-5-5">
+<div class="para" id="thm-inv-1-1-5-5-1">
+<span class="process-math">\(A^k\)</span> is invertible for any <span class="process-math">\(k \in \N\text{,}\)</span> and <span class="process-math">\((A^k)\inv = (A\inv)^k\text{.}\)</span><div class="autopermalink" data-description="Paragraph"><a href="#thm-inv-1-1-5-5-1" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
+</div>
+<div class="autopermalink" data-description="Item 5"><a href="#thm-inv-1-1-5-5" title="Copy heading and permalink for Item 5" aria-label="Copy heading and permalink for Item 5">🔗</a></div>
+</li>
+</ol>
+<div class="autopermalink" data-description="Paragraph"><a href="#thm-inv-1-1" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
+</div>
+<div class="autopermalink" data-description="Theorem 7.1.6"><a href="#thm-inv" title="Copy heading and permalink for Theorem 7.1.6" aria-label="Copy heading and permalink for Theorem 7.1.6">🔗</a></div></article><div class="para" id="sec-properties-of-inverses-14">We will prove the first 4 properties. The proof of Property 5 is an exercise.<div class="autopermalink" data-description="Paragraph"><a href="#sec-properties-of-inverses-14" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
+</div>
+<details id="sec-properties-of-inverses-15" class="hiddenproof born-hidden-knowl"><summary class="knowl__link"><h3 class="heading"><span class="type">Proof<span class="period heading-divison-mark heading-divison-mark__period">.</span></span></h3></summary><article class="hiddenproof knowl__content"><div class="para logical" id="sec-properties-of-inverses-15-1">
+<div class="para">The equation <span class="process-math">\(AA\inv = A\inv A = I_n\)</span> which comes from <span class="process-math">\(A\)</span> being invertible also says that <span class="process-math">\(A\inv\)</span> is invertible and <span class="process-math">\((A\inv)\inv = A\)</span> (think about this) which proves 1. Property 2 follows from the calculation</div>
+<div class="displaymath process-math" id="sec-properties-of-inverses-15-1-5">
+\begin{align*}
+cA\biggl(\frac{1}{c}A\inv\biggr) \amp  = c\frac{1}{c}AA\inv = 1I = I   \\
+\biggl(\frac{1}{c}A\inv\biggr)cA \amp  = \frac{1}{c}c A\inv A = 1I = I
+\end{align*}
+</div>
+<div class="para">and Property 3 follows from the calculation</div>
+<div class="displaymath process-math" id="sec-properties-of-inverses-15-1-6">
+\begin{align*}
+AB(B\inv A\inv) \amp  = A(B B\inv)A\inv = AA\inv = I    \\
+(B\inv A\inv)AB \amp  = B\inv (A\inv A)B = B\inv B = I\text{.}
+\end{align*}
+</div>
+<div class="para">For Property 4, observe that</div>
+<div class="displaymath process-math" id="sec-properties-of-inverses-15-1-7">
+\begin{align*}
+A^T(A\inv)^T  \amp  = (A\inv A)^T = I^T = I         \\
+(A\inv)^T A^T \amp  = (AA\inv)^T = I^T = I.
+\end{align*}
+</div>
+<div class="autopermalink" data-description="Paragraph"><a href="#sec-properties-of-inverses-15-1" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
+</div>
+<div class="autopermalink" data-description="Proof 7.1.1"><a href="#sec-properties-of-inverses-15" title="Copy heading and permalink for Proof 7.1.1" aria-label="Copy heading and permalink for Proof 7.1.1">🔗</a></div></article></details><div class="para" id="sec-properties-of-inverses-16">We will use the notation <span class="process-math">\(A^{-k} = (A\inv)^k\text{.}\)</span><div class="autopermalink" data-description="Paragraph"><a href="#sec-properties-of-inverses-16" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
+</div>
+<details id="ex-matrix-algebra-with-inverses" class="example example-like born-hidden-knowl"><summary class="knowl__link"><h3 class="heading">
+<span class="type">Example</span><span class="space heading-divison-mark heading-divison-mark__space"> </span><span class="codenumber">7.1.7</span><span class="period heading-divison-mark heading-divison-mark__period">.</span>
+</h3></summary><article class="example example-like knowl__content"><div class="para" id="ex-matrix-algebra-with-inverses-1-1">Solve <span class="process-math">\(A\inv (BX)\inv = (A\inv B^3)^2\)</span> for <span class="process-math">\(X\)</span> in terms of <span class="process-math">\(A\)</span> and <span class="process-math">\(B\text{.}\)</span><div class="autopermalink" data-description="Paragraph"><a href="#ex-matrix-algebra-with-inverses-1-1" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
+</div> <div class="para logical" id="ex-matrix-algebra-with-inverses-1-2">
+<div class="para">We calculate, using properties of the matrix inverse, that</div>
+<div class="displaymath process-math" id="ex-matrix-algebra-with-inverses-1-2-1">
+\begin{align*}
+A\inv (BX)\inv \amp = (A\inv B^3)^2 \\
+\amp  \implies AA\inv(BX)\inv = A(A\inv B^3)^2                        \\
+\amp  \implies (BX)\inv = A(A\inv B^3)^2                              \\
+\amp  \implies ((BX)\inv)\inv = (A(A\inv B^3)^2)\inv                  \\
+\amp  \implies BX = (A\inv B^3)^{-2} A\inv                            \\ \amp  \implies B\inv BX = B\inv (A\inv B^3)^{-2} A\inv\\
+\amp  \implies X = B\inv(B^{-3}A)^2 A\inv = B\inv B^{-3}AB^{-3}AA\inv \\
+\amp  \implies X = B^{-4}AB^{-3}.
+\end{align*}
+</div>
+<div class="autopermalink" data-description="Paragraph"><a href="#ex-matrix-algebra-with-inverses-1-2" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
+</div>
+<div class="autopermalink" data-description="Example 7.1.7"><a href="#ex-matrix-algebra-with-inverses" title="Copy heading and permalink for Example 7.1.7" aria-label="Copy heading and permalink for Example 7.1.7">🔗</a></div></article></details><div class="autopermalink" data-description="Section 7.1: Properties of inverses"><a href="#sec-properties-of-inverses" title="Copy heading and permalink for Section 7.1: Properties of inverses" aria-label="Copy heading and permalink for Section 7.1: Properties of inverses">🔗</a></div></section></div>
 <div id="ptx-content-footer" class="ptx-content-footer">
 <a class="previous-button button" href="ch-matrix-inverses.html" title="Previous"><span class="icon material-symbols-outlined" aria-hidden="true">&#xe5cb;</span><span class="name">Prev</span></a><a class="top-button button" href="#" title="Top"><span class="icon material-symbols-outlined" aria-hidden="true">&#xe5ce;</span><span class="name">Top</span></a><a class="next-button button" href="sec-calculating-2x2-inverses.html" title="Next"><span class="name">Next</span><span class="icon material-symbols-outlined" aria-hidden="true">&#xe5cc;</span></a>
 </div></main>

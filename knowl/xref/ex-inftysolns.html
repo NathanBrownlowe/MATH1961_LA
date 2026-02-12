@@ -1,0 +1,74 @@
+<!DOCTYPE html>
+<html lang="en-US" dir="ltr">
+<!--******************************************-->
+<!--*  Authored with PreTeXt                 *-->
+<!--*  pretextbook.org                       *-->
+<!--*  Theme: default-modern                 *-->
+<!--*  Palette:                              *-->
+<!--******************************************-->
+
+<!--********************************************-->
+<!--*       Generated from PreTeXt source      *-->
+<!--*                                          *-->
+<!--*         https://pretextbook.org          *-->
+<!--*                                          *-->
+<!--********************************************-->
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+<meta name="robots" content="noindex, nofollow">
+</head>
+<body class="ignore-math">
+<article class="example example-like"><h3 class="heading">
+<span class="type">Example</span><span class="space heading-divison-mark heading-divison-mark__space"> </span><span class="codenumber">5.3.6</span><span class="period heading-divison-mark heading-divison-mark__period">.</span>
+</h3>
+<div class="para logical">
+<div class="para">Solve the system of linear equations</div>
+<div class="displaymath process-math">
+\begin{equation*}
+\begin{cases}
+2x + y +5z  \amp  = 1 \\
+2x + 3y +4z \amp  = 4 \\
+4x + 11 z   \amp  = -1
+\end{cases}\text{.}
+\end{equation*}
+</div>
+<div class="para">has no solutions.</div>
+<div class="autopermalink" data-description="Paragraph"><a href="#ex-inftysolns-1-1" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
+</div> <div class="para logical">
+<div class="para">Row reducing gives</div>
+<div class="displaymath process-math">
+\begin{equation*}
+\begin{amatrix}{ccc}
+2 \amp  1 \amp  5 \amp  1\\
+2 \amp  3 \amp  4 \amp  4\\
+4 \amp  0 \amp  11 \amp  -1\\
+\end{amatrix}
+\to
+\begin{amatrix}{ccc}
+2 \amp  1 \amp  5 \amp  1\\
+0 \amp  2 \amp  -1 \amp  3\\
+0 \amp  -2 \amp  1 \amp  -3
+\end{amatrix}
+\to
+\begin{amatrix}{ccc}
+2 \amp  1 \amp  5 \amp  1\\
+0 \amp  2 \amp  -1 \amp  3\\
+0 \amp  0 \amp  0 \amp  0
+\end{amatrix}\text{.}
+\end{equation*}
+</div>
+<div class="para">The last column has no leading entries, so <span class="process-math">\(z\)</span> is not determined. However, this is fine: we let <span class="process-math">\(z = t\text{,}\)</span> for <span class="process-math">\(t \in \R\)</span> a parameter. Now we can back-substitute in terms of <span class="process-math">\(t\text{.}\)</span> We have <span class="process-math">\(2y - z = 3\text{,}\)</span> so <span class="process-math">\(y = \frac{1}{2}(3+z) = \frac{3}{2} + \frac{1}{2}t\text{.}\)</span> Finally,</div>
+<div class="displaymath process-math">
+\begin{align*}
+2x + y +5z = 1 \implies x \amp  = \frac{1}{2}(1-y - 5z)                                               \\
+\amp  = \frac{1}{2}\Bigl(1 - \Bigl(\frac{3}{2}+\frac{1}{2}t\Bigr) -5t\Bigr) \\
+\amp  = -\frac{1}{4}-\frac{11}{4}t\text{.}
+\end{align*}
+</div>
+<div class="para">So there are infinitely many solutions <span class="process-math">\([x, y, z] = [-\frac{1}{4}-\frac{11}{4}t, \frac{3}{2} + \frac{1}{2}t, t]\text{,}\)</span> <span class="process-math">\(t \in \R\text{.}\)</span>
+</div>
+<div class="autopermalink" data-description="Paragraph"><a href="#ex-inftysolns-1-2" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
+</div>
+<div class="autopermalink" data-description="Example 5.3.6"><a href="#ex-inftysolns" title="Copy heading and permalink for Example 5.3.6" aria-label="Copy heading and permalink for Example 5.3.6">🔗</a></div></article><span class="incontext"><a class="internal" href="sec-number-of-solutions.html#ex-inftysolns">in-context</a></span>
+</body>
+</html>

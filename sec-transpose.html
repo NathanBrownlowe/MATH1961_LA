@@ -101,15 +101,15 @@ eBookConfig.allow_pairs = false;
 eBookConfig.enableScratchAC = false;
 eBookConfig.build_info = "";
 eBookConfig.python3 = null;
-eBookConfig.runestone_version = '7.11.0';
+eBookConfig.runestone_version = '7.11.14';
 eBookConfig.jobehost = '';
 eBookConfig.proxyuri_runs = '';
 eBookConfig.proxyuri_files = '';
 eBookConfig.enable_chatcodes =  false;
 </script>
 <!--*** Runestone Services ***-->
-<script src="_static/prefix-runtime.f91c1a4dc12163f2.bundle.js"></script><script src="_static/prefix-723.3e6434f80549315a.bundle.js"></script><script src="_static/prefix-runestone.731d8387162b79c1.bundle.js"></script><link rel="stylesheet" type="text/css" href="_static/prefix-723.3bccd435914aa0ff.css">
-<link rel="stylesheet" type="text/css" href="_static/prefix-runestone.557d81b04b3ec0e4.css">
+<script src="_static/prefix-runtime.d892923478694492.bundle.js"></script><script src="_static/prefix-723.3e6434f80549315a.bundle.js"></script><script src="_static/prefix-runestone.1d6e4aba17c2c7f2.bundle.js"></script><link rel="stylesheet" type="text/css" href="_static/prefix-723.3bccd435914aa0ff.css">
+<link rel="stylesheet" type="text/css" href="_static/prefix-runestone.6ec5960970d8b364.css">
 <script src="_static/pretext/js/lti_iframe_resizer.js"></script><script src="https://cdnjs.cloudflare.com/ajax/libs/lunr.js/2.3.9/lunr.min.js" integrity="sha512-4xUl/d6D6THrAnXAwGajXkoWaeMNwEKK4iNfq5DotEbLPAfk6FSxSP3ydNxqDgCw1c/0Z1Jg6L8h2j+++9BZmg==" crossorigin="anonymous" referrerpolicy="no-referrer"></script><script src="lunr-pretext-search-index.js" async=""></script><script src="_static/pretext/js/pretext_search.js"></script><script src="_static/pretext/js/lib/knowl.js"></script><!--knowl.js code controls Sage Cells within knowls--><script>sagecellEvalName='Evaluate (Sage)';
 </script>
 </head>
@@ -130,7 +130,34 @@ eBookConfig.enable_chatcodes =  false;
 </div>
 </div>
 <span class="nav-other-controls"><button id="light-dark-button" class="light-dark-button button" title="Dark Mode"><span class="icon material-symbols-outlined" aria-hidden="true">&#xe51c;</span><span class="name">Dark Mode</span></button></span><span class="treebuttons"><a class="previous-button button" href="sec-matrix-mult.html" title="Previous"><span class="icon material-symbols-outlined" aria-hidden="true">&#xe5cb;</span><span class="name">Prev</span></a><a class="up-button button" href="ch-matrices.html" title="Up"><span class="icon material-symbols-outlined" aria-hidden="true">&#xe5ce;</span><span class="name">Up</span></a><a class="next-button button" href="ch-matrix-inverses.html" title="Next"><span class="name">Next</span><span class="icon material-symbols-outlined" aria-hidden="true">&#xe5cc;</span></a></span>
-</div></nav><div id="latex-macros" class="hidden-content process-math" style="display:none"><span class="process-math">\(\newcommand{\N}{\mathbb N} \newcommand{\Z}{\mathbb Z} \newcommand{\Q}{\mathbb Q} \newcommand{\R}{\mathbb R}
+</div></nav><div id="latex-macros" class="hidden-content process-math" style="display:none"><span class="process-math">\(\require{mathtools}\newcommand{\N}{\mathbb N} 
+\newcommand{\Z}{\mathbb Z} 
+\newcommand{\Q}{\mathbb Q} 
+\newcommand{\R}{\mathbb R} 
+\newcommand{\C}{\mathbb C}
+\newcommand{\vect}[1]{\mathbf{#1}}
+\newcommand{\proj}[2]{\operatorname{proj}_{#1}\!\left(#2\right)}
+\newcommand{\p}{\mathcal P}
+\newcommand{\inv}{^{-1}}
+
+\newcommand{\colvec}[2]{\begin{bmatrix}#1\\#2\end{bmatrix}}
+\newenvironment{amatrix}[1]{
+\left[\begin{array}{#1|c}
+}{
+\end{array}\right]
+  }
+
+\newenvironment{aamatrix}{
+    \left[\begin{array}{cc|cc@{}}
+      }{
+  \end{array}\right]
+      }
+
+\newenvironment{aaamatrix}{
+      \left[\begin{array}{ccc|ccc@{}}
+      }{
+    \end{array}\right]
+    }
 \newcommand{\lt}{&lt;}
 \newcommand{\gt}{&gt;}
 \newcommand{\amp}{&amp;}
@@ -198,8 +225,9 @@ eBookConfig.enable_chatcodes =  false;
 <li class="toc-item toc-section"><div class="toc-title-box"><a href="sec-properties-of-inverses.html" class="internal"><span class="codenumber">7.1</span> <span class="title">Properties of inverses</span></a></div></li>
 <li class="toc-item toc-section"><div class="toc-title-box"><a href="sec-calculating-2x2-inverses.html" class="internal"><span class="codenumber">7.2</span> <span class="title">Calculating <span class="process-math">\(2\times 2\)</span> inverses</span></a></div></li>
 <li class="toc-item toc-section"><div class="toc-title-box"><a href="sec-calculating-nxn-inverses.html" class="internal"><span class="codenumber">7.3</span> <span class="title">Calculating <span class="process-math">\(n\times n\)</span> inverses</span></a></div></li>
-<li class="toc-item toc-section"><div class="toc-title-box"><a href="sec-elementary-matrices.html" class="internal"><span class="codenumber">7.4</span> <span class="title">Elementary matrices</span></a></div></li>
-<li class="toc-item toc-section"><div class="toc-title-box"><a href="sec-characterisations-of-invertibility.html" class="internal"><span class="codenumber">7.5</span> <span class="title">Characterisations of invertibility</span></a></div></li>
+<li class="toc-item toc-section"><div class="toc-title-box"><a href="sec-inverses-and-equations.html" class="internal"><span class="codenumber">7.4</span> <span class="title">Inverses and matrix equations</span></a></div></li>
+<li class="toc-item toc-section"><div class="toc-title-box"><a href="sec-elementary-matrices.html" class="internal"><span class="codenumber">7.5</span> <span class="title">Elementary matrices</span></a></div></li>
+<li class="toc-item toc-section"><div class="toc-title-box"><a href="sec-characterisations-of-invertibility.html" class="internal"><span class="codenumber">7.6</span> <span class="title">Characterisations of invertibility</span></a></div></li>
 </ul>
 </li>
 <li class="toc-item toc-chapter">
@@ -271,9 +299,194 @@ eBookConfig.enable_chatcodes =  false;
 <main class="ptx-main"><div id="ptx-content" class="ptx-content"><section class="section" id="sec-transpose"><h2 class="heading hide-type">
 <span class="type">Section</span><span class="space heading-divison-mark heading-divison-mark__space"> </span><span class="codenumber">6.4</span><span class="space heading-divison-mark heading-divison-mark__space"> </span><span class="title">Transpose</span>
 </h2>
-<div class="para" id="sec-transpose-2">Text of section.<div class="autopermalink" data-description="Paragraph"><a href="#sec-transpose-2" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
+<article class="definition definition-like" id="def-transpose"><h3 class="heading">
+<span class="type">Definition</span><span class="space heading-divison-mark heading-divison-mark__space"> </span><span class="codenumber">6.4.1</span><span class="period heading-divison-mark heading-divison-mark__period">.</span>
+</h3>
+<div class="para logical" id="def-transpose-1-1">
+<div class="para">The <dfn class="terminology">transpose</dfn> of an <span class="process-math">\(m\times n\)</span> matrix <span class="process-math">\(A = [a_{ij}]_{m\times n}\)</span> is the <span class="process-math">\(n\times m\)</span> matrix</div>
+<div class="displaymath process-math" id="def-transpose-1-1-5">
+\begin{equation*}
+A^T = [a^*_{ij}]_{n\times m},
+\end{equation*}
 </div>
-<div class="autopermalink" data-description="Section 6.4: Transpose"><a href="#sec-transpose" title="Copy heading and permalink for Section 6.4: Transpose" aria-label="Copy heading and permalink for Section 6.4: Transpose">🔗</a></div></section></div>
+<div class="para">where <span class="process-math">\(a^*_{ij} = a_{ji}\text{.}\)</span>
+</div>
+<div class="autopermalink" data-description="Paragraph"><a href="#def-transpose-1-1" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
+</div>
+<div class="autopermalink" data-description="Definition 6.4.1"><a href="#def-transpose" title="Copy heading and permalink for Definition 6.4.1" aria-label="Copy heading and permalink for Definition 6.4.1">🔗</a></div></article><div class="para" id="sec-transpose-3">We see that <span class="process-math">\(A^T\)</span> is obtained from <span class="process-math">\(A\)</span> by swapping the row index with the column index. This means that <span class="process-math">\(A^T\)</span> is the matrix where the columns in <span class="process-math">\(A\)</span> have become rows (the first column becomes the first row, etc.), and the rows in <span class="process-math">\(A\)</span> have become columns.<div class="autopermalink" data-description="Paragraph"><a href="#sec-transpose-3" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
+</div>
+<details id="ex-calculating-transposes" class="example example-like born-hidden-knowl"><summary class="knowl__link"><h3 class="heading">
+<span class="type">Example</span><span class="space heading-divison-mark heading-divison-mark__space"> </span><span class="codenumber">6.4.2</span><span class="period heading-divison-mark heading-divison-mark__period">.</span>
+</h3></summary><article class="example example-like knowl__content"><div class="para logical" id="ex-calculating-transposes-1-1">
+<div class="para">The transpose of the matrix</div>
+<div class="displaymath process-math" id="ex-calculating-transposes-1-1-1">
+\begin{equation*}
+A =
+\begin{bmatrix}
+-3 \amp  4 \amp  2 \\ 6 \amp  1 \amp  0
+\end{bmatrix}
+\end{equation*}
+</div>
+<div class="para">is</div>
+<div class="displaymath process-math" id="ex-calculating-transposes-1-1-2">
+\begin{equation*}
+A^T =
+\begin{bmatrix}
+-3 \amp  6 \\ 4\amp  1\\ 2\amp 0
+\end{bmatrix}
+.
+\end{equation*}
+</div>
+<div class="autopermalink" data-description="Paragraph"><a href="#ex-calculating-transposes-1-1" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
+</div>
+<div class="autopermalink" data-description="Example 6.4.2"><a href="#ex-calculating-transposes" title="Copy heading and permalink for Example 6.4.2" aria-label="Copy heading and permalink for Example 6.4.2">🔗</a></div></article></details><article class="remark remark-like" id="rem-transpose-size"><h3 class="heading">
+<span class="type">Remark</span><span class="space heading-divison-mark heading-divison-mark__space"> </span><span class="codenumber">6.4.3</span><span class="period heading-divison-mark heading-divison-mark__period">.</span>
+</h3>
+<div class="para logical" id="rem-transpose-size-1">
+<div class="para">Let <span class="process-math">\(A\)</span> be an <span class="process-math">\(m\times n\)</span> matrix. Then</div>
+<ul class="disc" id="rem-transpose-size-1-3">
+<li id="rem-transpose-size-1-3-1">
+<div class="para" id="rem-transpose-size-1-3-1-1">
+<span class="process-math">\(A\)</span> is <span class="process-math">\(m\times n\)</span> and <span class="process-math">\(A^T\)</span> is <span class="process-math">\(n\times m\text{,}\)</span> so <span class="process-math">\(AA^T\)</span> is defined and has size <span class="process-math">\(m\times m\)</span><div class="autopermalink" data-description="Paragraph"><a href="#rem-transpose-size-1-3-1-1" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
+</div>
+<div class="autopermalink" data-description="Item"><a href="#rem-transpose-size-1-3-1" title="Copy heading and permalink for Item" aria-label="Copy heading and permalink for Item">🔗</a></div>
+</li>
+<li id="rem-transpose-size-1-3-2">
+<div class="para" id="rem-transpose-size-1-3-2-1">
+<span class="process-math">\(A^T\)</span> is <span class="process-math">\(n\times m\)</span> and <span class="process-math">\(A\)</span> is <span class="process-math">\(m\times n\text{,}\)</span> so <span class="process-math">\(A^TA\)</span> is defined and has size <span class="process-math">\(n\times n\text{.}\)</span><div class="autopermalink" data-description="Paragraph"><a href="#rem-transpose-size-1-3-2-1" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
+</div>
+<div class="autopermalink" data-description="Item"><a href="#rem-transpose-size-1-3-2" title="Copy heading and permalink for Item" aria-label="Copy heading and permalink for Item">🔗</a></div>
+</li>
+</ul>
+<div class="autopermalink" data-description="Paragraph"><a href="#rem-transpose-size-1" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
+</div>
+<div class="autopermalink" data-description="Remark 6.4.3"><a href="#rem-transpose-size" title="Copy heading and permalink for Remark 6.4.3" aria-label="Copy heading and permalink for Remark 6.4.3">🔗</a></div></article><details id="ex-more-transposes" class="example example-like born-hidden-knowl"><summary class="knowl__link"><h3 class="heading">
+<span class="type">Example</span><span class="space heading-divison-mark heading-divison-mark__space"> </span><span class="codenumber">6.4.4</span><span class="period heading-divison-mark heading-divison-mark__period">.</span>
+</h3></summary><article class="example example-like knowl__content"><div class="para logical" id="ex-more-transposes-1-1">
+<div class="para">Consider two vectors <span class="process-math">\(\vect{x}, \vect{y} \in \R^n\)</span> as <span class="process-math">\(n\times 1\)</span> column matrices</div>
+<div class="displaymath process-math" id="ex-more-transposes-1-1-3">
+\begin{equation*}
+\vect{x} =
+\begin{bmatrix}
+x_1 \\ x_2\\ \vdots\\ x_n
+\end{bmatrix}
+, \qquad \vect{y} =
+\begin{bmatrix}
+y_1 \\ y_2\\ \vdots\\ y_n
+\end{bmatrix}\text{.}
+\end{equation*}
+</div>
+<div class="para">Then <span class="process-math">\(\vect{x}^T\)</span> is <span class="process-math">\(1\times n\)</span> and <span class="process-math">\(\vect{y}\)</span> is <span class="process-math">\(n\times 1\text{,}\)</span> so <span class="process-math">\(\vect{x}^T\vect{y}\)</span> is defined and is a <span class="process-math">\(1\times 1\)</span> matrix, which we can view as a real number. Show that</div>
+<div class="displaymath process-math" id="ex-more-transposes-1-1-10">
+\begin{equation*}
+\vect{x}^T\vect{y} = \vect{x}\cdot\vect{y}\text{.}
+\end{equation*}
+</div>
+<div class="autopermalink" data-description="Paragraph"><a href="#ex-more-transposes-1-1" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
+</div> <div class="para logical" id="ex-more-transposes-1-2">
+<div class="para">Answer: we calculate that</div>
+<div class="displaymath process-math" id="ex-more-transposes-1-2-1">
+\begin{align*}
+\vect{x}^T\vect{y} \amp  =
+\begin{bmatrix}
+x_1 \amp  x_2 \amp  \cdots \amp  x_n
+\end{bmatrix}
+\begin{bmatrix}
+y_1 \\ y_2\\ \vdots\\y_n
+\end{bmatrix}
+\\
+\amp  = [x_1y_1 + x_2y_2 + \dots + x_ny_n] \\
+\amp  = \vect{x}\cdot \vect{y}.
+\end{align*}
+</div>
+<div class="autopermalink" data-description="Paragraph"><a href="#ex-more-transposes-1-2" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
+</div>
+<div class="autopermalink" data-description="Example 6.4.4"><a href="#ex-more-transposes" title="Copy heading and permalink for Example 6.4.4" aria-label="Copy heading and permalink for Example 6.4.4">🔗</a></div></article></details><div class="para" id="sec-transpose-7">The matrix transpose has the following properties. Properties 2 and 3 are referred to as linearity. Property 4 says that we need to be careful when taking the transpose of a matrix product: we need to remember to reverse the order.<div class="autopermalink" data-description="Paragraph"><a href="#sec-transpose-7" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
+</div>
+<article class="theorem theorem-like" id="thm-transpose-props"><h3 class="heading">
+<span class="type">Theorem</span><span class="space heading-divison-mark heading-divison-mark__space"> </span><span class="codenumber">6.4.5</span><span class="period heading-divison-mark heading-divison-mark__period">.</span>
+</h3>
+<div class="para logical" id="thm-transpose-props-1-1">
+<div class="para">Let <span class="process-math">\(A = [a_{ij}]\)</span> and <span class="process-math">\(B = [b_{ij}]\)</span> be matrices, and <span class="process-math">\(c\in \R\text{.}\)</span> Then, whenever the relevant expressions are defined, we have</div>
+<ol class="decimal" id="thm-transpose-props-1-1-4">
+<li id="thm-transpose-props-1-1-4-1">
+<div class="para" id="thm-transpose-props-1-1-4-1-1">
+<span class="process-math">\(\displaystyle (A^T)^T = A\)</span><div class="autopermalink" data-description="Paragraph"><a href="#thm-transpose-props-1-1-4-1-1" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
+</div>
+<div class="autopermalink" data-description="Item 1"><a href="#thm-transpose-props-1-1-4-1" title="Copy heading and permalink for Item 1" aria-label="Copy heading and permalink for Item 1">🔗</a></div>
+</li>
+<li id="thm-transpose-props-1-1-4-2">
+<div class="para" id="thm-transpose-props-1-1-4-2-1">
+<span class="process-math">\(\displaystyle (A+B)^T = A^T + B^T\)</span><div class="autopermalink" data-description="Paragraph"><a href="#thm-transpose-props-1-1-4-2-1" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
+</div>
+<div class="autopermalink" data-description="Item 2"><a href="#thm-transpose-props-1-1-4-2" title="Copy heading and permalink for Item 2" aria-label="Copy heading and permalink for Item 2">🔗</a></div>
+</li>
+<li id="thm-transpose-props-1-1-4-3">
+<div class="para" id="thm-transpose-props-1-1-4-3-1">
+<span class="process-math">\(\displaystyle (cA)^T = c(A^T)\)</span><div class="autopermalink" data-description="Paragraph"><a href="#thm-transpose-props-1-1-4-3-1" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
+</div>
+<div class="autopermalink" data-description="Item 3"><a href="#thm-transpose-props-1-1-4-3" title="Copy heading and permalink for Item 3" aria-label="Copy heading and permalink for Item 3">🔗</a></div>
+</li>
+<li id="thm-transpose-props-1-1-4-4">
+<div class="para" id="thm-transpose-props-1-1-4-4-1">
+<span class="process-math">\(\displaystyle (AB)^T = B^TA^T\)</span><div class="autopermalink" data-description="Paragraph"><a href="#thm-transpose-props-1-1-4-4-1" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
+</div>
+<div class="autopermalink" data-description="Item 4"><a href="#thm-transpose-props-1-1-4-4" title="Copy heading and permalink for Item 4" aria-label="Copy heading and permalink for Item 4">🔗</a></div>
+</li>
+<li id="thm-transpose-props-1-1-4-5">
+<div class="para" id="thm-transpose-props-1-1-4-5-1">
+<span class="process-math">\((A^k)^T = (A^T)^k\text{,}\)</span> for any <span class="process-math">\(k \in \N\)</span><div class="autopermalink" data-description="Paragraph"><a href="#thm-transpose-props-1-1-4-5-1" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
+</div>
+<div class="autopermalink" data-description="Item 5"><a href="#thm-transpose-props-1-1-4-5" title="Copy heading and permalink for Item 5" aria-label="Copy heading and permalink for Item 5">🔗</a></div>
+</li>
+</ol>
+<div class="para">By repeatedly applying Properties <span class="process-math">\(2\)</span> and <span class="process-math">\(4\text{,}\)</span> we can generalise these for arbitrary sums and products to get</div>
+<div class="displaymath process-math" id="thm-transpose-props-1-1-7">
+\begin{align*}
+(A_1 + A_2 + \dots + A_k)^T \amp  = A_1^T + A_2^T + \dots +A_k^T       \\
+(A_1A_2\cdots A_{k-1}A_k)^T \amp  = A_k^T A_{k-1}^T \cdots A_2^TA_1^T\text{.}
+\end{align*}
+</div>
+<div class="autopermalink" data-description="Paragraph"><a href="#thm-transpose-props-1-1" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
+</div>
+<div class="autopermalink" data-description="Theorem 6.4.5"><a href="#thm-transpose-props" title="Copy heading and permalink for Theorem 6.4.5" aria-label="Copy heading and permalink for Theorem 6.4.5">🔗</a></div></article><details id="thm-transpose-props-2" class="hiddenproof born-hidden-knowl"><summary class="knowl__link"><h3 class="heading"><span class="type">Proof<span class="period heading-divison-mark heading-divison-mark__period">.</span></span></h3></summary><article class="hiddenproof knowl__content"><div class="para logical" id="thm-transpose-props-2-1">
+<div class="para">For 1, swapping the rows and columns twice gives back the original matrix. For 2, let <span class="process-math">\(c_{ij} = a_{ij} + b_{ij}\text{,}\)</span> so that <span class="process-math">\(A+B = [c_{ij}]\text{.}\)</span> Then</div>
+<div class="displaymath process-math" id="thm-transpose-props-2-1-3">
+\begin{equation*}
+c^*_{ij} = c_{ji} = a_{ji} + b_{ji} = a^*_{ij} + b^*_{ij}\text{.}
+\end{equation*}
+</div>
+<div class="para">Thus</div>
+<div class="displaymath process-math" id="thm-transpose-props-2-1-4">
+\begin{equation*}
+(A+B)^T = [c^*_{ij}] = [a^*_{ij} + b^*_{ij}] = [a^*_{ij}] + [b^*_{ij}] = A^T + B^T\text{.}
+\end{equation*}
+</div>
+<div class="para">The proof of 3 is that <span class="process-math">\((cA)^T = [ca_{ij}]^T = [ca^*_{ij}] = c[a^*_{ij}] = cA^T\text{.}\)</span>
+</div>
+<div class="autopermalink" data-description="Paragraph"><a href="#thm-transpose-props-2-1" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
+</div>
+<div class="para logical" id="thm-transpose-props-2-2">
+<div class="para">For <span class="process-math">\(4\text{,}\)</span> so that <span class="process-math">\(A\)</span> and <span class="process-math">\(B\)</span> are the right size, write <span class="process-math">\(A = [a_{ik}]_{m\times n}\)</span> and <span class="process-math">\(B = [b_{kj}]_{n \times p}\text{.}\)</span> Then <span class="process-math">\(B^TA^T\)</span> is <span class="process-math">\(p \times m\)</span> and <span class="process-math">\(AB\)</span> is <span class="process-math">\(m\times p\text{,}\)</span> so <span class="process-math">\((AB)^T\)</span> is <span class="process-math">\(p\times m\text{.}\)</span> Hence <span class="process-math">\((AB)^T\)</span> and <span class="process-math">\(B^TA^T\)</span> have the same size; we now show they have the same entries. The <span class="process-math">\((i, j)\)</span>-entry of <span class="process-math">\((AB)^T\)</span> is the <span class="process-math">\((j, i)\)</span>-entry of <span class="process-math">\(AB\text{,}\)</span> which is</div>
+<div class="displaymath process-math" id="thm-transpose-props-2-2-18">
+\begin{equation*}
+\sum_{k=1}^n a_{jk}b_{ki} = \sum_{k=1} b_{ik}^*a^*_{kj},
+\end{equation*}
+</div>
+<div class="para">which equals the <span class="process-math">\((i,j)\)</span>-entry of <span class="process-math">\(B^TA^T\text{.}\)</span>
+</div>
+<div class="autopermalink" data-description="Paragraph"><a href="#thm-transpose-props-2-2" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
+</div>
+<div class="para logical" id="thm-transpose-props-2-3">
+<div class="para">Finally, to prove Property 5, use the generalised version of Property 4 with <span class="process-math">\(A = A_1 = A_2 =\dots = A_k\)</span> to get</div>
+<div class="displaymath process-math" id="thm-transpose-props-2-3-2">
+\begin{equation*}
+(A^k)^T = (AA\cdots A)^T = A^T \cdots A^TA^T = (A^T)^k.
+\end{equation*}
+</div>
+<div class="autopermalink" data-description="Paragraph"><a href="#thm-transpose-props-2-3" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
+</div>
+<div class="autopermalink" data-description="Proof 6.4.5.1"><a href="#thm-transpose-props-2" title="Copy heading and permalink for Proof 6.4.5.1" aria-label="Copy heading and permalink for Proof 6.4.5.1">🔗</a></div></article></details><div class="autopermalink" data-description="Section 6.4: Transpose"><a href="#sec-transpose" title="Copy heading and permalink for Section 6.4: Transpose" aria-label="Copy heading and permalink for Section 6.4: Transpose">🔗</a></div></section></div>
 <div id="ptx-content-footer" class="ptx-content-footer">
 <a class="previous-button button" href="sec-matrix-mult.html" title="Previous"><span class="icon material-symbols-outlined" aria-hidden="true">&#xe5cb;</span><span class="name">Prev</span></a><a class="top-button button" href="#" title="Top"><span class="icon material-symbols-outlined" aria-hidden="true">&#xe5ce;</span><span class="name">Top</span></a><a class="next-button button" href="ch-matrix-inverses.html" title="Next"><span class="name">Next</span><span class="icon material-symbols-outlined" aria-hidden="true">&#xe5cc;</span></a>
 </div></main>

@@ -101,15 +101,15 @@ eBookConfig.allow_pairs = false;
 eBookConfig.enableScratchAC = false;
 eBookConfig.build_info = "";
 eBookConfig.python3 = null;
-eBookConfig.runestone_version = '7.11.0';
+eBookConfig.runestone_version = '7.11.14';
 eBookConfig.jobehost = '';
 eBookConfig.proxyuri_runs = '';
 eBookConfig.proxyuri_files = '';
 eBookConfig.enable_chatcodes =  false;
 </script>
 <!--*** Runestone Services ***-->
-<script src="_static/prefix-runtime.f91c1a4dc12163f2.bundle.js"></script><script src="_static/prefix-723.3e6434f80549315a.bundle.js"></script><script src="_static/prefix-runestone.731d8387162b79c1.bundle.js"></script><link rel="stylesheet" type="text/css" href="_static/prefix-723.3bccd435914aa0ff.css">
-<link rel="stylesheet" type="text/css" href="_static/prefix-runestone.557d81b04b3ec0e4.css">
+<script src="_static/prefix-runtime.d892923478694492.bundle.js"></script><script src="_static/prefix-723.3e6434f80549315a.bundle.js"></script><script src="_static/prefix-runestone.1d6e4aba17c2c7f2.bundle.js"></script><link rel="stylesheet" type="text/css" href="_static/prefix-723.3bccd435914aa0ff.css">
+<link rel="stylesheet" type="text/css" href="_static/prefix-runestone.6ec5960970d8b364.css">
 <script src="_static/pretext/js/lti_iframe_resizer.js"></script><script src="https://cdnjs.cloudflare.com/ajax/libs/lunr.js/2.3.9/lunr.min.js" integrity="sha512-4xUl/d6D6THrAnXAwGajXkoWaeMNwEKK4iNfq5DotEbLPAfk6FSxSP3ydNxqDgCw1c/0Z1Jg6L8h2j+++9BZmg==" crossorigin="anonymous" referrerpolicy="no-referrer"></script><script src="lunr-pretext-search-index.js" async=""></script><script src="_static/pretext/js/pretext_search.js"></script><script src="_static/pretext/js/lib/knowl.js"></script><!--knowl.js code controls Sage Cells within knowls--><script>sagecellEvalName='Evaluate (Sage)';
 </script>
 </head>
@@ -130,7 +130,34 @@ eBookConfig.enable_chatcodes =  false;
 </div>
 </div>
 <span class="nav-other-controls"><button id="light-dark-button" class="light-dark-button button" title="Dark Mode"><span class="icon material-symbols-outlined" aria-hidden="true">&#xe51c;</span><span class="name">Dark Mode</span></button></span><span class="treebuttons"><a class="previous-button button" href="ch-vectors.html" title="Previous"><span class="icon material-symbols-outlined" aria-hidden="true">&#xe5cb;</span><span class="name">Prev</span></a><a class="up-button button" href="ch-vectors.html" title="Up"><span class="icon material-symbols-outlined" aria-hidden="true">&#xe5ce;</span><span class="name">Up</span></a><a class="next-button button" href="sec-vector-algebra.html" title="Next"><span class="name">Next</span><span class="icon material-symbols-outlined" aria-hidden="true">&#xe5cc;</span></a></span>
-</div></nav><div id="latex-macros" class="hidden-content process-math" style="display:none"><span class="process-math">\(\newcommand{\N}{\mathbb N} \newcommand{\Z}{\mathbb Z} \newcommand{\Q}{\mathbb Q} \newcommand{\R}{\mathbb R}
+</div></nav><div id="latex-macros" class="hidden-content process-math" style="display:none"><span class="process-math">\(\require{mathtools}\newcommand{\N}{\mathbb N} 
+\newcommand{\Z}{\mathbb Z} 
+\newcommand{\Q}{\mathbb Q} 
+\newcommand{\R}{\mathbb R} 
+\newcommand{\C}{\mathbb C}
+\newcommand{\vect}[1]{\mathbf{#1}}
+\newcommand{\proj}[2]{\operatorname{proj}_{#1}\!\left(#2\right)}
+\newcommand{\p}{\mathcal P}
+\newcommand{\inv}{^{-1}}
+
+\newcommand{\colvec}[2]{\begin{bmatrix}#1\\#2\end{bmatrix}}
+\newenvironment{amatrix}[1]{
+\left[\begin{array}{#1|c}
+}{
+\end{array}\right]
+  }
+
+\newenvironment{aamatrix}{
+    \left[\begin{array}{cc|cc@{}}
+      }{
+  \end{array}\right]
+      }
+
+\newenvironment{aaamatrix}{
+      \left[\begin{array}{ccc|ccc@{}}
+      }{
+    \end{array}\right]
+    }
 \newcommand{\lt}{&lt;}
 \newcommand{\gt}{&gt;}
 \newcommand{\amp}{&amp;}
@@ -198,8 +225,9 @@ eBookConfig.enable_chatcodes =  false;
 <li class="toc-item toc-section"><div class="toc-title-box"><a href="sec-properties-of-inverses.html" class="internal"><span class="codenumber">7.1</span> <span class="title">Properties of inverses</span></a></div></li>
 <li class="toc-item toc-section"><div class="toc-title-box"><a href="sec-calculating-2x2-inverses.html" class="internal"><span class="codenumber">7.2</span> <span class="title">Calculating <span class="process-math">\(2\times 2\)</span> inverses</span></a></div></li>
 <li class="toc-item toc-section"><div class="toc-title-box"><a href="sec-calculating-nxn-inverses.html" class="internal"><span class="codenumber">7.3</span> <span class="title">Calculating <span class="process-math">\(n\times n\)</span> inverses</span></a></div></li>
-<li class="toc-item toc-section"><div class="toc-title-box"><a href="sec-elementary-matrices.html" class="internal"><span class="codenumber">7.4</span> <span class="title">Elementary matrices</span></a></div></li>
-<li class="toc-item toc-section"><div class="toc-title-box"><a href="sec-characterisations-of-invertibility.html" class="internal"><span class="codenumber">7.5</span> <span class="title">Characterisations of invertibility</span></a></div></li>
+<li class="toc-item toc-section"><div class="toc-title-box"><a href="sec-inverses-and-equations.html" class="internal"><span class="codenumber">7.4</span> <span class="title">Inverses and matrix equations</span></a></div></li>
+<li class="toc-item toc-section"><div class="toc-title-box"><a href="sec-elementary-matrices.html" class="internal"><span class="codenumber">7.5</span> <span class="title">Elementary matrices</span></a></div></li>
+<li class="toc-item toc-section"><div class="toc-title-box"><a href="sec-characterisations-of-invertibility.html" class="internal"><span class="codenumber">7.6</span> <span class="title">Characterisations of invertibility</span></a></div></li>
 </ul>
 </li>
 <li class="toc-item toc-chapter">
@@ -276,8 +304,110 @@ eBookConfig.enable_chatcodes =  false;
 </h3>
 <div class="para" id="def-vector-plane-1-1">A <dfn class="terminology">vector</dfn> in the <span class="process-math">\((x, y)-\)</span>plane is a directed line segment, which is also called an `arrow’. The set of all vectors in the plane is denoted by <span class="process-math">\(\mathbb{R}^2\text{.}\)</span><div class="autopermalink" data-description="Paragraph"><a href="#def-vector-plane-1-1" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
 </div>
-<div class="autopermalink" data-description="Definition 1.1.1"><a href="#def-vector-plane" title="Copy heading and permalink for Definition 1.1.1" aria-label="Copy heading and permalink for Definition 1.1.1">🔗</a></div></article><figure class="figure figure-like" id="fig-tikz"><div class="image-box" style="width: 15%; margin-left: 42.5%; margin-right: 42.5%;"><img src="generated/latex-image/poset.svg" role="img" class="contained"></div>
-<figcaption><span class="type">Figure</span><span class="space heading-divison-mark heading-divison-mark__space"> </span><span class="codenumber">1.1.2<span class="period heading-divison-mark heading-divison-mark__period">.</span></span><span class="space heading-divison-mark heading-divison-mark__space"> </span>A figure generated with TikZ in <span class="latex-logo">L<span class="A">a</span>T<span class="E">e</span>X</span><div class="autopermalink" data-description="Figure 1.1.2"><a href="#fig-tikz" title="Copy heading and permalink for Figure 1.1.2" aria-label="Copy heading and permalink for Figure 1.1.2">🔗</a></div></figcaption></figure><div class="autopermalink" data-description="Section 1.1: Vectors in the plane"><a href="#sec-vectors-in-the-plane" title="Copy heading and permalink for Section 1.1: Vectors in the plane" aria-label="Copy heading and permalink for Section 1.1: Vectors in the plane">🔗</a></div></section></div>
+<div class="autopermalink" data-description="Definition 1.1.1"><a href="#def-vector-plane" title="Copy heading and permalink for Definition 1.1.1" aria-label="Copy heading and permalink for Definition 1.1.1">🔗</a></div></article><figure class="figure figure-like" id="fig-vector"><div class="image-box" style="width: 60%; margin-left: 20%; margin-right: 20%;"><img src="generated/latex-image/vector.svg" role="img" class="contained"></div>
+<figcaption><span class="type">Figure</span><span class="space heading-divison-mark heading-divison-mark__space"> </span><span class="codenumber">1.1.2<span class="period heading-divison-mark heading-divison-mark__period">.</span></span><span class="space heading-divison-mark heading-divison-mark__space"> </span>A vector in the plane<div class="autopermalink" data-description="Figure 1.1.2"><a href="#fig-vector" title="Copy heading and permalink for Figure 1.1.2" aria-label="Copy heading and permalink for Figure 1.1.2">🔗</a></div></figcaption></figure><div class="para" id="sec-vectors-in-the-plane-4">An example is drawn in Figure <a href="sec-vectors-in-the-plane.html#fig-vector" class="xref" data-knowl="./knowl/xref/fig-vector.html" data-reveal-label="Reveal" data-close-label="Close" title="Figure 1.1.2">Figure 1.1.2</a>. To understand the figure and the definition it is important to keep the following fact in mind:<div class="autopermalink" data-description="Paragraph"><a href="#sec-vectors-in-the-plane-4" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
+</div>
+<article class="assemblage assemblage-like" id="assemblage-mag-and-direction"><div class="para" id="assemblage-mag-and-direction-1">Only the magnitude and direction of a vector matter, not its position in space.<div class="autopermalink" data-description="Paragraph"><a href="#assemblage-mag-and-direction-1" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
+</div>
+<div class="autopermalink" data-description="Assemblage"><a href="#assemblage-mag-and-direction" title="Copy heading and permalink for Assemblage" aria-label="Copy heading and permalink for Assemblage">🔗</a></div></article><div class="para" id="sec-vectors-in-the-plane-6">In other words, we can think of a vector as an arrow `floating’ in the plane, where translating the arrow (i.e.\ moving it without rotating or stretching it) gives a vector which is `the same’ as the original vector. This is illustrated in Figure <a href="sec-vectors-in-the-plane.html#fig-vectranslates" class="xref" data-knowl="./knowl/xref/fig-vectranslates.html" data-reveal-label="Reveal" data-close-label="Close" title="Figure 1.1.3">Figure 1.1.3</a>: all of these arrows have the same magnitude and direction, so they represent the same vector.<div class="autopermalink" data-description="Paragraph"><a href="#sec-vectors-in-the-plane-6" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
+</div>
+<figure class="figure figure-like" id="fig-vectranslates"><div class="image-box" style="width: 60%; margin-left: 20%; margin-right: 20%;"><img src="generated/latex-image/fig-vectranslates-2.svg" role="img" class="contained"></div>
+<figcaption><span class="type">Figure</span><span class="space heading-divison-mark heading-divison-mark__space"> </span><span class="codenumber">1.1.3<span class="period heading-divison-mark heading-divison-mark__period">.</span></span><span class="space heading-divison-mark heading-divison-mark__space"> </span>These arrows all represent the same vector<div class="autopermalink" data-description="Figure 1.1.3"><a href="#fig-vectranslates" title="Copy heading and permalink for Figure 1.1.3" aria-label="Copy heading and permalink for Figure 1.1.3">🔗</a></div></figcaption></figure><div class="para" id="sec-vectors-in-the-plane-8">We can also interpret vectors in an algebraic way, using coordinates. We will soon see that this is usually more convenient for doing calculations.<div class="autopermalink" data-description="Paragraph"><a href="#sec-vectors-in-the-plane-8" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
+</div>
+<article class="definition definition-like" id="def-notation-vectors"><h3 class="heading">
+<span class="type">Definition</span><span class="space heading-divison-mark heading-divison-mark__space"> </span><span class="codenumber">1.1.4</span><span class="period heading-divison-mark heading-divison-mark__period">.</span>
+</h3>
+<ul class="disc" id="def-notation-vectors-1">
+<li id="def-notation-vectors-1-1">
+<div class="para logical" id="def-notation-vectors-1-1-1">
+<div class="para">If <span class="process-math">\(A = (a_1, a_2)\)</span> is a point in the plane, then there is a vector from the origin <span class="process-math">\(0 = (0, 0)\)</span> to <span class="process-math">\(A\text{.}\)</span> It is denoted by</div>
+<div class="displaymath process-math" id="def-notation-vectors-1-1-1-4">
+\begin{equation*}
+\overrightarrow{OA} = \begin{bmatrix}a_1 \\ a_2\end{bmatrix}
+\end{equation*}
+</div>
+<div class="para">or often by <span class="process-math">\([a_1, a_2]\)</span> to save space. Note that round brackets are used for points, while square brackets are used for vectors. We call <span class="process-math">\(\overrightarrow{OA}\)</span> the <dfn class="terminology">position vector</dfn> of the point <span class="process-math">\(A\text{.}\)</span> The numbers <span class="process-math">\(a_1\)</span> and <span class="process-math">\(a_2\)</span> are called the <dfn class="terminology">components</dfn> of <span class="process-math">\(\overrightarrow{OA}\text{.}\)</span>
+</div>
+<div class="autopermalink" data-description="Paragraph"><a href="#def-notation-vectors-1-1-1" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
+</div>
+<figure class="figure figure-like" id="fig-position-vector"><div class="image-box" style="width: 60%; margin-left: 20%; margin-right: 20%;"><img src="generated/latex-image/fig-position-vector-2.svg" role="img" class="contained"></div>
+<figcaption><span class="type">Figure</span><span class="space heading-divison-mark heading-divison-mark__space"> </span><span class="codenumber">1.1.5<span class="period heading-divison-mark heading-divison-mark__period">.</span></span><span class="space heading-divison-mark heading-divison-mark__space"> </span>The position vector <span class="process-math">\(\overrightarrow{OA}\)</span> of a point <span class="process-math">\(A = (a_1, a_2)\)</span><div class="autopermalink" data-description="Figure 1.1.5"><a href="#fig-position-vector" title="Copy heading and permalink for Figure 1.1.5" aria-label="Copy heading and permalink for Figure 1.1.5">🔗</a></div></figcaption></figure><div class="autopermalink" data-description="Item"><a href="#def-notation-vectors-1-1" title="Copy heading and permalink for Item" aria-label="Copy heading and permalink for Item">🔗</a></div>
+</li>
+<li id="def-notation-vectors-1-2">
+<div class="para logical" id="def-notation-vectors-1-2-1">
+<div class="para">More generally, if <span class="process-math">\(A = (a_1, a_2)\)</span> and <span class="process-math">\(B = (b_1, b_2)\)</span> are points, then we consider the vector from <span class="process-math">\(A\)</span> to <span class="process-math">\(B\text{,}\)</span> written <span class="process-math">\(\overrightarrow{AB}\text{.}\)</span> This is shown in <a href="sec-vectors-in-the-plane.html#fig-coordsAB" class="xref" data-knowl="./knowl/xref/fig-coordsAB.html" data-reveal-label="Reveal" data-close-label="Close" title="Figure 1.1.6">Figure 1.1.6</a>. We say that <span class="process-math">\(A\)</span> is the <dfn class="terminology">tail</dfn> and that <span class="process-math">\(B\)</span> is the <dfn class="terminology">head</dfn> or <dfn class="terminology">tip</dfn> of the arrow. Since <span class="process-math">\(\overrightarrow{AB}\)</span> is the displacement vector from <span class="process-math">\(A\)</span> to <span class="process-math">\(B\text{,}\)</span> we have</div>
+<div class="displaymath process-math" data-contains-math-knowls="./knowl/xref/fig-coordsAB.html" id="def-notation-vectors-1-2-1-15">
+\begin{equation*}
+\overrightarrow{AB} = \begin{bmatrix} b_1 - a_1 \\ b_2 - a_2\end{bmatrix}\text{.}
+\end{equation*}
+</div>
+<div class="para"><figure class="figure figure-like" id="fig-coordsAB"><div class="image-box" style="width: 60%; margin-left: 20%; margin-right: 20%;"><img src="generated/latex-image/fig-coordsAB-2.svg" role="img" class="contained"></div>
+<figcaption><span class="type">Figure</span><span class="space heading-divison-mark heading-divison-mark__space"> </span><span class="codenumber">1.1.6<span class="period heading-divison-mark heading-divison-mark__period">.</span></span><span class="space heading-divison-mark heading-divison-mark__space"> </span>A vector <span class="process-math">\(\overrightarrow{AB}\)</span><div class="autopermalink" data-description="Figure 1.1.6"><a href="#fig-coordsAB" title="Copy heading and permalink for Figure 1.1.6" aria-label="Copy heading and permalink for Figure 1.1.6">🔗</a></div></figcaption></figure></div>
+<div class="autopermalink" data-description="Paragraph"><a href="#def-notation-vectors-1-2-1" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
+</div>
+<div class="autopermalink" data-description="Item"><a href="#def-notation-vectors-1-2" title="Copy heading and permalink for Item" aria-label="Copy heading and permalink for Item">🔗</a></div>
+</li>
+<li id="def-notation-vectors-1-3">
+<div class="para" id="def-notation-vectors-1-3-1">When using a single-letter variable to refer to a vector, it will be typed in bold: for example <span class="process-math">\(\mathbf{a}\text{,}\)</span> <span class="process-math">\(\mathbf{b}\text{,}\)</span> <span class="process-math">\(\mathbf{u}\text{,}\)</span> or <span class="process-math">\(\mathbf{v}\text{.}\)</span> In handwriting, we instead use a squiggle under the vector, which looks like <span class="process-math">\(\underset{\sim}{a}\text{,}\)</span> <span class="process-math">\(\underset{\sim}{b}\text{,}\)</span> etc.<div class="autopermalink" data-description="Paragraph"><a href="#def-notation-vectors-1-3-1" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
+</div>
+<div class="autopermalink" data-description="Item"><a href="#def-notation-vectors-1-3" title="Copy heading and permalink for Item" aria-label="Copy heading and permalink for Item">🔗</a></div>
+</li>
+<li id="def-notation-vectors-1-4">
+<div class="para logical" id="def-notation-vectors-1-4-1">
+<div class="para">There is a special vector called the <dfn class="terminology">zero vector</dfn>, written as <span class="process-math">\(\mathbf{0}\text{.}\)</span> This is the vector <span class="process-math">\(\overrightarrow{OO}\)</span> from the origin to the origin with zero magnitude. Therefore</div>
+<div class="displaymath process-math" id="def-notation-vectors-1-4-1-4">
+\begin{equation*}
+\mathbf{0} = \begin{bmatrix} 0 \\0 \end{bmatrix}\text{.}
+\end{equation*}
+</div>
+<div class="para"><figure class="figure figure-like" id="fig-zero-vector"><div class="image-box" style="width: 60%; margin-left: 20%; margin-right: 20%;"><img src="generated/latex-image/fig-zero-vector-2.svg" role="img" class="contained"></div>
+<figcaption><span class="type">Figure</span><span class="space heading-divison-mark heading-divison-mark__space"> </span><span class="codenumber">1.1.7<span class="period heading-divison-mark heading-divison-mark__period">.</span></span><span class="space heading-divison-mark heading-divison-mark__space"> </span>The zero vector<div class="autopermalink" data-description="Figure 1.1.7"><a href="#fig-zero-vector" title="Copy heading and permalink for Figure 1.1.7" aria-label="Copy heading and permalink for Figure 1.1.7">🔗</a></div></figcaption></figure></div>
+<div class="autopermalink" data-description="Paragraph"><a href="#def-notation-vectors-1-4-1" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
+</div>
+<div class="autopermalink" data-description="Item"><a href="#def-notation-vectors-1-4" title="Copy heading and permalink for Item" aria-label="Copy heading and permalink for Item">🔗</a></div>
+</li>
+</ul>
+<div class="autopermalink" data-description="Definition 1.1.4"><a href="#def-notation-vectors" title="Copy heading and permalink for Definition 1.1.4" aria-label="Copy heading and permalink for Definition 1.1.4">🔗</a></div></article><div class="para" id="sec-vectors-in-the-plane-10">Recall that different arrows can represent the same vector. Given any arrow, we can move it so that its tail is at the origin.<div class="autopermalink" data-description="Paragraph"><a href="#sec-vectors-in-the-plane-10" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
+</div>
+<article class="definition definition-like" id="def-standard-pos"><h3 class="heading">
+<span class="type">Definition</span><span class="space heading-divison-mark heading-divison-mark__space"> </span><span class="codenumber">1.1.8</span><span class="period heading-divison-mark heading-divison-mark__period">.</span>
+</h3>
+<div class="para" id="def-standard-pos-1-1">A vector with its tail at the origin is said to be in <dfn class="terminology">standard position</dfn>.<div class="autopermalink" data-description="Paragraph"><a href="#def-standard-pos-1-1" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
+</div>
+<div class="autopermalink" data-description="Definition 1.1.8"><a href="#def-standard-pos" title="Copy heading and permalink for Definition 1.1.8" aria-label="Copy heading and permalink for Definition 1.1.8">🔗</a></div></article><div class="para" id="sec-vectors-in-the-plane-12">All position vectors are in standard position, and all vectors in standard position are position vectors of their tip. If <span class="process-math">\(\mathbf{v} = \overrightarrow{OA}\)</span> is in standard position, where <span class="process-math">\(A = (a_1, a_2)\)</span> is some point, then <span class="process-math">\(\mathbf{v} = [a_1, a_2]\text{.}\)</span> <em class="emphasis">So in standard position, the components of the vector <span class="process-math">\(\mathbf{v} = \overrightarrow{OA}\)</span> are exactly the same as the coordinates of the point <span class="process-math">\(A\)</span></em>.<div class="autopermalink" data-description="Paragraph"><a href="#sec-vectors-in-the-plane-12" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
+</div>
+<div class="para logical" id="sec-vectors-in-the-plane-13">
+<div class="para">Let <span class="process-math">\(\overrightarrow{AB}\)</span> and <span class="process-math">\(\overrightarrow{CD}\)</span> be any two vectors in <span class="process-math">\(\R^2\text{.}\)</span> Then the vectors are equal if and only if they have the same displacement, i.e.</div>
+<div class="displaymath process-math" id="sec-vectors-in-the-plane-13-4">
+\begin{equation*}
+\begin{bmatrix}
+b_1 - a_1 \\ b_2 - a_2
+\end{bmatrix}
+=
+\begin{bmatrix}
+d_1 - c_1 \\ d_2 - c_2
+\end{bmatrix}
+,
+\end{equation*}
+</div>
+<div class="para">which is precisely when the vectors have equal components. So if <span class="process-math">\(\mathbf{u} = [u_1, u_2]\)</span> and <span class="process-math">\(\mathbf{v} = [v_1, v_2]\text{,}\)</span> then <span class="process-math">\(\mathbf{u} = \mathbf{v}\)</span> if and only if <span class="process-math">\(u_1 = v_1\)</span> and <span class="process-math">\(u_2 = v_2\text{.}\)</span>
+</div>
+<div class="autopermalink" data-description="Paragraph"><a href="#sec-vectors-in-the-plane-13" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
+</div>
+<details id="eg-finding-vectors" class="example example-like born-hidden-knowl"><summary class="knowl__link"><h3 class="heading">
+<span class="type">Example</span><span class="space heading-divison-mark heading-divison-mark__space"> </span><span class="codenumber">1.1.9</span><span class="period heading-divison-mark heading-divison-mark__period">.</span>
+</h3></summary><article class="example example-like knowl__content"><div class="para" id="eg-finding-vectors-1-1">Let <span class="process-math">\(A = (-2, -1)\text{,}\)</span> <span class="process-math">\(B = (1, 2)\text{,}\)</span> and <span class="process-math">\(C = (3, 3)\text{.}\)</span> Which of the vectors <span class="process-math">\(\overrightarrow{AB}, \overrightarrow{BC}\text{,}\)</span> <span class="process-math">\(\overrightarrow{OC}\)</span> are equal?<div class="autopermalink" data-description="Paragraph"><a href="#eg-finding-vectors-1-1" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
+</div> <div class="para logical" id="eg-finding-vectors-1-2">
+<div class="para">We calculate that</div>
+<div class="displaymath process-math" id="eg-finding-vectors-1-2-1">
+\begin{equation*}
+\overrightarrow{AB} = \begin{bmatrix}1-(-2) \\ 2-(-1) \end{bmatrix}  = \begin{bmatrix} 3 \\ 3\end{bmatrix},
+\end{equation*}
+</div>
+<div class="para">and <span class="process-math">\(\overrightarrow{BC} = [3-1, 3-2] = [2, 1]\text{,}\)</span> <span class="process-math">\(\overrightarrow{OC} = [3, 3]\text{,}\)</span> and <span class="process-math">\(\overrightarrow{OA} = [-2, -1]\text{.}\)</span> Thus <span class="process-math">\(\overrightarrow{AB} = \overrightarrow{OC}\text{,}\)</span> and all the other vectors are distinct. (The components of <span class="process-math">\(\overrightarrow{OA}\)</span> are the negative of the components of <span class="process-math">\(\overrightarrow{BC}\text{,}\)</span> so <span class="process-math">\(\overrightarrow{OA}\)</span> and <span class="process-math">\(\overrightarrow{BC}\)</span> have the same length, but they are not equal vectors because they point in opposite directions.)</div>
+<div class="autopermalink" data-description="Paragraph"><a href="#eg-finding-vectors-1-2" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
+</div>
+<div class="autopermalink" data-description="Example 1.1.9"><a href="#eg-finding-vectors" title="Copy heading and permalink for Example 1.1.9" aria-label="Copy heading and permalink for Example 1.1.9">🔗</a></div></article></details><div class="autopermalink" data-description="Section 1.1: Vectors in the plane"><a href="#sec-vectors-in-the-plane" title="Copy heading and permalink for Section 1.1: Vectors in the plane" aria-label="Copy heading and permalink for Section 1.1: Vectors in the plane">🔗</a></div></section></div>
 <div id="ptx-content-footer" class="ptx-content-footer">
 <a class="previous-button button" href="ch-vectors.html" title="Previous"><span class="icon material-symbols-outlined" aria-hidden="true">&#xe5cb;</span><span class="name">Prev</span></a><a class="top-button button" href="#" title="Top"><span class="icon material-symbols-outlined" aria-hidden="true">&#xe5ce;</span><span class="name">Top</span></a><a class="next-button button" href="sec-vector-algebra.html" title="Next"><span class="name">Next</span><span class="icon material-symbols-outlined" aria-hidden="true">&#xe5cc;</span></a>
 </div></main>

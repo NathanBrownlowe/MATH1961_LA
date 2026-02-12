@@ -1,0 +1,154 @@
+<!DOCTYPE html>
+<html lang="en-US" dir="ltr">
+<!--******************************************-->
+<!--*  Authored with PreTeXt                 *-->
+<!--*  pretextbook.org                       *-->
+<!--*  Theme: default-modern                 *-->
+<!--*  Palette:                              *-->
+<!--******************************************-->
+
+<!--********************************************-->
+<!--*       Generated from PreTeXt source      *-->
+<!--*                                          *-->
+<!--*         https://pretextbook.org          *-->
+<!--*                                          *-->
+<!--********************************************-->
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+<meta name="robots" content="noindex, nofollow">
+</head>
+<body class="ignore-math">
+<article class="theorem theorem-like"><h3 class="heading">
+<span class="type">Theorem</span><span class="space heading-divison-mark heading-divison-mark__space"> </span><span class="codenumber">7.2.1</span><span class="period heading-divison-mark heading-divison-mark__period">.</span>
+</h3>
+<div class="para logical">
+<div class="para">A <span class="process-math">\(2\times 2\)</span> matrix</div>
+<div class="displaymath process-math">
+\begin{equation*}
+A =
+\begin{bmatrix}
+a \amp  b \\ c\amp d
+\end{bmatrix}
+\end{equation*}
+</div>
+<div class="para">is invertible if and only if <span class="process-math">\(ad-bc \neq 0\text{.}\)</span> In this case, we have</div>
+<div class="displaymath process-math">
+\begin{equation*}
+A\inv = \frac{1}{ad-bc}
+\begin{bmatrix}
+d \amp  -b \\ -c \amp a
+\end{bmatrix}\text{.}
+\end{equation*}
+</div>
+<div class="autopermalink" data-description="Paragraph"><a href="#thm-invertible-1-1" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
+</div>
+<div class="autopermalink" data-description="Theorem 7.2.1"><a href="#thm-invertible" title="Copy heading and permalink for Theorem 7.2.1" aria-label="Copy heading and permalink for Theorem 7.2.1">🔗</a></div></article><details class="hiddenproof born-hidden-knowl"><summary class="knowl__link"><h3 class="heading"><span class="type">Proof<span class="period heading-divison-mark heading-divison-mark__period">.</span></span></h3></summary><article class="hiddenproof knowl__content"><div class="para logical">
+<div class="para">Suppose <span class="process-math">\(ad-bc\ne 0\text{.}\)</span> Then</div>
+<div class="displaymath process-math">
+\begin{align*}
+A =
+\begin{bmatrix}
+a \amp  b \\ c\amp d
+\end{bmatrix}
+\left(\frac{1}{ad-bc}
+\begin{bmatrix}
+d \amp  -b \\ -c \amp a
+\end{bmatrix}
+\right) \amp  = \frac{1}{ad-bc}
+\begin{bmatrix}
+a \amp  b \\ c\amp d
+\end{bmatrix}
+\begin{bmatrix}
+d \amp  -b \\ -c \amp a
+\end{bmatrix}
+\\
+\amp  = \frac{1}{ad-bc}
+\begin{bmatrix}
+ad - bc \amp  0 \\
+0       \amp  -cb+ da
+\end{bmatrix}
+\\
+\amp  =
+\begin{bmatrix}
+1 \amp  0 \\ 0 \amp  1
+\end{bmatrix}
+= I_2\text{.}
+\end{align*}
+</div>
+<div class="para">Similarly one can show that</div>
+<div class="displaymath process-math">
+\begin{equation*}
+\frac{1}{ad-bc}
+\begin{bmatrix}
+d \amp  -b \\ -c \amp a
+\end{bmatrix}
+\begin{bmatrix}
+a \amp  b \\ c\amp d
+\end{bmatrix}
+= I_2\text{.}
+\end{equation*}
+</div>
+<div class="para">This shows that <span class="process-math">\(A\)</span> is invertible, with the desired inverse.</div>
+<div class="autopermalink" data-description="Paragraph"><a href="#thm-invertible-2-1" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
+</div>
+<div class="para">Conversely, suppose that <span class="process-math">\(ad- bc = 0\text{.}\)</span><div class="autopermalink" data-description="Paragraph"><a href="#thm-invertible-2-2" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
+</div>
+<div class="para logical">
+<div class="para">
+<dfn class="terminology">Case 1:</dfn> If <span class="process-math">\(a = 0\text{,}\)</span> then <span class="process-math">\(bc = 0\text{,}\)</span> so <span class="process-math">\(b = 0\)</span> or <span class="process-math">\(c = 0\text{.}\)</span> If <span class="process-math">\(b = 0\text{,}\)</span>
+</div>
+<div class="displaymath process-math">
+\begin{equation*}
+\begin{bmatrix}
+0 \amp  0 \\
+c \amp  d
+\end{bmatrix}
+\begin{bmatrix}
+a' \amp  b' \\ c' \amp  d'
+\end{bmatrix}
+=
+\begin{bmatrix}
+0         \amp  0 \\
+a'c + c'd \amp  b'c + dd'
+\end{bmatrix}
+\ne I_2
+\end{equation*}
+</div>
+<div class="para">since the <span class="process-math">\((1, 1)\)</span>-entry is zero instead of one. If <span class="process-math">\(c = 0\text{,}\)</span> then</div>
+<div class="displaymath process-math">
+\begin{equation*}
+\begin{bmatrix}
+a' \amp  b' \\ c' \amp  d'
+\end{bmatrix}
+\begin{bmatrix}
+0 \amp  b \\
+0 \amp  d
+\end{bmatrix}
+=
+\begin{bmatrix}
+0 \amp  a'b + b'd \\
+0 \amp  bc' + dd'
+\end{bmatrix}
+\ne I_2\text{.}
+\end{equation*}
+</div>
+<div class="para">Since <span class="process-math">\(a', b', c', d' \in \R\)</span> were arbitrary, this means that <span class="process-math">\(A\)</span> has no inverse.</div>
+<div class="autopermalink" data-description="Paragraph"><a href="#thm-invertible-2-3" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
+</div>
+<div class="para logical">
+<div class="para">
+<dfn class="terminology">Case 2:</dfn> If <span class="process-math">\(a\ne 0\text{,}\)</span> then <span class="process-math">\(d =\frac{bc}{a}\text{.}\)</span> Then, in the following Problem you are asked to show that</div>
+<div class="displaymath process-math">
+\begin{equation*}
+A =
+\begin{bmatrix}
+a \amp  b \\ c \amp  \frac{bc}{a}
+\end{bmatrix}
+\end{equation*}
+</div>
+<div class="para">is not invertible.</div>
+<div class="autopermalink" data-description="Paragraph"><a href="#thm-invertible-2-4" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
+</div>
+<div class="autopermalink" data-description="Proof 7.2.1.1"><a href="#thm-invertible-2" title="Copy heading and permalink for Proof 7.2.1.1" aria-label="Copy heading and permalink for Proof 7.2.1.1">🔗</a></div></article></details><span class="incontext"><a class="internal" href="sec-calculating-2x2-inverses.html#thm-invertible">in-context</a></span>
+</body>
+</html>

@@ -101,15 +101,15 @@ eBookConfig.allow_pairs = false;
 eBookConfig.enableScratchAC = false;
 eBookConfig.build_info = "";
 eBookConfig.python3 = null;
-eBookConfig.runestone_version = '7.11.0';
+eBookConfig.runestone_version = '7.11.14';
 eBookConfig.jobehost = '';
 eBookConfig.proxyuri_runs = '';
 eBookConfig.proxyuri_files = '';
 eBookConfig.enable_chatcodes =  false;
 </script>
 <!--*** Runestone Services ***-->
-<script src="_static/prefix-runtime.f91c1a4dc12163f2.bundle.js"></script><script src="_static/prefix-723.3e6434f80549315a.bundle.js"></script><script src="_static/prefix-runestone.731d8387162b79c1.bundle.js"></script><link rel="stylesheet" type="text/css" href="_static/prefix-723.3bccd435914aa0ff.css">
-<link rel="stylesheet" type="text/css" href="_static/prefix-runestone.557d81b04b3ec0e4.css">
+<script src="_static/prefix-runtime.d892923478694492.bundle.js"></script><script src="_static/prefix-723.3e6434f80549315a.bundle.js"></script><script src="_static/prefix-runestone.1d6e4aba17c2c7f2.bundle.js"></script><link rel="stylesheet" type="text/css" href="_static/prefix-723.3bccd435914aa0ff.css">
+<link rel="stylesheet" type="text/css" href="_static/prefix-runestone.6ec5960970d8b364.css">
 <script src="_static/pretext/js/lti_iframe_resizer.js"></script><script src="https://cdnjs.cloudflare.com/ajax/libs/lunr.js/2.3.9/lunr.min.js" integrity="sha512-4xUl/d6D6THrAnXAwGajXkoWaeMNwEKK4iNfq5DotEbLPAfk6FSxSP3ydNxqDgCw1c/0Z1Jg6L8h2j+++9BZmg==" crossorigin="anonymous" referrerpolicy="no-referrer"></script><script src="lunr-pretext-search-index.js" async=""></script><script src="_static/pretext/js/pretext_search.js"></script><script src="_static/pretext/js/lib/knowl.js"></script><!--knowl.js code controls Sage Cells within knowls--><script>sagecellEvalName='Evaluate (Sage)';
 </script>
 </head>
@@ -130,7 +130,34 @@ eBookConfig.enable_chatcodes =  false;
 </div>
 </div>
 <span class="nav-other-controls"><button id="light-dark-button" class="light-dark-button button" title="Dark Mode"><span class="icon material-symbols-outlined" aria-hidden="true">&#xe51c;</span><span class="name">Dark Mode</span></button></span><span class="treebuttons"><a class="previous-button button" href="sec-systems.html" title="Previous"><span class="icon material-symbols-outlined" aria-hidden="true">&#xe5cb;</span><span class="name">Prev</span></a><a class="up-button button" href="ch-systems.html" title="Up"><span class="icon material-symbols-outlined" aria-hidden="true">&#xe5ce;</span><span class="name">Up</span></a><a class="next-button button" href="sec-number-of-solutions.html" title="Next"><span class="name">Next</span><span class="icon material-symbols-outlined" aria-hidden="true">&#xe5cc;</span></a></span>
-</div></nav><div id="latex-macros" class="hidden-content process-math" style="display:none"><span class="process-math">\(\newcommand{\N}{\mathbb N} \newcommand{\Z}{\mathbb Z} \newcommand{\Q}{\mathbb Q} \newcommand{\R}{\mathbb R}
+</div></nav><div id="latex-macros" class="hidden-content process-math" style="display:none"><span class="process-math">\(\require{mathtools}\newcommand{\N}{\mathbb N} 
+\newcommand{\Z}{\mathbb Z} 
+\newcommand{\Q}{\mathbb Q} 
+\newcommand{\R}{\mathbb R} 
+\newcommand{\C}{\mathbb C}
+\newcommand{\vect}[1]{\mathbf{#1}}
+\newcommand{\proj}[2]{\operatorname{proj}_{#1}\!\left(#2\right)}
+\newcommand{\p}{\mathcal P}
+\newcommand{\inv}{^{-1}}
+
+\newcommand{\colvec}[2]{\begin{bmatrix}#1\\#2\end{bmatrix}}
+\newenvironment{amatrix}[1]{
+\left[\begin{array}{#1|c}
+}{
+\end{array}\right]
+  }
+
+\newenvironment{aamatrix}{
+    \left[\begin{array}{cc|cc@{}}
+      }{
+  \end{array}\right]
+      }
+
+\newenvironment{aaamatrix}{
+      \left[\begin{array}{ccc|ccc@{}}
+      }{
+    \end{array}\right]
+    }
 \newcommand{\lt}{&lt;}
 \newcommand{\gt}{&gt;}
 \newcommand{\amp}{&amp;}
@@ -198,8 +225,9 @@ eBookConfig.enable_chatcodes =  false;
 <li class="toc-item toc-section"><div class="toc-title-box"><a href="sec-properties-of-inverses.html" class="internal"><span class="codenumber">7.1</span> <span class="title">Properties of inverses</span></a></div></li>
 <li class="toc-item toc-section"><div class="toc-title-box"><a href="sec-calculating-2x2-inverses.html" class="internal"><span class="codenumber">7.2</span> <span class="title">Calculating <span class="process-math">\(2\times 2\)</span> inverses</span></a></div></li>
 <li class="toc-item toc-section"><div class="toc-title-box"><a href="sec-calculating-nxn-inverses.html" class="internal"><span class="codenumber">7.3</span> <span class="title">Calculating <span class="process-math">\(n\times n\)</span> inverses</span></a></div></li>
-<li class="toc-item toc-section"><div class="toc-title-box"><a href="sec-elementary-matrices.html" class="internal"><span class="codenumber">7.4</span> <span class="title">Elementary matrices</span></a></div></li>
-<li class="toc-item toc-section"><div class="toc-title-box"><a href="sec-characterisations-of-invertibility.html" class="internal"><span class="codenumber">7.5</span> <span class="title">Characterisations of invertibility</span></a></div></li>
+<li class="toc-item toc-section"><div class="toc-title-box"><a href="sec-inverses-and-equations.html" class="internal"><span class="codenumber">7.4</span> <span class="title">Inverses and matrix equations</span></a></div></li>
+<li class="toc-item toc-section"><div class="toc-title-box"><a href="sec-elementary-matrices.html" class="internal"><span class="codenumber">7.5</span> <span class="title">Elementary matrices</span></a></div></li>
+<li class="toc-item toc-section"><div class="toc-title-box"><a href="sec-characterisations-of-invertibility.html" class="internal"><span class="codenumber">7.6</span> <span class="title">Characterisations of invertibility</span></a></div></li>
 </ul>
 </li>
 <li class="toc-item toc-chapter">
@@ -271,9 +299,241 @@ eBookConfig.enable_chatcodes =  false;
 <main class="ptx-main"><div id="ptx-content" class="ptx-content"><section class="section" id="sec-guassian-elimination"><h2 class="heading hide-type">
 <span class="type">Section</span><span class="space heading-divison-mark heading-divison-mark__space"> </span><span class="codenumber">5.2</span><span class="space heading-divison-mark heading-divison-mark__space"> </span><span class="title">Gaussian elimination</span>
 </h2>
-<div class="para" id="sec-guassian-elimination-2">Text of section.<div class="autopermalink" data-description="Paragraph"><a href="#sec-guassian-elimination-2" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
+<div class="para" id="sec-guassian-elimination-2">In this section, we develop the method used in <a href="sec-systems.html#ex-lineq" class="xref" data-knowl="./knowl/xref/ex-lineq.html" data-reveal-label="Reveal" data-close-label="Close" title="Example 5.1.10">Example 5.1.10</a> into a general procedure.<div class="autopermalink" data-description="Paragraph"><a href="#sec-guassian-elimination-2" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
 </div>
-<div class="autopermalink" data-description="Section 5.2: Gaussian elimination"><a href="#sec-guassian-elimination" title="Copy heading and permalink for Section 5.2: Gaussian elimination" aria-label="Copy heading and permalink for Section 5.2: Gaussian elimination">🔗</a></div></section></div>
+<article class="definition definition-like" id="def-elementary-operations"><h3 class="heading">
+<span class="type">Definition</span><span class="space heading-divison-mark heading-divison-mark__space"> </span><span class="codenumber">5.2.1</span><span class="period heading-divison-mark heading-divison-mark__period">.</span>
+</h3>
+<div class="para logical" id="def-elementary-operations-1-1">
+<div class="para">The following list of <dfn class="terminology">elementary operations</dfn> on a system of linear equations do not change the set of solutions:</div>
+<ol class="decimal" id="def-elementary-operations-1-1-2">
+<li id="def-elementary-operations-1-1-2-1">
+<div class="para" id="def-elementary-operations-1-1-2-1-1">swapping two equations<div class="autopermalink" data-description="Paragraph"><a href="#def-elementary-operations-1-1-2-1-1" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
+</div>
+<div class="autopermalink" data-description="Item 1"><a href="#def-elementary-operations-1-1-2-1" title="Copy heading and permalink for Item 1" aria-label="Copy heading and permalink for Item 1">🔗</a></div>
+</li>
+<li id="def-elementary-operations-1-1-2-2">
+<div class="para" id="def-elementary-operations-1-1-2-2-1">multiplying an equation by a nonzero constant<div class="autopermalink" data-description="Paragraph"><a href="#def-elementary-operations-1-1-2-2-1" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
+</div>
+<div class="autopermalink" data-description="Item 2"><a href="#def-elementary-operations-1-1-2-2" title="Copy heading and permalink for Item 2" aria-label="Copy heading and permalink for Item 2">🔗</a></div>
+</li>
+<li id="def-elementary-operations-1-1-2-3">
+<div class="para" id="def-elementary-operations-1-1-2-3-1">adding a multiple of one equation to another.<div class="autopermalink" data-description="Paragraph"><a href="#def-elementary-operations-1-1-2-3-1" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
+</div>
+<div class="autopermalink" data-description="Item 3"><a href="#def-elementary-operations-1-1-2-3" title="Copy heading and permalink for Item 3" aria-label="Copy heading and permalink for Item 3">🔗</a></div>
+</li>
+</ol>
+<div class="para">These correspond to <dfn class="terminology">elementary row operations</dfn> (EROs) on the corresponding augmented matrix, which are</div>
+<ol class="decimal" id="def-elementary-operations-1-1-4">
+<li id="def-elementary-operations-1-1-4-1">
+<div class="para" id="def-elementary-operations-1-1-4-1-1">swapping two rows, written <span class="process-math">\(R_i \leftrightarrow R_j\)</span><div class="autopermalink" data-description="Paragraph"><a href="#def-elementary-operations-1-1-4-1-1" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
+</div>
+<div class="autopermalink" data-description="Item 1"><a href="#def-elementary-operations-1-1-4-1" title="Copy heading and permalink for Item 1" aria-label="Copy heading and permalink for Item 1">🔗</a></div>
+</li>
+<li id="def-elementary-operations-1-1-4-2">
+<div class="para" id="def-elementary-operations-1-1-4-2-1">multiplying a row by a nonzero constant, written <span class="process-math">\(R_i \mapsto cR_i\quad\)</span> (<span class="process-math">\(c \ne 0\)</span>)<div class="autopermalink" data-description="Paragraph"><a href="#def-elementary-operations-1-1-4-2-1" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
+</div>
+<div class="autopermalink" data-description="Item 2"><a href="#def-elementary-operations-1-1-4-2" title="Copy heading and permalink for Item 2" aria-label="Copy heading and permalink for Item 2">🔗</a></div>
+</li>
+<li id="def-elementary-operations-1-1-4-3">
+<div class="para" id="def-elementary-operations-1-1-4-3-1">adding a multiple\footnote{In this ERO, there is there is no restriction on the multiple <span class="process-math">\(c\text{;}\)</span> it could be zero. However, if <span class="process-math">\(c=0\)</span> then the matrix will be unchanged.} of one row to another, written <span class="process-math">\(R_i \mapsto R_i + cR_j\)</span><div class="autopermalink" data-description="Paragraph"><a href="#def-elementary-operations-1-1-4-3-1" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
+</div>
+<div class="autopermalink" data-description="Item 3"><a href="#def-elementary-operations-1-1-4-3" title="Copy heading and permalink for Item 3" aria-label="Copy heading and permalink for Item 3">🔗</a></div>
+</li>
+</ol>
+<div class="autopermalink" data-description="Paragraph"><a href="#def-elementary-operations-1-1" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
+</div>
+<div class="autopermalink" data-description="Definition 5.2.1"><a href="#def-elementary-operations" title="Copy heading and permalink for Definition 5.2.1" aria-label="Copy heading and permalink for Definition 5.2.1">🔗</a></div></article><article class="definition definition-like" id="def-REF"><h3 class="heading">
+<span class="type">Definition</span><span class="space heading-divison-mark heading-divison-mark__space"> </span><span class="codenumber">5.2.2</span><span class="period heading-divison-mark heading-divison-mark__period">.</span>
+</h3>
+<div class="para logical" id="def-REF-1-1">
+<div class="para">A matrix is in <dfn class="terminology">row echelon form (REF)</dfn> if</div>
+<ol class="decimal" id="def-REF-1-1-2">
+<li id="def-REF-1-1-2-1">
+<div class="para" id="def-REF-1-1-2-1-1">All rows of zeroes (if there are any) are at the bottom<div class="autopermalink" data-description="Paragraph"><a href="#def-REF-1-1-2-1-1" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
+</div>
+<div class="autopermalink" data-description="Item 1"><a href="#def-REF-1-1-2-1" title="Copy heading and permalink for Item 1" aria-label="Copy heading and permalink for Item 1">🔗</a></div>
+</li>
+<li id="def-REF-1-1-2-2">
+<div class="para" id="def-REF-1-1-2-2-1">In each nonzero row, the first nonzero entry, called a <dfn class="terminology">leading entry</dfn>, is in a column further to the right of leading entries in any rows above it. In other words, leading entries should only have zeroes beneath them \textit{in their column and in columns to their left}.<div class="autopermalink" data-description="Paragraph"><a href="#def-REF-1-1-2-2-1" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
+</div>
+<div class="autopermalink" data-description="Item 2"><a href="#def-REF-1-1-2-2" title="Copy heading and permalink for Item 2" aria-label="Copy heading and permalink for Item 2">🔗</a></div>
+</li>
+</ol>
+<div class="autopermalink" data-description="Paragraph"><a href="#def-REF-1-1" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
+</div>
+<div class="autopermalink" data-description="Definition 5.2.2"><a href="#def-REF" title="Copy heading and permalink for Definition 5.2.2" aria-label="Copy heading and permalink for Definition 5.2.2">🔗</a></div></article><div class="para" id="sec-guassian-elimination-5">There is nothing above the first row, so we don’t need to check above the first row.<div class="autopermalink" data-description="Paragraph"><a href="#sec-guassian-elimination-5" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
+</div>
+<details id="ex-REF-matrices" class="example example-like born-hidden-knowl"><summary class="knowl__link"><h3 class="heading">
+<span class="type">Example</span><span class="space heading-divison-mark heading-divison-mark__space"> </span><span class="codenumber">5.2.3</span><span class="period heading-divison-mark heading-divison-mark__period">.</span>
+</h3></summary><article class="example example-like knowl__content"><div class="para logical" id="ex-REF-matrices-1-1">
+<div class="para">These three matrices are in REF.</div>
+<div class="displaymath process-math" id="ex-REF-matrices-1-1-1">
+\begin{equation*}
+\begin{amatrix}{cc}
+1 \amp  2\amp  3\\
+0 \amp  11\amp  0
+\end{amatrix}
+, \qquad
+\begin{amatrix}{ccc}
+1 \amp  2 \amp  3 \amp  4\\
+0 \amp  0 \amp  3 \amp  0\\
+0 \amp  0 \amp  0 \amp  1
+\end{amatrix}
+, \qquad
+\begin{amatrix}{cc}
+0 \amp  0 \amp  0\\
+0 \amp  0 \amp  0
+\end{amatrix}\text{.}
+\end{equation*}
+</div>
+<div class="para">For a matrix in REF, the shape formed by the nonzero entries should roughly look like a triangle, except if there are a lot of zeroes rows like the third matrix (which is still considered to be in REF even though it’s entirely zero).</div>
+<div class="autopermalink" data-description="Paragraph"><a href="#ex-REF-matrices-1-1" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
+</div> <div class="para logical" id="ex-REF-matrices-1-2">
+<div class="para">These two matrices are not in REF.</div>
+<div class="displaymath process-math" id="ex-REF-matrices-1-2-1">
+\begin{equation*}
+\begin{amatrix}{ccc}
+1 \amp  0 \amp  3 \amp  2\\
+2 \amp  1 \amp  0 \amp  1\\
+0 \amp  0 \amp  0\amp  0
+\end{amatrix}
+, \qquad
+\begin{amatrix}{cccc}
+1 \amp  2 \amp  1 \amp  0 \amp  3\\
+0 \amp  0 \amp  0 \amp  0 \amp  0\\
+0 \amp  0 \amp  3 \amp  1 \amp 4
+\end{amatrix}\text{.}
+\end{equation*}
+</div>
+<div class="para">The issue with the first is that the leading entry (2) in the second row is not to the right of the leading entry (1) in the row above it, or in other words the issue is that the leading entry in the first row (1) has a nonzero entry (2) below it in its column. The issue with the second matrix is that it has a zero row which is not at the bottom. If we moved the zero row to the bottom (by swapping the second and third rows), then this matrix would be in REF.</div>
+<div class="autopermalink" data-description="Paragraph"><a href="#ex-REF-matrices-1-2" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
+</div>
+<div class="autopermalink" data-description="Example 5.2.3"><a href="#ex-REF-matrices" title="Copy heading and permalink for Example 5.2.3" aria-label="Copy heading and permalink for Example 5.2.3">🔗</a></div></article></details><article class="definition definition-like" id="def-gaussian-elim"><h3 class="heading">
+<span class="type">Definition</span><span class="space heading-divison-mark heading-divison-mark__space"> </span><span class="codenumber">5.2.4</span><span class="period heading-divison-mark heading-divison-mark__period">.</span>
+</h3>
+<div class="para" id="def-gaussian-elim-1-1">
+<dfn class="terminology">Gaussian elimination</dfn> is the process of solving a system of linear equations by applying elementary row operations to transform the corresponding augmented matrix to row echelon form, and then using back-substitution (solving the augmented matrix from the bottom row upwards).<div class="autopermalink" data-description="Paragraph"><a href="#def-gaussian-elim-1-1" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
+</div>
+<div class="autopermalink" data-description="Definition 5.2.4"><a href="#def-gaussian-elim" title="Copy heading and permalink for Definition 5.2.4" aria-label="Copy heading and permalink for Definition 5.2.4">🔗</a></div></article><div class="para logical" id="sec-guassian-elimination-8">
+<div class="para">Here are steps to row reduce a matrix into REF:</div>
+<ol class="decimal" id="sec-guassian-elimination-8-1">
+<li id="sec-guassian-elimination-8-1-1">
+<div class="para" id="sec-guassian-elimination-8-1-1-1">By swapping rows, make sure that the top row has less (or the same amount of) leading zeroes than all the other rows.<div class="autopermalink" data-description="Paragraph"><a href="#sec-guassian-elimination-8-1-1-1" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
+</div>
+<div class="autopermalink" data-description="Item 1"><a href="#sec-guassian-elimination-8-1-1" title="Copy heading and permalink for Item 1" aria-label="Copy heading and permalink for Item 1">🔗</a></div>
+</li>
+<li id="sec-guassian-elimination-8-1-2">
+<div class="para" id="sec-guassian-elimination-8-1-2-1">Then use the top row to make all the elements below its leading entry zero, by subtracting multiples of this row.<div class="autopermalink" data-description="Paragraph"><a href="#sec-guassian-elimination-8-1-2-1" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
+</div>
+<div class="autopermalink" data-description="Item 2"><a href="#sec-guassian-elimination-8-1-2" title="Copy heading and permalink for Item 2" aria-label="Copy heading and permalink for Item 2">🔗</a></div>
+</li>
+<li id="sec-guassian-elimination-8-1-3">
+<div class="para" id="sec-guassian-elimination-8-1-3-1">Once you have cleared out the first column, you are finished with the first row and column, so they should stay where they are. Move onto the second row and repeat the process, now using the second row to make all the entries below its leading entry zero.<div class="autopermalink" data-description="Paragraph"><a href="#sec-guassian-elimination-8-1-3-1" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
+</div>
+<div class="autopermalink" data-description="Item 3"><a href="#sec-guassian-elimination-8-1-3" title="Copy heading and permalink for Item 3" aria-label="Copy heading and permalink for Item 3">🔗</a></div>
+</li>
+<li id="sec-guassian-elimination-8-1-4">
+<div class="para" id="sec-guassian-elimination-8-1-4-1">Repeat this for every row to get the matrix into REF.<div class="autopermalink" data-description="Paragraph"><a href="#sec-guassian-elimination-8-1-4-1" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
+</div>
+<div class="autopermalink" data-description="Item 4"><a href="#sec-guassian-elimination-8-1-4" title="Copy heading and permalink for Item 4" aria-label="Copy heading and permalink for Item 4">🔗</a></div>
+</li>
+</ol>
+<div class="para">To perform Gaussian elimination, follow the steps to perform REF and then back-substitute. To understand and remember these steps, it is much easier to learn by example than to directly memorise them, so we will give many worked examples throughout the rest of this chapter. (Also, in some examples there may be quicker ways to get the matrix into REF. You don’t need to follow the steps above exactly: as long as the matrix ends up in REF it’s fine.)</div>
+<div class="autopermalink" data-description="Paragraph"><a href="#sec-guassian-elimination-8" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
+</div>
+<details id="ex-solving-system" class="example example-like born-hidden-knowl"><summary class="knowl__link"><h3 class="heading">
+<span class="type">Example</span><span class="space heading-divison-mark heading-divison-mark__space"> </span><span class="codenumber">5.2.5</span><span class="period heading-divison-mark heading-divison-mark__period">.</span>
+</h3></summary><article class="example example-like knowl__content"><div class="para logical" id="ex-solving-system-1-1">
+<div class="para">Solve the system of linear equations</div>
+<div class="displaymath process-math" id="ex-solving-system-1-1-1">
+\begin{equation*}
+\begin{cases}
+x +y + 3z \amp  = 4 \\
+2x + 3y   \amp  = 1 \\
+-x + z    \amp  = 9
+\end{cases}\text{.}
+\end{equation*}
+</div>
+<div class="autopermalink" data-description="Paragraph"><a href="#ex-solving-system-1-1" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
+</div> <div class="para logical" id="ex-solving-system-1-2">
+<div class="para">We form the augmented matrix and row-reduce:</div>
+<div class="displaymath process-math" id="ex-solving-system-1-2-1">
+\begin{align*}
+\begin{amatrix}{ccc}
+1 \amp  1 \amp  3 \amp  4\\
+2 \amp  3 \amp  0 \amp 1\\
+-1 \amp  0 \amp  1 \amp  9\\
+\end{amatrix}
+\amp\xrightarrow[R_3\mapsto R_3 + R_1]{R_2 \mapsto R_2 - 2R_1} 
+\begin{amatrix}{ccc}
+1 \amp  1 \amp  3 \amp  4\\
+0 \amp  1 \amp  -6 \amp  -7\\
+0 \amp  1 \amp  4 \amp  13\\
+\end{amatrix}
+\\
+\amp\xrightarrow{R_3 \mapsto R_3 - R_2}                       
+\begin{amatrix}{ccc}
+1 \amp  1 \amp  3 \amp  4\\
+0 \amp  1 \amp  -6 \amp  -7\\
+0 \amp  0 \amp  10 \amp  20
+\end{amatrix}\text{.}
+\end{align*}
+</div>
+<div class="para">Back-substituting, the bottom row gives <span class="process-math">\(10z = 20\text{,}\)</span> so <span class="process-math">\(z = 2\text{.}\)</span> The next row up (the middle row) gives <span class="process-math">\(y - 6z = -7\text{,}\)</span> so <span class="process-math">\(y = -7 + 6z = -7 + 12 = 5\text{.}\)</span> The top row gives <span class="process-math">\(x + y + 3z = 4\text{,}\)</span> so <span class="process-math">\(x = 4 - y - 3z = -7\text{.}\)</span> Therefore the unique solution is <span class="process-math">\(x = -7\text{,}\)</span> <span class="process-math">\(y = 5\text{,}\)</span> <span class="process-math">\(z = 2\text{.}\)</span>
+</div>
+<div class="autopermalink" data-description="Paragraph"><a href="#ex-solving-system-1-2" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
+</div>
+<div class="autopermalink" data-description="Example 5.2.5"><a href="#ex-solving-system" title="Copy heading and permalink for Example 5.2.5" aria-label="Copy heading and permalink for Example 5.2.5">🔗</a></div></article></details><details id="ex-GE-to-solve" class="example example-like born-hidden-knowl"><summary class="knowl__link"><h3 class="heading">
+<span class="type">Example</span><span class="space heading-divison-mark heading-divison-mark__space"> </span><span class="codenumber">5.2.6</span><span class="period heading-divison-mark heading-divison-mark__period">.</span>
+</h3></summary><article class="example example-like knowl__content"><div class="para logical" id="ex-GE-to-solve-1-1">
+<div class="para">Use Gaussian elimination to solve the following system of linear equations:</div>
+<div class="displaymath process-math" id="ex-GE-to-solve-1-1-1">
+\begin{equation*}
+\left\{
+\begin{aligned}
+3x +y + 2z    \amp  = 13 \\
+-3x - y - z   \amp  = -6 \\
+-3x + 5y - 4z \amp  = 3
+\end{aligned}
+\right.\text{.}
+\end{equation*}
+</div>
+<div class="autopermalink" data-description="Paragraph"><a href="#ex-GE-to-solve-1-1" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
+</div> <div class="para logical" id="ex-GE-to-solve-1-2">
+<div class="para">Calculating REF:</div>
+<div class="displaymath process-math" id="ex-GE-to-solve-1-2-1">
+\begin{align*}
+\begin{amatrix}{ccc}
+3 \amp  1 \amp  2 \amp  13\\
+-3 \amp  -1 \amp  -1 \amp  -6\\
+-3 \amp  5 \amp  -4 \amp  3\\
+\end{amatrix}
+\amp\xrightarrow[R_3\mapsto R_3 + R_1]{R_2 \mapsto R_2 + R_1}
+\begin{amatrix}{ccc}
+3 \amp  1 \amp  2 \amp  13\\
+0 \amp  0 \amp  1 \amp  7\\
+0 \amp  6 \amp  -2 \amp  16
+\end{amatrix}
+\\
+\amp\xrightarrow{R_2 \leftrightarrow R_3}                     
+\begin{amatrix}{ccc}
+3 \amp  1 \amp  2 \amp  13\\
+0 \amp  6 \amp  -2 \amp  16\\
+0 \amp  0 \amp  1 \amp  7
+\end{amatrix}\text{.}
+\end{align*}
+</div>
+<div class="para">Back-substituting, <span class="process-math">\(z = 7\text{.}\)</span> Then <span class="process-math">\(6y - 2z = 16\text{,}\)</span> so <span class="process-math">\(y = \frac{1}{6}(16+2z) = \frac{1}{6}(16+14) = 5\text{.}\)</span> Finally, the first row gives <span class="process-math">\(3x+y+2z=13\text{,}\)</span> which rearranges to give <span class="process-math">\(x = -2\text{.}\)</span>
+</div>
+<div class="autopermalink" data-description="Paragraph"><a href="#ex-GE-to-solve-1-2" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
+</div>
+<div class="autopermalink" data-description="Example 5.2.6"><a href="#ex-GE-to-solve" title="Copy heading and permalink for Example 5.2.6" aria-label="Copy heading and permalink for Example 5.2.6">🔗</a></div></article></details><article class="remark remark-like" id="rem-REF-not-unique"><h3 class="heading">
+<span class="type">Remark</span><span class="space heading-divison-mark heading-divison-mark__space"> </span><span class="codenumber">5.2.7</span><span class="period heading-divison-mark heading-divison-mark__period">.</span>
+</h3>
+<div class="para" id="rem-REF-not-unique-1">REF is not unique. For example, if an augmented matrix is in REF, we can multiply any of its rows by a nonzero scalar. This will give a different row echelon form of the matrix. REF matrices can have other differences too.<div class="autopermalink" data-description="Paragraph"><a href="#rem-REF-not-unique-1" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
+</div>
+<div class="autopermalink" data-description="Remark 5.2.7"><a href="#rem-REF-not-unique" title="Copy heading and permalink for Remark 5.2.7" aria-label="Copy heading and permalink for Remark 5.2.7">🔗</a></div></article><div class="autopermalink" data-description="Section 5.2: Gaussian elimination"><a href="#sec-guassian-elimination" title="Copy heading and permalink for Section 5.2: Gaussian elimination" aria-label="Copy heading and permalink for Section 5.2: Gaussian elimination">🔗</a></div></section></div>
 <div id="ptx-content-footer" class="ptx-content-footer">
 <a class="previous-button button" href="sec-systems.html" title="Previous"><span class="icon material-symbols-outlined" aria-hidden="true">&#xe5cb;</span><span class="name">Prev</span></a><a class="top-button button" href="#" title="Top"><span class="icon material-symbols-outlined" aria-hidden="true">&#xe5ce;</span><span class="name">Top</span></a><a class="next-button button" href="sec-number-of-solutions.html" title="Next"><span class="name">Next</span><span class="icon material-symbols-outlined" aria-hidden="true">&#xe5cc;</span></a>
 </div></main>

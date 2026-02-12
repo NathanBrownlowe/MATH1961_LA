@@ -101,15 +101,15 @@ eBookConfig.allow_pairs = false;
 eBookConfig.enableScratchAC = false;
 eBookConfig.build_info = "";
 eBookConfig.python3 = null;
-eBookConfig.runestone_version = '7.11.0';
+eBookConfig.runestone_version = '7.11.14';
 eBookConfig.jobehost = '';
 eBookConfig.proxyuri_runs = '';
 eBookConfig.proxyuri_files = '';
 eBookConfig.enable_chatcodes =  false;
 </script>
 <!--*** Runestone Services ***-->
-<script src="_static/prefix-runtime.f91c1a4dc12163f2.bundle.js"></script><script src="_static/prefix-723.3e6434f80549315a.bundle.js"></script><script src="_static/prefix-runestone.731d8387162b79c1.bundle.js"></script><link rel="stylesheet" type="text/css" href="_static/prefix-723.3bccd435914aa0ff.css">
-<link rel="stylesheet" type="text/css" href="_static/prefix-runestone.557d81b04b3ec0e4.css">
+<script src="_static/prefix-runtime.d892923478694492.bundle.js"></script><script src="_static/prefix-723.3e6434f80549315a.bundle.js"></script><script src="_static/prefix-runestone.1d6e4aba17c2c7f2.bundle.js"></script><link rel="stylesheet" type="text/css" href="_static/prefix-723.3bccd435914aa0ff.css">
+<link rel="stylesheet" type="text/css" href="_static/prefix-runestone.6ec5960970d8b364.css">
 <script src="_static/pretext/js/lti_iframe_resizer.js"></script><script src="https://cdnjs.cloudflare.com/ajax/libs/lunr.js/2.3.9/lunr.min.js" integrity="sha512-4xUl/d6D6THrAnXAwGajXkoWaeMNwEKK4iNfq5DotEbLPAfk6FSxSP3ydNxqDgCw1c/0Z1Jg6L8h2j+++9BZmg==" crossorigin="anonymous" referrerpolicy="no-referrer"></script><script src="lunr-pretext-search-index.js" async=""></script><script src="_static/pretext/js/pretext_search.js"></script><script src="_static/pretext/js/lib/knowl.js"></script><!--knowl.js code controls Sage Cells within knowls--><script>sagecellEvalName='Evaluate (Sage)';
 </script>
 </head>
@@ -130,7 +130,34 @@ eBookConfig.enable_chatcodes =  false;
 </div>
 </div>
 <span class="nav-other-controls"><button id="light-dark-button" class="light-dark-button button" title="Dark Mode"><span class="icon material-symbols-outlined" aria-hidden="true">&#xe51c;</span><span class="name">Dark Mode</span></button></span><span class="treebuttons"><a class="previous-button button" href="sec-lines-in-R3-and-Rn.html" title="Previous"><span class="icon material-symbols-outlined" aria-hidden="true">&#xe5cb;</span><span class="name">Prev</span></a><a class="up-button button" href="ch-lines-and-planes.html" title="Up"><span class="icon material-symbols-outlined" aria-hidden="true">&#xe5ce;</span><span class="name">Up</span></a><a class="next-button button" href="sec-shortest-distance.html" title="Next"><span class="name">Next</span><span class="icon material-symbols-outlined" aria-hidden="true">&#xe5cc;</span></a></span>
-</div></nav><div id="latex-macros" class="hidden-content process-math" style="display:none"><span class="process-math">\(\newcommand{\N}{\mathbb N} \newcommand{\Z}{\mathbb Z} \newcommand{\Q}{\mathbb Q} \newcommand{\R}{\mathbb R}
+</div></nav><div id="latex-macros" class="hidden-content process-math" style="display:none"><span class="process-math">\(\require{mathtools}\newcommand{\N}{\mathbb N} 
+\newcommand{\Z}{\mathbb Z} 
+\newcommand{\Q}{\mathbb Q} 
+\newcommand{\R}{\mathbb R} 
+\newcommand{\C}{\mathbb C}
+\newcommand{\vect}[1]{\mathbf{#1}}
+\newcommand{\proj}[2]{\operatorname{proj}_{#1}\!\left(#2\right)}
+\newcommand{\p}{\mathcal P}
+\newcommand{\inv}{^{-1}}
+
+\newcommand{\colvec}[2]{\begin{bmatrix}#1\\#2\end{bmatrix}}
+\newenvironment{amatrix}[1]{
+\left[\begin{array}{#1|c}
+}{
+\end{array}\right]
+  }
+
+\newenvironment{aamatrix}{
+    \left[\begin{array}{cc|cc@{}}
+      }{
+  \end{array}\right]
+      }
+
+\newenvironment{aaamatrix}{
+      \left[\begin{array}{ccc|ccc@{}}
+      }{
+    \end{array}\right]
+    }
 \newcommand{\lt}{&lt;}
 \newcommand{\gt}{&gt;}
 \newcommand{\amp}{&amp;}
@@ -198,8 +225,9 @@ eBookConfig.enable_chatcodes =  false;
 <li class="toc-item toc-section"><div class="toc-title-box"><a href="sec-properties-of-inverses.html" class="internal"><span class="codenumber">7.1</span> <span class="title">Properties of inverses</span></a></div></li>
 <li class="toc-item toc-section"><div class="toc-title-box"><a href="sec-calculating-2x2-inverses.html" class="internal"><span class="codenumber">7.2</span> <span class="title">Calculating <span class="process-math">\(2\times 2\)</span> inverses</span></a></div></li>
 <li class="toc-item toc-section"><div class="toc-title-box"><a href="sec-calculating-nxn-inverses.html" class="internal"><span class="codenumber">7.3</span> <span class="title">Calculating <span class="process-math">\(n\times n\)</span> inverses</span></a></div></li>
-<li class="toc-item toc-section"><div class="toc-title-box"><a href="sec-elementary-matrices.html" class="internal"><span class="codenumber">7.4</span> <span class="title">Elementary matrices</span></a></div></li>
-<li class="toc-item toc-section"><div class="toc-title-box"><a href="sec-characterisations-of-invertibility.html" class="internal"><span class="codenumber">7.5</span> <span class="title">Characterisations of invertibility</span></a></div></li>
+<li class="toc-item toc-section"><div class="toc-title-box"><a href="sec-inverses-and-equations.html" class="internal"><span class="codenumber">7.4</span> <span class="title">Inverses and matrix equations</span></a></div></li>
+<li class="toc-item toc-section"><div class="toc-title-box"><a href="sec-elementary-matrices.html" class="internal"><span class="codenumber">7.5</span> <span class="title">Elementary matrices</span></a></div></li>
+<li class="toc-item toc-section"><div class="toc-title-box"><a href="sec-characterisations-of-invertibility.html" class="internal"><span class="codenumber">7.6</span> <span class="title">Characterisations of invertibility</span></a></div></li>
 </ul>
 </li>
 <li class="toc-item toc-chapter">
@@ -271,9 +299,283 @@ eBookConfig.enable_chatcodes =  false;
 <main class="ptx-main"><div id="ptx-content" class="ptx-content"><section class="section" id="sec-planes"><h2 class="heading hide-type">
 <span class="type">Section</span><span class="space heading-divison-mark heading-divison-mark__space"> </span><span class="codenumber">4.3</span><span class="space heading-divison-mark heading-divison-mark__space"> </span><span class="title">Planes</span>
 </h2>
-<div class="para" id="sec-planes-2">Text of section.<div class="autopermalink" data-description="Paragraph"><a href="#sec-planes-2" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
+<div class="para" id="sec-planes-2">Let <span class="process-math">\(\vect{n}, \vect{x}, \vect{p} \in \R^3\text{.}\)</span> We will investigate what the `normal form’ <span class="process-math">\(\vect{n}\cdot\vect{x} = \vect{n}\cdot\vect{p}\)</span> geometrically represents in <span class="process-math">\(\R^3\text{.}\)</span> Consider the equation <span class="process-math">\(\vect{n}\cdot (\vect{x} - \vect{p}) = 0\text{.}\)</span> This means that, for a fixed position vector <span class="process-math">\(\vect{p}\text{,}\)</span> we want to find all the vectors <span class="process-math">\(\vect{x} - \vect{p}\)</span> that are orthogonal to the `normal vector’ <span class="process-math">\(\vect{n}\text{.}\)</span> The solutions to this describe a plane, as shown in <a href="sec-planes.html#fig-plane_setup" class="xref" data-knowl="./knowl/xref/fig-plane_setup.html" data-reveal-label="Reveal" data-close-label="Close" title="Figure 4.3.1">Figure 4.3.1</a>.<div class="autopermalink" data-description="Paragraph"><a href="#sec-planes-2" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
 </div>
-<div class="autopermalink" data-description="Section 4.3: Planes"><a href="#sec-planes" title="Copy heading and permalink for Section 4.3: Planes" aria-label="Copy heading and permalink for Section 4.3: Planes">🔗</a></div></section></div>
+<figure class="figure figure-like" id="fig-plane_setup"><div class="image-box" style="width: 60%; margin-left: 20%; margin-right: 20%;"><img src="generated/latex-image/fig-plane_setup-2.svg" role="img" class="contained"></div>
+<figcaption><span class="type">Figure</span><span class="space heading-divison-mark heading-divison-mark__space"> </span><span class="codenumber">4.3.1<span class="period heading-divison-mark heading-divison-mark__period">.</span></span><span class="space heading-divison-mark heading-divison-mark__space"> </span>Normal form of a plane<div class="autopermalink" data-description="Figure 4.3.1"><a href="#fig-plane_setup" title="Copy heading and permalink for Figure 4.3.1" aria-label="Copy heading and permalink for Figure 4.3.1">🔗</a></div></figcaption></figure><article class="definition definition-like" id="def-normal-to-a-plane"><h3 class="heading">
+<span class="type">Definition</span><span class="space heading-divison-mark heading-divison-mark__space"> </span><span class="codenumber">4.3.2</span><span class="period heading-divison-mark heading-divison-mark__period">.</span>
+</h3>
+<div class="para" id="def-normal-to-a-plane-1-1">Let <span class="process-math">\(\p\)</span> be a plane in <span class="process-math">\(\R^3\text{.}\)</span> A <dfn class="terminology">normal vector</dfn> for <span class="process-math">\(\p\)</span> is a nonzero vector <span class="process-math">\(\vect{n}\)</span> which is orthogonal to <span class="process-math">\(\p\text{.}\)</span><div class="autopermalink" data-description="Paragraph"><a href="#def-normal-to-a-plane-1-1" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
+</div>
+<div class="autopermalink" data-description="Definition 4.3.2"><a href="#def-normal-to-a-plane" title="Copy heading and permalink for Definition 4.3.2" aria-label="Copy heading and permalink for Definition 4.3.2">🔗</a></div></article><article class="definition definition-like" id="def-normal-form-of-plane"><h3 class="heading">
+<span class="type">Definition</span><span class="space heading-divison-mark heading-divison-mark__space"> </span><span class="codenumber">4.3.3</span><span class="period heading-divison-mark heading-divison-mark__period">.</span>
+</h3>
+<div class="para logical" id="def-normal-form-of-plane-1-1">
+<div class="para">The <dfn class="terminology">normal form</dfn> of the equation of a plane <span class="process-math">\(\p\)</span> in <span class="process-math">\(\R^3\)</span> is</div>
+<div class="displaymath process-math" id="def-normal-form-of-plane-1-1-4">
+\begin{equation*}
+(\vect{x} - \vect{p}) \cdot \vect{n} =0
+\end{equation*}
+</div>
+<div class="para">or equivalently</div>
+<div class="displaymath process-math" id="def-normal-form-of-plane-1-1-5">
+\begin{equation*}
+\vect{x} \cdot \vect{n} = \vect{p} \cdot \vect{n},
+\end{equation*}
+</div>
+<div class="para">where <span class="process-math">\(\vect{n}\)</span> is a normal vector for <span class="process-math">\(\p\text{,}\)</span> and <span class="process-math">\(\vect{p}\)</span> is the position vector of a point on <span class="process-math">\(\p\text{.}\)</span>
+</div>
+<div class="autopermalink" data-description="Paragraph"><a href="#def-normal-form-of-plane-1-1" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
+</div>
+<div class="autopermalink" data-description="Definition 4.3.3"><a href="#def-normal-form-of-plane" title="Copy heading and permalink for Definition 4.3.3" aria-label="Copy heading and permalink for Definition 4.3.3">🔗</a></div></article><div class="para logical" id="sec-planes-6">
+<div class="para">If we know <span class="process-math">\(\vect{n} = [a, b, c]\)</span> and <span class="process-math">\(P = (p_1, p_2, p_3)\text{,}\)</span> so <span class="process-math">\(\vect{p} =[p_1, p_2, p_3]\text{,}\)</span> and if we write <span class="process-math">\(X = (x, y, z)\)</span> so <span class="process-math">\(\vect{x} = [x, y, z]\text{,}\)</span> then evaluating the dot products in the general form <span class="process-math">\(\vect{n}\cdot \vect{x} = \vect{n}\cdot \vect{p}\)</span> gives the equation</div>
+<div class="displaymath process-math" id="sec-planes-6-7">
+\begin{equation*}
+ax + by + cz = d
+\end{equation*}
+</div>
+<div class="para">where <span class="process-math">\(d = \vect{n}\cdot\vect{p} = ap_1 + bp_2 + cp_3\text{.}\)</span>
+</div>
+<div class="autopermalink" data-description="Paragraph"><a href="#sec-planes-6" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
+</div>
+<article class="definition definition-like" id="def-general-form-of-plane"><h3 class="heading">
+<span class="type">Definition</span><span class="space heading-divison-mark heading-divison-mark__space"> </span><span class="codenumber">4.3.4</span><span class="period heading-divison-mark heading-divison-mark__period">.</span>
+</h3>
+<div class="para logical" id="def-general-form-of-plane-1-1">
+<div class="para">The <dfn class="terminology">general form</dfn> of the equation of a plane <span class="process-math">\(\p\)</span> in <span class="process-math">\(\R^3\)</span> is</div>
+<div class="displaymath process-math" id="def-general-form-of-plane-1-1-4">
+\begin{equation*}
+ax+by+cz = d
+\end{equation*}
+</div>
+<div class="para">where <span class="process-math">\(\vect{n} = [a, b, c]\)</span> is a normal vector for <span class="process-math">\(\p\text{,}\)</span> and <span class="process-math">\(d = \vect{n}\cdot \vect{p}\text{,}\)</span> where <span class="process-math">\(\vect{p}\)</span> is the position vector of a point <span class="process-math">\(P\)</span> on <span class="process-math">\(\p\text{.}\)</span>
+</div>
+<div class="autopermalink" data-description="Paragraph"><a href="#def-general-form-of-plane-1-1" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
+</div>
+<div class="autopermalink" data-description="Definition 4.3.4"><a href="#def-general-form-of-plane" title="Copy heading and permalink for Definition 4.3.4" aria-label="Copy heading and permalink for Definition 4.3.4">🔗</a></div></article><details id="ex-norm-form-plane" class="example example-like born-hidden-knowl"><summary class="knowl__link"><h3 class="heading">
+<span class="type">Example</span><span class="space heading-divison-mark heading-divison-mark__space"> </span><span class="codenumber">4.3.5</span><span class="period heading-divison-mark heading-divison-mark__period">.</span>
+</h3></summary><article class="example example-like knowl__content"><div class="para logical" id="ex-norm-form-plane-1-1">
+<div class="para">Find a normal form for the plane with general equation</div>
+<div class="displaymath process-math" id="ex-norm-form-plane-1-1-1">
+\begin{equation*}
+2x - y + z = 5\text{.}
+\end{equation*}
+</div>
+<div class="para">A normal vector is <span class="process-math">\(\vect{n} = [2, -1, 1]\text{.}\)</span> A point on the plane is <span class="process-math">\(P= (0, 0, 5)\text{,}\)</span> so <span class="process-math">\(\vect{p} = [0, 0, 5]\text{.}\)</span> So the normal form is</div>
+<div class="displaymath process-math" id="ex-norm-form-plane-1-1-5">
+\begin{equation*}
+[2, -1, 1] \cdot ([x, y, z] - [0, 0, 5]) =0.
+\end{equation*}
+</div>
+<div class="autopermalink" data-description="Paragraph"><a href="#ex-norm-form-plane-1-1" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
+</div>
+<div class="autopermalink" data-description="Example 4.3.5"><a href="#ex-norm-form-plane" title="Copy heading and permalink for Example 4.3.5" aria-label="Copy heading and permalink for Example 4.3.5">🔗</a></div></article></details><details id="ex-norm-and-general-plane" class="example example-like born-hidden-knowl"><summary class="knowl__link"><h3 class="heading">
+<span class="type">Example</span><span class="space heading-divison-mark heading-divison-mark__space"> </span><span class="codenumber">4.3.6</span><span class="period heading-divison-mark heading-divison-mark__period">.</span>
+</h3></summary><article class="example example-like knowl__content"><div class="para" id="ex-norm-and-general-plane-1-1">Find a normal form and general form for the plane that passes through the point <span class="process-math">\((1, 0, 6)\)</span> and has normal vector <span class="process-math">\([1, 2, 3]\text{.}\)</span><div class="autopermalink" data-description="Paragraph"><a href="#ex-norm-and-general-plane-1-1" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
+</div> <div class="para logical" id="ex-norm-and-general-plane-1-2">
+<div class="para">We take <span class="process-math">\(\vect{n} = [1, 2, 3]\)</span> and <span class="process-math">\(P = (1, 0, 6)\text{,}\)</span> so <span class="process-math">\(\vect{p} = [1, 0, 6]\text{.}\)</span> The normal form is</div>
+<div class="displaymath process-math" id="ex-norm-and-general-plane-1-2-4">
+\begin{equation*}
+[1, 2, 3] \cdot [x, y, z] = [1, 2, 3] \cdot [1, 0, 6]
+\end{equation*}
+</div>
+<div class="para">and the general form is <span class="process-math">\(x+2y+3z = 19\text{.}\)</span>
+</div>
+<div class="autopermalink" data-description="Paragraph"><a href="#ex-norm-and-general-plane-1-2" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
+</div>
+<div class="autopermalink" data-description="Example 4.3.6"><a href="#ex-norm-and-general-plane" title="Copy heading and permalink for Example 4.3.6" aria-label="Copy heading and permalink for Example 4.3.6">🔗</a></div></article></details><article class="remark remark-like" id="rem-int-plane-line"><h3 class="heading">
+<span class="type">Remark</span><span class="space heading-divison-mark heading-divison-mark__space"> </span><span class="codenumber">4.3.7</span><span class="period heading-divison-mark heading-divison-mark__period">.</span>
+</h3>
+<div class="para" id="rem-int-plane-line-1">In <span class="process-math">\(\R^3\text{,}\)</span> the intersection of a plane with a line can consist of zero points, one point, or infinitely many points if the line lies on the plane.<div class="autopermalink" data-description="Paragraph"><a href="#rem-int-plane-line-1" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
+</div>
+<div class="autopermalink" data-description="Remark 4.3.7"><a href="#rem-int-plane-line" title="Copy heading and permalink for Remark 4.3.7" aria-label="Copy heading and permalink for Remark 4.3.7">🔗</a></div></article><details id="ex-int-line-plane" class="example example-like born-hidden-knowl"><summary class="knowl__link"><h3 class="heading">
+<span class="type">Example</span><span class="space heading-divison-mark heading-divison-mark__space"> </span><span class="codenumber">4.3.8</span><span class="period heading-divison-mark heading-divison-mark__period">.</span>
+</h3></summary><article class="example example-like knowl__content"><div class="para logical" id="ex-int-line-plane-1-1">
+<div class="para">Determine whether the line</div>
+<div class="displaymath process-math" id="ex-int-line-plane-1-1-1">
+\begin{equation*}
+[x, y, z] = [1, 2, -2] + t[2, 1, 2], \qquad t\in \R
+\end{equation*}
+</div>
+<div class="para">intersects the plane <span class="process-math">\(x+2y+3z = 19\text{,}\)</span> and if so, find the intersection.</div>
+<div class="autopermalink" data-description="Paragraph"><a href="#ex-int-line-plane-1-1" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
+</div> <div class="para logical" id="ex-int-line-plane-1-2">
+<div class="para">The parametric equations of the line are</div>
+<div class="displaymath process-math" id="ex-int-line-plane-1-2-1">
+\begin{equation*}
+\left\{
+\begin{aligned}
+x \amp  = 1+2t \\
+y \amp  = 2 +t \\
+z \amp  = -2+ 2t
+\end{aligned}
+\right. \qquad t\in\R\text{.}
+\end{equation*}
+</div>
+<div class="para">Substituting this into the equation of the plane gives</div>
+<div class="displaymath process-math" id="ex-int-line-plane-1-2-2">
+\begin{align*}
+\amp  (1+2t) + 2(2+t) + 3(-2+2t) = 19 \\
+\implies \amp  1+4-6 +(2+2+6)t = 19            \\
+\implies \amp  10t = 20\text{,}
+\end{align*}
+</div>
+<div class="para">so <span class="process-math">\(t = 2\text{.}\)</span> Substituting into the parametric equations of the line gives</div>
+<div class="displaymath process-math" id="ex-int-line-plane-1-2-4">
+\begin{equation*}
+x = 1+4 = 5, \qquad y = 2+2 = 4, \qquad z = -2+4 = 2,
+\end{equation*}
+</div>
+<div class="para">so there is one intersection point at <span class="process-math">\((5, 4, 2)\text{.}\)</span>
+</div>
+<div class="autopermalink" data-description="Paragraph"><a href="#ex-int-line-plane-1-2" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
+</div>
+<div class="autopermalink" data-description="Example 4.3.8"><a href="#ex-int-line-plane" title="Copy heading and permalink for Example 4.3.8" aria-label="Copy heading and permalink for Example 4.3.8">🔗</a></div></article></details><div class="para" id="sec-planes-12">We can also describe planes using direction vectors.<div class="autopermalink" data-description="Paragraph"><a href="#sec-planes-12" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
+</div>
+<article class="definition definition-like" id="def-direction-vec-plane"><h3 class="heading">
+<span class="type">Definition</span><span class="space heading-divison-mark heading-divison-mark__space"> </span><span class="codenumber">4.3.9</span><span class="period heading-divison-mark heading-divison-mark__period">.</span>
+</h3>
+<div class="para" id="def-direction-vec-plane-1-1">A <dfn class="terminology">direction vector</dfn> for a plane <span class="process-math">\(\p\)</span> in <span class="process-math">\(\R^3\)</span> is a nonzero vector <span class="process-math">\(\vect{d} \in \R^3\)</span> which is parallel to <span class="process-math">\(\p\text{.}\)</span><div class="autopermalink" data-description="Paragraph"><a href="#def-direction-vec-plane-1-1" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
+</div>
+<div class="autopermalink" data-description="Definition 4.3.9"><a href="#def-direction-vec-plane" title="Copy heading and permalink for Definition 4.3.9" aria-label="Copy heading and permalink for Definition 4.3.9">🔗</a></div></article><div class="para logical" id="sec-planes-14">
+<div class="para">We have previously seen that a line is specified by a point and one direction vector. In fact, a plane <span class="process-math">\(\p\)</span> is determined by a point <span class="process-math">\(P\)</span> on <span class="process-math">\(\p\text{,}\)</span> and two non-parallel direction vectors <span class="process-math">\(\vect{u}\)</span> and <span class="process-math">\(\vect{v} \in \R^3\text{.}\)</span> (This should make sense, because intuitively a line is one dimensional, while a plane is two-dimensional, so it should have two `directions’.) From this fact, we will deduce an equation for <span class="process-math">\(\p\text{.}\)</span> Let <span class="process-math">\(X\)</span> be an arbitrary point of <span class="process-math">\(\p\text{.}\)</span> Then <span class="process-math">\(\overrightarrow{PX}\)</span> lies on <span class="process-math">\(\p\text{,}\)</span> so there are <span class="process-math">\(s, t\in \R\)</span> such that</div>
+<div class="displaymath process-math" data-contains-math-knowls="./knowl/xref/fig-vector_nf.html" id="sec-planes-14-12">
+\begin{equation*}
+\overrightarrow{PX} = s\vect{u} + t\vect{v}\text{.}
+\end{equation*}
+</div>
+<div class="para">Let <span class="process-math">\(\vect{x} =\overrightarrow{OX}\)</span> and <span class="process-math">\(\vect{p} = \overrightarrow{OP}\text{,}\)</span> so <span class="process-math">\(\overrightarrow{PX} = \overrightarrow{OX} - \overrightarrow{OP} = \vect{x} - \vect{p}\text{.}\)</span> Then <span class="process-math">\(\vect{x} - \vect{p} = s\vect{u} + t\vect{v}\text{,}\)</span> for <span class="process-math">\(s, t\in \R\text{.}\)</span> Thus</div>
+<div class="displaymath process-math" data-contains-math-knowls="./knowl/xref/fig-vector_nf.html" id="sec-planes-14-18">
+\begin{equation*}
+\vect{x} = \vect{p} + s\vect{u} + t\vect{v}, \qquad s, t\in \R\text{.}
+\end{equation*}
+</div>
+<div class="para">This is shown in <a href="sec-planes.html#fig-vector_nf" class="xref" data-knowl="./knowl/xref/fig-vector_nf.html" data-reveal-label="Reveal" data-close-label="Close" title="Figure 4.3.10">Figure 4.3.10</a>.</div>
+<div class="autopermalink" data-description="Paragraph"><a href="#sec-planes-14" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
+</div>
+<figure class="figure figure-like" id="fig-vector_nf"><div class="image-box" style="width: 60%; margin-left: 20%; margin-right: 20%;"><img src="generated/latex-image/fig-vector_nf-2.svg" role="img" class="contained"></div>
+<figcaption><span class="type">Figure</span><span class="space heading-divison-mark heading-divison-mark__space"> </span><span class="codenumber">4.3.10<span class="period heading-divison-mark heading-divison-mark__period">.</span></span><span class="space heading-divison-mark heading-divison-mark__space"> </span>Vector form of a plane<div class="autopermalink" data-description="Figure 4.3.10"><a href="#fig-vector_nf" title="Copy heading and permalink for Figure 4.3.10" aria-label="Copy heading and permalink for Figure 4.3.10">🔗</a></div></figcaption></figure><div class="para logical" id="sec-planes-16">
+<div class="para">In components, let <span class="process-math">\(\vect{x} = [x,y, z]\text{,}\)</span> <span class="process-math">\(\vect{p} = [p_1, p_2, p_3]\text{,}\)</span> <span class="process-math">\(\vect{u} = [u_1, u_2, u_3]\)</span> and <span class="process-math">\(\vect{v} = [v_1, v_2, v_3]\text{.}\)</span> Then we have</div>
+<div class="displaymath process-math" id="sec-planes-16-5">
+\begin{equation*}
+[x, y, z] = [p_1, p_2, p_3] + s[u_1, u_2, u_3] + t[v_1, v_2, v_3], \qquad s, t, \in\R\text{.}
+\end{equation*}
+</div>
+<div class="para">Comparing coefficients gives</div>
+<div class="displaymath process-math" id="sec-planes-16-6">
+\begin{equation*}
+\left\{
+\begin{aligned}
+x \amp  = p_1  + su_1 + tv_1 \\
+y \amp  = p_2 + su_2 + tv_2  \\
+z \amp  = p_3 + su_3 + tv_3
+\end{aligned}
+\right.\qquad s, t\in \R\text{.}
+\end{equation*}
+</div>
+<div class="para">The next definition summarises these calculations.</div>
+<div class="autopermalink" data-description="Paragraph"><a href="#sec-planes-16" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
+</div>
+<article class="definition definition-like" id="def-vec-para-plane"><h3 class="heading">
+<span class="type">Definition</span><span class="space heading-divison-mark heading-divison-mark__space"> </span><span class="codenumber">4.3.11</span><span class="period heading-divison-mark heading-divison-mark__period">.</span>
+</h3>
+<div class="para logical" id="def-vec-para-plane-1-1">
+<div class="para">The <dfn class="terminology">vector form</dfn> of a plane <span class="process-math">\(\p\)</span> is</div>
+<div class="displaymath process-math" id="def-vec-para-plane-1-1-3">
+\begin{equation*}
+\vect{x} = \vect{p} + s\vect{u} + t\vect{v}, \qquad s, t\in \R
+\end{equation*}
+</div>
+<div class="para">and <dfn class="terminology">parametric equations</dfn> for <span class="process-math">\(\p\)</span> are</div>
+<div class="displaymath process-math" id="def-vec-para-plane-1-1-6">
+\begin{equation*}
+\left\{
+\begin{aligned}
+x \amp  = p_1  + su_1 + tv_1 \\
+y \amp  = p_2 + su_2 + tv_2  \\
+z \amp  = p_3 + su_3 + tv_3
+\end{aligned}
+\right.\qquad s, t\in \R
+\end{equation*}
+</div>
+<div class="para">where <span class="process-math">\(\vect{p} = [p_1, p_2, p_3]\)</span> is the position vector of a point on <span class="process-math">\(\p\text{,}\)</span> and <span class="process-math">\(\vect{u} = [u_1, u_2, u_3]\text{,}\)</span> <span class="process-math">\(\vect{v} = [v_1, v_2, v_3]\)</span> are non-parallel direction vectors for <span class="process-math">\(\p\text{.}\)</span>
+</div>
+<div class="autopermalink" data-description="Paragraph"><a href="#def-vec-para-plane-1-1" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
+</div>
+<div class="autopermalink" data-description="Definition 4.3.11"><a href="#def-vec-para-plane" title="Copy heading and permalink for Definition 4.3.11" aria-label="Copy heading and permalink for Definition 4.3.11">🔗</a></div></article><article class="remark remark-like" id="rem-plane-dir-vectors"><h3 class="heading">
+<span class="type">Remark</span><span class="space heading-divison-mark heading-divison-mark__space"> </span><span class="codenumber">4.3.12</span><span class="period heading-divison-mark heading-divison-mark__period">.</span>
+</h3>
+<div class="para logical" id="rem-plane-dir-vectors-1">
+<div class="para">The reason that we require the direction vectors <span class="process-math">\(\vect{u}\)</span> and <span class="process-math">\(\vect{v}\)</span> for a plane to be non-parallel is because if they are parallel, then <span class="process-math">\(\vect{u} = c\vect{v}\)</span> for some <span class="process-math">\(c\in \R\text{,}\)</span> so</div>
+<div class="displaymath process-math" id="rem-plane-dir-vectors-1-5">
+\begin{equation*}
+\vect{x} = \vect{p} + s\vect{u} + t\vect{v} = \vect{p} + (sc+t)\vect{v}, \qquad s, t\in \R,
+\end{equation*}
+</div>
+<div class="para">which is the equation of a line <span class="process-math">\(\ell\)</span> in <span class="process-math">\(\R^3\text{.}\)</span>
+</div>
+<div class="autopermalink" data-description="Paragraph"><a href="#rem-plane-dir-vectors-1" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
+</div>
+<div class="autopermalink" data-description="Remark 4.3.12"><a href="#rem-plane-dir-vectors" title="Copy heading and permalink for Remark 4.3.12" aria-label="Copy heading and permalink for Remark 4.3.12">🔗</a></div></article><div class="para logical" id="sec-planes-19">
+<div class="para">Given any 3 non-collinear (not all on a single line) points <span class="process-math">\(P, Q, R\)</span> on a plane <span class="process-math">\(\p\text{,}\)</span> we can find equations for <span class="process-math">\(\p\)</span> in any of the four forms. We can take <span class="process-math">\(\vect{u} = \overrightarrow{PQ}\)</span> and <span class="process-math">\(\vect{v} = \overrightarrow{PR}\)</span> to be direction vectors to find the vector form and parametric equations for <span class="process-math">\(\p\text{.}\)</span> The vectors <span class="process-math">\(\vect{u}\)</span> and <span class="process-math">\(\vect{v}\)</span> are non-parallel since <span class="process-math">\(P, Q, R\)</span> are non-collinear. Since <span class="process-math">\(\vect{u}\times\vect{v}\)</span> is orthogonal to <span class="process-math">\(\vect{u}\)</span> and <span class="process-math">\(\vect{v}\text{,}\)</span> we can take</div>
+<div class="displaymath process-math" id="sec-planes-19-13">
+\begin{equation*}
+\vect{n} = \vect{u} \times \vect{v} = \overrightarrow{PQ}\times \overrightarrow{PR}
+\end{equation*}
+</div>
+<div class="para">as a normal vector to find the normal form and general form for <span class="process-math">\(\p\text{.}\)</span>
+</div>
+<div class="autopermalink" data-description="Paragraph"><a href="#sec-planes-19" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
+</div>
+<details id="ex-planes-all-forms" class="example example-like born-hidden-knowl"><summary class="knowl__link"><h3 class="heading">
+<span class="type">Example</span><span class="space heading-divison-mark heading-divison-mark__space"> </span><span class="codenumber">4.3.13</span><span class="period heading-divison-mark heading-divison-mark__period">.</span>
+</h3></summary><article class="example example-like knowl__content"><div class="para" id="ex-planes-all-forms-1-1">Find the vector form, parametric equations, normal form and general form for the plane <span class="process-math">\(\p\)</span> containing the points <span class="process-math">\(P = (2,1, 0)\text{,}\)</span> <span class="process-math">\(Q = (-1, 1, 2)\)</span> and <span class="process-math">\(R = (4, 0, 2)\text{.}\)</span><div class="autopermalink" data-description="Paragraph"><a href="#ex-planes-all-forms-1-1" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
+</div> <div class="para logical" id="ex-planes-all-forms-1-2">
+<div class="para">We can take</div>
+<div class="displaymath process-math" id="ex-planes-all-forms-1-2-1">
+\begin{align*}
+\vect{p} \amp  = \overrightarrow{OP} = [2, 1, 0]                           \\
+\vect{u} \amp  = \overrightarrow{PQ} = [-1, 1, 2] - [2, 1,0] = [-3, 0, 2]  \\
+\vect{v} \amp  = \overrightarrow{PR} = [4, 0, 2] - [2, 1, 0] = [2, -1, 2]\text{.}
+\end{align*}
+</div>
+<div class="para">The vector form is</div>
+<div class="displaymath process-math" id="ex-planes-all-forms-1-2-2">
+\begin{equation*}
+[x, y, z] = [2, 1, 0] + s[-3, 0, 2] + t[2, -1, 2], \qquad s, t\in \R
+\end{equation*}
+</div>
+<div class="para">and the parametric equations are</div>
+<div class="displaymath process-math" id="ex-planes-all-forms-1-2-3">
+\begin{equation*}
+\left\{
+\begin{aligned}
+x \amp  = 2  - 3s + 2t \\
+y \amp  = 1-t          \\
+z \amp  = 2s+2t
+\end{aligned}
+\right.\qquad s, t\in \R\text{.}
+\end{equation*}
+</div>
+<div class="para">We can take</div>
+<div class="displaymath process-math" id="ex-planes-all-forms-1-2-4">
+\begin{align*}
+\vect{n} = \vect{u} \times\vect{v} \amp  = \overrightarrow{PQ}\times \overrightarrow{PR} \\
+\amp  = [-3, 0, 2] \times [2, -1, 2]                  \\
+\amp  = [2, 10, 3]\text{.}
+\end{align*}
+</div>
+<div class="para">Therefore the normal form is</div>
+<div class="displaymath process-math" id="ex-planes-all-forms-1-2-5">
+\begin{equation*}
+[2, 10, 3] \cdot [x, y, z] = [2, 10, 3]\cdot [2, 1, 0]
+\end{equation*}
+</div>
+<div class="para">and the general form is <span class="process-math">\(2x+10y+3z = 14\text{.}\)</span>
+</div>
+<div class="autopermalink" data-description="Paragraph"><a href="#ex-planes-all-forms-1-2" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
+</div>
+<div class="autopermalink" data-description="Example 4.3.13"><a href="#ex-planes-all-forms" title="Copy heading and permalink for Example 4.3.13" aria-label="Copy heading and permalink for Example 4.3.13">🔗</a></div></article></details><div class="autopermalink" data-description="Section 4.3: Planes"><a href="#sec-planes" title="Copy heading and permalink for Section 4.3: Planes" aria-label="Copy heading and permalink for Section 4.3: Planes">🔗</a></div></section></div>
 <div id="ptx-content-footer" class="ptx-content-footer">
 <a class="previous-button button" href="sec-lines-in-R3-and-Rn.html" title="Previous"><span class="icon material-symbols-outlined" aria-hidden="true">&#xe5cb;</span><span class="name">Prev</span></a><a class="top-button button" href="#" title="Top"><span class="icon material-symbols-outlined" aria-hidden="true">&#xe5ce;</span><span class="name">Top</span></a><a class="next-button button" href="sec-shortest-distance.html" title="Next"><span class="name">Next</span><span class="icon material-symbols-outlined" aria-hidden="true">&#xe5cc;</span></a>
 </div></main>

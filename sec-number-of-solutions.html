@@ -101,15 +101,15 @@ eBookConfig.allow_pairs = false;
 eBookConfig.enableScratchAC = false;
 eBookConfig.build_info = "";
 eBookConfig.python3 = null;
-eBookConfig.runestone_version = '7.11.0';
+eBookConfig.runestone_version = '7.11.14';
 eBookConfig.jobehost = '';
 eBookConfig.proxyuri_runs = '';
 eBookConfig.proxyuri_files = '';
 eBookConfig.enable_chatcodes =  false;
 </script>
 <!--*** Runestone Services ***-->
-<script src="_static/prefix-runtime.f91c1a4dc12163f2.bundle.js"></script><script src="_static/prefix-723.3e6434f80549315a.bundle.js"></script><script src="_static/prefix-runestone.731d8387162b79c1.bundle.js"></script><link rel="stylesheet" type="text/css" href="_static/prefix-723.3bccd435914aa0ff.css">
-<link rel="stylesheet" type="text/css" href="_static/prefix-runestone.557d81b04b3ec0e4.css">
+<script src="_static/prefix-runtime.d892923478694492.bundle.js"></script><script src="_static/prefix-723.3e6434f80549315a.bundle.js"></script><script src="_static/prefix-runestone.1d6e4aba17c2c7f2.bundle.js"></script><link rel="stylesheet" type="text/css" href="_static/prefix-723.3bccd435914aa0ff.css">
+<link rel="stylesheet" type="text/css" href="_static/prefix-runestone.6ec5960970d8b364.css">
 <script src="_static/pretext/js/lti_iframe_resizer.js"></script><script src="https://cdnjs.cloudflare.com/ajax/libs/lunr.js/2.3.9/lunr.min.js" integrity="sha512-4xUl/d6D6THrAnXAwGajXkoWaeMNwEKK4iNfq5DotEbLPAfk6FSxSP3ydNxqDgCw1c/0Z1Jg6L8h2j+++9BZmg==" crossorigin="anonymous" referrerpolicy="no-referrer"></script><script src="lunr-pretext-search-index.js" async=""></script><script src="_static/pretext/js/pretext_search.js"></script><script src="_static/pretext/js/lib/knowl.js"></script><!--knowl.js code controls Sage Cells within knowls--><script>sagecellEvalName='Evaluate (Sage)';
 </script>
 </head>
@@ -130,7 +130,34 @@ eBookConfig.enable_chatcodes =  false;
 </div>
 </div>
 <span class="nav-other-controls"><button id="light-dark-button" class="light-dark-button button" title="Dark Mode"><span class="icon material-symbols-outlined" aria-hidden="true">&#xe51c;</span><span class="name">Dark Mode</span></button></span><span class="treebuttons"><a class="previous-button button" href="sec-guassian-elimination.html" title="Previous"><span class="icon material-symbols-outlined" aria-hidden="true">&#xe5cb;</span><span class="name">Prev</span></a><a class="up-button button" href="ch-systems.html" title="Up"><span class="icon material-symbols-outlined" aria-hidden="true">&#xe5ce;</span><span class="name">Up</span></a><a class="next-button button" href="sec-gauss-jordan-elimination.html" title="Next"><span class="name">Next</span><span class="icon material-symbols-outlined" aria-hidden="true">&#xe5cc;</span></a></span>
-</div></nav><div id="latex-macros" class="hidden-content process-math" style="display:none"><span class="process-math">\(\newcommand{\N}{\mathbb N} \newcommand{\Z}{\mathbb Z} \newcommand{\Q}{\mathbb Q} \newcommand{\R}{\mathbb R}
+</div></nav><div id="latex-macros" class="hidden-content process-math" style="display:none"><span class="process-math">\(\require{mathtools}\newcommand{\N}{\mathbb N} 
+\newcommand{\Z}{\mathbb Z} 
+\newcommand{\Q}{\mathbb Q} 
+\newcommand{\R}{\mathbb R} 
+\newcommand{\C}{\mathbb C}
+\newcommand{\vect}[1]{\mathbf{#1}}
+\newcommand{\proj}[2]{\operatorname{proj}_{#1}\!\left(#2\right)}
+\newcommand{\p}{\mathcal P}
+\newcommand{\inv}{^{-1}}
+
+\newcommand{\colvec}[2]{\begin{bmatrix}#1\\#2\end{bmatrix}}
+\newenvironment{amatrix}[1]{
+\left[\begin{array}{#1|c}
+}{
+\end{array}\right]
+  }
+
+\newenvironment{aamatrix}{
+    \left[\begin{array}{cc|cc@{}}
+      }{
+  \end{array}\right]
+      }
+
+\newenvironment{aaamatrix}{
+      \left[\begin{array}{ccc|ccc@{}}
+      }{
+    \end{array}\right]
+    }
 \newcommand{\lt}{&lt;}
 \newcommand{\gt}{&gt;}
 \newcommand{\amp}{&amp;}
@@ -198,8 +225,9 @@ eBookConfig.enable_chatcodes =  false;
 <li class="toc-item toc-section"><div class="toc-title-box"><a href="sec-properties-of-inverses.html" class="internal"><span class="codenumber">7.1</span> <span class="title">Properties of inverses</span></a></div></li>
 <li class="toc-item toc-section"><div class="toc-title-box"><a href="sec-calculating-2x2-inverses.html" class="internal"><span class="codenumber">7.2</span> <span class="title">Calculating <span class="process-math">\(2\times 2\)</span> inverses</span></a></div></li>
 <li class="toc-item toc-section"><div class="toc-title-box"><a href="sec-calculating-nxn-inverses.html" class="internal"><span class="codenumber">7.3</span> <span class="title">Calculating <span class="process-math">\(n\times n\)</span> inverses</span></a></div></li>
-<li class="toc-item toc-section"><div class="toc-title-box"><a href="sec-elementary-matrices.html" class="internal"><span class="codenumber">7.4</span> <span class="title">Elementary matrices</span></a></div></li>
-<li class="toc-item toc-section"><div class="toc-title-box"><a href="sec-characterisations-of-invertibility.html" class="internal"><span class="codenumber">7.5</span> <span class="title">Characterisations of invertibility</span></a></div></li>
+<li class="toc-item toc-section"><div class="toc-title-box"><a href="sec-inverses-and-equations.html" class="internal"><span class="codenumber">7.4</span> <span class="title">Inverses and matrix equations</span></a></div></li>
+<li class="toc-item toc-section"><div class="toc-title-box"><a href="sec-elementary-matrices.html" class="internal"><span class="codenumber">7.5</span> <span class="title">Elementary matrices</span></a></div></li>
+<li class="toc-item toc-section"><div class="toc-title-box"><a href="sec-characterisations-of-invertibility.html" class="internal"><span class="codenumber">7.6</span> <span class="title">Characterisations of invertibility</span></a></div></li>
 </ul>
 </li>
 <li class="toc-item toc-chapter">
@@ -271,7 +299,210 @@ eBookConfig.enable_chatcodes =  false;
 <main class="ptx-main"><div id="ptx-content" class="ptx-content"><section class="section" id="sec-number-of-solutions"><h2 class="heading hide-type">
 <span class="type">Section</span><span class="space heading-divison-mark heading-divison-mark__space"> </span><span class="codenumber">5.3</span><span class="space heading-divison-mark heading-divison-mark__space"> </span><span class="title">Number of solutions</span>
 </h2>
-<div class="para" id="sec-number-of-solutions-2">Text of section.<div class="autopermalink" data-description="Paragraph"><a href="#sec-number-of-solutions-2" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
+<div class="para" id="sec-number-of-solutions-2">In most of the examples so far, and all of the examples which we have solved via Gaussian elimination, the system has had a single solution. In fact, this is only one of three possibilities.<div class="autopermalink" data-description="Paragraph"><a href="#sec-number-of-solutions-2" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
+</div>
+<article class="theorem theorem-like" id="thm-solns"><h3 class="heading">
+<span class="type">Theorem</span><span class="space heading-divison-mark heading-divison-mark__space"> </span><span class="codenumber">5.3.1</span><span class="period heading-divison-mark heading-divison-mark__period">.</span>
+</h3>
+<div class="para logical" id="thm-solns-1-1">
+<div class="para">Every system of linear equations has either</div>
+<ol class="decimal" id="thm-solns-1-1-1">
+<li id="thm-solns-1-1-1-1">
+<div class="para" id="thm-solns-1-1-1-1-1">a unique solution<div class="autopermalink" data-description="Paragraph"><a href="#thm-solns-1-1-1-1-1" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
+</div>
+<div class="autopermalink" data-description="Item 1"><a href="#thm-solns-1-1-1-1" title="Copy heading and permalink for Item 1" aria-label="Copy heading and permalink for Item 1">🔗</a></div>
+</li>
+<li id="thm-solns-1-1-1-2">
+<div class="para" id="thm-solns-1-1-1-2-1">infinitely many solutions<div class="autopermalink" data-description="Paragraph"><a href="#thm-solns-1-1-1-2-1" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
+</div>
+<div class="autopermalink" data-description="Item 2"><a href="#thm-solns-1-1-1-2" title="Copy heading and permalink for Item 2" aria-label="Copy heading and permalink for Item 2">🔗</a></div>
+</li>
+<li id="thm-solns-1-1-1-3">
+<div class="para" id="thm-solns-1-1-1-3-1">no solutions.<div class="autopermalink" data-description="Paragraph"><a href="#thm-solns-1-1-1-3-1" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
+</div>
+<div class="autopermalink" data-description="Item 3"><a href="#thm-solns-1-1-1-3" title="Copy heading and permalink for Item 3" aria-label="Copy heading and permalink for Item 3">🔗</a></div>
+</li>
+</ol>
+<div class="autopermalink" data-description="Paragraph"><a href="#thm-solns-1-1" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
+</div>
+<div class="autopermalink" data-description="Theorem 5.3.1"><a href="#thm-solns" title="Copy heading and permalink for Theorem 5.3.1" aria-label="Copy heading and permalink for Theorem 5.3.1">🔗</a></div></article><div class="para" id="sec-number-of-solutions-4">In other words, it is impossible for the number of solutions to be 2, 3, \dots or any finite number greater than 1.<div class="autopermalink" data-description="Paragraph"><a href="#sec-number-of-solutions-4" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
+</div>
+<article class="definition definition-like" id="def-consistent"><h3 class="heading">
+<span class="type">Definition</span><span class="space heading-divison-mark heading-divison-mark__space"> </span><span class="codenumber">5.3.2</span><span class="period heading-divison-mark heading-divison-mark__period">.</span>
+</h3>
+<div class="para" id="def-consistent-1-1">A system of linear equations is called <dfn class="terminology">consistent</dfn> if it has at least one solution, and <dfn class="terminology">inconsistent</dfn> if it has no solutions.<div class="autopermalink" data-description="Paragraph"><a href="#def-consistent-1-1" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
+</div>
+<div class="autopermalink" data-description="Definition 5.3.2"><a href="#def-consistent" title="Copy heading and permalink for Definition 5.3.2" aria-label="Copy heading and permalink for Definition 5.3.2">🔗</a></div></article><div class="para" id="sec-number-of-solutions-6">We will not prove <a href="sec-number-of-solutions.html#thm-solns" class="xref" data-knowl="./knowl/xref/thm-solns.html" data-reveal-label="Reveal" data-close-label="Close" title="Theorem 5.3.1">Theorem 5.3.1</a>, but we will now sketch an argument in two special geometric cases, so that hopefully it seems reasonable.<div class="autopermalink" data-description="Paragraph"><a href="#sec-number-of-solutions-6" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
+</div>
+<div class="para logical" id="sec-number-of-solutions-7">
+<div class="para">Firstly, if we have two equations in two variables</div>
+<div class="displaymath process-math" data-contains-math-knowls="./knowl/xref/ex-pt.html ./knowl/xref/ex-coincide.html" id="sec-number-of-solutions-7-1">
+\begin{equation*}
+\begin{cases}
+a_1x +b_1y  \amp  = c_1 \\
+a_2x + b_2y \amp  = c_2
+\end{cases},
+\end{equation*}
+</div>
+<div class="para">then each equation is a line in <span class="process-math">\(\R^2\text{,}\)</span> so the solutions describe the intersection of two lines in <span class="process-math">\(\R^2\text{.}\)</span> The only possibilities are one intersection, if the lines are not parallel; no solutions, if the lines are parallel and do not coincide; and infinitely many solutions if the lines coincide. Actually, we have already seen this in <a href="sec-systems.html#ex-pt" class="xref" data-knowl="./knowl/xref/ex-pt.html" data-reveal-label="Reveal" data-close-label="Close" title="Example 5.1.5">Example 5.1.5</a> to <a href="sec-systems.html#ex-coincide" class="xref" data-knowl="./knowl/xref/ex-coincide.html" data-reveal-label="Reveal" data-close-label="Close" title="Example 5.1.7">Example 5.1.7</a>, and we briefly discussed this there.</div>
+<div class="autopermalink" data-description="Paragraph"><a href="#sec-number-of-solutions-7" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
+</div>
+<div class="para" id="sec-number-of-solutions-8">Secondly, if we have three equations in three variables, each equation is the general form of a plane in <span class="process-math">\(\R^3\text{,}\)</span> so the number of solutions is the number of intersections of these planes. There can be a unique solution if all 3 planes meet at a single point, infinitely many solutions if the planes intersect along a line, or no solutions when the planes have no points in common. These possibilities are illustrated in <a href="sec-number-of-solutions.html#fig-plane_int12" class="xref" data-knowl="./knowl/xref/fig-plane_int12.html" data-reveal-label="Reveal" data-close-label="Close" title="Figure 5.3.3">Figure 5.3.3</a> and <a href="sec-number-of-solutions.html#fig-plane_int3" class="xref" data-knowl="./knowl/xref/fig-plane_int3.html" data-reveal-label="Reveal" data-close-label="Close" title="Figure 5.3.4">Figure 5.3.4</a>. A similar geometric argument works for <span class="process-math">\(n\)</span> equations in <span class="process-math">\(n\)</span> variables, though it becomes harder to visualise.<div class="autopermalink" data-description="Paragraph"><a href="#sec-number-of-solutions-8" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
+</div>
+<figure class="figure figure-like" id="fig-plane_int12"><div class="sidebyside"><div class="sbsrow" style="margin-left:2.5%;margin-right:2.5%;grid-template-columns:47.3684210526316% 47.3684210526316%;column-gap:5%;">
+<div class="sbspanel sbspanel--middle middle" style=""><figure class="figure figure-like" id="fig-plane_int1"><figcaption><span class="codenumber">(a)</span><span class="space heading-divison-mark heading-divison-mark__space"> </span>Single intersection.<div class="autopermalink" data-description="Figure 5.3.3.(a)"><a href="#fig-plane_int1" title="Copy heading and permalink for Figure 5.3.3.(a)" aria-label="Copy heading and permalink for Figure 5.3.3.(a)">🔗</a></div></figcaption></figure></div>
+<div class="sbspanel sbspanel--middle middle" style=""><figure class="figure figure-like" id="fig-plane_int2"><figcaption><span class="codenumber">(b)</span><span class="space heading-divison-mark heading-divison-mark__space"> </span>Infinitely many intersection points.<div class="autopermalink" data-description="Figure 5.3.3.(b)"><a href="#fig-plane_int2" title="Copy heading and permalink for Figure 5.3.3.(b)" aria-label="Copy heading and permalink for Figure 5.3.3.(b)">🔗</a></div></figcaption></figure></div>
+</div></div>
+<figcaption><span class="type">Figure</span><span class="space heading-divison-mark heading-divison-mark__space"> </span><span class="codenumber">5.3.3<span class="period heading-divison-mark heading-divison-mark__period">.</span></span><span class="space heading-divison-mark heading-divison-mark__space"> </span>Intersections of three planes in <span class="process-math">\(\R^3\)</span><div class="autopermalink" data-description="Figure 5.3.3"><a href="#fig-plane_int12" title="Copy heading and permalink for Figure 5.3.3" aria-label="Copy heading and permalink for Figure 5.3.3">🔗</a></div></figcaption></figure><figure class="figure figure-like" id="fig-plane_int3"><div class="sidebyside"><div class="sbsrow" style="margin-left:1.666666666666667%;margin-right:1.666666666666667%;grid-template-columns:31.0344827586207% 31.0344827586207% 31.0344827586207%;column-gap:3.333333333333333%;">
+<div class="sbspanel sbspanel--middle middle" style=""><figure class="figure figure-like" id=""><figcaption><span class="codenumber">(a)</span><span class="space heading-divison-mark heading-divison-mark__space"> </span><div class="autopermalink" data-description="Figure 5.3.4.(a)"><a href="#" title="Copy heading and permalink for Figure 5.3.4.(a)" aria-label="Copy heading and permalink for Figure 5.3.4.(a)">🔗</a></div></figcaption></figure></div>
+<div class="sbspanel sbspanel--middle middle" style=""><figure class="figure figure-like" id=""><figcaption><span class="codenumber">(b)</span><span class="space heading-divison-mark heading-divison-mark__space"> </span><div class="autopermalink" data-description="Figure 5.3.4.(b)"><a href="#" title="Copy heading and permalink for Figure 5.3.4.(b)" aria-label="Copy heading and permalink for Figure 5.3.4.(b)">🔗</a></div></figcaption></figure></div>
+<div class="sbspanel sbspanel--middle middle" style=""><figure class="figure figure-like" id=""><figcaption><span class="codenumber">(c)</span><span class="space heading-divison-mark heading-divison-mark__space"> </span><div class="autopermalink" data-description="Figure 5.3.4.(c)"><a href="#" title="Copy heading and permalink for Figure 5.3.4.(c)" aria-label="Copy heading and permalink for Figure 5.3.4.(c)">🔗</a></div></figcaption></figure></div>
+</div></div>
+<figcaption><span class="type">Figure</span><span class="space heading-divison-mark heading-divison-mark__space"> </span><span class="codenumber">5.3.4<span class="period heading-divison-mark heading-divison-mark__period">.</span></span><span class="space heading-divison-mark heading-divison-mark__space"> </span>Three planes in <span class="process-math">\(\R^3\)</span> with no common intersection<div class="autopermalink" data-description="Figure 5.3.4"><a href="#fig-plane_int3" title="Copy heading and permalink for Figure 5.3.4" aria-label="Copy heading and permalink for Figure 5.3.4">🔗</a></div></figcaption></figure><div class="para logical" id="sec-number-of-solutions-11">
+<div class="para">
+<dfn class="terminology">Gaussian elimination for equations with no or infinitely many solutions:</dfn> The first step is always to get the augmented matrix into REF. Once you’ve done this, here’s how to tell how many solutions there are, and what to do next.</div>
+<ul class="disc" id="sec-number-of-solutions-11-2">
+<li id="sec-number-of-solutions-11-2-1">
+<div class="para logical" id="sec-number-of-solutions-11-2-1-1">
+<div class="para">If in REF we have a row of the form</div>
+<div class="displaymath process-math" id="sec-number-of-solutions-11-2-1-1-1">
+\begin{equation*}
+\begin{amatrix}{cccc} 0 \amp  0 \amp  \dots \amp 0 \amp  b
+\end{amatrix}
+\end{equation*}
+</div>
+<div class="para">where <span class="process-math">\(b\)</span> is nonzero, then we conclude that there are no solutions. This is because it is impossible for <span class="process-math">\(0x_1 + 0x_2 + \dots + 0x_n\)</span> to equal something nonzero.</div>
+<div class="autopermalink" data-description="Paragraph"><a href="#sec-number-of-solutions-11-2-1-1" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
+</div>
+<div class="autopermalink" data-description="Item"><a href="#sec-number-of-solutions-11-2-1" title="Copy heading and permalink for Item" aria-label="Copy heading and permalink for Item">🔗</a></div>
+</li>
+<li id="sec-number-of-solutions-11-2-2">
+<div class="para logical" id="sec-number-of-solutions-11-2-2-1">
+<div class="para">Look for any columns such that all its entries are not the leading entries of any row. (This can occur if there are less equations than the number of variables, or if there is a zero row in REF.) If there are any, then you will need to assign these variables to a parameter. For example, consider the REF augmented matrix</div>
+<div class="displaymath process-math" id="sec-number-of-solutions-11-2-2-1-1">
+\begin{equation*}
+\begin{amatrix}{ccc}
+1 \amp  8 \amp  0 \amp  1\\
+0 \amp  2 \amp  1 \amp  2\\
+\end{amatrix}
+\end{equation*}
+</div>
+<div class="para">Then the <span class="process-math">\(z\)</span>-column doesn’t contain any leading entries, so we introduce the parameter <span class="process-math">\(t \in \R\text{,}\)</span> and let <span class="process-math">\(z=t\text{.}\)</span> Now solve for the rest of the variables in terms of the parameter. There will be infinitely many solutions (one for each value of the parameter).</div>
+<div class="autopermalink" data-description="Paragraph"><a href="#sec-number-of-solutions-11-2-2-1" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
+</div>
+<div class="autopermalink" data-description="Item"><a href="#sec-number-of-solutions-11-2-2" title="Copy heading and permalink for Item" aria-label="Copy heading and permalink for Item">🔗</a></div>
+</li>
+<li id="sec-number-of-solutions-11-2-3">
+<div class="para" id="sec-number-of-solutions-11-2-3-1">If neither of the two above situations apply, then there is a unique solution, and we can solve for it as usual.<div class="autopermalink" data-description="Paragraph"><a href="#sec-number-of-solutions-11-2-3-1" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
+</div>
+<div class="autopermalink" data-description="Item"><a href="#sec-number-of-solutions-11-2-3" title="Copy heading and permalink for Item" aria-label="Copy heading and permalink for Item">🔗</a></div>
+</li>
+</ul>
+<div class="autopermalink" data-description="Paragraph"><a href="#sec-number-of-solutions-11" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
+</div>
+<details id="ex-no-sols" class="example example-like born-hidden-knowl"><summary class="knowl__link"><h3 class="heading">
+<span class="type">Example</span><span class="space heading-divison-mark heading-divison-mark__space"> </span><span class="codenumber">5.3.5</span><span class="period heading-divison-mark heading-divison-mark__period">.</span>
+</h3></summary><article class="example example-like knowl__content"><div class="para logical" id="ex-no-sols-1-1">
+<div class="para">Show that the system of linear equations</div>
+<div class="displaymath process-math" id="ex-no-sols-1-1-1">
+\begin{equation*}
+\begin{cases}
+x + 4y -z    \amp  = 0 \\
+x + 6y       \amp  = 3 \\
+2x + 10y - z \amp  = 5
+\end{cases}\text{.}
+\end{equation*}
+</div>
+<div class="para">has no solutions.</div>
+<div class="autopermalink" data-description="Paragraph"><a href="#ex-no-sols-1-1" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
+</div> <div class="para logical" id="ex-no-sols-1-2">
+<div class="para">Row reducing gives</div>
+<div class="displaymath process-math" id="ex-no-sols-1-2-1">
+\begin{align*}
+\begin{amatrix}{ccc}
+1 \amp  4 \amp  -1 \amp  0\\
+1 \amp  6 \amp  0 \amp  3\\
+2 \amp  10 \amp  -1 \amp  5\\
+\end{amatrix}
+\amp\xrightarrow[R_3\mapsto R_3 - 2R_1]{R_2 \mapsto R_2 - R_1} 
+\begin{amatrix}{ccc}
+1 \amp  4 \amp  -1 \amp  0\\
+0 \amp  2 \amp  1 \amp  3\\
+0 \amp  2 \amp  1 \amp  5
+\end{amatrix}
+\\
+\amp\xrightarrow{R_3 \mapsto R_3 - R_2}                        
+\begin{amatrix}{ccc}
+1 \amp  4 \amp  -1 \amp  0\\
+0 \amp  2 \amp  1 \amp  3\\
+0 \amp  0 \amp  0 \amp  2
+\end{amatrix}\text{.}
+\end{align*}
+</div>
+<div class="para">The last row is a zero row with 2 after the line, so there is no solution.</div>
+<div class="autopermalink" data-description="Paragraph"><a href="#ex-no-sols-1-2" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
+</div>
+<div class="autopermalink" data-description="Example 5.3.5"><a href="#ex-no-sols" title="Copy heading and permalink for Example 5.3.5" aria-label="Copy heading and permalink for Example 5.3.5">🔗</a></div></article></details><div class="para" id="sec-number-of-solutions-13">The next example shows how to solve linear equations with infinitely many solutions, by introducing a parameter. In this example, we will only need to introduce one parameter. Sometimes it is necessary to introduce multiple parameters; this will be covered later in <a href="sec-gauss-jordan-elimination.html#ex-multparam" class="xref" data-knowl="./knowl/xref/ex-multparam.html" data-reveal-label="Reveal" data-close-label="Close" title="Example 5.4.6">Example 5.4.6</a>.<div class="autopermalink" data-description="Paragraph"><a href="#sec-number-of-solutions-13" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
+</div>
+<details id="ex-inftysolns" class="example example-like born-hidden-knowl"><summary class="knowl__link"><h3 class="heading">
+<span class="type">Example</span><span class="space heading-divison-mark heading-divison-mark__space"> </span><span class="codenumber">5.3.6</span><span class="period heading-divison-mark heading-divison-mark__period">.</span>
+</h3></summary><article class="example example-like knowl__content"><div class="para logical" id="ex-inftysolns-1-1">
+<div class="para">Solve the system of linear equations</div>
+<div class="displaymath process-math" id="ex-inftysolns-1-1-1">
+\begin{equation*}
+\begin{cases}
+2x + y +5z  \amp  = 1 \\
+2x + 3y +4z \amp  = 4 \\
+4x + 11 z   \amp  = -1
+\end{cases}\text{.}
+\end{equation*}
+</div>
+<div class="para">has no solutions.</div>
+<div class="autopermalink" data-description="Paragraph"><a href="#ex-inftysolns-1-1" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
+</div> <div class="para logical" id="ex-inftysolns-1-2">
+<div class="para">Row reducing gives</div>
+<div class="displaymath process-math" id="ex-inftysolns-1-2-1">
+\begin{equation*}
+\begin{amatrix}{ccc}
+2 \amp  1 \amp  5 \amp  1\\
+2 \amp  3 \amp  4 \amp  4\\
+4 \amp  0 \amp  11 \amp  -1\\
+\end{amatrix}
+\to
+\begin{amatrix}{ccc}
+2 \amp  1 \amp  5 \amp  1\\
+0 \amp  2 \amp  -1 \amp  3\\
+0 \amp  -2 \amp  1 \amp  -3
+\end{amatrix}
+\to
+\begin{amatrix}{ccc}
+2 \amp  1 \amp  5 \amp  1\\
+0 \amp  2 \amp  -1 \amp  3\\
+0 \amp  0 \amp  0 \amp  0
+\end{amatrix}\text{.}
+\end{equation*}
+</div>
+<div class="para">The last column has no leading entries, so <span class="process-math">\(z\)</span> is not determined. However, this is fine: we let <span class="process-math">\(z = t\text{,}\)</span> for <span class="process-math">\(t \in \R\)</span> a parameter. Now we can back-substitute in terms of <span class="process-math">\(t\text{.}\)</span> We have <span class="process-math">\(2y - z = 3\text{,}\)</span> so <span class="process-math">\(y = \frac{1}{2}(3+z) = \frac{3}{2} + \frac{1}{2}t\text{.}\)</span> Finally,</div>
+<div class="displaymath process-math" id="ex-inftysolns-1-2-8">
+\begin{align*}
+2x + y +5z = 1 \implies x \amp  = \frac{1}{2}(1-y - 5z)                                               \\
+\amp  = \frac{1}{2}\Bigl(1 - \Bigl(\frac{3}{2}+\frac{1}{2}t\Bigr) -5t\Bigr) \\
+\amp  = -\frac{1}{4}-\frac{11}{4}t\text{.}
+\end{align*}
+</div>
+<div class="para">So there are infinitely many solutions <span class="process-math">\([x, y, z] = [-\frac{1}{4}-\frac{11}{4}t, \frac{3}{2} + \frac{1}{2}t, t]\text{,}\)</span> <span class="process-math">\(t \in \R\text{.}\)</span>
+</div>
+<div class="autopermalink" data-description="Paragraph"><a href="#ex-inftysolns-1-2" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
+</div>
+<div class="autopermalink" data-description="Example 5.3.6"><a href="#ex-inftysolns" title="Copy heading and permalink for Example 5.3.6" aria-label="Copy heading and permalink for Example 5.3.6">🔗</a></div></article></details><div class="para logical" id="sec-number-of-solutions-15">
+<div class="para">A geometric interpretation of <a href="sec-number-of-solutions.html#ex-inftysolns" class="xref" data-knowl="./knowl/xref/ex-inftysolns.html" data-reveal-label="Reveal" data-close-label="Close" title="Example 5.3.6">Example 5.3.6</a> is that the 3 planes intersect in the line</div>
+<div class="displaymath process-math" data-contains-math-knowls="./knowl/xref/ex-inftysolns.html" id="sec-number-of-solutions-15-2">
+\begin{equation*}
+\vect{x} = \Bigl[-\frac{1}{4}, \frac{3}{2}, 0\Bigr] + t\Bigl[-\frac{11}{4}, \frac{1}{2}, 1\Bigr], \qquad t\in \R\text{.}
+\end{equation*}
+</div>
+<div class="para">Notice that to save space and time, we didn’t label the arrows during row reduction. We will sometimes do the same thing in future examples.</div>
+<div class="autopermalink" data-description="Paragraph"><a href="#sec-number-of-solutions-15" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
 </div>
 <div class="autopermalink" data-description="Section 5.3: Number of solutions"><a href="#sec-number-of-solutions" title="Copy heading and permalink for Section 5.3: Number of solutions" aria-label="Copy heading and permalink for Section 5.3: Number of solutions">🔗</a></div></section></div>
 <div id="ptx-content-footer" class="ptx-content-footer">

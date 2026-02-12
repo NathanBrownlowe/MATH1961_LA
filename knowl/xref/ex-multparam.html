@@ -1,0 +1,75 @@
+<!DOCTYPE html>
+<html lang="en-US" dir="ltr">
+<!--******************************************-->
+<!--*  Authored with PreTeXt                 *-->
+<!--*  pretextbook.org                       *-->
+<!--*  Theme: default-modern                 *-->
+<!--*  Palette:                              *-->
+<!--******************************************-->
+
+<!--********************************************-->
+<!--*       Generated from PreTeXt source      *-->
+<!--*                                          *-->
+<!--*         https://pretextbook.org          *-->
+<!--*                                          *-->
+<!--********************************************-->
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+<meta name="robots" content="noindex, nofollow">
+</head>
+<body class="ignore-math">
+<article class="example example-like"><h3 class="heading">
+<span class="type">Example</span><span class="space heading-divison-mark heading-divison-mark__space"> </span><span class="codenumber">5.4.6</span><span class="period heading-divison-mark heading-divison-mark__period">.</span>
+</h3>
+<div class="para logical">
+<div class="para">Use Gauss--Jordan elimination to solve the following system of linear equations:</div>
+<div class="displaymath process-math">
+\begin{equation*}
+\begin{cases}
+x + 3y + z + 2w  \amp  = 4  \\
+2x - y + 9z -3w  \amp  = -6 \\
+-x + 2y -6z + 3w \amp  = 6
+\end{cases}\text{.}
+\end{equation*}
+</div>
+<div class="para">Row reducing to RREF gives</div>
+<div class="displaymath process-math">
+\begin{align*}
+\begin{amatrix}{cccc}
+1 \amp  3 \amp  1 \amp  2 \amp  4\\
+2 \amp  -1 \amp  9 \amp  -3 \amp  -6\\
+-1 \amp  2 \amp  -6 \amp  3 \amp  6
+\end{amatrix}
+\amp\xrightarrow[R_3\mapsto R_3 + R_1]{R_2 \mapsto R_2 - 2R_1}   
+\begin{amatrix}{cccc}
+1 \amp  3 \amp  1 \amp  2 \amp  4\\
+0 \amp  -7 \amp  7 \amp  -7 \amp  -14\\
+0 \amp  5 \amp  -5 \amp  5 \amp  10
+\end{amatrix}
+\\
+\amp\xrightarrow{R_2 \mapsto -\frac{1}{7}R_2}                    
+\begin{amatrix}{cccc}
+1 \amp  3 \amp  1 \amp  2 \amp  4\\
+0 \amp  1 \amp  -1 \amp  1 \amp  2\\
+0 \amp  5 \amp  -5  \amp  5 \amp  10
+\end{amatrix}
+\\
+\amp\xrightarrow[R_3 \mapsto R_3 - 5R_2]{R_1 \mapsto R_1 - 3R_2} 
+\begin{amatrix}{cccc}
+1 \amp  0 \amp  4 \amp  -1 \amp  -2\\
+0 \amp  1 \amp  -1 \amp  1 \amp  2\\
+0 \amp  0 \amp  0 \amp  0 \amp  0
+\end{amatrix}
+\end{align*}
+</div>
+<div class="para">This is in RREF. Let <span class="process-math">\(z = s\)</span> and <span class="process-math">\(w = t\text{,}\)</span> for <span class="process-math">\(s, t \in \R\text{.}\)</span> (Here we are considering the fourth column as the <span class="process-math">\(w\)</span>-column.) Then the solution is</div>
+<div class="displaymath process-math">
+\begin{equation*}
+x = -2 - 4s + t,\; y = 2+s-t,\; z=s,\; w = t, \qquad s, t\in \R.
+\end{equation*}
+</div>
+<div class="autopermalink" data-description="Paragraph"><a href="#ex-multparam-1-1" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
+</div>
+<div class="autopermalink" data-description="Example 5.4.6"><a href="#ex-multparam" title="Copy heading and permalink for Example 5.4.6" aria-label="Copy heading and permalink for Example 5.4.6">🔗</a></div></article><span class="incontext"><a class="internal" href="sec-gauss-jordan-elimination.html#ex-multparam">in-context</a></span>
+</body>
+</html>

@@ -101,15 +101,15 @@ eBookConfig.allow_pairs = false;
 eBookConfig.enableScratchAC = false;
 eBookConfig.build_info = "";
 eBookConfig.python3 = null;
-eBookConfig.runestone_version = '7.11.0';
+eBookConfig.runestone_version = '7.11.14';
 eBookConfig.jobehost = '';
 eBookConfig.proxyuri_runs = '';
 eBookConfig.proxyuri_files = '';
 eBookConfig.enable_chatcodes =  false;
 </script>
 <!--*** Runestone Services ***-->
-<script src="_static/prefix-runtime.f91c1a4dc12163f2.bundle.js"></script><script src="_static/prefix-723.3e6434f80549315a.bundle.js"></script><script src="_static/prefix-runestone.731d8387162b79c1.bundle.js"></script><link rel="stylesheet" type="text/css" href="_static/prefix-723.3bccd435914aa0ff.css">
-<link rel="stylesheet" type="text/css" href="_static/prefix-runestone.557d81b04b3ec0e4.css">
+<script src="_static/prefix-runtime.d892923478694492.bundle.js"></script><script src="_static/prefix-723.3e6434f80549315a.bundle.js"></script><script src="_static/prefix-runestone.1d6e4aba17c2c7f2.bundle.js"></script><link rel="stylesheet" type="text/css" href="_static/prefix-723.3bccd435914aa0ff.css">
+<link rel="stylesheet" type="text/css" href="_static/prefix-runestone.6ec5960970d8b364.css">
 <script src="_static/pretext/js/lti_iframe_resizer.js"></script><script src="https://cdnjs.cloudflare.com/ajax/libs/lunr.js/2.3.9/lunr.min.js" integrity="sha512-4xUl/d6D6THrAnXAwGajXkoWaeMNwEKK4iNfq5DotEbLPAfk6FSxSP3ydNxqDgCw1c/0Z1Jg6L8h2j+++9BZmg==" crossorigin="anonymous" referrerpolicy="no-referrer"></script><script src="lunr-pretext-search-index.js" async=""></script><script src="_static/pretext/js/pretext_search.js"></script><script src="_static/pretext/js/lib/knowl.js"></script><!--knowl.js code controls Sage Cells within knowls--><script>sagecellEvalName='Evaluate (Sage)';
 </script>
 </head>
@@ -129,8 +129,35 @@ eBookConfig.enable_chatcodes =  false;
 <ol id="searchresults" class="searchresults"></ol>
 </div>
 </div>
-<span class="nav-other-controls"><button id="light-dark-button" class="light-dark-button button" title="Dark Mode"><span class="icon material-symbols-outlined" aria-hidden="true">&#xe51c;</span><span class="name">Dark Mode</span></button></span><span class="treebuttons"><a class="previous-button button" href="sec-calculating-nxn-inverses.html" title="Previous"><span class="icon material-symbols-outlined" aria-hidden="true">&#xe5cb;</span><span class="name">Prev</span></a><a class="up-button button" href="ch-matrix-inverses.html" title="Up"><span class="icon material-symbols-outlined" aria-hidden="true">&#xe5ce;</span><span class="name">Up</span></a><a class="next-button button" href="sec-characterisations-of-invertibility.html" title="Next"><span class="name">Next</span><span class="icon material-symbols-outlined" aria-hidden="true">&#xe5cc;</span></a></span>
-</div></nav><div id="latex-macros" class="hidden-content process-math" style="display:none"><span class="process-math">\(\newcommand{\N}{\mathbb N} \newcommand{\Z}{\mathbb Z} \newcommand{\Q}{\mathbb Q} \newcommand{\R}{\mathbb R}
+<span class="nav-other-controls"><button id="light-dark-button" class="light-dark-button button" title="Dark Mode"><span class="icon material-symbols-outlined" aria-hidden="true">&#xe51c;</span><span class="name">Dark Mode</span></button></span><span class="treebuttons"><a class="previous-button button" href="sec-inverses-and-equations.html" title="Previous"><span class="icon material-symbols-outlined" aria-hidden="true">&#xe5cb;</span><span class="name">Prev</span></a><a class="up-button button" href="ch-matrix-inverses.html" title="Up"><span class="icon material-symbols-outlined" aria-hidden="true">&#xe5ce;</span><span class="name">Up</span></a><a class="next-button button" href="sec-characterisations-of-invertibility.html" title="Next"><span class="name">Next</span><span class="icon material-symbols-outlined" aria-hidden="true">&#xe5cc;</span></a></span>
+</div></nav><div id="latex-macros" class="hidden-content process-math" style="display:none"><span class="process-math">\(\require{mathtools}\newcommand{\N}{\mathbb N} 
+\newcommand{\Z}{\mathbb Z} 
+\newcommand{\Q}{\mathbb Q} 
+\newcommand{\R}{\mathbb R} 
+\newcommand{\C}{\mathbb C}
+\newcommand{\vect}[1]{\mathbf{#1}}
+\newcommand{\proj}[2]{\operatorname{proj}_{#1}\!\left(#2\right)}
+\newcommand{\p}{\mathcal P}
+\newcommand{\inv}{^{-1}}
+
+\newcommand{\colvec}[2]{\begin{bmatrix}#1\\#2\end{bmatrix}}
+\newenvironment{amatrix}[1]{
+\left[\begin{array}{#1|c}
+}{
+\end{array}\right]
+  }
+
+\newenvironment{aamatrix}{
+    \left[\begin{array}{cc|cc@{}}
+      }{
+  \end{array}\right]
+      }
+
+\newenvironment{aaamatrix}{
+      \left[\begin{array}{ccc|ccc@{}}
+      }{
+    \end{array}\right]
+    }
 \newcommand{\lt}{&lt;}
 \newcommand{\gt}{&gt;}
 \newcommand{\amp}{&amp;}
@@ -198,8 +225,9 @@ eBookConfig.enable_chatcodes =  false;
 <li class="toc-item toc-section"><div class="toc-title-box"><a href="sec-properties-of-inverses.html" class="internal"><span class="codenumber">7.1</span> <span class="title">Properties of inverses</span></a></div></li>
 <li class="toc-item toc-section"><div class="toc-title-box"><a href="sec-calculating-2x2-inverses.html" class="internal"><span class="codenumber">7.2</span> <span class="title">Calculating <span class="process-math">\(2\times 2\)</span> inverses</span></a></div></li>
 <li class="toc-item toc-section"><div class="toc-title-box"><a href="sec-calculating-nxn-inverses.html" class="internal"><span class="codenumber">7.3</span> <span class="title">Calculating <span class="process-math">\(n\times n\)</span> inverses</span></a></div></li>
-<li class="toc-item toc-section active"><div class="toc-title-box"><a href="sec-elementary-matrices.html" class="internal"><span class="codenumber">7.4</span> <span class="title">Elementary matrices</span></a></div></li>
-<li class="toc-item toc-section"><div class="toc-title-box"><a href="sec-characterisations-of-invertibility.html" class="internal"><span class="codenumber">7.5</span> <span class="title">Characterisations of invertibility</span></a></div></li>
+<li class="toc-item toc-section"><div class="toc-title-box"><a href="sec-inverses-and-equations.html" class="internal"><span class="codenumber">7.4</span> <span class="title">Inverses and matrix equations</span></a></div></li>
+<li class="toc-item toc-section active"><div class="toc-title-box"><a href="sec-elementary-matrices.html" class="internal"><span class="codenumber">7.5</span> <span class="title">Elementary matrices</span></a></div></li>
+<li class="toc-item toc-section"><div class="toc-title-box"><a href="sec-characterisations-of-invertibility.html" class="internal"><span class="codenumber">7.6</span> <span class="title">Characterisations of invertibility</span></a></div></li>
 </ul>
 </li>
 <li class="toc-item toc-chapter">
@@ -269,13 +297,127 @@ eBookConfig.enable_chatcodes =  false;
 <li class="toc-item toc-backmatter"><div class="toc-title-box"><a href="backmatter.html" class="internal"><span class="title">Backmatter</span></a></div></li>
 </ul></nav></div>
 <main class="ptx-main"><div id="ptx-content" class="ptx-content"><section class="section" id="sec-elementary-matrices"><h2 class="heading hide-type">
-<span class="type">Section</span><span class="space heading-divison-mark heading-divison-mark__space"> </span><span class="codenumber">7.4</span><span class="space heading-divison-mark heading-divison-mark__space"> </span><span class="title">Elementary matrices</span>
+<span class="type">Section</span><span class="space heading-divison-mark heading-divison-mark__space"> </span><span class="codenumber">7.5</span><span class="space heading-divison-mark heading-divison-mark__space"> </span><span class="title">Elementary matrices</span>
 </h2>
-<div class="para" id="sec-elementary-matrices-2">Text of section.<div class="autopermalink" data-description="Paragraph"><a href="#sec-elementary-matrices-2" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
+<article class="definition definition-like" id="def-elementary-matrices"><h3 class="heading">
+<span class="type">Definition</span><span class="space heading-divison-mark heading-divison-mark__space"> </span><span class="codenumber">7.5.1</span><span class="period heading-divison-mark heading-divison-mark__period">.</span>
+</h3>
+<div class="para" id="def-elementary-matrices-1-1">An <dfn class="terminology">elementary matrix</dfn> is any matrix that can be obtained by performing a single elementary row operation an an identity matrix.<div class="autopermalink" data-description="Paragraph"><a href="#def-elementary-matrices-1-1" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
 </div>
-<div class="autopermalink" data-description="Section 7.4: Elementary matrices"><a href="#sec-elementary-matrices" title="Copy heading and permalink for Section 7.4: Elementary matrices" aria-label="Copy heading and permalink for Section 7.4: Elementary matrices">🔗</a></div></section></div>
+<div class="autopermalink" data-description="Definition 7.5.1"><a href="#def-elementary-matrices" title="Copy heading and permalink for Definition 7.5.1" aria-label="Copy heading and permalink for Definition 7.5.1">🔗</a></div></article><details id="ex-basic-elem-matrices" class="example example-like born-hidden-knowl"><summary class="knowl__link"><h3 class="heading">
+<span class="type">Example</span><span class="space heading-divison-mark heading-divison-mark__space"> </span><span class="codenumber">7.5.2</span><span class="period heading-divison-mark heading-divison-mark__period">.</span>
+</h3></summary><article class="example example-like knowl__content"><div class="para logical" id="ex-basic-elem-matrices-1-1">
+<ul class="disc" id="ex-basic-elem-matrices-1-1-1">
+<li id="ex-basic-elem-matrices-1-1-1-1">
+<div class="para" id="ex-basic-elem-matrices-1-1-1-1-1">
+<span class="process-math">\(\begin{bmatrix}0 \amp 1 \amp 0\\1 \amp 0\amp 0\\0\amp 0\amp 1\end{bmatrix}\)</span> is obtained from the ERO <span class="process-math">\(R_1\leftrightarrow R_2\text{.}\)</span><div class="autopermalink" data-description="Paragraph"><a href="#ex-basic-elem-matrices-1-1-1-1-1" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
+</div>
+<div class="autopermalink" data-description="Item"><a href="#ex-basic-elem-matrices-1-1-1-1" title="Copy heading and permalink for Item" aria-label="Copy heading and permalink for Item">🔗</a></div>
+</li>
+<li id="ex-basic-elem-matrices-1-1-1-2">
+<div class="para" id="ex-basic-elem-matrices-1-1-1-2-1">
+<span class="process-math">\(\begin{bmatrix}4 \amp 0 \amp 0\\0 \amp 1\amp 0\\0\amp 0\amp 1\end{bmatrix}\)</span> is obtained from the ERO <span class="process-math">\(R_1\to 4R_1\text{.}\)</span><div class="autopermalink" data-description="Paragraph"><a href="#ex-basic-elem-matrices-1-1-1-2-1" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
+</div>
+<div class="autopermalink" data-description="Item"><a href="#ex-basic-elem-matrices-1-1-1-2" title="Copy heading and permalink for Item" aria-label="Copy heading and permalink for Item">🔗</a></div>
+</li>
+<li id="ex-basic-elem-matrices-1-1-1-3">
+<div class="para" id="ex-basic-elem-matrices-1-1-1-3-1">
+<span class="process-math">\(\begin{bmatrix}1 \amp 0 \amp 0\\0 \amp 1\amp 0\\0\amp -2\amp 1\end{bmatrix}\)</span> is obtained from the ERO <span class="process-math">\(R_3\to R_3- 2R_2\text{.}\)</span><div class="autopermalink" data-description="Paragraph"><a href="#ex-basic-elem-matrices-1-1-1-3-1" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
+</div>
+<div class="autopermalink" data-description="Item"><a href="#ex-basic-elem-matrices-1-1-1-3" title="Copy heading and permalink for Item" aria-label="Copy heading and permalink for Item">🔗</a></div>
+</li>
+</ul>
+<div class="autopermalink" data-description="Paragraph"><a href="#ex-basic-elem-matrices-1-1" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
+</div>
+<div class="autopermalink" data-description="Example 7.5.2"><a href="#ex-basic-elem-matrices" title="Copy heading and permalink for Example 7.5.2" aria-label="Copy heading and permalink for Example 7.5.2">🔗</a></div></article></details><div class="para" id="sec-elementary-matrices-4">We need to main results about elementary matrices. We present them without proof, although we will illustrate the first result with an example, and it is not too hard to see how the first result implies the second.<div class="autopermalink" data-description="Paragraph"><a href="#sec-elementary-matrices-4" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
+</div>
+<article class="theorem theorem-like" id="thm-elem-matrices-and-multiplication"><h3 class="heading">
+<span class="type">Theorem</span><span class="space heading-divison-mark heading-divison-mark__space"> </span><span class="codenumber">7.5.3</span><span class="period heading-divison-mark heading-divison-mark__period">.</span>
+</h3>
+<div class="para" id="thm-elem-matrices-and-multiplication-1-1">If <span class="process-math">\(E\)</span> is an elementary matrix obtained by performing an ERO on <span class="process-math">\(I_n\text{,}\)</span> then if the same ERO is performed on an <span class="process-math">\(n\times p\)</span> matrix <span class="process-math">\(A\text{,}\)</span> the result is the product <span class="process-math">\(EA\text{.}\)</span><div class="autopermalink" data-description="Paragraph"><a href="#thm-elem-matrices-and-multiplication-1-1" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
+</div>
+<div class="autopermalink" data-description="Theorem 7.5.3"><a href="#thm-elem-matrices-and-multiplication" title="Copy heading and permalink for Theorem 7.5.3" aria-label="Copy heading and permalink for Theorem 7.5.3">🔗</a></div></article><article class="theorem theorem-like" id="thm-elem-matrices-invertible"><h3 class="heading">
+<span class="type">Theorem</span><span class="space heading-divison-mark heading-divison-mark__space"> </span><span class="codenumber">7.5.4</span><span class="period heading-divison-mark heading-divison-mark__period">.</span>
+</h3>
+<div class="para" id="thm-elem-matrices-invertible-1-1">Every elementary matrix is invertible, and the inverse is the elementary matrix for the ’reverse’ ERO.<div class="autopermalink" data-description="Paragraph"><a href="#thm-elem-matrices-invertible-1-1" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
+</div>
+<div class="autopermalink" data-description="Theorem 7.5.4"><a href="#thm-elem-matrices-invertible" title="Copy heading and permalink for Theorem 7.5.4" aria-label="Copy heading and permalink for Theorem 7.5.4">🔗</a></div></article><div class="para" id="sec-elementary-matrices-7">By ’reverse’ ERO we mean that will undo the original, sending the matrix back to the identity. So we have the following: <figure class="table table-like" id="tab-reverse-EROs"><figcaption><span class="type">Table</span><span class="space heading-divison-mark heading-divison-mark__space"> </span><span class="codenumber">7.5.5<span class="period heading-divison-mark heading-divison-mark__period">.</span></span><span class="space heading-divison-mark heading-divison-mark__space"> </span><div class="autopermalink" data-description="Table 7.5.5"><a href="#tab-reverse-EROs" title="Copy heading and permalink for Table 7.5.5" aria-label="Copy heading and permalink for Table 7.5.5">🔗</a></div></figcaption><div class="tabular-box natural-width"><table class="tabular">
+<tr class="header-horizontal">
+<th scope="col" class="c m b0 r0 l0 t0 lines">ERO</th>
+<th scope="col" class="c m b0 r0 l0 t0 lines">Reverse ERO</th>
+</tr>
+<tr>
+<td class="c m b0 r0 l0 t0 lines"><span class="process-math">\(R_i\leftrightarrow R_j\)</span></td>
+<td class="c m b0 r0 l0 t0 lines"><span class="process-math">\(R_i\leftrightarrow R_j\)</span></td>
+</tr>
+<tr>
+<td class="c m b0 r0 l0 t0 lines"><span class="process-math">\(R_i\to cR_i\)</span></td>
+<td class="c m b0 r0 l0 t0 lines"><span class="process-math">\(R_i\to \frac{1}{c}R_i\)</span></td>
+</tr>
+<tr>
+<td class="c m b0 r0 l0 t0 lines"><span class="process-math">\(R_i\to R_i+cR_j\)</span></td>
+<td class="c m b0 r0 l0 t0 lines"><span class="process-math">\(R_i\to R_i-cR_j\)</span></td>
+</tr>
+</table></div></figure><div class="autopermalink" data-description="Paragraph"><a href="#sec-elementary-matrices-7" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
+</div>
+<details id="ex-checking-elem-prop" class="example example-like born-hidden-knowl"><summary class="knowl__link"><h3 class="heading">
+<span class="type">Example</span><span class="space heading-divison-mark heading-divison-mark__space"> </span><span class="codenumber">7.5.6</span><span class="period heading-divison-mark heading-divison-mark__period">.</span>
+</h3></summary><article class="example example-like knowl__content"><div class="para logical" id="ex-checking-elem-prop-1-1">
+<div class="para">Consider <span class="process-math">\(A=\begin{bmatrix}2\amp 1\\-1\amp 1\\1\amp 5\end{bmatrix}\)</span> and the ERO <span class="process-math">\(R_3\to R_3-2R_2\text{.}\)</span> We check that <a href="sec-elementary-matrices.html#thm-elem-matrices-and-multiplication" class="xref" data-knowl="./knowl/xref/thm-elem-matrices-and-multiplication.html" data-reveal-label="Reveal" data-close-label="Close" title="Theorem 7.5.3">Theorem 7.5.3</a> holds with this example:</div>
+<ul class="disc" id="ex-checking-elem-prop-1-1-4">
+<li id="ex-checking-elem-prop-1-1-4-1">
+<div class="para" id="ex-checking-elem-prop-1-1-4-1-1">
+<span class="process-math">\(\displaystyle A\xrightarrow{R_3\to R_3-2R_1}\begin{bmatrix}2\amp 1\\-1\amp 1\\3\amp 3\end{bmatrix}\)</span><div class="autopermalink" data-description="Paragraph"><a href="#ex-checking-elem-prop-1-1-4-1-1" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
+</div>
+<div class="autopermalink" data-description="Item"><a href="#ex-checking-elem-prop-1-1-4-1" title="Copy heading and permalink for Item" aria-label="Copy heading and permalink for Item">🔗</a></div>
+</li>
+<li id="ex-checking-elem-prop-1-1-4-2">
+<div class="para logical" id="ex-checking-elem-prop-1-1-4-2-1">
+<div class="para">
+<span class="process-math">\(E=\begin{bmatrix}1\amp 0\amp 0\\0\amp 1\amp 0\\0\amp -2\amp 1\end{bmatrix}\)</span> and</div>
+<div class="displaymath process-math" id="ex-checking-elem-prop-1-1-4-2-1-2">
+\begin{equation*}
+EA=\begin{bmatrix}1\amp 0\amp 0\\0\amp 1\amp 0\\0\amp -2\amp 1\end{bmatrix}\begin{bmatrix}2\amp 1\\-1\amp 1\\1\amp 5\end{bmatrix}
+=\begin{bmatrix}2\amp 1\\-1\amp 1\\3\amp 3\end{bmatrix}\text{.}
+\end{equation*}
+</div>
+<div class="autopermalink" data-description="Paragraph"><a href="#ex-checking-elem-prop-1-1-4-2-1" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
+</div>
+<div class="autopermalink" data-description="Item"><a href="#ex-checking-elem-prop-1-1-4-2" title="Copy heading and permalink for Item" aria-label="Copy heading and permalink for Item">🔗</a></div>
+</li>
+</ul>
+<div class="autopermalink" data-description="Paragraph"><a href="#ex-checking-elem-prop-1-1" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
+</div>
+<div class="autopermalink" data-description="Example 7.5.6"><a href="#ex-checking-elem-prop" title="Copy heading and permalink for Example 7.5.6" aria-label="Copy heading and permalink for Example 7.5.6">🔗</a></div></article></details><details id="ex-" class="example example-like born-hidden-knowl"><summary class="knowl__link"><h3 class="heading">
+<span class="type">Example</span><span class="space heading-divison-mark heading-divison-mark__space"> </span><span class="codenumber">7.5.7</span><span class="period heading-divison-mark heading-divison-mark__period">.</span>
+</h3></summary><article class="example example-like knowl__content"><div class="para logical" id="ex--1-1">
+<div class="para">We want to express <span class="process-math">\(A=\begin{bmatrix}1\amp 3\\0\amp 3\end{bmatrix}\)</span> as a product of elementary matrices. We do this by row reducing <span class="process-math">\(A\)</span> to the identity:</div>
+<div class="displaymath process-math" data-contains-math-knowls="./knowl/xref/thm-elem-matrices-and-multiplication.html" id="ex--1-1-3">
+\begin{equation*}
+A=\begin{bmatrix}1\amp 3\\0\amp 3\end{bmatrix}\xrightarrow{R_2\to\frac{1}{3}R_2}
+\begin{bmatrix}1\amp 3\\0\amp 3\end{bmatrix}
+\xrightarrow{R_1\to R_1-3R_2}\begin{bmatrix}1\amp 0\\0\amp 1\end{bmatrix}.
+\end{equation*}
+</div>
+<div class="para">We now take the corresponding elementary matrices</div>
+<div class="displaymath process-math" data-contains-math-knowls="./knowl/xref/thm-elem-matrices-and-multiplication.html" id="ex--1-1-4">
+\begin{equation*}
+E_1=\begin{bmatrix}1\amp 0\\0\amp \frac{1}{3}\end{bmatrix}\text{ and }
+E_2=\begin{bmatrix}1\amp -3\\0\amp 1\end{bmatrix},
+\end{equation*}
+</div>
+<div class="para">and use <a href="sec-elementary-matrices.html#thm-elem-matrices-and-multiplication" class="xref" data-knowl="./knowl/xref/thm-elem-matrices-and-multiplication.html" data-reveal-label="Reveal" data-close-label="Close" title="Theorem 7.5.3">Theorem 7.5.3</a> to get <span class="process-math">\(E_2(E_1A)=I_2\text{.}\)</span> We can now rearrange to get <span class="process-math">\(A=E_1^{-1}E_2^{-1}\text{.}\)</span> So</div>
+<div class="displaymath process-math" data-contains-math-knowls="./knowl/xref/thm-elem-matrices-and-multiplication.html" id="ex--1-1-8">
+\begin{equation*}
+A=\begin{bmatrix}1\amp 0\\0\amp 3\end{bmatrix}
+\begin{bmatrix}1\amp 3\\0\amp 1\end{bmatrix}\text{.}
+\end{equation*}
+</div>
+<div class="autopermalink" data-description="Paragraph"><a href="#ex--1-1" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
+</div>
+<div class="autopermalink" data-description="Example 7.5.7"><a href="#ex-" title="Copy heading and permalink for Example 7.5.7" aria-label="Copy heading and permalink for Example 7.5.7">🔗</a></div></article></details><div class="autopermalink" data-description="Section 7.5: Elementary matrices"><a href="#sec-elementary-matrices" title="Copy heading and permalink for Section 7.5: Elementary matrices" aria-label="Copy heading and permalink for Section 7.5: Elementary matrices">🔗</a></div></section></div>
 <div id="ptx-content-footer" class="ptx-content-footer">
-<a class="previous-button button" href="sec-calculating-nxn-inverses.html" title="Previous"><span class="icon material-symbols-outlined" aria-hidden="true">&#xe5cb;</span><span class="name">Prev</span></a><a class="top-button button" href="#" title="Top"><span class="icon material-symbols-outlined" aria-hidden="true">&#xe5ce;</span><span class="name">Top</span></a><a class="next-button button" href="sec-characterisations-of-invertibility.html" title="Next"><span class="name">Next</span><span class="icon material-symbols-outlined" aria-hidden="true">&#xe5cc;</span></a>
+<a class="previous-button button" href="sec-inverses-and-equations.html" title="Previous"><span class="icon material-symbols-outlined" aria-hidden="true">&#xe5cb;</span><span class="name">Prev</span></a><a class="top-button button" href="#" title="Top"><span class="icon material-symbols-outlined" aria-hidden="true">&#xe5ce;</span><span class="name">Top</span></a><a class="next-button button" href="sec-characterisations-of-invertibility.html" title="Next"><span class="name">Next</span><span class="icon material-symbols-outlined" aria-hidden="true">&#xe5cc;</span></a>
 </div></main>
 </div>
 <div id="ptx-page-footer" class="ptx-page-footer">

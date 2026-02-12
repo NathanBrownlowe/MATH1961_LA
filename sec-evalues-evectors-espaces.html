@@ -101,15 +101,15 @@ eBookConfig.allow_pairs = false;
 eBookConfig.enableScratchAC = false;
 eBookConfig.build_info = "";
 eBookConfig.python3 = null;
-eBookConfig.runestone_version = '7.11.0';
+eBookConfig.runestone_version = '7.11.14';
 eBookConfig.jobehost = '';
 eBookConfig.proxyuri_runs = '';
 eBookConfig.proxyuri_files = '';
 eBookConfig.enable_chatcodes =  false;
 </script>
 <!--*** Runestone Services ***-->
-<script src="_static/prefix-runtime.f91c1a4dc12163f2.bundle.js"></script><script src="_static/prefix-723.3e6434f80549315a.bundle.js"></script><script src="_static/prefix-runestone.731d8387162b79c1.bundle.js"></script><link rel="stylesheet" type="text/css" href="_static/prefix-723.3bccd435914aa0ff.css">
-<link rel="stylesheet" type="text/css" href="_static/prefix-runestone.557d81b04b3ec0e4.css">
+<script src="_static/prefix-runtime.d892923478694492.bundle.js"></script><script src="_static/prefix-723.3e6434f80549315a.bundle.js"></script><script src="_static/prefix-runestone.1d6e4aba17c2c7f2.bundle.js"></script><link rel="stylesheet" type="text/css" href="_static/prefix-723.3bccd435914aa0ff.css">
+<link rel="stylesheet" type="text/css" href="_static/prefix-runestone.6ec5960970d8b364.css">
 <script src="_static/pretext/js/lti_iframe_resizer.js"></script><script src="https://cdnjs.cloudflare.com/ajax/libs/lunr.js/2.3.9/lunr.min.js" integrity="sha512-4xUl/d6D6THrAnXAwGajXkoWaeMNwEKK4iNfq5DotEbLPAfk6FSxSP3ydNxqDgCw1c/0Z1Jg6L8h2j+++9BZmg==" crossorigin="anonymous" referrerpolicy="no-referrer"></script><script src="lunr-pretext-search-index.js" async=""></script><script src="_static/pretext/js/pretext_search.js"></script><script src="_static/pretext/js/lib/knowl.js"></script><!--knowl.js code controls Sage Cells within knowls--><script>sagecellEvalName='Evaluate (Sage)';
 </script>
 </head>
@@ -130,7 +130,34 @@ eBookConfig.enable_chatcodes =  false;
 </div>
 </div>
 <span class="nav-other-controls"><button id="light-dark-button" class="light-dark-button button" title="Dark Mode"><span class="icon material-symbols-outlined" aria-hidden="true">&#xe51c;</span><span class="name">Dark Mode</span></button></span><span class="treebuttons"><a class="previous-button button" href="ch-eigenvectors.html" title="Previous"><span class="icon material-symbols-outlined" aria-hidden="true">&#xe5cb;</span><span class="name">Prev</span></a><a class="up-button button" href="ch-eigenvectors.html" title="Up"><span class="icon material-symbols-outlined" aria-hidden="true">&#xe5ce;</span><span class="name">Up</span></a><a class="next-button button" href="sec-evalue-examples.html" title="Next"><span class="name">Next</span><span class="icon material-symbols-outlined" aria-hidden="true">&#xe5cc;</span></a></span>
-</div></nav><div id="latex-macros" class="hidden-content process-math" style="display:none"><span class="process-math">\(\newcommand{\N}{\mathbb N} \newcommand{\Z}{\mathbb Z} \newcommand{\Q}{\mathbb Q} \newcommand{\R}{\mathbb R}
+</div></nav><div id="latex-macros" class="hidden-content process-math" style="display:none"><span class="process-math">\(\require{mathtools}\newcommand{\N}{\mathbb N} 
+\newcommand{\Z}{\mathbb Z} 
+\newcommand{\Q}{\mathbb Q} 
+\newcommand{\R}{\mathbb R} 
+\newcommand{\C}{\mathbb C}
+\newcommand{\vect}[1]{\mathbf{#1}}
+\newcommand{\proj}[2]{\operatorname{proj}_{#1}\!\left(#2\right)}
+\newcommand{\p}{\mathcal P}
+\newcommand{\inv}{^{-1}}
+
+\newcommand{\colvec}[2]{\begin{bmatrix}#1\\#2\end{bmatrix}}
+\newenvironment{amatrix}[1]{
+\left[\begin{array}{#1|c}
+}{
+\end{array}\right]
+  }
+
+\newenvironment{aamatrix}{
+    \left[\begin{array}{cc|cc@{}}
+      }{
+  \end{array}\right]
+      }
+
+\newenvironment{aaamatrix}{
+      \left[\begin{array}{ccc|ccc@{}}
+      }{
+    \end{array}\right]
+    }
 \newcommand{\lt}{&lt;}
 \newcommand{\gt}{&gt;}
 \newcommand{\amp}{&amp;}
@@ -198,8 +225,9 @@ eBookConfig.enable_chatcodes =  false;
 <li class="toc-item toc-section"><div class="toc-title-box"><a href="sec-properties-of-inverses.html" class="internal"><span class="codenumber">7.1</span> <span class="title">Properties of inverses</span></a></div></li>
 <li class="toc-item toc-section"><div class="toc-title-box"><a href="sec-calculating-2x2-inverses.html" class="internal"><span class="codenumber">7.2</span> <span class="title">Calculating <span class="process-math">\(2\times 2\)</span> inverses</span></a></div></li>
 <li class="toc-item toc-section"><div class="toc-title-box"><a href="sec-calculating-nxn-inverses.html" class="internal"><span class="codenumber">7.3</span> <span class="title">Calculating <span class="process-math">\(n\times n\)</span> inverses</span></a></div></li>
-<li class="toc-item toc-section"><div class="toc-title-box"><a href="sec-elementary-matrices.html" class="internal"><span class="codenumber">7.4</span> <span class="title">Elementary matrices</span></a></div></li>
-<li class="toc-item toc-section"><div class="toc-title-box"><a href="sec-characterisations-of-invertibility.html" class="internal"><span class="codenumber">7.5</span> <span class="title">Characterisations of invertibility</span></a></div></li>
+<li class="toc-item toc-section"><div class="toc-title-box"><a href="sec-inverses-and-equations.html" class="internal"><span class="codenumber">7.4</span> <span class="title">Inverses and matrix equations</span></a></div></li>
+<li class="toc-item toc-section"><div class="toc-title-box"><a href="sec-elementary-matrices.html" class="internal"><span class="codenumber">7.5</span> <span class="title">Elementary matrices</span></a></div></li>
+<li class="toc-item toc-section"><div class="toc-title-box"><a href="sec-characterisations-of-invertibility.html" class="internal"><span class="codenumber">7.6</span> <span class="title">Characterisations of invertibility</span></a></div></li>
 </ul>
 </li>
 <li class="toc-item toc-chapter">
@@ -271,9 +299,135 @@ eBookConfig.enable_chatcodes =  false;
 <main class="ptx-main"><div id="ptx-content" class="ptx-content"><section class="section" id="sec-evalues-evectors-espaces"><h2 class="heading hide-type">
 <span class="type">Section</span><span class="space heading-divison-mark heading-divison-mark__space"> </span><span class="codenumber">12.1</span><span class="space heading-divison-mark heading-divison-mark__space"> </span><span class="title">Eigenvalues, eigenvectors, and eigenspaces</span>
 </h2>
-<div class="para" id="sec-evalues-evectors-espaces-2">Text of section.<div class="autopermalink" data-description="Paragraph"><a href="#sec-evalues-evectors-espaces-2" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
+<article class="definition definition-like" id="def-evalue-evector"><h3 class="heading">
+<span class="type">Definition</span><span class="space heading-divison-mark heading-divison-mark__space"> </span><span class="codenumber">12.1.1</span><span class="period heading-divison-mark heading-divison-mark__period">.</span>
+</h3>
+<div class="para logical" id="def-evalue-evector-1-1">
+<div class="para">Let <span class="process-math">\(A\)</span> be an <span class="process-math">\(n\times n\)</span> matrix. Suppose that there exists a scalar <span class="process-math">\(\lambda \in \R\)</span> and a nonzero vector <span class="process-math">\(\vect{x} \in \R^n\)</span> such that</div>
+<div class="displaymath process-math" id="def-evalue-evector-1-1-5">
+\begin{equation*}
+A\vect{x} = \lambda\vect{x}\text{.}
+\end{equation*}
 </div>
-<div class="autopermalink" data-description="Section 12.1: Eigenvalues, eigenvectors, and eigenspaces"><a href="#sec-evalues-evectors-espaces" title="Copy heading and permalink for Section 12.1: Eigenvalues, eigenvectors, and eigenspaces" aria-label="Copy heading and permalink for Section 12.1: Eigenvalues, eigenvectors, and eigenspaces">🔗</a></div></section></div>
+<div class="para">Then <span class="process-math">\(\lambda\)</span> is an <dfn class="terminology">eigenvalue</dfn> of <span class="process-math">\(A\)</span> and <span class="process-math">\(\vect{x}\)</span> is an <dfn class="terminology">eigenvector</dfn> of <span class="process-math">\(\vect{x}\)</span> corresponding to <span class="process-math">\(\lambda\text{.}\)</span>
+</div>
+<div class="autopermalink" data-description="Paragraph"><a href="#def-evalue-evector-1-1" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
+</div>
+<div class="autopermalink" data-description="Definition 12.1.1"><a href="#def-evalue-evector" title="Copy heading and permalink for Definition 12.1.1" aria-label="Copy heading and permalink for Definition 12.1.1">🔗</a></div></article><article class="remark remark-like" id="rem-vecs-as-cols"><h3 class="heading">
+<span class="type">Remark</span><span class="space heading-divison-mark heading-divison-mark__space"> </span><span class="codenumber">12.1.2</span><span class="period heading-divison-mark heading-divison-mark__period">.</span><span class="space heading-divison-mark heading-divison-mark__space"> </span><span class="title">.</span>
+</h3>
+<div class="para" id="rem-vecs-as-cols-2">In this definition, to calculate <span class="process-math">\(A\vect{x}\)</span> we are viewing <span class="process-math">\(\vect{x}\)</span> as a column matrix. This is the convention that we will use to multiply vectors by matrices.<div class="autopermalink" data-description="Paragraph"><a href="#rem-vecs-as-cols-2" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
+</div>
+<div class="autopermalink" data-description="Remark 12.1.2: "><a href="#rem-vecs-as-cols" title="Copy heading and permalink for Remark 12.1.2: " aria-label="Copy heading and permalink for Remark 12.1.2: ">🔗</a></div></article><div class="para" id="sec-evalues-evectors-espaces-4">In other words, an eigenvector <span class="process-math">\(\vect{x}\)</span> is a vector such that multiplying it on the left by <span class="process-math">\(A\)</span> scales it, and the eiegenvalue <span class="process-math">\(\lambda\)</span> is the scaling factor. This is shown in <a href="sec-evalues-evectors-espaces.html#fig-evec" class="xref" data-knowl="./knowl/xref/fig-evec.html" data-reveal-label="Reveal" data-close-label="Close" title="Figure 12.1.3">Figure 12.1.3</a>.<div class="autopermalink" data-description="Paragraph"><a href="#sec-evalues-evectors-espaces-4" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
+</div>
+<figure class="figure figure-like" id="fig-evec"><figcaption><span class="type">Figure</span><span class="space heading-divison-mark heading-divison-mark__space"> </span><span class="codenumber">12.1.3<span class="period heading-divison-mark heading-divison-mark__period">.</span></span><span class="space heading-divison-mark heading-divison-mark__space"> </span><span class="process-math">\(A\)</span> scales its eigenvector <span class="process-math">\(\vect{x}\)</span> by the corresponding eigenvalue <span class="process-math">\(\lambda\)</span><div class="autopermalink" data-description="Figure 12.1.3"><a href="#fig-evec" title="Copy heading and permalink for Figure 12.1.3" aria-label="Copy heading and permalink for Figure 12.1.3">🔗</a></div></figcaption></figure><div class="para" id="sec-evalues-evectors-espaces-6">We have excluded <span class="process-math">\(\vect{0}\)</span> from the definition of an eigenvector, because any matrix satisfies <span class="process-math">\(A\vect{0} = \lambda\vect{0}\)</span> for every <span class="process-math">\(\lambda \in \R\text{.}\)</span> However, <span class="process-math">\(0\)</span> is allowed to be an eigenvalue, and in the following definition of eigenspace, it is convenient to include the zero vector.<div class="autopermalink" data-description="Paragraph"><a href="#sec-evalues-evectors-espaces-6" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
+</div>
+<article class="definition definition-like" id="def-eigenspace"><h3 class="heading">
+<span class="type">Definition</span><span class="space heading-divison-mark heading-divison-mark__space"> </span><span class="codenumber">12.1.4</span><span class="period heading-divison-mark heading-divison-mark__period">.</span>
+</h3>
+<div class="para logical" id="def-eigenspace-1-1">
+<div class="para">If <span class="process-math">\(\lambda\)</span> is an eigenvalue of an <span class="process-math">\(n\times n\)</span> matrix <span class="process-math">\(A\text{,}\)</span> the set</div>
+<div class="displaymath process-math" id="def-eigenspace-1-1-4">
+\begin{equation*}
+E_\lambda(A) = \{\vect{x} \in \R^n \;|\; A\vect{x} = \lambda\vect{x}\}
+\end{equation*}
+</div>
+<div class="para">is the <dfn class="terminology">eigenspace</dfn> of <span class="process-math">\(A\)</span> corresponding to <span class="process-math">\(\lambda\text{.}\)</span>
+</div>
+<div class="autopermalink" data-description="Paragraph"><a href="#def-eigenspace-1-1" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
+</div>
+<div class="autopermalink" data-description="Definition 12.1.4"><a href="#def-eigenspace" title="Copy heading and permalink for Definition 12.1.4" aria-label="Copy heading and permalink for Definition 12.1.4">🔗</a></div></article><article class="remark remark-like" id="rem-espace-descrip"><h3 class="heading">
+<span class="type">Remark</span><span class="space heading-divison-mark heading-divison-mark__space"> </span><span class="codenumber">12.1.5</span><span class="period heading-divison-mark heading-divison-mark__period">.</span>
+</h3>
+<div class="para logical" id="rem-espace-descrip-1">
+<div class="para">
+<span class="process-math">\(E_\lambda(A)\)</span> is the set of all eigenvectors of <span class="process-math">\(A\)</span> corresponding to <span class="process-math">\(\lambda\text{,}\)</span> together with the zero vector <span class="process-math">\(\vect{0}\text{.}\)</span> Note that if <span class="process-math">\(v \in E_\lambda(A)\text{,}\)</span> then <span class="process-math">\(c\vect{v} \in E_\lambda(A)\text{,}\)</span> since</div>
+<div class="displaymath process-math" id="rem-espace-descrip-1-7">
+\begin{equation*}
+A(c\vect{v}) = c(A\vect{v}) = c(\lambda \vect{v}) = \lambda(c\vect{v})\text{.}
+\end{equation*}
+</div>
+<div class="para">In general, if <span class="process-math">\(\vect{v}_1, \vect{v}_2, \dots, \vect{v}_k \in E_\lambda(A)\text{,}\)</span> one can similarly show that any linear combination of these vectors remains in <span class="process-math">\(E_\lambda(A)\text{.}\)</span>
+</div>
+<div class="autopermalink" data-description="Paragraph"><a href="#rem-espace-descrip-1" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
+</div>
+<div class="autopermalink" data-description="Remark 12.1.5"><a href="#rem-espace-descrip" title="Copy heading and permalink for Remark 12.1.5" aria-label="Copy heading and permalink for Remark 12.1.5">🔗</a></div></article><details id="ex-evector-checking" class="example example-like born-hidden-knowl"><summary class="knowl__link"><h3 class="heading">
+<span class="type">Example</span><span class="space heading-divison-mark heading-divison-mark__space"> </span><span class="codenumber">12.1.6</span><span class="period heading-divison-mark heading-divison-mark__period">.</span>
+</h3></summary><article class="example example-like knowl__content"><div class="para logical" id="ex-evector-checking-1-1">
+<div class="para">Let</div>
+<div class="displaymath process-math" id="ex-evector-checking-1-1-1">
+\begin{equation*}
+A =
+\begin{bmatrix}
+3 \amp  1 \\ 1 \amp  3
+\end{bmatrix}
+, \qquad \vect{x} = \colvec{1}{1},\qquad \vect{y} = \colvec{-1}{1}\text{.}
+\end{equation*}
+</div>
+<div class="para">Show that <span class="process-math">\(\vect{x}\)</span> and <span class="process-math">\(\vect{y}\)</span> are eigenvectors of <span class="process-math">\(A\text{,}\)</span> and find the corresponding eigenvalues.</div>
+<div class="autopermalink" data-description="Paragraph"><a href="#ex-evector-checking-1-1" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
+</div> <div class="para logical" id="ex-evector-checking-1-2">
+<div class="para">By direct calculation,</div>
+<div class="displaymath process-math" id="ex-evector-checking-1-2-1">
+\begin{align*}
+A\vect{x} \amp  =
+\begin{bmatrix}
+3 \amp  1 \\ 1 \amp  3
+\end{bmatrix}
+\colvec{1}{1} = \colvec{4}{4} = 4\colvec{1}{1} = 4\vect{x} \\
+A\vect{y} \amp  =
+\begin{bmatrix}
+3 \amp  1 \\ 1 \amp  3
+\end{bmatrix}
+\colvec{-1}{1} = \colvec{-2}{2}=2\colvec{-1}{1} = 2\vect{y}\text{,}
+\end{align*}
+</div>
+<div class="para">so <span class="process-math">\(\vect{x}\)</span> is an eigenvector of <span class="process-math">\(A\)</span> with eigenvalue <span class="process-math">\(4\text{,}\)</span> and <span class="process-math">\(\vect{y}\)</span> is an eigenvector of <span class="process-math">\(A\)</span> with eigenvalue <span class="process-math">\(2\text{.}\)</span>
+</div>
+<div class="autopermalink" data-description="Paragraph"><a href="#ex-evector-checking-1-2" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
+</div>
+<div class="autopermalink" data-description="Example 12.1.6"><a href="#ex-evector-checking" title="Copy heading and permalink for Example 12.1.6" aria-label="Copy heading and permalink for Example 12.1.6">🔗</a></div></article></details><div class="para logical" id="sec-evalues-evectors-espaces-10">
+<div class="para">Given an <span class="process-math">\(n\times n\)</span> matrix <span class="process-math">\(A\text{,}\)</span> we now show how to find its eigenvalues and eigenvectors. Since <span class="process-math">\(\vect{x} = I\vect{x}\text{,}\)</span> the matrix equation <span class="process-math">\(A\vect{x} = \lambda\vect{x}\)</span> rearranges to the equation</div>
+<div class="displaymath process-math" id="sec-evalues-evectors-espaces-10-5">
+\begin{equation*}
+(A-\lambda I)\vect{x} = \vect{0}\text{.}
+\end{equation*}
+</div>
+<div class="autopermalink" data-description="Paragraph"><a href="#sec-evalues-evectors-espaces-10" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
+</div>
+<div class="para" id="sec-evalues-evectors-espaces-11">The next theorem shows us how to find the eigenvalues of <span class="process-math">\(A\text{.}\)</span><div class="autopermalink" data-description="Paragraph"><a href="#sec-evalues-evectors-espaces-11" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
+</div>
+<article class="theorem theorem-like" id="thm-evalue-char"><h3 class="heading">
+<span class="type">Theorem</span><span class="space heading-divison-mark heading-divison-mark__space"> </span><span class="codenumber">12.1.7</span><span class="period heading-divison-mark heading-divison-mark__period">.</span>
+</h3>
+<div class="para" id="thm-evalue-char-1-1">
+<span class="process-math">\(\lambda\)</span> is an eigenvalue of <span class="process-math">\(A\)</span> if and only if <span class="process-math">\(\det(A-\lambda I) = 0\text{.}\)</span><div class="autopermalink" data-description="Paragraph"><a href="#thm-evalue-char-1-1" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
+</div>
+<div class="autopermalink" data-description="Theorem 12.1.7"><a href="#thm-evalue-char" title="Copy heading and permalink for Theorem 12.1.7" aria-label="Copy heading and permalink for Theorem 12.1.7">🔗</a></div></article><details id="thm-evalue-char-2" class="hiddenproof born-hidden-knowl"><summary class="knowl__link"><h3 class="heading"><span class="type">Proof<span class="period heading-divison-mark heading-divison-mark__period">.</span></span></h3></summary><article class="hiddenproof knowl__content"><div class="para" id="thm-evalue-char-2-1">From <a href="sec-props-of-determinants.html#thm-invdet" class="xref" data-knowl="./knowl/xref/thm-invdet.html" data-reveal-label="Reveal" data-close-label="Close" title="Theorem 8.2.8">Theorem 8.2.8</a>, <span class="process-math">\(\det(A-\lambda I) = 0\)</span> if and only if <span class="process-math">\(A - \lambda I\)</span> is not invertible, so the theorem says that <span class="process-math">\(\lambda\)</span> is an eigenvalue of <span class="process-math">\(A\)</span> if and only if <span class="process-math">\(A - \lambda I\)</span> is not invertible.<div class="autopermalink" data-description="Paragraph"><a href="#thm-evalue-char-2-1" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
+</div>
+<div class="para" id="thm-evalue-char-2-2">If <span class="process-math">\(A - \lambda I\)</span> is not invertible, then its RREF has at least one column without a leading entry, so <span class="process-math">\((A - \lambda I)\vect{x} = \vect{0}\)</span> has infinitely many solutions, so it has a nonzero solution <span class="process-math">\(\vect{x}\text{.}\)</span> Rearranging, <span class="process-math">\(A\vect{x} = \lambda \vect{x}\text{,}\)</span> so <span class="process-math">\(\vect{x}\)</span> is an eigenvector for <span class="process-math">\(A\)</span> with corresponding eigenvalue <span class="process-math">\(\lambda\text{.}\)</span><div class="autopermalink" data-description="Paragraph"><a href="#thm-evalue-char-2-2" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
+</div>
+<div class="para" id="thm-evalue-char-2-3">On the other hand, if <span class="process-math">\(A-\lambda I\)</span> is invertible, then the unique solution to <span class="process-math">\((A-\lambda I)\vect{x} = \vect{0}\)</span> is <span class="process-math">\(\vect{x} = \vect{0}\)</span> (see NEEDS REF TO COI1). Since <span class="process-math">\(\vect{0}\)</span> is never an eigenvector, this means <span class="process-math">\(\lambda\)</span> cannot be an eigenvalue of <span class="process-math">\(A\text{.}\)</span><div class="autopermalink" data-description="Paragraph"><a href="#thm-evalue-char-2-3" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
+</div>
+<div class="autopermalink" data-description="Proof 12.1.7.1"><a href="#thm-evalue-char-2" title="Copy heading and permalink for Proof 12.1.7.1" aria-label="Copy heading and permalink for Proof 12.1.7.1">🔗</a></div></article></details><article class="definition definition-like" id="def-char-poly"><h3 class="heading">
+<span class="type">Definition</span><span class="space heading-divison-mark heading-divison-mark__space"> </span><span class="codenumber">12.1.8</span><span class="period heading-divison-mark heading-divison-mark__period">.</span>
+</h3>
+<div class="para" id="def-char-poly-1-1">If <span class="process-math">\(A\)</span> is an <span class="process-math">\(n\times n\)</span> matrix, then the <dfn class="terminology">characteristic polynomial</dfn> of <span class="process-math">\(A\)</span> is <span class="process-math">\(\det(A-\lambda I)\text{,}\)</span> and the <dfn class="terminology">characteristic equation</dfn> of <span class="process-math">\(A\)</span> is <span class="process-math">\(\det(A - \lambda I) = 0\text{.}\)</span><div class="autopermalink" data-description="Paragraph"><a href="#def-char-poly-1-1" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
+</div>
+<div class="autopermalink" data-description="Definition 12.1.8"><a href="#def-char-poly" title="Copy heading and permalink for Definition 12.1.8" aria-label="Copy heading and permalink for Definition 12.1.8">🔗</a></div></article><div class="para" id="sec-evalues-evectors-espaces-14">The meaning of the theorem is summarised in the next box.<div class="autopermalink" data-description="Paragraph"><a href="#sec-evalues-evectors-espaces-14" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
+</div>
+<article class="assemblage assemblage-like" id="finding-evalues-evectors"><div class="para logical" id="finding-evalues-evectors-1">
+<div class="para">
+<dfn class="terminology">How to find eigenvalues and eigenvectors:</dfn> Calculate the characteristic polynomial <span class="process-math">\(\det(A-\lambda I)\)</span> and find its roots, which satisfy the characteristic equation <span class="process-math">\(\det(A-\lambda I) = 0\text{.}\)</span> These are all the eigenvalues of <span class="process-math">\(A\text{.}\)</span> For each eigenvalue <span class="process-math">\(\lambda\text{,}\)</span> the eigenvectors <span class="process-math">\(\vect{x}\)</span> corresponding to <span class="process-math">\(\lambda\)</span> are the solutions to the matrix equation</div>
+<div class="displaymath process-math" id="finding-evalues-evectors-1-8">
+\begin{equation*}
+(A-\lambda I)\vect{x} = \vect{0}
+\end{equation*}
+</div>
+<div class="para">for <span class="process-math">\(\vect{x} \in \R^n\text{,}\)</span> which can be solved by Gaussian elimination.</div>
+<div class="autopermalink" data-description="Paragraph"><a href="#finding-evalues-evectors-1" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
+</div>
+<div class="autopermalink" data-description="Assemblage"><a href="#finding-evalues-evectors" title="Copy heading and permalink for Assemblage" aria-label="Copy heading and permalink for Assemblage">🔗</a></div></article><div class="autopermalink" data-description="Section 12.1: Eigenvalues, eigenvectors, and eigenspaces"><a href="#sec-evalues-evectors-espaces" title="Copy heading and permalink for Section 12.1: Eigenvalues, eigenvectors, and eigenspaces" aria-label="Copy heading and permalink for Section 12.1: Eigenvalues, eigenvectors, and eigenspaces">🔗</a></div></section></div>
 <div id="ptx-content-footer" class="ptx-content-footer">
 <a class="previous-button button" href="ch-eigenvectors.html" title="Previous"><span class="icon material-symbols-outlined" aria-hidden="true">&#xe5cb;</span><span class="name">Prev</span></a><a class="top-button button" href="#" title="Top"><span class="icon material-symbols-outlined" aria-hidden="true">&#xe5ce;</span><span class="name">Top</span></a><a class="next-button button" href="sec-evalue-examples.html" title="Next"><span class="name">Next</span><span class="icon material-symbols-outlined" aria-hidden="true">&#xe5cc;</span></a>
 </div></main>
