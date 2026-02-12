@@ -99,7 +99,7 @@ harder to visualise.
 	  <image width="40%">
 <latex-image>
 \tdplotsetmaincoords{60}{120} % set view angle for 3D plot
-\begin{tikzpicture}[tdplot_main_coords, scale = 0.5]
+\begin{tikzpicture}[tdplot_main_coords, scale = 0.3]
     \filldraw[fill=green!20,opacity=0.5] (0,3,3) -- (0,3,-3) -- (0,-3,-3) -- (0,-3,3) -- cycle;
     \filldraw[fill=blue!20,opacity=0.5] (0,3,3) -- (0,3,-3) -- (-1.5,-3,-3) -- (-1.5,-3,3) -- cycle;
     \filldraw[fill=red!20,opacity=0.5] (0,3,3) -- (0,3,-3) -- (-3,-3,-3) -- (-3,-3,3) -- cycle;
