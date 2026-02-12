@@ -26,7 +26,33 @@ in <xref ref="fig-normal"/>.
 
 <figure xml:id="fig-normal">
 <caption>The normal form of a line</caption>
-<!--normal.tikz-->
+<image width="60%">
+<latex-image>
+\begin{tikzpicture}[scale = 1.2]
+
+\definecolor{greenline}{rgb}{0.1, 0.7, 0.1}
+
+% x-y axis
+\draw[vector,->] (-1,0) -- (4,0) node[right] {$x$};
+\draw[vector,->] (0,-1) -- (0,3.5) node[above] {$y$};
+
+% Line l
+\draw[thick, greenline] (-1,2) -- (3.5,-0.5) node[below] {$\ell$};
+
+% Define points
+\coordinate (P) at (1,8/9);
+\coordinate (X) at (2,1/3);
+\coordinate (N) at (1.3,0.722);
+
+% Vectors
+\draw[vector,->, blue] (0,0) -- (P) node[midway, left] {$\vect{p}$} node[circle, scale = 0.18, fill = blue] {} node [above] {$P$};
+\draw[vector,->, red] (0,0) -- (X) node[midway, below, yshift = -1mm] {$\vect{x}$} node[circle, scale = 0.18, fill = red] {} node [above right] {$X$};
+\draw[vector,->, violet] (N) -- ++(0.75,1.5) node[above] {$\vec{n}$};
+
+\draw[thick, violet] (N) -- ++ (0.078, 0.16) -- ++ (0.16, -0.078) -- ++ (-0.078, -0.16);
+\end{tikzpicture}
+</latex-image>
+</image>
 </figure>
 
 <p>
@@ -235,7 +261,22 @@ in <xref ref="fig-finding_d"/>.
 
 <figure xml:id="fig-finding_d">
 <caption>The vector between two (distinct) points on <m>\ell</m> is a direction vector</caption>
-<!--finding_d.tikz-->
+<image width="60%">
+<latex-image>
+\begin{tikzpicture}
+    %points
+    \coordinate (A) at (1, 1/3);
+    \coordinate (B) at (4.5, 4.5/3);
+    
+    %lines
+    \draw (0, 0) -- (6, 2) node [above right] {$\ell$};
+    \draw (A) node [circle, scale=0.55, fill = black] {} node [above] {$A$};
+    \draw (B) node [circle, scale=0.55, fill = black] {} node [above] {$B$};
+    \draw [vector,->] (A) -- (B) node [midway, below] {$\vect{d} = \overrightarrow{AB}$};
+    
+\end{tikzpicture}
+</latex-image>
+</image>
 </figure>
 
 <example xml:id="ex-vector-and-para-forms">

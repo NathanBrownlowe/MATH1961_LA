@@ -14,7 +14,25 @@ as shown in <xref ref="fig-plane_setup"/>.
 
 <figure xml:id="fig-plane_setup">
 <caption>Normal form of a plane</caption>
-<!--plane_setup.tikz-->
+<image width="60%">
+<latex-image>
+\tdplotsetmaincoords{60}{120} % set view angle for 3D plot
+\begin{tikzpicture}[tdplot_main_coords, scale = 0.65]
+    % x-y plane
+    \filldraw[fill=blue!20,opacity=0.5] (3,3,0) -- (-3,3,0) -- (-3,-3,0) -- (3,-3,0) -- cycle;
+    \draw (3, -3, 0) node [left] {$\mathcal{P}$};
+
+    \draw[vector,->] (0, 0) -- (0, 2) node [xshift = 1.2mm, yshift = -1.2mm] {$X$};
+    \draw[vector,->] (4, -1, -1) node [below left] {$O$} -- (0, 0, 0) node [midway, left, xshift=1mm, yshift=1.5mm] {$\vect{p}$} node [above left] {$P$};
+    \draw[vector,->] (4, -1, -1) -- (0, 1.85, 0) node [midway, right, xshift = 1.5mm, yshift = - 0.2mm] {$\vect{x}$};
+    
+    % normal vectors
+    \fill[red] (0,0, 0) circle (2pt);
+    \draw[vector,->,red] (0,0,0) -- (0,0,3.5) node [below, right] {$\vect{n}$}; 
+
+\end{tikzpicture}
+</latex-image>
+</image>
 </figure>
 
 <definition xml:id="def-normal-to-a-plane">
@@ -176,7 +194,29 @@ This is shown in <xref ref="fig-vector_nf"/>.
 
 <figure xml:id="fig-vector_nf">
 <caption>Vector form of a plane</caption>
-<!--plane_vectorform.tikz-->
+<image width="60%">
+<latex-image>
+\tdplotsetmaincoords{60}{120} % set view angle for 3D plot
+\begin{tikzpicture}[tdplot_main_coords, scale = 1.5]
+    % x-y plane
+    \filldraw[fill=blue!20,opacity=0.5] (3,4,0) -- (-3,4,0) -- (-3,-2,0) -- (3,-2,0) -- cycle;
+    \draw (3, -2, 0) node [left] {$\mathcal{P}$};
+
+    \coordinate (X) at (-1, 2.2, 0);
+    \coordinate (P) at (1.2, 0, 0);
+
+    \draw[vector,->, red] (P) -- (X) node [right] {$X$} node [midway, below] {$\vect{x} - \mathbf{p}$};
+    \draw[vector,->] (4, -1, -1) node [below left] {$O$} -- (P) node [midway, left, xshift=1mm, yshift=1mm] {$\vect{p}$} node [above left] {$P$};
+    \draw[vector,->] (4, -1, -1) -- (X) node [midway, right, xshift = 3mm] {$\vect{x} = \mathbf{p} + s\mathbf{u} + t\mathbf{v}$};
+    \draw[vector,->, blue] (P) -- ++(-1, 0, 0) node [left, xshift=-1mm] {$\vect{u}$};
+    \draw[vector,->, violet] (P) -- (-1, 0, 0) node [left, xshift=-1mm] {$s\vect{u}$};
+    \draw[vector,->, blue] (-1, 0, 0) -- (-1, 1, 0) node [above, yshift=1mm] {$\vect{v}$};
+    \draw[vector,->, blue] (P) -- ++(0, 1, 0) node [below left, xshift=-1mm, yshift=1mm] {$\vect{v}$};
+    \draw[vector,->, violet] (-1, 0, 0) -- (-1, 2.2, 0) node [above left, yshift=1mm] {$t\vect{v}$};
+
+\end{tikzpicture}
+</latex-image>
+</image>
 </figure>
 
 <p>

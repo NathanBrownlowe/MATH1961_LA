@@ -11,7 +11,27 @@ shown in <xref ref="fig-plane_dist"/>. Then
 
 <figure xml:id="fig-plane_dist">
 <caption>The shortest distance from <m>P</m> to the plane is <m>\|\overrightarrow{PQ}\|</m></caption>
-<!--plane_dist.tikz-->
+<image width="60%">
+<latex-image>
+\tdplotsetmaincoords{60}{120} % set view angle for 3D plot
+\begin{tikzpicture}[tdplot_main_coords, scale = 0.75]
+    % x-y plane
+    \filldraw[fill=blue!20,opacity=0.5] (3,3,0) -- (-3,3,0) -- (-3,-3,0) -- (3,-3,0) -- cycle;
+    \draw (3, -3, 0) node [left] {$\mathcal{P}$};
+
+    % lines
+    \draw[vector,->,very thick,red] (2,-1,0) -- (2,-1,4) node [right] {$\vect{n}$};
+    \draw[very thick] (2, -1, 0) -- (-2, 2.2, 0);
+    \draw[very thick] (2, -1, 0) -- (-2, 2.2, 3);
+    \draw[very thick, \lt-, violet] (-2, 2.2, 0) -- (-2, 2.2, 3);
+
+    % points
+    \fill (-2, 2.2, 0) circle (3pt) node [below] {$Q$};
+    \fill (-2, 2.2, 3) circle (3pt) node [above right] {$P$};
+    \fill (2,-1,0) circle (3pt) node [left] {$A$};
+\end{tikzpicture}
+</latex-image>
+</image>
 </figure>
 
 <md>

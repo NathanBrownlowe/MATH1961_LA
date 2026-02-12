@@ -22,7 +22,33 @@ from <m>P</m> to <m>\ell</m>. First we calculate <m>\overrightarrow{AQ}</m>.
 
 <figure xml:id="fig-proj_setup">
 <caption>The set up for computing the shortest distance</caption>
-<!-->proj_setup.tikz-->
+<image width="60%">
+<latex-image>
+\begin{tikzpicture}
+    % Draw the line \ell
+    \draw[thick, black] (-2,0) -- (5,0) node[right] {$\ell$};
+
+    % Points
+    \fill (0,0) circle (2pt) node[below left] {$A$};
+    \fill (3,0) circle (2pt) node[below] {$Q$};
+    \fill (3,2.5) circle (2pt) node[above right] {$P$};
+
+    % Vectors
+    \draw[vector,->, magenta] (0,0) -- (4.5,0) node[midway, above, xshift=-1mm] {$\vect{u}$};
+    \draw[vector,->, magenta] (0,0) -- (3,2.5) node[midway, left] {$\vect{v}$};
+
+    % Right angle indicator
+    \draw (3,0) -- (3,0.3) -- (2.7,0.3) -- (2.7,0);
+
+    % Vertical dashed line from Q to P
+    \draw[dashed] (3,0) -- (3,2.5);
+
+    % Angle \theta
+    \draw[orange, thick] (0.8,0) arc (0:40:0.8);
+    \node[orange] at (1,0.25) {$\theta$};
+\end{tikzpicture}
+</latex-image>
+</image>
 </figure>
 
 <p>
@@ -122,7 +148,18 @@ This is illustrated by <xref ref="fig-proje1"/>. For <m>\vect{e}_2</m>,
 
 <figure xml:id="fig-proje1">
 <caption>The projection of <m>[2, 3]</m> onto <m>\vect{e}_1</m> is <m>[2, 0]</m></caption>
-<!--proj_e1.tikz-->>
+<image width="60%">
+<latex-image>
+\begin{tikzpicture}[scale = 0.8]
+    \draw [vector,->] (-2, 0) -- (4, 0) node [right] {$x$};
+    \draw [vector,->] (0, -2) -- (0, 4) node [above] {$y$};
+    \draw [vector,->,ultra thick, blue] (0, 0) -- (2, 3) node [right] {$\vect{u} = [2, 3]$};
+    \draw [vector,->,ultra thick] (0, 0) -- (1, 0) node [below] {$\vect{e}_1$};
+    \draw [vector,->,ultra thick, blue] (0, 0) -- (2, 0) node [below, xshift = 1cm] {$\mathrm{proj}_{\vect{e}_1}\mathbf{u} = [2, 0]$};
+    \draw [dashed] (2, 3) -- (2, 0);
+\end{tikzpicture}
+</latex-image>
+</image>
 </figure>
 
 <p>
@@ -145,7 +182,32 @@ means it is orthogonal to <m>\ell</m>. The distance <m>d</m> from <m>P</m> to th
 
 <figure xml:id="fig-proj_setup2">
 <caption>The distance from <m>P</m> to <m>Q</m> is the same as the length of <m>\proj{n}{v}</m>.</caption>
-<!-->proj_setup2.tikz-->
+<image width="60%">
+<latex-image>
+\begin{tikzpicture}
+    % Draw the line \ell
+    \draw[thick, black] (-2,0) -- (5,0) node[right] {$\ell$};
+
+    % Points
+    \fill (0,0) circle (2pt) node[below left] {$A$};
+    \fill (3,0) circle (2pt) node[below] {$Q$};
+    \fill (3,2.5) circle (2pt) node[above right] {$P$};
+
+    % Vectors
+    \draw[vector,->,ultra thick, magenta] (0,0) -- (3,2.5) node[midway, left] {$\vect{v}$};
+    \draw[vector,->,ultra thick, black] (0,0) -- (0,1) node[midway, left] {$\vect{n}$};
+    \draw[vector,->,ultra thick,magenta] (0,0) -- (0,2.5) node[left] {$\vect{\operatorname{proj}_{\mathbf{n}}(\mathbf{v})}$};
+
+    % Right angle indicators
+    \draw (3,0) -- (3,0.3) -- (2.7,0.3) -- (2.7,0);
+    \draw (0.3,2.5) -- (0.3,2.2) -- (0, 2.2);
+
+    % Vertical dashed lines
+    \draw[dashed] (3,0) -- (3,2.5);
+    \draw[dashed] (0,2.5) -- (3,2.5);
+\end{tikzpicture}
+</latex-image>
+</image>
 </figure>
 
 <p>

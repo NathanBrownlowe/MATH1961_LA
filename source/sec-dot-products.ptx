@@ -140,7 +140,26 @@ inequality.
 
 <figure xml:id="triangle-inequality">
 <caption>The triangle inequality</caption>
-<!-->tiptotail.tikz-->
+<image width="60%">
+<latex-image>
+\begin{tikzpicture}[scale = 3.6]
+    %x-y axis
+    \draw (0, 0) node [anchor = north east] {$O$};
+    \draw [vector,->] (-0.375, 0) -- (1.05,0) node [right] {$x$};
+    \draw [vector,->] (0, -0.375) -- (0,1.05) node [above] {$y$};
+
+    %arrows
+    \draw [vector,->, red] (0, 0) -- (0.6, 0.3);
+    \draw [vector,->, blue] (0.6, 0.3) -- (0.8, 0.8);
+    \draw [vector,->, violet] (0, 0) -- (0.79, 0.79);
+
+    %labels
+    \draw (0.37, 0.2) node [below, red] {$\vect{a}$};
+    \draw (0.7, 0.5) node [right, blue] {$\vect{b}$};
+    \draw (0.44, 0.5) node [left, violet] {$\vect{a} + \mathbf{b}$};
+\end{tikzpicture}
+</latex-image>
+</image>
 </figure>
 
 </section>

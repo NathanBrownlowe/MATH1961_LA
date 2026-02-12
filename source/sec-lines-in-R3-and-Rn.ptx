@@ -103,15 +103,35 @@ parallel.
       <sidebyside widths="30% 30% 30%" margins="auto" valign="middle">
 	<figure xml:id="coinciding-lines">
 	  <caption>Coinciding.</caption>
-		<!--R2_intersect1.tikz-->
+		<image width="100%">
+<latex-image>
+\begin{tikzpicture}[scale = 2]
+    \draw (0, 0) -- (1, 1) node [midway, left, xshift = -1mm] {$\ell_1 = \ell_2$};
+\end{tikzpicture}
+</latex-image>
+</image>
 	</figure>
 	<figure xml:id="sing-int-lines">
 	  <caption>Single intersection.</caption>
-	  <!--R2_intersect2.tikz-->
+	  <image width="100%">
+<latex-image>
+\begin{tikzpicture}[scale = 2]
+    \draw (0, 0) -- (1, 1);
+    \draw (0, 1) -- (1, 0);
+\end{tikzpicture}
+</latex-image>
+</image>
 	</figure>
 	<figure xml:id="non-int-lines">
 	  <caption>No intersection.</caption>
-	  <!--R2_intersect3.tikz-->
+	  <image width="100%">
+<latex-image>
+\begin{tikzpicture}[scale = 2]
+    \draw (0, 0) -- (1, 1);
+    \draw (0.3, 0) -- (1.3, 1);
+\end{tikzpicture}
+</latex-image>
+</image>
 	</figure>
 </sidebyside>
     </figure>

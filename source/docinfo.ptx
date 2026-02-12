@@ -54,6 +54,8 @@
   <!-- for those in the next element. -->
   <latex-image-preamble> 
     \usepackage{tikz}
+    \usepackage{tikz-cd}
+    \usepackage{tikz-3dplot}
     \usepackage{pgfplots} 
     \usetikzlibrary{positioning,matrix,arrows} 
     \usetikzlibrary{shapes,decorations,shadows,fadings,patterns} 

@@ -10,7 +10,20 @@ related to the angle between them.
 
 <figure xml:id="fig-angle">
 <caption>The angle between two vectors</caption>
-<!-->angle.tikz-->
+<image width="60%">
+<latex-image>
+\begin{tikzpicture}[scale = 1.2]
+    % Vectors
+    \draw[vector,->] (0,0) -- (3.5,0.5) node[midway, below] {$\vect{u}$};
+    \draw[vector,->] (0,0) -- (2.5,2.7) node[midway, left] {$\vect{v}$};
+    \draw[vector,->,gray] (2.5,2.7) -- (3.5,0.5) node[midway, right] {$\vect{u} -\mathbf{v}$};
+
+    % Angle \theta
+    \draw[thick] (0.8,0.11) arc (0:38:0.92);
+    \node at (1,0.5) {$\theta$};
+\end{tikzpicture}
+</latex-image>
+</image>
 </figure>
 
 <theorem xml:id="thm-geo-form-dot-product">

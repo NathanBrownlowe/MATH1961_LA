@@ -147,29 +147,6 @@
 </sidebyside>
     </figure>
     
-<!--
-<figure xml:id="standard-unit-vectors">
-      <caption>Standard unit vectors.</caption>
-      <sidebyside widths="45% 45%" margins="auto" valign="middle">
-	<figure xml:id="stan-unit-vecs-in-R2">
-	  <caption>In <m>\R^2</m>.</caption>
-	  <image width="100%">
-	    <latex-image>
-	      \begin{tikzpicture}
-	      \end{tikzpicture}
-	    </latex-image>
-	  </image>
-	</figure>
-	<figure xml:id="stan-unit-vecs-in-R3">
-	  <caption>In <m>\R^3</m>.</caption>
-	  <image width="100%">
-	    <latex-image>
-	      \begin{tikzpicture}
-	      \end{tikzpicture}
-	    </latex-image>
-	  </image>
-	</figure>
-      </sidebyside>
-    </figure>-->
+
 
 </section>

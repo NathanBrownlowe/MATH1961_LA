@@ -31,12 +31,25 @@ For example, the first component is <me>
 and so on for the rest.
 </p>
 
-
-
 <figure xml:id="fig-braid">
 <caption>Diagram for the array method</caption>
-<!--braid.tikz-->
+<image width="60%">
+<latex-image>
+\begin{tikzcd}
+  {u_1} \amp {u_2} \amp {u_3} \amp {u_1} \amp {u_2} \amp {u_3} \amp {} \\
+  {v_1} \amp {v_2} \amp {v_3} \amp {v_1} \amp {v_2} \amp {v_3} \amp {}
+    \arrow[no head, from=1-2, to=2-3]
+    \arrow[no head, from=1-3, to=2-4]
+    \arrow[no head, from=1-4, to=2-5]
+    \arrow[dashed, no head, from=2-2, to=1-3]
+    \arrow[dashed, no head, from=2-3, to=1-4]
+    \arrow[dashed, no head, from=2-4, to=1-5]
+\end{tikzcd}
+</latex-image>
+</image>
 </figure>
+
+
 
 <p>
 Alternatively, to notice the `criss-cross' pattern it helps to write the vectors using columns:
@@ -78,7 +91,22 @@ Notice that <m>\vect{u} \times \vect{v} = - \vect{v} \times \vect{u}</m>.
 
 <figure xml:id="fig-braid_ex">
 <caption>Array method for <m>\vect{u} \times \vect{v}</m> from <xref ref="ex-cross"/></caption>
-<!--braid_ex.tikz-->
+<image width="60%">
+<latex-image>
+<md>
+\begin{tikzcd}
+	{3} \amp {1} \amp {2} \amp {3} \amp {1} \amp {2} \\
+	{5} \amp {0} \amp {4} \amp {5} \amp {0} \amp {4}
+	\arrow[no head, from=1-2, to=2-3]
+	\arrow[no head, from=1-3, to=2-4]
+	\arrow[no head, from=1-4, to=2-5]
+	\arrow[dashed, no head, from=2-2, to=1-3]
+	\arrow[dashed, no head, from=2-3, to=1-4]
+	\arrow[dashed, no head, from=2-4, to=1-5]
+\end{tikzcd}
+</md>
+</latex-image>
+</image>
 </figure>
 
 <example xml:id="ex-dot-and-cross">
@@ -228,9 +256,34 @@ downwards normal vector, drawn in red.
 
 
 
-<figure xml:id="fig-plane_normals">
+<!--<figure xml:id="fig-plane_normals">
 <caption>There are two vectors which are orthogonal to the plane given by <m>\vect{u}</m> and <m>\vect{v}</m></caption>
-<!--plane_normals.tikz-->
+plane_normals.tikz
+</figure>-->
+
+<figure xml:id="fig-plane_normals">
+  <caption>There are two vectors which are orthogonal to the plane given by <m>\vect{u}</m> and <m>\vect{v}</m></caption>
+  <image width="60%">
+    <latex-image label="3d-plane">
+\tdplotsetmaincoords{60}{120} % view angle for 3D plot
+\begin{tikzpicture}[tdplot_main_coords, scale=0.65]
+  % x-y plane
+  \filldraw[fill=blue!20,opacity=0.5]
+    (3,3,0) -- (-3,3,0) -- (-3,-3,0) -- (3,-3,0) -- cycle;
+
+  % vectors
+  \draw[very thick,->] (0,0,0) -- (2,0,0)
+    node[xshift=-1.2mm,yshift=-1.2mm] {$\vect{u}$};
+  \draw[very thick,->] (0,0,0) -- (0,2,0)
+    node[xshift=1.2mm,yshift=-1.2mm] {$\vect{v}$};
+
+  % normal vectors
+  \fill[red] (0,0,0) circle (2pt);
+  \draw[thick,->,red] (0,0,0) -- (0,0,4);
+  \draw[thick,->,red] (0,0,0) -- (0,0,-4);
+\end{tikzpicture}
+    </latex-image>
+  </image>
 </figure>
 
 <p>
