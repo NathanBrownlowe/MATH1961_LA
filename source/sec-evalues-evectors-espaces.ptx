@@ -33,7 +33,19 @@ In other words, an eigenvector <m>\vect{x}</m> is a vector such that multiplying
 
 <figure xml:id="fig-evec">
 <caption><m>A</m> scales its eigenvector <m>\vect{x}</m> by the corresponding eigenvalue <m>\lambda</m></caption>
-<!--evec.tikz-->
+<image width="60%">
+<latex-image>
+\begin{tikzpicture}[scale = 0.8]
+    \draw [thick,-\gt] (-2.5, 0) -- (6,0) node [right] {$x$};
+    \draw [thick,-\gt] (0, -1.5) -- (0,4) node [above] {$y$};
+    
+    %vectors
+    \draw [ultra thick, -\gt, color = blue] (0, 0) -- (2, 1) node [left, xshift = -1.5mm] {$\vect{x}$};
+    \draw [thick, -\gt] (0, 0) -- (5, 2.5) node [left, xshift = -3mm] {$A\vect{x} = \lambda \mathbf{x}$};
+
+\end{tikzpicture}
+</latex-image>
+</image>
 </figure>
 
 <p>
