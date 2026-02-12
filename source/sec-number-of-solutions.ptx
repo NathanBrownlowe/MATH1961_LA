@@ -96,7 +96,7 @@ harder to visualise.
 	</figure>
 	<figure xml:id="fig-plane_int2">
 	  <caption>Infinitely many intersection points.</caption>
-	  <image width="60%">
+	  <image width="40%">
 <latex-image>
 \tdplotsetmaincoords{60}{120} % set view angle for 3D plot
 \begin{tikzpicture}[tdplot_main_coords, scale = 0.5]
