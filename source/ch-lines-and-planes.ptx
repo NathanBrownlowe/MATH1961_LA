@@ -4,7 +4,11 @@
   <title>Lines and Planes</title>
 
   <introduction>
-    <p> Text before the first section. </p>
+    <p>
+      In this chapter, we study lines in <m>\R^2</m> and <m>\R^3</m>, and planes in <m>\R^3</m>. 
+      We show how to use vectors to write their equations and perform calculations.
+    </p>
+
   </introduction>
 
   <!-- include sections -->

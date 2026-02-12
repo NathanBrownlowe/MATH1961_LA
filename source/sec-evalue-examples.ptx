@@ -3,6 +3,254 @@
 <section xml:id="sec-evalue-examples" xmlns:xi="http://www.w3.org/2001/XInclude">
   <title>Examples</title>
 
-  <p> Text of section. </p>
+<example xml:id="ex-finding-ethings1">
+<statement>
+<p>
+Find the eigenvalues of the matrix
+<me>
+\begin{bmatrix}
+  3 \amp  1 \\ 1 \amp  3
+\end{bmatrix}
+</me>.
+For each eigenvalue, find all its eigenvectors, find its eigenspace, and 
+give a specific example of an 
+eigenvector.
+</p>
+<p>
+The characteristic polynomial is
+<md>
+<mrow>
+\det(A-\lambda I) \amp  = \det\left(
+\begin{bmatrix}
+    3 \amp  1 \\ 1 \amp  3
+  \end{bmatrix}
+-
+\begin{bmatrix}
+    \lambda \amp  0 \\ 0 \amp  \lambda
+  \end{bmatrix}
+\right)                                         \\
+\amp  =
+\begin{vmatrix}
+  3 - \lambda \amp  1 \\
+  1           \amp  3-\lambda
+\end{vmatrix}
+\\
+\amp  = (3-\lambda)^2 - 1         \\
+\amp  = \lambda^2 - 6\lambda + 8  \\
+\amp  =(\lambda - 2)(\lambda -4)
+</mrow>
+</md>.
+So the roots of the characteristic equation <m>\det(A -\lambda I) = 0</m> are <m>\lambda =2</m> and 
+<m>\lambda = 4</m>, which means these are the eigenvalues of <m>A</m>.
+</p>
+<p>
+For <m>\lambda = 2</m>, we solve <m>(A-2I)\vect{x} = \vect{0}</m> for <m>\vect{x}</m>. 
+Row reducing,
+<me>
+\begin{amatrix}{c} A-2I \amp  \vect{0}
+\end{amatrix}
+=
+\begin{amatrix}{cc}
+  1 \amp  1 \amp  0\\ 1 \amp  1 \amp  0
+\end{amatrix}
+\xrightarrow{R_2 \mapsto R_2 - R_1}
+\begin{amatrix}{cc}
+  1 \amp  1 \amp  0\\ 0 \amp  0 \amp  0
+\end{amatrix}
+</me>.
+The solutions are <m>y = t</m>, <m>x = -t</m>, for <m>t \in \R</m>. So the eigenvectors 
+for <m>\lambda =2</m> are <m>[-t, t]</m> for <m>t\in \R \setminus \{0\}</m>. For the 
+eigenspace, we include <m>\vect{x} = \vect{0}</m>, so we can also include <m>t=0</m> to get <me>
+E_2(A) = \left\{\colvec{-t}{t} \; \middle| \; t \in \R\right\}
+</me>. Taking <m>t = 1</m>, a specific eigenvector is <m>[-1, 1]</m>.
+</p>
+
+<p>
+For <m>\lambda =4</m>, we solve <m>(A-4I)\vect{x} = 0</m> for <m>\vect{x}</m>. Row reducing,
+<me>
+\begin{amatrix}{c} A-2I \amp  0
+\end{amatrix}
+=
+\begin{amatrix}{cc}
+  -1 \amp  1 \amp  0\\ 1 \amp  -1 \amp  0
+\end{amatrix}
+\xrightarrow{R_2 \mapsto R_2 + R_1}
+\begin{amatrix}{cc}
+  -1 \amp  1 \amp  0\\ 0 \amp  0 \amp  0
+\end{amatrix}
+</me>.
+The solutions are <m>y = t, x = t</m>, for <m>t\in \R</m>. So the eigenvectors are 
+<m>[t, t]</m> for <m>t \in \R\setminus \{0\}</m>, the eigenspace is <me>
+E_4(A) = \left\{\colvec{t}{t} \;\middle|\; t \in \R\right\},
+</me> and taking <m>t = 1</m> gives that <m>[1, 1]</m> is an eigenvector.
+</p>
+</statement>
+</example>
+
+<example xml:id="ex-finding-ethings2">
+<statement>
+<p>
+Find the eigenvalues of the matrix
+<me>
+\begin{bmatrix}
+  1  \amp  2  \amp  0 \\
+  -1 \amp  -1 \amp  1 \\
+  0  \amp  1  \amp  1
+\end{bmatrix}
+
+</me>.
+For each eigenvalue, find a corresponding eigenvector.
+</p>
+<p>
+The characteristic polynomial is
+<md>
+<mrow>
+\det(A - \lambda I) \amp  =
+\begin{vmatrix}
+  1-\lambda \amp  2          \amp  0 \\
+  -1        \amp  -1-\lambda \amp  1 \\
+  0         \amp  1          \amp  1-\lambda
+\end{vmatrix}
+\\
+\amp  = (1-\lambda)
+\begin{vmatrix}
+  -1 - \lambda \amp  1 \\ 1 \amp  1-\lambda
+\end{vmatrix}
+- 2
+\begin{vmatrix}
+  -1 \amp  1 \\
+  0  \amp  1-\lambda
+\end{vmatrix}
+\\
+\amp  = (1-\lambda)[(-1-\lambda)(1-\lambda) - 1] - 2[-(1-\lambda) - 0] \\
+\amp  =(1-\lambda)[(-1-\lambda)(1-\lambda)-1 +2]                       \\
+\amp  = (1-\lambda)(\lambda^2 -1-1+2)                                  \\
+\amp  = \lambda^2 (1-\lambda)
+</mrow>
+</md>.
+So the eigenvalues of <m>A</m> are <m>0</m> and <m>1</m>.
+</p>
+
+<p>
+For <m>\lambda =0</m>, we solve
+<md>
+<mrow>
+\begin{amatrix}{c}
+  A - I \amp  \vect{0}
+\end{amatrix}
+=                                   
+\begin{amatrix}{ccc}
+  1 \amp  2 \amp  0 \amp  0\\
+  -1 \amp  -1 \amp  1 \amp  0\\
+  0 \amp  1 \amp  1 \amp  0
+\end{amatrix}
+\amp\xrightarrow{R_2 \mapsto R_2 + R_1}
+\begin{amatrix}{ccc}
+  1 \amp  2 \amp  0 \amp  0\\
+  0 \amp  1 \amp  1 \amp  0\\
+  0 \amp  1 \amp  1 \amp  0
+\end{amatrix}
+\\
+\amp\xrightarrow{R_3 \mapsto R_3 - R_2} 
+\begin{amatrix}{ccc}
+  1 \amp  2 \amp  0 \amp  0\\
+  0 \amp  1 \amp  1 \amp  0\\
+  0 \amp  0 \amp  0 \amp  0
+\end{amatrix}
+</mrow>
+</md>.
+</p>
+
+<p>
+The solutions are <m>z = t, y = -t, x = 2t</m>, for <m>t\in \R</m>. Taking <m>t = 1</m>, <m>[2, -1, 1]</m> 
+is an eigenvector for <m>\lambda =0</m>.
+</p>
+
+<p>
+For <m>\lambda =1</m>,
+<md>
+<mrow>
+\begin{amatrix}{c}
+  A - I \amp  \vect{0}
+\end{amatrix}
+=                                                                     
+\begin{amatrix}{ccc}
+  0 \amp  2 \amp  0 \amp  0\\
+  -1 \amp  -2 \amp  1 \amp  0\\
+  0 \amp  1 \amp  0 \amp  0
+\end{amatrix}
+\amp\xrightarrow{R_1 \leftrightarrow R_2}
+\begin{amatrix}{ccc}
+  -1 \amp  -2 \amp  1 \amp  0\\
+  0 \amp  2 \amp  0 \amp  0\\
+  0 \amp  1 \amp  0 \amp  0
+\end{amatrix}
+\\
+\amp\xrightarrow[R_3 \mapsto R_3 - \frac{1}{2}R_2]{R_1 \mapsto R_1 + R_2} 
+\begin{amatrix}{ccc}
+  -1 \amp  0 \amp  1 \amp  0\\
+  0 \amp  2 \amp  0 \amp  0\\
+  0 \amp  0 \amp  0 \amp  0
+\end{amatrix}
+</mrow>
+</md>.
+</p>
+
+<p>
+The solutions are <m>z = t</m>, <m>y = 0</m>, <m>x=t</m>, for <m>t\in \R</m>. Taking <m>t=1</m> 
+gives that <m>[1, 0, 1]</m> is an eigenvector for <m>\lambda =1</m>.
+</p>
+</statement>
+</example>
+
+<!--<exercise>
+<statement>
+<p>In the previous example, by directly calculating <m>A\vect{x}</m>, verify that <m>\vect{x} = [2, -1, 1]</m> is an eigenvector for <m>A</m> with eigenvalue <m>0</m>, and that <m>\vect{x} = [1, 0, 1]</m> is an eigenvector with eigenvalue <m>1</m>.</p>
+</statement>
+<hint>
+</hint>
+<answer>
+</answer>
+<solution>
+</solution>
+</exercise>-->
+
+<p>
+If <m>A</m> is a triangular matrix, then because <m>\lambda I</m> is a diagonal matrix, 
+<m>A-\lambda I</m> is still triangular. If the diagonal entries of <m>A = [a_{ij}]</m> are <m>a_{ii}</m>, 
+then <m>A-\lambda I</m> is a triangular matrix with <m>a_{ii} - \lambda</m> on its diagonal. Since 
+the determinant of a triangular matrix is the product of its diagonal entries,
+<me>
+\det(A-\lambda I) = (a_{11} - \lambda)(a_{22} -\lambda) \cdots (a_{nn}-\lambda)
+</me>.
+Therefore the solutions of the characteristic equation are <m>\lambda = a_{11}, a_{22}, \dots, a_{nn}</m>.
+</p>
+
+<assemblage xml:id="evalues-tri-matrices">
+<p>
+<term>Conclusion:</term> The eigenvalues of a triangular matrix are its diagonal entries.
+</p>
+</assemblage>
+
+<example xml:id="ex-finding-evalues-tri-matrix">
+<statement>
+<p>
+Find the eigenvalues of the matrix
+<me>
+A =
+\begin{bmatrix}
+  5 \amp  2 \amp  4 \\
+  0 \amp  3 \amp  1 \\
+  0 \amp  0 \amp  -2
+\end{bmatrix}
+
+</me>.
+</p>
+
+<p>
+<m>A</m> is upper triangular, so its eigenvalues are the diagonal entries <m>5</m>, <m>3</m> and <m>-2</m>.
+</p>
+</statement>
+</example>
 
 </section>

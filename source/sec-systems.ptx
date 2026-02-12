@@ -3,6 +3,269 @@
 <section xml:id="sec-systems" xmlns:xi="http://www.w3.org/2001/XInclude">
   <title>Systems of linear equations</title>
 
-  <p> Text of section. </p>
+ <p>
+A general equation for a line in <m>\R^2</m> is <m>ax+by = c</m>, and a general equation for 
+a plane in <m>\R^3</m> is <m>ax+by+cz = d</m>. These are examples of what we call linear 
+equations.
+</p>
+
+<definition xml:id="def-linear-equation">
+<statement>
+<p>
+A <term>linear equation</term> in <m>n</m> variables <m>x_1</m>, <m>x_2, \dots, x_n</m> is 
+an equation of the form
+<me>
+a_1x_1 + a_2x_2 + \dots + a_nx_n = b
+</me>
+for constants <m>a_1, a_2, \dots, a_n, b \in \R</m>. A <term>solution</term> to this 
+equation is a collection of real numbers <m>x_1 = s_1</m>, <m>x_2 = s_2, \dots, x_n = s_n</m> 
+such that
+<me>
+a_1s_1 + a_2s_2 + \dots + a_ns_n = b
+</me>.
+</p>
+</statement>
+</definition>
+
+<p>
+The word <em>linear</em> means that we can only add and scale the variables 
+<m>x_1, x_2, \dots, x_n</m> (so no multiplication, division, powers, trigonometric 
+functions, etc.).
+</p>
+
+<example xml:id="ex-linear-non-linear">
+<statement>
+<p>
+The equations <m>3x+4y=2</m> and <m>2x+6y+z=0</m> are both linear. 
+The equation <m>x_1x_2 = 3</m> is not linear because it involves multiplying variables. 
+The equation for a circle <m>x_1^2 + x_2^2 = r</m> is nonlinear because it involves powers. 
+Trigonometric equations like <m>\cos\theta = 1</m> are nonlinear.
+</p>
+</statement>
+</example>
+
+<example xml:id="ex-finding-sols">
+<statement>
+<p>Find two solutions for the linear equation <m>2x - 3y = 1</m>.
+</p>
+<p>
+Rearranging gives <m>x = \frac{1}{2}(1+3y)</m>. Choosing <m>y = 0</m> gives the solution 
+<m>x = \frac{1}{2}, y=0</m>, and choosing <m>y = 1</m> gives the solution <m>x = 2, y=1</m>. 
+Notice that there are infinitely many solutions, because we could have chosen any value 
+for <m>y</m>.
+</p>
+</statement>
+</example>
+
+<p>
+In this chapter we study systems of linear equations, which is what happens when we have 
+multiple linear equations at once.
+</p>
+
+<definition xml:id="def-systems">
+<statement>
+<p>
+A <term>system of linear equations</term> in <m>n</m> variables <m>x_1, x_2, \dots, x_n</m> is
+<md>
+<mrow>
+a_{11}x_1 + a_{12}x_2 + \amp  \dots + a_{1n}x_n = b_1  \\
+a_{21}x_1 + a_{22}x_2 + \amp  \dots + a_{2n}x_n = b_2  \\
+\vdots                  \amp                           \\
+a_{m1}x_1 + a_{m2}x_2 + \amp  \dots + a_{mn}x_n = b_m
+</mrow>
+</md>,
+where <m>a_{ij}, b_i \in \R</m> for <m>1 \le i \le m</m>, <m>1\le j\le n</m>, and <m>i, j \in \N</m>. 
+The system is <term>homogeneous</term> if <m>b_i = 0</m> for all <m>i = 1, 2, \dots, m</m>. 
+A <term>solution</term> to the system is a collection of real numbers 
+<m>x_1 = s_1, x_2 = s_2, \dots, x_n = s_n</m> that simultaneously satisfy all the equations, 
+i.e.\ such that
+<me>
+a_{i1}s_1 + a_{i2}s_2 + \dots + a_{in}s_n = b_i
+</me>
+for all <m>i \in \N</m> such that <m>1\le i\le m</m>.
+</p>
+</statement>
+</definition>
+
+<p>
+We can solve these equations by scaling equations and adding or subtracting them, which is 
+called `elimination'.
+</p>
+
+<example xml:id="ex-pt">
+<statement>
+<p>
+Solve the system
+<me>
+\begin{cases}
+  2x+y = 2 \\
+  x - y = 1
+\end{cases}
+</me>.
+</p>
+
+<p>
+Adding the equations gives <m>3x = 3</m>, so <m>x= 1</m>. Back-substituting this into the first 
+equation gives <m>y = 2 - 2x = 0</m>.
+</p>
+</statement>
+</example>
+
+<example xml:id="ex-parallel">
+<statement>
+<p>
+Solve the system
+<me>
+\begin{cases}
+  2x+y = 2 \\
+  2x + y = 0
+\end{cases}
+</me>.
+</p>
+<p>
+Subtracting the equations gives <m>0 = 2</m>, which is impossible. Therefore there are no solutions.
+</p>
+</statement>
+</example>
+
+<example xml:id="ex-coincide">
+<statement>
+<p>
+Solve the system
+<me>
+\begin{cases}
+  2x+y = 2 \\
+  4x + 2y = 4
+\end{cases}
+</me>.
+</p>
+<p>
+If we try to subtract 2 times the first equation from the second, we get <m>0 = 0</m>, which is 
+true but not helpful. Instead, to solve this, let <m>y = t</m> where <m>t\in \R</m> is a parameter. 
+Then, <m>x = \frac{1}{2}(2-t)</m>, <m>y=t</m> is a solution for any <m>t\in \R</m>.
+</p>
+</statement>
+</example>
+
+<p>
+Geometrically, <xref ref="ex-pt"/> has a unique solution because it corresponds to the intersection 
+of non-parallel lines. <xref ref="ex-parallel"/> has no solution because it corresponds to parallel 
+(non-coinciding) lines. <xref ref="ex-coincide"/> has infinite solutions given by the 
+line <m>2x + y = 2</m>, which has parametric equations
+<me>
+x = \frac{1}{2}(2-t), y=t, \qquad t\in \R
+</me>.
+These examples show that we can handle a system of two equations in two variables, but we want to 
+introduce a method for solving linear equations which gives us a procedure to solve systems of any 
+size. To do this, it will help to have the following definition.
+</p>
+
+<definition xml:id="def-matrix">
+<statement>
+<p>A <term>matrix</term> is a rectangular array of real numbers.
+</p>
+</statement>
+</definition>
+
+<p>
+For example, the following are all matrices:
+<me>
+\begin{bmatrix}
+  1 \amp  2 \\
+  3 \amp  4 \\
+\end{bmatrix}
+,\quad \begin{bmatrix}1 \\ -1\end{bmatrix},\quad
+\begin{bmatrix}
+  1   \amp  0  \amp  1/2 \\
+  2   \amp  -3 \amp  1   \\
+  4/5 \amp  6  \amp  -7
+\end{bmatrix}
+,\quad [-8]
+</me>.
+We will have much more to say about matrices during the rest of the course, where their 
+significance will become more clear. For now, for solving systems of linear equations, 
+we will focus on a special kind of matrix.
+</p>
+
+
+
+<definition xml:id="def-augmented-matrix">
+<statement>
+<p>
+The <term>augmented matrix</term> of the system of linear equations
+<md>
+<mrow>
+a_{11}x_1 + a_{12}x_2 + \amp  \dots + a_{1n}x_n = b_1 \\
+a_{21}x_1 + a_{22}x_2 + \amp  \dots + a_{2n}x_n = b_2 \\
+\vdots                  \amp                          \\
+a_{m1}x_1 + a_{m2}x_2 + \amp  \dots + a_{mn}x_n = b_m
+</mrow>
+</md>
+is the matrix
+<me>
+\left[\begin{array}{cccc|c}
+  a_{11} \amp  a_{12} \amp  \cdots \amp a_{1n} \amp  b_1\\
+  a_{21} \amp  a_{22} \amp  \cdots \amp a_{2n} \amp  b_2\\
+  \vdots \amp  \vdots \amp  \ddots \amp  \vdots \amp  \vdots\\
+  a_{m1} \amp  a_{m2} \amp  \cdots \amp  a_{mn} \amp  b_m
+\end{array}\right]
+</me>.
+</p>
+</statement>
+</definition>
+
+<p>
+The following example shows how to use augmented matrix notation when solving a system of 
+linear equations.
+</p>
+
+
+<example xml:id="ex-lineq">
+<statement>
+<p>
+Solve the following system of linear equations with an augmented matrix:
+<me>
+\left\{
+\begin{aligned}
+  x - y - z    \amp  = 2  \\
+  3x - 3y + 2z \amp  = 16 \\
+  2x - y + z   \amp  = 9
+\end{aligned}
+\right.
+</me>.
+The corresponding augmented matrix collects all the coefficients
+<me>
+\begin{amatrix}{ccc}
+  1 \amp  -1 \amp  -1 \amp  2\\
+  3 \amp  -3 \amp  2 \amp  16\\
+  2 \amp  -1 \amp  1 \amp  9
+\end{amatrix}
+
+</me>
+To eliminate, from row two, subtract <m>3 \times \text{row 1}</m>, and from row three, 
+subtract <m>2\times \text{row 1}</m>. This gives
+<me>
+\begin{amatrix}{ccc}
+  1 \amp  -1 \amp  -1 \amp  2\\
+  0 \amp  0 \amp  5 \amp  10\\
+  0 \amp  1 \amp  3 \amp  5
+\end{amatrix}
+,
+</me>
+and swapping the second and third row gives
+<me>
+\begin{amatrix}{ccc}
+  1 \amp  -1 \amp  -1 \amp  2\\
+  0 \amp  1 \amp  3 \amp  5\\
+  0 \amp  0 \amp  5 \amp  10
+\end{amatrix}
+</me>.
+We can now solve the system by `back-substituting', which means solving the augmented matrix 
+from the bottom upwards. The last row of the matrix says that <m>5z = 10</m>, so <m>z = 2</m>. 
+The second row says that <m>y + 3z = 5</m>, so <m>y = 5 - 3z = -1</m>, and the first row 
+says that <m>x = 2 + y + z = 2 - 1 + 2 = 3</m>.
+</p>
+</statement>
+</example>
 
 </section>

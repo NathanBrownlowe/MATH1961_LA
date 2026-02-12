@@ -1,32 +1,210 @@
 <?xml version="1.0" encoding="UTF-8"?>
 
+
+
 <section xml:id="sec-vectors-in-the-plane" xmlns:xi="http://www.w3.org/2001/XInclude">
-  <title>Vectors in the plane</title>
+<title>Vectors in the plane</title>
 
-  <definition xml:id="def-vector-plane">
-    <statement>
-      <p>
-        A <term>vector</term> in the <m>(x, y)-</m>plane is a directed line segment, which is also called 
-        an `arrow'. The set of all vectors in the plane is denoted by <m>\mathbb{R}^2</m>.
-      </p>
-    </statement>
-  </definition>
+<definition xml:id="def-vector-plane">
+<statement>
+<p>
+A <term>vector</term> in the <m>(x, y)-</m>plane is a directed line segment, which is also called 
+an `arrow'. The set of all vectors in the plane is denoted by <m>\mathbb{R}^2</m>.
+</p>
+</statement>
+</definition>
 
-  <figure xml:id="fig-tikz">
-  <caption>A vector in the plane</caption>
-  <image width="60%" xml:id="vector">
-  <latex-image >
+<figure xml:id="fig-vector">
+<caption>A vector in the plane</caption>
+<image width="60%" xml:id="vector">
+<latex-image >
 \begin{tikzpicture}
-\draw (0, 0) node [anchor = north east] {$O$};
-\draw [thick,&lt;-&gt;] (-1, 0) -- (3,0) node [right] {$x$};
-\draw [thick,&lt;-&gt;] (0, -1) -- (0,3) node [above] {$y$};
-\draw [very thick,-&gt;] (0, 0) -- (1.85, 2.60);
+<!--\tikzset{vector/.style={thick}}-->
+	\draw (0, 0) node [anchor = north east] {$O$};
+	\draw [vector,->] (-1, 0) -- (3,0) node [right] {$x$};
+	\draw [vector,->] (0, -1) -- (0,3) node [above] {$y$};
+	\draw [vector,->] (0, 0) -- (1.85, 2.60);
 \end{tikzpicture}
 </latex-image>
-  </image>
+</image>
 </figure>
 
+<p>
+An example is drawn in Figure <xref ref="fig-vector"/>. To understand the figure and the definition it is important to keep the following fact in mind: 
+</p>
+<assemblage xml:id="assemblage-mag-and-direction">
+<p>Only the magnitude and direction of a vector matter, not its position in space.</p>
+</assemblage>
+<p>
+In other words, we can think of a vector as an arrow `floating' in the plane, where translating the arrow (i.e.\ moving it without rotating or stretching it) gives a vector which is `the same' as the original vector. This is illustrated in Figure <xref ref="fig-vectranslates"/>: all of these arrows have the same magnitude and direction, so they represent the same vector.
+</p>
 
+<figure xml:id="fig-vectranslates">
+<caption>These arrows all represent the same vector</caption>
+<image width="60%">
+<latex-image>
+\begin{tikzpicture}[scale=2.5]
+	<!--\tikzset{vector/.style={thick}}-->
+	\draw (0, 0) node [anchor = north east] {$O$};
+	\draw [vector,->] (-0.65, 0) -- (1,0) node [right] {$x$};
+	\draw [vector,->] (0, -0.65) -- (0,1) node [above] {$y$};
+	\draw [vector,->] (0.1, 0.1) -- (0.4, 0.3);
+	\draw [vector,->] (0.5, 0.1) -- (0.8, 0.3);
+	\draw [vector,->] (0.1, 0.5) -- (0.4, 0.7);
+	\draw [vector,->] (0.5, 0.5) -- (0.8, 0.7);
+	\draw [vector,->] (-0.4, 0.1) -- (-0.1, 0.3);
+	\draw [vector,->] (-0.4, 0.5) -- (-0.1, 0.7);
+	\draw [vector,->] (0.1, -0.3) -- (0.4, -0.1);
+	\draw [vector,->] (0.5, -0.3) -- (0.8, -0.1);
+\end{tikzpicture}
+</latex-image>
+</image>
+</figure>
+
+<p>
+We can also interpret vectors in an algebraic way, using coordinates. We will soon see that this is usually more convenient for doing calculations.
+</p>
+
+<definition xml:id="def-notation-vectors">
+<ul>
+<li>
+<p>If <m>A = (a_1, a_2)</m> is a point in the plane, then there is a vector from the origin <m>0 = (0, 0)</m> to <m>A</m>. It is denoted by
+<me>
+\overrightarrow{OA} = \begin{bmatrix}a_1 \\ a_2\end{bmatrix}
+</me>
+or often by <m>[a_1, a_2]</m> to save space. Note that round brackets are used for points, while square brackets are 
+used for vectors. We call <m>\overrightarrow{OA}</m> the <term>position vector</term> of the point <m>A</m>. 
+The numbers <m>a_1</m> and <m>a_2</m> are called the <term>components</term> of <m>\overrightarrow{OA}</m>.
+</p>
+
+<figure xml:id="fig-position-vector">
+<caption>The position vector <m>\overrightarrow{OA}</m> of a point <m>A = (a_1, a_2)</m></caption>
+<image width="60%">
+<latex-image>
+\begin{tikzpicture}[scale = 3]
+	% Draw coordinates system
+	\draw (0, 0) node [anchor = north east] {$O$};
+	\draw [vector,->] (-0.4, 0) -- (1,0) node [right] {$x$};
+	\draw [vector,->] (0, -0.4) -- (0,1) node [above] {$y$};
+	
+	% Add points and projections to axis
+	\draw [vector,->] (0, 0) -- (0.7, 0.65) node [anchor = south west, xshift = -2mm] {$A = (a_1, a_2)$};
+	\draw [dashed] (-0.08, 0.65) node [left] {$a_2$} -- (0.7, 0.65);
+	\draw [dashed] (0.7, -0.08) node [below] {$a_1$} -- (0.7, 0.65);
+	
+	% Add vector
+	\draw (0.35, 0.325) node [anchor = south east, xshift = 2mm] {$\overrightarrow{OA}$};	
+\end{tikzpicture}
+</latex-image>
+</image>
+</figure>
+</li>
+
+<li>
+<p>More generally, if <m>A = (a_1, a_2)</m> and <m>B = (b_1, b_2)</m> are points, then we consider the vector 
+	from <m>A</m> to <m>B</m>, written <m>\overrightarrow{AB}</m>. This is shown in <xref ref="fig-coordsAB"/>. 
+	We say that <m>A</m> is the <term>tail</term> and that <m>B</m> is the <term>head</term> or <term>tip</term> of the 
+	arrow. Since <m>\overrightarrow{AB}</m> is the displacement vector from <m>A</m> to <m>B</m>, we have
+<me>
+\overrightarrow{AB} = \begin{bmatrix} b_1 - a_1 \\ b_2 - a_2\end{bmatrix}
+</me>.
+
+<figure xml:id="fig-coordsAB">
+<caption>A vector <m>\overrightarrow{AB}</m></caption>
+<image width="60%">
+<latex-image>
+\begin{tikzpicture}[scale=4.5]
+	%x-y axis
+\draw (0, 0) node [anchor = north east] {$O$};
+\draw [vector,->] (-0.4, 0) -- (1,0) node [right] {$x$};
+\draw [vector,->] (0, -0.4) -- (0,1) node [above] {$y$};
+
+%vectors
+\draw [vector,->] (0.75, 0.2) node [anchor = south west] {$A = (a_1, a_2)$} -- (0.2, 0.7) node [anchor = south west, xshift = -1mm] {$B = (b_1, b_2)$};
+
+%components
+\draw [dashed] (0.75, -0.08) node [below] {$a_1$} -- (0.75, 0.87); 
+\draw [dashed] (0.2, -0.05) node [below] {$b_1$} -- (0.2, 0.87); 
+\draw [dashed] (-0.08, 0.2) node [left] {$a_2$} -- (0.85, 0.2);
+\draw [dashed] (-0.08, 0.7) node [left] {$b_2$} -- (0.85, 0.7);
+\end{tikzpicture}
+</latex-image>
+</image>
+</figure>
+</p>
+</li>
+<li>
+<p>When using a single-letter variable to refer to a vector, it will be typed in bold: for 
+	example <m>\mathbf{a}</m>, <m>\mathbf{b}</m>, <m>\mathbf{u}</m>, or <m>\mathbf{v}</m>. In handwriting, 
+	we instead use a squiggle under the vector, which looks 
+	like <m>\underset{\sim}{a}</m>, <m>\underset{\sim}{b}</m>, etc.</p>
+</li>
+<li>
+<p>There is a special vector called the <term>zero vector</term>, written as <m>\mathbf{0}</m>. This is the 
+	vector <m>\overrightarrow{OO}</m> from the origin to the origin with zero magnitude. Therefore
+<me>
+\mathbf{0} = \begin{bmatrix} 0 \\0 \end{bmatrix}
+</me>.
+
+<figure xml:id="fig-zero-vector">
+<caption>The zero vector</caption>
+<image width="60%">
+<latex-image>
+\begin{tikzpicture}[scale=1.5]
+	\draw (0, 0) node [circle, scale = 0.4, fill = black] {};
+\draw (0, 0) node [anchor = north east] {$\mathbf{0}$};
+\draw [vector,->] (-1, 0) -- (1,0) node [right] {$x$};
+\draw [vector,->] (0, -1) -- (0,1) node [above] {$y$};
+	
+\end{tikzpicture}
+</latex-image>
+</image>
+</figure>
+</p>
+</li>
+</ul>
+</definition>
+
+<p>
+Recall that different arrows can represent the same vector. Given any arrow, we can move it so that its tail is at the origin.</p>
+
+<definition xml:id="def-standard-pos">
+<statement>
+<p>A vector with its tail at the origin is said to be in <term>standard position</term>.</p>
+</statement>
+</definition>
+
+<p>All position vectors are in standard position, and all vectors in standard position are position vectors of their 
+	tip. If <m>\mathbf{v} = \overrightarrow{OA}</m> is in standard position, where <m>A = (a_1, a_2)</m> is some point, 
+	then <m>\mathbf{v} = [a_1, a_2]</m>. <em>So in standard position, the components of the vector 
+		<m>\mathbf{v} = \overrightarrow{OA}</m> are exactly the same as the coordinates of the point <m>A</m></em>.</p>
+<p>Let <m>\overrightarrow{AB}</m> and <m>\overrightarrow{CD}</m> be any two vectors in <m>\R^2</m>. Then the vectors are 
+	equal if and only if they have the same displacement, i.e.<me>
+\begin{bmatrix}
+  b_1 - a_1 \\ b_2 - a_2
+\end{bmatrix}
+=
+\begin{bmatrix}
+  d_1 - c_1 \\ d_2 - c_2
+\end{bmatrix}
+,
+</me>
+which is precisely when the vectors have equal components. So if <m>\mathbf{u} = [u_1, u_2]</m> 
+and <m>\mathbf{v} = [v_1, v_2]</m>, then <m>\mathbf{u} = \mathbf{v}</m> if and only if <m>u_1 = v_1</m> and <m>u_2 = v_2</m>.</p>
+
+<example xml:id="eg-finding-vectors">
+<statement>
+<p>Let <m>A = (-2, -1)</m>, <m>B = (1, 2)</m>, and <m>C = (3, 3)</m>. Which of the vectors <m>\overrightarrow{AB}, \overrightarrow{BC}</m>, <m>\overrightarrow{OC}</m> are equal?</p>
+<p>We calculate that <me>
+\overrightarrow{AB} = \begin{bmatrix}1-(-2) \\ 2-(-1) \end{bmatrix}  = \begin{bmatrix} 3 \\ 3\end{bmatrix},
+</me>
+and <m>\overrightarrow{BC} = [3-1, 3-2] = [2, 1]</m>, <m>\overrightarrow{OC} = [3, 3]</m>, and <m>\overrightarrow{OA} = [-2, -1]</m>. 
+Thus <m>\overrightarrow{AB} = \overrightarrow{OC}</m>, and all the other vectors are distinct. 
+(The components of <m>\overrightarrow{OA}</m> are the negative of the components of <m>\overrightarrow{BC}</m>, 
+so <m>\overrightarrow{OA}</m> and <m>\overrightarrow{BC}</m> have the same length, but they are not equal vectors 
+because they point in opposite directions.)</p>
+</statement>
+</example>
 
 
 </section>

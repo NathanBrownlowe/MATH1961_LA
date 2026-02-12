@@ -3,6 +3,170 @@
 <section xml:id="sec-projections" xmlns:xi="http://www.w3.org/2001/XInclude">
   <title>Projections</title>
 
-  <p> Text of section. </p>
+ <p>
+Given a point <m>P</m> and a line <m>\ell</m> in the plane, the distance between them is found by going 
+from <m>P</m> to <m>\ell</m> via the shortest path, which is a line segment that intersects 
+<m>\ell</m> perpendicularly.
+</p>
+
+<p>
+We can precisely calculate this using vectors. We use the following setup, which is shown in 
+<xref ref="fig-proj_setup"/>. Let <m>A</m> be any point on the line <m>\ell</m>, <m>\vect{u}</m> 
+be a vector parallel to <m>\ell</m>, and <m>Q</m> be the point on <m>\ell</m> such that 
+<m>\overrightarrow{PQ}</m> is orthogonal to <m>\vect{u}</m>. Let <m>\vect{v} = \overrightarrow{AP}</m>. 
+Then we want to calculate the length of <m>\overrightarrow{PQ}</m>, since this will give the distance 
+from <m>P</m> to <m>\ell</m>. First we calculate <m>\overrightarrow{AQ}</m>.
+</p>
+
+
+
+<figure xml:id="fig-proj_setup">
+<caption>The set up for computing the shortest distance</caption>
+<!-->proj_setup.tikz-->
+</figure>
+
+<p>
+For simplicity, let's first assume that <m>\vect{u}</m> is in the direction of <m>\overrightarrow{AQ}</m>, 
+like in the figure (this makes sure <m>\vect{u}</m> isn't in the opposite direction to 
+<m>\overrightarrow{AQ}</m>). Due to this assumption, we can normalize <m>\vect{u}</m> and multiply 
+by <m>\|\overrightarrow{AQ}\|</m> to get to <m>\overrightarrow{AQ}</m>. This is the first step in the 
+following calculation:
+<md>
+<mrow>
+\overrightarrow{AQ} \amp  = \|\overrightarrow{AQ}\|\Bigl(\frac{1}{\|\vect{u}\|}\vect{u}\Bigr) = \bigl(\|\vect{v}\|\cos\theta\bigr)\Bigl(\frac{1}{\|\vect{u}\|}\vect{u}\Bigr)                      \\
+\amp  = \bigl(\|\vect{u}\|\|\vect{v}\|\cos\theta\bigr)\Bigl(\frac{1}{\|\vect{u}\|^2}\Bigr)\vect{u} = \Bigl(\frac{\vect{u}\cdot\vect{v}}{\vect{u}\cdot\vect{u}}\Bigr)\vect{u}
+</mrow>
+</md>,
+where we have also used trigonometry and the geometric formula for the dot product. Now we can recognise 
+that this formula applies for any vector <m>\vect{u}</m> parallel to <m>\ell</m>: if <m>\vect{u}</m> is 
+in the opposite direction to <m>\overrightarrow{AQ}</m>, then <m>-\vect{u}</m> is in the same direction, 
+so we can apply the previous calculation to see that
+<me>
+\overrightarrow{AQ} = \Bigl(\frac{-\vect{u}\cdot\vect{v}}{(-\vect{u})\cdot(-\vect{u})}\Bigr)(-\vect{u}) = \Bigl(\frac{\vect{u}\cdot\vect{v}}{\vect{u}\cdot\vect{u}}\Bigr)\vect{u},
+</me>
+like before, since all the minus signs cancel.
+</p>
+
+<p>
+The vector <m>\overrightarrow{AQ}</m> is important because it is the vector obtained by `projecting' 
+<m>\vect{v}</m> onto the direction of <m>\vect{u}</m>. Intuitively speaking, this calculates the `component' 
+of <m>\vect{v}</m> in the direction of <m>\vect{u}</m>.
+</p>
+
+<definition xml:id="def-projection">
+<statement>
+<p>Let <m>\vect{u}, \vect{v} \in \R^n</m> with <m>\vect{u} \ne 0</m>. The <term>projection</term> of 
+<m>\vect{v}</m> onto <m>\vect{u}</m> is the vector
+<me>
+\proj{u}{v} = \Bigl(\frac{\vect{u}\cdot\vect{v}}{\vect{u}\cdot\vect{u}}\Bigr)\vect{u}
+</me></p>
+</statement>
+</definition>
+
+<p>
+Going back to our problem, using geometric vector addition, we have
+<me>
+\vect{v} + \overrightarrow{PQ} = \overrightarrow{AQ} = \proj{u}{v}
+</me>.
+So <m>\overrightarrow{PQ} = \proj{u}{v}- \vect{v}</m>, so the distance is 
+<m>\|\overrightarrow{PQ}\| = \|\proj{u}{v} - \vect{v}\|</m>. We summarise this calculation 
+as a theorem.
+</p>
+
+<theorem xml:id="thm-distproj">
+<statement>
+<p>
+In the plane, let <m>P</m> be a point, <m>\ell</m> be a line, and <m>\vect{u}</m> a nonzero vector 
+parallel to <m>\ell</m>. Then the distance from <m>P</m> to <m>\ell</m> is <m>\|\proj{u}{v} - \vect{v}\|</m>, 
+where <m>\vect{v} = \overrightarrow{AP}</m> and <m>A</m> is any point on <m>\ell</m>.
+</p>
+</statement>
+</theorem>
+
+<example xml:id="ex-projection">
+<statement>
+<p>
+The projection of <m>\vect{v} = [4, -4, -1]</m> onto <m>\vect{u} = [1, 1, -1]</m> is
+<md>
+<mrow>
+\proj{u}{v} \amp  = \Bigl(\frac{\vect{u}\cdot\vect{v}}{\vect{u}\cdot\vect{u}}\Bigr)\vect{u}              \\
+\amp  = \Bigl(\frac{[1, 1, -1] \cdot [4, -4, -1]}{[1, 1, -1]\cdot[1, 1, -1]}\Bigr)[1, 1, -1] \\
+\amp  = \frac{1}{3}[1, 1, -1] = \left[\frac{1}{3}, \frac{1}{3}, -\frac{1}{3}\right].
+</mrow>
+</md>
+</p>
+</statement>
+</example>
+
+<example xml:id="ex-more-projections">
+<statement>
+<p>
+Find the projections of <m>\vect{u} = [2, 3]</m> onto <m>\vect{e}_1 = [1, 0]</m> and onto 
+<m>\vect{e}_2 = [0, 1]</m>. We have
+<md>
+<mrow>
+\operatorname{proj}_{\vect{e}_1}{\vect{u}} \amp  = \frac{\vect{e}_1 \cdot \vect{u}}{\vect{e}_1\cdot\vect{e}_1}\vect{e}_1 = \frac{[1, 0]\cdot[2, 3]}{[1, 0]\cdot[1, 0]}[1, 0] \\
+\amp  = 2[1, 0] = [2, 0] = 2\vect{e}_1
+</mrow>
+</md>.
+This is illustrated by <xref ref="fig-proje1"/>. For <m>\vect{e}_2</m>,
+<md>
+<mrow>
+\operatorname{proj}_{\vect{e}_2}{\vect{u}} \amp  = \frac{\vect{e}_2 \cdot \vect{u}}{\vect{e}_2\cdot\vect{e}_2}\vect{e}_2 = \frac{[0, 1]\cdot [2, 3]}{[0, 1]\cdot [0, 1]}[0, 1] \\
+\amp  = 3[0, 1] = [0, 3] = 3\vect{e}_2.
+</mrow>
+</md>
+</p>
+</statement>
+</example>
+
+<figure xml:id="fig-proje1">
+<caption>The projection of <m>[2, 3]</m> onto <m>\vect{e}_1</m> is <m>[2, 0]</m></caption>
+<!--proj_e1.tikz-->>
+</figure>
+
+<p>
+In general, the projection of a vector <m>\vect{v} = [v_1, v_2, \dots, v_n]</m> onto the standard unit 
+vector <m>\vect{e}_i</m> equals <m>v_i\vect{e}_i</m>.
+</p>
+
+<p>
+The formula in <xref ref="thm-distproj"/> has the advantage that it can be understood using only the 
+properties of vector addition and the dot product that we have already seen in this unit. 
+However, there is an another formula using coordinates that is quicker for calculations.
+</p>
+
+<p>
+It is a fact (which will be explained in <xref ref="ch-lines-and-planes"/>) that if the line <m>\ell</m> has 
+equation <m>ax + by = c</m>, then <m>\vect{n} = [a, b]</m> is a normal vector for <m>\ell</m>, which 
+means it is orthogonal to <m>\ell</m>. The distance <m>d</m> from <m>P</m> to the point <m>Q</m> on 
+<m>\ell</m> is <m>\|\proj{n}{v} \|</m>, as shown in <xref ref="fig-proj_setup2"/>.
+</p>
+
+<figure xml:id="fig-proj_setup2">
+<caption>The distance from <m>P</m> to <m>Q</m> is the same as the length of <m>\proj{n}{v}</m>.</caption>
+<!-->proj_setup2.tikz-->
+</figure>
+
+<p>
+This simplifies to
+<me>
+d = \left\|\frac{\vect{n \cdot \vect{v}}}{\vect{n} \cdot \vect{n}} \vect{n}\right\| = \frac{|\vect{n} \cdot\vect{v}|}{\|\vect{n}\|^2}\|\vect{n}\| =\frac{|\vect{n} \cdot\vect{v}|}{\|\vect{n}\|}
+</me>.
+Using coordinates, let <m>A = (x, y)</m> be a point on <m>\ell</m>, and write <m>P = (x_0, y_0)</m>. 
+Then <m>\vect{v} = \overrightarrow{AP} = [x_0 - x, y_0 - y]</m>, so we calculate
+<md>
+<mrow>
+\frac{|\vect{n} \cdot\vect{v}|}{\|\vect{n}\|} \amp  =\frac{|a(x_0 - x) + b(y_0 -y)|}{\sqrt{a^2 + b^2}}  \\
+\amp  =\frac{|ax_0 + by_0 - (ax + by)|}{\sqrt{a^2 + b^2}} \\
+\amp  =\frac{|ax_0 + by_0 - c|}{\sqrt{a^2 + b^2}}
+</mrow>
+</md>,
+where we used the equation for <m>\ell</m> in the last step. Therefore the shortest distance 
+from <m>P = (x_0, y_0)</m> to the line <m>\ell: ax + by = c</m> is
+<me>
+d =\frac{|ax_0 + by_0 - c|}{\sqrt{a^2 + b^2}}
+</me>.
+</p>
 
 </section>

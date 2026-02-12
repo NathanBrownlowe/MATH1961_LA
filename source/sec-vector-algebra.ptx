@@ -3,6 +3,301 @@
 <section xml:id="sec-vector-algebra" xmlns:xi="http://www.w3.org/2001/XInclude">
   <title>Vector algebra</title>
 
-  <p> Text of section. </p>
+<p>There are two main operations which can be performed on vectors. The first is addition. 
+We add vectors by adding their components.</p>
+
+
+<definition xml:id="def-sum-vec">
+<statement>
+<p>Given two vectors <m>\vect{a} = [a_1, a_2]</m> and <m>\vect{b} = [b_1, b_2]</m>, the sum of <m>\vect{a}</m> and <m>\vect{b}</m> is
+<me>
+\vect{a} + \vect{b} = [a_1 + b_1, a_2 + a_2]
+</me>.</p>
+</statement>
+</definition>
+
+
+<example xml:id="">
+<statement>
+<p>If <m>\vect{a} = [3, 6]</m> and <m>\vect{b} = [1, -1]</m>, then <m>\vect{a} + \vect{b} = [3 +1, 6+ (-1)] = [4, 5]</m>.</p>
+</statement>
+</example>
+<p>Geometrically, vectors are added `tip to tail'. Here's what this means. To calculate <m>\vect{a} + \vect{b}</m> 
+  geometrically, there are two steps.
+<ol>
+<li>
+<p>Position <m>\vect{b}</m> so that its tail touches the tip of <m>\vect{a}</m>.</p>
+</li>
+<li>
+<p>To find <m>\vect{a} + \vect{b}</m>, draw the arrow that completes the triangle with other two sides <m>\vect{a}</m> and <m>\vect{b}</m>.</p>
+</li>
+</ol>
+In other words, <m>\vect{a} + \vect{b}</m> is then vector with its tail at the tail 
+of <m>\vect{a}</m>, and with tip at the tip of <m>\vect{b}</m>, as shown in <xref ref="fig-ttt"/>.</p>
+
+<figure xml:id="fig-ttt">
+<caption>Adding vectors tip to tail</caption>
+<image width="60%">
+<latex-image>
+\begin{tikzpicture}[scale = 3.6]
+    %x-y axis
+    \draw (0, 0) node [anchor = north east] {$O$};
+    \draw [vector,->] (-0.375, 0) -- (1.05,0) node [right] {$x$};
+    \draw [vector,->] (0, -0.375) -- (0,1.05) node [above] {$y$};
+
+    %arrows
+    \draw [vector,->, red] (0, 0) -- (0.6, 0.3);
+    \draw [vector,->, blue] (0.6, 0.3) -- (0.8, 0.8);
+    \draw [vector,->, violet] (0, 0) -- (0.79, 0.79);
+
+    %labels
+    \draw (0.37, 0.2) node [below, red] {$\vect{a}$};
+    \draw (0.7, 0.5) node [right, blue] {$\vect{b}$};
+    \draw (0.44, 0.5) node [left, violet] {$\vect{a} + \mathbf{b}$};
+\end{tikzpicture}
+</latex-image>
+</image>
+</figure>
+
+<example xml:id="ex-add">
+<statement>
+<p>Let <m>\vect{a} = [5, 1]</m> and <m>\vect{b} = [-2, 3]</m>. Algebraically, 
+	<m>\vect{a} + \vect{b} = [5 + (-2), 1 + 3] = [3, 4]</m>. 
+We can also calculate this geometrically, which is done in <xref ref="fig-vadd"/>, giving the 
+same answer that <m>\vect{a} + \vect{b} = [3, 4]</m>.
+</p>
+
+<figure xml:id="fig-vadd">
+<caption><xref ref="ex-add"/>, geometrically</caption>
+<image width="60%">
+<latex-image>
+\begin{tikzpicture}[scale = 0.6]
+    \draw (0, 0) node [anchor = north east] {$O$};
+    \draw [vector,->] (-2.5, 0) -- (7,0) node [right] {$x$};
+    \draw [vector,->] (0, -2.5) -- (0,7) node [above] {$y$};
+    %a
+    \draw [vector, ->] (0, 0) -- (5, 1);
+    \draw (2.5, 0.5) node [above] {$\mathbf{a}$};
+    %b
+    \draw [vector, ->] (5, 1) -- (3, 4);
+    \draw (4, 2.5) node [right] {$\mathbf{b}$};
+    %c
+    \draw [vector, ->] (0, 0) -- (3, 4);
+    \draw (1.5, 2) node [left] {$\mathbf{c}$};
+    %Grid ticks
+    \foreach \x in {1,...,6} \draw (\x,.1)--(\x,-.1) node[below] {\footnotesize $\x$};
+    \foreach \y in {1,...,6} \draw (.1,\y)--(-.1,\y) node[left] {\footnotesize $\y$};
+    \foreach \x in {-2,-1} \draw (\x,.1)--(\x,-.1);
+    \foreach \y in {-2, -1} \draw (.1,\y)--(-.1,\y);
+\end{tikzpicture}
+</latex-image>
+</image>
+</figure>
+
+</statement>
+</example>
+
+<p>Addition of vectors is <term>commutative</term>, which means that for any 
+vectors <m>\vect{a}, \vect{b} \in \mathbb{R}^2</m>,
+<me>
+\vect{a} + \vect{b} = \vect{b} + \vect{a}
+</me>.
+</p>
+<p>This is shown geometrically by the <term>parallelogram rule</term> in <xref ref="fig-parallrule"/>.</p>
+<p>We can also prove this algebraically. (You might want to assume that anything called addition or 
+using the symbol <m>+</m> is commutative, because we know that <m>a + b = b+a</m> 
+when <m>a</m> and <m>b</m> are real or complex numbers. But since vector addition is a new operation, 
+we need to prove it.) The proof is that
+<md>
+<mrow>
+\vect{a} + \vect{b} \amp  = [a_1, a_2] + [b_1, b_2] = [a_1 + b_1, a_2 + b_2] \\
+\amp  =[b_1 + a_1, b_2 + a_2] = [b_1, b_2] + [a_1, a_2]  \\
+\amp  =\vect{b} + \vect{a}
+</mrow>
+</md>.</p>
+
+
+
+<figure xml:id="fig-parallrule">
+<caption>The parallelogram rule shows geometrically that <m>\vect{a}+\vect{b} = \vect{b} + \vect{a}</m>.</caption>
+<image width="60%">
+<latex-image>
+\begin{tikzpicture}[scale=0.53]
+%a (bottom)
+\draw [vector,->] (0, 0) -- (6, 1);
+\draw (3, 0.5) node [below] {$\vect{a}$};
+%b (right)
+\draw [vector,->] (6, 1) -- (6.98, 5.9);
+\draw (6.5, 3.5) node [right] {$\vect{b}$};
+%b (left)
+\draw [vector,->] (0, 0) -- (1, 5);
+\draw (0.5, 2.5) node [left] {$\vect{b}$};
+%a (top)
+\draw [vector,->] (1, 5) -- (7, 6);
+\draw (4, 5.5) node [above] {$\vect{a}$};
+%diagonal
+\draw [vector,->] (0, 0) -- (6.9, 5.9);
+\draw (3.5, 3) node [left, xshift =-0.5mm] {$\vect{a}+\mathbf{b}$};
+\draw (3.5, 3) node [right] {$=\vect{b}+\mathbf{a}$};
+\end{tikzpicture}
+</latex-image>
+</image>
+</figure>
+
+<p>Vector addition is also <term>associative</term>, which means that for all vectors <m>\vect{a}, \vect{b}, \vect{c} \in \R^2</m>,
+<me>
+(\vect{a} + \vect{b}) + \vect{c} = \vect{a} + (\vect{b} + \vect{c})
+</me>.
+</p>
+
+<p>The second main vector operation is scaling. We may call real numbers <term>scalars</term>, since 
+they are used to scale vectors.</p>
+
+
+<definition xml:id="def-scaling">
+<statement>
+<p>Let <m>c \in \R</m> be a scalar and <m>\vect{a} = [a_1, a_2] \in \R^2</m> a vector. The 
+<term>scalar multiple</term> <m>c\vect{a}</m> is the vector
+<me>
+c\vect{a} = [ca_1, ca_2]
+</me>.</p>
+</statement>
+</definition>
+
+
+<p>Geometrically, <m>c</m> scales <m>\vect{a}</m> by a factor of <m>|c|</m>, and flips
+ <m>\vect{a}</m> if <m>c \lt  0</m>.</p>
+
+<p>
+<term>Special cases:</term> <m>1\vect{a} = \vect{a}</m>, and <m>0\vect{a} = \vect{0}</m>. We 
+define the <term>negative</term> of <m>\vect{a}</m> by <m>-\vect{a} = (-1)\vect{a}</m>. 
+Then <m>-\vect{a}</m> has the same length but the opposite direction of <m>\vect{a}</m>.</p>
+
+<example xml:id="ex-scale">
+<statement>
+<p>Let <m>\vect{a} = [2, 1].</m> Find <m>3\vect{a}</m>, <m>0\vect{a}</m> and <m>-\frac{1}{2}\vect{a}</m>.</p>
+<p>Algebraically, <m>3\vect{a} = 3[2, 1] = [6, 3]</m>, <m>0\vect{a} = 0</m>, and 
+<m>-\frac{1}{2}\vect{a} = [-1, -1/2]</m>. This is shown geometrically in <xref ref="fig-scale_ex"/>.</p>
+
+<figure xml:id="fig-scale_ex">
+<caption>Scaling in this example</caption>
+<image width="60%">
+<latex-image>
+\begin{tikzpicture}[scale = 0.8]
+    %x-y axis
+    \draw [vector,->] (-2.5, 0) -- (7,0) node [right] {$x$};
+    \draw [vector,->] (0, -1.5) -- (0,4) node [above] {$y$};
+    
+    %vectors
+    \draw [vector,->, color = blue] (0, 0) -- (2, 1) node [left, xshift = -1.5mm] {$\vect{a}$};
+    \draw [vector,->] (0, 0) -- (6, 3) node [left, xshift = -3mm] {$3\vect{a}$};
+    \draw [vector,->] (0, 0) -- (-1, -1/2) node [anchor = north east] {$-\frac{1}{2}\vect{a}$};
+    \draw (0, 0) node [circle, scale = 0.4, fill = black] {};
+    \draw (0, 0) node [anchor = south east] {$0\vect{a}$};
+
+    %Grid ticks
+    \foreach \x in {1,...,6} \draw (\x,.1)--(\x,-.1) node[below] {\footnotesize $\x$};
+    \foreach \y in {1,...,3} \draw (.1,\y)--(-.1,\y) node[left] {\footnotesize $\y$};
+    \draw (.1,-1)--(-.1,-1) node[left] {\footnotesize $-1$};
+    \foreach \x in {-1,-2} \draw (\x,.1)--(\x,-.1);
+\end{tikzpicture}
+</latex-image>
+</image>
+\</figure>
+</statement>
+</example>
+
+<p>We can subtract a vector by adding its negative.</p>
+
+<definition xml:id="def-vec-subtraction">
+<title>Vector subtraction</title>
+<statement>
+<p>
+Let <m>a, b \in \R^2</m> be vectors. We define <term>vector subtraction</term> by
+<me>
+\vect{a} - \vect{b} = \vect{a} + (-\vect{b})
+</me>.
+So if <m>a = [a_1, a_2]</m> and <m>b = [b_1, b_2]</m>, then <m>\vect{a} - \vect{b} = [a_1-b_1, a_2-b_2]</m>.</p>
+</statement>
+</definition>
+
+<p>If <m>A = (a_1, a_2)</m> and <m>(b_1, b_2)</m> are points, then we previously introduced the position 
+vectors <m>\overrightarrow{OA} = [a_1, a_2]</m> and <m>\overrightarrow{OB} = [b_1, b_2]</m>, and the 
+vector <m>\overrightarrow{AB} = [b_1 - a_1, b_2 - a_2].</m> We can now calculate that
+<me>
+\overrightarrow{AB} = [b_1 - a_1, b_2 - a_2] = [b_1, b_2] - [a_1, a_2] = \overrightarrow{OB} - \overrightarrow{OA}
+</me>.
+</p>
+
+<remark xml:id="vectors-complex-numbers">
+<p>The complex numbers can be considered to be a set of vectors, with the operations
+<md>
+<mrow>
+(a_1 + i a_2) + (b_1 + ib_2) \amp  = (a_1 + b_1) + i(a_2 + b_2) \\
+c(a_1 + ia_2)                \amp  = ca_1 + i(ca_2)
+</mrow>
+</md>
+for <m>a_1, a_2, b_1, b_2, c \in \R</m>. To see how this fits in with our geometric definition of a 
+vector in the plane, consider <m>z = re^{i\theta}</m> in polar form. Then the modulus <m>r</m> is the 
+length of the vector <m>z</m> and the angle <m>\theta</m> determines its direction. This definition of 
+addition and scaling in the complex plane corresponds to the definitions for the Cartesian plane, after 
+the association of <m>x+iy \in \C</m> with <m>[x, y]\in \R^2</m>.</p>
+</remark>
+
+<figure xml:id="R2-and-C">
+      <caption>Comparison of vectors in <m>\R^2</m> and <m>\C</m>.</caption>
+      <sidebyside widths="45% 45%" margins="auto" valign="middle">
+	<figure xml:id="vec-add-in-R2">
+	  <caption>Vector addition in <m>\R^2</m>.</caption>
+    <image width="100%">
+<latex-image>
+\begin{tikzpicture}[scale=0.53]
+% x-y axis
+\draw [vector,->] (-2, 0) -- (8,0) node [right] {$x$};
+\draw [vector,->] (0, -2) -- (0,7) node [above] {$y$};
+
+%a (bottom)
+\draw [vector,->] (0, 0) -- (6, 1) node [right] {$[a_1, a_2]$};
+%b (right)
+\draw [gray, -\gt] (6, 1) -- (7, 6);
+%b (left)
+\draw [vector,->] (0, 0) -- (1, 5);
+\draw (0.5, 2.5) node [left, xshift = -2mm] {$[b_1, b_2]$};
+%a (top)
+\draw [gray, -\gt] (1, 5) -- (7, 6);
+%diagonal
+\draw [vector,->] (0, 0) -- (6.96, 5.96) node [above] {$[a_1 + b_1, a_2 + b_2]$};
+\end{tikzpicture}
+</latex-image>
+</image>
+	</figure>
+	<figure xml:id="vec-add-in-C">
+	  <caption>Vector addition in <m>\C</m>.</caption>
+	 <image width="100%">
+<latex-image>
+\begin{tikzpicture}[scale=0.53]
+
+%axes
+\draw [vector,->] (-2, 0) -- (8,0) node [right] {$\R$};
+\draw [vector,->] (0, -2) -- (0,7) node [above] {$i\R$};
+
+%a (bottom)
+\draw [vector,->] (0, 0) -- (6, 1) node [right] {$a_1 + ia_2$};
+%b (right)
+\draw [gray, -\gt] (6, 1) -- (7, 6);
+%b (left)
+\draw [vector,->] (0, 0) -- (1, 5);
+\draw (0.5, 2.5) node [left, xshift = -2mm] {$b_1 + ib_2$};
+%a (top)
+\draw [gray, -\gt] (1, 5) -- (7, 6);
+%diagonal
+\draw [vector,->] (0, 0) -- (6.96, 5.96) node [above] {$(a_1 + b_1) + i(a_2 + b_2)$};
+\end{tikzpicture}
+</latex-image>
+</image>
+	</figure>
+      </sidebyside>
+    </figure>
+
 
 </section>

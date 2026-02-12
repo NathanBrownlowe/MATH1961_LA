@@ -3,6 +3,192 @@
 <section xml:id="sec-matrix-add-and-scale" xmlns:xi="http://www.w3.org/2001/XInclude">
   <title>Matrix addition and scalar multiplication</title>
 
-  <p> Text of section. </p>
+ <definition xml:id="def-matrix-sum">
+<statement>
+<p>
+The <term>sum</term> of two <m>m\times n</m> matrices
+<me>
+A = [a_{ij}]_{m\times n}, \qquad B = [b_{ij}]_{m\times n}
+</me>
+is the <m>m\times n</m> matrix
+<me>
+A + B  = [a_{ij} + b_{ij}]_{m\times n}
+</me>.
+</p>
+</statement>
+</definition>
+
+<p>
+So to add matrices, we add each component. Note that the matrices are required to be the same size. 
+Scalar multiplication of matrices is also defined by considering each component.
+</p>
+
+
+<definition xml:id="def-scalar-multiple">
+<title>Scalar multiple</title>
+<statement>
+<p>
+The <term>scalar multiple</term> of an <m>m\times n</m> matrix <m>A = [a_{ij}]_{m\times n}</m> by a 
+scalar <m>c \in \R</m> is the <m>m \times n</m> matrix
+<me>
+cA = [ca_{ij}]_{m\times n}
+</me>.
+</p>
+</statement>
+</definition>
+
+<p>
+Like for vectors (and for numbers), we write <m>-A = (-1)A</m> and <m>A - B = A + (-B)</m>.
+</p>
+
+<example xml:id="ex-matrix-algebra-basic">
+<statement>
+<p>
+Let
+<me>
+A =
+\begin{bmatrix}
+  2 \amp  3  \amp  1 \\
+  0 \amp  -1 \amp  2 \\
+  5 \amp  0  \amp  3
+\end{bmatrix}
+, \qquad B =
+\begin{bmatrix}
+  1 \amp  2 \\
+  3 \amp  4
+\end{bmatrix}
+, \qquad C =
+\begin{bmatrix}
+  -1 \amp  0 \amp  7 \\
+  5  \amp  2 \amp  3 \\
+  1  \amp  0 \amp  0
+\end{bmatrix}
+
+</me>. Find all of the following that are defined: <m>2A + 3C</m>, <m>A-C</m>, <m>A+B</m>, <m>B+C</m>.
+</p>
+<p>We calculate that
+<md>
+<mrow>
+2A + 3C \amp  = 2
+\begin{bmatrix}
+  2 \amp  3  \amp  1 \\
+  0 \amp  -1 \amp  2 \\
+  5 \amp  0  \amp  3
+\end{bmatrix}
++ 3
+\begin{bmatrix}
+  -1 \amp  0 \amp  7 \\
+  5  \amp  2 \amp  3 \\
+  1  \amp  0 \amp  0
+\end{bmatrix}\\
+\amp =
+\begin{bmatrix}
+  4  \amp  6  \amp  2 \\
+  0  \amp  -2 \amp  4 \\
+  10 \amp  0  \amp  6
+\end{bmatrix}
++
+\begin{bmatrix}
+  -3 \amp  0 \amp  21 \\
+  15 \amp  6 \amp  9  \\
+  3  \amp  0 \amp  0
+\end{bmatrix}
+\\
+\amp  =
+\begin{bmatrix}
+  1  \amp  6 \amp  23 \\
+  15 \amp  4 \amp  13 \\
+  13 \amp  0 \amp  6
+\end{bmatrix}
+</mrow>
+</md>
+and
+<me>
+A-C =
+\begin{bmatrix}
+  2 \amp  3  \amp  1 \\
+  0 \amp  -1 \amp  2 \\
+  5 \amp  0  \amp  3
+\end{bmatrix}
+-
+\begin{bmatrix}
+  -1 \amp  0 \amp  7 \\
+  5  \amp  2 \amp  3 \\
+  1  \amp  0 \amp  0
+\end{bmatrix}
+=
+\begin{bmatrix}
+  3  \amp  3  \amp  -6 \\
+  -5 \amp  -3 \amp  -1 \\
+  4  \amp  0  \amp  3
+\end{bmatrix}
+</me>.
+<m>A+B</m> and <m>B+C</m> are not defined, since <m>B</m> is a different size to <m>A</m> and <m>C</m>.
+</p>
+</statement>
+</example>
+
+<p>
+Matrix addition and scalar multiplication has the following properties.
+</p>
+
+<theorem xml:id="thm-matrix-addition">
+<statement>
+<p>
+Let <m>A, B, C</m> be <m>m\times n</m> matrices, and let <m>r, s</m> be scalars. Then
+<ol>
+<li>
+<p><m>A + B=B +A\quad</m> (commutativity of addition)
+</p>
+</li>
+<li>
+<p><m>(A+B)+C = A+(B+C)\quad</m> (associativity)
+</p>
+</li>
+<li>
+<p><m>A + 0_{m\times n} = A</m>
+</p>
+</li>
+<li>
+<p><m>A+(-A) = 0_{m\times n}</m>
+</p>
+</li>
+<li>
+<p><m>r(A+B) = rA +rB\quad</m> (distributivity)
+</p>
+</li>
+<li>
+<p><m>(r+s)A = rA + sA\quad</m> (distributivity)
+</p>
+</li>
+<li>
+<p><m>r(sA) = (rs)A</m>
+</p>
+</li>
+<li>
+<p><m>1A = A</m>.</p>
+</li>
+</ol>
+</p>
+</statement>
+</theorem>
+
+<!--<exercise>
+<statement>
+\label{prob: matrix addition}
+<p>Prove <xref ref="thm-matrix addition"/>, or at least think about why it should be true.</p>
+</statement>
+<hint>
+</hint>
+<answer>
+</answer>
+<solution>
+</solution>
+</exercise>-->
+
+<p>
+Notice that these are the same properties satisfied for vector addition and scalar multiplication 
+(see <xref ref="thm-vec-prop"/>).
+</p>
 
 </section>

@@ -1,0 +1,123 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<section xml:id="sec-inverses-and-equations" xmlns:xi="http://www.w3.org/2001/XInclude">
+  <title>Inverses and matrix equations</title>
+
+<p>
+Let <m>a, b, x \in \R</m>, and consider the linear equation <m>ax =b</m>. If <m>a</m> is invertible 
+(so if <m>a\ne 0</m>), then the equation has a unique solution given by <m>x = a\inv b</m>. 
+If <m>a = 0</m>, the equation becomes <m>0x = b</m>. This has infinitely many solutions if <m>b = 0</m>, 
+and no solutions if <m>b\ne 0</m>.</p>
+<p>Now let <m>A</m> be an <m>n\times n</m> matrix, let 
+<m>\vect{b}, \vect{x}</m> be <m>n\times 1</m> column matrices, and consider the matrix 
+equation <m>A\vect{x} = \vect{b}</m> corresponding to a system of <m>n</m> linear equations in 
+<m>n</m> variables
+<md>
+<mrow>
+a_{11}x_1 + a_{12}x_2 + \amp  \dots + a_{1n}x_n = b_1 \\
+a_{21}x_1 + a_{22}x_2 + \amp  \dots + a_{2n}x_n = b_2 \\
+\vdots                  \amp                          \\
+a_{m1}x_1 + a_{m2}x_2 + \amp  \dots + a_{mn}x_n = b_m
+</mrow>
+</md>
+where
+<me>
+A = [a_{ij}], \qquad \vect{x} =
+\begin{bmatrix}
+  x_1 \\ x_2\\ \vdots\\ x_n
+\end{bmatrix}
+, \qquad \vect{b} =
+\begin{bmatrix}
+  b_1 \\ b_2\\ \vdots\\ b_n
+\end{bmatrix}
+</me>.
+</p>
+
+<theorem xml:id="thm-uniquesoln">
+<statement>
+<p>
+If <m>A</m> is an invertible <m>n\times n</m> matrix, then the equation 
+<m>A\vect{x} = \vect{b}</m> has unique solution <m>\vect{x} = A\inv\vect{b}</m>.
+</p>
+</statement>
+<proof>
+<m>\vect{x} = A\inv\vect{b}</m> is a solution because
+<me>
+A\vect{x} = A(A\inv \vect{b}) = AA\inv \vect{b} = I\vect{b} = \vect{b}
+</me>.
+It is unique, because if <m>A\vect{y} = \vect{b}</m> for another solution <m>\vect{y}</m>, then
+<me>
+\vect{y} = I\vect{y} = (A\inv A)\vect{y} = A\inv (A\vect{y}) = A\inv \vect{b} = \vect{x}.
+</me>
+</proof>
+</theorem>
+
+<remark xml:id="rem-non-invertible-inf-sols">
+<p>
+If <m>A</m> is not invertible, then <m>A\vect{x} = \vect{b}</m> will have infinitely many solutions 
+or no solutions, depending on <m>\vect{b}</m>. This is because the RREF of <m>A</m> will have at 
+least one column without a leading entry, so if <m>A\vect{x} = \vect{b}</m> is consistent, 
+the solution involves at least one parameter.
+</p>
+</remark>
+
+<example xml:id="ex-inverses-to-solve">
+<statement>
+<p>
+Use a matrix inverse to solve
+<me>
+\begin{cases}
+  x + 2y - z   \amp  = 3 \\
+  2x + 2y + 4z \amp  =0  \\
+  x + 3y - 3z  \amp  = 1
+\end{cases}
+</me>.
+</p>
+
+<p>
+This is <m>A\vect{x} = \vect{b}</m> for
+<me>
+A =
+\begin{bmatrix}
+  1 \amp  2 \amp  -1 \\
+  2 \amp  2 \amp  4  \\
+  1 \amp  3 \amp  -3
+\end{bmatrix}
+, \qquad \vect{x} =
+\begin{bmatrix}
+  x \\ y\\ z
+\end{bmatrix}
+, \qquad \vect{b} =
+\begin{bmatrix}
+  3 \\ 0\\ 1
+\end{bmatrix}
+,
+</me>
+where <m>A</m> is the same matrix that we calculated the inverse of in <xref ref="ex-inv3"/>. So
+<me>
+\vect{x} = A\inv \vect{b} =
+\begin{bmatrix}
+  9  \amp  -\frac{3}{2} \amp  -5 \\
+  -5 \amp  1            \amp  3  \\
+  -2 \amp  \frac{1}{2}  \amp  1
+\end{bmatrix}
+\begin{bmatrix}
+  3 \\ 0\\ 1
+\end{bmatrix}
+=
+\begin{bmatrix}
+  22 \\ -12\\ -5
+\end{bmatrix}
+</me>.
+We conclude that there is a unique solution <m>x = 22</m>, <m>y = -12</m>, <m>z = -5</m>.
+</p>
+</statement>
+</example>
+
+<p>This method might seem efficient, but it relies on computing a matrix inverse, which 
+for matrices larger than <m>2\times 2</m> can take some time to compute. However, it does 
+have the advantage that if we change the value of <m>\vect{b}</m>, the inverse <m>A\inv</m> 
+will still be the same, so we can quickly re-calculate <m>\vect{x} = A\inv \vect{b}</m>.
+</p>
+
+</section>

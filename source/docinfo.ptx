@@ -19,11 +19,53 @@
   <!-- macros for defining latex math shortcuts. It is good practice -->
   <!-- to define these semantically, so that the macro relates to what-->
   <!-- it defines. -->
-  <macros> \newcommand{\N}{\mathbb N} \newcommand{\Z}{\mathbb Z} \newcommand{\Q}{\mathbb Q} \newcommand{\R}{\mathbb R} </macros>
+  <macros> 
+    \newcommand{\N}{\mathbb N} 
+    \newcommand{\Z}{\mathbb Z} 
+    \newcommand{\Q}{\mathbb Q} 
+    \newcommand{\R}{\mathbb R} 
+    \newcommand{\C}{\mathbb C}
+    \newcommand{\vect}[1]{\mathbf{#1}}
+    \newcommand{\proj}[2]{\operatorname{proj}_{#1}\!\left(#2\right)}
+    \newcommand{\p}{\mathcal P}
+    \newcommand{\inv}{^{-1}}
+    <!--\newcommand{\det}{\operatorname{det}}-->
+    \newcommand{\colvec}[2]{\begin{bmatrix}#1\\#2\end{bmatrix}}
+    \newenvironment{amatrix}[1]{%
+    \left[\begin{array}{#1|c}
+    }{%
+    \end{array}\right]
+      }
+
+    \newenvironment{aamatrix}{%
+        \left[\begin{array}{cc|cc@{}}
+          }{%
+      \end{array}\right]%
+          }
+
+    \newenvironment{aaamatrix}{%
+          \left[\begin{array}{ccc|ccc@{}}
+          }{%
+        \end{array}\right]%
+        }
+  </macros>
 
   <!-- If you put any latex-image elements you can include preambles -->
   <!-- for those in the next element. -->
-  <latex-image-preamble> \usepackage{tikz, pgfplots} \usetikzlibrary{positioning,matrix,arrows} \usetikzlibrary{shapes,decorations,shadows,fadings,patterns} \usetikzlibrary{decorations.markings} </latex-image-preamble>
+  <latex-image-preamble> 
+    \usepackage{tikz}
+    \usepackage{pgfplots} 
+    \usetikzlibrary{positioning,matrix,arrows} 
+    \usetikzlibrary{shapes,decorations,shadows,fadings,patterns} 
+    \usetikzlibrary{decorations.markings} 
+    \usetikzlibrary{calc}
+    \usetikzlibrary{arrows.meta}
+    \usetikzlibrary{positioning}
+    \usetikzlibrary{intersections}
+    \usetikzlibrary{backgrounds}
+
+    \tikzset{vector/.style={semithick}}
+  </latex-image-preamble>
 
   <!-- It is possible to rename elements: -->
   <!-- <rename element="assemblage" xml:lang="en-US">Summary</rename> -->
@@ -31,5 +73,11 @@
   <!-- Specify the default type of cross reference: -->
   <!-- <cross-references text="type-global" /> -->
 
+<math-package latex-name="array"/>
+<math-package latex-name="accents"/>
+
+<math-package latex-name="mathtools" mathjax-name="mathtools"/>
 
 </docinfo>
+
+

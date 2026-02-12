@@ -3,6 +3,179 @@
 <section xml:id="sec-transpose" xmlns:xi="http://www.w3.org/2001/XInclude">
   <title>Transpose</title>
 
-  <p> Text of section. </p>
+<definition xml:id="def-transpose">
+<statement>
+<p>
+The <term>transpose</term> of an <m>m\times n</m> matrix <m>A = [a_{ij}]_{m\times n}</m> is the 
+<m>n\times m</m> matrix
+<me>
+A^T = [a^*_{ij}]_{n\times m},
+</me>
+where <m>a^*_{ij} = a_{ji}</m>.
+</p>
+</statement>
+</definition>
+
+<p>
+We see that <m>A^T</m> is obtained from <m>A</m> by swapping the row index with the column index. 
+This means that <m>A^T</m> is the matrix where the columns in <m>A</m> have become rows (the first 
+column becomes the first row, etc.), and the rows in <m>A</m> have become columns.
+</p>
+
+<example xml:id="ex-calculating-transposes">
+<statement>
+<p>
+The transpose of the matrix
+<me>
+A =
+\begin{bmatrix}
+  -3 \amp  4 \amp  2 \\ 6 \amp  1 \amp  0
+\end{bmatrix}
+</me>
+is <me>
+A^T =
+\begin{bmatrix}
+  -3 \amp  6 \\ 4\amp  1\\ 2\amp 0
+\end{bmatrix}
+.
+</me>
+</p>
+</statement>
+</example>
+
+<remark xml:id="rem-transpose-size">
+<p>
+Let <m>A</m> be an <m>m\times n</m> matrix. Then
+<ul>
+<li>
+<p><m>A</m> is <m>m\times n</m> and <m>A^T</m> is <m>n\times m</m>, so <m>AA^T</m> is defined and 
+has size <m>m\times m</m>
+</p>
+</li>
+<li>
+<p><m>A^T</m> is <m>n\times m</m> and <m>A</m> is <m>m\times n</m>, so <m>A^TA</m> is defined and 
+has size <m>n\times n</m>.</p>
+</li>
+</ul>
+</p>
+</remark>
+
+<example xml:id="ex-more-transposes">
+<statement>
+<p>
+Consider two vectors <m>\vect{x}, \vect{y} \in \R^n</m> as <m>n\times 1</m> column matrices
+<me>
+\vect{x} =
+\begin{bmatrix}
+  x_1 \\ x_2\\ \vdots\\ x_n
+\end{bmatrix}
+, \qquad \vect{y} =
+\begin{bmatrix}
+  y_1 \\ y_2\\ \vdots\\ y_n
+\end{bmatrix}
+</me>.
+Then <m>\vect{x}^T</m> is <m>1\times n</m> and <m>\vect{y}</m> is <m>n\times 1</m>, so 
+<m>\vect{x}^T\vect{y}</m> is defined and is a <m>1\times 1</m> matrix, which we can view 
+as a real number. Show that
+<me>
+\vect{x}^T\vect{y} = \vect{x}\cdot\vect{y}
+</me>.
+</p>
+<p>
+Answer: we calculate that
+<md>
+<mrow>
+\vect{x}^T\vect{y} \amp  =
+\begin{bmatrix}
+  x_1 \amp  x_2 \amp  \cdots \amp  x_n
+\end{bmatrix}
+\begin{bmatrix}
+  y_1 \\ y_2\\ \vdots\\y_n
+\end{bmatrix}
+\\
+\amp  = [x_1y_1 + x_2y_2 + \dots + x_ny_n] \\
+\amp  = \vect{x}\cdot \vect{y}.
+</mrow>
+</md>
+</p>
+</statement>
+</example>
+
+<p>
+The matrix transpose has the following properties. Properties 2 and 3 are referred to as linearity. 
+Property 4 says that we need to be careful when taking the transpose of a matrix product: we need 
+to remember to reverse the order.
+</p>
+
+
+<theorem xml:id="thm-transpose-props">
+<statement>
+<p>Let <m>A = [a_{ij}]</m> and <m>B = [b_{ij}]</m> be matrices, and <m>c\in \R</m>. Then, whenever 
+the relevant expressions are defined, we have
+<ol>
+<li>
+<p><m>(A^T)^T = A</m>
+</p>
+</li>
+<li>
+<p><m>(A+B)^T = A^T + B^T</m>
+</p>
+</li>
+<li>
+<p><m>(cA)^T = c(A^T)</m>
+</p>
+</li>
+<li>
+<p><m>(AB)^T = B^TA^T</m>
+</p>
+</li>
+<li>
+<p><m>(A^k)^T = (A^T)^k</m>, for any <m>k \in \N</m>
+</p>
+</li>
+</ol>
+By repeatedly applying Properties <m>2</m> and <m>4</m>, we can generalise these for arbitrary sums and 
+products to get
+<md>
+<mrow>
+(A_1 + A_2 + \dots + A_k)^T \amp  = A_1^T + A_2^T + \dots +A_k^T       \\
+(A_1A_2\cdots A_{k-1}A_k)^T \amp  = A_k^T A_{k-1}^T \cdots A_2^TA_1^T
+</mrow>
+</md>.
+</p>
+</statement>
+
+<proof>
+<p>
+For 1, swapping the rows and columns twice gives back the original matrix. For 2, let 
+<m>c_{ij} = a_{ij} + b_{ij}</m>, so that <m>A+B = [c_{ij}]</m>. Then <me>
+c^*_{ij} = c_{ji} = a_{ji} + b_{ji} = a^*_{ij} + b^*_{ij}
+</me>. Thus <me>
+(A+B)^T = [c^*_{ij}] = [a^*_{ij} + b^*_{ij}] = [a^*_{ij}] + [b^*_{ij}] = A^T + B^T
+</me>.
+The proof of 3 is that <m>(cA)^T = [ca_{ij}]^T = [ca^*_{ij}] = c[a^*_{ij}] = cA^T</m>.
+</p>
+
+<p>
+For <m>4</m>, so that <m>A</m> and <m>B</m> are the right size, write <m>A = [a_{ik}]_{m\times n}</m> 
+and <m>B = [b_{kj}]_{n \times p}</m>. Then <m>B^TA^T</m> is <m>p \times m</m> and <m>AB</m> is 
+<m>m\times p</m>, so <m>(AB)^T</m> is <m>p\times m</m>. Hence <m>(AB)^T</m> and <m>B^TA^T</m> 
+have the same size; we now show they have the same entries. The <m>(i, j)</m>-entry of 
+<m>(AB)^T</m> is the <m>(j, i)</m>-entry of <m>AB</m>, which is
+<me>
+\sum_{k=1}^n a_{jk}b_{ki} = \sum_{k=1} b_{ik}^*a^*_{kj},
+</me>
+which equals the <m>(i,j)</m>-entry of <m>B^TA^T</m>.
+</p>
+
+<p>
+Finally, to prove Property 5, use the generalised version of Property 4 with 
+<m>A = A_1 = A_2 =\dots = A_k</m> to get
+<me>
+(A^k)^T = (AA\cdots A)^T = A^T \cdots A^TA^T = (A^T)^k.
+</me>
+</p>
+</proof>
+</theorem>
 
 </section>

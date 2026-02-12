@@ -3,6 +3,207 @@
 <section xml:id="sec-diagonalisation" xmlns:xi="http://www.w3.org/2001/XInclude">
   <title>Diagonalisation</title>
 
-  <p> Text of section. </p>
+
+<definition xml:id="def-diagonalisable">
+<statement>
+<p>
+An <m>n\times n</m> matrix <m>A</m> is <term>diagonalisable</term> if there is an invertible 
+matrix <m>P</m> and a diagonal matrix <m>D</m> such that
+<me>
+A = PDP\inv
+</me>.
+</p>
+</statement>
+</definition>
+
+<example xml:id="ex-diag-is-diagonalisable">
+<statement>
+<p>
+If a matrix <m>D</m> is already diagonal, intuitively it should be diagonalisable. This is 
+true; using the definition, we can take <m>P = I</m>. Then <m>D = IDI\inv</m> shows that 
+<m>D</m> is diagonalisable.
+</p>
+</statement>
+</example>
+
+<p>
+Let <m>A = PDP\inv</m> be an <m>n\times n</m> diagonalisable matrix (where <m>D</m> is diagonal). Let
+<me>
+P =
+\begin{bmatrix}
+  \vect{x}_1 \amp  \vect{x}_2 \amp  \cdots \amp  \vect{x}_n
+\end{bmatrix}
+, \qquad D =
+\begin{bmatrix}
+  \lambda_1 \amp            \amp         \amp \\
+  \amp  \lambda_2 \amp         \amp           \\
+  \amp            \amp  \ddots \amp           \\
+  \amp            \amp         \amp  \lambda_n
+\end{bmatrix}
+,
+</me>
+where the blank elements of <m>D</m> are zero, and the columns of <m>P</m> are the 
+vectors <m>\vect{x}_i</m>. Then <m>A = PDP\inv</m> implies that <m>AP = PD</m>. 
+Writing this out gives
+<me>
+A
+\begin{bmatrix}
+  \vect{x}_1 \amp  \vect{x}_2 \amp  \cdots \amp  \vect{x}_n
+\end{bmatrix}
+=
+\begin{bmatrix}
+  \vect{x}_1 \amp  \vect{x}_2 \amp  \cdots \amp  \vect{x}_n
+\end{bmatrix}
+\begin{bmatrix}
+  \lambda_1 \amp            \amp         \amp \\
+  \amp  \lambda_2 \amp         \amp           \\
+  \amp            \amp  \ddots \amp           \\
+  \amp            \amp         \amp  \lambda_n
+\end{bmatrix}
+</me>. 
+The left-hand side equals <m>[A\vect{x}_1, A\vect{x}_2,\dots, A\vect{x}_n]</m>, which you 
+are asked to calculate in NEED REF below. The right-hand side equals 
+<m>[\lambda_1\vect{x}_1, \lambda_2\vect{x}_2, \dots, \lambda_n\vect{x}_n]</m>. Comparing 
+columns, this shows that <m>A\vect{x}_i = \lambda\vect{x}_i</m> for all <m>i=1, \dots, n</m>. 
+Moreover, each column <m>\vect{x}_i</m> is nonzero since <m>P</m> is invertible. Therefore 
+the eigenvectors of <m>A</m> are <m>\vect{x}_i</m> (which are the columns of <m>P</m>) and 
+the corresponding eigenvalues are <m>\lambda_i</m> (which are the corresponding diagonal 
+entries of <m>D</m>).
+</p>
+
+
+<!--<exercise>
+<statement>
+\label{prob: colmult}
+<p>Let <m>A</m> be an <m>n\times n</m> matrix and <m>X =
+\begin{bmatrix}
+  \vect{x}_1 \amp  \vect{x}_2 \amp  \cdots \amp  \vect{x}_n
+\end{bmatrix}
+</m>, so <m>\vect{x}_i</m> are the columns of <m>X</m>. Show that
+<me>
+AX =
+\begin{bmatrix}
+  A\vect{x}_1 \amp  A\vect{x}_2 \amp  \cdots \amp  A\vect{x}_n
+\end{bmatrix}
+,
+</me>
+i.e. that the product <m>AX</m> has columns <m>A\vect{x}_i</m>.</p>
+</statement>
+<hint>
+</hint>
+<answer>
+</answer>
+<solution>
+</solution>
+</exercise>-->
+
+<p>
+Similarly, if <m>A</m> has <m>n</m> distinct eigenvalues <m>\vect{x}_1,\dots,  \vect{x}_n</m> such that <m>
+\begin{bmatrix}
+  \vect{x}_1 \amp  \vect{x}_2 \amp  \cdots \amp  \vect{x}_n
+\end{bmatrix}
+</m> is invertible, then <m>A</m> is diagonalisable and <m>A = PDP\inv</m>, where <m>D</m> is the 
+diagonal matrix of eigenvalues, as above. (To see this, <m>P</m> consisting of eigenvalues means <m>AP =
+\begin{bmatrix}
+  A\vect{x}_1 \amp  A\vect{x}_2 \amp  \cdots \amp  A\vect{x}_n
+\end{bmatrix}
+=
+\begin{bmatrix}
+  \lambda_1\vect{x}_1 \amp  \lambda_2\vect{x}_2 \amp  \cdots \amp  \lambda_n\vect{x}_n
+\end{bmatrix}
+= PD.</m> Multiplying by <m>P\inv</m>, we conclude <m>A = PDP\inv</m>.)
+</p>
+
+<p>
+We summarise the previous calculations in the following theorem.
+</p>
+
+
+<theorem xml:id="thm-criterion">
+<statement>
+<p>
+An <m>n\times n</m> matrix <m>A</m> is diagonalisable if and only if there are <m>n</m> 
+eigenvectors <m>\vect{x}_1,\dots, \vect{x}_n</m> such that <m>
+\begin{bmatrix}
+  \vect{x}_1 \amp  \vect{x}_2 \amp  \cdots \amp  \vect{x}_n
+\end{bmatrix}
+</m> is invertible. In this case, <m>A = PDP\inv</m> for <me>
+P =
+\begin{bmatrix}
+  \vect{x}_1 \amp  \vect{x}_2 \amp  \cdots \amp  \vect{x}_n
+\end{bmatrix}
+, \qquad D =
+\begin{bmatrix}
+  \lambda_1 \amp            \amp         \amp \\
+  \amp  \lambda_2 \amp         \amp           \\
+  \amp            \amp  \ddots \amp           \\
+  \amp            \amp         \amp  \lambda_n
+\end{bmatrix}
+,
+</me>
+where each <m>\lambda_i</m> is the eigenvalue for <m>\vect{x}_i</m>, and the blank elements of 
+<m>D</m> are zero.
+</p>
+</statement>
+</theorem>
+
+<p>
+For this theorem to be useful, we need a convenient criterion for when <m>
+\begin{bmatrix}
+  \vect{x}_1 \amp  \vect{x}_2 \amp  \cdots \amp  \vect{x}_n
+\end{bmatrix}
+</m> is invertible. (We know that this is when its determinant is nonzero, but we would still 
+need a way to check that.) In fact, it is invertible whenever our two types of multiplicity 
+are equal.
+</p>
+
+<theorem xml:id="thm-criterion-1-half">
+<statement>
+<p>
+Let <m>A</m> be a <m>n\times n</m> matrix. There is an invertible matrix <m>
+\begin{bmatrix}
+  \vect{x}_1 \amp  \vect{x}_2 \amp  \cdots \amp  \vect{x}_n
+\end{bmatrix}
+</m> consisting of eigenvectors of <m>A</m> if and only if the algebraic multiplicity of every 
+eigenvalue equals its geometric multiplicity.
+</p>
+</statement>
+</theorem>
+
+<p>
+Combining <xref ref="thm-criterion"/> and <xref ref="thm-criterion-1-half" /> gives the following criterion, 
+which is how we will check in practice whether a matrix is diagonalisable.
+</p>
+
+<theorem xml:id="thm-criterion2">
+<statement>
+<p>Let <m>A</m> be an <m>n\times n</m> matrix. Then <m>A</m> is diagonalisable if and only if 
+the algebraic multiplicity of every eigenvalue equals its geometric multiplicity. In this case, 
+<m>A = PDP\inv</m> where <m>P</m> and <m>D</m> are the same as in <xref ref="thm-criterion"/>.
+</p>
+</statement>
+</theorem>
+
+<p>
+So in an example, we can calculate the eigenspaces and then check the multiplicities to see if 
+they match. An important special case is when all the eigenvalues are different.
+</p>
+
+<corollary xml:id="cor-dist-evalues">
+<statement>
+<p>
+If <m>A</m> is a <m>n\times n</m> matrix with <m>n</m> distinct eigenvalues, then <m>A</m> is 
+diagonalisable.
+</p>
+</statement>
+</corollary>
+
+<p>
+This is because by <xref ref="rmk-distinct"/>, if <m>A</m> has distinct eigenvalues then every 
+eigenvalue has geometric and algebraic multiplicity equal to 1. So the multiplicities match. Then 
+by <xref ref="thm-criterion2"/>, <m>A</m> is diagonalisable.
+</p>
+
+
 
 </section>

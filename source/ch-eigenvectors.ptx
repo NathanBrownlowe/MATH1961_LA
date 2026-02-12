@@ -4,7 +4,13 @@
   <title>Eigenvalues and Eigenvectors</title>
 
   <introduction>
-    <p> Text before the first section. </p>
+   <p>
+Every matrix <m>A</m> has at least one special vector <m>\vect{x}</m> such that <m>A\vect{x}</m> 
+is a scalar multiple of <m>\vect{x}</m>. These vectors are called eigenvectors, where the German prefix 
+`eigen' meaning `characteristic' or `own' emphasizes how the vector <m>\vect{x}</m> is closely related 
+to the matrix <m>A</m>. In this chapter, we introduce eigenvectors and show how to calculate them. 
+There will be applications of eigenvectors in the next chapter and <xref ref="ch-markov-chains"/>.
+</p>
   </introduction>
 
   <!-- include sections -->

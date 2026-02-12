@@ -3,6 +3,263 @@
 <section xml:id="sec-calculating-nxn-determinants" xmlns:xi="http://www.w3.org/2001/XInclude">
   <title>Calculating determinants</title>
 
-  <p> Text of section. </p>
+ <p>
+We will sometimes use straight lines
+<me>
+|A| = \det(A) =
+\begin{vmatrix}
+  a \amp  b \\ c \amp d
+\end{vmatrix}
+</me>
+to denote the determinant of the matrix <m>2\times 2</m> matrix <m>A</m>, and similarly to denote 
+the determinant of <m>n\times n</m> matrices.
+</p>
+
+<definition xml:id="def-determinant">
+<statement>
+<p>
+If <m>A=[a_{11}]</m> is a <m>1\times 1</m> matrix, define the determinant <m>|a_{11}| = a_{11}</m>. Now let 
+<m>A</m> be any <m>n\times n</m> matrix with <m>n\ge 2</m>. For each <m>i, j \in \{1, 2, \dots, n\}</m>, 
+the <m>\vect{(i, j)}</m>-<term>minor</term> of <m>A</m>, denoted by <m>A_{ij}</m>, is 
+the <m>(n-1)\times (n-1)</m> matrix obtained by deleting the <m>i</m>th row and the <m>j</m>th 
+column of <m>A</m>. The <term>determinant</term> of <m>A</m> is the real number
+<me>
+\det(A) = \sum_{j=1}^n (-1)^{i+j}a_{1j}|A_{1j}| = a_{11}|A_{11}| - a_{12}|A_{12}| + \dots + (-1)^{1+n} a_{1n}|A_{1n}|
+</me>.
+</p>
+</statement>
+</definition>
+
+
+<p>
+Let's get a feel for what this definition means by working through a few examples.
+</p>
+
+<example xml:id="ex-2x2-det-check">
+<statement>
+<p>
+Let <me>
+A =
+\begin{bmatrix}
+  a_{11} \amp  a_{12} \\ a_{21} \amp  a_{22}
+\end{bmatrix}
+</me>
+be an arbitrary <m>2\times 2</m> matrix. Then the minors are <m>1\times 1</m> matrices, or numbers. 
+Specifically, we find <m>A_{11} = a_{22}</m> by deleting the first row and column of <m>A</m>, 
+and <m>A_{12} = a_{21}</m> by deleting the first row and second column of <m>A</m>. The determinant 
+formula now gives
+<me>
+\det(A) = a_{11}|A_{11}| - a_{12}|A_{12}| = a_{11}a_{22} - a_{12}a_{21}
+</me>.
+This is consistent with our previous definition of the determinant of a <m>2\times 2</m> matrix.
+</p>
+</statement>
+</example>
+
+<example xml:id="ex-det-general-3x3">
+<statement>
+<p>If <m>n=3</m>, then the determinant formula says that
+<me>
+\begin{vmatrix}
+  a_{11} \amp  a_{12} \amp  a_{13} \\
+  a_{21} \amp  a_{22} \amp  a_{23} \\
+  a_{31} \amp  a_{32} \amp  a_{33}
+\end{vmatrix}
+= a_{11}
+\begin{vmatrix}
+  a_{22} \amp  a_{23} \\ a_{32} \amp  a_{33}
+\end{vmatrix}
+- a_{12}
+\begin{vmatrix}
+  a_{21} \amp  a_{23} \\ a_{31} \amp  a_{33}
+\end{vmatrix}
++ a_{13}
+\begin{vmatrix}
+  a_{21} \amp  a_{22} \\ a_{31} \amp  a_{32}
+\end{vmatrix}
+.
+</me>
+</p>
+</statement>
+</example>
+
+<example xml:id="ex-det">
+<statement>
+<p>
+The determinant of
+<me>
+A =
+\begin{bmatrix}
+  5 \amp  -3 \amp  2 \\ 1 \amp  0 \amp  2\\ 2 \amp  -1 \amp  3
+\end{bmatrix}
+</me>
+is
+<md>
+<mrow>
+\begin{vmatrix}
+  5 \amp  -3 \amp  2 \\ 1 \amp  0 \amp  2\\ 2 \amp  -1 \amp  3
+\end{vmatrix}
+\amp  = 5
+\begin{vmatrix}
+  0 \amp  2 \\ -1 \amp  3
+\end{vmatrix}
+-(-3)
+\begin{vmatrix}
+  1 \amp  2 \\ 2\amp  3
+\end{vmatrix}
++ 2
+\begin{vmatrix}
+  1 \amp  0 \\ 2 \amp  -1
+\end{vmatrix}
+\\
+\amp  = 5(0+2) + 3(3-4) + 2(-1-0) \\
+\amp  = 5.
+</mrow>
+</md>
+</p>
+</statement>
+</example>
+
+<p>
+Calculating the determinant using this formula is called <term>expanding along the first row</term>, because 
+the coefficients all come from the first row, and their corresponding minors come from deleting the first 
+row (and some column).
+</p>
+
+<p>
+In fact, the determinant can be calculated by expanding along any row or column: there is nothing 
+special about the first row.
+</p>
+
+
+<theorem xml:id="thm-det-any-row-col">
+<statement>
+<p>
+Let <m>A</m> be an <m>n\times n</m> matrix for <m>n\ge 2</m>. Then for any 
+<m>i, j \in \{1, 2, \dots, n\}</m>, we can calculate <m>\det(A)</m> by the <term>expansion along 
+the</term> <m>\vect{i}</m><term>-th row</term>
+<md>
+<mrow>
+\det(A) \amp = \sum_{j=1}^n (-1)^{i+j}a_{ij}|A_{ij}| \\
+\amp = (-1)^{i+1}a_{i1}|A_{i1}| + (-1)^{i+2} a_{i2}|A_{i2}| + \dots + (-1)^{i+n} a_{in}|A_{in}|
+</mrow>
+</md>
+or by the <term>expansion along the </term> <m>\vect{j}</m><term>-th column</term>
+<md>
+<mrow>
+\det(A) \amp = \sum_{i=1}^n (-1)^{i+j}a_{ij}|A_{ij}| \\
+\amp = (-1)^{1+j}a_{1j}|A_{1j}| + (-1)^{2+j} a_{2j}|A_{2j}| + \dots + (-1)^{n+j} a_{nj}|A_{nj}|
+</mrow>
+</md>.
+</p>
+</statement>
+</theorem>
+
+<p>
+To remember the sign of each coefficient in the determinant formula, it can be helpful to imagine a 
+checkerboard pattern of plus and minus signs, for example
+<me>
+\begin{bmatrix}
+  + \amp  - \amp  + \\
+  - \amp  + \amp  - \\
+  + \amp  - \amp  +
+\end{bmatrix}
+, \qquad
+\begin{bmatrix}
+  + \amp  - \amp  + \amp  - \\
+  - \amp  + \amp  - \amp  + \\
+  + \amp  - \amp  + \amp  - \\
+  - \amp  + \amp  - \amp  +
+\end{bmatrix}
+</me>.
+</p>
+
+<p>
+To calculate the determinant, pick any column or row, and then expand along it. When expanding, 
+multiply each entry of the chosen column or row by its plus or minus sign from the checkboard pattern, 
+and by the determinant of its minor.
+</p>
+
+
+<example xml:id="ex-checking-det-expansions">
+<statement>
+<p>
+Let <me>
+A =
+\begin{bmatrix}
+  5 \amp  -3 \amp  2 \\
+  1 \amp  0  \amp  2 \\
+  2 \amp  -1 \amp  3
+\end{bmatrix}
+</me>.
+In <xref ref="ex-det"/>, we calculated that <m>\det(A) = 5</m> by expanding along the first row. 
+If we instead expand along the second column, we get
+<md>
+<mrow>
+\det(A) \amp  =
+\begin{vmatrix}
+  5 \amp  -3 \amp  2 \\
+  1 \amp  0  \amp  2 \\
+  2 \amp  -1 \amp  3
+\end{vmatrix}
+\\
+\amp  = -(-3)
+\begin{vmatrix}
+  1 \amp  2 \\
+  2 \amp  3
+\end{vmatrix}
++ 0
+\begin{vmatrix}
+  5 \amp  2 \\ 2 \amp  3
+\end{vmatrix}
+- (-1)
+\begin{vmatrix}
+  5 \amp  2 \\
+  1 \amp  2
+\end{vmatrix}
+\\
+\amp  = 3(3-4) + 0 + (10-2) \\
+\amp  = 5
+</mrow>
+</md>,
+as before.
+</p>
+</statement>
+</example>
+
+<p>
+Expanding along a row or column with zeroes makes the calculation easier.
+</p>
+
+<example xml:id="ex-triangular">
+<statement>
+<p>
+We will calculate the following determinant by expanding along the first column, since it's mostly zero:
+<md>
+<mrow>
+\begin{vmatrix}
+  5 \amp  1 \amp  0  \amp  -1 \\
+  0 \amp  2 \amp  3  \amp  1  \\
+  0 \amp  0 \amp  -1 \amp  4  \\
+  0 \amp  0 \amp  0  \amp  2
+\end{vmatrix}
+\amp  = 5
+\begin{vmatrix}
+  2 \amp  3  \amp  1 \\
+  0 \amp  -1 \amp  4 \\
+  0 \amp  0  \amp  2
+\end{vmatrix}
+- 0+0 - 0         \\
+\amp  = 10
+\begin{vmatrix}
+  -1 \amp  4 \\ 0 \amp  2
+\end{vmatrix}
+- 0 + 0           \\
+\amp  = -20.
+</mrow>
+</md>
+</p>
+</statement>
+</example>
 
 </section>

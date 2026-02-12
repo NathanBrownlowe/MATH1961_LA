@@ -3,6 +3,183 @@
 <section xml:id="sec-evalues-evectors-espaces" xmlns:xi="http://www.w3.org/2001/XInclude">
   <title>Eigenvalues, eigenvectors, and eigenspaces</title>
 
-  <p> Text of section. </p>
+ <definition xml:id="def-evalue-evector">
+<statement>
+<p>
+Let <m>A</m> be an <m>n\times n</m> matrix. Suppose that there exists a scalar <m>\lambda \in \R</m> 
+and a nonzero vector <m>\vect{x} \in \R^n</m> such that
+<me>
+A\vect{x} = \lambda\vect{x}
+</me>.
+Then <m>\lambda</m> is an <term>eigenvalue</term> of <m>A</m> and <m>\vect{x}</m> is an 
+<term>eigenvector</term> of <m>\vect{x}</m> corresponding to <m>\lambda</m>.
+</p>
+</statement>
+</definition>
+
+<remark xml:id="rem-vecs-as-cols">
+<title></title>
+<p>
+In this definition, to calculate <m>A\vect{x}</m> we are viewing <m>\vect{x}</m> as a column matrix. 
+This is the convention that we will use to multiply vectors by matrices.
+</p>
+</remark>
+
+<p>
+In other words, an eigenvector <m>\vect{x}</m> is a vector such that multiplying it on the left by 
+<m>A</m> scales it, and the eiegenvalue <m>\lambda</m> is the scaling factor. This is shown in 
+<xref ref="fig-evec"/>.
+</p>
+
+<figure xml:id="fig-evec">
+<caption><m>A</m> scales its eigenvector <m>\vect{x}</m> by the corresponding eigenvalue <m>\lambda</m></caption>
+<!--evec.tikz-->
+</figure>
+
+<p>
+We have excluded <m>\vect{0}</m> from the definition of an eigenvector, because any matrix satisfies 
+<m>A\vect{0} = \lambda\vect{0}</m> for every <m>\lambda \in \R</m>. However, <m>0</m> is allowed to 
+be an eigenvalue, and in the following definition of eigenspace, it is convenient to include the 
+zero vector.
+</p>
+
+<definition xml:id="def-eigenspace">
+<statement>
+<p>
+If <m>\lambda</m> is an eigenvalue of an <m>n\times n</m> matrix <m>A</m>, the set <me>
+E_\lambda(A) = \{\vect{x} \in \R^n \;|\; A\vect{x} = \lambda\vect{x}\}
+</me> is the <term>eigenspace</term> of <m>A</m> corresponding to <m>\lambda</m>.
+</p>
+</statement>
+</definition>
+
+<remark xml:id="rem-espace-descrip">
+<p>
+<m>E_\lambda(A)</m> is the set of all eigenvectors of <m>A</m> corresponding to <m>\lambda</m>, 
+together with the zero vector <m>\vect{0}</m>. Note that if <m>v \in E_\lambda(A)</m>, then 
+<m>c\vect{v} \in E_\lambda(A)</m>, since <me>
+A(c\vect{v}) = c(A\vect{v}) = c(\lambda \vect{v}) = \lambda(c\vect{v})
+</me>. In general, if <m>\vect{v}_1, \vect{v}_2, \dots, \vect{v}_k \in E_\lambda(A)</m>, one 
+can similarly show that any linear combination of these vectors remains in <m>E_\lambda(A)</m>.
+</p>
+</remark>
+
+<example xml:id="ex-evector-checking">
+<statement>
+<p>
+Let
+<me>
+A =
+\begin{bmatrix}
+  3 \amp  1 \\ 1 \amp  3
+\end{bmatrix}
+, \qquad \vect{x} = \colvec{1}{1},\qquad \vect{y} = \colvec{-1}{1}
+</me>.
+Show that <m>\vect{x}</m> and <m>\vect{y}</m> are eigenvectors of <m>A</m>, and find the 
+corresponding eigenvalues.
+</p>
+<p>
+By direct calculation,
+<md>
+<mrow>
+A\vect{x} \amp  =
+\begin{bmatrix}
+  3 \amp  1 \\ 1 \amp  3
+\end{bmatrix}
+\colvec{1}{1} = \colvec{4}{4} = 4\colvec{1}{1} = 4\vect{x} \\
+A\vect{y} \amp  =
+\begin{bmatrix}
+  3 \amp  1 \\ 1 \amp  3
+\end{bmatrix}
+\colvec{-1}{1} = \colvec{-2}{2}=2\colvec{-1}{1} = 2\vect{y}
+</mrow>
+</md>,
+so <m>\vect{x}</m> is an eigenvector of <m>A</m> with eigenvalue <m>4</m>, and <m>\vect{y}</m> 
+is an eigenvector of <m>A</m> with eigenvalue <m>2</m>.
+</p>
+</statement>
+</example>
+
+<p>
+Given an <m>n\times n</m> matrix <m>A</m>, we now show how to find its eigenvalues and 
+eigenvectors. Since <m>\vect{x} = I\vect{x}</m>, the matrix equation <m>A\vect{x} = \lambda\vect{x}</m> 
+rearranges to the equation
+<me>
+(A-\lambda I)\vect{x} = \vect{0}
+</me>.
+</p>
+
+<p>
+The next theorem shows us how to find the eigenvalues of <m>A</m>.
+</p>
+
+
+<theorem xml:id="thm-evalue-char">
+<statement>
+<p>
+<m>\lambda</m> is an eigenvalue of <m>A</m> if and only if <m>\det(A-\lambda I) = 0</m>.
+</p>
+</statement>
+
+<proof>
+<p>
+From <xref ref="thm-invdet"/>, <m>\det(A-\lambda I) = 0</m> if and only if <m>A - \lambda I</m> is not 
+invertible, so the theorem says that <m>\lambda</m> is an eigenvalue of <m>A</m> if and only if 
+<m>A - \lambda I</m> is not invertible.
+</p>
+
+<p>
+If <m>A - \lambda I</m> is not invertible, then its RREF has at least one column without a leading entry, 
+so <m>(A - \lambda I)\vect{x} = \vect{0}</m> has infinitely many solutions, so it has a nonzero solution 
+<m>\vect{x}</m>. Rearranging, <m>A\vect{x} = \lambda \vect{x}</m>, so <m>\vect{x}</m> is an eigenvector 
+for <m>A</m> with corresponding eigenvalue <m>\lambda</m>.
+</p>
+
+<p>
+On the other hand, if <m>A-\lambda I</m> is invertible, then the unique solution to 
+<m>(A-\lambda I)\vect{x} = \vect{0}</m> is <m>\vect{x} = \vect{0}</m> (see NEEDS REF TO COI1). 
+Since <m>\vect{0}</m> is never an eigenvector, this means <m>\lambda</m> cannot be an eigenvalue 
+of <m>A</m>.
+</p>
+</proof>
+</theorem>
+
+<definition xml:id="def-char-poly">
+<statement>
+<p>
+If <m>A</m> is an <m>n\times n</m> matrix, then the <term>characteristic polynomial</term> of 
+<m>A</m> is <m>\det(A-\lambda I)</m>, and the <term>characteristic equation</term> of <m>A</m> 
+is <m>\det(A - \lambda I) = 0</m>.
+</p>
+</statement>
+</definition>
+
+<p>
+The meaning of the theorem is summarised in the next box.
+</p>
+
+<assemblage xml:id="finding-evalues-evectors">
+<p>
+  <term>
+How to find eigenvalues and eigenvectors:</term> Calculate the characteristic polynomial 
+<m>\det(A-\lambda I)</m> and find its roots, which satisfy the characteristic equation 
+<m>\det(A-\lambda I) = 0</m>. These are all the eigenvalues of <m>A</m>. For each 
+eigenvalue <m>\lambda</m>, the eigenvectors <m>\vect{x}</m> corresponding to <m>\lambda</m> 
+are the solutions to the matrix equation
+<me>
+(A-\lambda I)\vect{x} = \vect{0}
+</me>
+for <m>\vect{x} \in \R^n</m>, which can be solved by Gaussian elimination.
+</p>
+</assemblage>
+
+<!--
+{\footnotesize <term>Technical comment:</term> By expanding the determinant, we see that the 
+characteristic polynomial is a polynomial of degree <m>n</m> when <m>A</m> has size <m>n\times n</m>. 
+Therefore it has a root by the Fundamental Theorem of Algebra, and it has <m>n</m> roots if counted with 
+multiplicity. However, the roots may be in <m>\C</m>. So even for a matrix with real entries, its 
+eigenvalues may all be in <m>\C \setminus \R</m>. For simplicity, we will focus on examples where 
+all the roots of the characteristic polynomial are real}.
+</p>-->
 
 </section>

@@ -3,6 +3,338 @@
 <section xml:id="sec-lines-in-R2" xmlns:xi="http://www.w3.org/2001/XInclude">
   <title>Lines in <m>\mathbb{R}^2</m></title>
 
-  <p> Text of section. </p>
+ <definition xml:id="def-normal-vector">
+<statement>
+<p>
+Let <m>\ell</m> be a line in <m>\R^2</m>. A <term>normal vector</term> for <m>\ell</m> is a nonzero 
+vector <m>\vect{n}</m> which is orthogonal to <m>\ell</m>.
+</p>
+</statement>
+</definition>
+
+<p>
+A normal vector <m>\vect{n}</m> and one point <m>P</m> on <m>\ell</m> is enough to completely determine the 
+line <m>\ell</m>, which we will show by writing the equation for <m>\ell</m> in terms of these two objects. 
+Notice that unlike for vectors, the position of <m>\ell</m> in space matters, which is why we need a point 
+<m>P</m>.
+</p>
+
+<p>Fix <m>P \in \ell</m>, and let <m>X = (x, y)</m> be any point. Let 
+<m>\vect{x} = \overrightarrow{OX} = [x, y]</m> and <m>\vect{p} = \overrightarrow{OP}</m>, as shown 
+in <xref ref="fig-normal"/>.
+</p>
+
+<figure xml:id="fig-normal">
+<caption>The normal form of a line</caption>
+<!--normal.tikz-->
+</figure>
+
+<p>
+We have
+<md>
+<mrow>
+X \in \ell \amp  \iff \overrightarrow{PX} \text{ is parallel to } \ell       \\
+\amp  \iff \overrightarrow{PX} \text{ is orthogonal to } \vect{n} \\
+\amp  \iff \overrightarrow{PX} \cdot \vect{n} = 0
+</mrow>
+</md>
+(The symbol <m>\iff</m> stands for `if and only if'.) We also have <m>\overrightarrow{PX} = \overrightarrow{OX} - \overrightarrow{OP}</m>, so
+<md>
+<mrow>
+X \in \ell \amp  \iff (\vect{x} - \vect{p}) \cdot \vect{n} = 0          \\
+\amp  \iff \vect{x} \cdot \vect{n} = \vect{p}\cdot \vect{n}
+</mrow>
+</md>.
+This means that <m>\vect{x} \cdot \vect{n} = \vect{p}\cdot \vect{n}</m> is an equation for <m>\ell</m>. 
+The next definition summarises this calculation and gives the equation a name.
+</p>
+
+<definition xml:id="def-normal-form">
+<statement>
+<p>
+The <term>normal form</term> of the equation of a line <m>\ell</m> in <m>\R^2</m> is
+<me>
+(\vect{x} - \vect{p}) \cdot \vect{n} = 0
+</me>
+or equivalently
+<me>
+\vect{x} \cdot \vect{n} = \vect{p}\cdot \vect{n}
+</me>
+where <m>\vect{n}</m> is a normal vector for <m>\ell</m>, and <m>\vect{p}</m> is the position vector of a point 
+on <m>\ell</m>.
+</p>
+</statement>
+</definition>
+
+<p>
+You may be more familiar from high school with equations for lines looking like <m>y = mx +b</m> or 
+<m>ax + by = c</m>. We can rearrange the normal form to look like this. Suppose <m>\vect{n} = [a, b]</m> 
+and <m>P = (p_1, p_2)</m>, so <m>\vect{p} =[p_1, p_2]</m>. Then 
+<m>\vect{n}\cdot \vect{x} = \vect{n}\cdot \vect{p}</m> becomes
+  <me>
+  [a, b] \cdot [x, y] = [a, b]\cdot [p_1, p_2],
+</me>
+which is <m>ax + by = ap_1 +bp_2</m>, or <m>ax + by = c</m> where 
+<m>c = \vect{n}\cdot \vect{p} = ap_1 + bp_2</m>.
+</p>
+
+<definition xml:id="def-general-form">
+<statement>
+<p>
+The <term>general form</term> of the equation of a line <m>\ell</m> in <m>\R^2</m> is
+<me>
+ax +by = c
+</me> where <m>\vect{n} = [a, b]</m> is a normal vector for <m>\ell</m> and <m>c = \vect{n}\cdot \vect{p}</m>, 
+where <m>\vect{p}</m> is the position vector of a point on <m>\ell</m>.
+</p>
+</statement>
+</definition>
+
+<example xml:id="ex-normal-form">
+<statement>
+<p>
+The line with general equation <m>3x- y = 9</m> has a normal vector <m>[3, -1]</m>, by looking at its 
+coefficients. Any nonzero scalar multiple of <m>[3, -1]</m> would also be a normal vector to the line.
+</p>
+</statement>
+</example>
+
+<example xml:id="ex-normal-and-general-form">
+<statement>
+<p>
+Find the normal and general forms of the equation of a line through <m>(2, -1)</m> and perpendicular to 
+the vector <m>[3, 4]</m>. We take <m>\vect{n} = [3, 4]</m> and <m>P = (2, -1)</m>, so 
+<m>\vect{p} =[2, -1]</m>. We have
+<me>
+\vect{n}\cdot \vect{p} = [3, 4]\cdot [2, -1] = 6 - 4 = 2,
+</me>
+so the normal form is <m>[3, 4] \cdot [x, y] = [3, 4] \cdot [2, -1]</m>, which simplifies to
+  <me>
+  [3, 4]\cdot [x, y] = 2
+</me>
+and the general form is <m>3x + 4y = 2</m>.
+</p>
+</statement>
+</example>
+
+<p>
+Notice that if we had picked a different normal vector and a different point on the same line, the normal 
+and general forms would look different, although they would still describe the same line.
+</p>
+
+<!--
+<exercise>
+<statement>
+<p>Check that <m>\vect{n} = [-6, -8]</m> is another normal vector for the line <m>3x + 4y = 2</m>, and that <m>P = (-2, 2)</m> is another point on this line. Show that these choices of <m>\vect{n}</m> and <m>\vect{p}</m> result in the general equation
+<me>
+-6x - 8y = - 4
+</me>.
+<p>This is the same line as <m>3x + 4y = 2</m>, because it is the same equation except multiplied by <m>-2</m>.</p>
+</statement>
+<hint>
+</hint>
+<answer>
+</answer>
+<solution>
+</solution>
+</exercise>-->
+
+<p>
+We will now present a different approach to finding an equation for a line in <m>\R^2</m>. 
+It still involves a point and a direction. The difference is that now we will use a vector parallel to the 
+line, instead of a vector normal to the line.
+</p>
+
+<definition xml:id="def-direction-vector">
+<statement>
+<p>
+A <term>direction vector</term> for a line <m>\ell</m> in <m>\R^2</m> is a nonzero vector 
+<m>\vect{d} \in\R^2</m> which is parallel to <m>\ell</m>.
+</p>
+</statement>
+</definition>
+
+<p>
+Given a direction vector <m>\vect{d}</m> for a line <m>\ell</m> and a point <m>P\in \ell</m> with 
+position vector <m>\vect{p}</m>, we can write down an equation for <m>\ell</m>. Let <m>X</m> be any point 
+with position vector <m>\vect{x}</m>. Then
+<md>
+<mrow>
+X \in \ell \amp  \iff \overrightarrow{PX} \text{ is parallel to } \vect{d} \\
+\amp  \iff \overrightarrow{PX} = t\vect{d}
+</mrow>
+</md>,
+for some <m>t\in \R</m>. We have <m>\overrightarrow{PX} = \vect{x} - \vect{p}</m>, so
+<me>
+X \in \ell \iff \vect{x} - \vect{p} = t\vect{d} \iff \vect{x} = \vect{p} + t\vect{d}
+</me>.
+This is summarised in the next definition.</p>
+
+
+<definition xml:id="def-vector-form">
+<statement>
+<p>The <term>vector form</term> of the equation of a line <m>\ell</m> in <m>\R^2</m> which passes 
+through a point <m>P</m> with position vector <m>\vect{p}</m>, and is parallel to a vector 
+<m>\vect{d}</m>, is
+<me>
+\vect{x} = \vect{p} + t\vect{d},
+</me>
+where <m>t \in \R</m> is called a <term>parameter</term>.
+</p>
+</statement>
+</definition>
+
+<p>
+The fourth and final form of the equation of a line in <m>\R^2</m> comes from expanding the vector 
+form into its components. Suppose <m>\vect{d} = [d_1, d_2]</m>, <m>\vect{p} = [p_1, p_2]</m>, and 
+<m>\vect{x} = [x, y]</m>. Then we have
+  <me>
+  [x, y] = [p_1, p_2] + t[d_1, d_2], \qquad t\in \R
+</me>.
+Comparing components gives <me>
+\left\{
+\begin{aligned}
+  x \amp  = p_1+ d_1t \\
+  y \amp  = p_2 +d_2t \\
+\end{aligned}
+\right. \qquad t\in\R
+</me>.
+</p>
+
+<definition xml:id="def-parametric-eqs">
+<statement>
+<p>
+The <term>parametric equations</term> of a line in <m>\R^2</m> which passes through a point <m>P</m> 
+with position vector <m>\vect{p} = [p_1, p_2]</m>, and is parallel to the vector <m>\vect{d} = [d_1, d_2]</m>, 
+are
+<me>
+\left\{
+\begin{aligned}
+  x \amp  = p_1+ d_1t \\
+  y \amp  = p_2 +d_2t \\
+\end{aligned}
+\right. \qquad t\in\R
+</me>.
+</p>
+</statement>
+</definition>
+
+<p>
+<term>Summary:</term> A line <m>\ell</m> in <m>\R^2</m> is described by a point and a direction. If we use a 
+normal vector to <m>\ell</m>, then the equation is called a normal form when written using vectors, and 
+general form when written in components. If we use a direction vector instead, the equation is called a 
+vector form when written using vectors, and when written in components we call them parametric equations.
+</p>
+
+<p>
+To finish this section, we give a few examples and final comments. To find a direction vector 
+<m>\vect{d}</m> for a line <m>\ell</m>, find two points <m>A</m> and <m>B</m> on <m>\ell</m>. Then 
+<m>\vect{d} = \overrightarrow{AB}</m> is a direction vector for <m>\ell</m>. This is illustrated 
+in <xref ref="fig-finding_d"/>.
+</p>
+
+<figure xml:id="fig-finding_d">
+<caption>The vector between two (distinct) points on <m>\ell</m> is a direction vector</caption>
+<!--finding_d.tikz-->
+</figure>
+
+<example xml:id="ex-vector-and-para-forms">
+<statement>
+<p>
+Find the vector form and parametric equations for the line <m>\ell</m> through the points 
+<m>A= (1, 2)</m> and <m>B = (5, 7)</m>. We can take
+<md>
+<mrow>
+\vect{p} \amp  = \overrightarrow{OA} = [1, 2]                   \\
+\vect{d} \amp  = \overrightarrow{AB} = [5, 7] - [1, 2] = [4,5]
+</mrow>
+</md>.
+So a vector form is
+  <me>
+  [x, y] = [1, 2] + t[4, 5], \qquad t\in \R
+</me>
+and parametric equations are
+<me>
+\left\{
+\begin{aligned}
+  x \amp  = 1 + 4t \\
+  y \amp  = 2 +5t  \\
+\end{aligned}
+\right. \qquad t\in\R.\
+</me>
+</p>
+</statement>
+</example>
+
+<p>
+Like with the normal and general form, the expression of these equations is not unique.
+</p>
+
+
+<!--<exercise>
+<statement>
+<p>Show that taking <m>\vect{p} = \overrightarrow{OB}</m> and <m>\vect{d} = 2\overrightarrow{BA}</m> in the previous example, and a parameter <m>s\in \R</m>, yields the parametric equations
+<me>
+\left\{
+\begin{aligned}
+  x \amp  = 5 - 8s  \\
+  y \amp  = 7 - 10s \\
+\end{aligned}
+\right. \qquad s\in\R
+</me>.
+<p>Show that substituting <m>s = \frac{1}{2}(1-t)</m> recovers the original parametric equations.</p>
+</statement>
+<hint>
+</hint>
+<answer>
+</answer>
+<solution>
+</solution>
+</exercise>-->
+
+<p>
+Since a normal vector <m>\vect{n}</m> for a line <m>\ell</m> in <m>\R^2</m> is orthogonal, while a 
+direction vector <m>\vect{d}</m> is parallel, this means
+<me>
+\vect{n}\cdot \vect{d} = 0
+</me>.
+This observation can help us find <m>\vect{d}</m> if we know <m>\vect{n}</m>, or to find 
+<m>\vect{n}</m> if we know <m>\vect{d}</m>. This is shown in the next two examples.
+</p>
+
+
+<example xml:id="ex-dir-vector">
+<statement>
+<p>
+Find a direction vector <m>\vect{d}</m> for the line with normal form <m>x + 2y = 5</m>.
+</p>
+
+<p>
+A normal vector is <m>\vect{n} = [1, 2]</m>. Let <m>\vect{d} = [d_1, d_2]</m>. We must have
+<me>
+\vect{n}\cdot \vect{d} = d_1 + 2d_2 = 0,
+</me>
+so <m>d_1 = -2d_2</m>. Choosing <m>d_2 = 1</m>, a direction vector is <m>\vect{d} = [-2, 1]</m>.
+</p>
+</statement>
+</example>
+
+<example xml:id="ex-finding-normal-vector">
+<statement>
+<p>
+Find a normal vector for the line with parametric equations
+<me>
+\left\{
+\begin{aligned}
+  x \amp  = -1 + 2t \\
+  y \amp  = 4 +3t   \\
+\end{aligned}
+\right. \qquad t\in\R
+</me>.
+A direction vector is <m>\vect{d} = [2, 3]</m>, so <m>\vect{n} = [-3, 2]</m> is a normal vector, 
+since <m>\vect{d}\cdot \vect{n} = 2(-3) + 2\cdot 3 = 0.</m>
+</p>
+</statement>
+</example>
 
 </section>

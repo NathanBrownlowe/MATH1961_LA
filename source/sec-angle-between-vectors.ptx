@@ -3,6 +3,109 @@
 <section xml:id="sec-angle-between-vectors" xmlns:xi="http://www.w3.org/2001/XInclude">
   <title>Angle between vectors</title>
 
-  <p> Text of section. </p>
+<p>
+There is also a geometric formula for the dot product, which shows how the dot product of two vectors is 
+related to the angle between them.
+</p>
+
+<figure xml:id="fig-angle">
+<caption>The angle between two vectors</caption>
+<!-->angle.tikz-->
+</figure>
+
+<theorem xml:id="thm-geo-form-dot-product">
+<statement>
+<p>
+Let <m>\vect{u}, \vect{v} \in \R^n</m>, and <m>\theta</m> be the angle between them. Then
+<me>
+\vect{u}\cdot \vect{v} = \|\vect{u}\|\|\vect{v}\|\cos\theta
+</me>.
+</p>
+</statement>
+</theorem>
+
+<proof>
+<p>
+By the cosine rule (see <xref ref="fig-angle"/>),
+<me>
+\|\vect{u}-\vect{v}\|^2 = \|\vect{u}\|^2 + \|\vect{v}\|^2 - 2\|\vect{u}\|\|\vect{v}\|\cos\theta
+</me>.
+Meanwhile, using Property 5 of the dot product,
+<me>
+\|\vect{u}-\vect{v}\|^2 = (\vect{u} - \vect{v})\cdot(\vect{u} - \vect{v}) = \|\vect{u}\|^2 - 2\vect{u}\cdot\vect{v} + \|\vect{v}\|^2
+</me>.
+Subtracting these formulas, we get <m>\vect{u}\cdot \vect{v} = \|\vect{u}\|\|\vect{v}\|\cos\theta</m>.
+</p>
+</proof>
+
+<remark xml:id="rem-CS-proof-alt">
+<p>
+We can combine the geometric formula for the dot product with the fact that <m>\cos\theta \le 1</m>, to get
+<me>
+\vect{u} \cdot \vect{v} = \|\vect{u}\|\|\vect{v}\|\cos\theta \le \|\vect{u}\|\|\vect{v}\|
+</me>. 
+Similarly,
+<md>
+<mrow>
+-\vect{u} \cdot \vect{v} \amp  = (-\vect{u}) \cdot \vect{v}  = \|-\vect{u}\|\|\vect{v}\|\cos\theta \\
+\amp  =\|\vect{u}\|\|\vect{v}\|\cos\theta \le \|\vect{u}\|\|\vect{v}\|
+</mrow>
+</md>
+Therefore <m>|\vect{u} \cdot \vect{v}| \le \|\vect{u}\| \|\vect{v}\|</m>. This provides another proof of 
+and a geometric interpretation of the Cauchy--Schwarz inequality. There are two reasons that we presented 
+the first, more complicated-seeming proof of the Cauchy--Schwarz: part of that proof is used for the proof of 
+the triangle inequality, and it gives a purely algebraic proof (without relying on properties of the <m>\cos</m> 
+function).
+</p>
+</remark>
+
+<definition xml:id="def-orthogonal">
+<statement>
+<p>
+Two vectors <m>\vect{u}, \vect{v} \in \R^n</m> are orthogonal if <m>\vect{u}\cdot\vect{v} = 0</m>.
+</p>
+</statement>
+</definition>
+
+<p>
+Orthogonal vectors are perpendicular, since, if <m>\theta</m> is the angle between two nonzero vectors 
+<m>\vect{u}, \vect{v} \in \R^n</m>, then <xref ref="thm-geo-form-dot-product"/> gives
+<me>
+\vect{u}\cdot\vect{v} = 0 \implies \cos\theta = 0 \implies \theta = \pi/2
+</me>.
+</p>
+
+<example xml:id="ex-angle-vecs">
+<statement>
+<p>
+Determine whether the angle between <m>\vect{u} = [2, -1, 1]</m> and <m>\vect{v} = [1, -2, -1]</m> is acute, 
+obtuse, or a right angle.
+</p>
+
+<p>
+We have
+<me>
+\cos\theta = \frac{\vect{u}\cdot\vect{v}}{\|\vect{u}\|\|\vect{v}\|} = \frac{2+2-1}{\sqrt{4+1+1}\sqrt{1+4+1} } = \frac{3}{6} = \frac{1}{2}\gt 0,
+</me>
+so <m>\theta</m> is acute. In fact, <m>\theta = \cos\inv(\frac{1}{2}) = \frac{\pi}{3}</m>.
+</p>
+</statement>
+</example>
+
+<example xml:id="ex-orthogonal-vecs">
+<statement>
+<p>
+Find <m>k\in \R</m> such that <m>\vect{a} = [1, -1, 2]</m> and <m>\vect{b} = [k^2, k, -3]</m> are orthogonal.
+</p>
+
+<p>
+If <m>\vect{a}\cdot\vect{b} = 0</m>, then
+  <me>
+  [1, -1, 2] \cdot [k^2, k, -3] = k^2 - k - 6 = 0,
+</me>
+which factorises to give <m>(k+2)(k-3) = 0</m>. Therefore, <m>k=-2</m> or <m>k=3</m>.
+</p>
+</statement>
+</example>
 
 </section>

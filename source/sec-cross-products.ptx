@@ -3,6 +3,325 @@
 <section xml:id="sec-cross-products" xmlns:xi="http://www.w3.org/2001/XInclude">
   <title>Cross products</title>
 
-  <p> Text of section. </p>
+ <p>
+The cross product is another operation on vectors. It is only defined for vectors in <m>\R^3</m>, and its 
+output is another vector in <m>\R^3</m>.
+</p>
+
+
+<definition xml:id="def-cross-product">
+<statement>
+<p>
+The <term>cross product</term> of the vectors <m>\vect{u}=[u_1, u_2, u_3], \vect{v} = [v_1, v_2, v_3] \in \R^3</m>
+is the vector
+<me>
+\vect{u}\times\vect{v} = [u_2v_3 - u_3v_2, u_3v_1 - u_1v_3, u_1v_2-u_2v_1]
+</me>.
+</p>
+</statement>
+</definition>
+
+<p>
+To help remember the formula, we can use the array method (<xref ref="fig-braid"/>). It involves 3 pairs of 
+lines, one for each component of the resulting vector. Starting at <m>u_2</m>, multiply the components 
+connected by the solid line, then subtract the product of the components connected by the dashed line. 
+For example, the first component is <me>
+\text{first solid line} - \text{first dashed line} = u_2v_3 - v_2u_3,
+</me>
+and so on for the rest.
+</p>
+
+
+
+<figure xml:id="fig-braid">
+<caption>Diagram for the array method</caption>
+<!--braid.tikz-->
+</figure>
+
+<p>
+Alternatively, to notice the `criss-cross' pattern it helps to write the vectors using columns:
+<me>
+\begin{bmatrix}
+  u_1 \\ u_2\\ u_3
+\end{bmatrix}
+\times
+\begin{bmatrix}
+  v_1 \\ v_2\\ v_3
+\end{bmatrix}
+=
+\begin{bmatrix}
+  u_2v_3 - u_3v_2 \\ u_3v_1 - u_1v_3\\ u_1v_2-u_2v_1
+\end{bmatrix}
+</me>.
+</p>
+
+<p>
+Here are three examples which also showcase properties of the cross product.
+</p>
+
+
+<example xml:id="ex-cross">
+<statement>
+<p>
+If <m>\vect{u} = [3, 1, 2]</m> and <m>\vect{v} = [5, 0, 4]</m>, then
+<me>
+\vect{u} \times \vect{v} = [1(4) - 2(0), 2(5) - 3(4), 3(0) - 1(5)] = [4, -2, -5]
+</me>
+and
+<me>
+\vect{v}\times\vect{u} = [0(2) - 4(1), 4(3) - 5(2), 5(1) - 0(3)] = [-4, 2, 5]
+</me>.
+Notice that <m>\vect{u} \times \vect{v} = - \vect{v} \times \vect{u}</m>.
+</p>
+</statement>
+</example>
+
+<figure xml:id="fig-braid_ex">
+<caption>Array method for <m>\vect{u} \times \vect{v}</m> from <xref ref="ex-cross"/></caption>
+<!--braid_ex.tikz-->
+</figure>
+
+<example xml:id="ex-dot-and-cross">
+<statement>
+<p>
+Find <m>\vect{u}\cdot (\vect{u}\times\vect{v})</m> and <m>\vect{v}\cdot (\vect{u}\times\vect{v})</m> 
+for <m>\vect{u} = [3, 1, 2]</m> and <m>\vect{v} = [5, 0, 4]</m>. From the previous example, we know 
+<m>\vect{u} \times\vect{v} = [4, -2, -5]</m>. So
+<me>
+\vect{u}\cdot(\vect{u}\times\vect{v}) = [3, 1, 2] \cdot [4, -2, -5] = 12-2-10 = 0,
+</me>
+<me>
+\vect{v}\cdot (\vect{u}\times\vect{v}) = [5, 0, 4] \cdot [4, -2, -5] = 20+0-20 = 0.
+</me>
+</p>
+</statement>
+</example>
+
+<example xml:id="ex-uxuiszero">
+<statement>
+<p>If <m>\vect{u} = [3, 1, 2]</m>, then
+<me>
+\vect{u}\times \vect{u} = [2-2, 6-6, 3-3] = [0, 0, 0] = \vect{0}.
+</me></p>
+</statement>
+</example>
+
+<p>
+The next theorem lists the main properties of the cross product.
+</p>
+
+
+<theorem xml:id="thm-cross-product-props">
+<statement>
+<p>
+Let <m>\vect{u}, \vect{v}, \vect{w} \in\R^3</m> and <m>c\in \R</m>. Then
+<ol>
+<li>
+<p><m>\vect{u} \times \vect{v} = -\vect{v} \times \vect{u}\quad</m> (anti-commutativity)
+</p>
+</li>
+<li>
+<p><m>\vect{u} \cdot (\vect{u}\times \vect{v}) = \vect{v} \cdot(\vect{u}\times \vect{v} ) = 0</m>
+</p>
+</li>
+<li>
+<p><m>\vect{u} \times \vect{u} = \vect{0}</m>
+</p>
+</li>
+<li>
+<p><m>\vect{u} \times \vect{0} = \vect{0} \times\vect{u} = \vect{0}</m>
+</p>
+</li>
+<li>
+<p><m>\vect{u}\times (\vect{v} + \vect{w})=\vect{u}\times \vect{v} + \vect{u} \times \vect{w}\quad</m> (left distributivity)
+</p>
+</li>
+<li>
+<p><m>(\vect{u} + \vect{v})\times \vect{w} = \vect{u} \times\vect{w} + \vect{v} \times \vect{w}\quad</m> (right distributivity)
+</p>
+</li>
+<li>
+<p><m>(c\vect{u})\times \vect{v} = \vect{u} \times (c\vect{v}) = c(\vect{u}\times \vect{v})</m>.</p>
+</li>
+</ol>
+</p>
+</statement>
+</theorem>
+
+<p>
+Property 2 says that <m>\vect{u} \times \vect{v}</m> is orthogonal to <m>\vect{u}</m> and <m>\vect{v}</m>. 
+We will prove Properties 2, 3, and 5.
+</p>
+
+<proof>
+<p>
+Let <m>\vect{u} = [u_1, u_2, u_3], \vect{v} = [v_1, v_2, v_3]</m> and <m>\vect{w} = [w_1, w_2, w_3]</m>. 
+Property 2 holds since
+<md>
+<mrow>
+\vect{u} \cdot (\vect{u}\times \vect{v}) \amp  = [u_1, u_2, u_3]\cdot [u_2v_3 - u_3v_2, u_3v_1 - u_1v_3, u_1v_2-u_2v_1] \\
+\amp  = u_1u_2v_3 - u_1u_3v_2 + u_2u_3v_1 - u_2u_1v_3 + u_3u_1v_2 - u_3u_2v_1  \\
+\amp  =0;
+</mrow>
+</md>
+the calculation that <m>\vect{v} \cdot(\vect{u}\times \vect{v}) = 0</m> is similar. We can deduce Property 3 
+from Property 1 by observing that
+<me>
+\vect{u} \times \vect{u} = -\vect{u} \times \vect{u},
+</me>
+so <m>\vect{u} \times \vect{u} = 0</m>. Finally, the proof of Property 5 is that
+<md>
+<mrow>
+\amp\vect{u}\times (\vect{v} + \vect{w}) \\
+\amp  = [u_1, u_2, u_3]\times [v_1 + w_1, v_2 + w_2, v_3 + w_3]                                                   \\
+\amp  = [u_2(v_3 + w_3) - u_3(v_2 + w_2), u_3(v_1 + w_1)- u_1(v_3 + w_3), \\
+\amp\qquad\qquad u_1(v_2 + w_2) - u_2(v_1 + w_1)]       \\
+\amp  = [u_2v_3 - u_3v_2, u_3v_1 - u_1v_3, u_1v_2 - u_2v_1] \\
+\amp\quad\qquad+ [u_2w_3 - u_3w_2, u_3w_1 - u_1w_3, u_1w_2 - u_2w_1] \\
+\amp  = \vect{u} \times \vect{v} + \vect{u} \times \vect{w}.
+</mrow>
+</md>
+</p>
+</proof>
+
+<p>
+Importantly, the cross product is not associative! This means that, for 
+<m>\vect{u}, \vect{v}, \vect{w} \in \R^3</m>,
+<me>
+(\vect{u}\times \vect{v})\times \vect{w} \ne \vect{u} \times (\vect{v}\times \vect{w})
+</me>.
+For example, if <m>\vect{u} = [1, 1, 0], \vect{v} = [0, 1, 1], \vect{w} = [0, 0, 1]</m>, then
+<me>
+(\vect{u}\times \vect{v})\times \vect{w} = [1, -1, 1] \times [0, 0, 1] =[-1, -1, 0]
+</me>
+while
+<me>
+\vect{u} \times (\vect{v}\times \vect{w}) = [1, 1, 0] \times [1, 0, 0] = [0, 0, -1]
+</me>.
+</p>
+
+<example xml:id="ex-cross-product-algebra">
+<statement>
+<p>
+Simplify <m>(\vect{u} + \vect{v}) \times (\vect{u} - \vect{v})</m> using the properties in the theorem.
+<md>
+<mrow>
+(\vect{u} + \vect{v}) \times (\vect{u} - \vect{v}) \amp  =  (\vect{u} + \vect{v}) \times \vect{u} + (\vect{u} + \vect{v}) \times (-\vect{v})\quad \text{(Property 5)} \\
+\amp  = (\vect{u} + \vect{v}) \times \vect{u} - (\vect{u} + \vect{v})\times\vect{v}                               \quad \text{(Property 7)}           \\
+\amp  = \vect{u}\times \vect{u} + \vect{v} \times \vect{u} - (\vect{u} \times \vect{v} + \vect{v}\times \vect{v}) \quad \text{(Property 6)}           \\
+\amp  = \vect{v} \times \vect{u} - \vect{u} \times \vect{v}                                                       \quad \text{(Property 3)}        \\
+\amp  = - 2\vect{u}\times \vect{v}.                                                                               \quad \text{(Property 1)} 
+</mrow>
+</md>
+</p>
+</statement>
+</example>
+
+<p>
+Recall that <m>\vect{u} \times \vect{v}</m> is orthogonal to both <m>\vect{u}</m> and <m>\vect{v}</m>. 
+If <m>\vect{u}</m> and <m>\vect{v}</m> are not parallel, then the set of linear combinations of 
+<m>\vect{u}</m> and <m>\vect{v}</m> is a plane in <m>\R^3</m>. The cross product <m>\vect{u} \times \vect{v}</m> 
+must be orthogonal to this plane, so there are only two choices for its direction. This is show in 
+<xref ref="fig-plane_normals"/>: the two orthogonal vectors are the upwards normal vector and the 
+downwards normal vector, drawn in red.
+</p>
+
+
+
+<figure xml:id="fig-plane_normals">
+<caption>There are two vectors which are orthogonal to the plane given by <m>\vect{u}</m> and <m>\vect{v}</m></caption>
+<!--plane_normals.tikz-->
+</figure>
+
+<p>
+The direction of <m>\vect{u} \times \vect{v}</m> is given by the right hand rule.
+</p>
+
+<assemblage xml:id="right-hand-rule">
+<term>Right-hand rule:</term>
+<ol>
+<li>
+<p>Point the fingers of your right hand straight in the direction of <m>\vect{u}</m>.</p>
+</li>
+<li>
+<p>Curl fingers towards the direction of <m>\vect{v}</m>.</p>
+</li>
+<li>
+<p>Your thumb points in the direction of <m>\vect{u}\times \vect{v}</m>.</p>
+</li>
+</ol>
+</assemblage>
+
+
+<figure xml:id="fig-rhr">
+<caption>The right hand rule</caption>
+<!--RHR pic needed-->
+</figure>
+
+<p>
+Now we know the direction of <m>\vect{u}\times \vect{v}</m>. Next, we want to calculate its magnitude (length). 
+First, it will help to have the following fact (we leave the proof as an exercise).
+</p>
+
+
+<assemblage xml:id="fact-length-of-cross">
+<p>
+Let <m>\vect{u}, \vect{v} \in \R^3</m>. Then 
+<m>\|\vect{u} \times\vect{v}\|^2 = \|\vect{u}\|^2\|\vect{v}\|^2 - |\vect{u}\cdot\vect{v}|^2</m>.
+</p>
+</assemblage>
+
+<p>
+Now we can calculate the length of a cross product.
+</p>
+
+
+<theorem xml:id="Thm-lengpara">
+<statement>
+<p>
+Let <m>\vect{u}, \vect{v} \in \R^3</m>, and <m>\theta</m> be the angle between <m>\vect{u}</m> and 
+<m>\vect{v}</m> such that <m>0 \le \theta \le \pi</m>. Then
+<me>
+\|\vect{u} \times \vect{v}\| = \|\vect{u}\|\|\vect{v}\|\sin\theta
+</me>.
+</p>
+</statement>
+
+<proof>
+<p>
+By the boxed fact above and the geometric formula for the dot product,
+<md>
+<mrow>
+\|\vect{u} \times\vect{v}\|^2 \amp  = \|\vect{u}\|^2\|\vect{v}\|^2 - |\vect{u}\cdot\vect{v}|^2              \\
+\amp  = \|\vect{u}\|^2\|\vect{v}\|^2 - |\|\vect{u}\|\|\vect{v}\|\cos\theta|^2 \\
+\amp  = \|\vect{u}\|^2\|\vect{v}\|^2(1-\cos^2\theta)                          \\
+\amp  = \|\vect{u}\|^2\|\vect{v}\|^2\sin^2\theta
+</mrow>
+</md>.
+Since <m>0 \le \theta\le \pi</m>, we have <m>\sin\theta \ge 0</m>, and so taking square roots gives the 
+result.
+</p>
+</proof>
+</theorem>
+
+<example xml:id="ex-length-of-cross">
+<statement>
+<p>
+Suppose <m>\vect{u}, \vect{v} \in \R^3</m> are such that <m>\|\vect{u}\| = \sqrt{6}, \|\vect{v}\| = \sqrt{35}</m>, and 
+<m>\vect{u}\cdot\vect{v} = 14</m>. Find <m>\|\vect{u} \times \vect{v}\|</m>.
+We first calculate that
+<me>
+\cos\theta = \frac{\vect{u}\cdot\vect{v}}{\|\vect{u}\|\|\vect{v}\|} = \frac{14}{\sqrt{6}\sqrt{35}} = \frac{14}{\sqrt{210}}
+</me>.
+Then <m>\sin^2\theta = 1- \cos^2\theta = \frac{1}{15}</m>, so <m>\sin\theta = \frac{1}{\sqrt{15}}</m>. (We used the 
+  positive square root since <m>0\le\theta\le\pi</m>). Finally,
+<me>
+\|\vect{u} \times \vect{v}\| = \|\vect{u}\|\|\vect{v}\|\sin\theta = \sqrt{\frac{210}{15}} = \sqrt{14}.
+</me>
+</p>
+</statement>
+</example>
+
+
 
 </section>

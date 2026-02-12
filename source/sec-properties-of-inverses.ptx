@@ -3,6 +3,278 @@
 <section xml:id="sec-properties-of-inverses" xmlns:xi="http://www.w3.org/2001/XInclude">
   <title>Properties of inverses</title>
 
-  <p> Text of section. </p>
+ <p>
+Let <m>a, b, x \in \R</m> and consider the equation of real numbers
+<me>
+ax = b
+</me>.
+If <m>a\ne 0</m>, then <m>a</m> has the inverse <m>a\inv = 1/a</m>, and there is a unique solution
+<me>
+x = a\inv b = \frac{1}{a}b = \frac{b}{a}
+</me>.
+This works because
+<md>
+<mrow>
+ax = b \amp  \implies a\inv a x = a\inv b \\
+\amp  \implies 1x = x = a\inv b
+</mrow>
+</md>.
+</p>
+
+<p>
+We see that the key property of <m>a\inv</m> is that <m>a\inv a = 1</m>, and similarly it's useful 
+that <m>a\inv a = 1</m>. (For real numbers this is essentially the same thing, because multiplication 
+is commutative, but remember that matrix multiplication is not commutative.) We will define matrix 
+inverses to have these properties, so that we can likewise solve the matrix equation <m>AX = B</m> 
+to get <m>X = A\inv B</m>.
+</p>
+
+
+<definition xml:id="def-inverse">
+<statement>
+<p>
+An <term>inverse</term> of an <m>n\times n</m> matrix <m>A</m> is an <m>n\times n</m> matrix <m>B</m> 
+such that
+<me>
+AB = BA = I_n
+</me>.
+If such a matrix <m>B</m> exists, then we say that <m>A</m> is <term>invertible</term>.
+</p>
+</statement>
+</definition>
+
+<p>
+Note that we require <m>A</m> and <m>B</m> to both be <m>n\times n</m> so that <m>AB</m> and <m>BA</m> 
+are both defined.
+</p>
+
+<example xml:id="ex-inverse-check">
+<statement>
+<p>
+Let
+<me>
+A =
+\begin{bmatrix}
+  2 \amp  5 \\ 1\amp  3
+\end{bmatrix}
+, \qquad B =
+\begin{bmatrix}
+  3 \amp  -5 \\ -1 \amp  2
+\end{bmatrix}
+</me>.
+Then
+<md>
+<mrow>
+AB \amp  =
+\begin{bmatrix}
+  2 \amp  5 \\ 1\amp  3
+\end{bmatrix}
+\begin{bmatrix}
+  3 \amp  -5 \\ -1 \amp  2
+\end{bmatrix}
+=
+\begin{bmatrix}
+  1 \amp  0 \\ 0 \amp  1
+\end{bmatrix}
+= I_2, \\
+BA \amp  =
+\begin{bmatrix}
+  3 \amp  -5 \\ -1 \amp  2
+\end{bmatrix}
+\begin{bmatrix}
+  2 \amp  5 \\ 1\amp  3
+\end{bmatrix}
+=
+\begin{bmatrix}
+  1 \amp  0 \\ 0 \amp  1
+\end{bmatrix}
+= I_2
+</mrow>
+</md>.
+So by definition, <m>B</m> is an inverse of <m>A</m> (and <m>A</m> is an inverse of <m>B</m>).
+</p>
+</statement>
+</example>
+
+<p>
+The zero matrix is not invertible since for any matrix <m>B</m>, we have <m>0B = B0 = 0 \ne I_n</m>. 
+However, unlike real numbers, there are nonzero matrices which are not invertible.
+</p>
+
+
+<example xml:id="ex-non-invertible">
+<statement>
+<p>
+Let
+<me>
+A =
+\begin{bmatrix}
+  1 \amp  -1 \\ -2 \amp  2
+\end{bmatrix}
+, \qquad B =
+\begin{bmatrix}
+  a \amp  b \\ c\amp  d
+\end{bmatrix}
+</me>.
+Calculate <m>AB</m> and show that <m>A</m> is not invertible.
+</p>
+<p>
+We have
+<md>
+<mrow>
+AB \amp  =
+\begin{bmatrix}
+  1 \amp  -1 \\ -2 \amp  2
+\end{bmatrix}
+\begin{bmatrix}
+  a \amp  b \\ c\amp  d
+\end{bmatrix}
+\\
+\amp  =
+\begin{bmatrix}
+  a-c \amp  b-d \\ -2a+2c\amp  -2(b-d)
+\end{bmatrix}
+</mrow>
+</md>.
+If the <m>(1, 2)</m>-entry is zero, then the <m>(2, 2)</m>-entry is also zero, so is not equal to 1. 
+This shows that
+<me>
+AB \ne I_2 =
+\begin{bmatrix}
+  1 \amp  0 \\
+  0 \amp  1
+\end{bmatrix}
+,
+</me>
+regardless of the value of <m>a, b, c, d\in \R</m>. Therefore <m>A</m> has no inverse.
+</p>
+</statement>
+</example>
+
+<theorem xml:id="thm-unique">
+<statement>
+<p>
+If an <m>n\times n</m> matrix <m>A</m> is invertible, then it has a unique inverse.
+</p>
+</statement>
+
+<proof>
+<p>
+Suppose <m>B</m> and <m>C</m> are any two inverses of <m>A</m>. Then
+<me>
+B = BI = B(AC)
+</me>
+since <m>C</m> is an inverse of <m>A</m>. But then
+<me>
+B(AC) = (BA)C = IC = C
+</me>
+using associativity and that <m>B</m> is an inverse of <m>A</m>. Thus <m>B=C</m>.
+</p>
+</proof>
+</theorem>
+
+<p>
+Since if <m>A</m> is invertible it only has one inverse, we will now refer to it as the inverse of 
+<m>A</m>, and denote it by <m>A\inv</m>.
+</p>
+
+
+<remark xml:id="rem-inverse-notation">
+<title></title>
+<p>Do not write <m>1/A</m> for the inverse <m>A\inv</m>. This is a number divided by a matrix, 
+so it makes no sense. Therefore, if we have a matrix equation <m>AX = B</m> where <m>A</m> is 
+invertible, and solve it to get <m>X = A\inv B</m>, you should think of this as multiplication 
+by <m>A\inv</m> rather than division by <m>A</m>. Even though for real numbers this is the same 
+thing, to avoid confusion it is best to never think about division when working with matrices.
+</p>
+</remark>
+
+<p>
+Matrix inversion has the following properties, which are similar to the properties for the matrix 
+transpose.</p>
+
+<theorem xml:id="thm-inv">
+<statement>
+<p>Suppose <m>A</m> and <m>B</m> are invertible <m>n\times n</m> matrices, and <m>c\in \R</m> is a nonzero scalar. Then
+<ol>
+<li>
+<p><m>A\inv</m> is invertible, and <m>(A\inv)\inv = A</m>
+</p>
+</li>
+<li>
+<p><m>cA</m> is invertible, and <m>(cA)\inv = \frac{1}{c}A\inv</m>
+</p>
+</li>
+<li>
+<p><m>AB</m> is invertible, and <m>(AB)\inv = B\inv A\inv</m>
+</p>
+</li>
+<li>
+<p><m>A^T</m> is invertible, and <m>(A^T)\inv = (A\inv)^T</m>
+</p>
+</li>
+<li>
+<p><m>A^k</m> is invertible for any <m>k \in \N</m>, and <m>(A^k)\inv = (A\inv)^k</m>.</p>
+</li>
+</ol></p>
+</statement>
+</theorem>
+
+<p>
+We will prove the first 4 properties. The proof of Property 5 is an exercise.
+</p>
+
+<proof>
+<p>
+The equation <m>AA\inv = A\inv A = I_n</m> which comes from <m>A</m> being invertible also says 
+that <m>A\inv</m> is invertible and <m>(A\inv)\inv = A</m> (think about this) which proves 1. 
+Property 2 follows from the calculation
+<md>
+<mrow>
+cA\biggl(\frac{1}{c}A\inv\biggr) \amp  = c\frac{1}{c}AA\inv = 1I = I   \\
+\biggl(\frac{1}{c}A\inv\biggr)cA \amp  = \frac{1}{c}c A\inv A = 1I = I
+</mrow>
+</md>
+and Property 3 follows from the calculation
+<md>
+<mrow>
+AB(B\inv A\inv) \amp  = A(B B\inv)A\inv = AA\inv = I    \\
+(B\inv A\inv)AB \amp  = B\inv (A\inv A)B = B\inv B = I
+</mrow>
+</md>.
+For Property 4, observe that
+<md>
+<mrow>
+A^T(A\inv)^T  \amp  = (A\inv A)^T = I^T = I         \\
+(A\inv)^T A^T \amp  = (AA\inv)^T = I^T = I.
+</mrow>
+</md>
+</p>
+</proof>
+
+<p>
+We will use the notation <m>A^{-k} = (A\inv)^k</m>.
+</p>
+
+<example xml:id="ex-matrix-algebra-with-inverses">
+<statement>
+<p>Solve <m>A\inv (BX)\inv = (A\inv B^3)^2</m> for <m>X</m> in terms of <m>A</m> and <m>B</m>.</p>
+<p>We calculate, using properties of the matrix inverse, that
+<md>
+<mrow>
+A\inv (BX)\inv \amp = (A\inv B^3)^2 \\
+\amp  \implies AA\inv(BX)\inv = A(A\inv B^3)^2                        \\
+\amp  \implies (BX)\inv = A(A\inv B^3)^2                              \\
+\amp  \implies ((BX)\inv)\inv = (A(A\inv B^3)^2)\inv                  \\
+\amp  \implies BX = (A\inv B^3)^{-2} A\inv                            \\ \amp  \implies B\inv BX = B\inv (A\inv B^3)^{-2} A\inv\\
+\amp  \implies X = B\inv(B^{-3}A)^2 A\inv = B\inv B^{-3}AB^{-3}AA\inv \\
+\amp  \implies X = B^{-4}AB^{-3}.
+</mrow>
+</md>
+</p>
+</statement>
+</example>
+
+
 
 </section>

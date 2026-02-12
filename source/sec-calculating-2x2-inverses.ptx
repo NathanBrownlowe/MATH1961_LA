@@ -3,6 +3,204 @@
 <section xml:id="sec-calculating-2x2-inverses" xmlns:xi="http://www.w3.org/2001/XInclude">
   <title>Calculating <m>2\times 2</m> inverses</title>
 
-  <p> Text of section. </p>
+<p>
+The next theorem tells us when a <m>2\times 2</m> matrix is invertible, and what its inverse is 
+(if it has one).
+</p>
+
+
+<theorem xml:id="thm-invertible">
+<statement>
+<p>
+A <m>2\times 2</m> matrix
+<me>
+A =
+\begin{bmatrix}
+  a \amp  b \\ c\amp d
+\end{bmatrix}
+</me>is invertible if and only if <m>ad-bc \neq 0</m>. In this case, we have
+<me>
+A\inv = \frac{1}{ad-bc}
+\begin{bmatrix}
+  d \amp  -b \\ -c \amp a
+\end{bmatrix}
+</me>.
+</p>
+</statement>
+
+<proof>
+<p>
+Suppose <m>ad-bc\ne 0</m>. Then
+<md>
+<mrow>
+A =
+\begin{bmatrix}
+  a \amp  b \\ c\amp d
+\end{bmatrix}
+\left(\frac{1}{ad-bc}
+\begin{bmatrix}
+  d \amp  -b \\ -c \amp a
+\end{bmatrix}
+\right) \amp  = \frac{1}{ad-bc}
+\begin{bmatrix}
+  a \amp  b \\ c\amp d
+\end{bmatrix}
+\begin{bmatrix}
+  d \amp  -b \\ -c \amp a
+\end{bmatrix}
+\\
+\amp  = \frac{1}{ad-bc}
+\begin{bmatrix}
+  ad - bc \amp  0 \\
+  0       \amp  -cb+ da
+\end{bmatrix}
+\\
+\amp  =
+\begin{bmatrix}
+  1 \amp  0 \\ 0 \amp  1
+\end{bmatrix}
+= I_2
+</mrow>
+</md>.
+Similarly one can show that
+<me>
+\frac{1}{ad-bc}
+\begin{bmatrix}
+  d \amp  -b \\ -c \amp a
+\end{bmatrix}
+\begin{bmatrix}
+  a \amp  b \\ c\amp d
+\end{bmatrix}
+= I_2
+</me>.
+This shows that <m>A</m> is invertible, with the desired inverse.
+</p>
+
+<p>
+Conversely, suppose that <m>ad- bc = 0</m>.
+</p>
+
+<p>
+<term>Case 1:</term> If <m>a = 0</m>, then <m>bc = 0</m>, so <m>b = 0</m> or <m>c = 0</m>. If <m>b = 0</m>,
+<me>
+\begin{bmatrix}
+  0 \amp  0 \\
+  c \amp  d
+\end{bmatrix}
+\begin{bmatrix}
+  a' \amp  b' \\ c' \amp  d'
+\end{bmatrix}
+=
+\begin{bmatrix}
+  0         \amp  0 \\
+  a'c + c'd \amp  b'c + dd'
+\end{bmatrix}
+\ne I_2
+</me>
+since the <m>(1, 1)</m>-entry is zero instead of one. If <m>c = 0</m>, then
+<me>
+\begin{bmatrix}
+  a' \amp  b' \\ c' \amp  d'
+\end{bmatrix}
+\begin{bmatrix}
+  0 \amp  b \\
+  0 \amp  d
+\end{bmatrix}
+=
+\begin{bmatrix}
+  0 \amp  a'b + b'd \\
+  0 \amp  bc' + dd'
+\end{bmatrix}
+\ne I_2
+</me>. Since <m>a', b', c', d' \in \R</m> were arbitrary, this means that <m>A</m> has no inverse.
+</p>
+
+<p>
+<term>Case 2:</term> If <m>a\ne 0</m>, then <m>d =\frac{bc}{a}</m>. Then, in the following Problem 
+you are asked to show that
+<me>
+A =
+\begin{bmatrix}
+  a \amp  b \\ c \amp  \frac{bc}{a}
+\end{bmatrix}
+</me>
+is not invertible.
+</p>
+</proof>
+</theorem>
+
+<!--
+<exercise>
+<statement>
+<p>Finish the proof of Case 2 in <xref ref="thm- invertible"/>.</p>
+</statement>
+<hint>
+</hint>
+<answer>
+</answer>
+<solution>
+</solution>
+</exercise>-->
+
+
+<definition xml:id="def-2x2-determinant">
+<statement>
+<p>
+The <term>determinant</term> of a <m>2\times 2</m> matrix
+<me>
+A =
+\begin{bmatrix}
+  a \amp  b \\ c\amp  d
+\end{bmatrix}
+</me>
+is the real number <m>\det(A) = ad - bc</m>.</p>
+</statement>
+</definition>
+
+<p>
+Therefore <xref ref="thm-invertible"/> says that <m>A</m> is invertible if and only if 
+<m>\det(A) \ne 0</m>, and in this case
+<me>
+A\inv = \frac{1}{\det(A)}
+\begin{bmatrix}
+  d \amp  -b \\ -c \amp  a
+\end{bmatrix}
+</me>.
+So, to calculate the inverse of a <m>2\times 2</m> matrix, swap the elements on the diagonal, 
+and negate the elements off the diagonal; then scale by <m>1/\det(A)</m>.
+</p>
+
+<example xml:id="ex-inv2">
+<statement>
+<p>
+Determine whether the matrix is invertible and find the inverse if it exists for the following matrices:
+<me>
+A=
+\begin{bmatrix}
+  2 \amp  5 \\ 1\amp  3
+\end{bmatrix}
+, \qquad B =
+\begin{bmatrix}
+  1 \amp  -1 \\ -2 \amp  2
+\end{bmatrix}
+</me>.
+</p>
+<p>
+First, <m>\det(A) = 2\times 3 - 5\times 1 = 1</m>, so <m>A</m> is invertible, with inverse
+<me>
+A\inv = \frac{1}{\det(A)}
+\begin{bmatrix}
+  3 \amp  -5 \\ -1 \amp  2
+\end{bmatrix}
+=
+\begin{bmatrix}
+  3 \amp  -5 \\ -1 \amp  2
+\end{bmatrix}
+</me>.
+Second, <m>B</m> is not invertible since <m>\det(B) = 1\times 2 - (-1)(-2) = 2 - 2 = 0</m>.
+</p>
+</statement>
+</example>
+
 
 </section>

@@ -3,6 +3,73 @@
 <section xml:id="sec-geo-apps-of-cross-products" xmlns:xi="http://www.w3.org/2001/XInclude">
   <title>Geometric applications of cross products</title>
 
-  <p> Text of section. </p>
+ <p>
+The formula
+<me>
+\|\vect{u} \times \vect{v}\| = \|\vect{u}\|\|\vect{v}\|\sin\theta
+</me> 
+has a geometric interpretation. From trigonometry, we know that if <m>a</m> and <m>b</m> are 
+two side lengths of a triangle, and <m>\theta</m> is the angle between these sides, then the area of the 
+triangle is <m>\frac{1}{2}ab \sin\theta</m>. Therefore we can deduce the following corollary, which is 
+illustrated in <xref ref="fig-cross_area"/>. 
+</p>
+
+<corollary xml:id="cor-area-of-parallelogram">
+<statement>
+<p>
+Let <m>\vect{u}, \vect{v} \in \R^3</m>. Then <m>\|\vect{u}\times \vect{v}\|</m> is the area of the 
+parallelogram inscribed by <m>\vect{u}</m> and <m>\vect{v}</m>, and 
+<m>\frac{1}{2}\|\vect{u}\times \vect{v}\|</m> is the area of the triangle inscribed by 
+<m>\vect{u}</m> and <m>\vect{v}</m>.
+</p>
+</statement>
+</corollary>
+
+<figure xml:id="fig-cross_area">
+<caption>The area of this parallelogram is <m>\|\vect{u}\times \vect{v}\|</m>, which is twice the area of the triangles.</caption>
+<!--cross_area.tikz-->
+</figure>
+
+<example xml:id="ex-area-of-triangle">
+<statement>
+<p>
+Calculate the area of the triangle formed by the points <m>A = (1, 2, -1)</m>, <m>B = (2, 4, 1)</m>, 
+<m>C = (0, 2, -2)</m>.
+We have
+<md>
+<mrow>
+\overrightarrow{AB} \amp  = [2, 4, 1] - [1, 2, -1] = [1, 2, 2]     \\
+\overrightarrow{AC} \amp  = [0, 2, -2] - [1, 2, -1] = [-1, 0, -1]
+</mrow>
+</md>.
+Thus <m>\overrightarrow{AB} \times \overrightarrow{AC} = [-2-0, -2+1, 0+2] = [-2, -1, 2]</m>, which has 
+length <m>\sqrt{2^2 + 1 + 2^2} = \sqrt{9} = 3</m>. So the area of the triangle is
+<me>
+\frac{1}{2}\|\overrightarrow{AB}\times \overrightarrow{AC}\| = \frac{3}{2}.
+</me>
+</p>
+</statement>
+</example>
+
+
+<remark xml:id="rem-parallelopiped">
+<statement>
+<p>
+Three vectors <m>\vect{u},\mathbf{v},\mathbf{w}\in{\mathbb R}^3</m> inscribe a <term>parallelopiped</term>, as is illustarted in
+<xref ref="fig-parallelopiped"/>. The volume of this shape is given by
+<md>
+  |\vect{u}\cdot(\vect{v}\times\vect{w})|
+</md>.
+The term <m>\vect{u}\cdot(\vect{v}\times\vect{w})</m> is called the <term>scalar triple product</term> of 
+<m>\vect{u},\vect{v},\vect{w}\in {\mathbb R}^3</m>.
+</p>
+</statement>
+</remark>
+
+<figure xml:id="fig-parallelopiped">
+<caption>The normal form of a line</caption>
+<!--parallelopiped.tikz-->
+</figure>
+
 
 </section>

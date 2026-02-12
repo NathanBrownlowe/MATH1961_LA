@@ -3,6 +3,246 @@
 <section xml:id="sec-guassian-elimination" xmlns:xi="http://www.w3.org/2001/XInclude">
   <title>Gaussian elimination</title>
 
-  <p> Text of section. </p>
+ <p>
+In this section, we develop the method used in <xref ref="ex-lineq"/> into a general procedure.
+</p>
+
+
+<definition xml:id="def-elementary-operations">
+<statement>
+<p>
+The following list of <term>elementary operations</term> on a system of linear equations do not 
+change the set of solutions:
+<ol>
+<li>
+<p>swapping two equations
+</p>
+</li>
+<li>
+<p>multiplying an equation by a nonzero constant
+</p>
+</li>
+<li>
+<p>adding a multiple of one equation to another.</p>
+</li>
+</ol>
+These correspond to <term>elementary row operations</term> (EROs) on the corresponding augmented matrix, 
+which are
+<ol>
+<li>
+<p>swapping two rows, written <m>R_i \leftrightarrow R_j</m>
+</p>
+</li>
+<li>
+<p>multiplying a row by a nonzero constant, written <m>R_i \mapsto cR_i\quad</m> (<m>c \ne 0</m>)
+</p>
+</li>
+<li>
+<p>adding a multiple\footnote{In this ERO, there is there is no restriction on the multiple <m>c</m>; 
+it could be zero. However, if <m>c=0</m> then the matrix will be unchanged.} of one row to 
+another, written <m>R_i \mapsto R_i + cR_j</m>
+</p>
+</li>
+</ol>
+</p>
+</statement>
+</definition>
+
+<definition xml:id="def-REF">
+<statement>
+<p>A matrix is in <term>row echelon form (REF)</term> if
+<ol>
+<li>
+<p>All rows of zeroes (if there are any) are at the bottom
+</p>
+</li>
+<li>
+<p>In each nonzero row, the first nonzero entry, called a <term>leading entry</term>, is in a column 
+further to the right of leading entries in any rows above it. In other words, leading entries 
+should only have zeroes beneath them \textit{in their column and in columns to their left}.
+</p>
+</li>
+</ol></p>
+</statement>
+</definition>
+
+<p>
+There is nothing above the first row, so we don't need to check above the first row.
+</p>
+
+<example xml:id="ex-REF-matrices">
+<statement>
+<p>
+These three matrices are in REF.
+<me>
+\begin{amatrix}{cc}
+  1 \amp  2\amp  3\\
+  0 \amp  11\amp  0
+\end{amatrix}
+, \qquad
+\begin{amatrix}{ccc}
+  1 \amp  2 \amp  3 \amp  4\\
+  0 \amp  0 \amp  3 \amp  0\\
+  0 \amp  0 \amp  0 \amp  1
+\end{amatrix}
+, \qquad
+\begin{amatrix}{cc}
+  0 \amp  0 \amp  0\\
+  0 \amp  0 \amp  0
+\end{amatrix}
+</me>.
+For a matrix in REF, the shape formed by the nonzero entries should roughly look like a triangle, except 
+if there are a lot of zeroes rows like the third matrix (which is still considered to be in REF even though 
+it's entirely zero).
+</p>
+<p>
+These two matrices are not in REF.
+<me>
+\begin{amatrix}{ccc}
+  1 \amp  0 \amp  3 \amp  2\\
+  2 \amp  1 \amp  0 \amp  1\\
+  0 \amp  0 \amp  0\amp  0
+\end{amatrix}
+, \qquad
+\begin{amatrix}{cccc}
+  1 \amp  2 \amp  1 \amp  0 \amp  3\\
+  0 \amp  0 \amp  0 \amp  0 \amp  0\\
+  0 \amp  0 \amp  3 \amp  1 \amp 4
+\end{amatrix}
+</me>.
+The issue with the first is that the leading entry (2) in the second row is not to the right of the 
+leading entry (1) in the row above it, or in other words the issue is that the leading entry in the 
+first row (1) has a nonzero entry (2) below it in its column. The issue with the second matrix is that 
+it has a zero row which is not at the bottom. If we moved the zero row to the bottom (by swapping 
+the second and third rows), then this matrix would be in REF.
+</p>
+</statement>
+</example>
+
+<definition xml:id="def-gaussian-elim">
+<statement>
+<p>
+<term>Gaussian elimination</term> is the process of solving a system of linear equations by applying 
+elementary row operations to transform the corresponding augmented matrix to row echelon form, and then 
+using back-substitution (solving the augmented matrix from the bottom row upwards).
+</p>
+</statement>
+</definition>
+
+<p>
+Here are steps to row reduce a matrix into REF:
+<ol>
+<li>
+<p>By swapping rows, make sure that the top row has less (or the same amount of) leading zeroes than all the other rows.</p>
+</li>
+<li>
+<p>Then use the top row to make all the elements below its leading entry zero, by subtracting multiples of this row.</p>
+</li>
+<li>
+<p>Once you have cleared out the first column, you are finished with the first row and column, so they should stay where they are. Move onto the second row and repeat the process, now using the second row to make all the entries below its leading entry zero.</p>
+</li>
+<li>
+<p>Repeat this for every row to get the matrix into REF.</p>
+</li>
+</ol>
+To perform Gaussian elimination, follow the steps to perform REF and then back-substitute. To understand 
+and remember these steps, it is much easier to learn by example than to directly memorise them, so we 
+will give many worked examples throughout the rest of this chapter. (Also, in some examples there may 
+be quicker ways to get the matrix into REF. You don't need to follow the steps above exactly: as long 
+as the matrix ends up in REF it's fine.)
+</p>
+
+<example xml:id="ex-solving-system">
+<statement>
+<p>Solve the system of linear equations
+<me>
+\begin{cases}
+  x +y + 3z \amp  = 4 \\
+  2x + 3y   \amp  = 1 \\
+  -x + z    \amp  = 9
+\end{cases}
+</me>.
+</p>
+<p>We form the augmented matrix and row-reduce:
+<md>
+<mrow>
+\begin{amatrix}{ccc}
+  1 \amp  1 \amp  3 \amp  4\\
+  2 \amp  3 \amp  0 \amp 1\\
+  -1 \amp  0 \amp  1 \amp  9\\
+\end{amatrix}
+\amp\xrightarrow[R_3\mapsto R_3 + R_1]{R_2 \mapsto R_2 - 2R_1} 
+\begin{amatrix}{ccc}
+  1 \amp  1 \amp  3 \amp  4\\
+  0 \amp  1 \amp  -6 \amp  -7\\
+  0 \amp  1 \amp  4 \amp  13\\
+\end{amatrix}
+\\
+\amp\xrightarrow{R_3 \mapsto R_3 - R_2}                       
+\begin{amatrix}{ccc}
+  1 \amp  1 \amp  3 \amp  4\\
+  0 \amp  1 \amp  -6 \amp  -7\\
+  0 \amp  0 \amp  10 \amp  20
+\end{amatrix}
+</mrow>
+</md>.
+Back-substituting, the bottom row gives <m>10z = 20</m>, so <m>z = 2</m>. The next row up 
+(the middle row) gives <m>y - 6z = -7</m>, so <m>y = -7 + 6z = -7 + 12 = 5</m>. The top row 
+gives <m>x + y + 3z = 4</m>, so <m>x = 4 - y - 3z = -7</m>. Therefore the unique solution 
+is <m>x = -7</m>, <m>y = 5</m>, <m>z = 2</m>.
+</p>
+</statement>
+</example>
+
+<example xml:id="ex-GE-to-solve">
+<statement>
+<p>Use Gaussian elimination to solve the following system of linear equations:
+<me>
+\left\{
+\begin{aligned}
+  3x +y + 2z    \amp  = 13 \\
+  -3x - y - z   \amp  = -6 \\
+  -3x + 5y - 4z \amp  = 3
+\end{aligned}
+\right.
+</me>.
+</p>
+<p>Calculating REF:
+<md>
+<mrow>
+\begin{amatrix}{ccc}
+  3 \amp  1 \amp  2 \amp  13\\
+  -3 \amp  -1 \amp  -1 \amp  -6\\
+  -3 \amp  5 \amp  -4 \amp  3\\
+\end{amatrix}
+\amp\xrightarrow[R_3\mapsto R_3 + R_1]{R_2 \mapsto R_2 + R_1}
+\begin{amatrix}{ccc}
+  3 \amp  1 \amp  2 \amp  13\\
+  0 \amp  0 \amp  1 \amp  7\\
+  0 \amp  6 \amp  -2 \amp  16
+\end{amatrix}
+\\
+\amp\xrightarrow{R_2 \leftrightarrow R_3}                     
+\begin{amatrix}{ccc}
+  3 \amp  1 \amp  2 \amp  13\\
+  0 \amp  6 \amp  -2 \amp  16\\
+  0 \amp  0 \amp  1 \amp  7
+\end{amatrix}
+</mrow>
+</md>.
+Back-substituting, <m>z = 7</m>. Then <m>6y - 2z = 16</m>, so 
+<m>y = \frac{1}{6}(16+2z) = \frac{1}{6}(16+14) = 5</m>. Finally, the first row gives 
+<m>3x+y+2z=13</m>, which rearranges to give <m>x = -2</m>.
+</p>
+</statement>
+</example>
+
+<remark xml:id="rem-REF-not-unique">
+<p>
+REF is not unique. For example, if an augmented matrix is in REF, we can multiply any of its rows by a 
+nonzero scalar. This will give a different row echelon form of the matrix. REF matrices can have other 
+differences too.
+</p>
+</remark>
 
 </section>

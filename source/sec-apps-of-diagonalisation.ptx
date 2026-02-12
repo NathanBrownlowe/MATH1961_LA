@@ -3,6 +3,59 @@
 <section xml:id="sec-apps-of-diagonalisation" xmlns:xi="http://www.w3.org/2001/XInclude">
   <title>Applications of diagonalisation</title>
 
-  <p> Text of section. </p>
+<p>
+One of the useful things about diagonalisation is that it allows us to quickly compute large powers 
+of matrices. If <m>A = PDP\inv</m>, then most of the <m>P</m> and <m>P\inv</m> terms will cancel: 
+we have <m>A^2 = (PDP\inv)(PDP\inv) = PD(P\inv P)DP\inv = PD^2 P\inv</m>. Similarly, for any 
+integer power <m>m \gt  0</m>, we have
+<me>
+A^m = PD^m P\inv
+</me>.
+Recall that if <m>D</m> is a diagonal matrix, the power <m>D^m</m> can be computed simply by 
+taking the <m>m</m>th power of each diagonal entry. Then we just need to multiply it by <m>P</m> 
+(on the left) and <m>P\inv</m> (on the right) to find <m>A^m</m>.
+</p>
+
+<example xml:id="ex-power-using-diagl">
+<statement>
+<p>
+Use diagonalisation to calculate <m>A^{1000}</m> where
+<me>
+A =
+\begin{bmatrix}
+  0 \amp  2 \amp  1 \\ -2 \amp  4 \amp  1\\ -2 \amp  2 \amp  3
+\end{bmatrix}
+</me>.
+</p>
+<p>
+In <xref ref="ex-diagl"/>, we saw that <m>A = PDP\inv</m> is diagonalisable, with
+<me>
+P =
+\begin{bmatrix}
+  1 \amp  1 \amp  \frac{1}{2} \\ 1 \amp  1 \amp  0\\ 1 \amp  0 \amp  1
+\end{bmatrix}
+, \qquad D =
+\begin{bmatrix}
+  3 \amp  0 \amp  0 \\ 0 \amp  2 \amp  0\\ 0 \amp  0 \amp  2
+\end{bmatrix}
+</me>.
+Therefore
+<me>
+A^{1000} = PD^{1000}P\inv =
+\begin{bmatrix}
+  1 \amp  1 \amp  \frac{1}{2} \\ 1 \amp  1 \amp  0\\ 1 \amp  0 \amp  1
+\end{bmatrix}
+\begin{bmatrix}
+  3^{1000} \amp  0 \amp  0 \\ 0 \amp  2^{1000} \amp  0\\ 0 \amp  0 \amp  2^{1000}
+\end{bmatrix}
+\begin{bmatrix}
+  1 \amp  1 \amp  \frac{1}{2} \\ 1 \amp  1 \amp  0\\ 1 \amp  0 \amp  1
+\end{bmatrix}
+\inv
+</me>.
+This could be simplified further by evaluating the inverse and the matrix products.
+</p>
+</statement>
+</example>
 
 </section>

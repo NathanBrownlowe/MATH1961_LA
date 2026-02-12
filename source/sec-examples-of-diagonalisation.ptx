@@ -3,6 +3,179 @@
 <section xml:id="sec-examples-of-diagonalisation" xmlns:xi="http://www.w3.org/2001/XInclude">
   <title>Examples of diagonalisation</title>
 
-  <p> Text of section. </p>
+ <example xml:id="ex-diagl">
+<statement>
+<p>
+Is
+<me>
+A =
+\begin{bmatrix}
+  0 \amp  2 \amp  1 \\ -2 \amp  4 \amp  1\\ -2 \amp  2 \amp  3
+\end{bmatrix}
+</me>
+diagonalisable? If so, write out <m>A = PDP\inv</m>.
+</p>
+
+<p>
+First, we compute the characteristic polynomial. To simplify the calculation, we will start with one 
+step of row-reduction:
+<md>
+<mrow>
+\det(A-\lambda I) \amp  =
+\begin{vmatrix}
+  -\lambda \amp  2 \amp  1 \\ -2 \amp  4-\lambda \amp  1\\ -2 \amp  2 \amp  3-\lambda
+\end{vmatrix}
+\\
+\amp  =
+\begin{vmatrix}
+  -\lambda \amp  2 \amp  1 \\ -2 \amp  4-\lambda \amp  1\\0 \amp  \lambda -2 \amp  2-\lambda
+\end{vmatrix}
+\\
+\amp  = -\lambda
+\begin{vmatrix}
+  4-\lambda \amp  1 \\ \lambda - 2 \amp  2-\lambda
+\end{vmatrix}
++ 2
+\begin{vmatrix}
+  2 \amp  1 \\ \lambda -2 \amp  2-\lambda
+\end{vmatrix}
+\\
+\amp  = -\lambda((4-\lambda)(2-\lambda)-(\lambda-2)) + 2(2(2-\lambda) - (\lambda - 2)) \\
+\amp  = -\lambda(\lambda-2)(\lambda -4-1) + 2(\lambda - 2)(-2-1)                       \\
+\amp  = - \lambda(\lambda - 2)(\lambda - 5) - 6(\lambda - 2)                           \\
+\amp  =-(\lambda-2)(\lambda(\lambda-5) + 6)                                            \\
+\amp  = -(\lambda-2)(\lambda^2 - 5\lambda + 6)                                         \\
+\amp  = - (\lambda-2)^2(\lambda-3)
+</mrow>
+</md>.
+So the eigenvalues are <m>\lambda = 2</m> (with algebraic multiplicity 2) and <m>\lambda = 3</m> 
+(with algebraic multiplicity 1). Next we calculate eigenspaces.
+</p>
+
+<p>
+For <m>\lambda =2</m>, we have
+<me>
+\begin{amatrix}{c}
+  A - 2\lambda I \amp  \vect{0}
+\end{amatrix}
+=
+\begin{amatrix}{ccc}
+  -2 \amp  2 \amp  1 \amp  0\\
+  -2 \amp  2 \amp  1 \amp  0\\
+  -2 \amp  2 \amp  1 \amp  0\\
+\end{amatrix}
+\to
+\begin{amatrix}{ccc}
+  -2 \amp  2 \amp  1 \amp  0\\
+  0 \amp  0 \amp  0 \amp  0\\
+  0 \amp  0 \amp  0 \amp  0\\
+\end{amatrix}
+</me>.
+Since the second and third rows don't have a leading entry, we need to let <m>y = s</m> and <m>z = t</m>, 
+for <m>s, t \in \R</m>. Then <m>-2x + 2y + z = 0</m> implies that <m>x = s + \frac{1}{2}t</m>. 
+So the eigenspace is
+<me>
+E_2(A) = \left\{
+\begin{bmatrix}
+  s + \frac{1}{2}t \\ s\\ t
+\end{bmatrix}
+\; \middle| \; s, t \in \R\right\} = \left\{s
+\begin{bmatrix}
+  1 \\ 1\\ 0
+\end{bmatrix}
++ t
+\begin{bmatrix}
+  \frac{1}{2} \\ 0 \\ 1
+\end{bmatrix}
+\; \middle| \; s, t \in \R\right\}
+</me>.
+This has 2 parameters, so the geometric multiplicity of <m>\lambda = 2</m> is 2, which is equal 
+to its algebraic multiplicity. Taking <m>s = 1</m> and <m>t = 0</m> gives that <m>[1, 1, 0]</m> 
+is an eigenvector, and taking <m>s = 0</m> and <m>t = 1</m> gives that <m>[\frac{1}{2}, 0, 1]</m> 
+is also an eigenvector (corresponding to a different parameter).
+</p>
+
+<p>
+For <m>\lambda = 3</m>, we have
+<md>
+<mrow>
+\begin{amatrix}{c}
+  A - 3\lambda I \amp  \vect{0}
+\end{amatrix}
+=
+\begin{amatrix}{ccc}
+  -3 \amp  2 \amp  1 \amp  0\\ -2 \amp  1 \amp  1 \amp  0\\ -2 \amp  2 \amp  0 \amp  0
+\end{amatrix}
+\amp\xrightarrow[R_3 \mapsto R_3 - \frac{2}{3}R_1]{R_2 \mapsto R_2 - \frac{2}{3}R_1} 
+\begin{amatrix}{ccc}
+  -3 \amp  2 \amp  1 \amp  0\\
+  0 \amp  -\frac{1}{3} \amp  \frac{1}{3} \amp  0\\
+  0 \amp  \frac{2}{3} \amp  -\frac{2}{3} \amp  0
+\end{amatrix}
+\\
+\amp\xrightarrow{R_3 \mapsto R_3 + 2R_2}                                             
+\begin{amatrix}{ccc}
+  -3 \amp  2 \amp  1 \amp  0\\
+  0 \amp  -\frac{1}{3} \amp  \frac{1}{3} \amp  0\\
+  0 \amp  0 \amp  0 \amp  0
+\end{amatrix}
+</mrow>
+</md>.
+Let <m>z = t</m>, for <m>t \in \R</m>. Then the second row gives <m>y = t</m>, and the first 
+gives <m>y = t</m>. Therefore the 3-eigenspace is
+<me>
+E_3(A) = \left\{
+\begin{bmatrix}
+  t \\ t\\ t
+\end{bmatrix}
+\;\middle|\; t \in \R\right\}
+</me>.
+This has 1 parameter, so the geometric multiplicity of <m>\lambda = 3</m> is 1, which is equal to 
+its algebraic multiplicity. Taking <m>t = 1</m>, an eigenvector is <m>
+\begin{bmatrix}
+  1 \amp  1 \amp  1
+\end{bmatrix}
+</m>. Therefore both eigenvalues have geometric multiplicity = algebraic multiplicity, so 
+<m>A</m> is diagonalisable, and we can write <m>A = PDP\inv</m> as
+<me>
+A =
+\begin{bmatrix}
+  1 \amp  1 \amp  \frac{1}{2} \\ 1 \amp  1 \amp  0\\ 1 \amp  0 \amp  1
+\end{bmatrix}
+\begin{bmatrix}
+  3 \amp  0 \amp  0 \\ 0 \amp  2 \amp  0\\ 0 \amp  0 \amp  2
+\end{bmatrix}
+\begin{bmatrix}
+  1 \amp  1 \amp  \frac{1}{2} \\ 1 \amp  1 \amp  0\\ 1 \amp  0 \amp  1
+\end{bmatrix}
+\inv
+</me>. 
+The columns of <m>P</m> are the eigenvectors of <m>A</m>.
+</p>
+
+<p>
+Notice that since <m>\lambda = 2</m> has algebraic multiplicity 2, we needed to find 2 
+eigenvectors corresponding to 2 different parameters in <m>E_2(A)</m>, and the eigenvalue 
+2 appears twice in the diagonal matrix <m>D</m> (in the corresponding positions to its 
+eigenvectors in <m>P</m>).
+</p>
+</statement>
+</example>
+
+<example xml:id="ex-diagl2">
+<statement>
+<p>
+Consider the matrix
+<me>
+A =
+\begin{bmatrix}
+  0 \amp  1 \amp  0 \\ 0 \amp  0 \amp  1\\ 2 \amp  -5 \amp  4
+\end{bmatrix}
+</me>
+from <xref ref="ex-mult"/>. The algebraic multiplicity of the eigenvalue <m>\lambda =1</m> is 2, 
+while its geometric multiplicity is 1. Therefore <m>A</m> is not diagonalisable.
+</p>
+</statement>
+</example>
 
 </section>

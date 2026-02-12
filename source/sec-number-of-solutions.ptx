@@ -3,6 +3,247 @@
 <section xml:id="sec-number-of-solutions" xmlns:xi="http://www.w3.org/2001/XInclude">
   <title>Number of solutions</title>
 
-  <p> Text of section. </p>
+ <p>
+In most of the examples so far, and all of the examples which we have solved via Gaussian 
+elimination, the system has had a single solution. In fact, this is only one of three 
+possibilities.
+</p>
+
+
+<theorem xml:id="thm-solns">
+<statement>
+<p>
+Every system of linear equations has either
+<ol>
+<li>
+<p>a unique solution
+</p>
+</li>
+<li>
+<p>infinitely many solutions
+</p>
+</li>
+<li>
+<p>no solutions.</p>
+</li>
+</ol></p>
+</statement>
+</theorem>
+
+<p>
+In other words, it is impossible for the number of solutions to be 2, 3, \dots or any finite number 
+greater than 1.
+</p>
+
+
+<definition xml:id="def-consistent">
+<statement>
+<p>
+A system of linear equations is called <term>consistent</term> if it has at least one solution, 
+and <term>inconsistent</term> if it has no solutions.
+</p>
+</statement>
+</definition>
+
+<p>
+We will not prove <xref ref="thm-solns"/>, but we will now sketch an argument in two special geometric 
+cases, so that hopefully it seems reasonable.
+</p>
+
+<p>
+Firstly, if we have two equations in two variables
+<me>
+\begin{cases}
+  a_1x +b_1y  \amp  = c_1 \\
+  a_2x + b_2y \amp  = c_2
+\end{cases},
+</me>
+then each equation is a line in <m>\R^2</m>, so the solutions describe the intersection of two lines 
+in <m>\R^2</m>. The only possibilities are one intersection, if the lines are not parallel; no solutions, 
+if the lines are parallel and do not coincide; and infinitely many solutions if the lines coincide. 
+Actually, we have already seen this in <xref ref="ex-pt"/> to <xref ref="ex-coincide" />, and we 
+briefly discussed this there.
+</p>
+
+<p>
+Secondly, if we have three equations in three variables, each equation is the general form of a plane 
+in <m>\R^3</m>, so the number of solutions is the number of intersections of these planes. There can 
+be a unique solution if all 3 planes meet at a single point, infinitely many solutions if the planes 
+intersect along a line, or no solutions when the planes have no points in common. These possibilities 
+are illustrated in <xref ref="fig-plane_int12"/> and <xref ref="fig-plane_int3" />. A similar geometric 
+argument works for <m>n</m> equations in <m>n</m> variables, though it becomes 
+harder to visualise.
+</p>
+
+<figure xml:id="fig-plane_int12">
+      <caption>Intersections of three planes in <m>\R^3</m></caption>
+      <sidebyside widths="45% 45%" margins="auto" valign="middle">
+	<figure xml:id="fig-plane_int1">
+	  <caption>Single intersection.</caption>
+		<!--plane_intersect1.tikz-->
+	</figure>
+	<figure xml:id="fig-plane_int2">
+	  <caption>Infinitely many intersection points.</caption>
+	  <!--plane_intersect2.tikz-->
+	</figure>
+</sidebyside>
+    </figure>
+
+<figure xml:id="fig-plane_int3">
+      <caption>Three planes in <m>\R^3</m> with no common intersection</caption>
+      <sidebyside widths="30% 30% 30%" margins="auto" valign="middle">
+	<figure xml:id="">
+	  <!--plane_intersect3a.tikz-->
+	</figure>
+	<figure xml:id="">
+	  <!--plane_intersect3b.tikz-->
+	</figure>
+	<figure xml:id="">
+	  <!--plane_intersect3c.tikz-->
+	</figure>
+</sidebyside>
+    </figure>
+
+<p>
+<term>Gaussian elimination for equations with no or infinitely many solutions:</term>
+The first step is always to get the augmented matrix into REF. Once you've done this, here's how 
+to tell how many solutions there are, and what to do next.
+<ul>
+<li>
+<p>If in REF we have a row of the form
+<me>
+\begin{amatrix}{cccc} 0 \amp  0 \amp  \dots \amp 0 \amp  b
+\end{amatrix}
+</me>
+where <m>b</m> is nonzero, then we conclude that there are no solutions. This is because it is 
+impossible for <m>0x_1 + 0x_2 + \dots + 0x_n</m> to equal something nonzero.</p>
+</li>
+<li>
+<p>Look for any columns such that all its entries are not the leading entries of any row. 
+(This can occur if there are less equations than the number of variables, or if there is a zero 
+row in REF.) If there are any, then you will need to assign these variables to a parameter. 
+For example, consider the REF augmented matrix
+<me>
+\begin{amatrix}{ccc}
+  1 \amp  8 \amp  0 \amp  1\\
+  0 \amp  2 \amp  1 \amp  2\\
+\end{amatrix}
+</me>
+Then the <m>z</m>-column doesn't contain any leading entries, so we introduce the parameter <m>t \in \R</m>, and let <m>z=t</m>. Now solve for the rest of the variables in terms of the parameter. There will be infinitely many solutions (one for each value of the parameter).</p>
+</li>
+<li>
+<p>If neither of the two above situations apply, then there is a unique solution, and we can solve for it as usual.</p>
+</li>
+</ul>
+</p>
+
+<example xml:id="ex-no-sols">
+<statement>
+<p>Show that the system of linear equations
+<me>
+\begin{cases}
+  x + 4y -z    \amp  = 0 \\
+  x + 6y       \amp  = 3 \\
+  2x + 10y - z \amp  = 5
+\end{cases}
+</me>.
+has no solutions.
+</p>
+<p>
+Row reducing gives
+<md>
+<mrow>
+\begin{amatrix}{ccc}
+  1 \amp  4 \amp  -1 \amp  0\\
+  1 \amp  6 \amp  0 \amp  3\\
+  2 \amp  10 \amp  -1 \amp  5\\
+\end{amatrix}
+\amp\xrightarrow[R_3\mapsto R_3 - 2R_1]{R_2 \mapsto R_2 - R_1} 
+\begin{amatrix}{ccc}
+  1 \amp  4 \amp  -1 \amp  0\\
+  0 \amp  2 \amp  1 \amp  3\\
+  0 \amp  2 \amp  1 \amp  5
+\end{amatrix}
+\\
+\amp\xrightarrow{R_3 \mapsto R_3 - R_2}                        
+\begin{amatrix}{ccc}
+  1 \amp  4 \amp  -1 \amp  0\\
+  0 \amp  2 \amp  1 \amp  3\\
+  0 \amp  0 \amp  0 \amp  2
+\end{amatrix}
+</mrow>
+</md>.
+The last row is a zero row with 2 after the line, so there is no solution.
+</p>
+</statement>
+</example>
+
+<p>
+The next example shows how to solve linear equations with infinitely many solutions, by introducing 
+a parameter. In this example, we will only need to introduce one parameter. Sometimes it is necessary 
+to introduce multiple parameters; this will be covered later in <xref ref="ex-multparam"/>.
+</p>
+
+
+<example xml:id="ex-inftysolns">
+<statement>
+<p>
+Solve the system of linear equations
+<me>
+\begin{cases}
+  2x + y +5z  \amp  = 1 \\
+  2x + 3y +4z \amp  = 4 \\
+  4x + 11 z   \amp  = -1
+\end{cases}
+</me>.
+has no solutions.
+</p>
+<p>
+Row reducing gives
+<me>
+\begin{amatrix}{ccc}
+  2 \amp  1 \amp  5 \amp  1\\
+  2 \amp  3 \amp  4 \amp  4\\
+  4 \amp  0 \amp  11 \amp  -1\\
+\end{amatrix}
+\to
+\begin{amatrix}{ccc}
+  2 \amp  1 \amp  5 \amp  1\\
+  0 \amp  2 \amp  -1 \amp  3\\
+  0 \amp  -2 \amp  1 \amp  -3
+\end{amatrix}
+\to
+\begin{amatrix}{ccc}
+  2 \amp  1 \amp  5 \amp  1\\
+  0 \amp  2 \amp  -1 \amp  3\\
+  0 \amp  0 \amp  0 \amp  0
+\end{amatrix}
+</me>.
+The last column has no leading entries, so <m>z</m> is not determined. However, this is fine: 
+we let <m>z = t</m>, for <m>t \in \R</m> a parameter. Now we can back-substitute in terms 
+of <m>t</m>. We have <m>2y - z = 3</m>, so <m>y = \frac{1}{2}(3+z) = \frac{3}{2} + \frac{1}{2}t</m>. 
+Finally,
+<md>
+<mrow>
+2x + y +5z = 1 \implies x \amp  = \frac{1}{2}(1-y - 5z)                                               \\
+\amp  = \frac{1}{2}\Bigl(1 - \Bigl(\frac{3}{2}+\frac{1}{2}t\Bigr) -5t\Bigr) \\
+\amp  = -\frac{1}{4}-\frac{11}{4}t
+</mrow>
+</md>.
+So there are infinitely many solutions 
+<m>[x, y, z] = [-\frac{1}{4}-\frac{11}{4}t, \frac{3}{2} + \frac{1}{2}t, t]</m>, <m>t \in \R</m>.
+</p>
+</statement>
+</example>
+
+<p>
+A geometric interpretation of <xref ref="ex-inftysolns"/> is that the 3 planes intersect in the line
+<me>
+\vect{x} = \Bigl[-\frac{1}{4}, \frac{3}{2}, 0\Bigr] + t\Bigl[-\frac{11}{4}, \frac{1}{2}, 1\Bigr], \qquad t\in \R
+</me>.
+Notice that to save space and time, we didn't label the arrows during row reduction. We will sometimes 
+do the same thing in future examples.
+</p>
+
 
 </section>

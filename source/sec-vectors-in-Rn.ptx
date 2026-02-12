@@ -3,6 +3,377 @@
 <section xml:id="sec-vectors-in-Rn" xmlns:xi="http://www.w3.org/2001/XInclude">
   <title>Vectors in <m>\mathbb{R}^n</m></title>
 
-  <p> Text of section. </p>
+<p>
+  Vectors in <m>\R^n</m> are very similar to vectors in the plane, except they have <m>n</m> components 
+  instead of 2.
+  </p>
+
+  <definition xml:id="def-vectors-in-Rn">
+  <title>Vectors in <m>\R^n</m></title>
+  <statement>
+  <p>
+  A <term>vector</term> <m>\vect{a}</m> in <m>\R^n</m> is an expression of the form
+  <me>
+  \vect{a} =
+  \begin{bmatrix}
+    a_1 \\ a_2\\ \vdots\\ a_n
+  \end{bmatrix}
+  ,
+  </me>
+  or <m>\vect{a} = [a_1, a_2, \dots, a_n]</m> to save space, with components <m>a_1, \dots, a_n \in \R</m>.
+  </p>
+  </statement>
+  </definition>
+
+  <p>
+  The definition of vector addition and scaling in <m>\R^n</m> is component-wise, like in 
+  <m>\R^2</m>. Let <m>c\in \R</m> be a scalar, and 
+  <m>\vect{a} = [a_1, a_2, \dots, a_n], \vect{b} = [b_1, b_2, \dots, b_n] \in \R^n</m> be vectors. 
+  Then we define the <term>sum</term>
+  <me>
+  \vect{a} + \vect{b} = [a_1 + b_1, a_2 + b_2, \dots, a_n+b_n]
+  </me>
+  and the <term>scalar multiple</term>
+  <me>
+  c\vect{a} = [ca_1, ca_2, \dots, ca_n]
+  </me>.
+  </p>
+  
+  <p>
+  The <term>zero vector</term> in <m>\R^n</m> is the vector
+  <me>
+  \vect{0} = [0, 0, \dots, 0]
+  </me>
+  having <m>n</m> components which are all zero.
+  </p>
+
+  <p>
+  A vector in <m>\R^n</m> can still be interpreted as a directed line segment in <m>n</m>-dimensional space. 
+  In <m>\R^3</m>, we can still draw vectors, add vectors tip to tail, and interpret scaling as scaling in 
+  <m>3</m>-dimensional space. See <xref ref="fig-vecR3"/> for how to plot a vector in <m>\R^3</m> using its 
+  components. In <m>\R^n</m> for <m>n\ge 4</m>, we can't draw vectors. However, our algebraic methods developed 
+  for <m>\R^2</m> still work for <m>\R^n</m>, without any issues.
+  </p>
+
+  <figure xml:id="fig-vecR3">
+  <caption>The vector <m>\vect{a} = [1, 2, 3]</m> in <m>\R^3</m></caption>
+<image width="60%">
+<latex-image>
+\begin{tikzpicture}[scale=1.2]
+
+    % Draw the axes with the z-axis pointing upwards, so coords are (y, z, x)
+    \draw[vector,->] (0,0,0) -- (0,0,3.5) node[anchor=north east] {$x$};
+    \draw[vector,->] (0,0,0) -- (3.5,0,0) node[right] {$y$};
+    \draw[vector,->] (0,0,0) -- (0,3.5,0) node[above] {$z$};
+ 
+    \coordinate (A) at (2,3,1);
+
+    % Draw the vector
+    \draw[vector,->] (0,0,0) -- (A) node[anchor=west] {$\vect{a}=[1,2,3]$};
+
+    % Draw the projection onto the xy-plane and projections
+    \draw[dashed] (A) -- (2,0,1);
+    \draw[dashed] (2,0,1) -- (2,0,0);
+    \draw[dashed] (2,0,1) -- (0,0,1);
+
+    \foreach \x in {1,...,3} \draw (-.08, .08, \x) -- (.08, -0.08, \x) node[below] {\footnotesize $\x$};
+    \foreach \y in {1, 2, 3} \draw (\y, .1) -- (\y, -0.1) node[below] {\footnotesize $\y$};
+    \foreach \z in {1,...,3} \draw (.1,\z) -- (-.1,\z) node[left] {\footnotesize $\z$};
+    
+\end{tikzpicture}
+</latex-image>
+</image>
+  </figure>
+
+  <remark xml:id="rem-vecs-and-reals">
+  <p>
+  We can view vectors in <m>\R^1</m> as real numbers: for <m>[t] \in \R^1</m>, we consider this the same as <m>t \in \R</m>. 
+  For example, we view the vector <m>[2]</m> as the number 2.
+  </p>
+  </remark>
+  
+  <example xml:id="">
+  <statement>
+  <p>
+  In <m>\R^5</m>, let <m>\vect{a} = [1, 0, 2, 3, 1]</m> and <m>\vect{b} = [2, 1, 0, 1, 4]</m>. Then
+  <md>
+  <mrow>
+  \vect{a} + \vect{b} \amp  = [1+2, 0+1, 2+0, 3+1, 1+4] \\
+  \amp  = [3, 1, 2, 4, 5],          \\
+  \vect{a} - \vect{b} \amp  = [1-2, 0-1, 2-0, 3-1, 1-4] \\
+  \amp  = [-1, -1, 2, 2, -3],       \\
+  2\vect{a}           \amp  = [2, 0, 4, 6, 2].
+  </mrow>
+  </md>
+  </p>
+  </statement>
+  </example>
+  
+  <p>
+  The following fundamental properties of vectors in <m>\R^n</m> describes how addition, scaling, negation, 
+  and the zero vector interact. We will call this a `Theorem', which is a name in mathematics for a fact or 
+  result, usually an important one.
+  </p>
+
+  <theorem xml:id="thm-vec-prop">
+  <statement>
+  <p>Let <m>\vect{u}, \vect{v}, \vect{w} \in \R^n</m> and <m>c, d \in \R</m>. Then
+  <ol>
+  <li>
+  <p><m>\vect{u} + \vect{v} = \vect{v} + \vect{u}\quad</m> (commutativity)
+  </p>
+  </li>
+  <li>
+  <p><m>(\vect{u} + \vect{v}) + \vect{w} = \vect{u} + (\vect{v}+ \vect{w})\quad</m> (associativity)
+  </p>
+  </li>
+  <li>
+  <p><m>\vect{u} + \vect{0} = \vect{u}</m>
+  </p>
+  </li>
+  <li>
+  <p><m>\vect{u} + (-\vect{u}) = \vect{0}</m>
+  </p>
+  </li>
+  <li>
+  <p><m>c(\vect{u} + \vect{v}) = c\vect{u} + c\vect{v}\quad</m> (distributivity)
+  </p>
+  </li>
+  <li>
+  <p><m>(c+d)\vect{u} = c\vect{u} + d\vect{u}\quad</m> (distributivity)
+  </p>
+  </li>
+  <li>
+  <p><m>c(d\vect{u}) = (cd)\vect{u}</m>
+  </p>
+  </li>
+  <li>
+  <p><m>1\vect{u} = \vect{u}</m>.</p>
+  </li>
+  </ol></p>
+  </statement>
+  </theorem>
+  
+  <p>
+  Properties 5 and 6 are both known as distributivity. Associativity (Property 2) allows us to write sums of 
+  several vectors
+  <me>
+  \vect{u} + \vect{v} + \vect{w}
+  </me>
+  without using any brackets, because no matter what order the sums are performed in, the resulting vector 
+  will be same.
+  </p>
+  
+  <p>
+  Theorems are closely related to `proofs', which is a mathematical demonstration of why the fact is true. 
+  We will prove Properties 3-6 to give an indication of how to do it. The proof of the remaining properties 
+  will be left as an exercise.
+  </p>
+  
+  <proof>
+  <p>
+  Let <m>\vect{u} = [u_1, u_2, \dots, u_n]</m> and <m>\vect{v} = [v_1, v_2, \dots, v_n]</m>. Then Property 3 is 
+  proved by
+  <md>
+  <mrow>
+  \vect{u} + \vect{0} \amp  = [u_1, u_2, \dots, u_n] + [0, 0, \dots, 0] \\
+  \amp  = [u_1 + 0, u_2 + 0, \dots, u_n + 0]         \\
+  \amp  = \vect{u}
+  </mrow>
+  </md>,
+  Property 4 holds since
+  <me>
+  \vect{u} + (-\vect{u}) = [u_1 - u_1, \dots, u_n - u_n] = \vect{0},
+  </me>
+  and Property 5 holds since
+  <md>
+  <mrow>
+  c(\vect{u} + \vect{v})
+  \amp  = c([u_1 + v_1, u_2 + v_2, \dots, u_n + v_n])   \\
+  \amp  = [cu_1 +cv_1, cu_2 + cv_2, \dots, cu_n + cv_n] \\
+  \amp  = c\vect{u} + c\vect{v}
+  </mrow>
+  </md>.</p>
+  <p>Finally, the following calculation
+  <md>
+  <mrow>
+  (c+d)\vect{u} \amp  = (c+d)[u_1, u_2, \dots, u_n]                    \\
+  \amp  = [(c+d)u_1, (c+d)u_2, \dots, (c+d)u_n]          \\
+  \amp  = [cu_1 + du_1, cu_2 + du_2, \dots, cu_n + du_n] \\
+  \amp  = c\vect{u} + d\vect{u}
+  </mrow>
+  </md>.
+  proves Property 6.</p>
+  </proof>
+  
+  <p>
+  We can use these properties to simplify vector expressions.
+  </p>
+
+  <example xml:id="ex-algebraic-props">
+  <statement>
+  <p>
+  Let <m>\vect{a}, \vect{b} \in \R^n</m>. The expression 
+  <m>3(2\vect{a} - \vect{b}) + (\vect{a} - 3\vect{b})</m> is simplified by
+  <md>
+  <mrow>
+  \amp 3(2\vect{a} - \vect{b}) + (\vect{a} - 3\vect{b}) \\
+  \amp\quad = 3(2\vect{a} + (-1)\vect{b}) + (\vect{a}+(-1)3\vect{b})   \quad\text{(definition of subtraction)}             \\
+  \amp\quad  = [3(2\vect{a}) + 3(-1\vect{b})] + (\vect{a}+(-1)3\vect{b}) \quad\text{(distributivity)}                        \\
+  \amp\quad  =[6\vect{a}+(-3\vect{b})] + (\vect{a} + (-3)\vect{b})       \quad\text{(Property 7)}                            \\
+  \amp\quad  = 6\vect{a} + \vect{a} + (-3)\vect{b} + (-3)\vect{b}        \quad\text{(associativity and commutativity)}       \\
+  \amp\quad  = (6+1)\vect{a} + ((-3)+(-3))\vect{b}                       \quad\text{(Property 8, distributivity)}            \\
+  \amp\quad  = 7\vect{a} + (-6)\vect{b}                                  \quad\text{(addition in }\R\text{)}                      \\
+  \amp\quad  = 7\vect{a} - 6\vect{b}.                                    \quad\text{(Property 7, definition of subtraction)}
+  </mrow>
+  </md>
+  </p>
+  </statement>
+  </example>
+  
+  <p>
+  We went through this example in detail to show how all the properties are applied. But in practice 
+  <xref ref="thm-vec-prop"/> means that we can simplify vector algebra intuitively, using similar rules to 
+  algebra with numbers. So we can combine most of the steps to do it faster, for example
+  <me>
+  3(2\vect{a} - \vect{b}) + (\vect{a} - 3\vect{b}) = 6\vect{a} - 3\vect{b} + \vect{a} - 3\vect{b} = 7\vect{a} - 6 \vect{b}
+  </me>.
+  </p>
+  
+  <p>
+  So far, we know how to add and scale vectors. We will give a name to what happens when we combine addition 
+  with scaling.
+  </p>
+
+  <definition xml:id="def-lincomb">
+  <statement>
+  <p>
+  A vector <m>\vect{v}\in \R^n</m> is a <term>linear combination</term> of vectors 
+  <m>\vect{v}_1, \vect{v}_2, \dots, \vect{v}_k</m> if there are scalars <m>c_1, c_2, \dots, c_k \in \R</m> 
+  such that
+  <me>
+  \vect{v} = c_1\vect{v}_1 + c_2\vect{v}_2 + \dots + c_k\vect{v}_k
+  </me>.
+  </p>
+  
+  <p>
+  The scalars <m>c_1, c_2, \dots, c_k</m> are called the <term>coefficients</term> of the linear combination.
+  </p>
+  </statement>
+  </definition>
+
+  <example xml:id="ex-lincomb">
+  <statement>
+  <p>
+  Write <m>\vect{u} = [2, 2]</m> as a linear combination of <m>\vect{v} = [-1, 1]</m> and 
+  <m>\vect{w} = [0, 4]</m>. Let <m>\vect{u} = c_1\vect{v} + c_2\vect{w}</m>, i.e\
+  <me>
+    [2, 2] = c_1[-1, 1] + c_2[0, 4]
+  </me>.
+  </p>
+
+  <p>
+  Comparing components gives <me>
+  \begin{aligned}
+    2 \amp  = -c_1       \\
+    2 \amp  = c_1 + 4c_2. \\
+  \end{aligned}
+  </me>
+  so <m>c_1 = -2, c_2 = \frac{1}{4}(2-c_1) = 1</m>. Thus <m>\vect{u} = -2\vect{v} + \vect{w}</m>. 
+  See <xref ref="fig-lincomb_ex"/>.
+  </p>
+
+  <figure xml:id="fig-lincomb_ex">
+  <caption>From <xref ref="ex-lincomb"/>, showing <m>\vect{u} = -2\vect{v} + \vect{w}</m></caption>
+  <image width="60%">
+<latex-image>
+\begin{tikzpicture}
+    %x-y axis
+    \draw (0, 0) node [anchor = north east] {$O$};
+    \draw [vector,->] (-3, 0) -- (4,0) node [right] {$x$};
+    \draw [vector,->] (0, -3) -- (0,4) node [above] {$y$};
+
+    %Grid ticks
+    \foreach \x in {-2,-1, 1, 2 ,3} \draw (\x,.1)--(\x,-.1) node[below] {\footnotesize $\x$};
+    \foreach \y in {-2,-1, 1, 2, 3} \draw (.1,\y)--(-.1,\y) node[left] {\footnotesize $\y$};
+
+    %Vectors
+    \draw [vector,->] (0, 0) -- (2, 2);
+    \draw (1.2, 1.3) node [left] {$\vect{u}$};
+    \draw [very thick, -\gt] (0, 0) -- (-1, 1) node [left] {$\vect{v}$};
+    \draw [very thick, gray, -\gt] (0, 0) -- (2, -2) node [anchor = south east, xshift = -3mm] {$-2\vect{v}$};
+    \draw [very thick, blue, -\gt] (2, -2) -- (2, 2);
+    \draw (2, 1) node [blue, right] {$\vect{w}$};
+\end{tikzpicture}
+</latex-image>
+</image>
+  </figure>
+  </statement>
+  </example>
+  
+  <example xml:id="ex-non-lc">
+  <statement>
+  <p>
+  Is it possible to write <m>\vect{u} = [2, 2]</m> as a linear combination of <m>\vect{v} = [-1, 1]</m> and 
+  <m>\vect{x} = [3, -3]</m>?
+  </p>
+  
+  <p>
+  Suppose we try to write <m>\vect{u} = c_1\vect{v} + c_2\vect{x}</m>, so
+    <me>
+    [2, 2] = c_1[-1, 1] + c_2[3, -3]
+  </me>.
+  </p>
+  
+  <p>
+  Comparing coefficients gives
+  <me>
+ \begin{aligned}
+    2 \amp  = -c_1 + 3c_2 \\
+    2 \amp  = c_1 - 3c_2.  \\
+  \end{aligned}
+  </me>
+  </p>
+  
+  <p>
+  Adding these equations gives <m>4=0</m>, which is a contradiction. Therefore <m>\vect{u}</m> cannot be 
+  written as a linear combination of <m>\vect{v}</m> and <m>\vect{x}</m>. This is also shown 
+  in <xref ref="fig-lincomb_nonex"/>: since <m>\vect{u}</m> does not lie on the dashed line, it 
+  cannot be a linear combination of <m>\vect{v}</m> and <m>\vect{x}</m>.
+  </p>
+
+  <figure xml:id="fig-lincomb_nonex">
+  <caption>All linear combinations of <m>\vect{v}</m> and <m>\vect{x}</m> lie on the dashed line</caption>
+  <image width="60%">
+<latex-image>
+\begin{tikzpicture}[scale = 0.85]
+    %x-y axis
+    \draw (0, 0) node [anchor = north east] {$O$};
+    \draw [vector,->] (-4, 0) -- (4,0) node [right] {$x$};
+    \draw [vector,->] (0, -4) -- (0,4) node [above] {$y$};
+
+    %Grid ticks
+    \foreach \x in {-3,-2,-1, 1,2, 3} \draw (\x,.1)--(\x,-.1) node[below] {\footnotesize $\x$};
+    \foreach \y in {-3,-2,-1, 1, 2, 3} \draw (.1,\y)--(-.1,\y) node[left] {\footnotesize $\y$};
+
+    %Vectors and lines
+    \draw [vector,->] (0, 0) -- (2, 2);
+    \draw (1.2, 1.3) node [left] {$\vect{u}$};
+    \draw [vector,->] (0, 0) -- (-1, 1) node [left] {$\vect{v}$};
+    \draw [vector,->] (0, 0) -- (3, -3) node [left] {$\vect{x}$};
+    \draw [dashed] (-3.5, 3.5) -- (3.5, -3.5);
+\end{tikzpicture}
+</latex-image>
+</image>
+  </figure>
+  </statement>
+  </example>
+  
+  
+  <p>
+  In both of these examples, we had to solve a system of linear equations. This can be done by scaling and 
+  elimination (subtraction). However, in <xref ref="ch-systems"/>, we will introduce augmented matrices 
+  which provide a better way of solving systems of linear equations.
+  </p>
 
 </section>

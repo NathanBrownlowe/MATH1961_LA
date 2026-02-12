@@ -4,7 +4,20 @@
   <title>Determinants</title>
 
   <introduction>
-    <p> Text before the first section. </p>
+    <p>
+For <m>2\times 2</m> matrices
+<me>
+A =
+\begin{bmatrix}
+  a \amp  b \\ c\amp  d
+\end{bmatrix}
+,
+</me>
+we saw that <m>A</m> was invertible if and only if its determinant <m>\det(A) = ad-bc</m> was 
+nonzero, so the determinant <em>determines</em> whether <m>A</m> is invertible. In this chapter, 
+we introduce an <m>n\times n</m> version of the determinant which allows us to check whether 
+<m>n\times n</m> matrices are invertible.
+</p>
   </introduction>
 
   <!-- include sections -->

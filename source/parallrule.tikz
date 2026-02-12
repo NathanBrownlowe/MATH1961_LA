@@ -1,0 +1,18 @@
+\begin{tikzpicture}[scale=0.53]
+%a (bottom)
+\draw [very thick, ->] (0, 0) -- (6, 1);
+\draw (3, 0.5) node [below] {$\mathbf{a}$};
+%b (right)
+\draw [very thick, ->] (6, 1) -- (6.98, 5.9);
+\draw (6.5, 3.5) node [right] {$\mathbf{b}$};
+%b (left)
+\draw [very thick, ->] (0, 0) -- (1, 5);
+\draw (0.5, 2.5) node [left] {$\mathbf{b}$};
+%a (top)
+\draw [very thick, ->] (1, 5) -- (7, 6);
+\draw (4, 5.5) node [above] {$\mathbf{a}$};
+%diagonal
+\draw [very thick, ->] (0, 0) -- (6.9, 5.9);
+\draw (3.5, 3) node [left, xshift =-0.5mm] {$\mathbf{a}+\mathbf{b}$};
+\draw (3.5, 3) node [right] {$=\mathbf{b}+\mathbf{a}$};
+\end{tikzpicture}

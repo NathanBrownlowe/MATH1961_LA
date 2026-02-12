@@ -3,6 +3,212 @@
 <section xml:id="sec-evalue-multiplicities" xmlns:xi="http://www.w3.org/2001/XInclude">
   <title>Eigenvalue multiplicities</title>
 
-  <p> Text of section. </p>
+<definition xml:id="def-multiplicities">
+<statement>
+<p>
+Let <m>A</m> be an <m>n \times n</m> matrix, and let <m>\lambda = b</m> be an eigenvalue of <m>A</m>. 
+If when fully factored, the characteristic polynomial <m>\det(A-\lambda I)</m> has the 
+factor <m>(\lambda - b)^m</m>, then the <term>algebraic multiplicity</term> of 
+<m>\lambda = b</m> is <m>m</m>. The <term>geometric multiplicity</term> of <m>\lambda = b</m> 
+is the number of parameters appearing in <m>E_\lambda(A)</m>.
+</p>
+</statement>
+</definition>
+
+<p>
+The algebraic multiplicity of <m>\lambda = b</m> is just the number of times the factor 
+<m>\lambda - b</m> appears in the characteristic polynomial. The geometric multiplicity 
+is essentially the `dimension' of the eigenspace <m>E_\lambda(A)</m>. For example, if 
+<m>A</m> is <m>3 \times 3</m>, then an eigenvalue <m>\lambda</m> has geometric 
+multiplicity 1 if <m>E_\lambda(A)</m> represents a line, geometric multiplicity 2 if 
+<m>E_\lambda(A)</m> represents a plane, or 3 if <m>E_\lambda(A)</m> is all of <m>\R^3
+</m>.
+</p>
+
+<!--
+<p>
+{\footnotesize{<term>Technical comment:</term> Technically speaking, the geometric multiplicity 
+of an eigenvalue <m>\lambda</m>} is is the number of parameters appearing in <m>E_\lambda(A)</m> when 
+<m>E_\lambda(A)</m> is \textit{written in a fully simplified way}. This can be made precise by 
+requiring that the vectors that the parameters are coefficients of must be \textit{linearly independent}, 
+using terminology from <xref ref="ch-furthervec"/>. However, for practical purposes the 
+explanation given above should be clear enough}.
+</p>-->
+
+<example xml:id="ex-mult">
+<statement>
+<p>
+  Find the multiplicities of the eigenvalues of <me>
+A =
+\begin{bmatrix}
+  0 \amp  1 \amp  0 \\ 0 \amp  0 \amp  1\\ 2 \amp  -5 \amp  4
+\end{bmatrix}
+</me>.
+</p>
+
+<p>
+We first calculate the characteristic polynomial (by expanding across the first row)
+<md>
+<mrow>
+\begin{vmatrix}
+  -\lambda \amp  1 \amp  0 \\ 0 \amp  -\lambda \amp  1\\ 2 \amp  -5 \amp  4-\lambda
+\end{vmatrix}
+\amp  = (-\lambda)
+\begin{vmatrix}
+  -\lambda \amp  1 \\ -5 \amp  4-\lambda
+\end{vmatrix}
+-
+\begin{vmatrix}
+  0 \amp  1 \\ 2 \amp  4-\lambda
+\end{vmatrix}
+\\
+\amp  = -\lambda[-\lambda(4-\lambda) + 5] +2  \\
+\amp  = -\lambda^3 + 4\lambda^2 - 5\lambda +2 \\
+\amp  = -(\lambda  - 1)^2(\lambda - 2)
+</mrow>
+</md>,
+after factoring. So the eigenvalues are <m>\lambda =1</m> and <m>\lambda = 2</m>. The 
+eigenvalue <m>1</m> has algebraic multiplicity <m>2</m> because of the factor <m>(\lambda - 1)^2</m>. 
+The eigenvalue <m>2</m> has algebraic multiplicity <m>1</m>, because it is not a repeated root.
+</p>
+
+<p>
+To calculate the geometric multiplicities, we first need to calculate the eigenspaces. 
+First we calculate for <m>\lambda = 2</m>:
+<md>
+<mrow>
+\begin{amatrix}{c}
+  A - 2I \amp  \vect{0}
+\end{amatrix}
+=
+\begin{amatrix}{ccc}
+  -2 \amp  1 \amp  0 \amp  0\\
+  0 \amp  -2 \amp  1 \amp  0\\
+  2 \amp  -5 \amp  2 \amp  0
+\end{amatrix}
+\xrightarrow{R_3\mapsto R_3 + R_1}   \amp
+\begin{amatrix}{ccc}
+  -2 \amp  1 \amp  0 \amp  0\\
+  0 \amp  -2 \amp  1 \amp  0\\
+  0 \amp  -4 \amp  2 \amp  0
+\end{amatrix}
+\\
+\xrightarrow{R_3 \mapsto R_3 - 2R_2} \amp
+\begin{amatrix}{ccc}
+  -2 \amp  1 \amp  0 \amp  0\\
+  0 \amp  -2 \amp  1 \amp  0\\
+  0 \amp  0 \amp  0 \amp  0
+\end{amatrix}
+</mrow>
+</md>.
+Let <m>z = t</m>, <m>t \in \R</m>. Then <m>y = t/2</m> and row 1 gives that <m>-2x+y = 0</m>, 
+so <m>x = t/4</m>. So
+<me>
+E_2(A) = \left\{
+\begin{bmatrix}
+  \frac{t}{4} \\ \frac{t}{2}\\ t
+\end{bmatrix}
+\;\middle|\; t \in \R \right\} = \left\{
+\begin{bmatrix}
+  t \\ 2t\\ 4t
+\end{bmatrix}
+\;\middle|\; t \in \R \right\}
+</me>.
+This has 1 parameter, so the geometric multiplicity of <m>\lambda =2</m> is <m>1</m>.
+</p>
+
+<p>
+For <m>\lambda = 1</m>, we solve
+<md>
+<mrow>
+\begin{amatrix}{c}
+  A -I \amp  \vect{0}
+\end{amatrix}
+=
+\begin{amatrix}{ccc}
+  -1 \amp  1 \amp  0 \amp  0\\
+  0 \amp  -1 \amp  1 \amp  0\\
+  2 \amp  -5 \amp  3 \amp  0
+\end{amatrix}
+\xrightarrow{R_3\mapsto R_3 + 2R_1}  \amp
+\begin{amatrix}{ccc}
+  -1 \amp  1 \amp  0 \amp  0\\
+  0 \amp  -1 \amp  1 \amp  0\\
+  0 \amp  -3 \amp  3 \amp  0
+\end{amatrix}
+\\
+\xrightarrow{R_3 \mapsto R_3 - 3R_2} \amp
+\begin{amatrix}{ccc}
+  -1 \amp  1 \amp  0 \amp  0\\
+  0 \amp  -1 \amp  1 \amp  0\\
+  0 \amp  0 \amp  0 \amp  0
+\end{amatrix}
+</mrow>
+</md>.
+Let <m>z = t, t\in \R</m>. Then <m>y = t</m> and <m>x = t</m> also. So the eigenspace is 
+<m>E_1(A) = \{[t, t, t] \;|\; t\in \R\}</m>, which has 1 parameter, so the geometric multiplicity 
+of <m>\lambda = 1</m> is <m>1</m>. The answer is summarised in .
+</p>
+
+<table xml:id="tab-multex">
+  <caption>Multiplicities in <xref ref="ex-mult"/></caption>
+  <tabular halign="center">
+    <col/>
+    <col left="solid"/>
+    <col left="solid"/>
+
+    <row header="yes">
+      <cell>Eigenvalue</cell>
+      <cell>Algebraic multiplicity</cell>
+      <cell>Geometric multiplicity</cell>
+    </row>
+
+    <row>
+      <cell><m>\lambda = 1</m></cell>
+      <cell><m>2</m></cell>
+      <cell><m>1</m></cell>
+    </row>
+
+    <row>
+      <cell><m>\lambda = 2</m></cell>
+      <cell><m>1</m></cell>
+      <cell><m>1</m></cell>
+    </row>
+  </tabular>
+</table>
+
+</statement>
+</example>
+
+<p>
+If <m>A</m> is <m>n\times n</m>, the sum of the algebraic multiplicities is <m>n</m> 
+(because the characteristic polynomial has degree <m>n</m>). In <xref ref="ex-mult"/>, 
+notice that the geometric multiplicity of the eigenvalues are less than or equal to 
+their algebraic multiplicities. In fact, this is always true.
+</p>
+
+
+<theorem xml:id="thm-gleqa">
+<statement>
+<p>
+The geometric multiplicity of an eigenvalue is less than or equal to its algebraic multiplicity.
+</p>
+</statement>
+</theorem>
+
+<remark xml:id="rmk-distinct">
+<p>
+Here's an important special case when the multiplicities are simple: suppose <m>A</m> is 
+a <m>n\times n</m> matrix with <m>n</m> <term>distinct eigenvalues</term>. This means 
+that all the algebraic multiplicities are 1. So by <xref ref="thm-gleqa"/>, all the 
+geometric multiplicities are less than or equal to 1. But the geometric multiplicity of an 
+eigenvalue is always at least 1. We conclude that:
+</p>
+
+<p>
+If <m>A</m> is an <m>n\times n</m> matrix with <m>n</m> distinct eigenvalues, both 
+the algebraic and geometric multiplicity of every eigenvalue are 1.
+</p>
+</remark>
 
 </section>

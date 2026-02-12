@@ -3,6 +3,222 @@
 <section xml:id="sec-gauss-jordan-elimination" xmlns:xi="http://www.w3.org/2001/XInclude">
   <title>Gauss-Jordan elimination</title>
 
-  <p> Text of section. </p>
+<p>
+Gauss--Jordan elimination is a method of solving systems of linear equations that is quite similar to 
+Gaussian elimination, except it is based on reduced row echelon form instead of REF.
+</p>
+
+<definition xml:id="def-RREF">
+<statement>
+<p>
+A matrix is in <term>reduced row echelon form (RREF)</term> if
+<ol>
+<li>
+<p>it is in REF
+</p>
+</li>
+<li>
+<p>every leading entry is equal to 1
+</p>
+</li>
+<li>
+<p>all columns that have a leading 1 have zeroes everywhere else.</p>
+</li>
+</ol></p>
+</statement>
+</definition>
+
+<example xml:id="ex-RREF-matrices">
+<statement>
+<p>The following two matrices are in RREF.
+<me>
+\begin{amatrix}{ccc}
+  1 \amp  0 \amp  0 \amp  0\\
+  0 \amp  1 \amp  0 \amp  0\\
+  0 \amp  0 \amp  1 \amp  0
+\end{amatrix}
+, \qquad
+\begin{amatrix}{ccc}
+  1 \amp  0 \amp  2 \amp  0\\
+  0 \amp  1 \amp  3 \amp  0\\
+  0 \amp  0 \amp  0 \amp  1
+\end{amatrix}
+
+</me>.
+The following three matrices are not in RREF.
+<me>
+\begin{amatrix}{ccc}
+  1 \amp  2 \amp  0 \amp  0\\
+  0 \amp  0 \amp  1 \amp  0\\
+  0 \amp  0 \amp  0 \amp  3
+\end{amatrix}
+, \qquad
+\begin{amatrix}{ccc}
+  1 \amp  0 \amp  0 \amp  1\\
+  0 \amp  0 \amp  1 \amp  2\\
+  0 \amp  1 \amp  0 \amp  3
+\end{amatrix}
+, \qquad
+\begin{amatrix}{cccc}
+  1 \amp  0 \amp  1 \amp  2 \amp  4\\
+  0 \amp  1 \amp  3 \amp  0 \amp  5\\
+  0 \amp  0 \amp  0 \amp  1 \amp  -1
+\end{amatrix}
+</me>.
+This is because the first has a leading 3 in its last column, the second is not in REF, and the 
+third has a 2 above the leading 1 in the bottom row.
+</p>
+</statement>
+</example>
+
+<remark xml:id="rem-RREF">
+<p>
+The RREF of a matrix is unique! Why?
+</p>
+</remark>
+
+<definition xml:id="def-GJ-elimination">
+<statement>
+<p>
+<term>Gauss--Jordan elimination</term> is the process of solving a system of linear equations 
+by row reducing its augmented matrix to RREF. The solutions can then be read directly from 
+the RREF.
+</p>
+</statement>
+</definition>
+
+<p>
+Because every RREF matrix is in REF, Gauss--Jordan is very similar to Gaussian elimination 
+at the beginning, but then it has some extra row reduction at the end. Specifically, once 
+the matrix is in REF, use each leading entry to make all the entries above it zero. We do 
+this starting from the last row and working upwards. This is shown in the next examples.
+</p>
+
+
+<example xml:id="ex-GJ-solving">
+<statement>
+<p>
+Use Gauss--Jordan elimination to solve the following system:
+<me>
+\begin{cases}
+  x + 2y - 3z \amp  = 9 \\
+  2x - y + z  \amp  = 0 \\
+  4x - y + z  \amp  = 4
+\end{cases}
+</me>.
+Row reducing to RREF gives
+<md>
+<mrow>
+\begin{amatrix}{ccc}
+  1 \amp  2 \amp  -3 \amp  9\\
+  2 \amp  -1 \amp  1 \amp  0\\
+  4 \amp  -1 \amp  1 \amp  4
+\end{amatrix}
+\amp\xrightarrow[R_3 \mapsto R_3 - 4R_1]{R_2 \mapsto R_2 -2R_1}           
+\begin{amatrix}{ccc}
+  1 \amp  2 \amp  -3 \amp  9\\
+  0 \amp  -5 \amp  7 \amp  -18\\
+  0 \amp  -9 \amp  13 \amp  -32
+\end{amatrix}\\
+\amp\xrightarrow{R_2 \mapsto -\frac{1}{5}R_2}
+\begin{amatrix}{ccc}
+  1 \amp  2 \amp  -3 \amp  9\\
+  0 \amp  1 \amp  -\frac{7}{5} \amp  \frac{18}{5}\\
+  0 \amp  -9 \amp  13 \amp  -32
+\end{amatrix}
+\\
+\amp\xrightarrow{R_3 \mapsto R_3 + 9R_2}                                  
+\begin{amatrix}{ccc}
+  1 \amp  2 \amp  -3 \amp  9\\
+  0 \amp  1 \amp  -\frac{7}{5} \amp  \frac{18}{5}\\
+  0 \amp  0 \amp  \frac{2}{5} \amp  \frac{2}{5}\\
+\end{amatrix}\\
+\amp\xrightarrow{R_3 \mapsto \frac{5}{2}R_3}
+\begin{amatrix}{ccc}
+  1 \amp  2 \amp  -3 \amp  9\\
+  0 \amp  1 \amp  -\frac{7}{5} \amp  \frac{18}{5}\\
+  0 \amp  0 \amp  1 \amp  1
+\end{amatrix}
+\\
+\amp\xrightarrow[R_2 \mapsto R_2 + \frac{7}{5}R_3]{R_1 \mapsto R_1 + R_3} 
+\begin{amatrix}{ccc}
+  1 \amp  2 \amp  0 \amp  12\\
+  0 \amp  1 \amp  0 \amp  5\\
+  0 \amp  0 \amp  1 \amp  1
+\end{amatrix}\\
+\amp\xrightarrow{R_1 \mapsto R_1 - 2R_2}
+\begin{amatrix}{ccc}
+  1 \amp  0 \amp  0 \amp  2\\
+  0 \amp  1 \amp  0 \amp  5\\
+  0 \amp  0 \amp  1 \amp  1
+\end{amatrix}
+</mrow>
+</md>.
+The matrix is now in RREF, and we can read the solution <m>x=2</m>, <m>y = 5</m>, <m>z=1</m>. 
+(Notice that the matrix was in REF after the second line of row-reduction. The third line 
+shows the steps needed to get it into RREF.)
+</p>
+</statement>
+</example>
+
+<p>
+The next example is another example of Gauss--Jordan elimination, as well as an example of 
+needing to introduce multiple parameters to solve a system of linear equations.
+</p>
+
+<example xml:id="ex-multparam">
+<statement>
+<p>Use Gauss--Jordan elimination to solve the following system of linear equations:
+<me>
+\begin{cases}
+  x + 3y + z + 2w  \amp  = 4  \\
+  2x - y + 9z -3w  \amp  = -6 \\
+  -x + 2y -6z + 3w \amp  = 6
+\end{cases}
+</me>.
+Row reducing to RREF gives
+<md>
+<mrow>
+\begin{amatrix}{cccc}
+  1 \amp  3 \amp  1 \amp  2 \amp  4\\
+  2 \amp  -1 \amp  9 \amp  -3 \amp  -6\\
+  -1 \amp  2 \amp  -6 \amp  3 \amp  6
+\end{amatrix}
+\amp\xrightarrow[R_3\mapsto R_3 + R_1]{R_2 \mapsto R_2 - 2R_1}   
+\begin{amatrix}{cccc}
+  1 \amp  3 \amp  1 \amp  2 \amp  4\\
+  0 \amp  -7 \amp  7 \amp  -7 \amp  -14\\
+  0 \amp  5 \amp  -5 \amp  5 \amp  10
+\end{amatrix}
+\\
+\amp\xrightarrow{R_2 \mapsto -\frac{1}{7}R_2}                    
+\begin{amatrix}{cccc}
+  1 \amp  3 \amp  1 \amp  2 \amp  4\\
+  0 \amp  1 \amp  -1 \amp  1 \amp  2\\
+  0 \amp  5 \amp  -5  \amp  5 \amp  10
+\end{amatrix}
+\\
+\amp\xrightarrow[R_3 \mapsto R_3 - 5R_2]{R_1 \mapsto R_1 - 3R_2} 
+\begin{amatrix}{cccc}
+  1 \amp  0 \amp  4 \amp  -1 \amp  -2\\
+  0 \amp  1 \amp  -1 \amp  1 \amp  2\\
+  0 \amp  0 \amp  0 \amp  0 \amp  0
+\end{amatrix}
+</mrow>
+</md>
+This is in RREF. Let <m>z = s</m> and <m>w = t</m>, for <m>s, t \in \R</m>. (Here we 
+are considering the fourth column as the <m>w</m>-column.) Then the solution is
+<me>
+x = -2 - 4s + t,\; y = 2+s-t,\; z=s,\; w = t, \qquad s, t\in \R.
+</me>
+</p>
+</statement>
+</example>
+
+<p>
+Often Gauss--Jordan elimination is slightly slower than Gaussian elimination. However, it is 
+still good to know. Additionally, it introduces the concept of RREF, which will be important 
+later for its connection to matrix inverses. 
+</p>
 
 </section>

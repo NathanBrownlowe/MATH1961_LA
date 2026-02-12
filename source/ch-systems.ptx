@@ -4,7 +4,16 @@
   <title>Systems of Linear Equations</title>
 
   <introduction>
-    <p> Text before the first section. </p>
+    <p>
+There are many practical situations where it's useful to be able to solve a system of 
+linear equations. It's also useful for geometric problems: in the previous chapters, we have 
+already seen that systems of linear equations can appear in problems about linear combinations, 
+intersections of lines or planes, and skew lines. You may have already seen how to solve 
+these equations in high school, but in this chapter we will present a different method. It 
+has the advantage of being a routine which always works, and which can be done fairly quickly 
+with practice. This method also introduces the notion of an augmented matrix, which will lead 
+into our study of matrices for the rest of the course.
+</p>
   </introduction>
 
   <!-- include sections -->

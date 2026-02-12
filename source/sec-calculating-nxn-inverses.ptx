@@ -3,6 +3,200 @@
 <section xml:id="sec-calculating-nxn-inverses" xmlns:xi="http://www.w3.org/2001/XInclude">
   <title>Calculating <m>n\times n</m> inverses</title>
 
-  <p> Text of section. </p>
+<p>
+Finding the inverse of a general <m>n\times n</m> matrix involves row reduction.
+</p>
+
+
+<theorem xml:id="thm-general-invertible">
+<statement>
+<p>
+An <m>n\times n</m> matrix is invertible if and only if the <m>n\times 2n</m> augmented matrix <m>
+\begin{amatrix}{c}A \amp  I
+\end{amatrix}
+</m> can be row reduced to <m>
+\begin{amatrix}{c}I \amp  B
+\end{amatrix}
+</m> for some <m>n\times n</m> matrix <m>B</m>. In this case, <m>A\inv = B</m>.
+</p>
+</statement>
+</theorem>
+
+<p>
+In other words, an <m>n\times n</m> matrix is invertible if and only if its RREF is <m>I</m>.
+</p>
+
+<p>
+Here is a heuristic explanation of why this is true: when we are row-reducing the matrix <m>A</m>, 
+all of the elementary row operations also affect the matrix <m>I</m> to the right of the line in 
+the augmented matrix. So, once we get to <m>
+\begin{amatrix}{c}I \amp  B
+\end{amatrix}
+</m>, the matrix <m>B</m> encodes how to get from <m>A</m> to <m>I</m>. The equation 
+<m>A\inv A  = I</m> suggests that <m>A</m> does the same thing and so <m>B = A\inv</m>. 
+We need the RREF to be <m>I</m> to ensure that the augmented matrix has a unique solution, 
+which we need because inverses are unique.
+</p>
+
+<p>When <m>A</m> is <m>2\times 2</m>, this method gives the same answer as the method in the 
+previous section.
+</p>
+
+<example xml:id="ex-finding-general-inverse">
+<statement>
+<p>
+Use row reduction to find the inverse, if it exists, of the matrices
+<me>
+A =
+\begin{bmatrix}
+  2 \amp  5 \\ 1\amp  3
+\end{bmatrix}
+, \qquad B =
+\begin{bmatrix}
+  1 \amp  -1 \\ -2 \amp  2
+\end{bmatrix}
+</me>.
+</p>
+<p>
+We have
+<md>
+<mrow>
+\begin{amatrix}{c}A \amp  I
+\end{amatrix}
+=           \amp
+\begin{aamatrix}
+  2 \amp  5 \amp  1 \amp  0 \\
+  1 \amp  3 \amp  0 \amp  1
+\end{aamatrix}
+\rightarrow
+\begin{aamatrix}
+  1 \amp  3 \amp  0 \amp  1\\
+  2 \amp  5 \amp  1 \amp  0
+\end{aamatrix}
+\\
+\rightarrow \amp
+\begin{aamatrix}
+  1 \amp  3 \amp  0 \amp  1\\
+  0 \amp  -1 \amp  1 \amp  -2
+\end{aamatrix}
+\rightarrow
+\begin{aamatrix}
+  1 \amp  3 \amp  0 \amp  1\\
+  0 \amp  1 \amp  -1 \amp  2
+\end{aamatrix}
+\\
+\rightarrow \amp
+\begin{aamatrix}
+  1 \amp  0 \amp  3 \amp  -5\\
+  0 \amp  1 \amp  -1 \amp  2
+\end{aamatrix}
+</mrow>
+</md>.
+Therefore <m>A</m> is invertible with inverse
+<me>
+A\inv =
+\begin{bmatrix}
+  3 \amp  -5 \\ -1 \amp  2
+\end{bmatrix}
+</me>.
+Next,
+<me>
+\begin{amatrix}{c}B \amp  I
+\end{amatrix}
+=
+\begin{aamatrix}
+  1 \amp  -1 \amp  1 \amp  0\\
+  -2 \amp  2 \amp  0 \amp  1
+\end{aamatrix}
+\xrightarrow{R_2 \mapsto R_2 + 2R_1}
+\begin{aamatrix}
+  1 \amp  -1 \amp  1 \amp  0\\
+  0 \amp  0 \amp  2 \amp  1
+\end{aamatrix}
+</me>.
+Since the RREF has a zero row, the RREF is not <m>I</m>, so <m>B</m> is not invertible. 
+These answers for <m>A</m> and <m>B</m> are the same as in <xref ref="ex-inv2"/>, where we 
+used the <m>2\times 2</m> inverse formula for these matrices.
+</p>
+</statement>
+</example>
+
+<p>
+For <m>2\times 2</m> matrices, it is faster to just memorise the formula. But the advantage of 
+this method is that we can solve for the inverse of bigger matrices.
+</p>
+
+
+<example xml:id="ex-inv3">
+<statement>
+<p>
+Find the inverse of the matrix
+<me>
+A =
+\begin{bmatrix}
+  1 \amp  2 \amp  -1 \\
+  2 \amp  2 \amp  4  \\
+  1 \amp  3 \amp  -3
+\end{bmatrix}
+</me>.
+</p>
+<p>
+By row reduction,
+<md>
+<mrow>
+\begin{amatrix}{c}A \amp  I
+\end{amatrix}
+=           \amp
+\begin{aaamatrix}
+  1 \amp  2 \amp  -1 \amp  1 \amp  0 \amp  0 \\
+  2 \amp  2 \amp  4 \amp  0 \amp  1 \amp  0\\
+  1 \amp  3 \amp  -3 \amp  0 \amp  0 \amp  1
+\end{aaamatrix}
+\rightarrow
+\begin{aaamatrix}
+  1 \amp  2 \amp  -1 \amp  1 \amp  0 \amp  0 \\
+  0 \amp  -2 \amp  6 \amp  -2 \amp  1 \amp  0\\
+  0 \amp  1 \amp  -2 \amp  -1 \amp  0 \amp  1
+\end{aaamatrix}
+\\
+\rightarrow \amp
+\begin{aaamatrix}
+  1 \amp  2 \amp  -1 \amp  1 \amp  0 \amp  0 \\
+  0 \amp  1 \amp  -2 \amp  -1 \amp  0 \amp  1\\
+  0 \amp  -2 \amp  6 \amp  -2 \amp  1 \amp  0
+\end{aaamatrix}
+\rightarrow
+\begin{aaamatrix}
+  1 \amp  0 \amp  3 \amp  3 \amp  0 \amp  -2 \\
+  0 \amp  1 \amp  -2 \amp  -1 \amp  0 \amp  1\\
+  0 \amp  0 \amp  2 \amp  -4 \amp  1 \amp  2
+\end{aaamatrix}
+\\
+\rightarrow \amp
+\begin{aaamatrix}
+  1 \amp  0 \amp  3 \amp  3 \amp  0 \amp  -2 \\
+  0 \amp  1 \amp  -2 \amp  -1 \amp  0 \amp  1\\
+  0 \amp  0 \amp  1 \amp  -2 \amp  \frac{1}{2} \amp  1
+\end{aaamatrix}
+\rightarrow
+\begin{aaamatrix}
+  1 \amp  0 \amp  0 \amp  9 \amp  -\frac{3}{2} \amp  -5\\
+  0 \amp  1 \amp  0 \amp  -5 \amp  1 \amp  3\\
+  0 \amp  0 \amp  1 \amp  -2 \amp  \frac{1}{2} \amp  1
+\end{aaamatrix}
+</mrow>
+</md>.
+So <m>A</m> is invertible with inverse
+<me>
+A\inv =
+\begin{bmatrix}
+  9  \amp  -\frac{3}{2} \amp  -5 \\
+  -5 \amp  1            \amp  3  \\
+  -2 \amp  \frac{1}{2}  \amp  1
+\end{bmatrix}
+</me>
+</p>
+</statement>
+</example>
 
 </section>

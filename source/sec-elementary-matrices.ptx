@@ -3,6 +3,144 @@
 <section xml:id="sec-elementary-matrices" xmlns:xi="http://www.w3.org/2001/XInclude">
   <title>Elementary matrices</title>
 
-  <p> Text of section. </p>
+ <definition xml:id="def-elementary-matrices">
+<statement>
+<p>
+An <term>elementary matrix</term> is any matrix that can be obtained by performing a single
+elementary row operation an an identity matrix.
+</p>
+</statement>
+</definition>
+
+<example xml:id="ex-basic-elem-matrices">
+<statement>
+<p>
+<ul>
+  <li>
+  <p> <m>\begin{bmatrix}0 \amp 1 \amp 0\\1 \amp 0\amp 0\\0\amp 0\amp 1\end{bmatrix}</m>
+  is obtained from the ERO <m>R_1\leftrightarrow R_2</m>.
+  </p>
+  </li>
+  <li>
+  <p> <m>\begin{bmatrix}4 \amp 0 \amp 0\\0 \amp 1\amp 0\\0\amp 0\amp 1\end{bmatrix}</m>
+  is obtained from the ERO <m>R_1\to 4R_1</m>.
+  </p>
+  </li>
+  <li>
+  <p> <m>\begin{bmatrix}1 \amp 0 \amp 0\\0 \amp 1\amp 0\\0\amp -2\amp 1\end{bmatrix}</m>
+  is obtained from the ERO <m>R_3\to R_3- 2R_2</m>.
+  </p>
+  </li>
+</ul>
+</p>
+</statement>
+</example>
+
+<p>
+We need to main results about elementary matrices. We present them without proof, although 
+we will illustrate the first result with an example, and it is not too hard to see 
+how the first result implies the second. 
+</p>
+
+<theorem xml:id="thm-elem-matrices-and-multiplication">
+<statement>
+<p>
+If <m>E</m> is an elementary matrix obtained by performing an ERO on <m>I_n</m>, then if 
+the same ERO is performed on an <m>n\times p</m> matrix <m>A</m>, the result is 
+the product <m>EA</m>.
+</p>
+</statement>
+</theorem>
+
+<theorem xml:id="thm-elem-matrices-invertible">
+<statement>
+<p>
+Every elementary matrix is invertible, and the inverse is the elementary matrix 
+for the 'reverse' ERO.
+</p>
+</statement>
+</theorem>
+
+<p>
+By 'reverse' ERO we mean that will undo the original, sending the matrix back to the 
+identity. So we have the following:
+<table xml:id="tab-reverse-EROs">
+  <caption>Reverse EROs</caption>
+  <tabular halign="center">
+    <col/>
+    <col left="solid"/>
+    <col left="solid"/>
+
+    <row header="yes">
+      <cell>ERO</cell>
+      <cell>Reverse ERO</cell>
+    </row>
+
+    <row>
+      <cell><m>R_i\leftrightarrow R_j</m></cell>
+      <cell><m>R_i\leftrightarrow R_j</m></cell>
+    </row>
+
+     <row>
+      <cell><m>R_i\to cR_i</m></cell>
+      <cell><m>R_i\to \frac{1}{c}R_i</m></cell>
+    </row>
+    
+     <row>
+      <cell><m>R_i\to R_i+cR_j</m></cell>
+      <cell><m>R_i\to R_i-cR_j</m></cell>
+    </row>
+  </tabular>
+</table>
+</p>
+
+<example xml:id="ex-checking-elem-prop">
+<statement>
+<p>
+Consider <m>A=\begin{bmatrix}2\amp 1\\-1\amp 1\\1\amp 5\end{bmatrix}</m> and the 
+ERO <m>R_3\to R_3-2R_2</m>. We check that 
+<xref ref="thm-elem-matrices-and-multiplication"/> holds with this example:
+<ul>
+  <li>
+  <p> <m>A\xrightarrow{R_3\to R_3-2R_1}\begin{bmatrix}2\amp 1\\-1\amp 1\\3\amp 3\end{bmatrix}</m>
+  </p>
+  </li>
+  <li>
+  <p> <m>E=\begin{bmatrix}1\amp 0\amp 0\\0\amp 1\amp 0\\0\amp -2\amp 1\end{bmatrix}</m> and 
+  <md>
+  EA=\begin{bmatrix}1\amp 0\amp 0\\0\amp 1\amp 0\\0\amp -2\amp 1\end{bmatrix}\begin{bmatrix}2\amp 1\\-1\amp 1\\1\amp 5\end{bmatrix}
+  =\begin{bmatrix}2\amp 1\\-1\amp 1\\3\amp 3\end{bmatrix}
+  </md>.
+  </p>
+  </li>
+</ul>
+</p>
+</statement>
+</example>
+
+<example xml:id="ex-">
+<statement>
+<p>
+We want to express <m>A=\begin{bmatrix}1\amp 3\\0\amp 3\end{bmatrix}</m> as a product 
+of elementary matrices. We do this by row reducing <m>A</m> to the identity:
+<md>
+A=\begin{bmatrix}1\amp 3\\0\amp 3\end{bmatrix}\xrightarrow{R_2\to\frac{1}{3}R_2}
+\begin{bmatrix}1\amp 3\\0\amp 3\end{bmatrix}
+\xrightarrow{R_1\to R_1-3R_2}\begin{bmatrix}1\amp 0\\0\amp 1\end{bmatrix}.
+</md>
+We now take the corresponding elementary matrices
+<md>
+E_1=\begin{bmatrix}1\amp 0\\0\amp \frac{1}{3}\end{bmatrix}\text{ and }
+E_2=\begin{bmatrix}1\amp -3\\0\amp 1\end{bmatrix},
+</md>
+and use <xref ref="thm-elem-matrices-and-multiplication"/> to get <m>E_2(E_1A)=I_2</m>. We can now 
+rearrange to get <m>A=E_1^{-1}E_2^{-1}</m>. So
+<md>
+A=\begin{bmatrix}1\amp 0\\0\amp 3\end{bmatrix}
+\begin{bmatrix}1\amp 3\\0\amp 1\end{bmatrix}
+</md>.
+</p>
+</statement>
+</example>
 
 </section>

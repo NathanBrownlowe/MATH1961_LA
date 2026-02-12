@@ -4,7 +4,11 @@
   <title>Similarity and Diagonalisation</title>
 
   <introduction>
-    <p> Text before the first section. </p>
+   <p>
+Diagonal matrices have many nice properties. For example, two diagonal matrices can be multiplied 
+simply by multiplying the corresponding diagonal elements. In this chapter, we explain how to 
+convert a matrix into a diagonal one, and discuss when this is possible.
+</p>
   </introduction>
 
   <!-- include sections -->

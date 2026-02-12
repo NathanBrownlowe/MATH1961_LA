@@ -3,6 +3,296 @@
 <section xml:id="sec-props-of-determinants" xmlns:xi="http://www.w3.org/2001/XInclude">
   <title>Properties of determinants</title>
 
-  <p> Text of section. </p>
+<p>
+The following definition gives a name to matrices like <xref ref="ex-triangular"/> whose nonzero entries 
+form a triangular shape.
+</p>
+
+
+<definition xml:id="def-triangular-matrix">
+<statement>
+<p>
+An <m>n\times n</m> matrix <m>A = [a_{ij}]</m> is <term>upper triangular</term> if all entries below 
+the diagonal are zero (so <m>a_{ij} = 0</m> for <m>i \gt  j</m>), <term>lower triangular</term> if 
+all entries above the diagonal are zero (so <m>a_{ij} = 0</m> for <m>i \lt  j</m>), and 
+<term>triangular</term> if it is either upper triangular or lower triangular.
+</p>
+</statement>
+</definition>
+
+<p>
+The matrix in <xref ref="ex-triangular"/> is upper triangular. Notice that its determinant is the 
+product of its diagonal entries. <em>>This is true for any triangular matrix</em>, which can be 
+shown by expanding along the row or column which is zero apart from (possibly) one entry.
+</p>
+
+<example xml:id="ex-det-for-tri-matrices">
+<statement>
+<p>
+Find the determinant of the matrices
+<me>
+A =
+\begin{bmatrix}
+  -1 \amp  0 \amp  4  \\
+  0  \amp  2 \amp  -1 \\
+  0  \amp  0 \amp  3
+\end{bmatrix}
+, \qquad B =
+\begin{bmatrix}
+  2  \amp  0 \amp  0 \\
+  -1 \amp  0 \amp  0 \\
+  5  \amp  3 \amp  -4
+\end{bmatrix}
+</me>.
+</p>
+<p>
+These are triangular, so <m>\det(A) = (-1) \times 2 \times 3 = -6</m>, and 
+<m>\det(B) = 2\times 0 \times (-4) = 0</m>.
+</p>
+</statement>
+</example>
+
+<p>
+If a matrix has a row or column that is completely zero, we can expand along it to see that the determinant 
+is zero.
+</p>
+
+<p>
+The next theorem states how determinants interact with elementary row or 
+column operations.
+</p>
+
+
+<theorem xml:id="thm-EROdet">
+<statement>
+<p>Let <m>A</m> and <m>B</m> be <m>n\times n</m> matrices.
+<ol>
+<li>
+<p>If <m>B</m> is obtained from <m>A</m> by swapping two rows or columns, then
+<me>
+\det(B) = -\det(A)
+</me>.
+</p>
+</li>
+<li>
+<p>If <m>B</m> is obtained from <m>A</m> by scaling one row or column by <m>c \in \R</m>, then
+<me>
+\det(B) = c\det(A)
+</me>.
+</p>
+</li>
+<li>
+<p>If <m>B</m> is obtained from <m>A</m> by adding a multiple of one row or column to another, then <me>
+\det(B) = \det(A)
+</me>.
+</p>
+</li>
+</ol></p>
+</statement>
+</theorem>
+
+<corollary xml:id="cor-EROdet">
+<statement>
+<p>
+If <m>B</m> is obtained from <m>A</m> by applying a sequence of elementary row operations, 
+then <m>\det(B) = k\det(A)</m> for some nonzero <m>k\in \R</m>.
+</p>
+</statement>
+
+<proof>
+<p>
+First assume that <m>B</m> is obtained from <m>A</m> by applying a single ERO. From 
+<xref ref="thm-EROdet"/>, <m>\det(B) = k\det(A)</m> where <m>k = 1, -1</m> or <m>c</m>. Note that 
+<m>c</m> must be nonzero since scaling by zero is not an ERO. Thus <m>k \ne 0</m>. This proves 
+the corollary in this case.
+</p>
+
+<p>
+To prove the full corollary, we can repeatedly apply the version of it proved in the previous 
+paragraph: <m>k</m> will be a product of nonzero numbers and hence nonzero.
+</p>
+</proof>
+</corollary>
+
+<p>
+The theorem allows us to row reduce the matrix to a simpler one with more zeroes.
+</p>
+
+
+<example xml:id="ex-dets-through-EROs">
+<statement>
+<p>
+Find the determinant of the matrix
+<me>
+A =
+\begin{bmatrix}
+  2 \amp  5 \amp  7 \\
+  1 \amp  4 \amp  5 \\
+  3 \amp  6 \amp  12
+\end{bmatrix}
+</me>.
+</p>
+<p>
+Performing EROs on <m>A</m>, we get
+<md>
+<mrow>
+A =
+\begin{bmatrix}
+  2 \amp  5 \amp  7 \\
+  1 \amp  4 \amp  5 \\
+  3 \amp  6 \amp  12
+\end{bmatrix}
+\amp\xrightarrow{R_1 \leftrightarrow R_2}                        
+\begin{bmatrix}
+  1 \amp  4 \amp  5 \\
+  2 \amp  5 \amp  7 \\
+  3 \amp  6 \amp  12
+\end{bmatrix}
+\\
+\amp\xrightarrow[R_3 \mapsto R_3 - 3R_1]{R_2 \mapsto R_2 - 2R_1} 
+\begin{bmatrix}
+  1 \amp  4  \amp  5  \\
+  0 \amp  -3 \amp  -3 \\
+  0 \amp  -6 \amp  -3
+\end{bmatrix}
+= B
+</mrow>
+</md>.
+We have <m>\det(B) = -\det(A)</m> by <xref ref="thm-EROdet"/>, due to the row swap 
+(the other operations did not affect the determinant). Thus
+<me>
+\det(A) = -\det(B) = -
+\begin{vmatrix}
+  1 \amp  4  \amp  5  \\
+  0 \amp  -3 \amp  -3 \\
+  0 \amp  -6 \amp  -3
+\end{vmatrix}
+= -1
+\begin{vmatrix}
+  -3 \amp  -3 \\ -6 \amp  -3
+\end{vmatrix}
+=  9.
+</me>
+</p>
+</statement>
+</example>
+
+<theorem xml:id="thm-det">
+<statement>
+<p>
+Let <m>A</m> and <m>B</m> be <m>n\times n</m> matrices, and let <m>c\in \R</m>. Then
+<ol>
+<li>
+<p><m>\det(I_n) = 1</m>
+</p>
+</li>
+<li>
+<p><m>\det(cA) = c^n \det(A)</m>
+</p>
+</li>
+<li>
+<p><m>\det(AB) = \det(A)\det(B)</m>
+</p>
+</li>
+<li>
+<p>If <m>A</m> is invertible, then <m>\det(A) \ne 0</m> and <m>\det(A\inv) = \frac{1}{ \det(A) }</m>
+</p>
+</li>
+<li>
+<p><m>\det(A^T) = \det(A)</m>
+</p>
+</li>
+</ol></p>
+</statement>
+
+<proof>
+<p>
+Property 1 holds because <m>I_n</m> is a triangular matrix with all diagonal entries equal to <m>1</m>, 
+so <m>\det(I_n) = 1 \times 1 \times \cdots \times 1 = 1</m>.
+</p>
+
+<p>
+Property 2 follows from <xref ref="thm-EROdet"/>, since <m>cA</m> is obtained from <m>A</m> by performing 
+the sequence of <m>n</m> EROs
+<me>
+R_1 \mapsto cR_1, R_2 \mapsto cR_2, \dots, R_n \mapsto cR_n,
+</me>
+each of which multiply the determinant by <m>c</m>.
+</p>
+<p>We will not prove Property 3; it is beyond the scope of this course. However, if you are interested, 
+this is proved as Theorem 4.7 of Poole's textbook.
+</p>
+
+<p>
+For Property 4, suppose that <m>A</m> is invertible. Then by Properties 1 and 3,
+<me>
+\det(A)\det(A\inv) = \det(AA\inv) = \det(I_n) = 1,
+</me>
+which means that <m>\det(A) \ne 0</m> and <m>\det(A\inv) = 1/\det(A)</m>.
+</p>
+
+<p>
+Finally, Property 5 holds because expanding along the <m>i</m>th row of <m>A^T</m> gives the 
+same number as expanding along the <m>i</m>th column of <m>A</m>.
+</p>
+</proof>
+</theorem>
+
+<example xml:id="ex-det-and-matrix-algebra">
+<statement>
+<p>Let <m>A</m> and <m>B</m> be invertible <m>3\times 3</m> matrices such that <m>\det(A) = 2</m> and 
+<m>\det(B) = 5</m>. Then
+<md>
+<mrow>
+\det(2A\inv B^T) \amp  = 2^3 \det(A\inv B^T) = 2^3\det(A\inv)\det(B^T)               \\
+\amp  = 2^3\frac{1}{\det(A)}\det(B) = 2^3\times \frac{1}{2}\times 5 \\
+\amp  = 20.
+</mrow>
+</md>
+</p>
+</statement>
+</example>
+
+<p>
+Remember that the reason we introduced the determinant was because we wanted a number which 
+tells us whether a matrix is invertible. We can now show that this is precisely what the 
+determinant does.
+</p>
+
+<theorem xml:id="thm-invdet">
+<statement>
+<p>
+An <m>n\times n</m> matrix <m>A</m> is invertible if and only if <m>\det(A) \ne 0</m>.
+</p>
+</statement>
+
+<proof>
+<p>
+Consider the augmented matrix <m>
+\begin{amatrix}{c} A \amp  I
+\end{amatrix}
+</m> and its RREF <m>
+\begin{amatrix}{c} R \amp  B
+\end{amatrix}
+</m>. If <m>A</m> is invertible, then there is a sequence of EROs that reduces <m>A</m> to <m>I</m>, 
+so by applying <xref ref="cor-EROdet"/>, there is a constant <m>k\in\R\setminus\{0\}</m> such that
+<me>
+1 = \det(I) = k\det(A),
+</me>
+so <m>\det(A) \ne 0</m>. (Alternatively, we already showed this in <xref ref="thm-det"/>.)
+</p>
+
+<p>
+On the other hand, if <m>A</m> is not invertible, then <m>R</m> must have a row of zeroes, 
+so <m>\det(R) = 0</m>. Again applying <xref ref="cor-EROdet"/>, there is a nonzero constant 
+<m>k</m> such that
+<me>
+0 = \det(R)= k\det(A)
+</me>.
+This shows that <m>\det(A) = 0.</m>
+</p>
+</proof>
+</theorem>
+
 
 </section>

@@ -3,6 +3,572 @@
 <section xml:id="sec-matrix-mult" xmlns:xi="http://www.w3.org/2001/XInclude">
   <title>Matrix multiplication</title>
 
-  <p> Text of section. </p>
+<p>
+The definition of matrix multiplication is more complicated, but it is very important and it is 
+the reason that matrices will have so many nice properties. We will explain the motivation behind 
+it in <xref ref="rmk-mult"/> at the end of this section.
+</p>
+
+
+<definition xml:id="def-matmult">
+<statement>
+<p>
+Let <m>A = [a_{ik}]_{m\times n}</m> be an <m>m \times n</m> matrix and <m>B = [b_{kj}]</m> be an 
+<m>n\times p</m> matrix. Then we define the matrix product
+<me>
+AB = [c_{ij}]_{m\times p}
+</me>
+of size <m>m\times p</m> where the entries <m>c_{ij}</m> are defined by
+<me>
+c_{ij} = \sum_{k=1}^n a_{ik}b_{kj}
+</me>.
+</p>
+</statement>
+</definition>
+
+<p>
+So to find the entry <m>c_{ij}</m> in the <m>i</m>th row and the <m>j</m>th column of <m>C = AB</m>, 
+we take the dot product of the <m>i</m>th row of <m>A</m> with the <m>j</m>th column of <m>B</m>. 
+Notice that the row index <m>i</m> of <m>c_{ij}</m> tells us which row of <m>A</m> to consider, and 
+the column index <m>j</m> tells us which column of <m>B</m> to consider.
+</p>
+
+<example xml:id="ex-matmult1">
+<statement>
+<p>
+Find <m>AB</m> and <m>BA</m> for
+<me>
+A =
+\begin{bmatrix}
+  1 \amp  2 \\
+  0 \amp  -1
+\end{bmatrix}
+, \qquad B =
+\begin{bmatrix}
+  2 \amp  0 \\
+  1 \amp  1
+\end{bmatrix}
+</me>
+</p>
+<p>
+We calculate that
+<md>
+<mrow>
+AB \amp  =
+\begin{bmatrix}
+  1 \amp  2 \\
+  0 \amp  -1
+\end{bmatrix}
+\begin{bmatrix}
+  2 \amp  0 \\
+  1 \amp  1
+\end{bmatrix}
+=
+\begin{bmatrix}
+  1\times 2 + 2\times 1    \amp  1\times 0 + 2\times 1 \\
+  0\times 2 + (-1)\times 1 \amp  0\times 0 +(-1)\times 1
+\end{bmatrix}
+\\
+\amp  =
+\begin{bmatrix}
+  4  \amp  2 \\
+  -1 \amp  -1
+\end{bmatrix}
+,      \\
+BA \amp  =
+\begin{bmatrix}
+  2 \amp  0 \\
+  1 \amp  1
+\end{bmatrix}
+\begin{bmatrix}
+  1 \amp  2 \\
+  0 \amp  -1
+\end{bmatrix}
+=
+\begin{bmatrix}
+  2\times 1 + 0\times 0 \amp  2\times 2 + 0 \times (-1) \\
+  1\times 1 + 1\times 0 \amp  1\times 2 + 1\times (-1)
+\end{bmatrix}
+\\
+\amp  =
+\begin{bmatrix}
+  2 \amp  4 \\
+  1 \amp  1
+\end{bmatrix}
+</mrow>
+</md>.
+Notice that <m>AB \ne BA</m>.
+</p>
+</statement>
+</example>
+
+<p>
+This example shows that it is not true for all matrices that <m>AB = BA</m>.
+</p>
+
+
+<definition xml:id="def-commutes">
+<title>Commutes</title>
+<statement>
+<p>
+If <m>A</m> and <m>B</m> are matrices such that <m>AB = BA</m>, then we say that 
+<m>A</m> <term>commutes</term> with <m>B</m>.
+</p>
+</statement>
+</definition>
+
+<remark xml:id="rem-undefined-matrix-product">
+<p>
+In <xref ref="def-matmult"/>, we defined matrix multiplication for <m>m\times n</m> matrices 
+with <m>n \times p</m> matrices, and it gave a <m>m \times p</m> matrix. The number of columns 
+of <m>A</m> and the number of rows of <m>B</m> (both of which we called <m>n</m>) don't affect 
+the size of the matrix product, but they must be equal in order for the matrix multiplication 
+formula to make sense. If they are not equal, then we say that <m>AB</m> is <term>undefined</term>.
+</p>
+</remark>
+
+<p>
+In <xref ref="ex-matmult1"/>, <m>AB</m> and <m>BA</m> were both defined, since <m>A</m> and 
+<m>B</m> were <m>2 \times 2</m> matrices.
+</p>
+
+
+<example xml:id="ex-mat-power">
+<statement>
+<p>
+Let <me>
+A =
+\begin{bmatrix}
+  2  \amp  1 \\
+  4  \amp  0 \\
+  -1 \amp  3
+\end{bmatrix}
+, \qquad B =
+\begin{bmatrix}
+  1  \amp  -1 \\
+  -2 \amp  7
+\end{bmatrix}
+</me>.
+Find all of the following that are defined: <m>AB, BA, A^2, B^2</m>.
+</p>
+<p>
+Answer: <m>A</m> is <m>3\times 2</m> and <m>B</m> is <m>2\times 2</m>, so <m>AB</m> is defined and 
+is <m>3\times 2</m>. It is
+<me>
+AB =
+\begin{bmatrix}
+  2  \amp  1 \\
+  4  \amp  0 \\
+  -1 \amp  3
+\end{bmatrix}
+\begin{bmatrix}
+  1  \amp  -1 \\
+  -2 \amp  7
+\end{bmatrix}
+=
+\begin{bmatrix}
+  0  \amp  5  \\
+  4  \amp  -4 \\
+  -7 \amp  22
+\end{bmatrix}
+</me>.
+For example, to calculate the element <m>c_{32}</m> of the product <m>AB</m>, we did 
+<m>[-1, 3] \cdot [-1, 7] = (-1)(-1) + 3(7) = 22</m>. Next, <m>B</m> is <m>2\times 2</m> and 
+<m>A</m> is <m>3\times 2</m>. The inner numbers <m>2</m> and <m>3</m> don't match, so 
+<m>BA</m> is undefined. Similarly, for <m>A^2 = AA</m>, <m>A</m> is <m>3\times 2</m> and is 
+multiplied with <m>A</m> which is <m>3 \times 2</m>, which doesn't match, so <m>A^2</m> is 
+undefined. <m>B</m> is <m>2\times 2</m> so its number of columns equals its number of rows, 
+so <m>B^2</m> is defined and is <m>2\times 2</m>. We have
+<me>
+B^2 = BB =
+\begin{bmatrix}
+  1  \amp  -1 \\
+  -2 \amp  7
+\end{bmatrix}
+\begin{bmatrix}
+  1  \amp  -1 \\
+  -2 \amp  7
+\end{bmatrix}
+=
+\begin{bmatrix}
+  3   \amp  -8 \\
+  -16 \amp  51
+\end{bmatrix}
+</me>.
+</p>
+</statement>
+</example>
+
+<p>
+Recall the identity matrix from <xref ref="sec-matrices"/>. The next theorem lists properties of matrix 
+multiplication.
+</p>
+
+
+<theorem xml:id="thm-matrix-algebra-props">
+<statement>
+<p>Let <m>A, B, C</m> be matrices. Let <m>d\in \R</m> be a scalar. Then, whenever the relevant matrix 
+multiplications are defined, we have
+<ol>
+<li>
+<p><m>(AB)C = A(BC)</m>\hfill (associativity)
+</p>
+</li>
+<li>
+<p><m>A(B+C) = AB+AC</m> \hfill (left distributivity)
+</p>
+</li>
+<li>
+<p><m>(A+B)C = AC + BC</m> \hfill (right distributivity)
+</p>
+</li>
+<li>
+<p><m>d(AB) = (dA)B = A(dB)</m>
+</p>
+</li>
+<li>
+<p>If <m>A</m> has size <m>m\times n</m>, then <m>I_mA = AI_n =A</m>.</p>
+</li>
+</ol></p>
+</statement>
+</theorem>
+
+<p>
+Property 5 explains the name `identity matrix': when we multiply a matrix <m>A</m> by the identity 
+matrix <m>I</m> of the right size, we get the same (`identical') matrix <m>A</m>. So <m>I</m> is 
+like the number <m>1</m> for matrices. We will prove only Property 5; the 
+rest of the properties are similar to the properties of addition and scalar multiplication 
+for vectors and matrices (but the proofs are a bit tedious).
+</p>
+
+<proof>
+<p>
+Let <m>A = [a_{ij}]_{m\times n}</m> and <m>I_m = [e_{ik}]_{m\times m}</m> where <m>e_{ik} = 1</m> if 
+<m>i=k</m> and <m>0</m> otherwise. Since <me>
+e_{ik}a_{kj} =
+\begin{cases}
+  a_{ij} \amp  \text{if } k=i \\
+  0      \amp  \text{if } k \ne i,
+\end{cases}
+</me>
+(by definition of <m>e_{ik}</m>), the <m>(i, j)</m>-entry of <m>I_mA</m> is
+<me>
+\sum_{k=1}^m e_{ik}a_{kj} = a_{ij}
+</me>.
+Therefore, by definition of matrix equality, <m>I_mA = A</m>. The proof that <m>AI_n = A</m> is similar.
+</p>
+</proof>
+
+<!--<exercise>
+<statement>
+\label{prob: identity}
+<p>Prove that <m>AI_n = A</m>. \textit{Hint:} you can copy the previous proof but adjust it so that the identity matrix is on the right.</p>
+</statement>
+<hint>
+</hint>
+<answer>
+</answer>
+<solution>
+</solution>
+</exercise>-->
+
+<p>
+For a matrix power (such as <m>A^2</m>, <m>A^3</m>, <m>\dots</m>) to be defined, the matrix must be 
+square. Compare this with <xref ref="ex-mat-power"/>: there <m>A</m> was not square so <m>A^2</m> was 
+not defined, but <m>B</m> was square so <m>B^2</m> was defined.
+</p>
+
+<p>
+The convention that <m>A^0 = I_n</m> is useful in the same way that <m>x^0 = 1</m> for any number 
+<m>x \in \R</m>, because then matrices satisfy the index law <m>A^mA^n = A^{m+n}</m>, for any integers 
+<m>m, n \ge 0</m>.
+</p>
+
+
+<remark xml:id="rem-powers-and-associativity">
+<p>
+<m>A^k</m> is well-defined because of associativity. For example, the notation <m>A^3 = AAA</m> is 
+unambiguous, because <m>A(AA) = (AA)A</m>.
+</p>
+</remark>
+
+<example xml:id="ex-taking-powers">
+<statement>
+<p>
+If
+<me>
+A=
+\begin{bmatrix}
+  1 \amp  2 \\ 0 \amp  3
+\end{bmatrix}
+,
+</me>
+then
+<md>
+<mrow>
+A^3 \amp  =
+\begin{bmatrix}
+  1 \amp  2 \\ 0 \amp  3
+\end{bmatrix}
+\left(
+\begin{bmatrix}
+    1 \amp  2 \\ 0 \amp  3
+  \end{bmatrix}
+\begin{bmatrix}
+    1 \amp  2 \\ 0 \amp  3
+  \end{bmatrix}
+\right) \\
+\amp  =
+\begin{bmatrix}
+  1 \amp  2 \\ 0 \amp  3
+\end{bmatrix}
+\begin{bmatrix}
+  1 \amp  8 \\
+  0 \amp  9
+\end{bmatrix}
+\\
+\amp  =
+\begin{bmatrix}
+  1 \amp  26 \\
+  0 \amp  27
+\end{bmatrix}
+.
+</mrow>
+</md></p>
+</statement>
+</example>
+
+<p>
+The next example shows how using the properties of matrix multiplication can simplify a 
+matrix calculation.
+</p>
+
+
+<example xml:id="ex-powers-and-alg-expressions">
+<statement>
+<p>Find <m>A^2B + 2A^2C - 5A^3</m> for
+<me>
+A =
+\begin{bmatrix}
+  2 \amp  1 \\ -1 \amp  3
+\end{bmatrix}
+, \qquad B =
+\begin{bmatrix}
+  0 \amp  -1 \\
+  4 \amp  2
+\end{bmatrix}
+, \qquad C =
+\begin{bmatrix}
+  1 \amp  2 \\ 3 \amp  3
+\end{bmatrix}
+</me>.
+</p>
+<p>We first simplify to get <m>A^2B + 2A^2C - 5A^3 = A^2(B+2C -5A)</m>. Then
+<me>
+A^2 =
+\begin{bmatrix}
+  2 \amp  1 \\ -1 \amp  3
+\end{bmatrix}
+\begin{bmatrix}
+  2 \amp  1 \\ -1 \amp  3
+\end{bmatrix}
+=
+\begin{bmatrix}
+  3 \amp  5 \\ -5 \amp  8
+\end{bmatrix}
+,
+</me>
+and
+<me>
+B + 2C - 5A =
+\begin{bmatrix}
+  0 \amp  -1 \\
+  4 \amp  2
+\end{bmatrix}
++
+\begin{bmatrix}
+  2 \amp  4 \\ 6 \amp  6
+\end{bmatrix}
+-
+\begin{bmatrix}
+  10 \amp  5 \\ -5 \amp  15
+\end{bmatrix}
+=
+\begin{bmatrix}
+  -8 \amp  -2 \\ 15 \amp  -7
+\end{bmatrix}
+</me>.
+Therefore
+<md>
+<mrow>
+A^2B + 2A^2C - 5A^3 \amp  = A^2(B+2C -5A) =
+\begin{bmatrix}
+  3 \amp  5 \\ -5 \amp  8
+\end{bmatrix}
+\begin{bmatrix}
+  -8 \amp  -2 \\ 15 \amp  -7
+\end{bmatrix}
+\\
+\amp  =
+\begin{bmatrix}
+  51 \amp  -41 \\ 160 \amp  -46
+\end{bmatrix}
+.
+</mrow>
+</md></p>
+</statement>
+</example>
+
+<p>
+It is possible that <m>A^k = 0</m> for some <m>k \in \N</m> even if <m>A</m> is not the zero matrix.
+</p>
+
+<!--
+<exercise>
+<statement>
+<p>Find <m>k \in \N</m> such that <m>A^k = 0</m> for the matrix
+<me>
+A =
+\begin{bmatrix}
+  0 \amp  2 \amp  1 \\ 0 \amp  0 \amp  5\\ 0 \amp  0 \amp  0
+\end{bmatrix}
+
+</me>.</p>
+</statement>
+<hint>
+</hint>
+<answer>
+</answer>
+<solution>
+</solution>
+</exercise>-->
+
+
+<definition xml:id="def-matrix-powers">
+<statement>
+<p>
+If <m>A</m> is an <m>n\times n</m> matrix, we define <term>matrix powers</term> by
+<md>
+<mrow>
+A^2 \amp  = AA                                                                               \\
+A^k \amp  = \underbrace{AA \cdots A}_{k \text{ times}} \qquad \text{for any integer } k\ge 1 \\
+A^0 \amp  = I_n
+</mrow>
+</md>.
+</p>
+</statement>
+</definition>
+
+<remark xml:id="rmk-mult">
+<p>
+Why is the definition of matrix multiplication so complicated? One answer is that a system of linear equations
+<md>
+<mrow>
+a_{11}x_1 + a_{12}x_2 + \amp  \dots + a_{1n}x_n = b_1 \\
+a_{21}x_1 + a_{22}x_2 + \amp  \dots + a_{2n}x_n = b_2 \\
+\vdots                  \amp                          \\
+a_{m1}x_1 + a_{m2}x_2 + \amp  \dots + a_{mn}x_n = b_m
+</mrow>
+</md>
+is encoded in the matrix equation
+<me>
+A\vect{x} = \vect{b}
+</me>
+where <me>
+A =
+\begin{bmatrix}
+  a_{11} \amp  a_{12} \amp  \cdots \amp  a_{1n} \\
+  a_{21} \amp  a_{22} \amp  \cdots \amp  a_{2n} \\
+  \vdots \amp  \vdots \amp  \ddots \amp  \vdots \\
+  a_{m1} \amp  a_{m2} \amp  \cdots \amp  a_{mn}
+\end{bmatrix}
+, \qquad \vect{x} =
+\begin{bmatrix}
+  x_1 \\ x_2\\ \vdots\\ x_n
+\end{bmatrix}
+, \qquad \vect{b} =
+\begin{bmatrix}
+  b_1 \\ b_2\\ \vdots\\ b_m
+\end{bmatrix}
+</me>.
+Matrix multiplication is defined so that it corresponds to composing (by substitution) matrix equations. 
+That is, if <m>\vect{x} = A\vect{y}</m> and <m>\vect{y} = B \vect{z}</m>, then <m>AB</m> is defined so 
+that <m>\vect{z}</m> relates to <m>\vect{x}</m> by
+<me>
+\vect{x} = A\vect{y} = A(B\vect{z}) = (AB)\vect{z}
+</me>.
+</p>
+<p>
+Another answer is that matrices are closely related to a special kind of function called a 
+<em>linear transformation</em>. If the matrices <m>A</m> and <m>B</m> have corresponding linear 
+transformations <m>T_A</m> and <m>T_B</m>, then the matrix product <m>AB</m> is defined so that 
+its corresponding linear transformation is the composition <m>T_A \circ T_B</m>. The ideas and details 
+in this answer are beyond the scope of this course, but they are developed much further in the unit 
+MATH2X22: Linear and Abstract Algebra.
+</p>
+</remark>
+
+<example xml:id="ex-mat-comp">
+<statement>
+<p>
+Use matrix multiplication to find expressions for <m>x_1</m> and <m>x_2</m> in terms of 
+<m>z_1</m> and <m>z_2</m>, given that
+<md>
+<mrow>
+x_1 \amp  = 2y_1 + 3y_2, \amp  y_1 \amp  = z_1 + 2z_2  \\
+x_2 \amp  = 3y_1 + 4y_2, \amp  y_2 \amp  = 2z_1 + z_2
+</mrow>
+</md>.
+</p>
+<p>
+We have
+<me>
+\colvec{x_1}{x_2} =
+\begin{bmatrix}
+  2 \amp  3 \\ 3 \amp  4
+\end{bmatrix}
+\colvec{y_1}{y_2}, \qquad \colvec{y_1}{y_2} =
+\begin{bmatrix}
+  1 \amp  2 \\ 2 \amp  1
+\end{bmatrix}
+\colvec{z_1}{z_2}
+</me>.
+We compose equations by
+<me>
+\colvec{x_1}{x_2} =
+\begin{bmatrix}
+  2 \amp  3 \\ 3 \amp  4
+\end{bmatrix}
+\begin{bmatrix}
+  1 \amp  2 \\ 2 \amp  1
+\end{bmatrix}
+\colvec{z_1}{z_2} =
+\begin{bmatrix}
+  8 \amp  7 \\ 11 \amp  10
+\end{bmatrix}
+\colvec{z_1}{z_2}
+</me>.
+So <m>x_1 = 8z_1 + 7z_2</m>, and <m>x_2 = 11z_1 + 10z_2</m>.
+</p>
+</statement>
+</example>
+
+<!--<exercise>
+<statement>
+<p>Verify the answer in <xref ref="ex- mat comp"/> by directly substituting the equations (i.e.\ without using any matrices).</p>
+</statement>
+<hint>
+</hint>
+<answer>
+</answer>
+<solution>
+</solution>
+</exercise>-->
+
+<p>
+The matrix method only requires a single matrix multiplication, while direct substitution can 
+involve many substitutions (depending on the number of variables). Therefore, for large systems 
+of equations, it is faster to compose them using matrices.
+</p>
 
 </section>

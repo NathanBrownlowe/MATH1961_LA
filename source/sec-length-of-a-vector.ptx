@@ -3,6 +3,173 @@
 <section xml:id="sec-length-of-a-vector" xmlns:xi="http://www.w3.org/2001/XInclude">
   <title>Length of a vector</title>
 
-  <p> Text of section. </p>
+ <p>
+  When we mentioned the length of a vector earlier, we just mean its length as a line segment in space. 
+  For a vector in standard position, this is the same as its distance to the origin, which we can calculate 
+  using the usual distance formula as follows.
+  </p>
+
+
+
+
+  <definition xml:id="def-length">
+  <statement>
+  <p>
+  The <term>length</term> of a vector <m>\vect{v} = [v_1, v_2, \dots, v_n] \in \R^n</m> is given by
+  <me>
+  \|\vect{v}\| = \sqrt{v_1^2 + v_2^2 + \dots + v_n^2}
+  </me>.
+  </p>
+  </statement>
+  </definition>
+
+  <p>
+  Note that the length of a vector is nonnegative, and it is zero if and only if 
+  <m>\vect{v} = \vect{0}</m>.
+  </p>
+  
+  <p>
+  We can show that scaling a vector scales its length: for <m>\vect{v} = [v_1, \dots, v_n]\in \R^n</m> and 
+  <m>c\in \R</m>,
+  <md>
+  <mrow>
+  \|c\vect{v}\| \amp  = \sqrt{(cv_1)^2 + \dots + (cv_n)^2} = \sqrt{c^2(v_1^2 + \dots + v_n^2)} \\
+  \amp  = |c|\|\vect{v}\|
+  </mrow>
+  </md>
+  where <m>|c|</m> is the absolute value of <m>c</m>.
+  </p>
+
+
+  <remark xml:id="rem-length-and-abs-value">
+  <p>
+  Absolute values are like lengths, and the length of a vector in <m>\R^1</m> is just its absolute value. 
+  In these notes, we use the notation <m>\|\vect{u}\|</m> (instead of <m>|\vect{u}|</m>) for the length of 
+  a vector to emphasize the fact that we are working with vectors (instead of numbers).
+  </p>
+  </remark>
+  
+  <example xml:id="ex-lengths">
+  <statement>
+  <p>
+  The lengths of the vectors <m>\vect{v} = [1, -1, 2]</m> and <m>\vect{w} = [1, -2, 0, 4]</m> are 
+  <m>\|\vect{v}\| = \sqrt{1^2 + (-1)^2 + 2^2} = \sqrt{6}</m> and 
+  <m>\|\vect{w}\| = \sqrt{1^2 + (-2)^2 + 0^2 + 4^2} = \sqrt{21}</m>.
+  </p>
+  </statement>
+  </example>
+  
+  <p>
+  We can scale any nonzero vector to have length <m>1</m>.
+  </p>
+
+
+  <definition xml:id="def-unit-vector">
+  <statement>
+  <p>
+  A <term>unit vector</term> is a vector of length <m>1</m>.
+  </p>
+  </statement>
+  </definition>
+  
+  <p>
+  Let <m>v\in \R^n</m> be a nonzero vector. Then its <term>normalisation</term> is
+  <m>\vect{u} = \frac{1}{\|\vect{v}\|}\vect{v}</m>, which is the unit vector in the same direction 
+  as <m>\vect{v}</m>. Indeed, <m>\vect{u}</m> has the same direction as <m>\vect{v}</m> since 
+  <m>\frac{1}{\|\vect{v}\|} \gt  0</m>, and it is a unit vector since
+  <md>
+  <mrow>
+  \|\vect{u}\| \amp  = \biggl\|\frac{1}{\|\vect{v}\|}\vect{v}\biggr\|= \bigg|\frac{1}{\|\vect{v}\|}\biggr|\|\vect{v}\| \\
+  \amp  = \frac{1}{\|\vect{v}\|}\|\vect{v}\| = 1
+  </mrow>
+  </md>.
+  </p>
+
+
+  <example xml:id="ex-normalising">
+  <statement>
+  <p>
+  Show that <m>\|\vect{v}\| = [1, 1]</m> is not a unit vector, and normalise <m>\vect{v}</m>.
+  </p>
+  <p>
+  Its length is <m>\|\vect{v}\| = \sqrt{1^2 + 1^2} = \sqrt{2} \ne 1</m>, so <m>\vect{v}</m> is not a 
+  unit vector. Its normalisation is
+  <me>
+  \vect{u} = \frac{1}{\sqrt{2}}[1, 1] = \Bigl[\frac{1}{\sqrt{2}}, \frac{1}{\sqrt{2}}\Bigr].
+  </me>
+  </p>
+  </statement>
+  </example>
+  
+  <p>
+  In <m>\R^n</m>, for all <m>i=1, 2, \dots, n</m>, let <m>\vect{e}_i</m> be the vector with 1 in 
+  the <m>i</m>th component and <m>0</m> in every other component. The vectors 
+  <m>\vect{e}_1, \vect{e}_2, \dots, \vect{e}_n</m> are unit vectors, called the <term>standard unit 
+  vectors</term> in <m>\R^n</m>. Note that when <m>n=2</m>, the standard unit vectors are 
+  <m>\vect{e}_1 = [1, 0]</m> and <m>\vect{e}_2 = [0, 1]</m>, and in <m>\R^3</m>, the standard unit vectors are 
+  <m>\vect{e}_1 = [1, 0, 0], \vect{e}_2 = [0, 1, 0]</m>, and <m>\vect{e}_3 = [0, 0, 1]</m>.
+  </p>
+
+
+<figure xml:id="standard-unit-vectors">
+      <caption>Standard unit vectors.</caption>
+      <sidebyside widths="45% 45%" margins="auto" valign="middle">
+	<figure xml:id="stan-unit-vecs-in-R2">
+	  <caption>In <m>\R^2</m>.</caption>
+		<image width="100%">
+<latex-image>
+\begin{tikzpicture} [scale = 2]
+\draw [vector,->] (-1, 0) -- (2, 0) node [right] {$x$};
+\draw [vector,->] (0, -1) -- (0, 2) node [above] {$y$};
+\draw [vector,->, blue,very thick] (0, 0) -- (1, 0) node [below] {$\vect{e}_1$};
+\draw [vector,->, red,very thick] (0, 0) -- (0, 1) node [left] {$\vect{e}_2$};
+\end{tikzpicture}
+</latex-image>
+</image>
+	</figure>
+	<figure xml:id="stan-unit-vecs-in-R3">
+	  <caption>In <m>\R^3</m>.</caption>
+	  <image width="100%">
+<latex-image>
+\begin{tikzpicture} [scale = 2]
+    % Draw the axes with the z-axis pointing upwards, so coords are (y, z, x)
+    \draw[vector,->] (0,0,0) -- (0,0,2) node[anchor=north east] {$x$};
+    \draw[vector,->] (0,0,0) -- (2,0,0) node[right] {$y$};
+    \draw[vector,->] (0,0,0) -- (0,2,0) node[above] {$z$};
+
+    \draw[vector,->, blue,very thick] (0, 0, 0) -- (0, 0, 1) node [left] {$\vect{e}_1$};
+    \draw[vector,->, red,very thick] (0, 0, 0) -- (1, 0, 0) node [below] {$\vect{e}_2$};
+    \draw[vector,->, violet,very thick] (0, 0, 0) -- (0, 1, 0) node [left] {$\vect{e}_3$};
+\end{tikzpicture}
+</latex-image>
+</image>
+	</figure>
+</sidebyside>
+    </figure>
+    
+<!--
+<figure xml:id="standard-unit-vectors">
+      <caption>Standard unit vectors.</caption>
+      <sidebyside widths="45% 45%" margins="auto" valign="middle">
+	<figure xml:id="stan-unit-vecs-in-R2">
+	  <caption>In <m>\R^2</m>.</caption>
+	  <image width="100%">
+	    <latex-image>
+	      \begin{tikzpicture}
+	      \end{tikzpicture}
+	    </latex-image>
+	  </image>
+	</figure>
+	<figure xml:id="stan-unit-vecs-in-R3">
+	  <caption>In <m>\R^3</m>.</caption>
+	  <image width="100%">
+	    <latex-image>
+	      \begin{tikzpicture}
+	      \end{tikzpicture}
+	    </latex-image>
+	  </image>
+	</figure>
+      </sidebyside>
+    </figure>-->
 
 </section>

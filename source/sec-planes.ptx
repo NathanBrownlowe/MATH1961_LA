@@ -3,6 +3,294 @@
 <section xml:id="sec-planes" xmlns:xi="http://www.w3.org/2001/XInclude">
   <title>Planes</title>
 
-  <p> Text of section. </p>
+ <p>
+Let <m>\vect{n}, \vect{x}, \vect{p} \in \R^3</m>. We will investigate what the `normal form' 
+<m>\vect{n}\cdot\vect{x} = \vect{n}\cdot\vect{p}</m> geometrically represents in <m>\R^3</m>. 
+Consider the equation <m>\vect{n}\cdot (\vect{x} - \vect{p}) = 0</m>. This means that, for a 
+fixed position vector <m>\vect{p}</m>, we want to find all the vectors <m>\vect{x} - \vect{p}</m> 
+that are orthogonal to the `normal vector' <m>\vect{n}</m>. The solutions to this describe a plane, 
+as shown in <xref ref="fig-plane_setup"/>.
+</p>
+
+<figure xml:id="fig-plane_setup">
+<caption>Normal form of a plane</caption>
+<!--plane_setup.tikz-->
+</figure>
+
+<definition xml:id="def-normal-to-a-plane">
+<statement>
+<p>
+Let <m>\p</m> be a plane in <m>\R^3</m>. A <term>normal vector</term> for <m>\p</m> is a 
+nonzero vector <m>\vect{n}</m> which is orthogonal to <m>\p</m>.
+</p>
+</statement>
+</definition>
+
+<definition xml:id="def-normal-form-of-plane">
+<statement>
+<p>
+The <term>normal form</term> of the equation of a plane <m>\p</m> in <m>\R^3</m> is
+<me>
+(\vect{x} - \vect{p}) \cdot \vect{n} =0
+</me>
+or equivalently
+<me>
+\vect{x} \cdot \vect{n} = \vect{p} \cdot \vect{n},
+</me>
+where <m>\vect{n}</m> is a normal vector for <m>\p</m>, and <m>\vect{p}</m> is the position vector 
+of a point on <m>\p</m>.
+</p>
+</statement>
+</definition>
+
+<p>
+If we know <m>\vect{n} = [a, b, c]</m> and <m>P = (p_1, p_2, p_3)</m>, so <m>\vect{p} =[p_1, p_2, p_3]</m>, 
+and if we write <m>X = (x, y, z)</m> so <m>\vect{x} = [x, y, z]</m>, then evaluating the dot products in 
+the general form <m>\vect{n}\cdot \vect{x} = \vect{n}\cdot \vect{p}</m> gives the equation
+<me>
+ax + by + cz = d
+</me>
+where <m>d = \vect{n}\cdot\vect{p} = ap_1 + bp_2 + cp_3</m>.
+</p>
+
+<definition xml:id="def-general-form-of-plane">
+<statement>
+<p>
+The <term>general form</term> of the equation of a plane <m>\p</m> in <m>\R^3</m> is
+<me>
+ax+by+cz = d
+</me>
+where <m>\vect{n} = [a, b, c]</m> is a normal vector for <m>\p</m>, and <m>d = \vect{n}\cdot \vect{p}</m>, 
+where <m>\vect{p}</m> is the position vector of a point <m>P</m> on <m>\p</m>.
+</p>
+</statement>
+</definition>
+
+<example xml:id="ex-norm-form-plane">
+<statement>
+<p>
+Find a normal form for the plane with general equation
+<me>
+2x - y + z = 5
+</me>.
+
+A normal vector is <m>\vect{n} = [2, -1, 1]</m>. A point on the plane is <m>P= (0, 0, 5)</m>, so 
+<m>\vect{p} = [0, 0, 5]</m>. So the normal form is
+  <me>
+  [2, -1, 1] \cdot ([x, y, z] - [0, 0, 5]) =0.
+</me>
+</p>
+</statement>
+</example>
+
+<example xml:id="ex-norm-and-general-plane">
+<statement>
+<p>
+Find a normal form and general form for the plane that passes through the point <m>(1, 0, 6)</m> and has 
+normal vector <m>[1, 2, 3]</m>.
+</p>
+<p>
+We take <m>\vect{n} = [1, 2, 3]</m> and <m>P = (1, 0, 6)</m>, so <m>\vect{p} = [1, 0, 6]</m>. 
+The normal form is
+  <me>
+  [1, 2, 3] \cdot [x, y, z] = [1, 2, 3] \cdot [1, 0, 6]
+</me>
+and the general form is <m>x+2y+3z = 19</m>.
+</p>
+</statement>
+</example>
+
+<remark xml:id="rem-int-plane-line">
+<p>
+In <m>\R^3</m>, the intersection of a plane with a line can consist of zero points, one point, or 
+infinitely many points if the line lies on the plane.
+</p>
+</remark>
+
+<example xml:id="ex-int-line-plane">
+<statement>
+<p>
+Determine whether the line
+  <me>
+  [x, y, z] = [1, 2, -2] + t[2, 1, 2], \qquad t\in \R
+</me>
+intersects the plane <m>x+2y+3z = 19</m>, and if so, find the intersection.
+</p>
+<p>
+The parametric equations of the line are
+<me>
+\left\{
+\begin{aligned}
+  x \amp  = 1+2t \\
+  y \amp  = 2 +t \\
+  z \amp  = -2+ 2t
+\end{aligned}
+\right. \qquad t\in\R
+</me>.
+Substituting this into the equation of the plane gives
+<md>
+<mrow>
+\amp  (1+2t) + 2(2+t) + 3(-2+2t) = 19 \\
+\implies \amp  1+4-6 +(2+2+6)t = 19            \\
+\implies \amp  10t = 20
+</mrow>
+</md>,
+so <m>t = 2</m>. Substituting into the parametric equations of the line gives
+<me>
+x = 1+4 = 5, \qquad y = 2+2 = 4, \qquad z = -2+4 = 2,
+</me>
+so there is one intersection point at <m>(5, 4, 2)</m>.
+</p>
+</statement>
+</example>
+
+<p>
+We can also describe planes using direction vectors.
+</p>
+
+<definition xml:id="def-direction-vec-plane">
+<statement>
+<p>
+A <term>direction vector</term> for a plane <m>\p</m> in <m>\R^3</m> is a nonzero vector 
+<m>\vect{d} \in \R^3</m> which is parallel to <m>\p</m>.
+</p>
+</statement>
+</definition>
+
+<p>
+We have previously seen that a line is specified by a point and one direction vector. In fact, a 
+plane <m>\p</m> is determined by a point <m>P</m> on <m>\p</m>, and two non-parallel direction 
+vectors <m>\vect{u}</m> and <m>\vect{v} \in \R^3</m>. (This should make sense, because intuitively a 
+line is one dimensional, while a plane is two-dimensional, so it should have two `directions'.)
+From this fact, we will deduce an equation for <m>\p</m>. Let <m>X</m> be an arbitrary point of 
+<m>\p</m>. Then <m>\overrightarrow{PX}</m> lies on <m>\p</m>, so there are <m>s, t\in \R</m> such that
+<me>
+\overrightarrow{PX} = s\vect{u} + t\vect{v}
+</me>.
+Let <m>\vect{x} =\overrightarrow{OX}</m> and <m>\vect{p} = \overrightarrow{OP}</m>, so <m>\overrightarrow{PX} = \overrightarrow{OX} - \overrightarrow{OP} = \vect{x} - \vect{p}</m>. Then <m>\vect{x} - \vect{p} = s\vect{u} + t\vect{v}</m>, for <m>s, t\in \R</m>. Thus
+<me>
+\vect{x} = \vect{p} + s\vect{u} + t\vect{v}, \qquad s, t\in \R
+</me>.
+This is shown in <xref ref="fig-vector_nf"/>.
+</p>
+
+<figure xml:id="fig-vector_nf">
+<caption>Vector form of a plane</caption>
+<!--plane_vectorform.tikz-->
+</figure>
+
+<p>
+In components, let <m>\vect{x} = [x,y, z]</m>, <m>\vect{p} = [p_1, p_2, p_3]</m>, 
+<m>\vect{u} = [u_1, u_2, u_3]</m> and <m>\vect{v} = [v_1, v_2, v_3]</m>. Then we have
+  <me>
+  [x, y, z] = [p_1, p_2, p_3] + s[u_1, u_2, u_3] + t[v_1, v_2, v_3], \qquad s, t, \in\R
+</me>.
+Comparing coefficients gives
+<me>
+\left\{
+\begin{aligned}
+  x \amp  = p_1  + su_1 + tv_1 \\
+  y \amp  = p_2 + su_2 + tv_2  \\
+  z \amp  = p_3 + su_3 + tv_3
+\end{aligned}
+\right.\qquad s, t\in \R
+</me>.
+The next definition summarises these calculations.
+</p>
+
+<definition xml:id="def-vec-para-plane">
+<statement>
+<p>
+The <term>vector form</term> of a plane <m>\p</m> is
+<me>
+\vect{x} = \vect{p} + s\vect{u} + t\vect{v}, \qquad s, t\in \R
+</me>
+and <term>parametric equations</term> for <m>\p</m> are
+<me>
+\left\{
+\begin{aligned}
+  x \amp  = p_1  + su_1 + tv_1 \\
+  y \amp  = p_2 + su_2 + tv_2  \\
+  z \amp  = p_3 + su_3 + tv_3
+\end{aligned}
+\right.\qquad s, t\in \R
+</me>
+where <m>\vect{p} = [p_1, p_2, p_3]</m> is the position vector of a point on <m>\p</m>, and 
+<m>\vect{u} = [u_1, u_2, u_3]</m>, <m>\vect{v} = [v_1, v_2, v_3]</m> are non-parallel direction 
+vectors for <m>\p</m>.
+</p>
+</statement>
+</definition>
+
+<remark xml:id="rem-plane-dir-vectors">
+<p>
+The reason that we require the direction vectors <m>\vect{u}</m> and <m>\vect{v}</m> for a plane 
+to be non-parallel is because if they are parallel, then <m>\vect{u} = c\vect{v}</m> for 
+some <m>c\in \R</m>, so
+<me>
+\vect{x} = \vect{p} + s\vect{u} + t\vect{v} = \vect{p} + (sc+t)\vect{v}, \qquad s, t\in \R,
+</me>
+which is the equation of a line <m>\ell</m> in <m>\R^3</m>.
+</p>
+</remark>
+
+<p>
+Given any 3 non-collinear (not all on a single line) points <m>P, Q, R</m> on a plane <m>\p</m>, 
+we can find equations for <m>\p</m> in any of the four forms. We can take 
+<m>\vect{u} = \overrightarrow{PQ}</m> and <m>\vect{v} = \overrightarrow{PR}</m> to be 
+direction vectors to find the vector form and parametric equations for <m>\p</m>. The 
+vectors <m>\vect{u}</m> and <m>\vect{v}</m> are non-parallel since <m>P, Q, R</m> are 
+non-collinear. Since <m>\vect{u}\times\vect{v}</m> is orthogonal to <m>\vect{u}</m> and <m>\vect{v}</m>, we can take
+<me>
+\vect{n} = \vect{u} \times \vect{v} = \overrightarrow{PQ}\times \overrightarrow{PR}
+</me> as a normal vector to find the normal form and general form for <m>\p</m>.
+</p>
+
+
+<example xml:id="ex-planes-all-forms">
+<statement>
+<p>
+Find the vector form, parametric equations, normal form and general form for the plane <m>\p</m> 
+containing the points <m>P = (2,1, 0)</m>, <m>Q = (-1, 1, 2)</m> and <m>R = (4, 0, 2)</m>.
+</p>
+<p>
+We can take
+<md>
+<mrow>
+\vect{p} \amp  = \overrightarrow{OP} = [2, 1, 0]                           \\
+\vect{u} \amp  = \overrightarrow{PQ} = [-1, 1, 2] - [2, 1,0] = [-3, 0, 2]  \\
+\vect{v} \amp  = \overrightarrow{PR} = [4, 0, 2] - [2, 1, 0] = [2, -1, 2]
+</mrow>
+</md>.
+The vector form is
+  <me>
+  [x, y, z] = [2, 1, 0] + s[-3, 0, 2] + t[2, -1, 2], \qquad s, t\in \R
+</me>
+and the parametric equations are
+<me>
+\left\{
+\begin{aligned}
+  x \amp  = 2  - 3s + 2t \\
+  y \amp  = 1-t          \\
+  z \amp  = 2s+2t
+\end{aligned}
+\right.\qquad s, t\in \R
+</me>.
+We can take
+<md>
+<mrow>
+\vect{n} = \vect{u} \times\vect{v} \amp  = \overrightarrow{PQ}\times \overrightarrow{PR} \\
+\amp  = [-3, 0, 2] \times [2, -1, 2]                  \\
+\amp  = [2, 10, 3]
+</mrow>
+</md>.
+Therefore the normal form is
+  <me>
+  [2, 10, 3] \cdot [x, y, z] = [2, 10, 3]\cdot [2, 1, 0]
+</me>
+and the general form is <m>2x+10y+3z = 14</m>.
+</p>
+</statement>
+</example>
 
 </section>

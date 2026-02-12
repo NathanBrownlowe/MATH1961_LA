@@ -3,6 +3,144 @@
 <section xml:id="sec-vector-spaces" xmlns:xi="http://www.w3.org/2001/XInclude">
   <title>Vector Spaces</title>
 
-  <p> Text of section. </p>
+  <p>
+In <xref ref="thm-vec-prop"/> we identified eight properties satisfied by vector addition
+and scalar multiplication on <m>{\mathbb R}^n</m>. It turns out that these properties are
+exactly what is needed to produce the more general notion of a vector space.
+</p>
+
+ <definition xml:id="def-vec-spaces">
+  <statement>
+  <p>
+  A <term>vector space <m>V</m> over <m>\mathbb R</m></term> is a set <m>V</m> together with
+  <ul>
+  <li>
+  <p> an operation <m>+</m> satisfying 
+  <m>\vect{u},\vect{v}\in V\implies \vect{u}+\vect{v}\in V</m>
+  </p>
+  </li>
+  <li>
+  <p> a scalar multiplication of <m>\mathbb R</m> satisfying 
+  <m>\vect{u}\in V,\, c\in\mathbb R\implies c\vect{u}\in V</m>
+  </p>
+  </li>
+  <li>
+  <p> a vector <m>\vect{0}\in V</m>
+  </p>
+  </li>
+  <li>
+  <p> for each <m>\vect{u}\in V</m> a vector <m>-\vect{u}\in V</m>
+  </p>
+  </li>
+</ul>
+satisfying, for all <m>\vect{u}, \vect{v}, \vect{w} \in V</m> and <m>c, d \in \R</m>,
+  <ol>
+  <li>
+  <p><m>\vect{u} + \vect{v} = \vect{v} + \vect{u}\quad</m> (commutativity)
+  </p>
+  </li>
+  <li>
+  <p><m>(\vect{u} + \vect{v}) + \vect{w} = \vect{u} + (\vect{v}+ \vect{w})\quad</m> 
+  (associativity)
+  </p>
+  </li>
+  <li>
+  <p><m>\vect{u} + \vect{0} = \vect{u}</m>
+  </p>
+  </li>
+  <li>
+  <p><m>\vect{u} + (-\vect{u}) = \vect{0}</m>
+  </p>
+  </li>
+  <li>
+  <p><m>c(\vect{u} + \vect{v}) = c\vect{u} + c\vect{v}\quad</m> (distributivity)
+  </p>
+  </li>
+  <li>
+  <p><m>(c+d)\vect{u} = c\vect{u} + d\vect{u}\quad</m> (distributivity)
+  </p>
+  </li>
+  <li>
+  <p><m>c(d\vect{u}) = (cd)\vect{u}</m>
+  </p>
+  </li>
+  <li>
+  <p><m>1\vect{u} = \vect{u}</m>.</p>
+  </li>
+  </ol></p>
+  </statement>
+  </definition>
+
+<remark xml:id="rem-vec-space-terms">
+<statement>
+<p>
+We call the <m>+</m> operation <term>addition</term>. When addition satisfies 
+<m>\vect{u},\vect{v}\in V\implies \vect{u}+\vect{v}\in V</m> 
+(the first dot point above), we say that <m>V</m> <term>is closed under addition</term>. 
+Similarly, when the scalar multiplication operation satisfies 
+<m>\vect{u}\in V,\, c\in\mathbb R\implies c\vect{u}\in V</m>, we say that <m>V</m> is 
+<term>closed under scalar multiplication</term>. 
+</p>
+
+<p>
+The vector <m>\vect{0}</m> is called a <term>zero vector</term>, and 
+given <m>\vect{u}\in V</m>, the vector <m>-\vect{u}</m> is called an 
+<term>additive inverse of</term> <m>\vect{u}</m>. (In the first tutorial you will be
+asked to show that the zero vector and the additive inverses are unique.)
+</p>
+</statement>
+</remark>
+
+<remark xml:id="rem-general-vec-space">
+<statement>
+<p>
+We have not given the most general definition of a vector space. To do this, we would need
+to replace the real numbers <m>\mathbb R</m> by a more general mathematical object
+called a <term>field</term>. You will learn more about fields in second-year mathematics.
+</p>
+</statement>
+</remark>
+
+<example xml:id="ex-Rn-is-vec-space">
+<statement>
+<p>
+By <xref ref="thm-vec-prop"/> we know that <m>{\mathbb R}^n</m> under the usual addition 
+and scalar multiplication operations is a vector space.
+</p>
+</statement>
+</example>
+
+<example xml:id="ex-other-vec-spaces">
+<statement>
+<p>
+Here are some other examples of vector spaces. We will leave the proofs as an exercise 
+(some of which are difficult!).
+<ul>
+  <li>
+  <p> The set of all functions <m>f\colon \mathbb R\to\mathbb R</m> under the usual pointwise 
+  addition and scalar multiplication operations is a vector space over <m>\mathbb R</m>.
+  </p>
+  </li>
+  <li>
+  <p> The sets 
+  <md>
+<mrow>
+\amp P_n(\mathbb R)=\{\text{polynomials } a_0+a_1x+\dots+a_nx^n:a_i\in\mathbb R\}\\
+\amp C(\mathbb R)=\{\text{continuously functions } \mathbb R\to\mathbb R\}\\
+\amp C^1(\mathbb{R})=\{\text{continuously differentiable functions } \mathbb R\to\mathbb R\}
+</mrow>
+</md>
+  are all vector spaces over <m>\mathbb R</m> under the usual pointwise operations.
+  </p>
+  </li>
+  <li>
+  We will later see that the set of <m>m\times n</m> with real entries is a vector space
+  over <m>\mathbb R</m> under the usual operations of matrix addition and scalar
+  multiplication.
+  </li>
+</ul>
+</p>
+</statement>
+</example>
 
 </section>
