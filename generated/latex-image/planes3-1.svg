@@ -1,0 +1,17 @@
+<svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" xmlns:inkscape="http://www.inkscape.org/namespaces/inkscape" version="1.1" width="99" height="116" viewBox="0 0 99 116">
+<g>
+<path transform="matrix(1,0,0,-1.00003,60.53,67.06457)" d="M36.82368 26.19363V-47.45372L-58.08377-44.60548V29.04187Z" fill="#ccffcc" fill-opacity=".5"/>
+<path transform="matrix(1,0,0,-1.00003,60.53,67.06457)" stroke-width=".3985" stroke-linecap="butt" stroke-miterlimit="10" stroke-linejoin="miter" fill="none" stroke="#000000" stroke-opacity=".5" d="M36.82368 26.19363V-47.45372L-58.08377-44.60548V29.04187Z"/>
+</g>
+<g>
+<path transform="matrix(1,0,0,-1.00003,60.53,67.06457)" d="M36.82368 26.19363V-47.45372L-15.56358-7.7818V65.86555Z" fill="#ccccff" fill-opacity=".5"/>
+<path transform="matrix(1,0,0,-1.00003,60.53,67.06457)" stroke-width=".3985" stroke-linecap="butt" stroke-miterlimit="10" stroke-linejoin="miter" fill="none" stroke="#000000" stroke-opacity=".5" d="M36.82368 26.19363V-47.45372L-15.56358-7.7818V65.86555Z"/>
+</g>
+<g>
+<path transform="matrix(1,0,0,-1.00003,60.53,67.06457)" d="M-15.56358-7.7818V65.86555L-58.08377 29.04187V-44.60548Z" fill="#ffcccc" fill-opacity=".5"/>
+<path transform="matrix(1,0,0,-1.00003,60.53,67.06457)" stroke-width=".3985" stroke-linecap="butt" stroke-miterlimit="10" stroke-linejoin="miter" fill="none" stroke="#000000" stroke-opacity=".5" d="M-15.56358-7.7818V65.86555L-58.08377 29.04187V-44.60548Z"/>
+</g>
+<path transform="matrix(1,0,0,-1.00003,60.53,67.06457)" stroke-width="1.19553" stroke-linecap="butt" stroke-miterlimit="10" stroke-linejoin="miter" fill="none" stroke="#7f807f" d="M36.82368-47.45372V26.19363"/>
+<path transform="matrix(1,0,0,-1.00003,60.53,67.06457)" stroke-width="1.19553" stroke-linecap="butt" stroke-miterlimit="10" stroke-linejoin="miter" fill="none" stroke="#7f807f" d="M-15.56358-7.7818V65.86555"/>
+<path transform="matrix(1,0,0,-1.00003,60.53,67.06457)" stroke-width="1.19553" stroke-linecap="butt" stroke-miterlimit="10" stroke-linejoin="miter" fill="none" stroke="#7f807f" d="M-58.08377-44.60548V29.04187"/>
+</svg>
