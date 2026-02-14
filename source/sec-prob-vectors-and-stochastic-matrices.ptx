@@ -3,6 +3,202 @@
 <section xml:id="sec-prob-vectors-and-stochastic-matrices" xmlns:xi="http://www.w3.org/2001/XInclude">
   <title>Probability vectors and stochastic matrices</title>
 
-  <p> Text of section. </p>
+ <p>
+You may know that probabilities are numbers between 0 and 1, and they add up to 1 
+when we consider all outcomes. This suggests that vectors with entries like this 
+should be related to probabilities.
+</p>
+
+
+<definition xml:id="def-prob-vector">
+<statement>
+<p>
+A <term>probability vector</term> is a vector 
+<m>\vect{x} = [x_1, x_2, \dots, x_n] \in \R^n</m> such that 
+<m>0 \le x_i \le 1</m> for all <m>i=1, 2, \dots, n</m> and <me>
+x_1 + x_2 + \dots + x_n=1
+</me>.
+</p>
+</statement>
+</definition>
+
+<p>
+For example, the vectors
+<me>
+\colvec{0.6}{0.4}, \qquad
+\begin{bmatrix}
+  1/3 \\ 1/3 \\ 1/3
+\end{bmatrix}
+, \qquad \colvec{1}{0}, \qquad \colvec{1/3}{2/3}, \qquad
+\begin{bmatrix}
+  0 \\ 0.2\\ 0.8
+\end{bmatrix}
+</me>
+are all probability vectors, while none of the following vectors are probability 
+vectors:
+<me>
+\colvec{-0.5}{1.5}, \qquad \colvec{0.8}{0},\qquad \colvec{1}{1}, \qquad \colvec{0}{0}
+</me>.
+The first is not a probability vector because it has a negative entry, and 
+the rest are not because they do not add up to 1.
+</p>
+
+
+<definition xml:id="def-stochastic-etc">
+<statement>
+<ul>
+<li>
+<p>
+A <term>stochastic matrix</term> is a <m>n\times n</m> matrix in which 
+every column is a probability vector.
+</p>
+</li>
+<li>
+<p>
+An <m>n\times n</m> matrix <m>A = [a_{ij}]</m> is 
+<term>positive</term> if <m>a_{ij} \gt  0</m> for all <m>i, j = 1, 2, \dots, n</m>.
+</p>
+</li>
+<li>
+<p>
+A stochastic matrix <m>P</m> is <term>regular</term> if <m>P^m</m> is positive 
+for some integer <m>m \ge 1</m>.
+</p>
+</li>
+</ul>
+</statement>
+</definition>
+
+<example xml:id="ex-finding-stochastic">
+<statement>
+<p>
+Determine whether the following matrices are stochastic, and if so, whether they 
+are regular:
+<me>
+A =
+\begin{bmatrix}
+  0 \amp  0.8 \\
+  1 \amp  0.2
+\end{bmatrix}
+, \qquad B =
+\begin{bmatrix}
+  0 \amp  1 \\
+  1 \amp  0
+\end{bmatrix}
+</me>.
+</p>
+
+<p>
+First, both matrices are stochastic because all their columns have entries 
+between <m>0</m> and <m>1</m> and sum to <m>1</m>. Next, <m>A</m> is not positive, 
+but
+<md>
+<mrow>
+A^2 =
+\begin{bmatrix}
+  0 \amp  0.8 \\
+  1 \amp  0.2
+\end{bmatrix}
+\begin{bmatrix}
+  0 \amp  0.8 \\
+  1 \amp  0.2
+\end{bmatrix}
+=
+\begin{bmatrix}
+  0.8 \amp  0.16 \\
+  0.2 \amp  0.84
+\end{bmatrix}
+</mrow>
+</md>,
+so <m>A^2</m> is positive. This shows that <m>A</m> is regular.
+</p>
+<p>
+The matrix <m>B</m> is not positive. We have
+<me>
+B^2 =
+\begin{bmatrix}
+  0 \amp  1 \\
+  1 \amp  0
+\end{bmatrix}
+\begin{bmatrix}
+  0 \amp  1 \\
+  1 \amp  0
+\end{bmatrix}
+=
+\begin{bmatrix}
+  1 \amp  0 \\ 0 \amp  1
+\end{bmatrix}
+= I,
+</me>
+which is also not positive. Then <m>B^3 = B^2 B = IB = B</m>, and 
+<m>B^4 = B^3 B = BB = I</m>. In general,
+<me>
+B^m =
+\begin{cases}
+  B \amp  \text{if } m \text{ is odd}  \\
+  I \amp  \text{if } m \text{ is even} \\
+\end{cases}
+</me>.
+Therefore <m>B^m</m> is not positive for any power <m>m\ge 1</m>, and hence 
+<m>B</m> is not regular.
+</p>
+</statement>
+</example>
+
+<example xml:id="ex-regular-matrix">
+<statement>
+<p>The matrix
+<me>
+P =
+\begin{bmatrix}
+  0.5  \amp  1 \amp  0 \\
+  0.25 \amp  0 \amp  1 \\
+  0.25 \amp  0 \amp  0
+\end{bmatrix}
+</me>
+is regular since
+<me>
+P^3 =
+\begin{bmatrix}
+  0.625 \amp  0.5  \amp  0.5   \\
+  0.125 \amp  0.25 \amp  0.125 \\
+  0.25  \amp  0.25 \amp  0.375
+\end{bmatrix}
+</me>
+is positive.</p>
+</statement>
+</example>
+
+<theorem xml:id="thm-props-of-stochastic">
+<statement>
+<p>
+Let <m>P</m> be a square matrix, and <m>m</m> a positive integer.
+<ol>
+<li>
+<p>
+If <m>P</m> is stochastic, then <m>P^m</m> is stochastic.</p>
+</li>
+<li>
+<p>
+If <m>P</m> is positive, then <m>P^m</m> is positive.</p>
+</li>
+</ol></p>
+</statement>
+</theorem>
+
+<p>
+The second property is because if <m>A = [a_{ij}]</m> and <m>B = [b_{ij}]</m> 
+are any <m>n\times n</m> matrices, then <m>AB</m> is positive. This is because 
+<m>a_{ik} \gt  0</m> and <m>b_{kj} \gt  0</m> for every 
+<m>i, j, k = 1, \dots, n</m>, so the <m>(i, j)</m>-entry of <m>AB</m>
+<me>
+\sum_{k=1}^n a_{ik}b_{kj}
+</me>
+is positive.
+</p>
+
+<p>
+The first result will appear on a tutorial sheet.
+</p> 
 
 </section>

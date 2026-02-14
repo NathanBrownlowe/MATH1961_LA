@@ -1,8 +1,157 @@
 <?xml version="1.0" encoding="UTF-8"?>
 
 <section xml:id="sec-row-and-column-spaces" xmlns:xi="http://www.w3.org/2001/XInclude">
-  <title>Row and column spaces</title>
+  <title>Row, column and null spaces</title>
 
-  <p> Text of section. </p>
+<p>
+Suppose <m>A</m> is an <m>m\times n</m> matrix. There are three subspaces we associate 
+to <m>A</m>. 
+</p>
+
+<definition xml:id="def-row-and-col-spaces">
+<statement>
+<p>
+<ul>
+
+  <li>
+  <p> 
+  The <term>row space</term> of <m>A</m>, denoted <m>\operatorname{row}(A)</m>, is the subset
+  of <m>\R^n</m> that is spanned by the rows of <m>A</m> (considered as vectors).
+  </p>
+  </li>
+  
+  <li>
+  <p> 
+  The <term>column space</term> of <m>A</m>, denoted <m>\operatorname{col}(A)</m>, is the subset
+  of <m>\R^m</m> that is spanned by the columns of <m>A</m> (considered as vectors).
+  </p>
+  </li>
+  
+</ul>
+</p>
+</statement>
+</definition>
+
+<remark xml:id="rem-row-and-sol-spaces">
+<statement>
+<p>
+<ul>
+
+  <li>
+  <p> 
+  We know from <xref ref="thm-spans-are-subspaces"/> that the row and column 
+  spaces of a matrix are subspaces. 
+  </p>
+  </li>
+  
+  <li>
+  <p> 
+  Be careful to note that 
+  <ul>
+
+  <li>
+  <p> 
+  <m>\operatorname{row}(A)</m> is a subspace of <m>\R^{\#\text{ of columns of }A}</m>
+  </p>
+  </li>
+  
+  <li>
+  <p> 
+  <m>\operatorname{col}(A)</m> is a subspace of <m>\R^{\#\text{ of rows of }A}</m>.
+  </p>
+  </li>
+  
+</ul>
+  </p>
+  </li>
+  
+</ul>
+</p>
+</statement>
+</remark>
+
+<p>
+The third subspace we associate to a matrix is defined a little differently.
+</p>
+
+<definition xml:id="def-null-space">
+<statement>
+<p>
+The <term>null space</term> of <m>A</m>, denoted <m>\operatorname{null}(A)</m>, is the subset
+<md>
+\operatorname{null}(A) := \{\vect{x}\in \R^n : A\vect{x}=\vect{0}\}\subseteq \R^n.
+</md>
+</p>
+</statement>
+</definition>
+
+
+<theorem xml:id="thm-null-space-is-subspace">
+<statement>
+<p>
+If <m>A</m> is <m>m\times n</m>, then <m>\operatorname{null}(A)</m> is a subspace of <m>\R^n</m>.
+</p>
+</statement>
+
+<proof>
+<p>
+We have <m>A\vect{0}=\vect{0}\implies \vect{0}\in\operatorname{null}(A)</m>.
+</p>
+
+<p>
+Let <m>\vect{x},\vect{y}\in \operatorname{null}(A)</m>. Then
+<md>
+A(\vect{x}+\vect{y})=A\vect{x}+A\vect{y}=\vect{0}+\vect{0}=\vect{0},
+</md>
+and hence <m>\vect{x}+\vect{y}\in\operatorname{null}(A)</m>.
+</p>
+
+<p>
+Let <m>\vect{x}\in \operatorname{null}(A)</m> and <m>c\in\R</m>. Then
+<md>
+A(c\vect{x})=cA\vect{x}=c\vect{0}=\vect{0},
+</md>
+and hence <m>c\vect{x}\in\operatorname{null}(A)</m>.
+</p>
+</proof>
+</theorem>
+
+<definition xml:id="def-finding-null-space">
+<statement>
+<p>
+Find the null space of 
+<md>
+A=\begin{bmatrix} 2 \amp 3 \amp 1\\ 0 \amp -1 \amp 1\end{bmatrix}.
+</md>
+</p>
+
+<p>
+We want <m>\vect{x}=\begin{bmatrix}x\\y\\z\end{bmatrix}</m> such that <m>A\vect{x}=\vect{0}</m>.
+</p>
+
+<p> The augmented matrix is 
+<md>
+\begin{amatrix}{ccc}2\amp 3\amp 1\amp 0\\0\amp -1\amp 1\amp 0\end{amatrix},
+</md>
+which is already in REF!
+</p>
+<p>
+Let <m>z=t</m>, <m>t\in\R</m>. Then 
+<md>
+-y+z=0\implies y=z\implies y=t,
+</md>
+and
+<md>
+2x+3y+z=0\implies 2x+3t+t=0\implies x=-2t.
+</md>
+So
+<md>
+\operatorname{null}(A)=\left\{\begin{bmatrix}-2t\\t\\t\end{bmatrix} : t\in\R\right\}
+=\lspan\left(\begin{bmatrix}-2\\1\\1\end{bmatrix}\right)
+</md>
+is the line through the origin with direction vector <m>[-2,1,1]</m>.
+</p>
+</statement>
+</definition>
 
 </section>

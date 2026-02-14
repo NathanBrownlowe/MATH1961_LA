@@ -3,6 +3,231 @@
 <section xml:id="sec-rank-nullity-theorem" xmlns:xi="http://www.w3.org/2001/XInclude">
   <title>The rank-nullity theorem</title>
 
-  <p> Text of section. </p>
+ <p>
+This section will culminate in a fundamental result called the rank-nullity theorem, but
+before we get to this theorem, we will consider the problem of finding bases for the 
+row, column and null spaces of a given matrix. We will start with the general, fool-proof
+method for finding these bases. We will then illustrate this with an example, before giving
+a justification (rather than a careful proof) of why these methods work.
+ </p>
+
+<p>
+Let <m>A</m> be a matrix, and let <m>R</m> be its RREF. To find a basis for:
+</p>
+
+<assemblage xml:id="finding-bases-rules">
+<p>
+<ol>
+
+  <li>
+  <p> <term>For <m>\operatorname{row}(A)</m>:</term> Take the nonzero row vectors of 
+  <m>R</m> for a basis of <m>\operatorname{row}(A)</m>.
+  </p>
+  </li>
+  
+  <li>
+  <p> 
+  <term>For <m>\operatorname{col}(A)</m>:</term> Take the column vectors of <m>A</m>
+  in the same positions as the columns of <m>R</m> that contain a leading <m>1</m>
+  for a basis of <m>\operatorname{col}(A)</m>.
+  </p>
+  </li>
+  
+  <li>
+  <p> 
+  <term>For <m>\operatorname{null}(A)</m>:</term> Solve <m>R\vect{x}=\vect{0}</m> and write the subspace of solutions as a span by 
+  separating the parameters. The vectors in the span will be a basis for <m>\operatorname{null}(A)</m>. 
+  </p>
+  </li>
+  
+</ol>
+</p>
+</assemblage>
+
+<example xml:id="ex-finding-bases-for-matrix-subs">
+<statement>
+<p>
+Consider <m>A</m> and its RREF <m>R</m>:
+<md>
+A=\begin{bmatrix}1\amp 1\amp 3\ amp 1\ amp 6\\
+2\amp -1\amp 0\amp 1\amp -1\\
+-3\amp 2\amp 1\amp -2\amp 1\\
+4\amp 1\amp 6\amp 1\amp 3\end{bmatrix},\,
+R=\begin{bmatrix}1\amp 0\amp 1\ amp 0\ amp -1\\
+0\amp 1\amp 2\amp 0\amp 3\\
+0\amp 0\amp 0\amp 1\amp 4\\
+0\amp 0\amp 0\amp 0\amp 0\end{bmatrix}.
+</md>
+Find bases for <m>\operatorname{row}(A)</m>, <m>\operatorname{col}(A)</m>, 
+and <m>\operatorname{null}(A)</m>.
+</p>
+
+<p>
+Following the rules above, we have 
+<ol>
+
+  <li>
+  <p> <term>For <m>\operatorname{row}(A)</m>:</term> 
+  <md>
+  \left\{\begin{bmatrix}1\\0\\1\\0\\-1\end{bmatrix},
+  \begin{bmatrix}0\\1\\2\\0\\3\end{bmatrix},
+  \begin{bmatrix}0\\0\\0\\1\\4\end{bmatrix},\right\}
+  \text{ is a basis for }\operatorname{row}(A).
+  </md>
+  </p>
+  </li>
+  
+  <li>
+  <p> 
+  <term>For <m>\operatorname{col}(A)</m>:</term> 
+  <md>
+  \left\{\begin{bmatrix}1\\2\\-3\\4\end{bmatrix},
+  \begin{bmatrix}1\\1\\2\\1\end{bmatrix},
+  \begin{bmatrix}1\\1\\-2\\1\end{bmatrix},\right\}
+  \text{ is a basis for }\operatorname{col}(A).
+  </md>
+  </p>
+  </li>
+  
+  <li>
+  <p> 
+  <term>For <m>\operatorname{null}(A)</m>:</term> Let <m>x_3=s,\, x_5=t,\, s,t\in\R</m>. Then
+  <md>
+  x_4+5x_5=0\implies x_4=-5t,
+  </md>
+  <md>
+  x_2+2x_3+3x_5=0\implies x_2=-2s-3t,
+  </md>
+  and
+  <md>
+  x_1+x_3-x_5=0\implies x_1=-s+t.
+  </md>
+  So 
+  <md>
+<mrow>
+\operatorname{null}(A) \amp =\left\{\begin{bmatrix}-s+t\\-2s-3t\\s\\-5t\\t\end{bmatrix} :
+s,t\in\R\right\} \\
+\amp =\left\{s\begin{bmatrix}-1\\-2\\1\\0\\0\end{bmatrix} + t\begin{bmatrix}1\\-3\\0\\-5\\1\end{bmatrix} :
+s,t\in\R\right\} \\
+\amp =\lspan\left(\begin{bmatrix}-1\\-2\\1\\0\\0\end{bmatrix},\begin{bmatrix}1\\-3\\0\\-5\\1\end{bmatrix}\right).
+</mrow>
+</md>
+So <m>\left\{\begin{bmatrix}-1\\-2\\1\\0\\0\end{bmatrix},\begin{bmatrix}1\\-3\\0\\-5\\1\end{bmatrix}\right\}</m>
+is a basis for <m>\operatorname{null}(A)</m>.
+  </p>
+  </li>
+  
+</ol>
+</p>
+</statement>
+</example>
+
+<p>
+We won't formally prove why the methods above work, but hopefully the following will make the
+methods for the row and column spaces believable. 
+</p>
+
+<p>
+<term> Why does the row space method work?</term>
+<ul>
+
+  <li>
+  <p> 
+  We have <m>\operatorname{row}(A)=\operatorname{row}(R)</m> because we get from <m>A</m>
+  to <m>R</m>. So any basis for <m>\operatorname{row}(R)</m> is a basis for 
+  <m>\operatorname{row}(A)</m>.
+  </p>
+  </li>
+  
+  <li>
+  <p> 
+  The nonzero rows of <m>R</m> are linearly independent as the leading 1s are in 
+  different positions (with 0s in the other corresponding positions). 
+  </p>
+  </li>
+  
+</ul>
+</p>
+
+<p>
+<term> Why does the column space method work?</term>
+</p>
+
+<p>
+Unlike for the row spaces, in general we have <m>\operatorname{col}(A)=\operatorname{col}(R)</m>,
+but we do have <m>\operatorname{dim}(\operatorname{col}(A))=\operatorname{dim}(\operatorname{col}(R))</m>.
+To see why, let <m>\vect{c}_1,\dots,\vect{c}_n</m> be the columns of <m>A</m>, and let 
+let <m>\vect{r}_1,\dots,\vect{r}_n</m> be the columns of <m>R</m>. Then we have
+<md>
+<mrow>
+a_1\vect{c}_1+\cdots+a_n\vect{c}_n = \vect{0} \amp \iff A\begin{bmatrix}a_1\\\vdots\\a_n\end{bmatrix}=
+\vect{0}\\
+\amp \iff R\begin{bmatrix}a_1\\\vdots\\a_n\end{bmatrix}=
+\vect{0}\\
+\amp \iff a_1\vect{r}_1+\cdots+a_n\vect{r}_n = \vect{0}. 
+</mrow>
+</md>
+What are these implications saying? This means that linearly independent vectors amongst
+the <m>\vect{r}_1,\dots,\vect{r}_n</m> correspond to linearly independent vectors amongst
+the <m>\vect{c}_1,\dots,\vect{c}_n</m>. In particular, a basis for the column space of <m>R</m>
+corresponds (in terms of vector position) to a basis for the column space of <m>A</m>. Finally,
+the columns of <m>R</m> with a leading 1 are linearly independent because they are standard
+basis vectors, and they span the column space of <m>R</m>; hence they are a basis. By the 
+previous discussion, the vectors in the same positions of the columns of <m>A</m> are a 
+basis for <m>\operatorname{col}(A)</m>.
+</p>
+
+<p>
+We can now present the rank-nullity theorem. We start with the definitions.
+</p>
+
+<definition xml:id="def-rank-and-nullity">
+<statement>
+<p>
+Let <m>A</m> be a matrix. Then the <term>rank</term> of <m>A</m>, denoted 
+<m>\operatorname{rank}(A)</m>, is defined to be 
+<m>\operatorname{rank}(A):=\operatorname{dim}(\operatorname{col}(A))</m>. The <term>nullity</term> of <m>A</m>, denoted 
+<m>\operatorname{nullity}(A)</m>, is defined to be 
+<m>\operatorname{nullity}(A):=\operatorname{dim}(\operatorname{null}(A))</m>.
+</p>
+</statement>
+</definition>
+
+<remark xml:id="rem-alt-for-rank-and-nullity">
+<statement>
+<p>
+Note that it follows from the discussion above that the rank of a matrix is the number of 
+leading 1s in its RREF, and the nullity of a matrix is the number of parameters appearing
+in the solution space; that is, the number of columns of the RREF <em>without</em> a leading 1. 
+</p>
+</statement>
+</remark>
+
+
+
+<theorem xml:id="thm-rank-nullity-thm">
+<statement>
+<p>
+If <m>A</m> is <m>m\times n</m>, then 
+<md>
+\operatorname{rank}(A)+\operatorname{nullity}(A)=n.
+</md>
+</p>
+</statement>
+
+<proof>
+<p>
+For <m>R</m> the RREF of <m>A</m> we have
+<md>
+<mrow>
+n \amp = \#\text{ columns of }R \\
+\amp = (\#\text{ cols of }R\text{ with a leading 1})+
+(\#\text{ cols of }R\text{ without a leading 1}) \\
+\amp = \operatorname{rank}(A)+\operatorname{nullity}(A).
+</mrow>
+</md>
+</p>
+</proof>
+</theorem>
 
 </section>

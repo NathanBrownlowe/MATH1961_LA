@@ -3,6 +3,284 @@
 <section xml:id="sec-regular-markov-chains" xmlns:xi="http://www.w3.org/2001/XInclude">
   <title>Regular Markov chains</title>
 
-  <p> Text of section. </p>
+<p>
+When does <m>P^k\vect{x} = \vect{x}_k</m> tend towards a unique steady 
+state vector? The next example shows that steady state vectors do not 
+need to be unique.
+</p>
+
+
+<example xml:id="ex-unstable-SSV">
+<statement>
+<p>
+Consider a Markov chain for a population of 600 people, with transition 
+probabilities given by <xref ref="fig-nonregularMC"/>.
+</p>
+
+
+
+<figure xml:id="fig-nonregularMC">
+<caption>Transition probabilities for <xref ref="ex-unstable-SSV"/></caption>
+<image width="80%">
+    <latex-image>
+\begin{tikzpicture}[
+  scale=1.35,
+  >=Stealth,
+  arr/.style={->, line width=1.1pt},
+  lab/.style={font=\small}
+]
+\definecolor{c1}{RGB}{59,62,247}
+\definecolor{c2}{RGB}{255,51,61}
+\definecolor{c3}{RGB}{153,92,214}
+
+% triangle-ish placement
+\node (s1) at (0,1.9) {\textcolor{c1}{\Large 1}};
+\node (s2) at (-2.8,-0.2) {\textcolor{c2}{\Large 2}};
+\node (s3) at ( 2.8,-0.2) {\textcolor{c3}{\Large 3}};
+
+% loops
+\draw[arr,c1,looseness=10] (s1) to[out=110,in=70]
+  node[lab,above] {\textcolor{c1}{1}} (s1);
+
+\draw[arr,c2,looseness=9] (s2) to[out=230,in=160]
+  node[lab,left] {\textcolor{c2}{0}} (s2);
+
+\draw[arr,c3,looseness=9] (s3) to[out=-20,in=50]
+  node[lab,right] {\textcolor{c3}{0}} (s3);
+
+% inner arrows from 1 to 2 and 1 to 3 (NOW SOLID)
+\draw[arr,c1,bend right=18] (s1) to
+  node[lab,pos=0.55,left] {\textcolor{c1}{0}} (s2);
+
+\draw[arr,c1,bend left=18] (s1) to
+  node[lab,pos=0.55,right] {\textcolor{c1}{0}} (s3);
+
+% arrows back up into 1 (reverse concavity by swapping bend direction)
+\draw[arr,c2,bend right=32] (s2) to
+  node[lab,pos=0.55,above left] {\textcolor{c2}{0}} (s1);
+
+\draw[arr,c3,bend left=32] (s3) to
+  node[lab,pos=0.55,above right] {\textcolor{c3}{0}} (s1);
+
+% base: 2 -> 3 straight (red 0.5)
+\draw[arr,c2] (s2) -- node[lab,above] {\textcolor{c2}{1}} (s3);
+
+% big bottom arc: 3 -> 2 (purple 0.5)
+\draw[arr,c3,bend left=55] (s3) to
+  node[lab,pos=0.55,below] {\textcolor{c3}{1}} (s2);
+
+\end{tikzpicture}
+    </latex-image>
+  </image>
+</figure>
+
+<p>
+First, the transition matrix is
+<me>
+P =
+\begin{bmatrix}
+  1 \amp  0 \amp  0 \\ 0 \amp  0 \amp  1\\ 0 \amp  1 \amp  0
+\end{bmatrix}
+</me>.
+Solving <m>(P-I)\vect{x} = \vect{0}</m>, we get
+<me>
+\begin{amatrix}{c}
+  P - I \amp  0
+\end{amatrix}
+=
+\begin{amatrix}{ccc}
+  0 \amp  0 \amp  0 \amp  0\\
+  0 \amp  -1 \amp  1 \amp  0\\
+  0 \amp  1 \amp  -1 \amp  0
+\end{amatrix}
+\xrightarrow{R_3 \mapsto R_3 + R_2}
+\begin{amatrix}{ccc}
+  0 \amp  0 \amp  0 \amp  0\\
+  0 \amp  -1 \amp  1 \amp  0\\
+  0 \amp  0 \amp  0 \amp  0
+\end{amatrix}
+</me>.
+Let <m>x = s, z = t</m>. Then the second row gives <m>y=z=t</m>. So the solutions are
+<me>
+\left\{s
+\begin{bmatrix}
+  1 \\ 0 \\ 0
+\end{bmatrix}
++ t
+\begin{bmatrix}
+  0 \\ 1\\ 1
+\end{bmatrix}
+\;\middle| \; s, t \in \R\right\}
+</me>.
+So there are two different steady state vectors, <m>[600, 0, 0]</m> 
+(where <m>s = 600</m>, <m>t=0</m>) and <m>[0, 300, 300]</m> 
+(where <m>s = 0</m> and <m>t = 300</m>). There are also two different 
+SSPVs <m>[1, 0, 0]</m> (from <m>s=1</m>, <m>t=0</m>) and 
+<m>[0, 1/2, 1/2]</m> (from <m>s=0, t=1/2)</m>.</p>
+<p>Notice that if the initial state vector is
+<me>
+\vect{x}_0 =
+\begin{bmatrix}
+  600 \\ 0 \\ 0
+\end{bmatrix}
+, \qquad \text{then }\, \vect{x}_k =
+\begin{bmatrix}
+  600 \\ 0 \\ 0
+\end{bmatrix}
+\, \text{for all } k\ge 1,
+</me>
+because <m>\vect{x}_0</m> is a SSV. But if the initial state vector is 
+<m>\vect{x}_0 = [0, 300, 300]</m>, the other SSV, then 
+<m>\vect{x}_k = [0, 300, 300]</m> for all <m>k\ge 1</m> 
+instead.
+</p>
+</statement>
+</example>
+
+<p>
+Recall that a stochastic matrix <m>P</m> is regular if <m>P^k</m> is 
+positive for some integer <m>k\ge 1</m>.
+</p>
+
+
+<definition xml:id="def-regular-markov-chain">
+<statement>
+<p>
+A Markov chain is <term>regular</term> if its transition matrix is regular.
+</p>
+</statement>
+</definition>
+
+<p>
+For regular Markov chains, there is a unique SSV and SSPV.
+</p>
+
+
+<theorem xml:id="thm-regMC">
+<statement>
+<p>
+Let <m>P</m> be the transition matrix of a regular Markov chain. Then
+<ol>
+<li>
+<p>there is a unique SSV <m>\vect{x}</m>,
+</p>
+</li>
+<li>
+<p>there is a unique SSPV <m>\vect{y}</m>,
+</p>
+</li>
+<li>
+<p>for every possible initial state vector <m>\vect{x}_0</m>, we have 
+<m>\vect{x}_k \to \vect{x}</m> as <m>k\to \infty</m>, and
+</p>
+</li>
+<li>
+<p>
+as <m>k\to \infty</m>,
+<me>
+P^k \to L =
+\begin{bmatrix}
+  \vect{y} \amp  \vect{y} \amp  \dots \amp  \vect{y}
+\end{bmatrix}
+</me>.
+We call <m>L</m> the <term>long range transition matrix</term>.
+</p>
+</li>
+</ol></p>
+</statement>
+</theorem>
+
+<example xml:id="ex-rats">
+<statement>
+<p>
+A psychologist places a rat in a cage as in <xref ref="fig-rat"/>.
+</p>
+
+<figure xml:id="fig-rat">
+  <caption>The three compartments and the doors between them</caption>
+  <image source="rat.png" width="60%"/>
+</figure>
+
+<p>
+The rat has been trained so that each time it hears a bell, it changes compartment, 
+and it is equally to choose each door. Describe the long term behaviour of the rat.
+</p>
+
+<p>
+Based on the number of doors, the transition matrix is
+<me>
+P =
+\begin{bmatrix}
+  0   \amp  1/3 \amp  1/3 \\
+  1/2 \amp  0   \amp  2/3 \\
+  1/2 \amp  2/3 \amp  0
+\end{bmatrix}
+</me>.
+Since <m>P^2</m> is
+<me>
+\begin{bmatrix}
+  1/3 \amp  2/9   \amp  2/9 \\
+  1/3 \amp  11/18 \amp  1/6 \\
+  1/3 \amp  1/6   \amp  11/18
+\end{bmatrix}
+</me>
+which is positive, <m>P</m> is regular. Therefore <xref ref="thm-regMC"/> applies. 
+Solving for the unique steady-state probability vector:
+<md>
+<mrow>
+\begin{amatrix}{c} P - I \amp  \vect{0}
+\end{amatrix}
+=
+\begin{amatrix}{ccc}
+  -1 \amp  1/3 \amp  1/3 \amp  0\\
+  1/2 \amp  -1 \amp  2/3 \amp  0\\
+  1/2 \amp  2/3 \amp  -1 \amp  0
+\end{amatrix}
+\amp\xrightarrow{\text{scaling}}                               
+\begin{amatrix}{ccc}
+  -3 \amp  1 \amp  1 \amp  0\\
+  3 \amp  -6 \amp  4 \amp  0\\
+  3 \amp  4 \amp  -6 \amp  0
+\end{amatrix}
+\\
+\amp\xrightarrow[R_3 \mapsto R_3 + R_1]{R_2 \mapsto R_2 + R_1} 
+\begin{amatrix}{ccc}
+  -3 \amp  1 \amp  1 \amp  0\\
+  0 \amp  -5 \amp  5 \amp  0\\
+  0 \amp  5 \amp  -5 \amp  0
+\end{amatrix}
+\\
+\amp\xrightarrow{R_3 \mapsto R_3 + R_2}                        
+\begin{amatrix}{ccc}
+  -3 \amp  1 \amp  1 \amp  0\\
+  0 \amp  -5 \amp  5 \amp  0\\
+  0 \amp  0 \amp  0 \amp  0
+\end{amatrix}
+</mrow>
+</md>.
+Let <m>z = t</m>. Then <m>-5y + 5z = 0</m>, so <m>y=z=t</m>, and <m>-3x+y+z=0</m> 
+implies that <m>x = 2t/3</m>. So
+<me>
+E_1(P) = \left\{t
+\begin{bmatrix}
+  2/3 \\ 1\\ 1
+\end{bmatrix}
+: t \in \R\right\}
+</me>.
+</p>
+<p>
+For the SSPV we need <m>2t/3 + t + t = 8t/3 = 1</m>, so <m>t = 3/8</m>. 
+Therefore the SSPV is
+<me>
+\vect{x} =
+\begin{bmatrix}
+  1/4 \\ 3/8\\ 3/8
+\end{bmatrix}
+</me>.
+This means that in the long term, the rat is in compartment 1 with probability 1/4, 
+compartment 2 with probability 3/8, and compartment 3 with probability 3/8.
+</p>
+</statement>
+</example>
 
 </section>

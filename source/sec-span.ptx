@@ -3,6 +3,271 @@
 <section xml:id="sec-span" xmlns:xi="http://www.w3.org/2001/XInclude">
   <title>Span</title>
 
-  <p> Text of section. </p>
+ <p>
+Recall from <xref ref="def-lincomb"/> that a vector <m>\vect{v} \in \R^n</m> is a 
+linear combination of vectors <m>\vect{v}_1, \vect{v}_2, \dots, \vect{v}_k \in \R^n</m> 
+if
+<me>
+\vect{v} = c_1\vect{v}_1 + c_2\vect{v}_2 + \dots + c_k\vect{v}_k
+</me>
+for scalars <m>c_1, c_2, \dots, c_k \in \R</m>.
+</p>
+
+<definition xml:id="span">
+<statement>
+<p>Let <m>S = \{\vect{v}_1, \vect{v}_2, \dots, \vect{v}_k\}</m> be a set of 
+vectors in <m>\R^n</m>. The <term>span</term> of <m>S</m>, or the span of 
+<m>\vect{v}_1, \vect{v}_2, \dots, \vect{v}_k</m>, is the set of all linear 
+combinations of <m>\vect{v}_1, \vect{v}_2, \dots, \vect{v}_k</m>, and is 
+denoted by <m>\lspan{(S)}</m> or 
+<m>\lspan{(\vect{v}_1, \vect{v}_2, \dots, \vect{v}_k)}</m>.
+</p>
+</statement>
+</definition>
+
+<p>
+By definition,
+<md>
+<mrow>
+\lspan{(S)} \amp  = \lspan{(\vect{v}_1, \vect{v}_2, \dots, \vect{v}_k)}                                                                                             \\
+\amp  = \{\vect{v} \in \R^n \; | \; \vect{v} = c_1\vect{v}_1 + c_2\vect{v}_2 + \dots + c_k\vect{v}_k \quad \text{for }\, c_1, c_2, \dots, c_k \in \R\}
+</mrow>
+</md>.
+</p>
+
+<example xml:id="ex-spans">
+<statement>
+<p>
+
+  <ul>
+
+  <li>
+  <p> 
+    Every span contains the zero vector since if 
+<m>S = \{\vect{v}_1, \vect{v}_2, \dots, \vect{v}_k\}</m> is any set of vectors 
+in <m>\R^n</m>, we have 
+<m>\vect{0} = 0\vect{v}_1 + 0\vect{v}_2 + \dots + 0\vect{v}_k</m>.
+  </p>
+  </li>
+
+  <li>
+  <p> 
+    If <m>S = \{\vect{0}\}</m>, then
+<md>
+<mrow>
+\lspan({\{\vect{0}\}}) \amp  = \{\vect{v} \in \R^n \;|\; \vect{v} = c\vect{0} \quad\text{for }\, c\in \R\} \\
+\amp  = \{\vect{v} \in \R^n \;|\; \vect{v} = \vect{0}\}                             \\
+\amp  = \{\vect{0}\}
+</mrow>
+</md>.
+  </p>
+  </li>
+
+  <li>
+  <p> 
+    If <m>S = \{\vect{d}\}</m> for some <m>\vect{d}</m> in <m>\R^2</m> with 
+<m>\vect{d} \ne \vect{0}</m>, then <m>\lspan{(S)}</m> is
+<me>
+\lspan({\vect{d}}) = \{\vect{x} \in \R^2 \;|\; \vect{x} = t\vect{d}\quad\text{for }\, t\in \R\}
+</me>
+which is the line through the origin with direction vector 
+<m>\vect{d}</m>, as shown in <xref ref="fig-span-line"/>.
+
+
+<figure xml:id="fig-span-line">
+<caption>The span of <m>\vect{d}</m> is the dashed line through the origin</caption>
+<image width="60%">
+<latex-image>
+\begin{tikzpicture}
+    \draw [thick, -\gt] (-1.6, 0) -- (3, 0) node [right] {$x$};
+    \draw [thick, -\gt] (0, -1.6) -- (0, 3) node [above] {$y$};
+    \draw [very thick, -\gt] (0, 0) -- (1, 1) node [right] {$\vect{d}$};
+    \draw [thick, dashed] (-1, -1) -- (2.5, 2.5);
+\end{tikzpicture}
+</latex-image>
+</image>
+</figure>
+  </p>
+  </li>
+
+  <li>
+  <p> 
+    If <m>S = \{\vect{d}, \vect{u}\}</m> for nonzero <m>\vect{d}, \vect{u}</m> 
+in <m>\R^2</m> such that <m>\vect{d}</m> and <m>\vect{u}</m> are parallel, 
+then <m>\lspan{(S)}</m> is still the line through the origin with direction 
+vector <m>\vect{d}</m>. This is because since <m>\vect{d}</m> and <m>\vect{u}</m> 
+parallel, we have <m>\vect{u} =c\vect{d}</m> for some <m>c\in \R</m>, so
+<md>
+<mrow>
+\lspan{(\vect{d}, \vect{u})} \amp  = \{\vect{x} \in \R^2 \;|\; \vect{x} = t_1\vect{d} + t_2\vect{u} \quad\text{for }\, t_1, t_2\in \R\}   \\
+\amp  = \{\vect{x} \in \R^2\;|\; \vect{x} = t_1\vect{d} + t_2(c\vect{d}) \quad\text{for }\, t_1, t_2\in \R\} \\
+\amp  = \{\vect{x} \in \R^2 \;|\; \vect{x} = (t_1 + ct_2)\vect{d} \quad\text{for }\, t_1, t_2\in \R\}
+</mrow>
+</md>,
+which is the line with vector form <m>\vect{x} = t\vect{d}</m>, for <m>t\in \R</m>.
+  </p>
+  </li>
+
+  <li>
+  <p> 
+    If we take <m>\vect{d}</m> and <m>\vect{u}</m> in <m>\R^3</m> instead for the 
+previous two examples, they still describe a line. On the other hand, if 
+<m>S = \{\vect{u}, \vect{v}\}</m> for nonzero vectors <m>\vect{u}, \vect{v}</m> in 
+<m>\R^3</m> which are not parallel, then
+<me>
+\lspan{(\vect{u}, \vect{v})} = \{\vect{x}\in \R^3 \;|\; \vect{x} = s\vect{u} + t\vect{v}, \quad \text{for }\,s, t \in \R\}
+</me>
+is the plane
+<me>
+\vect{x} = s\vect{u} + t\vect{v}, \qquad \text{for}\; s,t \in \R
+</me>
+through the origin in <m>\R^3</m> with direction vectors <m>\vect{u}</m> and 
+<m>\vect{v}</m>, shown in <xref ref="fig-span-plane"/>.
+
+
+
+<figure xml:id="fig-span-plane">
+<caption>The span of non-parallel <m>\vect{u}</m> and <m>\vect{v}</m> is a 
+plane</caption>
+<image width="60%">
+<latex-image>
+\tdplotsetmaincoords{60}{120} % set view angle for 3D plot
+\begin{tikzpicture}[tdplot_main_coords, scale = 0.75]
+    % x-y plane
+    \filldraw[fill=blue!20,opacity=0.5] (3,3,0) -- (-3,3,0) -- (-3,-3,0) -- (3,-3,0) -- cycle;
+
+    %vectors
+    \draw[very thick, -\gt] (0, 0) -- (2, 0) node [xshift = -1.2mm, yshift = -1.2mm] {$\vect{u}$};
+    \draw[very thick, -\gt] (0, 0) -- (0, 2) node [xshift = 1.2mm, yshift = -1.2mm] {$\vect{v}$};
+    \fill (0, 0) circle (4pt) node [above] {$\vect{0}$};
+
+\end{tikzpicture}
+</latex-image>
+</image>
+</figure>
+  </p>
+  </li>
+
+</ul>
+
+</p>
+</statement>
+</example>
+
+<example xml:id="ex-checking-span">
+<statement>
+<p>
+Is <m>[8, -5, -15] \in \lspan{([1, 2, 0], [-2, 3, 5]})</m>?
+</p>
+
+<p>
+We need to look for <m>c_1, c_2 \in\R</m> such that
+  <me>
+  [8, -5, -15] = c_1[1, 2, 0] +c_2[-2, 3, 5]
+</me>.
+Comparing components gives the system of linear equations
+<me>
+\begin{cases}
+  c_1 - 2c_2  \amp  = 8  \\
+  2c_1 + 3c_2 \amp  = -5 \\
+  5c_2        \amp  = -15
+\end{cases}
+</me>.
+The third equation gives that <m>c_2 = -3</m>, and then the first equation gives 
+that <me>
+c_1 = 8+ 2c_2 = 8 + 2(-3) = 2
+  </me>. 
+These values also satisfy the second equation, since <m>2(2) + 3(-3) = -5</m>. So <m>[8, -5, -15] \in \lspan{([1, 2, 0], [-2, 3, 5]})</m>, with coefficients <m>c_1 = 2</m> and <m>c_2 = -3</m>.</p>
+  </statement>
+  </example>
+  
+<definition xml:id="def-spanning-set">
+<statement>
+  <p>Let <m>S = \{\vect{v}_1, \vect{v}_2, \dots, \vect{v}_k\}</m> be a set of 
+  vectors in <m>\R^n</m>. If <m>\lspan{(S)} = \R^n</m>, we say that <m>S</m> 
+  is a <term>spanning set</term> for <m>\R^n</m>.
+  </p>
+  </statement>
+  </definition>
+
+  <example xml:id="ex-stan-basis-spanning-set">
+  <statement>
+  <p>
+  Recall the standard unit vectors <m>\vect{e}_1 = [1, 0]</m> and 
+  <m>\vect{e}_2 = [0, 1]</m> in <m>\R^2</m>. The set <m>\{\vect{e}_1, \vect{e}_2\}</m> 
+  is a spanning set for <m>\R^2</m>, since if <m>[x, y]</m> is an arbitrary vector 
+  in <m>\R^2</m>, we have
+  <me>
+  [x, y] = x\vect{e}_1 + y\vect{e}_2 \in \lspan{(\vect{e}_1, \vect{e}_2)}.
+</me>
+</p>
+</statement>
+</example>
+
+
+<example xml:id="ex-is-spanning-set">
+<statement>
+<p>Determine whether <m>S = \{[1, 1], [-2, -2]\}</m> is a spanning set for 
+<m>\R^2</m>.
+</p>
+<p>
+We have that
+<md>
+<mrow>
+\lspan{(S)} \amp  = \{\vect{x} \in \R^2 \;|\; \vect{x} = c_1[1, 1] + c_2[-2, -2], \quad\text{for }\, c_1, c_2 \in \R\} \\
+\amp  = \{\vect{x} \in \R^2 \;|\; \vect{x} = (c_1-2c_2)[1, 1], \quad\text{for }\, c_1, c_2 \in \R\}        \\
+\amp  = \lspan{([1, 1])}
+</mrow>
+</md>,
+which is the line through the origin with equation <m>t[1, 1]</m>, 
+for <m>t\in \R</m>. So any vector not on that line is not in <m>\lspan{(S)}</m>. 
+We can check for example that <m>\vect{e}_1 \notin \lspan{(S)}</m>; if
+<me>
+\vect{e}_1 = c_1[1, 1] + c_2[-2, -2]
+</me>
+for <m>c_1, c_2 \in \R</m>, which simplifies to
+  <me>
+  [1, 0] = [c_1 - 2c_2, c_1 - 2c_2],
+</me>
+we can compare coefficients to get the system of linear equations
+<me>
+\begin{cases}
+  1 \amp  = c_1 - 2c_2 \\
+  0 \amp  = c_1 - 2c_2
+\end{cases}
+</me>.
+This is inconsistent, so there are no solutions, so 
+<m>\vect{e}_1 \notin \lspan{(S)}</m>. Hence <m>S</m> is not a spanning set 
+for <m>\R^2</m>.
+</p>
+</statement>
+</example>
+
+<p>
+The issue is that <m>[-2, -2]</m> is parallel to <m>[1, 1]</m>, so it doesn't 
+contribute anything extra to the span. In the language of the next section, we 
+will say that <m>[1, 1]</m> and <m>[-2, -2]</m> are `linearly dependent'.
+</p>
+
+<p>
+  We present the following two results without proof. It is a good exercise to at least think about why they are true.
+</p>
+
+<theorem xml:id="thm-char-span">
+<statement>
+<p>
+We have <m>\vect{b}\in\lspan(\vect{v}_1,\dots,\vect{v}_k)</m> if and only if the system with augmented matrix 
+  <m>\begin{amatrix}{ccc} \vect{v}_1 \amp \cdots \amp \vect{v}_k \amp \vect{b}\end{amatrix}</m> is consistent.
+</p>
+</statement>
+</theorem>
+
+<theorem xml:id="thm-span-and-dimension">
+<statement>
+<p>
+If <m>S</m> is a subset of <m>\R^n</m> and <m>\lspan(S)=\R^n</m>, then <m>S</m> has at least <m>n</m> elements.
+</p>
+</statement>
+</theorem>
 
 </section>

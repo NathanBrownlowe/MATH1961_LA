@@ -1,0 +1,19 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<chapter xml:id="ch-linear-transformations" xmlns:xi="http://www.w3.org/2001/XInclude">
+  <title>Linear transformations</title>
+
+  <introduction>
+   <p>
+    We have studied the structure of vector spaces extensively. It is now time to study the functions between vector spaces
+    that we care about in linear algebra; namely, the functions that preserve the vector space structure. These functions are callled
+    <em>linear transformations</em>. (Note that 'transformation' is just a fancy word for function.) In this chapter we introduce the notion
+    of a linear transformation, and the main result says these functions are nothing but matrices. 
+</p>
+  </introduction>
+
+  <!-- include sections -->
+  <xi:include href="sec-linear-transformations.ptx" />
+  <xi:include href="sec-examples-of-linear-transformations.ptx" />
+
+</chapter>

@@ -17,7 +17,7 @@ We add vectors by adding their components.</p>
 </definition>
 
 
-<example xml:id="">
+<example xml:id="ex-adding-vectors">
 <statement>
 <p>If <m>\vect{a} = [3, 6]</m> and <m>\vect{b} = [1, -1]</m>, then <m>\vect{a} + \vect{b} = [3 +1, 6+ (-1)] = [4, 5]</m>.</p>
 </statement>
@@ -177,9 +177,9 @@ Then <m>-\vect{a}</m> has the same length but the opposite direction of <m>\vect
 <statement>
 <p>Let <m>\vect{a} = [2, 1].</m> Find <m>3\vect{a}</m>, <m>0\vect{a}</m> and <m>-\frac{1}{2}\vect{a}</m>.</p>
 <p>Algebraically, <m>3\vect{a} = 3[2, 1] = [6, 3]</m>, <m>0\vect{a} = 0</m>, and 
-<m>-\frac{1}{2}\vect{a} = [-1, -1/2]</m>. This is shown geometrically in <xref ref="fig-scale_ex"/>.</p>
+<m>-\frac{1}{2}\vect{a} = [-1, -1/2]</m>. This is shown geometrically in <xref ref="fig-scale-ex"/>.</p>
 
-<figure xml:id="fig-scale_ex">
+<figure xml:id="fig-scale-ex">
 <caption>Scaling in this example</caption>
 <image width="60%">
 <latex-image>

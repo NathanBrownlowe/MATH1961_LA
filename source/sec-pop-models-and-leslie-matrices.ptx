@@ -3,6 +3,173 @@
 <section xml:id="sec-pop-models-and-leslie-matrices" xmlns:xi="http://www.w3.org/2001/XInclude">
   <title>Population models and Leslie matrices</title>
 
-  <p> Text of section. </p>
+  <p> 
+  We study the female population of some species divided into <m>n</m> ages groups
+  of equal duration. We let
+  <ul>
+    <li>
+      <p>
+        <m>x_i</m> be the population of age group <m>i</m>,
+      </p>
+    </li>
 
+    <li>
+      <p>
+        <m>b_i</m> be how many (female) offspring each of the <m>x_i</m> has,
+      </p>
+    </li>
+
+    <li>
+      <p>
+        <m>s_i</m> be the survival rate of age group <m>i</m>, and
+      </p>
+    </li>
+
+    <li>
+      <p>
+        <m>\vect{x}_m=\begin{bmatrix}x_1\\\vdots\\x_n\end{bmatrix}_m</m> be the 
+        population vector at time <m>m</m>. 
+      </p>
+    </li>
+  </ul>
+  </p>
+
+  <p>
+    <term>Question:</term> What will the populations be at time <m>m+1</m>?
+  </p>
+
+  <p>
+    The populations at time <m>m+1</m> will be 
+    <ul>
+  <li>Group 1: <m>b_1x_1 + b_2x_2 + \cdots + b_nx_n</m></li>
+  <li>Group 2: <m>s_1x_1</m></li>
+  <li>Group 3: <m>s_2x_2</m></li>
+</ul>
+
+<p><m>\qquad\qquad\qquad\vdots</m></p>
+
+<ul>
+  <li>Group <m>n</m>: <m>s_{n-1}x_{n-1}</m>.</li>
+</ul>
+  </p>
+
+  <p>
+  We think of this process as a linear transformation <m>\R^n\to\R^n</m> given by
+  <md>
+    \begin{bmatrix}x_1\\x_2\\\vdots\\x_n\end{bmatrix}_m\mapsto \begin{bmatrix}
+    b_1x_1+\cdots +b_nx_n\\ s_1x_1\\\vdots\\s_{n-1}x_{n-1}\end{bmatrix}_{m+1}.
+  </md>
+  The associated matrix of this linear transformation 
+  <md>
+    L=\begin{bmatrix} b_1 \amp b_2\amp b_3 \amp \cdots \amp b_{n-1} \amp b_n\\
+    s_1 \amp 0 \amp 0 \amp \cdots \amp 0 \amp 0\\
+    0 \amp s_2 \amp  0 \amp \cdots \amp 0 \amp 0\\
+    \vdots \amp \vdots \amp \ddots \amp \ddots \amp \vdots \amp \vdots\\
+    0 \amp 0 \amp 0 \amp \cdots \amp s_{n-1} \amp 0
+    \end{bmatrix}
+  </md>
+  is called a <m>Leslie matrix</m> (named after Patrick Leslie, who was a 
+  Scottish physiologist best known for his work on population dynamics).
+  </p>
+
+  <p>
+    We present the following facts about Leslie matrices without proof. You will prove some 
+    of these results in tutorials; others are not so obvious.
+  </p>
+
+<p>
+  <term>Facts about Leslie matrices:</term>
+    <ul>
+
+      <li>
+        <p>
+         Every Leslie matrix has a unique positive eigenvalue <m>\lambda_m</m>. This eigenvalue
+         <m>\lambda_m</m> has algebraic and geometric multiplicity 1, and has a corresponding 
+         eigenvector that can be written with positive components. 
+        </p>
+      </li>
+      <li>
+        <p>
+         If two consecutive birth rates are positive (ie. there is some <m>i</m> with
+         <m>b_i,b_{i+1}>0</m>), then for all other eigenvalues <m>\lambda</m> of <m>L</m>
+         we have <m> | \lambda | &lt; \lambda_m </m>.
+        </p>
+      </li>
+
+      <li>
+        <p>
+         We have 
+         <ul>
+          <li>
+            <p>
+              <m>\lambda_m=1\implies</m> populations stabilise,
+            </p>
+          </li> 
+
+          <li>
+            <p>
+              <m>\lambda_m &gt; 1\implies</m> populations grow to infinity, and
+            </p>
+          </li> 
+
+          <li>
+            <p>
+              <m>\lambda_m &lt; 1\implies</m> populations fall to zero.
+            </p>
+          </li> 
+        </ul>
+        </p>
+      </li>
+    
+       <li>
+        <p>
+          If two consecutive birth rates are positive, then the ratio of populations stabilise
+          in the ratio of the components of an eigenvector for <m>\lambda_m</m>. 
+        </p>
+      </li>
+      
+    </ul>
+  </p>
+
+<example xml:id="ex-leslie-matrix">
+<statement>
+<p>
+Consider the Leslie matrix
+<md>
+  L=\begin{bmatrix} 1 \amp 2 \amp 16\\
+  0.5 \amp 0 \amp 0\\
+  0 \amp 0.25 \amp 0
+  \end{bmatrix}.
+</md>
+Check carefully, or use an online calculator, to verify the following:
+<ul>
+  <li>
+    <p>
+     <m>\lambda_m=2</m> is the unique positive eigenvalue. 
+    </p>
+  </li>
+
+  <li>
+    <p>
+      <m>[32,8,1]</m> is an eigenvector for <m>\lambda_m=1</m>.
+    </p>
+  </li>
+
+  <li>
+    <p>
+      We have
+      <md>
+        \begin{bmatrix} 1 \amp 2 \amp 16\\
+  0.5 \amp 0 \amp 0\\
+  0 \amp 0.25 \amp 0
+  \end{bmatrix}^{10}\begin{bmatrix}1\\1\\1\end{bmatrix}=\begin{bmatrix}6443\\1606.5\\201\end{bmatrix}
+  \sim \begin{bmatrix}6400\\1600\\200\end{bmatrix}=200\begin{bmatrix}32\\8\\1\end{bmatrix},
+      </md>
+     which illustrates the long-term behaviour of how the ratios of populations behave. 
+    </p>
+  </li>
+</ul>
+</p>
+</statement>
+</example>
 </section>

@@ -1,0 +1,211 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<section xml:id="sec-examples-of-linear-transformations" xmlns:xi="http://www.w3.org/2001/XInclude">
+  <title>Examples</title>
+
+  <p>
+    We discuss two classes of linear transformations in this section.
+  </p>
+
+  <p>
+<term>Rotation:</term> An important example of a linear transformation is rotation. Given an angle <m>\theta</m> (which for the purposes
+of our diagrams we will think of as an angle between 0 and <m>\pi/2</m>, but this all works for any angle), we define the 
+function <m>R_\theta\colon \R^2\to\R^2</m> by setting <m>R_\theta(\vect{u})</m>$ to be the result of rotating 
+<m>\vect{u}</m> anticlockwise by angle <m>\theta</m>. This function is linear. We illustrate the additivity 
+(property 1 of being linear) in <xref ref="fig-first-pic-of-rotation"/>, and we will leave drawing a diagram for 
+scaling as an exercise.
+  </p>
+
+  <figure xml:id="fig-first-pic-of-rotation">
+<caption>This figure illustrates that rotation is additive (one half of being linear): adding <m>\vect{u}</m>
+  and <m>\vect{v}</m> and then rotating to get <m>R_\theta(\vect{u}+\vect{v})</m> gives the same vector as rotating
+  first to get <m>R_\theta(\vect{u})</m> and <m>R_\theta(\vect{v})</m>, and then adding to get
+  <m>R_\theta(\vect{u})+R_\theta(\vect{v})</m>.
+</caption>
+<image width="80%">
+<latex-image>
+\begin{tikzpicture}[scale = 8, font=\Large]
+    %x-y axis
+    \draw (0, 0) node [anchor = north east] {$O$};
+    \draw [vector,->] (-0.375, 0) -- (1.05,0) node [right] {$x$};
+    \draw [vector,->] (0, -0.375) -- (0,1.05) node [above] {$y$};
+
+    %arrows
+    \draw [vector,->, blue, ultra thick] (0, 0) -- (0.5, 0.0);
+    \draw [vector,->, blue, ultra thick] (0.0, 0.0) -- (0.3, 0.4);
+    \draw [vector,->, blue, ultra thick] (0, 0) -- (0.8, 0.4);
+    \draw [vector,->, black, ultra thick] (0, 0) -- (-0.4, 0.8);
+    
+    \draw [dashed, black] (0.5,0.0) -- (0.8,0.4);
+    \draw [dashed, black] (0.3,0.4) -- (0.8,0.4);
+    
+     \draw [vector,->, red, ultra thick] (0, 0) -- (0.0, 0.5);
+    \draw [vector,->, red, ultra thick] (0.0, 0.0) -- (-0.4, 0.3);
+    
+
+    \draw [dashed, black] (0.0,0.5) -- (-0.4,0.8);
+    \draw [dashed, black] (-0.4,0.3) -- (-0.4,0.8);
+
+    %labels
+    \draw (0.3, 0.0) node [below, blue] {$\vect{u}$};
+    \draw (0.25, 0.4) node [left, blue] {$\vect{v}$};
+    \draw (0.8, 0.4) node [above, blue] {$\vect{u} + \vect{v}$};
+    \draw (-0.4, 0.8) node [above, red] {$R_\theta(\vect{u} + \vect{v})=R_\theta(\vect{u}) + R_\theta(\vect{v})$};
+    
+    \draw (0.02, 0.5) node [right, red] {$R_\theta(\vect{u})$};
+    \draw (-0.4, 0.3) node [left, red] {$R_\theta(\vect{v})$};
+
+  % --- arc showing rotation angle theta ---
+\draw[->, thick]
+  ({0.22*cos(26.565)},{0.22*sin(26.565)})
+  arc[start angle=26.565, end angle=116.565, radius=0.22];
+
+\node at ({0.30*cos(71.565)},{0.30*sin(71.565)}) {$\theta$};
+\end{tikzpicture}
+</latex-image>
+</image>
+</figure>
+
+<p>
+  What is the matrix for <m>R_\theta</m>?
+</p>
+
+<assemblage xml:id="matrix-for-rotation">
+<p>
+<term>Fact:</term> The matrix corresponding to the rotation transformation <m>R_\theta</m> is 
+<md>
+  A_{R_\theta} = \begin{bmatrix} \cos\theta \amp -\sin\theta \\ \sin\theta \amp \cos\theta\end{bmatrix}.
+</md>
+</p>
+</assemblage>
+
+<p> 
+  We illustrate this with an acute angle in <xref ref="fig-matrix-rotation"/>.
+</p>
+
+<figure xml:id="fig-matrix-rotation">
+      <caption>Working out the matrix corresponding to <m>R_\theta</m>.</caption>
+      <sidebyside widths="45% 45%" margins="auto" valign="middle">
+	<figure xml:id="fig-rotation-1">
+	  <caption>Rotating <m>[1,0]</m> by <m>\theta</m>.</caption>
+		<image width="100%">
+<latex-image>
+\begin{tikzpicture}[scale = 5,font=\Large]
+    %x-y axis
+    \draw (0, 0) node [anchor = north east] {$O$};
+    \draw [vector,->] (-0.2, 0) -- (1.15,0) node [right] {$x$};
+    \draw [vector,->] (0, -0.2) -- (0,1.15) node [above] {$y$};
+
+    %arrows
+    \draw [vector,->, blue, ultra thick] (0, 0) -- (1, 0.0);
+    \draw [vector,->, blue, ultra thick] (0.0, 0.0) -- (0.5, 0.87);
+    
+    \draw [dashed, black] (0.0,-0.05) -- (0.5,-0.05);
+    \draw [dashed, black] (0.5,0) -- (0.5, 0.87);
+
+    %labels
+    \draw (1, -0.1) node [below, blue] {$[1,0]$};
+    \draw (0.5, 0.87) node [right, blue] {$R_\theta([1,0])=[\cos\theta,\sin\theta]$};
+    \draw (0.25, -0.1) node [below, black] {$\cos\theta$};
+    \draw (0.5, 0.45) node [right,black] {$\sin\theta$};
+\end{tikzpicture}
+</latex-image>
+</image>
+	</figure>
+	<figure xml:id="fig-rotation-2">
+	  <caption>Rotating <m>[0,1]</m> by <m>\theta</m>.</caption>
+	  <image width="100%">
+<latex-image>
+\begin{tikzpicture}[scale = 5,font=\Large]
+    %x-y axis
+    \draw (0, 0) node [anchor = north east] {$O$};
+    \draw [vector,->] (-1.15, 0) -- (0.2,0) node [right] {$x$};
+    \draw [vector,->] (0, -0.2) -- (0,1.15) node [above] {$y$};
+    
+
+    %arrows
+    \draw [vector,->, blue, ultra thick] (0, 0) -- (0,1);
+    \draw [vector,->, blue, ultra thick] (0.0, 0.0) -- (-0.87, 0.5);
+    
+    \draw [dashed, black] (-0.87,0.5) -- (-0.87,0);
+    \draw [dashed, black] (0,-0.05) -- (-0.87,-0.05);
+
+    %labels
+    \draw (0, 1) node [right, blue] {$[0,1]$};
+    \draw (-0.9, 0.5) node [above, blue] {$R_\theta([0,1])=[-\sin\theta,\cos\theta]$};
+    \draw (-0.87, 0.25) node [left, black] {$\cos\theta$};
+    \draw (-0.5, -0.1) node [right,black] {$\sin\theta$};
+\end{tikzpicture}
+</latex-image>
+</image>
+	</figure>
+</sidebyside>
+    </figure>
+
+  
+<p>
+  <term>Reflection:</term> If you think about the operation <m>T</m> of reflecting vectors in <m>\R^2</m> about
+  the line <m>y=x</m>, you can convince yourself that this is linear, and that the formula is 
+  <md>
+    T\left(\begin{bmatrix}x\\y\end{bmatrix}\right) = \begin{bmatrix}y\\x\end{bmatrix}.
+  </md>
+  Let's check this with the corresponding matrix.
+</p>
+
+<figure xml:id="fig-matrix-reflection">
+      <caption>Working out the matrix corresponding to reflection about <m>y=x</m>.</caption>
+      <sidebyside widths="45% 45%" margins="auto" valign="middle">
+	<figure xml:id="fig-reflection-1">
+	  <caption>Reflecting <m>[1,0]</m> about <m>y=x</m>.</caption>
+		<image width="100%">
+<latex-image>
+\begin{tikzpicture}[scale = 5,font=\Large]
+    %x-y axis
+    \draw (0, 0) node [anchor = north east] {$O$};
+    \draw [vector,->] (-0.2, 0) -- (1.15,0) node [right] {$x$};
+    \draw [vector,->] (0, -0.2) -- (0,1.15) node [above] {$y$};
+
+    %arrows
+    \draw [vector,->, blue, ultra thick] (0, 0) -- (1, 0.0);
+    \draw [vector,->, blue, ultra thick] (0.0, 0.0) -- (0,1);
+    
+    \draw [dashed, black] (-0.2,-0.2) -- (1.1,1.1);
+
+    %labels
+    \draw (1, -0.1) node [below, blue] {$[1,0]$};
+    \draw (-0.2, 1) node [left, blue] {$T([1,0])=[0,1]$};
+    \draw (1, 1.1) node [left, black] {$y=x$};
+\end{tikzpicture}
+</latex-image>
+</image>
+	</figure>
+	<figure xml:id="fig-reflection-2">
+	  <caption>Reflecting <m>[0,1]</m> about <m>y=x</m>.</caption>
+	  <image width="100%">
+<latex-image>
+\begin{tikzpicture}[scale = 5,font=\Large]
+    %x-y axis
+    \draw (0, 0) node [anchor = north east] {$O$};
+    \draw [vector,->] (-0.2, 0) -- (1.15,0) node [right] {$x$};
+    \draw [vector,->] (0, -0.2) -- (0,1.15) node [above] {$y$};
+
+    %arrows
+    \draw [vector,->, blue, ultra thick] (0, 0) -- (1, 0.0);
+    \draw [vector,->, blue, ultra thick] (0.0, 0.0) -- (0,1);
+    
+    \draw [dashed, black] (-0.2,-0.2) -- (1.1,1.1);
+
+    %labels
+    \draw (1, -0.1) node [below, blue] {$T([0,1])=[1,0]$};
+    \draw (-0.2, 1) node [left, blue] {$[0,1]$};
+    \draw (1, 1.1) node [left, black] {$y=x$};
+\end{tikzpicture}
+</latex-image>
+</image>
+	</figure>
+</sidebyside>
+    </figure>
+
+
+
+</section>

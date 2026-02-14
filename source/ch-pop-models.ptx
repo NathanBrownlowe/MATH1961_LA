@@ -9,6 +9,5 @@
 
   <!-- include sections -->
   <xi:include href="sec-pop-models-and-leslie-matrices.ptx" />
-  <xi:include href="sec-long-term-behaviour.ptx" />
 
 </chapter>

@@ -3,6 +3,295 @@
 <section xml:id="sec-steady-state-vectors" xmlns:xi="http://www.w3.org/2001/XInclude">
   <title>Steady state vectors</title>
 
-  <p> Text of section. </p>
+ <p>Suppose that we model the weather in Sydney by the three states 1: 
+sunny, 2: cloudy, and 3: rainy, with transition probabilities given by 
+the diagram <xref ref="fig-weather"/>.
+</p>
+
+<figure xml:id="fig-weather">
+  <caption>Transition probabilities for the weather Markov chain</caption>
+  <image width="80%">
+    <latex-image>
+\begin{tikzpicture}[
+  scale=1.35,
+  >=Stealth,
+  arr/.style={->, line width=1.1pt},
+  lab/.style={font=\small}
+]
+\definecolor{c1}{RGB}{59,62,247}
+\definecolor{c2}{RGB}{255,51,61}
+\definecolor{c3}{RGB}{153,92,214}
+
+% triangle-ish placement
+\node (s1) at (0,1.9) {\textcolor{c1}{\Large 1}};
+\node (s2) at (-2.8,-0.2) {\textcolor{c2}{\Large 2}};
+\node (s3) at ( 2.8,-0.2) {\textcolor{c3}{\Large 3}};
+
+% loops
+\draw[arr,c1,looseness=10] (s1) to[out=110,in=70]
+  node[lab,above] {\textcolor{c1}{0}} (s1);
+
+\draw[arr,c2,looseness=9] (s2) to[out=230,in=160]
+  node[lab,left] {\textcolor{c2}{0.25}} (s2);
+
+\draw[arr,c3,looseness=9] (s3) to[out=-20,in=50]
+  node[lab,right] {\textcolor{c3}{0.25}} (s3);
+
+% inner arrows from 1 to 2 and 1 to 3 (NOW SOLID)
+\draw[arr,c1,bend right=18] (s1) to
+  node[lab,pos=0.55,left] {\textcolor{c1}{0.5}} (s2);
+
+\draw[arr,c1,bend left=18] (s1) to
+  node[lab,pos=0.55,right] {\textcolor{c1}{0.5}} (s3);
+
+% arrows back up into 1 (reverse concavity by swapping bend direction)
+\draw[arr,c2,bend right=32] (s2) to
+  node[lab,pos=0.55,above left] {\textcolor{c2}{0.25}} (s1);
+
+\draw[arr,c3,bend left=32] (s3) to
+  node[lab,pos=0.55,above right] {\textcolor{c3}{0.25}} (s1);
+
+% base: 2 -> 3 straight (red 0.5)
+\draw[arr,c2] (s2) -- node[lab,above] {\textcolor{c2}{0.5}} (s3);
+
+% big bottom arc: 3 -> 2 (purple 0.5)
+\draw[arr,c3,bend left=55] (s3) to
+  node[lab,pos=0.55,below] {\textcolor{c3}{0.5}} (s2);
+
+\end{tikzpicture}
+    </latex-image>
+  </image>
+</figure>
+
+<p>
+The transition matrix is therefore
+<me>
+P =
+\begin{bmatrix}
+  0   \amp  0.25 \amp  0.25 \\
+  0.5 \amp  0.25 \amp  0.5  \\
+  0.5 \amp  0.5  \amp  0.25
+\end{bmatrix}
+</me>.
+</p>
+
+<p>
+Suppose the weather is rainy (state 3) on day 0, so the initial state vector is
+<me>
+\vect{x}_0 =
+\begin{bmatrix}
+  0 \\ 0\\ 1
+\end{bmatrix}
+</me>.
+What are the weather probabilities on day 2? They are
+<me>
+\vect{x}_2 = P^2\vect{x}_0 =
+\begin{bmatrix}
+  0   \amp  0.25 \amp  0.25 \\
+  0.5 \amp  0.25 \amp  0.5  \\
+  0.5 \amp  0.5  \amp  0.25
+\end{bmatrix}
+^2
+\begin{bmatrix}
+  0 \\ 0\\ 1
+\end{bmatrix}
+=
+\begin{bmatrix}
+  0.1875 \\ 0.375\\ 0.4375
+\end{bmatrix}
+</me>.
+So on day 2 the probability of sunny weather is 0.1875, of cloudy weather is 0.375, 
+and of rainy weather is 0.4375. It is possible to calculate that in 7 days time
+<me>
+\vect{x}_7 = P^7\vect{x}_0 =
+\begin{bmatrix}
+  0.2000122070 \\ 0.4000244140\\ 0.3999633789
+\end{bmatrix}
+</me>
+and that in 15 days time
+<me>
+\vect{x}_{15} = P^{15}\vect{x}_0 =
+\begin{bmatrix}
+  0.2000000002 \\ 0.4000000003\\ 0.3999999994
+\end{bmatrix}
+</me>.
+It seems like <me>
+\vect{x}_k \to
+\begin{bmatrix}
+  0.2 \\ 0.4\\  0.4
+\end{bmatrix}
+</me>
+as <m>k\to \infty</m>. Let <m>\vect{x} =
+\begin{bmatrix}
+  0.2, 0.4, 0.4
+\end{bmatrix}
+</m>. We calculate
+<me>
+P\vect{x} =
+\begin{bmatrix}
+  0   \amp  0.25 \amp  0.25 \\
+  0.5 \amp  0.25 \amp  0.5  \\
+  0.5 \amp  0.5  \amp  0.25
+\end{bmatrix}
+\begin{bmatrix}
+  0.2 \\ 0.4\\ 0.4
+\end{bmatrix}
+=
+\begin{bmatrix}
+  0 + 0.1 + 0.1   \\
+  0.1 + 0.1 + 0.2 \\
+  0.1 + 0.2 + 0.1
+\end{bmatrix}
+=
+\begin{bmatrix}
+  0.2 \\ 0.4\\ 0.4
+\end{bmatrix}
+= \vect{x}
+</me>.
+
+Therefore <m>P\vect{x} = \vect{x}</m>, or in other words <m>\vect{x}</m> is 
+an eigenvector of <m>P</m> with eigenvalue <m>1</m>. It is an example of a 
+steady state probability vector, which we define next.
+</p>
+
+<definition xml:id="def-steady-state">
+<statement>
+<p>
+Let <m>P</m> be the transition matrix of a Markov chain. A 
+<term>steady state vector</term> (SSV) is a vector <m>\vect{x}</m> such 
+that <m>P\vect{x} = \vect{x}</m>, with entries which are non-negative and 
+sum to the total number of members in the Markov chain. A <term>steady 
+state probability vector</term> (SSPV) is a probability vector <m>\vect{x}</m> 
+such that <m>P\vect{x} = \vect{x}</m>.
+</p>
+</statement>
+</definition>
+
+<remark xml:id="rem-steady-ssv">
+<p>
+If <m>\vect{x}</m> is a SSV or SSPV, then <m>P\vect{x} = \vect{x}</m>. 
+Thus <m>P^2 \vect{x} = P(P\vect{x)} = P\vect{x} = \vect{x}</m>, and
+<me>
+P^3\vect{x} = P(P^2\vect{x}) = P\vect{x} = \vect{x},
+</me>
+and so on. Therefore <m>P^k\vect{x} = \vect{x}</m> for all integers <m>k\ge 1</m>.
+</p>
+</remark>
+
+<theorem xml:id="thm-">
+<statement>
+<p>
+If <m>P</m> is a transition matrix for a Markov chain, then <m>1</m> is an eigenvalue 
+of <m>P</m>.
+</p>
+</statement>
+</theorem>
+
+<p>
+This theorem is important because it means that there is a nonzero vector 
+<m>\vect{y}</m> such that <m>P\vect{y} = \vect{y}</m>. We can scale <m>\vect{y}</m> 
+to make it a SSV or SSPV.
+</p>
+
+<proof>
+  <p>
+Let <m>\vect{r} =
+\begin{bmatrix}
+  1 \amp  1 \amp  \dots \amp  1
+\end{bmatrix}
+</m> be the <m>1\times n</m> row matrix whose entries are all 1s. Then
+<md>
+<mrow>
+\vect{r}P \amp  =
+\begin{bmatrix}
+  1 \amp  1 \amp  \dots \amp  1
+\end{bmatrix}
+\begin{bmatrix}
+  p_{11} \amp  p_{12} \amp  \cdots \amp  p_{1n} \\
+  p_{21} \amp  p_{22} \amp  \cdots \amp  p_{2n} \\
+  \vdots \amp  \vdots \amp         \amp  \vdots \\
+  p_{n1} \amp  p_{n2} \amp  \cdots \amp  p_{nn}
+\end{bmatrix}
+\\
+\amp  =
+\begin{bmatrix}
+  p_{11} + p_{12} + \dots + p_{1n} \amp  \dots \amp  p_{n1} + p_{n2}+\dots +p_{nn}
+\end{bmatrix}
+\\
+\amp  =
+\begin{bmatrix}
+  1 \amp  1 \amp  \cdots \amp  1
+\end{bmatrix} \\
+\amp = \vect{r}
+</mrow>
+</md>.
+</p>
+
+<p>
+Here we used that <m>p_{i1} + p_{i2} + \dots + p_{in}</m>, the sum of the 
+<m>i</m>th column of <m>P</m>, is <m>1</m> since <m>P</m> is stochastic. 
+This shows that <m>\vect{r}P = \vect{r}</m>. Taking transposes gives that 
+<m>P^T\vect{r}^T = \vect{r}^T</m>, so <m>\vect{r}^T</m> is an eigenvector of 
+<m>P^T</m> with eigenvalue 1. Since <me>
+\det(P^T - \lambda I) = \det((P-\lambda I)^T) = \det(P-\lambda I),
+</me> the matrices <m>P</m> and <m>P^T</m> have the same characteristic polynomial, 
+and hence the same eigenvalues. This proves that there is an eigenvector of 
+<m>P</m> with eigenvalue 1.
+</p>
+</proof>
+
+<p>
+To find a SSV or SSPV, solve the equation <me>
+(P-I)\vect{x} = \vect{0}
+</me>. By the previous theorem, this matrix equation has a nonzero solution, 
+and therefore infinitely many solutions. By substituting the appropriate 
+value of the parameter, we can make the vector add up to the total number 
+of members in the Markov chain to get a SSV, or add up to 1 to get a SSPV.
+</p>
+
+<example xml:id="ex-grocery-SSV">
+<statement>
+<p>
+Consider the grocery store Markov chain from <xref ref="ex-markov"/> with 
+transition matrix and initial state vector
+<me>
+P =
+\begin{bmatrix}
+  0.9 \amp  0.3 \\ 0.1 \amp  0.7
+\end{bmatrix}
+, \qquad \vect{x}_0 = \colvec{100}{80}
+</me>.
+Find a steady state vector and a steady state probability vector.
+</p>
+<p>
+First we solve <m>(P-I)\vect{x} = \vect{0}</m> to get
+<me>
+\begin{amatrix}{c}
+  P-I \amp  0
+\end{amatrix}
+=
+\begin{amatrix}{cc}
+  -0.1 \amp  0.3 \amp  0\\
+  0.1 \amp  -0.3 \amp  0
+\end{amatrix}
+\xrightarrow{R_2 \mapsto R_2 + R_1} =
+\begin{amatrix}{cc}
+  -0.1 \amp  0.3 \amp  0\\ 0 \amp  0 \amp  0
+\end{amatrix}
+</me>.
+Let <m>y = t</m>, then <m>x = 3t</m>. So the solutions are given by the 1-eigenspace
+<me>
+E_1(P) = \left\{t\colvec{3}{1} \;\middle|\; t\in \R\right\}
+</me>.
+The total population is <m>100 + 80 = 180</m>, so a SSV is a vector in 
+<m>E_1(P)</m> with nonnegative entries that add up to 180. This means that 
+<m>3t + t = 180</m>, so <m>t = 180/4 = 45</m>. Substituting in <m>t=45</m> 
+gives that a SSV is <m>[135, 45]</m>. To find a SSPV, we solve for 
+<m>3t+t = 1</m>, so <m>t=1/4</m>. Therefore a SSPV is <m>[3/4, 1/4].</m>
+</p>
+
+</statement>
+</example>
+
 
 </section>

@@ -3,6 +3,260 @@
 <section xml:id="sec-linear-independence" xmlns:xi="http://www.w3.org/2001/XInclude">
   <title>Linear independence</title>
 
-  <p> Text of section. </p>
+ <definition xml:id="def-lin-ind">
+<statement>
+<p>
+Let <m>S = \{\vect{v}_1, \vect{v}_2, \dots, \vect{v}_k\}</m> be a set of 
+vectors in <m>\R^n</m>. The set <m>S</m> is <term>linearly independent</term> 
+if the only solution to the equation
+<me>
+c_1\vect{v}_1 + c_2\vect{v}_2 + \dots + c_k\vect{v}_k = \vect{0}
+</me>
+for <m>c_1, \dots, c_k \in \R</m> is
+<me>
+c_1 = c_2 = \cdots = c_k = 0
+</me>.
+The set <m>S</m> is <term>linearly dependent</term> if it is not 
+linearly independent.</p>
+</statement>
+</definition>
+
+<p>
+So a set <m>S = \{\vect{v}_1, \vect{v}_2, \dots, \vect{v}_k\}</m> is 
+linearly dependent if and only if there exists scalars 
+<m>c_1, c_2, \dots, c_k \in \R</m>, not all zero, such that
+<me>
+c_1\vect{v}_1 + c_2\vect{v}_2 + \dots + c_k\vect{v}_k = \vect{0}
+</me>.
+</p>
+
+<example xml:id="ex-lin-dep-basic">
+<statement>
+<p>
+Let <m>\vect{u} = [2, 1]</m>, <m>\vect{v} = [1, -1]</m>, and <m>\vect{w} = [1, 2]</m>. 
+Find <m>\vect{u} - \vect{v}</m>, and explain why the set 
+<m>\{\vect{u}, \vect{v}, \vect{w}\}</m> is linearly dependent.
+</p>
+<p>
+We have
+<me>
+\vect{u} - \vect{v} = [2, 1] - [1, -1] = [1, 2] = \vect{w},
+</me>
+so <m>\vect{u} - \vect{v} - \vect{w} = \vect{0}</m>. This is a linear combination 
+of <m>\vect{u}, \vect{v}, \vect{w}</m> equal to zero, where at least one (in fact all) 
+of the coefficients are nonzero. Therefore, the set 
+<m>\{\vect{u}, \vect{v}, \vect{w}\}</m> is linearly dependent.
+</p>
+</statement>
+</example>
+
+<example xml:id="ex-lin-ind-basic">
+<statement>
+<p>
+Show that the set <m>\{\vect{e}_1, \vect{e}_2\}</m> is linearly independent in 
+<m>\R^2</m>.
+</p>
+<p>
+Suppose <m>c_1\vect{e}_1 + c_2\vect{e}_2 = \vect{0}</m>. Then
+<me>
+c_1[1, 0] + c_2[0, 1] = [c_1, c_2] = \vect{0},
+</me>
+so <m>c_1 = 0</m> and <m>c_2 = 0</m>. Therefore 
+<m>\{\vect{e}_1, \vect{e}_2\}</m> is linearly independent.
+</p>
+</statement>
+</example>
+
+<p>
+The next theorem shows how linear independence abstracts the idea of vectors not 
+being parallel.
+</p>
+
+
+<theorem xml:id="thm-lindep">
+<statement>
+<p>
+A set of two vectors in <m>\R^n</m> is linearly independent if and only if 
+neither vector is a scalar multiple of the other.</p>
+<p>Equivalently, <m>\{\vect{v}_1, \vect{v}_2\} \subset \R^2</m> is 
+linearly dependent if and only if at least one of the vectors is a 
+scalar multiple of the other.
+</p>
+</statement>
+
+<proof>
+<p>
+Suppose that one of the vectors is a scalar multiple of the other; by 
+relabelling the vectors if necessary, we can assume that
+<me>
+\vect{v}_2 = c\vect{v}_1
+</me>
+for <m>c \in \R</m>. Then <m>c\vect{v}_1 - \vect{v}_2 = \vect{0}</m>. Since the 
+coefficient of <m>\vect{v}_2</m> is nonzero, the set <m>\{\vect{v}_1, \vect{v}_2\}</m> 
+is linearly dependent.
+</p>
+
+<p>
+Conversely, suppose that <m>\{\vect{v}_1, \vect{v}_2\}</m> is linearly dependent. 
+Then there exists <m>c_1, c_2 \in \R</m>, not both zero, such that
+<me>
+c_1\vect{v}_1 + c_2\vect{v}_2 = \vect{0}
+</me>.
+We can assume <m>c_1\ne 0</m>. Dividing by <m>c_1</m> gives 
+<m>\vect{v}_1 + \frac{c_2}{c_1}\vect{v}_2 = \vect{0}</m>, so
+<me>
+\vect{v}_1 = -\frac{c_2}{c_1}\vect{v}_2,
+</me>
+so <m>\vect{v}_1</m> is a scalar multiple of <m>\vect{v}_2</m>.
+</p>
+</proof>
+</theorem>
+
+<p>
+For <m>k</m> vectors, we have a similar result. However, to show linear 
+independence in this case it is not enough to check that none of the vectors 
+are parallel. We also need to check that none of the vectors can be written 
+as linear combination of the other vectors.
+</p>
+
+
+<theorem xml:id="thm-char-lin-ind">
+<statement>
+<p>
+A set of vectors <m>\{\vect{v}_1, \vect{v}_2, \dots, \vect{v}_k\}</m> in <m>\R^n</m> 
+is linearly independent if and only if none of the vectors in the set can be expressed 
+as a linear combination of the others.
+</p>
+</statement>
+</theorem>
+
+<p>
+The proof is very similar to that of <xref ref="thm-lindep"/>; there is not 
+much difference apart from replacing <m>\vect{v}_1, \vect{v}_2</m> with 
+<m>\vect{v}_1, \dots, \vect{v}_k</m>.
+</p>
+
+<p>
+We now come to the connection between linear independence and matrix inverses.
+</p>
+
+
+<theorem xml:id="thm-connection">
+<statement>
+<p>
+Let
+<me>
+A =
+\begin{bmatrix}
+  \vect{a}_1 \amp  \vect{a}_2 \amp  \cdots \amp  \vect{a}_n
+\end{bmatrix}
+</me>
+be an <m>n\times n</m> matrix with columns <m>\vect{a}_1</m>, <m>\vect{a}_2</m>, 
+<m>\dots, \vect{a}_n</m>. Then <m>A</m> is invertible if and only if the set 
+<m>\{\vect{a}_1</m>, <m>\vect{a}_2</m>, <m>\dots, \vect{a}_n\}</m> is linearly 
+independent.
+</p>
+</statement>
+
+<proof>
+<p>
+Let <m>\vect{x} \in \R^n</m> be arbitrary. Write 
+<m>\vect{x} = [c_1, c_2, \dots, c_n]</m> and <m>A = [a_{ij}]</m>. Then
+<md>
+<mrow>
+A\vect{x} \amp  =
+\begin{bmatrix}
+  a_{11} \amp  a_{12} \amp  \cdots \amp  a_{1n} \\
+  a_{21} \amp  a_{22} \amp  \cdots \amp  a_{2n} \\
+  \vdots \amp  \vdots \amp  \ddots \amp  \vdots \\
+  a_{n1} \amp  a_{n2} \amp  \cdots \amp  a_{nn}
+\end{bmatrix}
+\begin{bmatrix}
+  c_1 \\ c_2\\ \vdots\\ c_n
+\end{bmatrix}
+=
+\begin{bmatrix}
+  c_1 a_{11} + c_2a_{12} + \dots + c_na_{1n} \\
+  c_1 a_{21} + c_2a_{22} + \dots + c_na_{2n} \\
+  \vdots                                     \\
+  c_1 a_{n1} + c_2a_{n2} + \dots + c_na_{nn}
+\end{bmatrix}
+\\
+\amp  = c_1
+\begin{bmatrix}
+  a_{11} \\ a_{21}\\ \vdots\\ a_{n1}
+\end{bmatrix}
++ c_2
+\begin{bmatrix}
+  a_{12} \\ a_{22}\\ \vdots\\ a_{n2}
+\end{bmatrix}
++ \dots + c_n
+\begin{bmatrix}
+  a_{1n} \\ a_{2n}\\ \vdots\\ a_{nn}
+\end{bmatrix}
+\\
+\amp  = c_1\vect{a}_1 + c_2\vect{a}_2 + \dots + c_n\vect{a}_n
+</mrow>
+</md>.
+From <xref ref="thm-COI1"/>, <m>A</m> is invertible if and only if 
+<m>A\vect{x} = \vect{0}</m> has the unique solution <m>\vect{x} = \vect{0}</m>. 
+Using the previous calculation and that <m>\vect{x} = [c_1, c_2, \dots, c_n]</m>, 
+this shows that <m>A</m> is invertible if and only if
+<me>
+c_1\vect{a}_1 + c_2\vect{a}_2 + \dots + c_n\vect{a}_n = \vect{0}
+</me>
+has the unique solution <m>c_1 = c_2 = \dots = c_n = 0</m>, which is the 
+definition of <m>\{\vect{a}_1, \vect{a}_2, \dots, \vect{a}_n\}</m> being 
+linearly independent.
+</p>
+</proof>
+</theorem>
+
+<example xml:id="ex-lin-ind-matrix">
+<statement>
+<p>
+Consider the matrix <me>
+A =
+\begin{bmatrix}
+  1 \amp  1 \\
+  2 \amp  3
+\end{bmatrix}
+</me>
+Its columns <m>[1, 2]</m> and <m>[1, 3]</m> are not parallel and hence are linearly 
+independent, so <m>A</m> is invertible. This agrees with the calculation 
+that <m>\det(A) = 3 - 2 = 1 \ne 0</m>.
+</p>
+</statement>
+</example>
+
+<p>
+For larger matrices, it is not easy to tell whether all the columns are linearly 
+independent. But if they are linearly dependent, sometimes this is quick to spot, 
+which can allow us to quickly conclude that the matrix is not invertible.
+</p>
+
+
+<example xml:id="ex-lin-dep-matrix">
+<statement>
+<p>
+The matrix
+<me>
+A =
+\begin{bmatrix}
+  \vect{a}_1 \amp  \vect{a}_2 \amp  \vect{a}_3 \amp  \vect{a}_4
+\end{bmatrix}
+=
+\begin{bmatrix}
+  4 \amp  9 \amp  8 \amp  6 \\
+  1 \amp  8 \amp  2 \amp  2 \\
+  0 \amp  1 \amp  0 \amp  5 \\
+  4 \amp  2 \amp  8 \amp  3
+\end{bmatrix}
+</me>
+has <m>\vect{a}_3 = 2\vect{a}_1</m>, so its columns are linearly dependent. 
+Therefore <m>A</m> is not invertible.
+</p>
+</statement>
+</example>
 
 </section>

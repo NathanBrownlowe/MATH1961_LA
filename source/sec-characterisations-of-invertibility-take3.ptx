@@ -1,15 +1,14 @@
 <?xml version="1.0" encoding="UTF-8"?>
 
-<section xml:id="sec-characterisations-of-invertibility-take2" xmlns:xi="http://www.w3.org/2001/XInclude">
-  <title>Characterisations of invertibility (take 2!)</title>
+<section xml:id="sec-characterisations-of-invertibility-take3" xmlns:xi="http://www.w3.org/2001/XInclude">
+  <title>Characterisations of invertibility (take 3!)</title>
 
-  <p>
-    We are now in a position to add to <xref ref="thm-COI1"/> with numerous other characterisations of a matrix being invertible.
-    It is a good exercise to convince yourself why each new equivalence is true.
+  <p> Now that we've since determinants and eigenvalues, we can add a couple more characterisations of a matrix being 
+    invertible to get our final version of this theorem.
   </p>
 
-  <theorem xml:id="thm-COI2">
-<title>Characterisations of Invertibility (Part 2)</title>
+  <theorem xml:id="thm-COI3">
+<title>Characterisations of Invertibility (Part 3)</title>
 <statement>
 <p>
 Let <m>A</m> be an <m>n\times n</m> matrix. The following are equivalent:
@@ -85,33 +84,21 @@ Let <m>A</m> be an <m>n\times n</m> matrix. The following are equivalent:
   </p>
   </li>
 
+  <li>
+  <p> 
+    <m>\operatorname{det}(A)\not=0</m>.
+  </p>
+  </li>
+
+  <li>
+  <p> 
+    0 is not an eigenvalue of <m>A</m>.
+  </p>
+  </li>
+
 </ol>
 </p>
 </statement>
 </theorem>
 
-<p>
-  The above result implies something very handy about a basis for a vector space: to check whether a subset of <m>n</m>
-  vectors in <m>\R^n</m> is a basis for <m>\R^n</m>, you only need to check one of the spanning or linear 
-  independence properties; not both. We state this now.
-</p>
-
-<corollary xml:id="cor-one-check-for-basis">
-<statement>
-<p>
-If <m>S\subseteq \R^n</m> consists of <m>n</m> elements, then we have 
-<md>
-  S\text{ is linearly independent }\iff \lspan(S)=\R^n,
-</md>
-and hence we have 
-<md>
-  S\text{ is linearly independent }\implies S\text{ is a basis for }\R^n
-</md>
-and 
-<md>
-  \lspan(S)=\R^n\implies S\text{ is a basis for }\R^n.
-</md>
-</p>
-</statement>
-</corollary>
 </section>

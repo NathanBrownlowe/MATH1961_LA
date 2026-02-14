@@ -134,9 +134,21 @@ Here are some other examples of vector spaces. We will leave the proofs as an ex
   </p>
   </li>
   <li>
+    <p>
   We will later see that the set of <m>m\times n</m> with real entries is a vector space
   over <m>\mathbb R</m> under the usual operations of matrix addition and scalar
   multiplication.
+    </p>
+  </li>
+  <li>
+    <p>
+  Suppose <m>V=\{\vect{x}\in\R : \vect{x}>0\}</m>, and for <m>\vect{x},\vect{y}\in V</m>, <m>c\in \R</m>, define additions
+  and scalar multiplication by 
+  <md>
+    \vect{x}+\vect{y}:=\vect{x}\vect{y}\text{ and }c\vect{x}:=\vect{x}^c.
+  </md>
+  Is <m>V</m> under these operations a vector space?
+    </p>
   </li>
 </ul>
 </p>

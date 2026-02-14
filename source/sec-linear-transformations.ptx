@@ -1,0 +1,169 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<section xml:id="sec-linear-transformations" xmlns:xi="http://www.w3.org/2001/XInclude">
+  <title>Linear transformations</title>
+
+  <definition xml:id="def-linear-transformation">
+<statement>
+<p>
+A <term>linear transformation</term> (or <term>linear map</term>) is a function <m>T\colon\R^n\to \R^m</m> satisfying
+<ol>
+
+  <li>
+  <p> 
+  <m>T(\vect{u}+\vect{v})=T(\vect{u})+T(\vect{v})</m> for all 
+  <m>\vect{u},\vect{v}\in\R^n</m>, and
+  </p>
+  </li>
+  
+  <li>
+  <p> 
+  <m>T(c\vect{u})=cT(\vect{u})</m> for all <m>\vect{u}\in\R^n,\, c\in\R</m>.
+  </p>
+  </li>
+  
+</ol>
+</p>
+</statement>
+</definition>
+
+<p>
+  Conditions 1 and 2 above ensure that a linear transformation 'preserves the vector space structure', in the sense that the
+  image of the sum of vectors is the sum of the images, and the image of a scalar multiple is the scalar multiple of the image.
+</p>
+
+<example xml:id="ex-linear-trans-non-eg">
+<statement>
+<p>
+The map <m>T\colon\R^2\to\R^2</m> given by 
+<md>
+T([x,y])=[x^2,y]
+</md>
+is not linear because, for instance, we have 
+<md>
+T(2[1,1])=T([2,2])=[4,2]
+</md>
+and
+<md>
+2T([1,2])=2[1,1]=[2,2].
+</md>
+</p>
+</statement>
+</example>
+
+<example xml:id="ex-tpical-lin-trans">
+<statement>
+<p>
+Show that <m>T\colon\R^3\to\R^2</m> given by 
+<md>
+T\left(\begin{bmatrix}x\\y\\z\end{bmatrix}\right) = \begin{bmatrix}4x+y\\y-z\end{bmatrix}
+</md>
+is linear. 
+</p>
+We have
+<md>
+<mrow>
+T\left(\begin{bmatrix}x_1\\y_1\\z_1\end{bmatrix}+
+\begin{bmatrix}x_2\\y_2\\z_2\end{bmatrix}\right) 
+\amp= T\left(\begin{bmatrix}x_1+x_2\\y_1+y_2\\z_1+z_2\end{bmatrix}\right) \\
+\amp= \begin{bmatrix}4(x_1+x_2)+(y_1+y_2)\\(y_1+y_2)-((z_1+z_2)\right) \\
+\amp= \begin{bmatrix}(4x_1+y_1)+(4x_2+y_2)\\(y_1-z_1)+((y_2-z_2)\right) \\
+\amp= \begin{bmatrix}4x_1+y_1\\y_1-z_1\end{bmatrix}+\begin{bmatrix}4x_2+y_2\\y_2-z_2\end{bmatrix}\\
+\amp= T\left(\begin{bmatrix}x_1\\y_1\\z_1\end{bmatrix}\right)
++T\left(\begin{bmatrix}x_2\\y_2\\z_2\end{bmatrix}\right)
+</mrow>
+</md>
+We leave it as an exercise to prove that <m>T(c[x,y,z])=cT([x,y,z])</m>, hence showing that
+<m>T</m> is linear. 
+</statement>
+</example>
+
+<example xml:id="ex-left-mult-by-matrix-is-linear">
+<statement>
+<p>
+Let <m>A</m> be <m>m\times n</m>, and let <m>T\colon\R^n\to\R^m</m> be given by
+<md>
+T(\vect{u})=A\vect{u}.
+</md>
+Then we have
+<md>
+T(\vect{u}+\vect{v})=A(\vect{u}+\vect{v})=A\vect{u}+A\vect{v}=T(\vect{u})+T(\vect{v})
+</md>
+and
+<md>
+T(c\vect{u})=A(c\vect{u})=cA\vect{u}=cT(\vect{u}),
+</md>
+and hence <m>T</m> is linear.
+</p>
+</statement>
+</example>
+
+<p>
+The previous example says that left multiplication by a matrix is a linear transformation.
+The next theorem says that this is the <em>only</em> type of linear transformation.
+</p>
+
+<theorem xml:id="thm-all-linear-trans-are-matrices">
+<statement>
+<p>
+Let <m>T\colon \R^n\to\R^m</m> be linear. Then the <m>m\times n</m> matrix 
+<md>
+A_T:=\begin{bmatrix}T(\vect{e}_1) \amp \cdots \amp T(\vect{e}_n)\end{bmatrix}
+</md>
+satisfies <m>T(\vect{u})=A_T\vect{u}</m> for all <m>\vect{u}\in\R^n</m>.
+</p>
+</statement>
+
+<proof>
+<p>
+We have
+<md>
+<mrow>
+T(\mathbf{u}) \amp = T(u_1\vect{e}_1+\cdots+u_n\vect{e}_n)  \\
+\amp = u_1T(\vect{e}_1)+\cdots + u_nT(\vect{e}_n) \\
+\amp = A_T\begin{bmatrix}u_1\\\vdots\\u_n\end{bmatrix} \\
+\amp = A_T\vect{u}.
+</mrow>
+</md>
+</p>
+</proof>
+</theorem>
+
+<example xml:id="ex-checking-main-lt-thm">
+<statement>
+<p>
+We illustrate this result with <xref ref="ex-linear-trans-non-eg"/>. We have 
+<md>
+T\left(\begin{bmatrix}1\\0\\0\end{bmatrix}\right)=\begin{bmatrix}4\\0\end{bmatrix},\, 
+T\left(\begin{bmatrix}0\\1\\0\end{bmatrix}\right)=\begin{bmatrix}1\\1\end{bmatrix},\,
+T\left(\begin{bmatrix}0\\0\\1\end{bmatrix}\right)=\begin{bmatrix}0\\-1\end{bmatrix}.
+</md> 
+So <m>A_T=\begin{bmatrix}4\amp 1\amp 0\\0\amp 1\amp -1\end{bmatrix}</m>. We now check:
+<md>
+A_T\begin{bmatrix}x\\y\\z\end{bmatrix}=\begin{bmatrix}4\amp 1\amp 0\\0\amp 1\amp -1\end{bmatrix}
+\begin{bmatrix}x\\y\\z\end{bmatrix}=\begin{bmatrix}4x+y\\y-z\end{bmatrix}=
+T\left(\begin{bmatrix}x\\y\\z\end{bmatrix}\right).
+</md>
+</p>
+</statement>
+</example>
+
+<p>
+In <xref ref="rmk-mult"/> we discussed how matrix multiplication is defined in a 
+complicated way because it is meant to model composition of functions. We can now be more 
+precise about this. We leave the proof as an exercise. 
+</p>
+
+<theorem xml:id="thm-martix-mult-is-composition">
+<statement>
+<p>
+If <m>T\colon\R^n\to\R^m</m> and <m>S\colon\R^m\to \R^k</m> and linear transformations, then
+the composition <m>S\circ T\colon\R^n\to\R^k</m> is linear, and we have
+<md>
+A_{S\circ T}=A_SA_T.
+</md>
+</p>
+</statement>
+</theorem>	
+
+</section>

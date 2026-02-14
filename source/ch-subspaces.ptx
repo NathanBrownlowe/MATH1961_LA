@@ -4,12 +4,16 @@
   <title>Subspaces</title>
 
   <introduction>
-    <p> Text before the first section. </p>
+    <p>
+  Once we define a mathematical structure that we're interested in, it is common to look for sub-objects that inherit the 
+  same structure. When we work with vector spaces, we are interested in smaller subsets that are themselves vector spaces under the 
+  same addition and vector space operations. In this chapter we look at subspaces of <m>\R^n</m>, and then examine how we 
+  can naturally associate a number of subspaces to a matrix. 
+    </p>
   </introduction>
 
   <!-- include sections -->
   <xi:include href="sec-subspaces.ptx" />
   <xi:include href="sec-row-and-column-spaces.ptx" />
-  <xi:include href="sec-null-spaces.ptx" />
 
 </chapter>

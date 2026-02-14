@@ -4,12 +4,13 @@
   <title>Bases, Dimension, and the Rank-Nullity Theorem</title>
 
   <introduction>
-    <p> Text before the first section. </p>
+    We now put together the ideas of span and linear independence to define one of the most important notions in linear algebra.
+    We then present one of the most fundamental theorems in the subject. 
   </introduction>
 
   <!-- include sections -->
   <xi:include href="sec-bases.ptx" />
-  <xi:include href="sec-dimension.ptx" />
   <xi:include href="sec-rank-nullity-theorem.ptx" />
+  <xi:include href="sec-characterisations-of-invertibility-take2.ptx" />
 
 </chapter>

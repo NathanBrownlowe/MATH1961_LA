@@ -185,6 +185,18 @@ for <m>\vect{x} \in \R^n</m>, which can be solved by Gaussian elimination.
 </p>
 </assemblage>
 
+<remark xml:id="rem-complex-evalues">
+<statement>
+<p>
+By expanding the determinant, we see that the 
+characteristic polynomial is a polynomial of degree <m>n</m> when <m>A</m> has size <m>n\times n</m>. 
+Therefore it has a root by the Fundamental Theorem of Algebra, and it has <m>n</m> roots if counted with 
+multiplicity. However, the roots may be in <m>\C</m>. So even for a matrix with real entries, its 
+eigenvalues may all be in <m>\C \setminus \R</m>. For simplicity, we will focus on examples where 
+all the roots of the characteristic polynomial are real.
+</p>
+</statement>
+</remark>
 <!--
 {\footnotesize <term>Technical comment:</term> By expanding the determinant, we see that the 
 characteristic polynomial is a polynomial of degree <m>n</m> when <m>A</m> has size <m>n\times n</m>. 

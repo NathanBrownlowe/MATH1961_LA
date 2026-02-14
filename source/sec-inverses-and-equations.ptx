@@ -3,9 +3,55 @@
 <section xml:id="sec-inverses-and-equations" xmlns:xi="http://www.w3.org/2001/XInclude">
   <title>Inverses and matrix equations</title>
 
+  <p>
+    Before we talk about using matrix inverses to solve equations, we want to emphasise that we now have three equivalent
+    ways of writing down a system of linear equations: using the equations, using vectors, and using a matrix/vectors. 
+  </p>
+
+<assemblage xml:id="equiv-systems-descriptions">
+<p>
+<ol>
+  <li>
+  <p> <term>Equations:</term> 
+<md>
+<mrow>
+a_{11}x_1 + a_{12}x_2 + \amp  \dots + a_{1n}x_n = b_1 \\
+a_{21}x_1 + a_{22}x_2 + \amp  \dots + a_{2n}x_n = b_2 \\
+\vdots                  \amp                          \\
+a_{m1}x_1 + a_{m2}x_2 + \amp  \dots + a_{mn}x_n = b_m
+</mrow>
+</md>
+  </p>
+  </li>
+  <li>
+  <p> <term>Vectors:</term>
+    <md>
+      x_1\begin{bmatrix} a_{11} \\ \vdots \\ a_{m1}\end{bmatrix}+\cdots +x_n\begin{bmatrix} a_{1n} \\ \vdots \\ a_{mn}\end{bmatrix}
+      = \begin{bmatrix} b_{1} \\ \vdots \\ b_{m}\end{bmatrix}
+    </md>
+  </p>
+  </li>
+    <li>
+  <p> 
+    <term>Matrix/vectors:</term>
+    <md>
+      \begin{bmatrix} a_{11} \amp \cdots \amp a_{1n}\\
+      \vdots \amp \ddots \amp \vdots \\
+      a_{m1} \amp \cdots \amp a_{mn}
+      \end{bmatrix}
+      \begin{bmatrix}x_1 \\ \vdots \\ x_n\end{bmatrix}
+      =
+      \begin{bmatrix}b_1 \\ \vdots \\ b_m\end{bmatrix}
+    </md>
+  </p>
+  </li>
+</ol>
+</p>
+</assemblage>
+
 <p>
 Let <m>a, b, x \in \R</m>, and consider the linear equation <m>ax =b</m>. If <m>a</m> is invertible 
-(so if <m>a\ne 0</m>), then the equation has a unique solution given by <m>x = a\inv b</m>. 
+(so if <m>a\ne 0</m>), then the equation has a unique solution given by <m>x = a^{-1} b</m>. 
 If <m>a = 0</m>, the equation becomes <m>0x = b</m>. This has infinitely many solutions if <m>b = 0</m>, 
 and no solutions if <m>b\ne 0</m>.</p>
 <p>Now let <m>A</m> be an <m>n\times n</m> matrix, let 
@@ -37,17 +83,17 @@ A = [a_{ij}], \qquad \vect{x} =
 <statement>
 <p>
 If <m>A</m> is an invertible <m>n\times n</m> matrix, then the equation 
-<m>A\vect{x} = \vect{b}</m> has unique solution <m>\vect{x} = A\inv\vect{b}</m>.
+<m>A\vect{x} = \vect{b}</m> has unique solution <m>\vect{x} = A^{-1}\vect{b}</m>.
 </p>
 </statement>
 <proof>
-<m>\vect{x} = A\inv\vect{b}</m> is a solution because
+<m>\vect{x} = A^{-1}\vect{b}</m> is a solution because
 <me>
-A\vect{x} = A(A\inv \vect{b}) = AA\inv \vect{b} = I\vect{b} = \vect{b}
+A\vect{x} = A(A^{-1} \vect{b}) = AA^{-1} \vect{b} = I\vect{b} = \vect{b}
 </me>.
 It is unique, because if <m>A\vect{y} = \vect{b}</m> for another solution <m>\vect{y}</m>, then
 <me>
-\vect{y} = I\vect{y} = (A\inv A)\vect{y} = A\inv (A\vect{y}) = A\inv \vect{b} = \vect{x}.
+\vect{y} = I\vect{y} = (A^{-1} A)\vect{y} = A^{-1} (A\vect{y}) = A^{-1} \vect{b} = \vect{x}.
 </me>
 </proof>
 </theorem>
@@ -95,7 +141,7 @@ A =
 </me>
 where <m>A</m> is the same matrix that we calculated the inverse of in <xref ref="ex-inv3"/>. So
 <me>
-\vect{x} = A\inv \vect{b} =
+\vect{x} = A^{-1} \vect{b} =
 \begin{bmatrix}
   9  \amp  -\frac{3}{2} \amp  -5 \\
   -5 \amp  1            \amp  3  \\
@@ -116,8 +162,8 @@ We conclude that there is a unique solution <m>x = 22</m>, <m>y = -12</m>, <m>z 
 
 <p>This method might seem efficient, but it relies on computing a matrix inverse, which 
 for matrices larger than <m>2\times 2</m> can take some time to compute. However, it does 
-have the advantage that if we change the value of <m>\vect{b}</m>, the inverse <m>A\inv</m> 
-will still be the same, so we can quickly re-calculate <m>\vect{x} = A\inv \vect{b}</m>.
+have the advantage that if we change the value of <m>\vect{b}</m>, the inverse <m>A^{-1}</m> 
+will still be the same, so we can quickly re-calculate <m>\vect{x} = A^{-1} \vect{b}</m>.
 </p>
 
 </section>

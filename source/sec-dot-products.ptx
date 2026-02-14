@@ -3,7 +3,7 @@
 <section xml:id="sec-dot-products" xmlns:xi="http://www.w3.org/2001/XInclude">
   <title>Dot products</title>
 
-<definition xml:id="">
+<definition xml:id="def-dot-product">
 <statement>
 <p>The <term>dot product</term> of the vectors <m>\vect{u} = [u_1, u_2, \dots, u_n]</m> and 
 <m>\vect{v} = [v_1, v_2, \dots, v_n] \in \R^n</m> is the scalar
@@ -161,5 +161,7 @@ inequality.
 </latex-image>
 </image>
 </figure>
+
+
 
 </section>

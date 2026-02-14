@@ -28,13 +28,15 @@
 
     <xi:include href="./ch-matrix-inverses.ptx" />
 
-    <xi:include href="./ch-determinants.ptx" />
-
     <xi:include href="./ch-span-and-li.ptx" />
 
     <xi:include href="./ch-subspaces.ptx" />
 
     <xi:include href="./ch-basis-dim-ranknullity.ptx" />
+
+    <xi:include href="./ch-linear-transformations.ptx" />
+
+    <xi:include href="./ch-determinants.ptx" />
 
     <xi:include href="./ch-eigenvectors.ptx" />
 

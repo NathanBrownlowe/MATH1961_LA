@@ -3,6 +3,119 @@
 <section xml:id="sec-characterisations-of-invertibility" xmlns:xi="http://www.w3.org/2001/XInclude">
   <title>Characterisations of invertibility</title>
 
-  <p> Text of section. </p>
+ <p>
+We will now present a major theorem in the subject which gives a number of characterisations
+of when a matrix is invertible. We will build on this theorem a couple of more times later
+in the unit. We will sketch out a proof below.
+</p>
+
+<theorem xml:id="thm-COI1">
+<title>Characterisations of Invertibility (Part 1)</title>
+<statement>
+<p>
+Let <m>A</m> be an <m>n\times n</m> matrix. The following are equivalent:
+<ol>
+  <li>
+  <p> <m>A</m> is invertible.
+  </p>
+  </li>
+  <li>
+  <p> <m>A\vect{x}=\vect{b}</m> has a unique solution for all 
+  <m>\vect{x},\vect{b}\in\R^n</m>.
+  </p>
+  </li>
+    <li>
+  <p> If <m>\vect{x}\in\R^n</m> with <m>A\vect{x}=\vect{0}</m>, 
+  then <m>\vect{x}=\vect{0}</m>.
+  </p>
+  </li>
+    <li>
+  <p> The RREF of <m>A</m> is <m>I_n</m>.
+  </p>
+  </li>
+    <li>
+  <p> <m>A</m> is a product of elementary matrices. 
+  </p>
+  </li>
+</ol>
+</p>
+</statement>
+
+<proof>
+<p>
+We prove <m>1\implies 2\implies 3\implies 4\implies 5\implies 1</m>.
+</p>
+
+<p>
+Assume 1. If <m>A</m> is invertible, then 
+<md>
+A\vect{x}=\vect{b}\implies A^{-1}A\vect{x}=A^{-1}\vect{b}\implies \vect{x}=A^{-1}\vect{b},
+</md>
+and we see that the equation <m>A\vect{x}=\vect{b}</m> has a unique solution (namely,
+<m>\vect{x}=A^{-1}\vect{b}</m>).
+</p>
+
+<p>
+Assume 2. We know that <m>A\vect{0}=\vect{0}</m>, and so <m>\vect{x}=\vect{0}</m> is a 
+solution to <m>A\vect{x}=\vect{0}</m>. Since we are assuming that <m>A\vect{x}=\vect{0}</m>
+has a unique solution, then we must have <m>\vect{x}=\vect{0}</m>.
+</p>
+
+<p>
+Assume 3. Then reducing <m>\begin{amatrix}{c} A \amp \vect{0}\end{amatrix}</m> to RREF
+must give <m>\begin{amatrix}{c} I_n \amp \vect{0}\end{amatrix}</m>. This implies that
+the RREF of <m>A</m> is <m>I_n</m>.
+</p>
+
+<p>
+Assume 4. If <m>A</m> reduces to <m>I_n</m>, then we know by <xref ref="thm-elem-matrices-and-multiplication"/> 
+that this 
+means there are elementary matrices <m>E_1,\dots,E_k</m> with <m>E_k\cdots E_1A=I_n</m>.
+Hence <m>A=E_1^{-1}\cdots E_k^{-1}</m> is a product of elementary matrices.
+</p>
+
+<p>
+Assume 5. If <m>A=E_1\cdots E_m</m> for elementary matrices <m>E_1,\dots,E_m</m>, then since 
+each <m>E_i</m> is invertile, we know that <m>A</m> is invertible (since the product
+of invertible matrices is invertible).
+</p>
+
+</proof>
+</theorem>
+
+<p>
+We know from definition that a matrix <m>A</m> is invertible if there is a matrix <m>B</m>
+such that <m>AB=I</m> and <m>BA=I</m>. The following Corollary is handy to know, 
+because it means we only have to check one of these identities. 
+</p>
+
+<corollary xml:id="cor-one-identity-for-invertible">
+<statement>
+<p>
+Let <m>A</m> be <m>n\times n</m>. If there is a matrix <m>B</m> such that <m>AB=I_n</m>
+or <m>BA=I_n</m>, then <m>A</m> is invertible with <m>A^{-1}=B</m>.
+</p>
+</statement>
+
+<proof>
+<p>
+Suppose <m>BA=I_n</m>. Then if <m>A\vect{x}=\vect{0}</m> we have
+<md>
+BA\vect{x}=B\vect{0}=\vect{0}\implies I_n\vect{x}=\vect{0}\implies \vect{x}=\vect{0}.
+</md>
+Hence by statement 3 of <xref ref="thm-COI1"/> we see that <m>A</m> is invertible. We now 
+have 
+<md>
+BA=I_n\implies BAA^{-1}=I_nA^{-1}\implies B=A^{-1}.
+</md>
+</p>
+
+<p>
+We leave the other implication as an exercise. (Hint: use the implication we just proved plus 
+transposes!)
+</p>
+
+</proof>
+</corollary>
 
 </section>

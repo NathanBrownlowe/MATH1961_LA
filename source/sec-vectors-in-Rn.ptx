@@ -92,7 +92,7 @@
   </p>
   </remark>
   
-  <example xml:id="">
+  <example xml:id="ex-basic-vec-algebra">
   <statement>
   <p>
   In <m>\R^5</m>, let <m>\vect{a} = [1, 0, 2, 3, 1]</m> and <m>\vect{b} = [2, 1, 0, 1, 4]</m>. Then
@@ -280,10 +280,10 @@
   \end{aligned}
   </me>
   so <m>c_1 = -2, c_2 = \frac{1}{4}(2-c_1) = 1</m>. Thus <m>\vect{u} = -2\vect{v} + \vect{w}</m>. 
-  See <xref ref="fig-lincomb_ex"/>.
+  See <xref ref="fig-lincomb-ex"/>.
   </p>
 
-  <figure xml:id="fig-lincomb_ex">
+  <figure xml:id="fig-lincomb-ex">
   <caption>From <xref ref="ex-lincomb"/>, showing <m>\vect{u} = -2\vect{v} + \vect{w}</m></caption>
   <image width="60%">
 <latex-image>
@@ -338,11 +338,11 @@
   <p>
   Adding these equations gives <m>4=0</m>, which is a contradiction. Therefore <m>\vect{u}</m> cannot be 
   written as a linear combination of <m>\vect{v}</m> and <m>\vect{x}</m>. This is also shown 
-  in <xref ref="fig-lincomb_nonex"/>: since <m>\vect{u}</m> does not lie on the dashed line, it 
+  in <xref ref="fig-lincomb-nonex"/>: since <m>\vect{u}</m> does not lie on the dashed line, it 
   cannot be a linear combination of <m>\vect{v}</m> and <m>\vect{x}</m>.
   </p>
 
-  <figure xml:id="fig-lincomb_nonex">
+  <figure xml:id="fig-lincomb-nonex">
   <caption>All linear combinations of <m>\vect{v}</m> and <m>\vect{x}</m> lie on the dashed line</caption>
   <image width="60%">
 <latex-image>

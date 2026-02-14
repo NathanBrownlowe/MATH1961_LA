@@ -1,8 +1,175 @@
 <?xml version="1.0" encoding="UTF-8"?>
 
 <section xml:id="sec-bases" xmlns:xi="http://www.w3.org/2001/XInclude">
-  <title>Bases</title>
+  <title>Bases and dimension</title>
 
-  <p> Text of section. </p>
+ <definition xml:id="def-basis">
+<statement>
+<p>
+A <term>basis</term> for <m>\R^n</m> is a set of vectors 
+<m>\mathcal{B}=\{\vect{v}_1,\dots,\vect{v}_k\}\subseteq \R^n</m> such that 
+<ul>
+
+  <li>
+  <p> 
+  <m>\lspan(\mathcal{B})=\R^n</m>, and
+  </p>
+  </li>
+  
+  <li>
+  <p> 
+  <m>\mathcal{B}</m> is linearly independent. 
+  </p>
+  </li>
+  
+</ul>
+
+</p>
+</statement>
+</definition>
+
+<remark xml:id="rem-basis-for-gen-vec-space">
+<statement>
+<p>
+Note that the same definition holds in general: a basis for a vector space <m>V</m> 
+is a subset of <m>V</m> that spans <m>V</m> and is linearly independent. 
+</p>
+</statement>
+</remark>
+
+<example xml:id="ex-standard-basis-is-basis">
+<statement>
+<p>
+The standard basis <m>\{\vect{e}_1,\dots,\vect{e}_n\}</m> is a basis for <m>\R^n</m>.
+</p>
+</statement>
+</example>
+
+<example xml:id="ex-finding-a-basis">
+<statement>
+<p>
+Find a basis for 
+<md>
+\lspan\left(\begin{bmatrix}1\\2\\3\end{bmatrix}, \begin{bmatrix}-2\\0\\4\end{bmatrix},
+\begin{bmatrix}0\\4\\10\end{bmatrix}\right).
+</md>
+</p>
+<p>
+We need to check for linear independence. We have
+<md>
+<mrow>
+\begin{amatrix}{ccc}1\amp -2\amp 0\amp 0\\2\amp 0\amp 4\amp 0\\3\amp 4\amp 10\amp 0\end{amatrix}
+\amp\xrightarrow[R_3\to R_3-3R_1]{R_2\to R_2-2R_1}
+\begin{amatrix}{ccc}1\amp -2\amp 0\amp 0\\0\amp 4\amp 4\amp 0\\0\amp 10\amp 10\amp 0\end{amatrix}\\
+\amp\xrightarrow{R_3\to R_3-\frac{10}{4}R_2}
+\begin{amatrix}{ccc}1\amp -2\amp 0\amp 0\\0\amp 4\amp 4\amp 0\\0\amp 0\amp 0\amp 0\end{amatrix}
+</mrow>
+</md>.
+Let <m>z=t</m>, <m>t\in\R</m>. Then
+<md>
+4y+4z=0\implies 4y+4t=0\implies y=-t,
+</md>
+and
+<md>
+x-2y=0\implies x+2t=0\implies x=-2t.
+</md>
+</p>
+<p>
+Since there are infinite solutions here, we know the vectors are not linearly independent. 
+In particular, if we take <m>t=1</m>, then we get solution <m>x=-2,y=-1,z=1</m>, and so
+<md>
+-2\begin{bmatrix}1\\2\\3\end{bmatrix}-\begin{bmatrix}-2\\0\\4\end{bmatrix}
++\begin{bmatrix}0\\4\\10\end{bmatrix}=\begin{bmatrix}0\\0\\0\end{bmatrix},
+</md>
+or
+<md>
+\begin{bmatrix}0\\4\\10\end{bmatrix}=2\begin{bmatrix}1\\2\\3\end{bmatrix}
++\begin{bmatrix}-2\\0\\4\end{bmatrix}.
+</md>
+This means that <m>\begin{bmatrix}0\\4\\10\end{bmatrix}</m> is in the span of the other two vectors,
+and hence we have 
+<md>
+\lspan\left(\begin{bmatrix}1\\2\\3\end{bmatrix}, \begin{bmatrix}-2\\0\\4\end{bmatrix},
+\begin{bmatrix}0\\4\\10\end{bmatrix}\right)=\lspan\left(\begin{bmatrix}1\\2\\3\end{bmatrix}, 
+\begin{bmatrix}-2\\0\\4\end{bmatrix}\right).
+</md>
+Since <m>\begin{bmatrix}1\\2\\3\end{bmatrix}</m> and <m>\begin{bmatrix}-2\\0\\4\end{bmatrix}</m>
+are linearly independent, they form a basis for the original span.
+</p>
+</statement>
+</example>
+
+<remark xml:id="rem-comments-on-span-example">
+<statement>
+<p>
+<ol>
+
+  <li>
+  <p> 
+  In the above example we threw away the vector <m>\begin{bmatrix}0\\4\\10\end{bmatrix}</m>
+  from the span as it was not needed. In that example we could have thrown away any of the
+  vectors (why?), but this is not always the case. For example, we have
+  <md>
+<mrow>
+\lspan\left(\begin{bmatrix}-1\\2\end{bmatrix},\begin{bmatrix}3\\5\end{bmatrix},
+\begin{bmatrix}6\\10\end{bmatrix}\right) \amp = 
+\lspan\left(\begin{bmatrix}-1\\2\end{bmatrix},\begin{bmatrix}3\\5\end{bmatrix}\right)\\
+\amp \not= \lspan\left(\begin{bmatrix}3\\5\end{bmatrix},\begin{bmatrix}6\\10\end{bmatrix}\right).
+</mrow>
+</md>
+  </p>
+  </li>
+  
+  <li>
+  <p> 
+  The working in the previous example was fairly detailed. In <xref ref="sec-rank-nullity-theorem"/> 
+  we will see 
+  a more streamlined (and much easier) way of dealing with such an example.
+  </p>
+  </li>
+  
+</ol>
+</p>
+</statement>
+</remark>
+
+
+<theorem xml:id="thm-basis-theorem">
+<title>(Basis Theorem)</title>
+<statement>
+<p>
+Any two bases of a vector space have the same number of elements.
+</p>
+</statement>
+</theorem>
+
+<p>
+The proof of the Basis Theorem is within the scope of the unit, but it is very fiddly, so we
+will leave it as an exercise (to at least look up and understand if you are keen). But note 
+what it means: the number of elements in a basis is a unique number we can associate 
+to a vector space. So let's give this number a name!
+</p>
+
+<definition xml:id="def-dimension">
+<statement>
+<p>
+The <term>dimension</term> of a vector space <m>V</m>, denoted <m>\operatorname{dim}(V)</m>, 
+is the number of elements in a basis for <m>V</m>.
+</p>
+</statement>
+</definition>
+
+<example xml:id="ex-dim-of-Rn">
+<statement>
+<p>
+So what is the dimension of <m>\R^n</m>? 
+</p>
+<p>
+  Since we know that 
+the standard basis <m>\{\vect{e}_1,\dots,\vect{e}_n\}</m> is a basis for <m>\R^n</m>, we have
+<m>\operatorname{dim}(\R^n)=n</m>. This matches our expectation: <m>\R^3</m> is 3-dimensional!
+</p>
+</statement>
+</example>
 
 </section>

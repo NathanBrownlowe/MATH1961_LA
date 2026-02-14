@@ -27,7 +27,22 @@ parallelogram inscribed by <m>\vect{u}</m> and <m>\vect{v}</m>, and
 
 <figure xml:id="fig-cross_area">
 <caption>The area of this parallelogram is <m>\|\vect{u}\times \vect{v}\|</m>, which is twice the area of the triangles.</caption>
-<!--cross_area.tikz-->
+<image width="60%">
+<latex-image>
+\begin{tikzpicture}[scale=0.53]
+\draw [very thick, -\gt] (0, 0) -- (6, 1);
+\draw (3, 0.5) node [below] {$\vect{v}$};
+\draw [thick] (6, 1) -- (7, 6);
+\draw (6.5, 3.5);
+\draw [very thick, -\gt] (0, 0) -- (1, 5) node [midway, left] {$\vect{u}$};
+\draw [thick] (1, 5) -- (7, 6);
+\draw [thick] (1, 5) -- (6, 1);
+\draw [fill=blue!20,opacity=0.5] (0, 0) -- (1, 5) -- (7, 6) -- (6, 1) -- cycle;
+\draw [thick, scale = 3] (2.4mm,0.2mm) arc [start angle=0, end angle=69, radius=3mm];
+\draw (0.4, 0.4) node [anchor = south west] {$\theta$};
+\end{tikzpicture}
+</latex-image>
+</image>
 </figure>
 
 <example xml:id="ex-area-of-triangle">
@@ -67,8 +82,56 @@ The term <m>\vect{u}\cdot(\vect{v}\times\vect{w})</m> is called the <term>scalar
 </remark>
 
 <figure xml:id="fig-parallelopiped">
-<caption>The normal form of a line</caption>
-<!--parallelopiped.tikz-->
+<caption>A parallelopiped inscribed by three vectors</caption>
+<image width="60%">
+<latex-image>
+\begin{tikzpicture}[
+  x=1cm,y=1cm,
+  line cap=round,
+  line join=round,
+  >=Stealth,
+  vec/.style={->, line width=1.2pt},
+  frame/.style={dashed, line width=0.9pt}
+]
+  % --- choose vectors (2D projection of a 3D picture) ---
+  \coordinate (O) at (0,0);
+  \coordinate (U) at (4.2,0.2);
+  \coordinate (V) at (1.1,2.6);
+  \coordinate (W) at (1.8,1.4);
+
+  % --- key vertices of the parallelepiped ---
+  \coordinate (UV)  at ($(U)+(V)$);
+  \coordinate (UW)  at ($(U)+(W)$);
+  \coordinate (VW)  at ($(V)+(W)$);
+  \coordinate (UVW) at ($(U)+(V)+(W)$);
+
+  % --- solid vectors from the origin ---
+  \draw[vec] (O) -- (U) node[pos=1, right] {$\vect{u}$};
+  \draw[vec] (O) -- (V) node[pos=1, above left] {$\vect{v}$};
+  \draw[vec] (O) -- (W) node[pos=1, above right] {$\vect{w}$};
+
+  % --- dashed frame: edges of the parallelepiped ---
+  % bottom face
+  \draw[frame] (O) -- (U);
+  \draw[frame] (O) -- (V);
+  \draw[frame] (U) -- (UV);
+  \draw[frame] (V) -- (UV);
+
+  % vertical-ish edges (adding W)
+  \draw[frame] (O)  -- (W);
+  \draw[frame] (U)  -- (UW);
+  \draw[frame] (V)  -- (VW);
+  \draw[frame] (UV) -- (UVW);
+
+  % top face
+  \draw[frame] (W)  -- (UW);
+  \draw[frame] (W)  -- (VW);
+  \draw[frame] (UW) -- (UVW);
+  \draw[frame] (VW) -- (UVW);
+
+\end{tikzpicture}
+</latex-image>
+</image>
 </figure>
 
 
