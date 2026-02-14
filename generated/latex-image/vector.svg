@@ -12,6 +12,6 @@
 <path transform="matrix(1.00009,0,0,-1.00005,29.545037,96.81019)" stroke-width=".59776" stroke-linecap="butt" stroke-miterlimit="10" stroke-linejoin="miter" fill="none" stroke="#000000" d="M0-28.3468V84.44264"/>
 <path transform="matrix(0,-1.00005,-1.00009,-0,29.545037,12.064423)" stroke-width=".59776" stroke-linecap="round" stroke-linejoin="round" fill="none" stroke="#000000" d="M-2.31136 2.751C-1.88908 1.10037-.94807 .32094 0 0-.94807-.32094-1.88908-1.10037-2.31136-2.751"/>
 <use data-text="y" xlink:href="#font_1_3" transform="matrix(9.963496,0,0,-9.963098,26.923798,6.208664)"/>
-<path transform="matrix(1.00009,0,0,-1.00005,29.545037,96.81019)" stroke-width=".59776" stroke-linecap="butt" stroke-miterlimit="10" stroke-linejoin="miter" fill="none" stroke="#000000" d="M0 0 52.09523 73.21483"/>
-<path transform="matrix(.57976219,-.8147807,-.8148133,-.579739,81.81822,23.348176)" stroke-width=".59776" stroke-linecap="round" stroke-linejoin="round" fill="none" stroke="#000000" d="M-2.31136 2.751C-1.88908 1.10037-.94807 .32094 0 0-.94807-.32094-1.88908-1.10037-2.31136-2.751"/>
+<path transform="matrix(1.00009,0,0,-1.00005,29.545037,96.81019)" stroke-width="1.59404" stroke-linecap="butt" stroke-miterlimit="10" stroke-linejoin="miter" fill="none" stroke="#000000" d="M0 0 51.51767 72.40312"/>
+<path transform="matrix(.57976219,-.8147807,-.8148133,-.579739,81.52941,23.754052)" stroke-width="1.59404" stroke-linecap="round" stroke-linejoin="round" fill="none" stroke="#000000" d="M-3.5069 4.55072C-2.8662 1.82025-1.43846 .5309 0 0-1.43846-.5309-2.8662-1.82025-3.5069-4.55072"/>
 </svg>

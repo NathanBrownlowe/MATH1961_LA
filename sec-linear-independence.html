@@ -139,6 +139,7 @@ eBookConfig.enable_chatcodes =  false;
 \newcommand{\proj}[2]{\operatorname{proj}_{#1}\!\left(#2\right)}
 \newcommand{\p}{\mathcal P}
 \newcommand{\inv}{^{-1}}
+\newcommand{\lspan}{\mathrm{span}}
 
 \newcommand{\colvec}[2]{\begin{bmatrix}#1\\#2\end{bmatrix}}
 \newenvironment{amatrix}[1]{
@@ -230,78 +231,287 @@ eBookConfig.enable_chatcodes =  false;
 <li class="toc-item toc-section"><div class="toc-title-box"><a href="sec-characterisations-of-invertibility.html" class="internal"><span class="codenumber">7.6</span> <span class="title">Characterisations of invertibility</span></a></div></li>
 </ul>
 </li>
-<li class="toc-item toc-chapter">
-<div class="toc-title-box"><a href="ch-determinants.html" class="internal"><span class="codenumber">8</span> <span class="title">Determinants</span></a></div>
-<ul class="structural toc-item-list">
-<li class="toc-item toc-section"><div class="toc-title-box"><a href="sec-calculating-nxn-determinants.html" class="internal"><span class="codenumber">8.1</span> <span class="title">Calculating determinants</span></a></div></li>
-<li class="toc-item toc-section"><div class="toc-title-box"><a href="sec-props-of-determinants.html" class="internal"><span class="codenumber">8.2</span> <span class="title">Properties of determinants</span></a></div></li>
-</ul>
-</li>
 <li class="toc-item toc-chapter contains-active">
-<div class="toc-title-box"><a href="ch-span-and-li.html" class="internal"><span class="codenumber">9</span> <span class="title">Span and Linear Independence</span></a></div>
+<div class="toc-title-box"><a href="ch-span-and-li.html" class="internal"><span class="codenumber">8</span> <span class="title">Span and Linear Independence</span></a></div>
 <ul class="structural toc-item-list contains-active">
-<li class="toc-item toc-section"><div class="toc-title-box"><a href="sec-span.html" class="internal"><span class="codenumber">9.1</span> <span class="title">Span</span></a></div></li>
-<li class="toc-item toc-section active"><div class="toc-title-box"><a href="sec-linear-independence.html" class="internal"><span class="codenumber">9.2</span> <span class="title">Linear independence</span></a></div></li>
+<li class="toc-item toc-section"><div class="toc-title-box"><a href="sec-span.html" class="internal"><span class="codenumber">8.1</span> <span class="title">Span</span></a></div></li>
+<li class="toc-item toc-section active"><div class="toc-title-box"><a href="sec-linear-independence.html" class="internal"><span class="codenumber">8.2</span> <span class="title">Linear independence</span></a></div></li>
 </ul>
 </li>
 <li class="toc-item toc-chapter">
-<div class="toc-title-box"><a href="ch-subspaces.html" class="internal"><span class="codenumber">10</span> <span class="title">Subspaces</span></a></div>
+<div class="toc-title-box"><a href="ch-subspaces.html" class="internal"><span class="codenumber">9</span> <span class="title">Subspaces</span></a></div>
 <ul class="structural toc-item-list">
-<li class="toc-item toc-section"><div class="toc-title-box"><a href="sec-subspaces.html" class="internal"><span class="codenumber">10.1</span> <span class="title">Subspaces</span></a></div></li>
-<li class="toc-item toc-section"><div class="toc-title-box"><a href="sec-row-and-column-spaces.html" class="internal"><span class="codenumber">10.2</span> <span class="title">Row and column spaces</span></a></div></li>
-<li class="toc-item toc-section"><div class="toc-title-box"><a href="sec-null-spaces.html" class="internal"><span class="codenumber">10.3</span> <span class="title">Null spaces</span></a></div></li>
+<li class="toc-item toc-section"><div class="toc-title-box"><a href="sec-subspaces.html" class="internal"><span class="codenumber">9.1</span> <span class="title">Subspaces</span></a></div></li>
+<li class="toc-item toc-section"><div class="toc-title-box"><a href="sec-row-and-column-spaces.html" class="internal"><span class="codenumber">9.2</span> <span class="title">Row, column and null spaces</span></a></div></li>
 </ul>
 </li>
 <li class="toc-item toc-chapter">
-<div class="toc-title-box"><a href="ch-basis-dim-ranknullity.html" class="internal"><span class="codenumber">11</span> <span class="title">Bases, Dimension, and the Rank-Nullity Theorem</span></a></div>
+<div class="toc-title-box"><a href="ch-basis-dim-ranknullity.html" class="internal"><span class="codenumber">10</span> <span class="title">Bases, Dimension, and the Rank-Nullity Theorem</span></a></div>
 <ul class="structural toc-item-list">
-<li class="toc-item toc-section"><div class="toc-title-box"><a href="sec-bases.html" class="internal"><span class="codenumber">11.1</span> <span class="title">Bases</span></a></div></li>
-<li class="toc-item toc-section"><div class="toc-title-box"><a href="sec-dimension.html" class="internal"><span class="codenumber">11.2</span> <span class="title">Dimension</span></a></div></li>
-<li class="toc-item toc-section"><div class="toc-title-box"><a href="sec-rank-nullity-theorem.html" class="internal"><span class="codenumber">11.3</span> <span class="title">The rank-nullity theorem</span></a></div></li>
+<li class="toc-item toc-section"><div class="toc-title-box"><a href="sec-bases.html" class="internal"><span class="codenumber">10.1</span> <span class="title">Bases and dimension</span></a></div></li>
+<li class="toc-item toc-section"><div class="toc-title-box"><a href="sec-rank-nullity-theorem.html" class="internal"><span class="codenumber">10.2</span> <span class="title">The rank-nullity theorem</span></a></div></li>
+<li class="toc-item toc-section"><div class="toc-title-box"><a href="sec-characterisations-of-invertibility-take2.html" class="internal"><span class="codenumber">10.3</span> <span class="title">Characterisations of invertibility (take 2!)</span></a></div></li>
 </ul>
 </li>
 <li class="toc-item toc-chapter">
-<div class="toc-title-box"><a href="ch-eigenvectors.html" class="internal"><span class="codenumber">12</span> <span class="title">Eigenvalues and Eigenvectors</span></a></div>
+<div class="toc-title-box"><a href="ch-linear-transformations.html" class="internal"><span class="codenumber">11</span> <span class="title">Linear transformations</span></a></div>
 <ul class="structural toc-item-list">
-<li class="toc-item toc-section"><div class="toc-title-box"><a href="sec-evalues-evectors-espaces.html" class="internal"><span class="codenumber">12.1</span> <span class="title">Eigenvalues, eigenvectors, and eigenspaces</span></a></div></li>
-<li class="toc-item toc-section"><div class="toc-title-box"><a href="sec-evalue-examples.html" class="internal"><span class="codenumber">12.2</span> <span class="title">Examples</span></a></div></li>
-<li class="toc-item toc-section"><div class="toc-title-box"><a href="sec-evalue-multiplicities.html" class="internal"><span class="codenumber">12.3</span> <span class="title">Eigenvalue multiplicities</span></a></div></li>
-<li class="toc-item toc-section"><div class="toc-title-box"><a href="sec-characterisations-of-invertibility-take2.html" class="internal"><span class="codenumber">12.4</span> <span class="title">Characterisations of invertibility (take 2!)</span></a></div></li>
+<li class="toc-item toc-section"><div class="toc-title-box"><a href="sec-linear-transformations.html" class="internal"><span class="codenumber">11.1</span> <span class="title">Linear transformations</span></a></div></li>
+<li class="toc-item toc-section"><div class="toc-title-box"><a href="sec-examples-of-linear-transformations.html" class="internal"><span class="codenumber">11.2</span> <span class="title">Examples</span></a></div></li>
 </ul>
 </li>
 <li class="toc-item toc-chapter">
-<div class="toc-title-box"><a href="ch-sim-and-diag.html" class="internal"><span class="codenumber">13</span> <span class="title">Similarity and Diagonalisation</span></a></div>
+<div class="toc-title-box"><a href="ch-determinants.html" class="internal"><span class="codenumber">12</span> <span class="title">Determinants</span></a></div>
 <ul class="structural toc-item-list">
-<li class="toc-item toc-section"><div class="toc-title-box"><a href="sec-similarity.html" class="internal"><span class="codenumber">13.1</span> <span class="title">Similarity</span></a></div></li>
-<li class="toc-item toc-section"><div class="toc-title-box"><a href="sec-diagonalisation.html" class="internal"><span class="codenumber">13.2</span> <span class="title">Diagonalisation</span></a></div></li>
-<li class="toc-item toc-section"><div class="toc-title-box"><a href="sec-examples-of-diagonalisation.html" class="internal"><span class="codenumber">13.3</span> <span class="title">Examples of diagonalisation</span></a></div></li>
-<li class="toc-item toc-section"><div class="toc-title-box"><a href="sec-apps-of-diagonalisation.html" class="internal"><span class="codenumber">13.4</span> <span class="title">Applications of diagonalisation</span></a></div></li>
+<li class="toc-item toc-section"><div class="toc-title-box"><a href="sec-calculating-nxn-determinants.html" class="internal"><span class="codenumber">12.1</span> <span class="title">Calculating determinants</span></a></div></li>
+<li class="toc-item toc-section"><div class="toc-title-box"><a href="sec-props-of-determinants.html" class="internal"><span class="codenumber">12.2</span> <span class="title">Properties of determinants</span></a></div></li>
 </ul>
 </li>
 <li class="toc-item toc-chapter">
-<div class="toc-title-box"><a href="ch-markov-chains.html" class="internal"><span class="codenumber">14</span> <span class="title">Markov Chains</span></a></div>
+<div class="toc-title-box"><a href="ch-eigenvectors.html" class="internal"><span class="codenumber">13</span> <span class="title">Eigenvalues and Eigenvectors</span></a></div>
 <ul class="structural toc-item-list">
-<li class="toc-item toc-section"><div class="toc-title-box"><a href="sec-prob-vectors-and-stochastic-matrices.html" class="internal"><span class="codenumber">14.1</span> <span class="title">Probability vectors and stochastic matrices</span></a></div></li>
-<li class="toc-item toc-section"><div class="toc-title-box"><a href="sec-markov-chains.html" class="internal"><span class="codenumber">14.2</span> <span class="title">Markov chains</span></a></div></li>
-<li class="toc-item toc-section"><div class="toc-title-box"><a href="sec-steady-state-vectors.html" class="internal"><span class="codenumber">14.3</span> <span class="title">Steady state vectors</span></a></div></li>
-<li class="toc-item toc-section"><div class="toc-title-box"><a href="sec-regular-markov-chains.html" class="internal"><span class="codenumber">14.4</span> <span class="title">Regular Markov chains</span></a></div></li>
+<li class="toc-item toc-section"><div class="toc-title-box"><a href="sec-evalues-evectors-espaces.html" class="internal"><span class="codenumber">13.1</span> <span class="title">Eigenvalues, eigenvectors, and eigenspaces</span></a></div></li>
+<li class="toc-item toc-section"><div class="toc-title-box"><a href="sec-evalue-examples.html" class="internal"><span class="codenumber">13.2</span> <span class="title">Examples</span></a></div></li>
+<li class="toc-item toc-section"><div class="toc-title-box"><a href="sec-evalue-multiplicities.html" class="internal"><span class="codenumber">13.3</span> <span class="title">Eigenvalue multiplicities</span></a></div></li>
+<li class="toc-item toc-section"><div class="toc-title-box"><a href="sec-characterisations-of-invertibility-take3.html" class="internal"><span class="codenumber">13.4</span> <span class="title">Characterisations of invertibility (take 3!)</span></a></div></li>
 </ul>
 </li>
 <li class="toc-item toc-chapter">
-<div class="toc-title-box"><a href="ch-pop-models.html" class="internal"><span class="codenumber">15</span> <span class="title">Population Models</span></a></div>
+<div class="toc-title-box"><a href="ch-sim-and-diag.html" class="internal"><span class="codenumber">14</span> <span class="title">Similarity and Diagonalisation</span></a></div>
 <ul class="structural toc-item-list">
-<li class="toc-item toc-section"><div class="toc-title-box"><a href="sec-pop-models-and-leslie-matrices.html" class="internal"><span class="codenumber">15.1</span> <span class="title">Population models and Leslie matrices</span></a></div></li>
-<li class="toc-item toc-section"><div class="toc-title-box"><a href="sec-long-term-behaviour.html" class="internal"><span class="codenumber">15.2</span> <span class="title">Long term behaviour</span></a></div></li>
+<li class="toc-item toc-section"><div class="toc-title-box"><a href="sec-similarity.html" class="internal"><span class="codenumber">14.1</span> <span class="title">Similarity</span></a></div></li>
+<li class="toc-item toc-section"><div class="toc-title-box"><a href="sec-diagonalisation.html" class="internal"><span class="codenumber">14.2</span> <span class="title">Diagonalisation</span></a></div></li>
+<li class="toc-item toc-section"><div class="toc-title-box"><a href="sec-examples-of-diagonalisation.html" class="internal"><span class="codenumber">14.3</span> <span class="title">Examples of diagonalisation</span></a></div></li>
+<li class="toc-item toc-section"><div class="toc-title-box"><a href="sec-apps-of-diagonalisation.html" class="internal"><span class="codenumber">14.4</span> <span class="title">Applications of diagonalisation</span></a></div></li>
 </ul>
+</li>
+<li class="toc-item toc-chapter">
+<div class="toc-title-box"><a href="ch-markov-chains.html" class="internal"><span class="codenumber">15</span> <span class="title">Markov Chains</span></a></div>
+<ul class="structural toc-item-list">
+<li class="toc-item toc-section"><div class="toc-title-box"><a href="sec-prob-vectors-and-stochastic-matrices.html" class="internal"><span class="codenumber">15.1</span> <span class="title">Probability vectors and stochastic matrices</span></a></div></li>
+<li class="toc-item toc-section"><div class="toc-title-box"><a href="sec-markov-chains.html" class="internal"><span class="codenumber">15.2</span> <span class="title">Markov chains</span></a></div></li>
+<li class="toc-item toc-section"><div class="toc-title-box"><a href="sec-steady-state-vectors.html" class="internal"><span class="codenumber">15.3</span> <span class="title">Steady state vectors</span></a></div></li>
+<li class="toc-item toc-section"><div class="toc-title-box"><a href="sec-regular-markov-chains.html" class="internal"><span class="codenumber">15.4</span> <span class="title">Regular Markov chains</span></a></div></li>
+</ul>
+</li>
+<li class="toc-item toc-chapter">
+<div class="toc-title-box"><a href="ch-pop-models.html" class="internal"><span class="codenumber">16</span> <span class="title">Population Models</span></a></div>
+<ul class="structural toc-item-list"><li class="toc-item toc-section"><div class="toc-title-box"><a href="sec-pop-models-and-leslie-matrices.html" class="internal"><span class="codenumber">16.1</span> <span class="title">Population models and Leslie matrices</span></a></div></li></ul>
 </li>
 <li class="toc-item toc-backmatter"><div class="toc-title-box"><a href="backmatter.html" class="internal"><span class="title">Backmatter</span></a></div></li>
 </ul></nav></div>
 <main class="ptx-main"><div id="ptx-content" class="ptx-content"><section class="section" id="sec-linear-independence"><h2 class="heading hide-type">
-<span class="type">Section</span><span class="space heading-divison-mark heading-divison-mark__space"> </span><span class="codenumber">9.2</span><span class="space heading-divison-mark heading-divison-mark__space"> </span><span class="title">Linear independence</span>
+<span class="type">Section</span><span class="space heading-divison-mark heading-divison-mark__space"> </span><span class="codenumber">8.2</span><span class="space heading-divison-mark heading-divison-mark__space"> </span><span class="title">Linear independence</span>
 </h2>
-<div class="para" id="sec-linear-independence-2">Text of section.<div class="autopermalink" data-description="Paragraph"><a href="#sec-linear-independence-2" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
+<article class="definition definition-like" id="def-lin-ind"><h3 class="heading">
+<span class="type">Definition</span><span class="space heading-divison-mark heading-divison-mark__space"> </span><span class="codenumber">8.2.1</span><span class="period heading-divison-mark heading-divison-mark__period">.</span>
+</h3>
+<div class="para logical" id="def-lin-ind-1-1">
+<div class="para">Let <span class="process-math">\(S = \{\vect{v}_1, \vect{v}_2, \dots, \vect{v}_k\}\)</span> be a set of vectors in <span class="process-math">\(\R^n\text{.}\)</span> The set <span class="process-math">\(S\)</span> is <dfn class="terminology">linearly independent</dfn> if the only solution to the equation</div>
+<div class="displaymath process-math" id="def-lin-ind-1-1-5">
+\begin{equation*}
+c_1\vect{v}_1 + c_2\vect{v}_2 + \dots + c_k\vect{v}_k = \vect{0}
+\end{equation*}
 </div>
-<div class="autopermalink" data-description="Section 9.2: Linear independence"><a href="#sec-linear-independence" title="Copy heading and permalink for Section 9.2: Linear independence" aria-label="Copy heading and permalink for Section 9.2: Linear independence">🔗</a></div></section></div>
+<div class="para">for <span class="process-math">\(c_1, \dots, c_k \in \R\)</span> is</div>
+<div class="displaymath process-math" id="def-lin-ind-1-1-7">
+\begin{equation*}
+c_1 = c_2 = \cdots = c_k = 0\text{.}
+\end{equation*}
+</div>
+<div class="para">The set <span class="process-math">\(S\)</span> is <dfn class="terminology">linearly dependent</dfn> if it is not linearly independent.</div>
+<div class="autopermalink" data-description="Paragraph"><a href="#def-lin-ind-1-1" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
+</div>
+<div class="autopermalink" data-description="Definition 8.2.1"><a href="#def-lin-ind" title="Copy heading and permalink for Definition 8.2.1" aria-label="Copy heading and permalink for Definition 8.2.1">🔗</a></div></article><div class="para logical" id="sec-linear-independence-3">
+<div class="para">So a set <span class="process-math">\(S = \{\vect{v}_1, \vect{v}_2, \dots, \vect{v}_k\}\)</span> is linearly dependent if and only if there exists scalars <span class="process-math">\(c_1, c_2, \dots, c_k \in \R\text{,}\)</span> not all zero, such that</div>
+<div class="displaymath process-math" id="sec-linear-independence-3-3">
+\begin{equation*}
+c_1\vect{v}_1 + c_2\vect{v}_2 + \dots + c_k\vect{v}_k = \vect{0}\text{.}
+\end{equation*}
+</div>
+<div class="autopermalink" data-description="Paragraph"><a href="#sec-linear-independence-3" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
+</div>
+<article class="example example-like" id="ex-lin-dep-basic"><h3 class="heading">
+<span class="type">Example</span><span class="space heading-divison-mark heading-divison-mark__space"> </span><span class="codenumber">8.2.2</span><span class="period heading-divison-mark heading-divison-mark__period">.</span>
+</h3>
+<div class="para" id="ex-lin-dep-basic-1-1">Let <span class="process-math">\(\vect{u} = [2, 1]\text{,}\)</span> <span class="process-math">\(\vect{v} = [1, -1]\text{,}\)</span> and <span class="process-math">\(\vect{w} = [1, 2]\text{.}\)</span> Find <span class="process-math">\(\vect{u} - \vect{v}\text{,}\)</span> and explain why the set <span class="process-math">\(\{\vect{u}, \vect{v}, \vect{w}\}\)</span> is linearly dependent.<div class="autopermalink" data-description="Paragraph"><a href="#ex-lin-dep-basic-1-1" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
+</div> <div class="para logical" id="ex-lin-dep-basic-1-2">
+<div class="para">We have</div>
+<div class="displaymath process-math" id="ex-lin-dep-basic-1-2-1">
+\begin{equation*}
+\vect{u} - \vect{v} = [2, 1] - [1, -1] = [1, 2] = \vect{w},
+\end{equation*}
+</div>
+<div class="para">so <span class="process-math">\(\vect{u} - \vect{v} - \vect{w} = \vect{0}\text{.}\)</span> This is a linear combination of <span class="process-math">\(\vect{u}, \vect{v}, \vect{w}\)</span> equal to zero, where at least one (in fact all) of the coefficients are nonzero. Therefore, the set <span class="process-math">\(\{\vect{u}, \vect{v}, \vect{w}\}\)</span> is linearly dependent.</div>
+<div class="autopermalink" data-description="Paragraph"><a href="#ex-lin-dep-basic-1-2" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
+</div>
+<div class="autopermalink" data-description="Example 8.2.2"><a href="#ex-lin-dep-basic" title="Copy heading and permalink for Example 8.2.2" aria-label="Copy heading and permalink for Example 8.2.2">🔗</a></div></article><article class="example example-like" id="ex-lin-ind-basic"><h3 class="heading">
+<span class="type">Example</span><span class="space heading-divison-mark heading-divison-mark__space"> </span><span class="codenumber">8.2.3</span><span class="period heading-divison-mark heading-divison-mark__period">.</span>
+</h3>
+<div class="para" id="ex-lin-ind-basic-1-1">Show that the set <span class="process-math">\(\{\vect{e}_1, \vect{e}_2\}\)</span> is linearly independent in <span class="process-math">\(\R^2\text{.}\)</span><div class="autopermalink" data-description="Paragraph"><a href="#ex-lin-ind-basic-1-1" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
+</div> <div class="para logical" id="ex-lin-ind-basic-1-2">
+<div class="para">Suppose <span class="process-math">\(c_1\vect{e}_1 + c_2\vect{e}_2 = \vect{0}\text{.}\)</span> Then</div>
+<div class="displaymath process-math" id="ex-lin-ind-basic-1-2-2">
+\begin{equation*}
+c_1[1, 0] + c_2[0, 1] = [c_1, c_2] = \vect{0},
+\end{equation*}
+</div>
+<div class="para">so <span class="process-math">\(c_1 = 0\)</span> and <span class="process-math">\(c_2 = 0\text{.}\)</span> Therefore <span class="process-math">\(\{\vect{e}_1, \vect{e}_2\}\)</span> is linearly independent.</div>
+<div class="autopermalink" data-description="Paragraph"><a href="#ex-lin-ind-basic-1-2" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
+</div>
+<div class="autopermalink" data-description="Example 8.2.3"><a href="#ex-lin-ind-basic" title="Copy heading and permalink for Example 8.2.3" aria-label="Copy heading and permalink for Example 8.2.3">🔗</a></div></article><div class="para" id="sec-linear-independence-6">The next theorem shows how linear independence abstracts the idea of vectors not being parallel.<div class="autopermalink" data-description="Paragraph"><a href="#sec-linear-independence-6" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
+</div>
+<article class="theorem theorem-like" id="thm-lindep"><h3 class="heading">
+<span class="type">Theorem</span><span class="space heading-divison-mark heading-divison-mark__space"> </span><span class="codenumber">8.2.4</span><span class="period heading-divison-mark heading-divison-mark__period">.</span>
+</h3>
+<div class="para" id="thm-lindep-1-1">A set of two vectors in <span class="process-math">\(\R^n\)</span> is linearly independent if and only if neither vector is a scalar multiple of the other.<div class="autopermalink" data-description="Paragraph"><a href="#thm-lindep-1-1" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
+</div> <div class="para" id="thm-lindep-1-2">Equivalently, <span class="process-math">\(\{\vect{v}_1, \vect{v}_2\} \subset \R^2\)</span> is linearly dependent if and only if at least one of the vectors is a scalar multiple of the other.<div class="autopermalink" data-description="Paragraph"><a href="#thm-lindep-1-2" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
+</div>
+<div class="autopermalink" data-description="Theorem 8.2.4"><a href="#thm-lindep" title="Copy heading and permalink for Theorem 8.2.4" aria-label="Copy heading and permalink for Theorem 8.2.4">🔗</a></div></article><details id="thm-lindep-2" class="hiddenproof born-hidden-knowl"><summary class="knowl__link"><h3 class="heading"><span class="type">Proof<span class="period heading-divison-mark heading-divison-mark__period">.</span></span></h3></summary><article class="hiddenproof knowl__content"><div class="para logical" id="thm-lindep-2-1">
+<div class="para">Suppose that one of the vectors is a scalar multiple of the other; by relabelling the vectors if necessary, we can assume that</div>
+<div class="displaymath process-math" id="thm-lindep-2-1-1">
+\begin{equation*}
+\vect{v}_2 = c\vect{v}_1
+\end{equation*}
+</div>
+<div class="para">for <span class="process-math">\(c \in \R\text{.}\)</span> Then <span class="process-math">\(c\vect{v}_1 - \vect{v}_2 = \vect{0}\text{.}\)</span> Since the coefficient of <span class="process-math">\(\vect{v}_2\)</span> is nonzero, the set <span class="process-math">\(\{\vect{v}_1, \vect{v}_2\}\)</span> is linearly dependent.</div>
+<div class="autopermalink" data-description="Paragraph"><a href="#thm-lindep-2-1" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
+</div>
+<div class="para logical" id="thm-lindep-2-2">
+<div class="para">Conversely, suppose that <span class="process-math">\(\{\vect{v}_1, \vect{v}_2\}\)</span> is linearly dependent. Then there exists <span class="process-math">\(c_1, c_2 \in \R\text{,}\)</span> not both zero, such that</div>
+<div class="displaymath process-math" id="thm-lindep-2-2-3">
+\begin{equation*}
+c_1\vect{v}_1 + c_2\vect{v}_2 = \vect{0}\text{.}
+\end{equation*}
+</div>
+<div class="para">We can assume <span class="process-math">\(c_1\ne 0\text{.}\)</span> Dividing by <span class="process-math">\(c_1\)</span> gives <span class="process-math">\(\vect{v}_1 + \frac{c_2}{c_1}\vect{v}_2 = \vect{0}\text{,}\)</span> so</div>
+<div class="displaymath process-math" id="thm-lindep-2-2-7">
+\begin{equation*}
+\vect{v}_1 = -\frac{c_2}{c_1}\vect{v}_2,
+\end{equation*}
+</div>
+<div class="para">so <span class="process-math">\(\vect{v}_1\)</span> is a scalar multiple of <span class="process-math">\(\vect{v}_2\text{.}\)</span>
+</div>
+<div class="autopermalink" data-description="Paragraph"><a href="#thm-lindep-2-2" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
+</div>
+<div class="autopermalink" data-description="Proof 8.2.4.1"><a href="#thm-lindep-2" title="Copy heading and permalink for Proof 8.2.4.1" aria-label="Copy heading and permalink for Proof 8.2.4.1">🔗</a></div></article></details><div class="para" id="sec-linear-independence-8">For <span class="process-math">\(k\)</span> vectors, we have a similar result. However, to show linear independence in this case it is not enough to check that none of the vectors are parallel. We also need to check that none of the vectors can be written as linear combination of the other vectors.<div class="autopermalink" data-description="Paragraph"><a href="#sec-linear-independence-8" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
+</div>
+<article class="theorem theorem-like" id="thm-char-lin-ind"><h3 class="heading">
+<span class="type">Theorem</span><span class="space heading-divison-mark heading-divison-mark__space"> </span><span class="codenumber">8.2.5</span><span class="period heading-divison-mark heading-divison-mark__period">.</span>
+</h3>
+<div class="para" id="thm-char-lin-ind-1-1">A set of vectors <span class="process-math">\(\{\vect{v}_1, \vect{v}_2, \dots, \vect{v}_k\}\)</span> in <span class="process-math">\(\R^n\)</span> is linearly independent if and only if none of the vectors in the set can be expressed as a linear combination of the others.<div class="autopermalink" data-description="Paragraph"><a href="#thm-char-lin-ind-1-1" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
+</div>
+<div class="autopermalink" data-description="Theorem 8.2.5"><a href="#thm-char-lin-ind" title="Copy heading and permalink for Theorem 8.2.5" aria-label="Copy heading and permalink for Theorem 8.2.5">🔗</a></div></article><div class="para" id="sec-linear-independence-10">The proof is very similar to that of <a href="sec-linear-independence.html#thm-lindep" class="xref" data-knowl="./knowl/xref/thm-lindep.html" data-reveal-label="Reveal" data-close-label="Close" title="Theorem 8.2.4">Theorem 8.2.4</a>; there is not much difference apart from replacing <span class="process-math">\(\vect{v}_1, \vect{v}_2\)</span> with <span class="process-math">\(\vect{v}_1, \dots, \vect{v}_k\text{.}\)</span><div class="autopermalink" data-description="Paragraph"><a href="#sec-linear-independence-10" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
+</div>
+<div class="para" id="sec-linear-independence-11">We now come to the connection between linear independence and matrix inverses.<div class="autopermalink" data-description="Paragraph"><a href="#sec-linear-independence-11" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
+</div>
+<article class="theorem theorem-like" id="thm-connection"><h3 class="heading">
+<span class="type">Theorem</span><span class="space heading-divison-mark heading-divison-mark__space"> </span><span class="codenumber">8.2.6</span><span class="period heading-divison-mark heading-divison-mark__period">.</span>
+</h3>
+<div class="para logical" id="thm-connection-1-1">
+<div class="para">Let</div>
+<div class="displaymath process-math" id="thm-connection-1-1-1">
+\begin{equation*}
+A =
+\begin{bmatrix}
+\vect{a}_1 \amp  \vect{a}_2 \amp  \cdots \amp  \vect{a}_n
+\end{bmatrix}
+\end{equation*}
+</div>
+<div class="para">be an <span class="process-math">\(n\times n\)</span> matrix with columns <span class="process-math">\(\vect{a}_1\text{,}\)</span> <span class="process-math">\(\vect{a}_2\text{,}\)</span> <span class="process-math">\(\dots, \vect{a}_n\text{.}\)</span> Then <span class="process-math">\(A\)</span> is invertible if and only if the set <span class="process-math">\(\{\vect{a}_1\text{,}\)</span> <span class="process-math">\(\vect{a}_2\text{,}\)</span> <span class="process-math">\(\dots, \vect{a}_n\}\)</span> is linearly independent.</div>
+<div class="autopermalink" data-description="Paragraph"><a href="#thm-connection-1-1" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
+</div>
+<div class="autopermalink" data-description="Theorem 8.2.6"><a href="#thm-connection" title="Copy heading and permalink for Theorem 8.2.6" aria-label="Copy heading and permalink for Theorem 8.2.6">🔗</a></div></article><details id="thm-connection-2" class="hiddenproof born-hidden-knowl"><summary class="knowl__link"><h3 class="heading"><span class="type">Proof<span class="period heading-divison-mark heading-divison-mark__period">.</span></span></h3></summary><article class="hiddenproof knowl__content"><div class="para logical" id="thm-connection-2-1">
+<div class="para">Let <span class="process-math">\(\vect{x} \in \R^n\)</span> be arbitrary. Write <span class="process-math">\(\vect{x} = [c_1, c_2, \dots, c_n]\)</span> and <span class="process-math">\(A = [a_{ij}]\text{.}\)</span> Then</div>
+<div class="displaymath process-math" data-contains-math-knowls="./knowl/xref/thm-COI1.html" id="thm-connection-2-1-4">
+\begin{align*}
+A\vect{x} \amp  =
+\begin{bmatrix}
+a_{11} \amp  a_{12} \amp  \cdots \amp  a_{1n} \\
+a_{21} \amp  a_{22} \amp  \cdots \amp  a_{2n} \\
+\vdots \amp  \vdots \amp  \ddots \amp  \vdots \\
+a_{n1} \amp  a_{n2} \amp  \cdots \amp  a_{nn}
+\end{bmatrix}
+\begin{bmatrix}
+c_1 \\ c_2\\ \vdots\\ c_n
+\end{bmatrix}
+=
+\begin{bmatrix}
+c_1 a_{11} + c_2a_{12} + \dots + c_na_{1n} \\
+c_1 a_{21} + c_2a_{22} + \dots + c_na_{2n} \\
+\vdots                                     \\
+c_1 a_{n1} + c_2a_{n2} + \dots + c_na_{nn}
+\end{bmatrix}
+\\
+\amp  = c_1
+\begin{bmatrix}
+a_{11} \\ a_{21}\\ \vdots\\ a_{n1}
+\end{bmatrix}
++ c_2
+\begin{bmatrix}
+a_{12} \\ a_{22}\\ \vdots\\ a_{n2}
+\end{bmatrix}
++ \dots + c_n
+\begin{bmatrix}
+a_{1n} \\ a_{2n}\\ \vdots\\ a_{nn}
+\end{bmatrix}
+\\
+\amp  = c_1\vect{a}_1 + c_2\vect{a}_2 + \dots + c_n\vect{a}_n\text{.}
+\end{align*}
+</div>
+<div class="para">From <a href="sec-characterisations-of-invertibility.html#thm-COI1" class="xref" data-knowl="./knowl/xref/thm-COI1.html" data-reveal-label="Reveal" data-close-label="Close" title="Theorem 7.6.1: Characterisations of Invertibility (Part 1)">Theorem 7.6.1</a>, <span class="process-math">\(A\)</span> is invertible if and only if <span class="process-math">\(A\vect{x} = \vect{0}\)</span> has the unique solution <span class="process-math">\(\vect{x} = \vect{0}\text{.}\)</span> Using the previous calculation and that <span class="process-math">\(\vect{x} = [c_1, c_2, \dots, c_n]\text{,}\)</span> this shows that <span class="process-math">\(A\)</span> is invertible if and only if</div>
+<div class="displaymath process-math" data-contains-math-knowls="./knowl/xref/thm-COI1.html" id="thm-connection-2-1-11">
+\begin{equation*}
+c_1\vect{a}_1 + c_2\vect{a}_2 + \dots + c_n\vect{a}_n = \vect{0}
+\end{equation*}
+</div>
+<div class="para">has the unique solution <span class="process-math">\(c_1 = c_2 = \dots = c_n = 0\text{,}\)</span> which is the definition of <span class="process-math">\(\{\vect{a}_1, \vect{a}_2, \dots, \vect{a}_n\}\)</span> being linearly independent.</div>
+<div class="autopermalink" data-description="Paragraph"><a href="#thm-connection-2-1" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
+</div>
+<div class="autopermalink" data-description="Proof 8.2.6.1"><a href="#thm-connection-2" title="Copy heading and permalink for Proof 8.2.6.1" aria-label="Copy heading and permalink for Proof 8.2.6.1">🔗</a></div></article></details><article class="example example-like" id="ex-lin-ind-matrix"><h3 class="heading">
+<span class="type">Example</span><span class="space heading-divison-mark heading-divison-mark__space"> </span><span class="codenumber">8.2.7</span><span class="period heading-divison-mark heading-divison-mark__period">.</span>
+</h3>
+<div class="para logical" id="ex-lin-ind-matrix-1-1">
+<div class="para">Consider the matrix</div>
+<div class="displaymath process-math" id="ex-lin-ind-matrix-1-1-1">
+\begin{equation*}
+A =
+\begin{bmatrix}
+1 \amp  1 \\
+2 \amp  3
+\end{bmatrix}
+\end{equation*}
+</div>
+<div class="para">Its columns <span class="process-math">\([1, 2]\)</span> and <span class="process-math">\([1, 3]\)</span> are not parallel and hence are linearly independent, so <span class="process-math">\(A\)</span> is invertible. This agrees with the calculation that <span class="process-math">\(\det(A) = 3 - 2 = 1 \ne 0\text{.}\)</span>
+</div>
+<div class="autopermalink" data-description="Paragraph"><a href="#ex-lin-ind-matrix-1-1" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
+</div>
+<div class="autopermalink" data-description="Example 8.2.7"><a href="#ex-lin-ind-matrix" title="Copy heading and permalink for Example 8.2.7" aria-label="Copy heading and permalink for Example 8.2.7">🔗</a></div></article><div class="para" id="sec-linear-independence-14">For larger matrices, it is not easy to tell whether all the columns are linearly independent. But if they are linearly dependent, sometimes this is quick to spot, which can allow us to quickly conclude that the matrix is not invertible.<div class="autopermalink" data-description="Paragraph"><a href="#sec-linear-independence-14" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
+</div>
+<article class="example example-like" id="ex-lin-dep-matrix"><h3 class="heading">
+<span class="type">Example</span><span class="space heading-divison-mark heading-divison-mark__space"> </span><span class="codenumber">8.2.8</span><span class="period heading-divison-mark heading-divison-mark__period">.</span>
+</h3>
+<div class="para logical" id="ex-lin-dep-matrix-1-1">
+<div class="para">The matrix</div>
+<div class="displaymath process-math" id="ex-lin-dep-matrix-1-1-1">
+\begin{equation*}
+A =
+\begin{bmatrix}
+\vect{a}_1 \amp  \vect{a}_2 \amp  \vect{a}_3 \amp  \vect{a}_4
+\end{bmatrix}
+=
+\begin{bmatrix}
+4 \amp  9 \amp  8 \amp  6 \\
+1 \amp  8 \amp  2 \amp  2 \\
+0 \amp  1 \amp  0 \amp  5 \\
+4 \amp  2 \amp  8 \amp  3
+\end{bmatrix}
+\end{equation*}
+</div>
+<div class="para">has <span class="process-math">\(\vect{a}_3 = 2\vect{a}_1\text{,}\)</span> so its columns are linearly dependent. Therefore <span class="process-math">\(A\)</span> is not invertible.</div>
+<div class="autopermalink" data-description="Paragraph"><a href="#ex-lin-dep-matrix-1-1" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
+</div>
+<div class="autopermalink" data-description="Example 8.2.8"><a href="#ex-lin-dep-matrix" title="Copy heading and permalink for Example 8.2.8" aria-label="Copy heading and permalink for Example 8.2.8">🔗</a></div></article><div class="autopermalink" data-description="Section 8.2: Linear independence"><a href="#sec-linear-independence" title="Copy heading and permalink for Section 8.2: Linear independence" aria-label="Copy heading and permalink for Section 8.2: Linear independence">🔗</a></div></section></div>
 <div id="ptx-content-footer" class="ptx-content-footer">
 <a class="previous-button button" href="sec-span.html" title="Previous"><span class="icon material-symbols-outlined" aria-hidden="true">&#xe5cb;</span><span class="name">Prev</span></a><a class="top-button button" href="#" title="Top"><span class="icon material-symbols-outlined" aria-hidden="true">&#xe5ce;</span><span class="name">Top</span></a><a class="next-button button" href="ch-subspaces.html" title="Next"><span class="name">Next</span><span class="icon material-symbols-outlined" aria-hidden="true">&#xe5cc;</span></a>
 </div></main>

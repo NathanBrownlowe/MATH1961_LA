@@ -129,7 +129,7 @@ eBookConfig.enable_chatcodes =  false;
 <ol id="searchresults" class="searchresults"></ol>
 </div>
 </div>
-<span class="nav-other-controls"><button id="light-dark-button" class="light-dark-button button" title="Dark Mode"><span class="icon material-symbols-outlined" aria-hidden="true">&#xe51c;</span><span class="name">Dark Mode</span></button></span><span class="treebuttons"><a class="previous-button button" href="sec-calculating-nxn-determinants.html" title="Previous"><span class="icon material-symbols-outlined" aria-hidden="true">&#xe5cb;</span><span class="name">Prev</span></a><a class="up-button button" href="ch-determinants.html" title="Up"><span class="icon material-symbols-outlined" aria-hidden="true">&#xe5ce;</span><span class="name">Up</span></a><a class="next-button button" href="ch-span-and-li.html" title="Next"><span class="name">Next</span><span class="icon material-symbols-outlined" aria-hidden="true">&#xe5cc;</span></a></span>
+<span class="nav-other-controls"><button id="light-dark-button" class="light-dark-button button" title="Dark Mode"><span class="icon material-symbols-outlined" aria-hidden="true">&#xe51c;</span><span class="name">Dark Mode</span></button></span><span class="treebuttons"><a class="previous-button button" href="sec-calculating-nxn-determinants.html" title="Previous"><span class="icon material-symbols-outlined" aria-hidden="true">&#xe5cb;</span><span class="name">Prev</span></a><a class="up-button button" href="ch-determinants.html" title="Up"><span class="icon material-symbols-outlined" aria-hidden="true">&#xe5ce;</span><span class="name">Up</span></a><a class="next-button button" href="ch-eigenvectors.html" title="Next"><span class="name">Next</span><span class="icon material-symbols-outlined" aria-hidden="true">&#xe5cc;</span></a></span>
 </div></nav><div id="latex-macros" class="hidden-content process-math" style="display:none"><span class="process-math">\(\require{mathtools}\newcommand{\N}{\mathbb N} 
 \newcommand{\Z}{\mathbb Z} 
 \newcommand{\Q}{\mathbb Q} 
@@ -139,6 +139,7 @@ eBookConfig.enable_chatcodes =  false;
 \newcommand{\proj}[2]{\operatorname{proj}_{#1}\!\left(#2\right)}
 \newcommand{\p}{\mathcal P}
 \newcommand{\inv}{^{-1}}
+\newcommand{\lspan}{\mathrm{span}}
 
 \newcommand{\colvec}[2]{\begin{bmatrix}#1\\#2\end{bmatrix}}
 \newenvironment{amatrix}[1]{
@@ -230,87 +231,91 @@ eBookConfig.enable_chatcodes =  false;
 <li class="toc-item toc-section"><div class="toc-title-box"><a href="sec-characterisations-of-invertibility.html" class="internal"><span class="codenumber">7.6</span> <span class="title">Characterisations of invertibility</span></a></div></li>
 </ul>
 </li>
+<li class="toc-item toc-chapter">
+<div class="toc-title-box"><a href="ch-span-and-li.html" class="internal"><span class="codenumber">8</span> <span class="title">Span and Linear Independence</span></a></div>
+<ul class="structural toc-item-list">
+<li class="toc-item toc-section"><div class="toc-title-box"><a href="sec-span.html" class="internal"><span class="codenumber">8.1</span> <span class="title">Span</span></a></div></li>
+<li class="toc-item toc-section"><div class="toc-title-box"><a href="sec-linear-independence.html" class="internal"><span class="codenumber">8.2</span> <span class="title">Linear independence</span></a></div></li>
+</ul>
+</li>
+<li class="toc-item toc-chapter">
+<div class="toc-title-box"><a href="ch-subspaces.html" class="internal"><span class="codenumber">9</span> <span class="title">Subspaces</span></a></div>
+<ul class="structural toc-item-list">
+<li class="toc-item toc-section"><div class="toc-title-box"><a href="sec-subspaces.html" class="internal"><span class="codenumber">9.1</span> <span class="title">Subspaces</span></a></div></li>
+<li class="toc-item toc-section"><div class="toc-title-box"><a href="sec-row-and-column-spaces.html" class="internal"><span class="codenumber">9.2</span> <span class="title">Row, column and null spaces</span></a></div></li>
+</ul>
+</li>
+<li class="toc-item toc-chapter">
+<div class="toc-title-box"><a href="ch-basis-dim-ranknullity.html" class="internal"><span class="codenumber">10</span> <span class="title">Bases, Dimension, and the Rank-Nullity Theorem</span></a></div>
+<ul class="structural toc-item-list">
+<li class="toc-item toc-section"><div class="toc-title-box"><a href="sec-bases.html" class="internal"><span class="codenumber">10.1</span> <span class="title">Bases and dimension</span></a></div></li>
+<li class="toc-item toc-section"><div class="toc-title-box"><a href="sec-rank-nullity-theorem.html" class="internal"><span class="codenumber">10.2</span> <span class="title">The rank-nullity theorem</span></a></div></li>
+<li class="toc-item toc-section"><div class="toc-title-box"><a href="sec-characterisations-of-invertibility-take2.html" class="internal"><span class="codenumber">10.3</span> <span class="title">Characterisations of invertibility (take 2!)</span></a></div></li>
+</ul>
+</li>
+<li class="toc-item toc-chapter">
+<div class="toc-title-box"><a href="ch-linear-transformations.html" class="internal"><span class="codenumber">11</span> <span class="title">Linear transformations</span></a></div>
+<ul class="structural toc-item-list">
+<li class="toc-item toc-section"><div class="toc-title-box"><a href="sec-linear-transformations.html" class="internal"><span class="codenumber">11.1</span> <span class="title">Linear transformations</span></a></div></li>
+<li class="toc-item toc-section"><div class="toc-title-box"><a href="sec-examples-of-linear-transformations.html" class="internal"><span class="codenumber">11.2</span> <span class="title">Examples</span></a></div></li>
+</ul>
+</li>
 <li class="toc-item toc-chapter contains-active">
-<div class="toc-title-box"><a href="ch-determinants.html" class="internal"><span class="codenumber">8</span> <span class="title">Determinants</span></a></div>
+<div class="toc-title-box"><a href="ch-determinants.html" class="internal"><span class="codenumber">12</span> <span class="title">Determinants</span></a></div>
 <ul class="structural toc-item-list contains-active">
-<li class="toc-item toc-section"><div class="toc-title-box"><a href="sec-calculating-nxn-determinants.html" class="internal"><span class="codenumber">8.1</span> <span class="title">Calculating determinants</span></a></div></li>
-<li class="toc-item toc-section active"><div class="toc-title-box"><a href="sec-props-of-determinants.html" class="internal"><span class="codenumber">8.2</span> <span class="title">Properties of determinants</span></a></div></li>
+<li class="toc-item toc-section"><div class="toc-title-box"><a href="sec-calculating-nxn-determinants.html" class="internal"><span class="codenumber">12.1</span> <span class="title">Calculating determinants</span></a></div></li>
+<li class="toc-item toc-section active"><div class="toc-title-box"><a href="sec-props-of-determinants.html" class="internal"><span class="codenumber">12.2</span> <span class="title">Properties of determinants</span></a></div></li>
 </ul>
 </li>
 <li class="toc-item toc-chapter">
-<div class="toc-title-box"><a href="ch-span-and-li.html" class="internal"><span class="codenumber">9</span> <span class="title">Span and Linear Independence</span></a></div>
+<div class="toc-title-box"><a href="ch-eigenvectors.html" class="internal"><span class="codenumber">13</span> <span class="title">Eigenvalues and Eigenvectors</span></a></div>
 <ul class="structural toc-item-list">
-<li class="toc-item toc-section"><div class="toc-title-box"><a href="sec-span.html" class="internal"><span class="codenumber">9.1</span> <span class="title">Span</span></a></div></li>
-<li class="toc-item toc-section"><div class="toc-title-box"><a href="sec-linear-independence.html" class="internal"><span class="codenumber">9.2</span> <span class="title">Linear independence</span></a></div></li>
+<li class="toc-item toc-section"><div class="toc-title-box"><a href="sec-evalues-evectors-espaces.html" class="internal"><span class="codenumber">13.1</span> <span class="title">Eigenvalues, eigenvectors, and eigenspaces</span></a></div></li>
+<li class="toc-item toc-section"><div class="toc-title-box"><a href="sec-evalue-examples.html" class="internal"><span class="codenumber">13.2</span> <span class="title">Examples</span></a></div></li>
+<li class="toc-item toc-section"><div class="toc-title-box"><a href="sec-evalue-multiplicities.html" class="internal"><span class="codenumber">13.3</span> <span class="title">Eigenvalue multiplicities</span></a></div></li>
+<li class="toc-item toc-section"><div class="toc-title-box"><a href="sec-characterisations-of-invertibility-take3.html" class="internal"><span class="codenumber">13.4</span> <span class="title">Characterisations of invertibility (take 3!)</span></a></div></li>
 </ul>
 </li>
 <li class="toc-item toc-chapter">
-<div class="toc-title-box"><a href="ch-subspaces.html" class="internal"><span class="codenumber">10</span> <span class="title">Subspaces</span></a></div>
+<div class="toc-title-box"><a href="ch-sim-and-diag.html" class="internal"><span class="codenumber">14</span> <span class="title">Similarity and Diagonalisation</span></a></div>
 <ul class="structural toc-item-list">
-<li class="toc-item toc-section"><div class="toc-title-box"><a href="sec-subspaces.html" class="internal"><span class="codenumber">10.1</span> <span class="title">Subspaces</span></a></div></li>
-<li class="toc-item toc-section"><div class="toc-title-box"><a href="sec-row-and-column-spaces.html" class="internal"><span class="codenumber">10.2</span> <span class="title">Row and column spaces</span></a></div></li>
-<li class="toc-item toc-section"><div class="toc-title-box"><a href="sec-null-spaces.html" class="internal"><span class="codenumber">10.3</span> <span class="title">Null spaces</span></a></div></li>
+<li class="toc-item toc-section"><div class="toc-title-box"><a href="sec-similarity.html" class="internal"><span class="codenumber">14.1</span> <span class="title">Similarity</span></a></div></li>
+<li class="toc-item toc-section"><div class="toc-title-box"><a href="sec-diagonalisation.html" class="internal"><span class="codenumber">14.2</span> <span class="title">Diagonalisation</span></a></div></li>
+<li class="toc-item toc-section"><div class="toc-title-box"><a href="sec-examples-of-diagonalisation.html" class="internal"><span class="codenumber">14.3</span> <span class="title">Examples of diagonalisation</span></a></div></li>
+<li class="toc-item toc-section"><div class="toc-title-box"><a href="sec-apps-of-diagonalisation.html" class="internal"><span class="codenumber">14.4</span> <span class="title">Applications of diagonalisation</span></a></div></li>
 </ul>
 </li>
 <li class="toc-item toc-chapter">
-<div class="toc-title-box"><a href="ch-basis-dim-ranknullity.html" class="internal"><span class="codenumber">11</span> <span class="title">Bases, Dimension, and the Rank-Nullity Theorem</span></a></div>
+<div class="toc-title-box"><a href="ch-markov-chains.html" class="internal"><span class="codenumber">15</span> <span class="title">Markov Chains</span></a></div>
 <ul class="structural toc-item-list">
-<li class="toc-item toc-section"><div class="toc-title-box"><a href="sec-bases.html" class="internal"><span class="codenumber">11.1</span> <span class="title">Bases</span></a></div></li>
-<li class="toc-item toc-section"><div class="toc-title-box"><a href="sec-dimension.html" class="internal"><span class="codenumber">11.2</span> <span class="title">Dimension</span></a></div></li>
-<li class="toc-item toc-section"><div class="toc-title-box"><a href="sec-rank-nullity-theorem.html" class="internal"><span class="codenumber">11.3</span> <span class="title">The rank-nullity theorem</span></a></div></li>
+<li class="toc-item toc-section"><div class="toc-title-box"><a href="sec-prob-vectors-and-stochastic-matrices.html" class="internal"><span class="codenumber">15.1</span> <span class="title">Probability vectors and stochastic matrices</span></a></div></li>
+<li class="toc-item toc-section"><div class="toc-title-box"><a href="sec-markov-chains.html" class="internal"><span class="codenumber">15.2</span> <span class="title">Markov chains</span></a></div></li>
+<li class="toc-item toc-section"><div class="toc-title-box"><a href="sec-steady-state-vectors.html" class="internal"><span class="codenumber">15.3</span> <span class="title">Steady state vectors</span></a></div></li>
+<li class="toc-item toc-section"><div class="toc-title-box"><a href="sec-regular-markov-chains.html" class="internal"><span class="codenumber">15.4</span> <span class="title">Regular Markov chains</span></a></div></li>
 </ul>
 </li>
 <li class="toc-item toc-chapter">
-<div class="toc-title-box"><a href="ch-eigenvectors.html" class="internal"><span class="codenumber">12</span> <span class="title">Eigenvalues and Eigenvectors</span></a></div>
-<ul class="structural toc-item-list">
-<li class="toc-item toc-section"><div class="toc-title-box"><a href="sec-evalues-evectors-espaces.html" class="internal"><span class="codenumber">12.1</span> <span class="title">Eigenvalues, eigenvectors, and eigenspaces</span></a></div></li>
-<li class="toc-item toc-section"><div class="toc-title-box"><a href="sec-evalue-examples.html" class="internal"><span class="codenumber">12.2</span> <span class="title">Examples</span></a></div></li>
-<li class="toc-item toc-section"><div class="toc-title-box"><a href="sec-evalue-multiplicities.html" class="internal"><span class="codenumber">12.3</span> <span class="title">Eigenvalue multiplicities</span></a></div></li>
-<li class="toc-item toc-section"><div class="toc-title-box"><a href="sec-characterisations-of-invertibility-take2.html" class="internal"><span class="codenumber">12.4</span> <span class="title">Characterisations of invertibility (take 2!)</span></a></div></li>
-</ul>
-</li>
-<li class="toc-item toc-chapter">
-<div class="toc-title-box"><a href="ch-sim-and-diag.html" class="internal"><span class="codenumber">13</span> <span class="title">Similarity and Diagonalisation</span></a></div>
-<ul class="structural toc-item-list">
-<li class="toc-item toc-section"><div class="toc-title-box"><a href="sec-similarity.html" class="internal"><span class="codenumber">13.1</span> <span class="title">Similarity</span></a></div></li>
-<li class="toc-item toc-section"><div class="toc-title-box"><a href="sec-diagonalisation.html" class="internal"><span class="codenumber">13.2</span> <span class="title">Diagonalisation</span></a></div></li>
-<li class="toc-item toc-section"><div class="toc-title-box"><a href="sec-examples-of-diagonalisation.html" class="internal"><span class="codenumber">13.3</span> <span class="title">Examples of diagonalisation</span></a></div></li>
-<li class="toc-item toc-section"><div class="toc-title-box"><a href="sec-apps-of-diagonalisation.html" class="internal"><span class="codenumber">13.4</span> <span class="title">Applications of diagonalisation</span></a></div></li>
-</ul>
-</li>
-<li class="toc-item toc-chapter">
-<div class="toc-title-box"><a href="ch-markov-chains.html" class="internal"><span class="codenumber">14</span> <span class="title">Markov Chains</span></a></div>
-<ul class="structural toc-item-list">
-<li class="toc-item toc-section"><div class="toc-title-box"><a href="sec-prob-vectors-and-stochastic-matrices.html" class="internal"><span class="codenumber">14.1</span> <span class="title">Probability vectors and stochastic matrices</span></a></div></li>
-<li class="toc-item toc-section"><div class="toc-title-box"><a href="sec-markov-chains.html" class="internal"><span class="codenumber">14.2</span> <span class="title">Markov chains</span></a></div></li>
-<li class="toc-item toc-section"><div class="toc-title-box"><a href="sec-steady-state-vectors.html" class="internal"><span class="codenumber">14.3</span> <span class="title">Steady state vectors</span></a></div></li>
-<li class="toc-item toc-section"><div class="toc-title-box"><a href="sec-regular-markov-chains.html" class="internal"><span class="codenumber">14.4</span> <span class="title">Regular Markov chains</span></a></div></li>
-</ul>
-</li>
-<li class="toc-item toc-chapter">
-<div class="toc-title-box"><a href="ch-pop-models.html" class="internal"><span class="codenumber">15</span> <span class="title">Population Models</span></a></div>
-<ul class="structural toc-item-list">
-<li class="toc-item toc-section"><div class="toc-title-box"><a href="sec-pop-models-and-leslie-matrices.html" class="internal"><span class="codenumber">15.1</span> <span class="title">Population models and Leslie matrices</span></a></div></li>
-<li class="toc-item toc-section"><div class="toc-title-box"><a href="sec-long-term-behaviour.html" class="internal"><span class="codenumber">15.2</span> <span class="title">Long term behaviour</span></a></div></li>
-</ul>
+<div class="toc-title-box"><a href="ch-pop-models.html" class="internal"><span class="codenumber">16</span> <span class="title">Population Models</span></a></div>
+<ul class="structural toc-item-list"><li class="toc-item toc-section"><div class="toc-title-box"><a href="sec-pop-models-and-leslie-matrices.html" class="internal"><span class="codenumber">16.1</span> <span class="title">Population models and Leslie matrices</span></a></div></li></ul>
 </li>
 <li class="toc-item toc-backmatter"><div class="toc-title-box"><a href="backmatter.html" class="internal"><span class="title">Backmatter</span></a></div></li>
 </ul></nav></div>
 <main class="ptx-main"><div id="ptx-content" class="ptx-content"><section class="section" id="sec-props-of-determinants"><h2 class="heading hide-type">
-<span class="type">Section</span><span class="space heading-divison-mark heading-divison-mark__space"> </span><span class="codenumber">8.2</span><span class="space heading-divison-mark heading-divison-mark__space"> </span><span class="title">Properties of determinants</span>
+<span class="type">Section</span><span class="space heading-divison-mark heading-divison-mark__space"> </span><span class="codenumber">12.2</span><span class="space heading-divison-mark heading-divison-mark__space"> </span><span class="title">Properties of determinants</span>
 </h2>
-<div class="para" id="sec-props-of-determinants-2">The following definition gives a name to matrices like <a href="sec-calculating-nxn-determinants.html#ex-triangular" class="xref" data-knowl="./knowl/xref/ex-triangular.html" data-reveal-label="Reveal" data-close-label="Close" title="Example 8.1.7">Example 8.1.7</a> whose nonzero entries form a triangular shape.<div class="autopermalink" data-description="Paragraph"><a href="#sec-props-of-determinants-2" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
+<div class="para" id="sec-props-of-determinants-2">The following definition gives a name to matrices like <a href="sec-calculating-nxn-determinants.html#ex-triangular" class="xref" data-knowl="./knowl/xref/ex-triangular.html" data-reveal-label="Reveal" data-close-label="Close" title="Example 12.1.7">Example 12.1.7</a> whose nonzero entries form a triangular shape.<div class="autopermalink" data-description="Paragraph"><a href="#sec-props-of-determinants-2" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
 </div>
 <article class="definition definition-like" id="def-triangular-matrix"><h3 class="heading">
-<span class="type">Definition</span><span class="space heading-divison-mark heading-divison-mark__space"> </span><span class="codenumber">8.2.1</span><span class="period heading-divison-mark heading-divison-mark__period">.</span>
+<span class="type">Definition</span><span class="space heading-divison-mark heading-divison-mark__space"> </span><span class="codenumber">12.2.1</span><span class="period heading-divison-mark heading-divison-mark__period">.</span>
 </h3>
 <div class="para" id="def-triangular-matrix-1-1">An <span class="process-math">\(n\times n\)</span> matrix <span class="process-math">\(A = [a_{ij}]\)</span> is <dfn class="terminology">upper triangular</dfn> if all entries below the diagonal are zero (so <span class="process-math">\(a_{ij} = 0\)</span> for <span class="process-math">\(i \gt  j\)</span>), <dfn class="terminology">lower triangular</dfn> if all entries above the diagonal are zero (so <span class="process-math">\(a_{ij} = 0\)</span> for <span class="process-math">\(i \lt  j\)</span>), and <dfn class="terminology">triangular</dfn> if it is either upper triangular or lower triangular.<div class="autopermalink" data-description="Paragraph"><a href="#def-triangular-matrix-1-1" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
 </div>
-<div class="autopermalink" data-description="Definition 8.2.1"><a href="#def-triangular-matrix" title="Copy heading and permalink for Definition 8.2.1" aria-label="Copy heading and permalink for Definition 8.2.1">🔗</a></div></article><div class="para" id="sec-props-of-determinants-4">The matrix in <a href="sec-calculating-nxn-determinants.html#ex-triangular" class="xref" data-knowl="./knowl/xref/ex-triangular.html" data-reveal-label="Reveal" data-close-label="Close" title="Example 8.1.7">Example 8.1.7</a> is upper triangular. Notice that its determinant is the product of its diagonal entries. <em class="emphasis">&gt;This is true for any triangular matrix</em>, which can be shown by expanding along the row or column which is zero apart from (possibly) one entry.<div class="autopermalink" data-description="Paragraph"><a href="#sec-props-of-determinants-4" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
+<div class="autopermalink" data-description="Definition 12.2.1"><a href="#def-triangular-matrix" title="Copy heading and permalink for Definition 12.2.1" aria-label="Copy heading and permalink for Definition 12.2.1">🔗</a></div></article><div class="para" id="sec-props-of-determinants-4">The matrix in <a href="sec-calculating-nxn-determinants.html#ex-triangular" class="xref" data-knowl="./knowl/xref/ex-triangular.html" data-reveal-label="Reveal" data-close-label="Close" title="Example 12.1.7">Example 12.1.7</a> is upper triangular. Notice that its determinant is the product of its diagonal entries. <em class="emphasis">&gt;This is true for any triangular matrix</em>, which can be shown by expanding along the row or column which is zero apart from (possibly) one entry.<div class="autopermalink" data-description="Paragraph"><a href="#sec-props-of-determinants-4" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
 </div>
-<details id="ex-det-for-tri-matrices" class="example example-like born-hidden-knowl"><summary class="knowl__link"><h3 class="heading">
-<span class="type">Example</span><span class="space heading-divison-mark heading-divison-mark__space"> </span><span class="codenumber">8.2.2</span><span class="period heading-divison-mark heading-divison-mark__period">.</span>
-</h3></summary><article class="example example-like knowl__content"><div class="para logical" id="ex-det-for-tri-matrices-1-1">
+<article class="example example-like" id="ex-det-for-tri-matrices"><h3 class="heading">
+<span class="type">Example</span><span class="space heading-divison-mark heading-divison-mark__space"> </span><span class="codenumber">12.2.2</span><span class="period heading-divison-mark heading-divison-mark__period">.</span>
+</h3>
+<div class="para logical" id="ex-det-for-tri-matrices-1-1">
 <div class="para">Find the determinant of the matrices</div>
 <div class="displaymath process-math" id="ex-det-for-tri-matrices-1-1-1">
 \begin{equation*}
@@ -331,12 +336,12 @@ A =
 <div class="autopermalink" data-description="Paragraph"><a href="#ex-det-for-tri-matrices-1-1" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
 </div> <div class="para" id="ex-det-for-tri-matrices-1-2">These are triangular, so <span class="process-math">\(\det(A) = (-1) \times 2 \times 3 = -6\text{,}\)</span> and <span class="process-math">\(\det(B) = 2\times 0 \times (-4) = 0\text{.}\)</span><div class="autopermalink" data-description="Paragraph"><a href="#ex-det-for-tri-matrices-1-2" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
 </div>
-<div class="autopermalink" data-description="Example 8.2.2"><a href="#ex-det-for-tri-matrices" title="Copy heading and permalink for Example 8.2.2" aria-label="Copy heading and permalink for Example 8.2.2">🔗</a></div></article></details><div class="para" id="sec-props-of-determinants-6">If a matrix has a row or column that is completely zero, we can expand along it to see that the determinant is zero.<div class="autopermalink" data-description="Paragraph"><a href="#sec-props-of-determinants-6" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
+<div class="autopermalink" data-description="Example 12.2.2"><a href="#ex-det-for-tri-matrices" title="Copy heading and permalink for Example 12.2.2" aria-label="Copy heading and permalink for Example 12.2.2">🔗</a></div></article><div class="para" id="sec-props-of-determinants-6">If a matrix has a row or column that is completely zero, we can expand along it to see that the determinant is zero.<div class="autopermalink" data-description="Paragraph"><a href="#sec-props-of-determinants-6" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
 </div>
 <div class="para" id="sec-props-of-determinants-7">The next theorem states how determinants interact with elementary row or column operations.<div class="autopermalink" data-description="Paragraph"><a href="#sec-props-of-determinants-7" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
 </div>
 <article class="theorem theorem-like" id="thm-EROdet"><h3 class="heading">
-<span class="type">Theorem</span><span class="space heading-divison-mark heading-divison-mark__space"> </span><span class="codenumber">8.2.3</span><span class="period heading-divison-mark heading-divison-mark__period">.</span>
+<span class="type">Theorem</span><span class="space heading-divison-mark heading-divison-mark__space"> </span><span class="codenumber">12.2.3</span><span class="period heading-divison-mark heading-divison-mark__period">.</span>
 </h3>
 <div class="para logical" id="thm-EROdet-1-1">
 <div class="para">Let <span class="process-math">\(A\)</span> and <span class="process-math">\(B\)</span> be <span class="process-math">\(n\times n\)</span> matrices.</div>
@@ -380,20 +385,21 @@ A =
 </ol>
 <div class="autopermalink" data-description="Paragraph"><a href="#thm-EROdet-1-1" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
 </div>
-<div class="autopermalink" data-description="Theorem 8.2.3"><a href="#thm-EROdet" title="Copy heading and permalink for Theorem 8.2.3" aria-label="Copy heading and permalink for Theorem 8.2.3">🔗</a></div></article><article class="corollary theorem-like" id="cor-EROdet"><h3 class="heading">
-<span class="type">Corollary</span><span class="space heading-divison-mark heading-divison-mark__space"> </span><span class="codenumber">8.2.4</span><span class="period heading-divison-mark heading-divison-mark__period">.</span>
+<div class="autopermalink" data-description="Theorem 12.2.3"><a href="#thm-EROdet" title="Copy heading and permalink for Theorem 12.2.3" aria-label="Copy heading and permalink for Theorem 12.2.3">🔗</a></div></article><article class="corollary theorem-like" id="cor-EROdet"><h3 class="heading">
+<span class="type">Corollary</span><span class="space heading-divison-mark heading-divison-mark__space"> </span><span class="codenumber">12.2.4</span><span class="period heading-divison-mark heading-divison-mark__period">.</span>
 </h3>
 <div class="para" id="cor-EROdet-1-1">If <span class="process-math">\(B\)</span> is obtained from <span class="process-math">\(A\)</span> by applying a sequence of elementary row operations, then <span class="process-math">\(\det(B) = k\det(A)\)</span> for some nonzero <span class="process-math">\(k\in \R\text{.}\)</span><div class="autopermalink" data-description="Paragraph"><a href="#cor-EROdet-1-1" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
 </div>
-<div class="autopermalink" data-description="Corollary 8.2.4"><a href="#cor-EROdet" title="Copy heading and permalink for Corollary 8.2.4" aria-label="Copy heading and permalink for Corollary 8.2.4">🔗</a></div></article><details id="cor-EROdet-2" class="hiddenproof born-hidden-knowl"><summary class="knowl__link"><h3 class="heading"><span class="type">Proof<span class="period heading-divison-mark heading-divison-mark__period">.</span></span></h3></summary><article class="hiddenproof knowl__content"><div class="para" id="cor-EROdet-2-1">First assume that <span class="process-math">\(B\)</span> is obtained from <span class="process-math">\(A\)</span> by applying a single ERO. From <a href="sec-props-of-determinants.html#thm-EROdet" class="xref" data-knowl="./knowl/xref/thm-EROdet.html" data-reveal-label="Reveal" data-close-label="Close" title="Theorem 8.2.3">Theorem 8.2.3</a>, <span class="process-math">\(\det(B) = k\det(A)\)</span> where <span class="process-math">\(k = 1, -1\)</span> or <span class="process-math">\(c\text{.}\)</span> Note that <span class="process-math">\(c\)</span> must be nonzero since scaling by zero is not an ERO. Thus <span class="process-math">\(k \ne 0\text{.}\)</span> This proves the corollary in this case.<div class="autopermalink" data-description="Paragraph"><a href="#cor-EROdet-2-1" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
+<div class="autopermalink" data-description="Corollary 12.2.4"><a href="#cor-EROdet" title="Copy heading and permalink for Corollary 12.2.4" aria-label="Copy heading and permalink for Corollary 12.2.4">🔗</a></div></article><details id="cor-EROdet-2" class="hiddenproof born-hidden-knowl"><summary class="knowl__link"><h3 class="heading"><span class="type">Proof<span class="period heading-divison-mark heading-divison-mark__period">.</span></span></h3></summary><article class="hiddenproof knowl__content"><div class="para" id="cor-EROdet-2-1">First assume that <span class="process-math">\(B\)</span> is obtained from <span class="process-math">\(A\)</span> by applying a single ERO. From <a href="sec-props-of-determinants.html#thm-EROdet" class="xref" data-knowl="./knowl/xref/thm-EROdet.html" data-reveal-label="Reveal" data-close-label="Close" title="Theorem 12.2.3">Theorem 12.2.3</a>, <span class="process-math">\(\det(B) = k\det(A)\)</span> where <span class="process-math">\(k = 1, -1\)</span> or <span class="process-math">\(c\text{.}\)</span> Note that <span class="process-math">\(c\)</span> must be nonzero since scaling by zero is not an ERO. Thus <span class="process-math">\(k \ne 0\text{.}\)</span> This proves the corollary in this case.<div class="autopermalink" data-description="Paragraph"><a href="#cor-EROdet-2-1" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
 </div>
 <div class="para" id="cor-EROdet-2-2">To prove the full corollary, we can repeatedly apply the version of it proved in the previous paragraph: <span class="process-math">\(k\)</span> will be a product of nonzero numbers and hence nonzero.<div class="autopermalink" data-description="Paragraph"><a href="#cor-EROdet-2-2" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
 </div>
-<div class="autopermalink" data-description="Proof 8.2.4.1"><a href="#cor-EROdet-2" title="Copy heading and permalink for Proof 8.2.4.1" aria-label="Copy heading and permalink for Proof 8.2.4.1">🔗</a></div></article></details><div class="para" id="sec-props-of-determinants-10">The theorem allows us to row reduce the matrix to a simpler one with more zeroes.<div class="autopermalink" data-description="Paragraph"><a href="#sec-props-of-determinants-10" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
+<div class="autopermalink" data-description="Proof 12.2.4.1"><a href="#cor-EROdet-2" title="Copy heading and permalink for Proof 12.2.4.1" aria-label="Copy heading and permalink for Proof 12.2.4.1">🔗</a></div></article></details><div class="para" id="sec-props-of-determinants-10">The theorem allows us to row reduce the matrix to a simpler one with more zeroes.<div class="autopermalink" data-description="Paragraph"><a href="#sec-props-of-determinants-10" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
 </div>
-<details id="ex-dets-through-EROs" class="example example-like born-hidden-knowl"><summary class="knowl__link"><h3 class="heading">
-<span class="type">Example</span><span class="space heading-divison-mark heading-divison-mark__space"> </span><span class="codenumber">8.2.5</span><span class="period heading-divison-mark heading-divison-mark__period">.</span>
-</h3></summary><article class="example example-like knowl__content"><div class="para logical" id="ex-dets-through-EROs-1-1">
+<article class="example example-like" id="ex-dets-through-EROs"><h3 class="heading">
+<span class="type">Example</span><span class="space heading-divison-mark heading-divison-mark__space"> </span><span class="codenumber">12.2.5</span><span class="period heading-divison-mark heading-divison-mark__period">.</span>
+</h3>
+<div class="para logical" id="ex-dets-through-EROs-1-1">
 <div class="para">Find the determinant of the matrix</div>
 <div class="displaymath process-math" id="ex-dets-through-EROs-1-1-1">
 \begin{equation*}
@@ -432,7 +438,7 @@ A =
 = B\text{.}
 \end{align*}
 </div>
-<div class="para">We have <span class="process-math">\(\det(B) = -\det(A)\)</span> by <a href="sec-props-of-determinants.html#thm-EROdet" class="xref" data-knowl="./knowl/xref/thm-EROdet.html" data-reveal-label="Reveal" data-close-label="Close" title="Theorem 8.2.3">Theorem 8.2.3</a>, due to the row swap (the other operations did not affect the determinant). Thus</div>
+<div class="para">We have <span class="process-math">\(\det(B) = -\det(A)\)</span> by <a href="sec-props-of-determinants.html#thm-EROdet" class="xref" data-knowl="./knowl/xref/thm-EROdet.html" data-reveal-label="Reveal" data-close-label="Close" title="Theorem 12.2.3">Theorem 12.2.3</a>, due to the row swap (the other operations did not affect the determinant). Thus</div>
 <div class="displaymath process-math" data-contains-math-knowls="./knowl/xref/thm-EROdet.html" id="ex-dets-through-EROs-1-2-5">
 \begin{equation*}
 \det(A) = -\det(B) = -
@@ -450,8 +456,8 @@ A =
 </div>
 <div class="autopermalink" data-description="Paragraph"><a href="#ex-dets-through-EROs-1-2" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
 </div>
-<div class="autopermalink" data-description="Example 8.2.5"><a href="#ex-dets-through-EROs" title="Copy heading and permalink for Example 8.2.5" aria-label="Copy heading and permalink for Example 8.2.5">🔗</a></div></article></details><article class="theorem theorem-like" id="thm-det"><h3 class="heading">
-<span class="type">Theorem</span><span class="space heading-divison-mark heading-divison-mark__space"> </span><span class="codenumber">8.2.6</span><span class="period heading-divison-mark heading-divison-mark__period">.</span>
+<div class="autopermalink" data-description="Example 12.2.5"><a href="#ex-dets-through-EROs" title="Copy heading and permalink for Example 12.2.5" aria-label="Copy heading and permalink for Example 12.2.5">🔗</a></div></article><article class="theorem theorem-like" id="thm-det"><h3 class="heading">
+<span class="type">Theorem</span><span class="space heading-divison-mark heading-divison-mark__space"> </span><span class="codenumber">12.2.6</span><span class="period heading-divison-mark heading-divison-mark__period">.</span>
 </h3>
 <div class="para logical" id="thm-det-1-1">
 <div class="para">Let <span class="process-math">\(A\)</span> and <span class="process-math">\(B\)</span> be <span class="process-math">\(n\times n\)</span> matrices, and let <span class="process-math">\(c\in \R\text{.}\)</span> Then</div>
@@ -488,10 +494,10 @@ A =
 </ol>
 <div class="autopermalink" data-description="Paragraph"><a href="#thm-det-1-1" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
 </div>
-<div class="autopermalink" data-description="Theorem 8.2.6"><a href="#thm-det" title="Copy heading and permalink for Theorem 8.2.6" aria-label="Copy heading and permalink for Theorem 8.2.6">🔗</a></div></article><details id="thm-det-2" class="hiddenproof born-hidden-knowl"><summary class="knowl__link"><h3 class="heading"><span class="type">Proof<span class="period heading-divison-mark heading-divison-mark__period">.</span></span></h3></summary><article class="hiddenproof knowl__content"><div class="para" id="thm-det-2-1">Property 1 holds because <span class="process-math">\(I_n\)</span> is a triangular matrix with all diagonal entries equal to <span class="process-math">\(1\text{,}\)</span> so <span class="process-math">\(\det(I_n) = 1 \times 1 \times \cdots \times 1 = 1\text{.}\)</span><div class="autopermalink" data-description="Paragraph"><a href="#thm-det-2-1" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
+<div class="autopermalink" data-description="Theorem 12.2.6"><a href="#thm-det" title="Copy heading and permalink for Theorem 12.2.6" aria-label="Copy heading and permalink for Theorem 12.2.6">🔗</a></div></article><details id="thm-det-2" class="hiddenproof born-hidden-knowl"><summary class="knowl__link"><h3 class="heading"><span class="type">Proof<span class="period heading-divison-mark heading-divison-mark__period">.</span></span></h3></summary><article class="hiddenproof knowl__content"><div class="para" id="thm-det-2-1">Property 1 holds because <span class="process-math">\(I_n\)</span> is a triangular matrix with all diagonal entries equal to <span class="process-math">\(1\text{,}\)</span> so <span class="process-math">\(\det(I_n) = 1 \times 1 \times \cdots \times 1 = 1\text{.}\)</span><div class="autopermalink" data-description="Paragraph"><a href="#thm-det-2-1" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
 </div>
 <div class="para logical" id="thm-det-2-2">
-<div class="para">Property 2 follows from <a href="sec-props-of-determinants.html#thm-EROdet" class="xref" data-knowl="./knowl/xref/thm-EROdet.html" data-reveal-label="Reveal" data-close-label="Close" title="Theorem 8.2.3">Theorem 8.2.3</a>, since <span class="process-math">\(cA\)</span> is obtained from <span class="process-math">\(A\)</span> by performing the sequence of <span class="process-math">\(n\)</span> EROs</div>
+<div class="para">Property 2 follows from <a href="sec-props-of-determinants.html#thm-EROdet" class="xref" data-knowl="./knowl/xref/thm-EROdet.html" data-reveal-label="Reveal" data-close-label="Close" title="Theorem 12.2.3">Theorem 12.2.3</a>, since <span class="process-math">\(cA\)</span> is obtained from <span class="process-math">\(A\)</span> by performing the sequence of <span class="process-math">\(n\)</span> EROs</div>
 <div class="displaymath process-math" data-contains-math-knowls="./knowl/xref/thm-EROdet.html" id="thm-det-2-2-5">
 \begin{equation*}
 R_1 \mapsto cR_1, R_2 \mapsto cR_2, \dots, R_n \mapsto cR_n,
@@ -516,9 +522,10 @@ R_1 \mapsto cR_1, R_2 \mapsto cR_2, \dots, R_n \mapsto cR_n,
 </div>
 <div class="para" id="thm-det-2-5">Finally, Property 5 holds because expanding along the <span class="process-math">\(i\)</span>th row of <span class="process-math">\(A^T\)</span> gives the same number as expanding along the <span class="process-math">\(i\)</span>th column of <span class="process-math">\(A\text{.}\)</span><div class="autopermalink" data-description="Paragraph"><a href="#thm-det-2-5" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
 </div>
-<div class="autopermalink" data-description="Proof 8.2.6.1"><a href="#thm-det-2" title="Copy heading and permalink for Proof 8.2.6.1" aria-label="Copy heading and permalink for Proof 8.2.6.1">🔗</a></div></article></details><details id="ex-det-and-matrix-algebra" class="example example-like born-hidden-knowl"><summary class="knowl__link"><h3 class="heading">
-<span class="type">Example</span><span class="space heading-divison-mark heading-divison-mark__space"> </span><span class="codenumber">8.2.7</span><span class="period heading-divison-mark heading-divison-mark__period">.</span>
-</h3></summary><article class="example example-like knowl__content"><div class="para logical" id="ex-det-and-matrix-algebra-1-1">
+<div class="autopermalink" data-description="Proof 12.2.6.1"><a href="#thm-det-2" title="Copy heading and permalink for Proof 12.2.6.1" aria-label="Copy heading and permalink for Proof 12.2.6.1">🔗</a></div></article></details><article class="example example-like" id="ex-det-and-matrix-algebra"><h3 class="heading">
+<span class="type">Example</span><span class="space heading-divison-mark heading-divison-mark__space"> </span><span class="codenumber">12.2.7</span><span class="period heading-divison-mark heading-divison-mark__period">.</span>
+</h3>
+<div class="para logical" id="ex-det-and-matrix-algebra-1-1">
 <div class="para">Let <span class="process-math">\(A\)</span> and <span class="process-math">\(B\)</span> be invertible <span class="process-math">\(3\times 3\)</span> matrices such that <span class="process-math">\(\det(A) = 2\)</span> and <span class="process-math">\(\det(B) = 5\text{.}\)</span> Then</div>
 <div class="displaymath process-math" id="ex-det-and-matrix-algebra-1-1-6">
 \begin{align*}
@@ -529,28 +536,28 @@ R_1 \mapsto cR_1, R_2 \mapsto cR_2, \dots, R_n \mapsto cR_n,
 </div>
 <div class="autopermalink" data-description="Paragraph"><a href="#ex-det-and-matrix-algebra-1-1" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
 </div>
-<div class="autopermalink" data-description="Example 8.2.7"><a href="#ex-det-and-matrix-algebra" title="Copy heading and permalink for Example 8.2.7" aria-label="Copy heading and permalink for Example 8.2.7">🔗</a></div></article></details><div class="para" id="sec-props-of-determinants-14">Remember that the reason we introduced the determinant was because we wanted a number which tells us whether a matrix is invertible. We can now show that this is precisely what the determinant does.<div class="autopermalink" data-description="Paragraph"><a href="#sec-props-of-determinants-14" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
+<div class="autopermalink" data-description="Example 12.2.7"><a href="#ex-det-and-matrix-algebra" title="Copy heading and permalink for Example 12.2.7" aria-label="Copy heading and permalink for Example 12.2.7">🔗</a></div></article><div class="para" id="sec-props-of-determinants-14">Remember that the reason we introduced the determinant was because we wanted a number which tells us whether a matrix is invertible. We can now show that this is precisely what the determinant does.<div class="autopermalink" data-description="Paragraph"><a href="#sec-props-of-determinants-14" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
 </div>
 <article class="theorem theorem-like" id="thm-invdet"><h3 class="heading">
-<span class="type">Theorem</span><span class="space heading-divison-mark heading-divison-mark__space"> </span><span class="codenumber">8.2.8</span><span class="period heading-divison-mark heading-divison-mark__period">.</span>
+<span class="type">Theorem</span><span class="space heading-divison-mark heading-divison-mark__space"> </span><span class="codenumber">12.2.8</span><span class="period heading-divison-mark heading-divison-mark__period">.</span>
 </h3>
 <div class="para" id="thm-invdet-1-1">An <span class="process-math">\(n\times n\)</span> matrix <span class="process-math">\(A\)</span> is invertible if and only if <span class="process-math">\(\det(A) \ne 0\text{.}\)</span><div class="autopermalink" data-description="Paragraph"><a href="#thm-invdet-1-1" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
 </div>
-<div class="autopermalink" data-description="Theorem 8.2.8"><a href="#thm-invdet" title="Copy heading and permalink for Theorem 8.2.8" aria-label="Copy heading and permalink for Theorem 8.2.8">🔗</a></div></article><details id="thm-invdet-2" class="hiddenproof born-hidden-knowl"><summary class="knowl__link"><h3 class="heading"><span class="type">Proof<span class="period heading-divison-mark heading-divison-mark__period">.</span></span></h3></summary><article class="hiddenproof knowl__content"><div class="para logical" id="thm-invdet-2-1">
+<div class="autopermalink" data-description="Theorem 12.2.8"><a href="#thm-invdet" title="Copy heading and permalink for Theorem 12.2.8" aria-label="Copy heading and permalink for Theorem 12.2.8">🔗</a></div></article><details id="thm-invdet-2" class="hiddenproof born-hidden-knowl"><summary class="knowl__link"><h3 class="heading"><span class="type">Proof<span class="period heading-divison-mark heading-divison-mark__period">.</span></span></h3></summary><article class="hiddenproof knowl__content"><div class="para logical" id="thm-invdet-2-1">
 <div class="para">Consider the augmented matrix <span class="process-math">\(\begin{amatrix}{c} A \amp  I
 \end{amatrix}\)</span> and its RREF <span class="process-math">\(\begin{amatrix}{c} R \amp  B
 \end{amatrix}
-\text{.}\)</span> If <span class="process-math">\(A\)</span> is invertible, then there is a sequence of EROs that reduces <span class="process-math">\(A\)</span> to <span class="process-math">\(I\text{,}\)</span> so by applying <a href="sec-props-of-determinants.html#cor-EROdet" class="xref" data-knowl="./knowl/xref/cor-EROdet.html" data-reveal-label="Reveal" data-close-label="Close" title="Corollary 8.2.4">Corollary 8.2.4</a>, there is a constant <span class="process-math">\(k\in\R\setminus\{0\}\)</span> such that</div>
+\text{.}\)</span> If <span class="process-math">\(A\)</span> is invertible, then there is a sequence of EROs that reduces <span class="process-math">\(A\)</span> to <span class="process-math">\(I\text{,}\)</span> so by applying <a href="sec-props-of-determinants.html#cor-EROdet" class="xref" data-knowl="./knowl/xref/cor-EROdet.html" data-reveal-label="Reveal" data-close-label="Close" title="Corollary 12.2.4">Corollary 12.2.4</a>, there is a constant <span class="process-math">\(k\in\R\setminus\{0\}\)</span> such that</div>
 <div class="displaymath process-math" data-contains-math-knowls="./knowl/xref/cor-EROdet.html ./knowl/xref/thm-det.html" id="thm-invdet-2-1-8">
 \begin{equation*}
 1 = \det(I) = k\det(A),
 \end{equation*}
 </div>
-<div class="para">so <span class="process-math">\(\det(A) \ne 0\text{.}\)</span> (Alternatively, we already showed this in <a href="sec-props-of-determinants.html#thm-det" class="xref" data-knowl="./knowl/xref/thm-det.html" data-reveal-label="Reveal" data-close-label="Close" title="Theorem 8.2.6">Theorem 8.2.6</a>.)</div>
+<div class="para">so <span class="process-math">\(\det(A) \ne 0\text{.}\)</span> (Alternatively, we already showed this in <a href="sec-props-of-determinants.html#thm-det" class="xref" data-knowl="./knowl/xref/thm-det.html" data-reveal-label="Reveal" data-close-label="Close" title="Theorem 12.2.6">Theorem 12.2.6</a>.)</div>
 <div class="autopermalink" data-description="Paragraph"><a href="#thm-invdet-2-1" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
 </div>
 <div class="para logical" id="thm-invdet-2-2">
-<div class="para">On the other hand, if <span class="process-math">\(A\)</span> is not invertible, then <span class="process-math">\(R\)</span> must have a row of zeroes, so <span class="process-math">\(\det(R) = 0\text{.}\)</span> Again applying <a href="sec-props-of-determinants.html#cor-EROdet" class="xref" data-knowl="./knowl/xref/cor-EROdet.html" data-reveal-label="Reveal" data-close-label="Close" title="Corollary 8.2.4">Corollary 8.2.4</a>, there is a nonzero constant <span class="process-math">\(k\)</span> such that</div>
+<div class="para">On the other hand, if <span class="process-math">\(A\)</span> is not invertible, then <span class="process-math">\(R\)</span> must have a row of zeroes, so <span class="process-math">\(\det(R) = 0\text{.}\)</span> Again applying <a href="sec-props-of-determinants.html#cor-EROdet" class="xref" data-knowl="./knowl/xref/cor-EROdet.html" data-reveal-label="Reveal" data-close-label="Close" title="Corollary 12.2.4">Corollary 12.2.4</a>, there is a nonzero constant <span class="process-math">\(k\)</span> such that</div>
 <div class="displaymath process-math" data-contains-math-knowls="./knowl/xref/cor-EROdet.html" id="thm-invdet-2-2-6">
 \begin{equation*}
 0 = \det(R)= k\det(A)\text{.}
@@ -560,9 +567,9 @@ R_1 \mapsto cR_1, R_2 \mapsto cR_2, \dots, R_n \mapsto cR_n,
 </div>
 <div class="autopermalink" data-description="Paragraph"><a href="#thm-invdet-2-2" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
 </div>
-<div class="autopermalink" data-description="Proof 8.2.8.1"><a href="#thm-invdet-2" title="Copy heading and permalink for Proof 8.2.8.1" aria-label="Copy heading and permalink for Proof 8.2.8.1">🔗</a></div></article></details><div class="autopermalink" data-description="Section 8.2: Properties of determinants"><a href="#sec-props-of-determinants" title="Copy heading and permalink for Section 8.2: Properties of determinants" aria-label="Copy heading and permalink for Section 8.2: Properties of determinants">🔗</a></div></section></div>
+<div class="autopermalink" data-description="Proof 12.2.8.1"><a href="#thm-invdet-2" title="Copy heading and permalink for Proof 12.2.8.1" aria-label="Copy heading and permalink for Proof 12.2.8.1">🔗</a></div></article></details><div class="autopermalink" data-description="Section 12.2: Properties of determinants"><a href="#sec-props-of-determinants" title="Copy heading and permalink for Section 12.2: Properties of determinants" aria-label="Copy heading and permalink for Section 12.2: Properties of determinants">🔗</a></div></section></div>
 <div id="ptx-content-footer" class="ptx-content-footer">
-<a class="previous-button button" href="sec-calculating-nxn-determinants.html" title="Previous"><span class="icon material-symbols-outlined" aria-hidden="true">&#xe5cb;</span><span class="name">Prev</span></a><a class="top-button button" href="#" title="Top"><span class="icon material-symbols-outlined" aria-hidden="true">&#xe5ce;</span><span class="name">Top</span></a><a class="next-button button" href="ch-span-and-li.html" title="Next"><span class="name">Next</span><span class="icon material-symbols-outlined" aria-hidden="true">&#xe5cc;</span></a>
+<a class="previous-button button" href="sec-calculating-nxn-determinants.html" title="Previous"><span class="icon material-symbols-outlined" aria-hidden="true">&#xe5cb;</span><span class="name">Prev</span></a><a class="top-button button" href="#" title="Top"><span class="icon material-symbols-outlined" aria-hidden="true">&#xe5ce;</span><span class="name">Top</span></a><a class="next-button button" href="ch-eigenvectors.html" title="Next"><span class="name">Next</span><span class="icon material-symbols-outlined" aria-hidden="true">&#xe5cc;</span></a>
 </div></main>
 </div>
 <div id="ptx-page-footer" class="ptx-page-footer">

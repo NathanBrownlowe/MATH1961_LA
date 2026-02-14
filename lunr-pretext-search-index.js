@@ -16,7 +16,7 @@ var ptx_lunr_docs = [
   "type": "Section",
   "number": "1.1",
   "title": "Vectors in the plane",
-  "body": " Vectors in the plane    A vector in the plane is a directed line segment, which is also called an `arrow'. The set of all vectors in the plane is denoted by .     A vector in the plane      An example is drawn in Figure . To understand the figure and the definition it is important to keep the following fact in mind:   Only the magnitude and direction of a vector matter, not its position in space.   In other words, we can think of a vector as an arrow `floating' in the plane, where translating the arrow (i.e.\\ moving it without rotating or stretching it) gives a vector which is `the same' as the original vector. This is illustrated in Figure : all of these arrows have the same magnitude and direction, so they represent the same vector.   These arrows all represent the same vector      We can also interpret vectors in an algebraic way, using coordinates. We will soon see that this is usually more convenient for doing calculations.     If is a point in the plane, then there is a vector from the origin to . It is denoted by or often by to save space. Note that round brackets are used for points, while square brackets are used for vectors. We call the position vector of the point . The numbers and are called the components of .   The position vector of a point        More generally, if and are points, then we consider the vector from to , written . This is shown in . We say that is the tail and that is the head or tip of the arrow. Since is the displacement vector from to , we have .  A vector         When using a single-letter variable to refer to a vector, it will be typed in bold: for example , , , or . In handwriting, we instead use a squiggle under the vector, which looks like , , etc.    There is a special vector called the zero vector , written as . This is the vector from the origin to the origin with zero magnitude. Therefore .  The zero vector          Recall that different arrows can represent the same vector. Given any arrow, we can move it so that its tail is at the origin.    A vector with its tail at the origin is said to be in standard position .    All position vectors are in standard position, and all vectors in standard position are position vectors of their tip. If is in standard position, where is some point, then . So in standard position, the components of the vector are exactly the same as the coordinates of the point .  Let and be any two vectors in . Then the vectors are equal if and only if they have the same displacement, i.e. which is precisely when the vectors have equal components. So if and , then if and only if and .    Let , , and . Which of the vectors , are equal?  We calculate that and , , and . Thus , and all the other vectors are distinct. (The components of are the negative of the components of , so and have the same length, but they are not equal vectors because they point in opposite directions.)    "
+  "body": " Vectors in the plane   (Vector in the plane)   A vector in the plane is a directed line segment, which is also called an `arrow'. The set of all vectors in the plane is denoted by .     A vector in the plane      An example is drawn in Figure . To understand the figure and the definition it is important to keep the following fact in mind:   Only the magnitude and direction of a vector matter, not its position in space.   In other words, we can think of a vector as an arrow `floating' in the plane, where translating the arrow (i.e.\\ moving it without rotating or stretching it) gives a vector which is `the same' as the original vector. This is illustrated in Figure : all of these arrows have the same magnitude and direction, so they represent the same vector.   These arrows all represent the same vector      We can also interpret vectors in an algebraic way, using coordinates. We will soon see that this is usually more convenient for doing calculations.   (Vector terminology)    If is a point in the plane, then there is a vector from the origin to . It is denoted by or often by to save space. Note that round brackets are used for points, while square brackets are used for vectors. We call the position vector of the point . The numbers and are called the components of .   The position vector of a point        More generally, if and are points, then we consider the vector from to , written . This is shown in . We say that is the tail and that is the head or tip of the arrow. Since is the displacement vector from to , we have .  A vector         When using a single-letter variable to refer to a vector, it will be typed in bold: for example , , , or . In handwriting, we instead use a squiggle under the vector, which looks like , , etc.    There is a special vector called the zero vector , written as . This is the vector from the origin to the origin with zero magnitude. Therefore .  The zero vector          Recall that different arrows can represent the same vector. Given any arrow, we can move it so that its tail is at the origin.   (Standard position)   A vector with its tail at the origin is said to be in standard position .    All position vectors are in standard position, and all vectors in standard position are position vectors of their tip. If is in standard position, where is some point, then . So in standard position, the components of the vector are exactly the same as the coordinates of the point .  Let and be any two vectors in . Then the vectors are equal if and only if they have the same displacement, i.e. which is precisely when the vectors have equal components. So if and , then if and only if and .    Let , , and . Which of the vectors , are equal?    We calculate that and , , and . Thus , and all the other vectors are distinct. (The components of are the negative of the components of , so and have the same length, but they are not equal vectors because they point in opposite directions.)    "
 },
 {
   "id": "def-vector-plane",
@@ -24,8 +24,8 @@ var ptx_lunr_docs = [
   "url": "sec-vectors-in-the-plane.html#def-vector-plane",
   "type": "Definition",
   "number": "1.1.1",
-  "title": "",
-  "body": "  A vector in the plane is a directed line segment, which is also called an `arrow'. The set of all vectors in the plane is denoted by .   "
+  "title": "(Vector in the plane).",
+  "body": " (Vector in the plane)   A vector in the plane is a directed line segment, which is also called an `arrow'. The set of all vectors in the plane is denoted by .   "
 },
 {
   "id": "fig-vector",
@@ -51,8 +51,8 @@ var ptx_lunr_docs = [
   "url": "sec-vectors-in-the-plane.html#def-notation-vectors",
   "type": "Definition",
   "number": "1.1.4",
-  "title": "",
-  "body": "   If is a point in the plane, then there is a vector from the origin to . It is denoted by or often by to save space. Note that round brackets are used for points, while square brackets are used for vectors. We call the position vector of the point . The numbers and are called the components of .   The position vector of a point        More generally, if and are points, then we consider the vector from to , written . This is shown in . We say that is the tail and that is the head or tip of the arrow. Since is the displacement vector from to , we have .  A vector         When using a single-letter variable to refer to a vector, it will be typed in bold: for example , , , or . In handwriting, we instead use a squiggle under the vector, which looks like , , etc.    There is a special vector called the zero vector , written as . This is the vector from the origin to the origin with zero magnitude. Therefore .  The zero vector         "
+  "title": "(Vector terminology).",
+  "body": " (Vector terminology)    If is a point in the plane, then there is a vector from the origin to . It is denoted by or often by to save space. Note that round brackets are used for points, while square brackets are used for vectors. We call the position vector of the point . The numbers and are called the components of .   The position vector of a point        More generally, if and are points, then we consider the vector from to , written . This is shown in . We say that is the tail and that is the head or tip of the arrow. Since is the displacement vector from to , we have .  A vector         When using a single-letter variable to refer to a vector, it will be typed in bold: for example , , , or . In handwriting, we instead use a squiggle under the vector, which looks like , , etc.    There is a special vector called the zero vector , written as . This is the vector from the origin to the origin with zero magnitude. Therefore .  The zero vector         "
 },
 {
   "id": "def-standard-pos",
@@ -60,8 +60,8 @@ var ptx_lunr_docs = [
   "url": "sec-vectors-in-the-plane.html#def-standard-pos",
   "type": "Definition",
   "number": "1.1.8",
-  "title": "",
-  "body": "  A vector with its tail at the origin is said to be in standard position .   "
+  "title": "(Standard position).",
+  "body": " (Standard position)   A vector with its tail at the origin is said to be in standard position .   "
 },
 {
   "id": "eg-finding-vectors",
@@ -70,7 +70,7 @@ var ptx_lunr_docs = [
   "type": "Example",
   "number": "1.1.9",
   "title": "",
-  "body": "  Let , , and . Which of the vectors , are equal?  We calculate that and , , and . Thus , and all the other vectors are distinct. (The components of are the negative of the components of , so and have the same length, but they are not equal vectors because they point in opposite directions.)   "
+  "body": "  Let , , and . Which of the vectors , are equal?    We calculate that and , , and . Thus , and all the other vectors are distinct. (The components of are the negative of the components of , so and have the same length, but they are not equal vectors because they point in opposite directions.)   "
 },
 {
   "id": "sec-vector-algebra",
@@ -79,7 +79,7 @@ var ptx_lunr_docs = [
   "type": "Section",
   "number": "1.2",
   "title": "Vector algebra",
-  "body": " Vector algebra  There are two main operations which can be performed on vectors. The first is addition. We add vectors by adding their components.    Given two vectors and , the sum of and is .      If and , then .    Geometrically, vectors are added `tip to tail'. Here's what this means. To calculate geometrically, there are two steps.   Position so that its tail touches the tip of .    To find , draw the arrow that completes the triangle with other two sides and .   In other words, is then vector with its tail at the tail of , and with tip at the tip of , as shown in .   Adding vectors tip to tail        Let and . Algebraically, . We can also calculate this geometrically, which is done in , giving the same answer that .   , geometrically        Addition of vectors is commutative , which means that for any vectors , .  This is shown geometrically by the parallelogram rule in .  We can also prove this algebraically. (You might want to assume that anything called addition or using the symbol is commutative, because we know that when and are real or complex numbers. But since vector addition is a new operation, we need to prove it.) The proof is that .   The parallelogram rule shows geometrically that .      Vector addition is also associative , which means that for all vectors , .  The second main vector operation is scaling. We may call real numbers scalars , since they are used to scale vectors.    Let be a scalar and a vector. The scalar multiple  is the vector .    Geometrically, scales by a factor of , and flips if .   Special cases:  , and . We define the negative of by . Then has the same length but the opposite direction of .    Let Find , and .  Algebraically, , , and . This is shown geometrically in .   Scaling in this example    \\    We can subtract a vector by adding its negative.   Vector subtraction   Let be vectors. We define vector subtraction by . So if and , then .    If and are points, then we previously introduced the position vectors and , and the vector We can now calculate that .   The complex numbers can be considered to be a set of vectors, with the operations for . To see how this fits in with our geometric definition of a vector in the plane, consider in polar form. Then the modulus is the length of the vector and the angle determines its direction. This definition of addition and scaling in the complex plane corresponds to the definitions for the Cartesian plane, after the association of with .    Comparison of vectors in and .    Vector addition in .       Vector addition in .        "
+  "body": " Vector algebra  There are two main operations which can be performed on vectors. The first is addition. We add vectors by adding their components.   (Sum of vectors)   Given two vectors and , the sum of and is .    Geometrically, vectors are added `tip to tail'. Here's what this means. To calculate geometrically, there are two steps.   Position so that its tail touches the tip of .    To find , draw the arrow that completes the triangle with other two sides and .   In other words, is then vector with its tail at the tail of , and with tip at the tip of , as shown in .   Adding vectors tip to tail       (Finding the sum of vectors)   Algebraically and geometrically, find the sum of and .    Algebraically, we have . We can also calculate this geometrically, which is done in , giving the same answer that .   , geometrically        Addition of vectors is commutative , which means that for any vectors , .  This is shown geometrically by the parallelogram rule in .  We can also prove this algebraically. (You might want to assume that anything called addition or using the symbol is commutative, because we know that when and are real or complex numbers. But since vector addition is a new operation, we need to prove it.) The proof is that .   The parallelogram rule shows geometrically that .      Vector addition is also associative , which means that for all vectors , .  The second main vector operation is scaling. We may call real numbers scalars , since they are used to scale vectors.   (Scalar multiple)   Let be a scalar and a vector. The scalar multiple  is the vector .    Geometrically, scales by a factor of , and flips if .   Special cases:  , and . We define the negative of by . Then has the same length but the opposite direction of .   (Finding scalar multiples)   Let Find , and .    Algebraically, , , and . This is shown geometrically in .   Scaling in this example        We can subtract a vector by adding its negative.   (Vector subtraction)   Let be vectors. We define vector subtraction by . So if and , then .    If and are points, then we previously introduced the position vectors and , and the vector We can now calculate that .   The complex numbers can be considered to be a set of vectors, with the operations for . To see how this fits in with our geometric definition of a vector in the plane, consider in polar form. Then the modulus is the length of the vector and the angle determines its direction. This definition of addition and scaling in the complex plane corresponds to the definitions for the Cartesian plane, after the association of with .    Comparison of vectors in and .    Vector addition in .       Vector addition in .        "
 },
 {
   "id": "def-sum-vec",
@@ -87,24 +87,15 @@ var ptx_lunr_docs = [
   "url": "sec-vector-algebra.html#def-sum-vec",
   "type": "Definition",
   "number": "1.2.1",
-  "title": "",
-  "body": "  Given two vectors and , the sum of and is .   "
-},
-{
-  "id": "",
-  "level": "2",
-  "url": "sec-vector-algebra.html#",
-  "type": "Example",
-  "number": "1.2.2",
-  "title": "",
-  "body": "  If and , then .   "
+  "title": "(Sum of vectors).",
+  "body": " (Sum of vectors)   Given two vectors and , the sum of and is .   "
 },
 {
   "id": "fig-ttt",
   "level": "2",
   "url": "sec-vector-algebra.html#fig-ttt",
   "type": "Figure",
-  "number": "1.2.3",
+  "number": "1.2.2",
   "title": "",
   "body": " Adding vectors tip to tail     "
 },
@@ -113,23 +104,23 @@ var ptx_lunr_docs = [
   "level": "2",
   "url": "sec-vector-algebra.html#ex-add",
   "type": "Example",
-  "number": "1.2.4",
-  "title": "",
-  "body": "  Let and . Algebraically, . We can also calculate this geometrically, which is done in , giving the same answer that .   , geometrically       "
+  "number": "1.2.3",
+  "title": "(Finding the sum of vectors).",
+  "body": " (Finding the sum of vectors)   Algebraically and geometrically, find the sum of and .    Algebraically, we have . We can also calculate this geometrically, which is done in , giving the same answer that .   , geometrically       "
 },
 {
-  "id": "sec-vector-algebra-8",
+  "id": "sec-vector-algebra-7",
   "level": "2",
-  "url": "sec-vector-algebra.html#sec-vector-algebra-8",
+  "url": "sec-vector-algebra.html#sec-vector-algebra-7",
   "type": "Paragraph (with a defined term)",
   "number": "",
   "title": "",
   "body": "commutative "
 },
 {
-  "id": "sec-vector-algebra-9",
+  "id": "sec-vector-algebra-8",
   "level": "2",
-  "url": "sec-vector-algebra.html#sec-vector-algebra-9",
+  "url": "sec-vector-algebra.html#sec-vector-algebra-8",
   "type": "Paragraph (with a defined term)",
   "number": "",
   "title": "",
@@ -140,23 +131,23 @@ var ptx_lunr_docs = [
   "level": "2",
   "url": "sec-vector-algebra.html#fig-parallrule",
   "type": "Figure",
-  "number": "1.2.6",
+  "number": "1.2.5",
   "title": "",
   "body": " The parallelogram rule shows geometrically that .     "
 },
 {
-  "id": "sec-vector-algebra-12",
+  "id": "sec-vector-algebra-11",
   "level": "2",
-  "url": "sec-vector-algebra.html#sec-vector-algebra-12",
+  "url": "sec-vector-algebra.html#sec-vector-algebra-11",
   "type": "Paragraph (with a defined term)",
   "number": "",
   "title": "",
   "body": "associative "
 },
 {
-  "id": "sec-vector-algebra-13",
+  "id": "sec-vector-algebra-12",
   "level": "2",
-  "url": "sec-vector-algebra.html#sec-vector-algebra-13",
+  "url": "sec-vector-algebra.html#sec-vector-algebra-12",
   "type": "Paragraph (with a defined term)",
   "number": "",
   "title": "",
@@ -167,14 +158,14 @@ var ptx_lunr_docs = [
   "level": "2",
   "url": "sec-vector-algebra.html#def-scaling",
   "type": "Definition",
-  "number": "1.2.7",
-  "title": "",
-  "body": "  Let be a scalar and a vector. The scalar multiple  is the vector .   "
+  "number": "1.2.6",
+  "title": "(Scalar multiple).",
+  "body": " (Scalar multiple)   Let be a scalar and a vector. The scalar multiple  is the vector .   "
 },
 {
-  "id": "sec-vector-algebra-16",
+  "id": "sec-vector-algebra-15",
   "level": "2",
-  "url": "sec-vector-algebra.html#sec-vector-algebra-16",
+  "url": "sec-vector-algebra.html#sec-vector-algebra-15",
   "type": "Paragraph (with a defined term)",
   "number": "",
   "title": "",
@@ -185,25 +176,25 @@ var ptx_lunr_docs = [
   "level": "2",
   "url": "sec-vector-algebra.html#ex-scale",
   "type": "Example",
-  "number": "1.2.8",
-  "title": "",
-  "body": "  Let Find , and .  Algebraically, , , and . This is shown geometrically in .   Scaling in this example    \\   "
+  "number": "1.2.7",
+  "title": "(Finding scalar multiples).",
+  "body": " (Finding scalar multiples)   Let Find , and .    Algebraically, , , and . This is shown geometrically in .   Scaling in this example       "
 },
 {
   "id": "def-vec-subtraction",
   "level": "2",
   "url": "sec-vector-algebra.html#def-vec-subtraction",
   "type": "Definition",
-  "number": "1.2.10",
-  "title": "Vector subtraction.",
-  "body": " Vector subtraction   Let be vectors. We define vector subtraction by . So if and , then .   "
+  "number": "1.2.9",
+  "title": "(Vector subtraction).",
+  "body": " (Vector subtraction)   Let be vectors. We define vector subtraction by . So if and , then .   "
 },
 {
   "id": "vectors-complex-numbers",
   "level": "2",
   "url": "sec-vector-algebra.html#vectors-complex-numbers",
   "type": "Remark",
-  "number": "1.2.11",
+  "number": "1.2.10",
   "title": "",
   "body": " The complex numbers can be considered to be a set of vectors, with the operations for . To see how this fits in with our geometric definition of a vector in the plane, consider in polar form. Then the modulus is the length of the vector and the angle determines its direction. This definition of addition and scaling in the complex plane corresponds to the definitions for the Cartesian plane, after the association of with .  "
 },
@@ -212,7 +203,7 @@ var ptx_lunr_docs = [
   "level": "2",
   "url": "sec-vector-algebra.html#R2-and-C",
   "type": "Figure",
-  "number": "1.2.12",
+  "number": "1.2.11",
   "title": "",
   "body": " Comparison of vectors in and .    Vector addition in .       Vector addition in .       "
 },
@@ -223,7 +214,7 @@ var ptx_lunr_docs = [
   "type": "Section",
   "number": "1.3",
   "title": "Vectors in <span class=\"process-math\">\\(\\mathbb{R}^n\\)<\/span>",
-  "body": " Vectors in  Vectors in are very similar to vectors in the plane, except they have components instead of 2.   Vectors in   A vector  in is an expression of the form or to save space, with components .    The definition of vector addition and scaling in is component-wise, like in . Let be a scalar, and be vectors. Then we define the sum  and the scalar multiple  .  The zero vector in is the vector having components which are all zero.  A vector in can still be interpreted as a directed line segment in -dimensional space. In , we can still draw vectors, add vectors tip to tail, and interpret scaling as scaling in -dimensional space. See for how to plot a vector in using its components. In for , we can't draw vectors. However, our algebraic methods developed for still work for , without any issues.   The vector in       We can view vectors in as real numbers: for , we consider this the same as . For example, we view the vector as the number 2.     In , let and . Then     The following fundamental properties of vectors in describes how addition, scaling, negation, and the zero vector interact. We will call this a `Theorem', which is a name in mathematics for a fact or result, usually an important one.    Let and . Then   (commutativity)    (associativity)            (distributivity)    (distributivity)        .      Properties 5 and 6 are both known as distributivity. Associativity (Property 2) allows us to write sums of several vectors without using any brackets, because no matter what order the sums are performed in, the resulting vector will be same.  Theorems are closely related to `proofs', which is a mathematical demonstration of why the fact is true. We will prove Properties 3-6 to give an indication of how to do it. The proof of the remaining properties will be left as an exercise.   Let and . Then Property 3 is proved by , Property 4 holds since and Property 5 holds since .  Finally, the following calculation . proves Property 6.   We can use these properties to simplify vector expressions.    Let . The expression is simplified by     We went through this example in detail to show how all the properties are applied. But in practice means that we can simplify vector algebra intuitively, using similar rules to algebra with numbers. So we can combine most of the steps to do it faster, for example .  So far, we know how to add and scale vectors. We will give a name to what happens when we combine addition with scaling.    A vector is a linear combination of vectors if there are scalars such that .  The scalars are called the coefficients of the linear combination.      Write as a linear combination of and . Let , i.e\\ .  Comparing components gives so . Thus . See .   From , showing          Is it possible to write as a linear combination of and ?  Suppose we try to write , so .  Comparing coefficients gives   Adding these equations gives , which is a contradiction. Therefore cannot be written as a linear combination of and . This is also shown in : since does not lie on the dashed line, it cannot be a linear combination of and .   All linear combinations of and lie on the dashed line        In both of these examples, we had to solve a system of linear equations. This can be done by scaling and elimination (subtraction). However, in , we will introduce augmented matrices which provide a better way of solving systems of linear equations.  "
+  "body": " Vectors in  Vectors in are very similar to vectors in the plane, except they have components instead of 2.   (Vectors in )   A vector  in is an expression of the form or to save space, with components .    The definition of vector addition and scaling in is component-wise, like in .   (Vector algebra in )   Let be a scalar, and be vectors. Then we define the sum  and the scalar multiple  .  The zero vector in is the vector having components which are all zero.    A vector in can still be interpreted as a directed line segment in -dimensional space. In , we can still draw vectors, add vectors tip to tail, and interpret scaling as scaling in -dimensional space. See for how to plot a vector in using its components. In for , we can't draw vectors. However, our algebraic methods developed for still work for , without any issues.   The vector in       We can view vectors in as real numbers: for , we consider this the same as . For example, we view the vector as the number 2.     In , let and . Then     The following fundamental properties of vectors in describes how addition, scaling, negation, and the zero vector interact. We will call this a `Theorem', which is a name in mathematics for a fact or result, usually an important one.   (Properties of vectors in )   Let and . Then   (commutativity)    (associativity)            (distributivity)    (distributivity)        .      Associativity (Property 2) allows us to write sums of several vectors without using any brackets, because no matter what order the sums are performed in, the resulting vector will be same.  Theorems are closely related to `proofs', which is a mathematical demonstration of why the fact is true. We will prove Properties 3-6 to give an indication of how to do it. The proof of the remaining properties will be left as an exercise.   Let and . Then Property 3 is proved by . Property 4 holds since and Property 5 holds since .  Finally, the following calculation proves Property 6.   We can use these properties to simplify vector expressions.   (Simplifying expression)   Let . Carefully use the properties of vectors in to simplify the expression .    We have     We went through this example in detail to show how all the properties are applied. But in practice means that we can simplify vector algebra intuitively, using similar rules to algebra with numbers. So we can combine most of the steps to do it faster, for example .  So far, we know how to add and scale vectors. We will give a name to what happens when we combine addition with scaling.   (Linear combination)   A vector is a linear combination of vectors if there are scalars such that .  The scalars are called the coefficients of the linear combination.     (Determining a linear combination)   Write as a linear combination of and .    Let , i.e. .  Comparing components gives so . Thus . See .   From , showing         (Are all vectors linear combinations?)   Is it possible to write as a linear combination of and ?    Suppose we try to write , so .  Comparing coefficients gives   Adding these equations gives , which is a contradiction. Therefore cannot be written as a linear combination of and . This is also shown in : since does not lie on the dashed line, it cannot be a linear combination of and .   All linear combinations of and lie on the dashed line        In both of these examples, we had to solve a system of linear equations. This can be done by scaling and elimination (subtraction). However, in , we will introduce augmented matrices which provide a better way of solving systems of linear equations.  "
 },
 {
   "id": "def-vectors-in-Rn",
@@ -231,33 +222,24 @@ var ptx_lunr_docs = [
   "url": "sec-vectors-in-Rn.html#def-vectors-in-Rn",
   "type": "Definition",
   "number": "1.3.1",
-  "title": "Vectors in <span class=\"process-math\">\\(\\R^n\\)<\/span>.",
-  "body": " Vectors in   A vector  in is an expression of the form or to save space, with components .   "
+  "title": "(Vectors in <span class=\"process-math\">\\(\\R^n\\)<\/span>).",
+  "body": " (Vectors in )   A vector  in is an expression of the form or to save space, with components .   "
 },
 {
-  "id": "sec-vectors-in-Rn-4",
+  "id": "def-vec-alg-in-Rn",
   "level": "2",
-  "url": "sec-vectors-in-Rn.html#sec-vectors-in-Rn-4",
-  "type": "Paragraph (with a defined term)",
-  "number": "",
-  "title": "",
-  "body": "sum scalar multiple "
-},
-{
-  "id": "sec-vectors-in-Rn-5",
-  "level": "2",
-  "url": "sec-vectors-in-Rn.html#sec-vectors-in-Rn-5",
-  "type": "Paragraph (with a defined term)",
-  "number": "",
-  "title": "",
-  "body": "zero vector "
+  "url": "sec-vectors-in-Rn.html#def-vec-alg-in-Rn",
+  "type": "Definition",
+  "number": "1.3.2",
+  "title": "(Vector algebra in <span class=\"process-math\">\\(\\R^n\\)<\/span>).",
+  "body": " (Vector algebra in )   Let be a scalar, and be vectors. Then we define the sum  and the scalar multiple  .  The zero vector in is the vector having components which are all zero.   "
 },
 {
   "id": "fig-vecR3",
   "level": "2",
   "url": "sec-vectors-in-Rn.html#fig-vecR3",
   "type": "Figure",
-  "number": "1.3.2",
+  "number": "1.3.3",
   "title": "",
   "body": " The vector in     "
 },
@@ -266,16 +248,16 @@ var ptx_lunr_docs = [
   "level": "2",
   "url": "sec-vectors-in-Rn.html#rem-vecs-and-reals",
   "type": "Remark",
-  "number": "1.3.3",
+  "number": "1.3.4",
   "title": "",
   "body": " We can view vectors in as real numbers: for , we consider this the same as . For example, we view the vector as the number 2.  "
 },
 {
-  "id": "",
+  "id": "ex-basic-vec-algebra",
   "level": "2",
-  "url": "sec-vectors-in-Rn.html#",
+  "url": "sec-vectors-in-Rn.html#ex-basic-vec-algebra",
   "type": "Example",
-  "number": "1.3.4",
+  "number": "1.3.5",
   "title": "",
   "body": "  In , let and . Then    "
 },
@@ -284,9 +266,9 @@ var ptx_lunr_docs = [
   "level": "2",
   "url": "sec-vectors-in-Rn.html#thm-vec-prop",
   "type": "Theorem",
-  "number": "1.3.5",
-  "title": "",
-  "body": "  Let and . Then   (commutativity)    (associativity)            (distributivity)    (distributivity)        .     "
+  "number": "1.3.6",
+  "title": "(Properties of vectors in <span class=\"process-math\">\\(\\R^n\\)<\/span>).",
+  "body": " (Properties of vectors in )   Let and . Then   (commutativity)    (associativity)            (distributivity)    (distributivity)        .     "
 },
 {
   "id": "sec-vectors-in-Rn-14",
@@ -295,43 +277,43 @@ var ptx_lunr_docs = [
   "type": "Proof",
   "number": "1.3.1",
   "title": "",
-  "body": " Let and . Then Property 3 is proved by , Property 4 holds since and Property 5 holds since .  Finally, the following calculation . proves Property 6.  "
+  "body": " Let and . Then Property 3 is proved by . Property 4 holds since and Property 5 holds since .  Finally, the following calculation proves Property 6.  "
 },
 {
   "id": "ex-algebraic-props",
   "level": "2",
   "url": "sec-vectors-in-Rn.html#ex-algebraic-props",
   "type": "Example",
-  "number": "1.3.6",
-  "title": "",
-  "body": "  Let . The expression is simplified by    "
+  "number": "1.3.7",
+  "title": "(Simplifying expression).",
+  "body": " (Simplifying expression)   Let . Carefully use the properties of vectors in to simplify the expression .    We have    "
 },
 {
   "id": "def-lincomb",
   "level": "2",
   "url": "sec-vectors-in-Rn.html#def-lincomb",
   "type": "Definition",
-  "number": "1.3.7",
-  "title": "",
-  "body": "  A vector is a linear combination of vectors if there are scalars such that .  The scalars are called the coefficients of the linear combination.   "
+  "number": "1.3.8",
+  "title": "(Linear combination).",
+  "body": " (Linear combination)   A vector is a linear combination of vectors if there are scalars such that .  The scalars are called the coefficients of the linear combination.   "
 },
 {
   "id": "ex-lincomb",
   "level": "2",
   "url": "sec-vectors-in-Rn.html#ex-lincomb",
   "type": "Example",
-  "number": "1.3.8",
-  "title": "",
-  "body": "  Write as a linear combination of and . Let , i.e\\ .  Comparing components gives so . Thus . See .   From , showing       "
+  "number": "1.3.9",
+  "title": "(Determining a linear combination).",
+  "body": " (Determining a linear combination)   Write as a linear combination of and .    Let , i.e. .  Comparing components gives so . Thus . See .   From , showing       "
 },
 {
   "id": "ex-non-lc",
   "level": "2",
   "url": "sec-vectors-in-Rn.html#ex-non-lc",
   "type": "Example",
-  "number": "1.3.10",
-  "title": "",
-  "body": "  Is it possible to write as a linear combination of and ?  Suppose we try to write , so .  Comparing coefficients gives   Adding these equations gives , which is a contradiction. Therefore cannot be written as a linear combination of and . This is also shown in : since does not lie on the dashed line, it cannot be a linear combination of and .   All linear combinations of and lie on the dashed line       "
+  "number": "1.3.11",
+  "title": "(Are all vectors linear combinations?).",
+  "body": " (Are all vectors linear combinations?)   Is it possible to write as a linear combination of and ?    Suppose we try to write , so .  Comparing coefficients gives   Adding these equations gives , which is a contradiction. Therefore cannot be written as a linear combination of and . This is also shown in : since does not lie on the dashed line, it cannot be a linear combination of and .   All linear combinations of and lie on the dashed line       "
 },
 {
   "id": "sec-length-of-a-vector",
@@ -340,7 +322,7 @@ var ptx_lunr_docs = [
   "type": "Section",
   "number": "1.4",
   "title": "Length of a vector",
-  "body": " Length of a vector  When we mentioned the length of a vector earlier, we just mean its length as a line segment in space. For a vector in standard position, this is the same as its distance to the origin, which we can calculate using the usual distance formula as follows.    The length of a vector is given by .    Note that the length of a vector is nonnegative, and it is zero if and only if .  We can show that scaling a vector scales its length: for and , where is the absolute value of .   Absolute values are like lengths, and the length of a vector in is just its absolute value. In these notes, we use the notation (instead of ) for the length of a vector to emphasize the fact that we are working with vectors (instead of numbers).     The lengths of the vectors and are and .    We can scale any nonzero vector to have length .    A unit vector is a vector of length .    Let be a nonzero vector. Then its normalisation is , which is the unit vector in the same direction as . Indeed, has the same direction as since , and it is a unit vector since .    Show that is not a unit vector, and normalise .  Its length is , so is not a unit vector. Its normalisation is     In , for all , let be the vector with 1 in the th component and in every other component. The vectors are unit vectors, called the standard unit vectors in . Note that when , the standard unit vectors are and , and in , the standard unit vectors are , and .   Standard unit vectors.    In .       In .        "
+  "body": " Length of a vector  When we mentioned the length of a vector earlier, we just mean its length as a line segment in space. For a vector in standard position, this is the same as its distance to the origin, which we can calculate using the usual distance formula as follows.   (Vector length)   The length of a vector is given by .    Note that the length of a vector is nonnegative, and it is zero if and only if .  We can show that scaling a vector scales its length: for and , where is the absolute value of .   Absolute values are like lengths, and the length of a vector in is just its absolute value. In these notes, we use the notation (instead of ) for the length of a vector to emphasize the fact that we are working with vectors (instead of numbers).     The lengths of the vectors and are and .    We can scale any nonzero vector to have length .   (Unit vector)   A unit vector is a vector of length .    Let be a nonzero vector. Then its normalisation is , which is the unit vector in the same direction as . Indeed, has the same direction as since , and it is a unit vector since .    Show that is not a unit vector, and normalise .  Its length is , so is not a unit vector. Its normalisation is      (Standard unit vectors)   In , for all , let be the vector with 1 in the th component and in every other component. The vectors are unit vectors, called the standard unit vectors in . Note that when , the standard unit vectors are and , and in , the standard unit vectors are , and .   Standard unit vectors.    In .       In .          "
 },
 {
   "id": "def-length",
@@ -348,8 +330,8 @@ var ptx_lunr_docs = [
   "url": "sec-length-of-a-vector.html#def-length",
   "type": "Definition",
   "number": "1.4.1",
-  "title": "",
-  "body": "  The length of a vector is given by .   "
+  "title": "(Vector length).",
+  "body": " (Vector length)   The length of a vector is given by .   "
 },
 {
   "id": "rem-length-and-abs-value",
@@ -375,8 +357,8 @@ var ptx_lunr_docs = [
   "url": "sec-length-of-a-vector.html#def-unit-vector",
   "type": "Definition",
   "number": "1.4.4",
-  "title": "",
-  "body": "  A unit vector is a vector of length .   "
+  "title": "(Unit vector).",
+  "body": " (Unit vector)   A unit vector is a vector of length .   "
 },
 {
   "id": "sec-length-of-a-vector-10",
@@ -397,22 +379,13 @@ var ptx_lunr_docs = [
   "body": "  Show that is not a unit vector, and normalise .  Its length is , so is not a unit vector. Its normalisation is    "
 },
 {
-  "id": "sec-length-of-a-vector-12",
+  "id": "def-standard-unit-vectors",
   "level": "2",
-  "url": "sec-length-of-a-vector.html#sec-length-of-a-vector-12",
-  "type": "Paragraph (with a defined term)",
-  "number": "",
-  "title": "",
-  "body": "standard unit vectors "
-},
-{
-  "id": "standard-unit-vectors",
-  "level": "2",
-  "url": "sec-length-of-a-vector.html#standard-unit-vectors",
-  "type": "Figure",
+  "url": "sec-length-of-a-vector.html#def-standard-unit-vectors",
+  "type": "Definition",
   "number": "1.4.6",
-  "title": "",
-  "body": " Standard unit vectors.    In .       In .       "
+  "title": "(Standard unit vectors).",
+  "body": " (Standard unit vectors)   In , for all , let be the vector with 1 in the th component and in every other component. The vectors are unit vectors, called the standard unit vectors in . Note that when , the standard unit vectors are and , and in , the standard unit vectors are , and .   Standard unit vectors.    In .       In .         "
 },
 {
   "id": "sec-vector-spaces",
@@ -421,7 +394,7 @@ var ptx_lunr_docs = [
   "type": "Section",
   "number": "1.5",
   "title": "Vector Spaces",
-  "body": " Vector Spaces  In we identified eight properties satisfied by vector addition and scalar multiplication on . It turns out that these properties are exactly what is needed to produce the more general notion of a vector space.    A vector space over is a set together with   an operation satisfying     a scalar multiplication of satisfying     a vector     for each a vector    satisfying, for all and ,   (commutativity)    (associativity)            (distributivity)    (distributivity)        .        We call the operation addition . When addition satisfies (the first dot point above), we say that  is closed under addition . Similarly, when the scalar multiplication operation satisfies , we say that is closed under scalar multiplication .  The vector is called a zero vector , and given , the vector is called an additive inverse of  . (In the first tutorial you will be asked to show that the zero vector and the additive inverses are unique.)      We have not given the most general definition of a vector space. To do this, we would need to replace the real numbers by a more general mathematical object called a field . You will learn more about fields in second-year mathematics.      By we know that under the usual addition and scalar multiplication operations is a vector space.      Here are some other examples of vector spaces. We will leave the proofs as an exercise (some of which are difficult!).   The set of all functions under the usual pointwise addition and scalar multiplication operations is a vector space over .    The sets are all vector spaces over under the usual pointwise operations.   We will later see that the set of with real entries is a vector space over under the usual operations of matrix addition and scalar multiplication.      "
+  "body": " Vector Spaces  In we identified eight properties satisfied by vector addition and scalar multiplication on . It turns out that these properties are exactly what is needed to produce the more general notion of a vector space.  Vector spaces are ubiquitous across mathematics, and you will learn a lot more about them in higher-level units.   (Vector space over )   A vector space over is a set together with   an operation satisfying     a scalar multiplication of satisfying     a vector     for each a vector    satisfying, for all and ,   (commutativity)    (associativity)            (distributivity)    (distributivity)        .        We call the operation addition . When addition satisfies (the first dot point above), we say that  is closed under addition . Similarly, when the scalar multiplication operation satisfies , we say that is closed under scalar multiplication .  The vector is called a zero vector , and given , the vector is called an additive inverse of  . (In the first tutorial you will be asked to show that the zero vector and the additive inverses are unique.)      We have not given the most general definition of a vector space. To do this, we would need to replace the real numbers by a more general mathematical object called a field . You will learn more about fields in second-year mathematics.      By we know that under the usual addition and scalar multiplication operations is a vector space.      Here are some other examples of vector spaces. We will leave the proofs as an exercise (some of which are difficult!).   The set of all functions under the usual pointwise addition and scalar multiplication operations is a vector space over .    The sets are all vector spaces over under the usual pointwise operations.    We will later see that the set of matrices with real entries is a vector space over under the usual operations of matrix addition and scalar multiplication.    Suppose , and for , , define addition and scalar multiplication by Is under these operations a vector space?       So much of what we will do the rest of the way would also work at the level of general vector spaces, but to keep things simple, we will almost exclusively focus on the example for the rest of these notes.  "
 },
 {
   "id": "def-vec-spaces",
@@ -429,8 +402,8 @@ var ptx_lunr_docs = [
   "url": "sec-vector-spaces.html#def-vec-spaces",
   "type": "Definition",
   "number": "1.5.1",
-  "title": "",
-  "body": "  A vector space over is a set together with   an operation satisfying     a scalar multiplication of satisfying     a vector     for each a vector    satisfying, for all and ,   (commutativity)    (associativity)            (distributivity)    (distributivity)        .     "
+  "title": "(Vector space over <span class=\"process-math\">\\(\\R\\)<\/span>).",
+  "body": " (Vector space over )   A vector space over is a set together with   an operation satisfying     a scalar multiplication of satisfying     a vector     for each a vector    satisfying, for all and ,   (commutativity)    (associativity)            (distributivity)    (distributivity)        .     "
 },
 {
   "id": "rem-vec-space-terms",
@@ -466,7 +439,7 @@ var ptx_lunr_docs = [
   "type": "Example",
   "number": "1.5.5",
   "title": "",
-  "body": "  Here are some other examples of vector spaces. We will leave the proofs as an exercise (some of which are difficult!).   The set of all functions under the usual pointwise addition and scalar multiplication operations is a vector space over .    The sets are all vector spaces over under the usual pointwise operations.   We will later see that the set of with real entries is a vector space over under the usual operations of matrix addition and scalar multiplication.     "
+  "body": "  Here are some other examples of vector spaces. We will leave the proofs as an exercise (some of which are difficult!).   The set of all functions under the usual pointwise addition and scalar multiplication operations is a vector space over .    The sets are all vector spaces over under the usual pointwise operations.    We will later see that the set of matrices with real entries is a vector space over under the usual operations of matrix addition and scalar multiplication.    Suppose , and for , , define addition and scalar multiplication by Is under these operations a vector space?      "
 },
 {
   "id": "sec-dot-products",
@@ -475,16 +448,16 @@ var ptx_lunr_docs = [
   "type": "Section",
   "number": "2.1",
   "title": "Dot products",
-  "body": " Dot products    The dot product of the vectors and is the scalar .    It is important not to leave out the dot when writing the dot product, to distinguish this from the cross product which will be introduced later. For example, if and , then . If and , then .  The dot product has the following properties.    Let , and . Then   (commutativity)    (distributivity)        , with equality if and only if (positive-definiteness)        (Cauchy--Schwarz inequality)    (triangle inequality)      We prove Properties 4-7.   Let . Observe that . We see that this is the square of , proving Property 5, and it is a sum of squared real numbers. Therefore , and it equals zero if and only if , i.e. if and only if , proving Property 4.  Now consider Property 6. If or , then both sides are zero and the inequality is true. Therefore, suppose one of them is nonzero, say . We first calculate that .  Applying this with , we get .  Therefore , which rearranges to give . Taking square roots, , which proves the Cauchy--Schwarz inequality.  For Property 7, both sides of the inequality are nonnegative, so it is equivalent to show that . Taking in the first calculation during the proof of Property 6, we get , where in the second-last line we used the Cauchy--Schwarz inequality. This proves the triangle inequality.   Geometrically, consider the triangle formed by the vectors and . Because the length of any side of a triangle is less than or equal to the sum of the the other lengths, we have . This explains the name of the inequality.   The triangle inequality      "
+  "body": " Dot products   (Dot product)   The dot product of the vectors and is the scalar .    It is important not to leave out the dot when writing the dot product, to distinguish this from the cross product which will be introduced later. For example, if and , then . If and , then .  The dot product has the following properties.   (Properties of the dot product)   Let , and . Then   (commutativity)    (distributivity)        , with equality if and only if (positive-definiteness)        (Cauchy–Schwarz inequality)    (triangle inequality)      We prove Properties 4-7.   Let . Observe that . We see that this is the square of , proving Property 5, and it is a sum of squared real numbers. Therefore , and it equals zero if and only if , i.e. if and only if , proving Property 4.  Now consider Property 6. If or , then both sides are zero and the inequality is true. Therefore, suppose one of them is nonzero, say . We first calculate that .  Applying this with , we get .  Therefore , which rearranges to give . Taking square roots, , which proves the Cauchy–Schwarz inequality.  For Property 7, both sides of the inequality are nonnegative, so it is equivalent to show that . Taking in the first calculation during the proof of Property 6, we get , where in the second-last line we used the Cauchy–Schwarz inequality. This proves the triangle inequality.   Geometrically, consider the triangle formed by the vectors and . Because the length of any side of a triangle is less than or equal to the sum of the the other lengths, we have . This explains the name of the inequality.   The triangle inequality      "
 },
 {
-  "id": "",
+  "id": "def-dot-product",
   "level": "2",
-  "url": "sec-dot-products.html#",
+  "url": "sec-dot-products.html#def-dot-product",
   "type": "Definition",
   "number": "2.1.1",
-  "title": "",
-  "body": "  The dot product of the vectors and is the scalar .   "
+  "title": "(Dot product).",
+  "body": " (Dot product)   The dot product of the vectors and is the scalar .   "
 },
 {
   "id": "thm-props-dot-product",
@@ -492,8 +465,8 @@ var ptx_lunr_docs = [
   "url": "sec-dot-products.html#thm-props-dot-product",
   "type": "Theorem",
   "number": "2.1.2",
-  "title": "",
-  "body": "  Let , and . Then   (commutativity)    (distributivity)        , with equality if and only if (positive-definiteness)        (Cauchy--Schwarz inequality)    (triangle inequality)     "
+  "title": "(Properties of the dot product).",
+  "body": " (Properties of the dot product)   Let , and . Then   (commutativity)    (distributivity)        , with equality if and only if (positive-definiteness)        (Cauchy–Schwarz inequality)    (triangle inequality)     "
 },
 {
   "id": "sec-dot-products-7",
@@ -502,7 +475,7 @@ var ptx_lunr_docs = [
   "type": "Proof",
   "number": "2.1.1",
   "title": "",
-  "body": " Let . Observe that . We see that this is the square of , proving Property 5, and it is a sum of squared real numbers. Therefore , and it equals zero if and only if , i.e. if and only if , proving Property 4.  Now consider Property 6. If or , then both sides are zero and the inequality is true. Therefore, suppose one of them is nonzero, say . We first calculate that .  Applying this with , we get .  Therefore , which rearranges to give . Taking square roots, , which proves the Cauchy--Schwarz inequality.  For Property 7, both sides of the inequality are nonnegative, so it is equivalent to show that . Taking in the first calculation during the proof of Property 6, we get , where in the second-last line we used the Cauchy--Schwarz inequality. This proves the triangle inequality.  "
+  "body": " Let . Observe that . We see that this is the square of , proving Property 5, and it is a sum of squared real numbers. Therefore , and it equals zero if and only if , i.e. if and only if , proving Property 4.  Now consider Property 6. If or , then both sides are zero and the inequality is true. Therefore, suppose one of them is nonzero, say . We first calculate that .  Applying this with , we get .  Therefore , which rearranges to give . Taking square roots, , which proves the Cauchy–Schwarz inequality.  For Property 7, both sides of the inequality are nonnegative, so it is equivalent to show that . Taking in the first calculation during the proof of Property 6, we get , where in the second-last line we used the Cauchy–Schwarz inequality. This proves the triangle inequality.  "
 },
 {
   "id": "triangle-inequality",
@@ -520,7 +493,7 @@ var ptx_lunr_docs = [
   "type": "Section",
   "number": "2.2",
   "title": "Angle between vectors",
-  "body": " Angle between vectors  There is also a geometric formula for the dot product, which shows how the dot product of two vectors is related to the angle between them.   The angle between two vectors        Let , and be the angle between them. Then .     By the cosine rule (see ), . Meanwhile, using Property 5 of the dot product, . Subtracting these formulas, we get .    We can combine the geometric formula for the dot product with the fact that , to get . Similarly, Therefore . This provides another proof of and a geometric interpretation of the Cauchy--Schwarz inequality. There are two reasons that we presented the first, more complicated-seeming proof of the Cauchy--Schwarz: part of that proof is used for the proof of the triangle inequality, and it gives a purely algebraic proof (without relying on properties of the function).     Two vectors are orthogonal if .    Orthogonal vectors are perpendicular, since, if is the angle between two nonzero vectors , then gives .    Determine whether the angle between and is acute, obtuse, or a right angle.  We have so is acute. In fact, .      Find such that and are orthogonal.  If , then which factorises to give . Therefore, or .    "
+  "body": " Angle between vectors  There is also a geometric formula for the dot product, which shows how the dot product of two vectors is related to the angle between them.   The angle between two vectors       (Geometric formula for the dot product)   Let , and be the angle between them. Then .     By the cosine rule (see ), . Meanwhile, using Property 5 of the dot product, . Subtracting these formulas, we get .    We can combine the geometric formula for the dot product with the fact that , to get . Similarly, Therefore . This provides another proof of and a geometric interpretation of the Cauchy–Schwarz inequality. There are two reasons that we presented the first, more complicated-seeming proof of the Cauchy–Schwarz: part of that proof is used for the proof of the triangle inequality, and it gives a purely algebraic proof (without relying on properties of the function).    (Orthogonal vectors)   Two vectors are orthogonal if .    Orthogonal vectors are perpendicular, since, if is the angle between two nonzero vectors , then gives .   (Determining angles)   Determine whether the angle between and is acute, obtuse, or a right angle.    We have so is acute. In fact, .     (Determining orthogonality)   Find such that and are orthogonal.    If , then which factorises to give . Therefore, or .    "
 },
 {
   "id": "fig-angle",
@@ -537,8 +510,8 @@ var ptx_lunr_docs = [
   "url": "sec-angle-between-vectors.html#thm-geo-form-dot-product",
   "type": "Theorem",
   "number": "2.2.2",
-  "title": "",
-  "body": "  Let , and be the angle between them. Then .   "
+  "title": "(Geometric formula for the dot product).",
+  "body": " (Geometric formula for the dot product)   Let , and be the angle between them. Then .   "
 },
 {
   "id": "sec-angle-between-vectors-5",
@@ -556,7 +529,7 @@ var ptx_lunr_docs = [
   "type": "Remark",
   "number": "2.2.3",
   "title": "",
-  "body": " We can combine the geometric formula for the dot product with the fact that , to get . Similarly, Therefore . This provides another proof of and a geometric interpretation of the Cauchy--Schwarz inequality. There are two reasons that we presented the first, more complicated-seeming proof of the Cauchy--Schwarz: part of that proof is used for the proof of the triangle inequality, and it gives a purely algebraic proof (without relying on properties of the function).  "
+  "body": " We can combine the geometric formula for the dot product with the fact that , to get . Similarly, Therefore . This provides another proof of and a geometric interpretation of the Cauchy–Schwarz inequality. There are two reasons that we presented the first, more complicated-seeming proof of the Cauchy–Schwarz: part of that proof is used for the proof of the triangle inequality, and it gives a purely algebraic proof (without relying on properties of the function).  "
 },
 {
   "id": "def-orthogonal",
@@ -564,8 +537,8 @@ var ptx_lunr_docs = [
   "url": "sec-angle-between-vectors.html#def-orthogonal",
   "type": "Definition",
   "number": "2.2.4",
-  "title": "",
-  "body": "  Two vectors are orthogonal if .   "
+  "title": "(Orthogonal vectors).",
+  "body": " (Orthogonal vectors)   Two vectors are orthogonal if .   "
 },
 {
   "id": "ex-angle-vecs",
@@ -573,8 +546,8 @@ var ptx_lunr_docs = [
   "url": "sec-angle-between-vectors.html#ex-angle-vecs",
   "type": "Example",
   "number": "2.2.5",
-  "title": "",
-  "body": "  Determine whether the angle between and is acute, obtuse, or a right angle.  We have so is acute. In fact, .   "
+  "title": "(Determining angles).",
+  "body": " (Determining angles)   Determine whether the angle between and is acute, obtuse, or a right angle.    We have so is acute. In fact, .   "
 },
 {
   "id": "ex-orthogonal-vecs",
@@ -582,8 +555,8 @@ var ptx_lunr_docs = [
   "url": "sec-angle-between-vectors.html#ex-orthogonal-vecs",
   "type": "Example",
   "number": "2.2.6",
-  "title": "",
-  "body": "  Find such that and are orthogonal.  If , then which factorises to give . Therefore, or .   "
+  "title": "(Determining orthogonality).",
+  "body": " (Determining orthogonality)   Find such that and are orthogonal.    If , then which factorises to give . Therefore, or .   "
 },
 {
   "id": "sec-projections",
@@ -592,7 +565,7 @@ var ptx_lunr_docs = [
   "type": "Section",
   "number": "2.3",
   "title": "Projections",
-  "body": " Projections  Given a point and a line in the plane, the distance between them is found by going from to via the shortest path, which is a line segment that intersects perpendicularly.  We can precisely calculate this using vectors. We use the following setup, which is shown in . Let be any point on the line , be a vector parallel to , and be the point on such that is orthogonal to . Let . Then we want to calculate the length of , since this will give the distance from to . First we calculate .   The set up for computing the shortest distance      For simplicity, let's first assume that is in the direction of , like in the figure (this makes sure isn't in the opposite direction to ). Due to this assumption, we can normalize and multiply by to get to . This is the first step in the following calculation: , where we have also used trigonometry and the geometric formula for the dot product. Now we can recognise that this formula applies for any vector parallel to : if is in the opposite direction to , then is in the same direction, so we can apply the previous calculation to see that like before, since all the minus signs cancel.  The vector is important because it is the vector obtained by `projecting' onto the direction of . Intuitively speaking, this calculates the `component' of in the direction of .    Let with . The projection of onto is the vector    Going back to our problem, using geometric vector addition, we have . So , so the distance is . We summarise this calculation as a theorem.    In the plane, let be a point, be a line, and a nonzero vector parallel to . Then the distance from to is , where and is any point on .      The projection of onto is       Find the projections of onto and onto . We have . This is illustrated by . For ,      The projection of onto is      In general, the projection of a vector onto the standard unit vector equals .  The formula in has the advantage that it can be understood using only the properties of vector addition and the dot product that we have already seen in this unit. However, there is an another formula using coordinates that is quicker for calculations.  It is a fact (which will be explained in ) that if the line has equation , then is a normal vector for , which means it is orthogonal to . The distance from to the point on is , as shown in .   The distance from to is the same as the length of .      This simplifies to . Using coordinates, let be a point on , and write . Then , so we calculate , where we used the equation for in the last step. Therefore the shortest distance from to the line is .  "
+  "body": " Projections  Given a point and a line in the plane, the distance between them is found by going from to via the shortest path, which is a line segment that intersects perpendicularly.  We can precisely calculate this using vectors. We use the following setup, which is shown in . Let be any point on the line , be a vector parallel to , and be the point on such that is orthogonal to . Let . Then we want to calculate the length of , since this will give the distance from to . First we calculate .   The set up for computing the shortest distance      For simplicity, let's first assume that is in the direction of , like in the figure (this makes sure isn't in the opposite direction to ). Due to this assumption, we can normalize and multiply by to get to . This is the first step in the following calculation: , where we have also used trigonometry and the geometric formula for the dot product. Now we can recognise that this formula applies for any vector parallel to : if is in the opposite direction to , then is in the same direction, so we can apply the previous calculation to see that like before, since all the minus signs cancel.  The vector is important because it is the vector obtained by `projecting' onto the direction of . Intuitively speaking, this calculates the `component' of in the direction of .   (Projection vector)   Let with . The projection of onto is the vector    Going back to our problem, using geometric vector addition, we have . So , so the distance is . We summarise this calculation as a theorem (without proof).   (Shortest distance point to line)   In the plane, let be a point, be a line, and a nonzero vector parallel to . Then the distance from to is , where and is any point on .      The projection of onto is      (Finding a projection)   Find the projections of onto and onto .    We have . This is illustrated by . For ,      The projection of onto is      In general, the projection of a vector onto the standard unit vector equals .  The formula in has the advantage that it can be understood using only the properties of vector addition and the dot product that we have already seen in this unit. However, there is an another formula using coordinates that is quicker for calculations.  It is a fact (which will be explained in ) that if the line has equation , then is a normal vector for , which means it is orthogonal to . The distance from to the point on is , as shown in .   The distance from to is the same as the length of .      This simplifies to . Using coordinates, let be a point on , and write . Then , so we calculate , where we used the equation for in the last step. Therefore the shortest distance from to the line is .  "
 },
 {
   "id": "fig-proj_setup",
@@ -609,8 +582,8 @@ var ptx_lunr_docs = [
   "url": "sec-projections.html#def-projection",
   "type": "Definition",
   "number": "2.3.2",
-  "title": "",
-  "body": "  Let with . The projection of onto is the vector   "
+  "title": "(Projection vector).",
+  "body": " (Projection vector)   Let with . The projection of onto is the vector   "
 },
 {
   "id": "thm-distproj",
@@ -618,8 +591,8 @@ var ptx_lunr_docs = [
   "url": "sec-projections.html#thm-distproj",
   "type": "Theorem",
   "number": "2.3.3",
-  "title": "",
-  "body": "  In the plane, let be a point, be a line, and a nonzero vector parallel to . Then the distance from to is , where and is any point on .   "
+  "title": "(Shortest distance point to line).",
+  "body": " (Shortest distance point to line)   In the plane, let be a point, be a line, and a nonzero vector parallel to . Then the distance from to is , where and is any point on .   "
 },
 {
   "id": "ex-projection",
@@ -636,8 +609,8 @@ var ptx_lunr_docs = [
   "url": "sec-projections.html#ex-more-projections",
   "type": "Example",
   "number": "2.3.5",
-  "title": "",
-  "body": "  Find the projections of onto and onto . We have . This is illustrated by . For ,    "
+  "title": "(Finding a projection).",
+  "body": " (Finding a projection)   Find the projections of onto and onto .    We have . This is illustrated by . For ,    "
 },
 {
   "id": "fig-proje1",
@@ -664,7 +637,7 @@ var ptx_lunr_docs = [
   "type": "Section",
   "number": "3.1",
   "title": "Cross products",
-  "body": " Cross products  The cross product is another operation on vectors. It is only defined for vectors in , and its output is another vector in .    The cross product of the vectors is the vector .    To help remember the formula, we can use the array method ( ). It involves 3 pairs of lines, one for each component of the resulting vector. Starting at , multiply the components connected by the solid line, then subtract the product of the components connected by the dashed line. For example, the first component is and so on for the rest.   Diagram for the array method      Alternatively, to notice the `criss-cross' pattern it helps to write the vectors using columns: .  Here are three examples which also showcase properties of the cross product.    If and , then and . Notice that .     Array method for from        Find and for and . From the previous example, we know . So        If , then    The next theorem lists the main properties of the cross product.    Let and . Then   (anti-commutativity)                (left distributivity)    (right distributivity)    .       Property 2 says that is orthogonal to and . We will prove Properties 2, 3, and 5.   Let and . Property 2 holds since the calculation that is similar. We can deduce Property 3 from Property 1 by observing that so . Finally, the proof of Property 5 is that    Importantly, the cross product is not associative! This means that, for , . For example, if , then while .    Simplify using the properties in the theorem.     Recall that is orthogonal to both and . If and are not parallel, then the set of linear combinations of and is a plane in . The cross product must be orthogonal to this plane, so there are only two choices for its direction. This is show in : the two orthogonal vectors are the upwards normal vector and the downwards normal vector, drawn in red.    There are two vectors which are orthogonal to the plane given by and      The direction of is given by the right hand rule.   Right-hand rule:    Point the fingers of your right hand straight in the direction of .    Curl fingers towards the direction of .    Your thumb points in the direction of .      The right hand rule    Now we know the direction of . Next, we want to calculate its magnitude (length). First, it will help to have the following fact (we leave the proof as an exercise).   Let . Then .   Now we can calculate the length of a cross product.    Let , and be the angle between and such that . Then .    By the boxed fact above and the geometric formula for the dot product, . Since , we have , and so taking square roots gives the result.      Suppose are such that , and . Find . We first calculate that . Then , so . (We used the positive square root since ). Finally,     "
+  "body": " Cross products  The cross product is another operation on vectors. It is only defined for vectors in , and its output is another vector in .   (Cross product)   The cross product of the vectors is the vector .    To help remember the formula, we can use the array method ( ). It involves 3 pairs of lines, one for each component of the resulting vector. Starting at , multiply the components connected by the solid line, then subtract the product of the components connected by the dashed line. For example, the first component is and so on for the rest.   Diagram for the array method      Alternatively, to notice the `criss-cross' pattern it helps to write the vectors using columns: .  Here are three examples which also showcase properties of the cross product.    If and , then and . Notice that .     Array method for from       (Finding cross product)   Find and for and .    From the previous example, we know . So        If , then    The next theorem lists the main properties of the cross product.   (Properties of cross products)   Let and . Then   (anti-commutativity)                (left distributivity)    (right distributivity)    .       Property 2 says that is orthogonal to and . We will prove Properties 2, 3, and 5.   Let and . Property 2 holds since the calculation that is similar. We can deduce Property 3 from Property 1 by observing that so . Finally, the proof of Property 5 is that    Importantly, the cross product is not associative! This means that, for , . For example, if , then while .   (Simplifying a cross product)   Simplify using the properties in the theorem.    We have     Recall that is orthogonal to both and . If and are not parallel, then the set of linear combinations of and is a plane in . The cross product must be orthogonal to this plane, so there are only two choices for its direction. This is show in : the two orthogonal vectors are the upwards normal vector and the downwards normal vector, drawn in red.    There are two vectors which are orthogonal to the plane given by and      So the cross product can only point in one of two directions, but which one is it?   (Right-hand rule)  The direction of is given by the right hand rule:   Point the fingers of your right hand straight in the direction of .    Curl fingers towards the direction of .    Your thumb points in the direction of .      The right hand rule     Now that we know the direction of , we want to calculate its magnitude. First, it will help to have the following fact (we leave the proof as an exercise).   Let . Then we have .   Now we can calculate the length of a cross product.   (Length of cross product)   Let , and be the angle between and such that . Then .    By the boxed fact above and the geometric formula for the dot product, . Since , we have , and so taking square roots gives the result.     (Calculating length of cross product)   Suppose are such that , and . Find .    We first calculate that . Then , so . (We used the positive square root since ). Finally,     "
 },
 {
   "id": "def-cross-product",
@@ -672,8 +645,8 @@ var ptx_lunr_docs = [
   "url": "sec-cross-products.html#def-cross-product",
   "type": "Definition",
   "number": "3.1.1",
-  "title": "",
-  "body": "  The cross product of the vectors is the vector .   "
+  "title": "(Cross product).",
+  "body": " (Cross product)   The cross product of the vectors is the vector .   "
 },
 {
   "id": "fig-braid",
@@ -708,8 +681,8 @@ var ptx_lunr_docs = [
   "url": "sec-cross-products.html#ex-dot-and-cross",
   "type": "Example",
   "number": "3.1.5",
-  "title": "",
-  "body": "  Find and for and . From the previous example, we know . So     "
+  "title": "(Finding cross product).",
+  "body": " (Finding cross product)   Find and for and .    From the previous example, we know . So     "
 },
 {
   "id": "ex-uxuiszero",
@@ -726,8 +699,8 @@ var ptx_lunr_docs = [
   "url": "sec-cross-products.html#thm-cross-product-props",
   "type": "Theorem",
   "number": "3.1.7",
-  "title": "",
-  "body": "  Let and . Then   (anti-commutativity)                (left distributivity)    (right distributivity)    .      "
+  "title": "(Properties of cross products).",
+  "body": " (Properties of cross products)   Let and . Then   (anti-commutativity)                (left distributivity)    (right distributivity)    .      "
 },
 {
   "id": "sec-cross-products-15",
@@ -744,8 +717,8 @@ var ptx_lunr_docs = [
   "url": "sec-cross-products.html#ex-cross-product-algebra",
   "type": "Example",
   "number": "3.1.8",
-  "title": "",
-  "body": "  Simplify using the properties in the theorem.    "
+  "title": "(Simplifying a cross product).",
+  "body": " (Simplifying a cross product)   Simplify using the properties in the theorem.    We have    "
 },
 {
   "id": "fig-plane_normals",
@@ -771,8 +744,8 @@ var ptx_lunr_docs = [
   "url": "sec-cross-products.html#Thm-lengpara",
   "type": "Theorem",
   "number": "3.1.11",
-  "title": "",
-  "body": "  Let , and be the angle between and such that . Then .    By the boxed fact above and the geometric formula for the dot product, . Since , we have , and so taking square roots gives the result.   "
+  "title": "(Length of cross product).",
+  "body": " (Length of cross product)   Let , and be the angle between and such that . Then .    By the boxed fact above and the geometric formula for the dot product, . Since , we have , and so taking square roots gives the result.   "
 },
 {
   "id": "ex-length-of-cross",
@@ -780,8 +753,8 @@ var ptx_lunr_docs = [
   "url": "sec-cross-products.html#ex-length-of-cross",
   "type": "Example",
   "number": "3.1.12",
-  "title": "",
-  "body": "  Suppose are such that , and . Find . We first calculate that . Then , so . (We used the positive square root since ). Finally,    "
+  "title": "(Calculating length of cross product).",
+  "body": " (Calculating length of cross product)   Suppose are such that , and . Find .    We first calculate that . Then , so . (We used the positive square root since ). Finally,    "
 },
 {
   "id": "sec-geo-apps-of-cross-products",
@@ -790,7 +763,7 @@ var ptx_lunr_docs = [
   "type": "Section",
   "number": "3.2",
   "title": "Geometric applications of cross products",
-  "body": " Geometric applications of cross products  The formula has a geometric interpretation. From trigonometry, we know that if and are two side lengths of a triangle, and is the angle between these sides, then the area of the triangle is . Therefore we can deduce the following corollary, which is illustrated in .    Let . Then is the area of the parallelogram inscribed by and , and is the area of the triangle inscribed by and .     The area of this parallelogram is , which is twice the area of the triangles.      Calculate the area of the triangle formed by the points , , . We have . Thus , which has length . So the area of the triangle is       Three vectors inscribe a parallelopiped , as is illustarted in . The volume of this shape is given by . The term is called the scalar triple product of .     The normal form of a line    "
+  "body": " Geometric applications of cross products  The formula has a geometric interpretation. From trigonometry, we know that if and are two side lengths of a triangle, and is the angle between these sides, then the area of the triangle is . Therefore we can deduce the following corollary, which is illustrated in .   (Areas of traingles and parallelograms)   Let . Then is the area of the parallelogram inscribed by and , and is the area of the triangle inscribed by and .     The area of this parallelogram is , which is twice the area of the triangles.        Calculate the area of the triangle formed by the points , , . We have . Thus , which has length . So the area of the triangle is       Three vectors inscribe a parallelopiped , as is illustarted in . The volume of this shape is given by . The term is called the scalar triple product of .     A parallelopiped inscribed by three vectors      "
 },
 {
   "id": "cor-area-of-parallelogram",
@@ -798,8 +771,8 @@ var ptx_lunr_docs = [
   "url": "sec-geo-apps-of-cross-products.html#cor-area-of-parallelogram",
   "type": "Corollary",
   "number": "3.2.1",
-  "title": "",
-  "body": "  Let . Then is the area of the parallelogram inscribed by and , and is the area of the triangle inscribed by and .   "
+  "title": "(Areas of traingles and parallelograms).",
+  "body": " (Areas of traingles and parallelograms)   Let . Then is the area of the parallelogram inscribed by and , and is the area of the triangle inscribed by and .   "
 },
 {
   "id": "fig-cross_area",
@@ -808,7 +781,7 @@ var ptx_lunr_docs = [
   "type": "Figure",
   "number": "3.2.2",
   "title": "",
-  "body": " The area of this parallelogram is , which is twice the area of the triangles.   "
+  "body": " The area of this parallelogram is , which is twice the area of the triangles.     "
 },
 {
   "id": "ex-area-of-triangle",
@@ -835,7 +808,7 @@ var ptx_lunr_docs = [
   "type": "Figure",
   "number": "3.2.5",
   "title": "",
-  "body": " The normal form of a line   "
+  "body": " A parallelopiped inscribed by three vectors     "
 },
 {
   "id": "sec-lines-in-R2",
@@ -844,7 +817,7 @@ var ptx_lunr_docs = [
   "type": "Section",
   "number": "4.1",
   "title": "Lines in <span class=\"process-math\">\\(\\mathbb{R}^2\\)<\/span>",
-  "body": " Lines in    Let be a line in . A normal vector for is a nonzero vector which is orthogonal to .    A normal vector and one point on is enough to completely determine the line , which we will show by writing the equation for in terms of these two objects. Notice that unlike for vectors, the position of in space matters, which is why we need a point .  Fix , and let be any point. Let and , as shown in .   The normal form of a line      We have (The symbol stands for `if and only if'.) We also have , so . This means that is an equation for . The next definition summarises this calculation and gives the equation a name.    The normal form of the equation of a line in is or equivalently where is a normal vector for , and is the position vector of a point on .    You may be more familiar from high school with equations for lines looking like or . We can rearrange the normal form to look like this. Suppose and , so . Then becomes which is , or where .    The general form of the equation of a line in is where is a normal vector for and , where is the position vector of a point on .      The line with general equation has a normal vector , by looking at its coefficients. Any nonzero scalar multiple of would also be a normal vector to the line.      Find the normal and general forms of the equation of a line through and perpendicular to the vector . We take and , so . We have so the normal form is , which simplifies to and the general form is .    Notice that if we had picked a different normal vector and a different point on the same line, the normal and general forms would look different, although they would still describe the same line.   We will now present a different approach to finding an equation for a line in . It still involves a point and a direction. The difference is that now we will use a vector parallel to the line, instead of a vector normal to the line.    A direction vector for a line in is a nonzero vector which is parallel to .    Given a direction vector for a line and a point with position vector , we can write down an equation for . Let be any point with position vector . Then , for some . We have , so . This is summarised in the next definition.    The vector form of the equation of a line in which passes through a point with position vector , and is parallel to a vector , is where is called a parameter .    The fourth and final form of the equation of a line in comes from expanding the vector form into its components. Suppose , , and . Then we have . Comparing components gives .    The parametric equations of a line in which passes through a point with position vector , and is parallel to the vector , are .     Summary: A line in is described by a point and a direction. If we use a normal vector to , then the equation is called a normal form when written using vectors, and general form when written in components. If we use a direction vector instead, the equation is called a vector form when written using vectors, and when written in components we call them parametric equations.  To finish this section, we give a few examples and final comments. To find a direction vector for a line , find two points and on . Then is a direction vector for . This is illustrated in .   The vector between two (distinct) points on is a direction vector        Find the vector form and parametric equations for the line through the points and . We can take . So a vector form is and parametric equations are     Like with the normal and general form, the expression of these equations is not unique.   Since a normal vector for a line in is orthogonal, while a direction vector is parallel, this means . This observation can help us find if we know , or to find if we know . This is shown in the next two examples.    Find a direction vector for the line with normal form .  A normal vector is . Let . We must have so . Choosing , a direction vector is .      Find a normal vector for the line with parametric equations . A direction vector is , so is a normal vector, since     "
+  "body": " Lines in   (Normal vector)   Let be a line in . A normal vector for is a nonzero vector which is orthogonal to .    A normal vector and one point on is enough to completely determine the line , which we will show by writing the equation for in terms of these two objects. Notice that unlike for vectors, the position of in space matters, which is why we need a point .  Fix , and let be any point. Let and , as shown in .   The normal form of a line      We have (The symbol stands for `if and only if'.) We also have , so . This means that is an equation for . The next definition summarises this calculation and gives the equation a name.    The normal form of the equation of a line in is or equivalently where is a normal vector for , and is the position vector of a point on .    You may be more familiar from high school with equations for lines looking like or . We can rearrange the normal form to look like this. Suppose and , so . Then becomes which is , or where .    The general form of the equation of a line in is where is a normal vector for and , where is the position vector of a point on .      The line with general equation has a normal vector , by looking at its coefficients. Any nonzero scalar multiple of would also be a normal vector to the line.      Find the normal and general forms of the equation of a line through and perpendicular to the vector . We take and , so . We have so the normal form is , which simplifies to and the general form is .    Notice that if we had picked a different normal vector and a different point on the same line, the normal and general forms would look different, although they would still describe the same line.   We will now present a different approach to finding an equation for a line in . It still involves a point and a direction. The difference is that now we will use a vector parallel to the line, instead of a vector normal to the line.    A direction vector for a line in is a nonzero vector which is parallel to .    Given a direction vector for a line and a point with position vector , we can write down an equation for . Let be any point with position vector . Then , for some . We have , so . This is summarised in the next definition.    The vector form of the equation of a line in which passes through a point with position vector , and is parallel to a vector , is where is called a parameter .    The fourth and final form of the equation of a line in comes from expanding the vector form into its components. Suppose , , and . Then we have . Comparing components gives .    The parametric equations of a line in which passes through a point with position vector , and is parallel to the vector , are .     Summary: A line in is described by a point and a direction. If we use a normal vector to , then the equation is called a normal form when written using vectors, and general form when written in components. If we use a direction vector instead, the equation is called a vector form when written using vectors, and when written in components we call them parametric equations.  To finish this section, we give a few examples and final comments. To find a direction vector for a line , find two points and on . Then is a direction vector for . This is illustrated in .   The vector between two (distinct) points on is a direction vector        Find the vector form and parametric equations for the line through the points and . We can take . So a vector form is and parametric equations are     Like with the normal and general form, the expression of these equations is not unique.   Since a normal vector for a line in is orthogonal, while a direction vector is parallel, this means . This observation can help us find if we know , or to find if we know . This is shown in the next two examples.    Find a direction vector for the line with normal form .  A normal vector is . Let . We must have so . Choosing , a direction vector is .      Find a normal vector for the line with parametric equations . A direction vector is , so is a normal vector, since     "
 },
 {
   "id": "def-normal-vector",
@@ -852,8 +825,8 @@ var ptx_lunr_docs = [
   "url": "sec-lines-in-R2.html#def-normal-vector",
   "type": "Definition",
   "number": "4.1.1",
-  "title": "",
-  "body": "  Let be a line in . A normal vector for is a nonzero vector which is orthogonal to .   "
+  "title": "(Normal vector).",
+  "body": " (Normal vector)   Let be a line in . A normal vector for is a nonzero vector which is orthogonal to .   "
 },
 {
   "id": "fig-normal",
@@ -1978,7 +1951,16 @@ var ptx_lunr_docs = [
   "type": "Section",
   "number": "7.4",
   "title": "Inverses and matrix equations",
-  "body": " Inverses and matrix equations  Let , and consider the linear equation . If is invertible (so if ), then the equation has a unique solution given by . If , the equation becomes . This has infinitely many solutions if , and no solutions if .  Now let be an matrix, let be column matrices, and consider the matrix equation corresponding to a system of linear equations in variables where .    If is an invertible matrix, then the equation has unique solution .    is a solution because . It is unique, because if for another solution , then     If is not invertible, then will have infinitely many solutions or no solutions, depending on . This is because the RREF of will have at least one column without a leading entry, so if is consistent, the solution involves at least one parameter.     Use a matrix inverse to solve .  This is for where is the same matrix that we calculated the inverse of in . So . We conclude that there is a unique solution , , .    This method might seem efficient, but it relies on computing a matrix inverse, which for matrices larger than can take some time to compute. However, it does have the advantage that if we change the value of , the inverse will still be the same, so we can quickly re-calculate .  "
+  "body": " Inverses and matrix equations  Before we talk about using matrix inverses to solve equations, we want to emphasise that we now have three equivalent ways of writing down a system of linear equations: using the equations, using vectors, and using a matrix\/vectors.       Equations:       Vectors:       Matrix\/vectors:        Let , and consider the linear equation . If is invertible (so if ), then the equation has a unique solution given by . If , the equation becomes . This has infinitely many solutions if , and no solutions if .  Now let be an matrix, let be column matrices, and consider the matrix equation corresponding to a system of linear equations in variables where .    If is an invertible matrix, then the equation has unique solution .    is a solution because . It is unique, because if for another solution , then     If is not invertible, then will have infinitely many solutions or no solutions, depending on . This is because the RREF of will have at least one column without a leading entry, so if is consistent, the solution involves at least one parameter.     Use a matrix inverse to solve .  This is for where is the same matrix that we calculated the inverse of in . So . We conclude that there is a unique solution , , .    This method might seem efficient, but it relies on computing a matrix inverse, which for matrices larger than can take some time to compute. However, it does have the advantage that if we change the value of , the inverse will still be the same, so we can quickly re-calculate .  "
+},
+{
+  "id": "equiv-systems-descriptions-1",
+  "level": "2",
+  "url": "sec-inverses-and-equations.html#equiv-systems-descriptions-1",
+  "type": "Paragraph (with a defined term)",
+  "number": "",
+  "title": "",
+  "body": "Equations: Vectors: Matrix\/vectors: "
 },
 {
   "id": "thm-uniquesoln",
@@ -2086,14 +2068,599 @@ var ptx_lunr_docs = [
   "type": "Section",
   "number": "7.6",
   "title": "Characterisations of invertibility",
-  "body": " Characterisations of invertibility  Text of section.  "
+  "body": " Characterisations of invertibility  We will now present a major theorem in the subject which gives a number of characterisations of when a matrix is invertible. We will build on this theorem a couple of more times later in the unit. We will sketch out a proof below.   Characterisations of Invertibility (Part 1)   Let be an matrix. The following are equivalent:    is invertible.     has a unique solution for all .    If with , then .    The RREF of is .     is a product of elementary matrices.       We prove .  Assume 1. If is invertible, then and we see that the equation has a unique solution (namely, ).  Assume 2. We know that , and so is a solution to . Since we are assuming that has a unique solution, then we must have .  Assume 3. Then reducing to RREF must give . This implies that the RREF of is .  Assume 4. If reduces to , then we know by that this means there are elementary matrices with . Hence is a product of elementary matrices.  Assume 5. If for elementary matrices , then since each is invertile, we know that is invertible (since the product of invertible matrices is invertible).    We know from definition that a matrix is invertible if there is a matrix such that and . The following Corollary is handy to know, because it means we only have to check one of these identities.    Let be . If there is a matrix such that or , then is invertible with .    Suppose . Then if we have Hence by statement 3 of we see that is invertible. We now have   We leave the other implication as an exercise. (Hint: use the implication we just proved plus transposes!)    "
+},
+{
+  "id": "thm-COI1",
+  "level": "2",
+  "url": "sec-characterisations-of-invertibility.html#thm-COI1",
+  "type": "Theorem",
+  "number": "7.6.1",
+  "title": "Characterisations of Invertibility (Part 1).",
+  "body": " Characterisations of Invertibility (Part 1)   Let be an matrix. The following are equivalent:    is invertible.     has a unique solution for all .    If with , then .    The RREF of is .     is a product of elementary matrices.       We prove .  Assume 1. If is invertible, then and we see that the equation has a unique solution (namely, ).  Assume 2. We know that , and so is a solution to . Since we are assuming that has a unique solution, then we must have .  Assume 3. Then reducing to RREF must give . This implies that the RREF of is .  Assume 4. If reduces to , then we know by that this means there are elementary matrices with . Hence is a product of elementary matrices.  Assume 5. If for elementary matrices , then since each is invertile, we know that is invertible (since the product of invertible matrices is invertible).   "
+},
+{
+  "id": "cor-one-identity-for-invertible",
+  "level": "2",
+  "url": "sec-characterisations-of-invertibility.html#cor-one-identity-for-invertible",
+  "type": "Corollary",
+  "number": "7.6.2",
+  "title": "",
+  "body": "  Let be . If there is a matrix such that or , then is invertible with .    Suppose . Then if we have Hence by statement 3 of we see that is invertible. We now have   We leave the other implication as an exercise. (Hint: use the implication we just proved plus transposes!)   "
+},
+{
+  "id": "sec-span",
+  "level": "1",
+  "url": "sec-span.html",
+  "type": "Section",
+  "number": "8.1",
+  "title": "Span",
+  "body": " Span  Recall from that a vector is a linear combination of vectors if for scalars .    Let be a set of vectors in . The span of , or the span of , is the set of all linear combinations of , and is denoted by or .    By definition, .       Every span contains the zero vector since if is any set of vectors in , we have .    If , then .    If for some in with , then is which is the line through the origin with direction vector , as shown in .  The span of is the dashed line through the origin         If for nonzero in such that and are parallel, then is still the line through the origin with direction vector . This is because since and parallel, we have for some , so , which is the line with vector form , for .    If we take and in instead for the previous two examples, they still describe a line. On the other hand, if for nonzero vectors in which are not parallel, then is the plane through the origin in with direction vectors and , shown in .  The span of non-parallel and is a plane              Is ?  We need to look for such that . Comparing components gives the system of linear equations . The third equation gives that , and then the first equation gives that . These values also satisfy the second equation, since . So , with coefficients and .      Let be a set of vectors in . If , we say that is a spanning set for .      Recall the standard unit vectors and in . The set is a spanning set for , since if is an arbitrary vector in , we have       Determine whether is a spanning set for .  We have that , which is the line through the origin with equation , for . So any vector not on that line is not in . We can check for example that ; if for , which simplifies to we can compare coefficients to get the system of linear equations . This is inconsistent, so there are no solutions, so . Hence is not a spanning set for .    The issue is that is parallel to , so it doesn't contribute anything extra to the span. In the language of the next section, we will say that and are `linearly dependent'.  We present the following two results without proof. It is a good exercise to at least think about why they are true.    We have if and only if the system with augmented matrix is consistent.      If is a subset of and , then has at least elements.    "
+},
+{
+  "id": "span",
+  "level": "2",
+  "url": "sec-span.html#span",
+  "type": "Definition",
+  "number": "8.1.1",
+  "title": "",
+  "body": "  Let be a set of vectors in . The span of , or the span of , is the set of all linear combinations of , and is denoted by or .   "
+},
+{
+  "id": "ex-spans",
+  "level": "2",
+  "url": "sec-span.html#ex-spans",
+  "type": "Example",
+  "number": "8.1.2",
+  "title": "",
+  "body": "     Every span contains the zero vector since if is any set of vectors in , we have .    If , then .    If for some in with , then is which is the line through the origin with direction vector , as shown in .  The span of is the dashed line through the origin         If for nonzero in such that and are parallel, then is still the line through the origin with direction vector . This is because since and parallel, we have for some , so , which is the line with vector form , for .    If we take and in instead for the previous two examples, they still describe a line. On the other hand, if for nonzero vectors in which are not parallel, then is the plane through the origin in with direction vectors and , shown in .  The span of non-parallel and is a plane           "
+},
+{
+  "id": "ex-checking-span",
+  "level": "2",
+  "url": "sec-span.html#ex-checking-span",
+  "type": "Example",
+  "number": "8.1.5",
+  "title": "",
+  "body": "  Is ?  We need to look for such that . Comparing components gives the system of linear equations . The third equation gives that , and then the first equation gives that . These values also satisfy the second equation, since . So , with coefficients and .   "
+},
+{
+  "id": "def-spanning-set",
+  "level": "2",
+  "url": "sec-span.html#def-spanning-set",
+  "type": "Definition",
+  "number": "8.1.6",
+  "title": "",
+  "body": "  Let be a set of vectors in . If , we say that is a spanning set for .   "
+},
+{
+  "id": "ex-stan-basis-spanning-set",
+  "level": "2",
+  "url": "sec-span.html#ex-stan-basis-spanning-set",
+  "type": "Example",
+  "number": "8.1.7",
+  "title": "",
+  "body": "  Recall the standard unit vectors and in . The set is a spanning set for , since if is an arbitrary vector in , we have    "
+},
+{
+  "id": "ex-is-spanning-set",
+  "level": "2",
+  "url": "sec-span.html#ex-is-spanning-set",
+  "type": "Example",
+  "number": "8.1.8",
+  "title": "",
+  "body": "  Determine whether is a spanning set for .  We have that , which is the line through the origin with equation , for . So any vector not on that line is not in . We can check for example that ; if for , which simplifies to we can compare coefficients to get the system of linear equations . This is inconsistent, so there are no solutions, so . Hence is not a spanning set for .   "
+},
+{
+  "id": "thm-char-span",
+  "level": "2",
+  "url": "sec-span.html#thm-char-span",
+  "type": "Theorem",
+  "number": "8.1.9",
+  "title": "",
+  "body": "  We have if and only if the system with augmented matrix is consistent.   "
+},
+{
+  "id": "thm-span-and-dimension",
+  "level": "2",
+  "url": "sec-span.html#thm-span-and-dimension",
+  "type": "Theorem",
+  "number": "8.1.10",
+  "title": "",
+  "body": "  If is a subset of and , then has at least elements.   "
+},
+{
+  "id": "sec-linear-independence",
+  "level": "1",
+  "url": "sec-linear-independence.html",
+  "type": "Section",
+  "number": "8.2",
+  "title": "Linear independence",
+  "body": " Linear independence    Let be a set of vectors in . The set is linearly independent if the only solution to the equation for is . The set is linearly dependent if it is not linearly independent.    So a set is linearly dependent if and only if there exists scalars , not all zero, such that .    Let , , and . Find , and explain why the set is linearly dependent.  We have so . This is a linear combination of equal to zero, where at least one (in fact all) of the coefficients are nonzero. Therefore, the set is linearly dependent.      Show that the set is linearly independent in .  Suppose . Then so and . Therefore is linearly independent.    The next theorem shows how linear independence abstracts the idea of vectors not being parallel.    A set of two vectors in is linearly independent if and only if neither vector is a scalar multiple of the other.  Equivalently, is linearly dependent if and only if at least one of the vectors is a scalar multiple of the other.    Suppose that one of the vectors is a scalar multiple of the other; by relabelling the vectors if necessary, we can assume that for . Then . Since the coefficient of is nonzero, the set is linearly dependent.  Conversely, suppose that is linearly dependent. Then there exists , not both zero, such that . We can assume . Dividing by gives , so so is a scalar multiple of .    For vectors, we have a similar result. However, to show linear independence in this case it is not enough to check that none of the vectors are parallel. We also need to check that none of the vectors can be written as linear combination of the other vectors.    A set of vectors in is linearly independent if and only if none of the vectors in the set can be expressed as a linear combination of the others.    The proof is very similar to that of ; there is not much difference apart from replacing with .  We now come to the connection between linear independence and matrix inverses.    Let be an matrix with columns , , . Then is invertible if and only if the set , , is linearly independent.    Let be arbitrary. Write and . Then . From , is invertible if and only if has the unique solution . Using the previous calculation and that , this shows that is invertible if and only if has the unique solution , which is the definition of being linearly independent.      Consider the matrix Its columns and are not parallel and hence are linearly independent, so is invertible. This agrees with the calculation that .    For larger matrices, it is not easy to tell whether all the columns are linearly independent. But if they are linearly dependent, sometimes this is quick to spot, which can allow us to quickly conclude that the matrix is not invertible.    The matrix has , so its columns are linearly dependent. Therefore is not invertible.    "
+},
+{
+  "id": "def-lin-ind",
+  "level": "2",
+  "url": "sec-linear-independence.html#def-lin-ind",
+  "type": "Definition",
+  "number": "8.2.1",
+  "title": "",
+  "body": "  Let be a set of vectors in . The set is linearly independent if the only solution to the equation for is . The set is linearly dependent if it is not linearly independent.   "
+},
+{
+  "id": "ex-lin-dep-basic",
+  "level": "2",
+  "url": "sec-linear-independence.html#ex-lin-dep-basic",
+  "type": "Example",
+  "number": "8.2.2",
+  "title": "",
+  "body": "  Let , , and . Find , and explain why the set is linearly dependent.  We have so . This is a linear combination of equal to zero, where at least one (in fact all) of the coefficients are nonzero. Therefore, the set is linearly dependent.   "
+},
+{
+  "id": "ex-lin-ind-basic",
+  "level": "2",
+  "url": "sec-linear-independence.html#ex-lin-ind-basic",
+  "type": "Example",
+  "number": "8.2.3",
+  "title": "",
+  "body": "  Show that the set is linearly independent in .  Suppose . Then so and . Therefore is linearly independent.   "
+},
+{
+  "id": "thm-lindep",
+  "level": "2",
+  "url": "sec-linear-independence.html#thm-lindep",
+  "type": "Theorem",
+  "number": "8.2.4",
+  "title": "",
+  "body": "  A set of two vectors in is linearly independent if and only if neither vector is a scalar multiple of the other.  Equivalently, is linearly dependent if and only if at least one of the vectors is a scalar multiple of the other.    Suppose that one of the vectors is a scalar multiple of the other; by relabelling the vectors if necessary, we can assume that for . Then . Since the coefficient of is nonzero, the set is linearly dependent.  Conversely, suppose that is linearly dependent. Then there exists , not both zero, such that . We can assume . Dividing by gives , so so is a scalar multiple of .   "
+},
+{
+  "id": "thm-char-lin-ind",
+  "level": "2",
+  "url": "sec-linear-independence.html#thm-char-lin-ind",
+  "type": "Theorem",
+  "number": "8.2.5",
+  "title": "",
+  "body": "  A set of vectors in is linearly independent if and only if none of the vectors in the set can be expressed as a linear combination of the others.   "
+},
+{
+  "id": "thm-connection",
+  "level": "2",
+  "url": "sec-linear-independence.html#thm-connection",
+  "type": "Theorem",
+  "number": "8.2.6",
+  "title": "",
+  "body": "  Let be an matrix with columns , , . Then is invertible if and only if the set , , is linearly independent.    Let be arbitrary. Write and . Then . From , is invertible if and only if has the unique solution . Using the previous calculation and that , this shows that is invertible if and only if has the unique solution , which is the definition of being linearly independent.   "
+},
+{
+  "id": "ex-lin-ind-matrix",
+  "level": "2",
+  "url": "sec-linear-independence.html#ex-lin-ind-matrix",
+  "type": "Example",
+  "number": "8.2.7",
+  "title": "",
+  "body": "  Consider the matrix Its columns and are not parallel and hence are linearly independent, so is invertible. This agrees with the calculation that .   "
+},
+{
+  "id": "ex-lin-dep-matrix",
+  "level": "2",
+  "url": "sec-linear-independence.html#ex-lin-dep-matrix",
+  "type": "Example",
+  "number": "8.2.8",
+  "title": "",
+  "body": "  The matrix has , so its columns are linearly dependent. Therefore is not invertible.   "
+},
+{
+  "id": "sec-subspaces",
+  "level": "1",
+  "url": "sec-subspaces.html",
+  "type": "Section",
+  "number": "9.1",
+  "title": "Subspaces",
+  "body": " Subspaces    A subset is a subspace of if    ,     , and                 If satisfies condition 2 above we say that is closed under addition , and if satisfies condition 3 above, we say that is closed under scalar multiplication .    As an exercise, show that if is a subspace, then is a vector space under the usual vector addition and scalar multiplication from .    As an exercise, show that is a subspace as defined above if and only if     All of the definitions\/concepts above work for subspaces of general vector spaces .         Consider the subsets of : We claim that none of the subsets are subspaces of .  Since , , and so is not a subspace.  We have . But, for instance, and , and So is not closed under scalar multiplication, and hence is not a subspace.  Note that we have , but So is not closed under addition, and hence is not a subspace.      Show that is a subspace of .  We check the three condition of .   Since we have .    Let . Then by definition we know that Hence . Hence , and so is closed under addition.    Let and . Then by definition we know that Hence . Hence , and so is closed under scalar multiplication.     Hence is a subspace.      Note that is the plane . As an exercise, show that any other subset of the form for is not a subspace (i.e. planes parallel to but not passing through the origin are not subspaces). This is true in general:         The only subspaces of are    , and    lines through the origin.       The only subspaces of are    ,    lines through the origin, and    planes through the origin.          You can imagine how these statements extend to subspaces of .    For any , is a subspace of .    We check the three conditions:    since .    If , then we have     If and , then we have        "
+},
+{
+  "id": "def-subspace",
+  "level": "2",
+  "url": "sec-subspaces.html#def-subspace",
+  "type": "Definition",
+  "number": "9.1.1",
+  "title": "",
+  "body": "  A subset is a subspace of if    ,     , and           "
+},
+{
+  "id": "rem-subspaces",
+  "level": "2",
+  "url": "sec-subspaces.html#rem-subspaces",
+  "type": "Remark",
+  "number": "9.1.2",
+  "title": "",
+  "body": "     If satisfies condition 2 above we say that is closed under addition , and if satisfies condition 3 above, we say that is closed under scalar multiplication .    As an exercise, show that if is a subspace, then is a vector space under the usual vector addition and scalar multiplication from .    As an exercise, show that is a subspace as defined above if and only if     All of the definitions\/concepts above work for subspaces of general vector spaces .      "
+},
+{
+  "id": "ex-non-subspaces",
+  "level": "2",
+  "url": "sec-subspaces.html#ex-non-subspaces",
+  "type": "Example",
+  "number": "9.1.3",
+  "title": "",
+  "body": "  Consider the subsets of : We claim that none of the subsets are subspaces of .  Since , , and so is not a subspace.  We have . But, for instance, and , and So is not closed under scalar multiplication, and hence is not a subspace.  Note that we have , but So is not closed under addition, and hence is not a subspace.   "
+},
+{
+  "id": "ex-subspace",
+  "level": "2",
+  "url": "sec-subspaces.html#ex-subspace",
+  "type": "Example",
+  "number": "9.1.4",
+  "title": "",
+  "body": "  Show that is a subspace of .  We check the three condition of .   Since we have .    Let . Then by definition we know that Hence . Hence , and so is closed under addition.    Let and . Then by definition we know that Hence . Hence , and so is closed under scalar multiplication.     Hence is a subspace.   "
+},
+{
+  "id": "rem-planes-through-origin",
+  "level": "2",
+  "url": "sec-subspaces.html#rem-planes-through-origin",
+  "type": "Remark",
+  "number": "9.1.5",
+  "title": "",
+  "body": "  Note that is the plane . As an exercise, show that any other subset of the form for is not a subspace (i.e. planes parallel to but not passing through the origin are not subspaces). This is true in general:   "
+},
+{
+  "id": "thm-form-of-subspaces",
+  "level": "2",
+  "url": "sec-subspaces.html#thm-form-of-subspaces",
+  "type": "Theorem",
+  "number": "9.1.6",
+  "title": "",
+  "body": "     The only subspaces of are    , and    lines through the origin.       The only subspaces of are    ,    lines through the origin, and    planes through the origin.         "
+},
+{
+  "id": "thm-spans-are-subspaces",
+  "level": "2",
+  "url": "sec-subspaces.html#thm-spans-are-subspaces",
+  "type": "Theorem",
+  "number": "9.1.7",
+  "title": "",
+  "body": "  For any , is a subspace of .    We check the three conditions:    since .    If , then we have     If and , then we have       "
+},
+{
+  "id": "sec-row-and-column-spaces",
+  "level": "1",
+  "url": "sec-row-and-column-spaces.html",
+  "type": "Section",
+  "number": "9.2",
+  "title": "Row, column and null spaces",
+  "body": " Row, column and null spaces  Suppose is an matrix. There are three subspaces we associate to .       The row space of , denoted , is the subset of that is spanned by the rows of (considered as vectors).    The column space of , denoted , is the subset of that is spanned by the columns of (considered as vectors).            We know from that the row and column spaces of a matrix are subspaces.    Be careful to note that    is a subspace of      is a subspace of .          The third subspace we associate to a matrix is defined a little differently.    The null space of , denoted , is the subset       If is , then is a subspace of .    We have .  Let . Then and hence .  Let and . Then and hence .      Find the null space of   We want such that .  The augmented matrix is which is already in REF!  Let , . Then and So is the line through the origin with direction vector .    "
+},
+{
+  "id": "def-row-and-col-spaces",
+  "level": "2",
+  "url": "sec-row-and-column-spaces.html#def-row-and-col-spaces",
+  "type": "Definition",
+  "number": "9.2.1",
+  "title": "",
+  "body": "     The row space of , denoted , is the subset of that is spanned by the rows of (considered as vectors).    The column space of , denoted , is the subset of that is spanned by the columns of (considered as vectors).      "
+},
+{
+  "id": "rem-row-and-sol-spaces",
+  "level": "2",
+  "url": "sec-row-and-column-spaces.html#rem-row-and-sol-spaces",
+  "type": "Remark",
+  "number": "9.2.2",
+  "title": "",
+  "body": "     We know from that the row and column spaces of a matrix are subspaces.    Be careful to note that    is a subspace of      is a subspace of .         "
+},
+{
+  "id": "def-null-space",
+  "level": "2",
+  "url": "sec-row-and-column-spaces.html#def-null-space",
+  "type": "Definition",
+  "number": "9.2.3",
+  "title": "",
+  "body": "  The null space of , denoted , is the subset    "
+},
+{
+  "id": "thm-null-space-is-subspace",
+  "level": "2",
+  "url": "sec-row-and-column-spaces.html#thm-null-space-is-subspace",
+  "type": "Theorem",
+  "number": "9.2.4",
+  "title": "",
+  "body": "  If is , then is a subspace of .    We have .  Let . Then and hence .  Let and . Then and hence .   "
+},
+{
+  "id": "def-finding-null-space",
+  "level": "2",
+  "url": "sec-row-and-column-spaces.html#def-finding-null-space",
+  "type": "Definition",
+  "number": "9.2.5",
+  "title": "",
+  "body": "  Find the null space of   We want such that .  The augmented matrix is which is already in REF!  Let , . Then and So is the line through the origin with direction vector .   "
+},
+{
+  "id": "sec-bases",
+  "level": "1",
+  "url": "sec-bases.html",
+  "type": "Section",
+  "number": "10.1",
+  "title": "Bases and dimension",
+  "body": " Bases and dimension    A basis for is a set of vectors such that    , and     is linearly independent.         Note that the same definition holds in general: a basis for a vector space is a subset of that spans and is linearly independent.      The standard basis is a basis for .      Find a basis for   We need to check for linear independence. We have . Let , . Then and   Since there are infinite solutions here, we know the vectors are not linearly independent. In particular, if we take , then we get solution , and so or This means that is in the span of the other two vectors, and hence we have Since and are linearly independent, they form a basis for the original span.         In the above example we threw away the vector from the span as it was not needed. In that example we could have thrown away any of the vectors (why?), but this is not always the case. For example, we have     The working in the previous example was fairly detailed. In we will see a more streamlined (and much easier) way of dealing with such an example.        (Basis Theorem)   Any two bases of a vector space have the same number of elements.    The proof of the Basis Theorem is within the scope of the unit, but it is very fiddly, so we will leave it as an exercise (to at least look up and understand if you are keen). But note what it means: the number of elements in a basis is a unique number we can associate to a vector space. So let's give this number a name!    The dimension of a vector space , denoted , is the number of elements in a basis for .      So what is the dimension of ?  Since we know that the standard basis is a basis for , we have . This matches our expectation: is 3-dimensional!    "
+},
+{
+  "id": "def-basis",
+  "level": "2",
+  "url": "sec-bases.html#def-basis",
+  "type": "Definition",
+  "number": "10.1.1",
+  "title": "",
+  "body": "  A basis for is a set of vectors such that    , and     is linearly independent.      "
+},
+{
+  "id": "rem-basis-for-gen-vec-space",
+  "level": "2",
+  "url": "sec-bases.html#rem-basis-for-gen-vec-space",
+  "type": "Remark",
+  "number": "10.1.2",
+  "title": "",
+  "body": "  Note that the same definition holds in general: a basis for a vector space is a subset of that spans and is linearly independent.   "
+},
+{
+  "id": "ex-standard-basis-is-basis",
+  "level": "2",
+  "url": "sec-bases.html#ex-standard-basis-is-basis",
+  "type": "Example",
+  "number": "10.1.3",
+  "title": "",
+  "body": "  The standard basis is a basis for .   "
+},
+{
+  "id": "ex-finding-a-basis",
+  "level": "2",
+  "url": "sec-bases.html#ex-finding-a-basis",
+  "type": "Example",
+  "number": "10.1.4",
+  "title": "",
+  "body": "  Find a basis for   We need to check for linear independence. We have . Let , . Then and   Since there are infinite solutions here, we know the vectors are not linearly independent. In particular, if we take , then we get solution , and so or This means that is in the span of the other two vectors, and hence we have Since and are linearly independent, they form a basis for the original span.   "
+},
+{
+  "id": "rem-comments-on-span-example",
+  "level": "2",
+  "url": "sec-bases.html#rem-comments-on-span-example",
+  "type": "Remark",
+  "number": "10.1.5",
+  "title": "",
+  "body": "     In the above example we threw away the vector from the span as it was not needed. In that example we could have thrown away any of the vectors (why?), but this is not always the case. For example, we have     The working in the previous example was fairly detailed. In we will see a more streamlined (and much easier) way of dealing with such an example.      "
+},
+{
+  "id": "thm-basis-theorem",
+  "level": "2",
+  "url": "sec-bases.html#thm-basis-theorem",
+  "type": "Theorem",
+  "number": "10.1.6",
+  "title": "(Basis Theorem).",
+  "body": " (Basis Theorem)   Any two bases of a vector space have the same number of elements.   "
+},
+{
+  "id": "def-dimension",
+  "level": "2",
+  "url": "sec-bases.html#def-dimension",
+  "type": "Definition",
+  "number": "10.1.7",
+  "title": "",
+  "body": "  The dimension of a vector space , denoted , is the number of elements in a basis for .   "
+},
+{
+  "id": "ex-dim-of-Rn",
+  "level": "2",
+  "url": "sec-bases.html#ex-dim-of-Rn",
+  "type": "Example",
+  "number": "10.1.8",
+  "title": "",
+  "body": "  So what is the dimension of ?  Since we know that the standard basis is a basis for , we have . This matches our expectation: is 3-dimensional!   "
+},
+{
+  "id": "sec-rank-nullity-theorem",
+  "level": "1",
+  "url": "sec-rank-nullity-theorem.html",
+  "type": "Section",
+  "number": "10.2",
+  "title": "The rank-nullity theorem",
+  "body": " The rank-nullity theorem  This section will culminate in a fundamental result called the rank-nullity theorem, but before we get to this theorem, we will consider the problem of finding bases for the row, column and null spaces of a given matrix. We will start with the general, fool-proof method for finding these bases. We will then illustrate this with an example, before giving a justification (rather than a careful proof) of why these methods work.  Let be a matrix, and let be its RREF. To find a basis for:       For : Take the nonzero row vectors of for a basis of .     For : Take the column vectors of in the same positions as the columns of that contain a leading for a basis of .     For : Solve and write the subspace of solutions as a span by separating the parameters. The vectors in the span will be a basis for .        Consider and its RREF : Find bases for , , and .  Following the rules above, we have    For :       For :       For : Let . Then  and So So is a basis for .       We won't formally prove why the methods above work, but hopefully the following will make the methods for the row and column spaces believable.   Why does the row space method work?    We have because we get from to . So any basis for is a basis for .    The nonzero rows of are linearly independent as the leading 1s are in different positions (with 0s in the other corresponding positions).      Why does the column space method work?   Unlike for the row spaces, in general we have , but we do have . To see why, let be the columns of , and let let be the columns of . Then we have What are these implications saying? This means that linearly independent vectors amongst the correspond to linearly independent vectors amongst the . In particular, a basis for the column space of corresponds (in terms of vector position) to a basis for the column space of . Finally, the columns of with a leading 1 are linearly independent because they are standard basis vectors, and they span the column space of ; hence they are a basis. By the previous discussion, the vectors in the same positions of the columns of are a basis for .  We can now present the rank-nullity theorem. We start with the definitions.    Let be a matrix. Then the rank of , denoted , is defined to be . The nullity of , denoted , is defined to be .      Note that it follows from the discussion above that the rank of a matrix is the number of leading 1s in its RREF, and the nullity of a matrix is the number of parameters appearing in the solution space; that is, the number of columns of the RREF without a leading 1.      If is , then     For the RREF of we have     "
+},
+{
+  "id": "finding-bases-rules-1",
+  "level": "2",
+  "url": "sec-rank-nullity-theorem.html#finding-bases-rules-1",
+  "type": "Paragraph (with a defined term)",
+  "number": "",
+  "title": "",
+  "body": "For : For : For : "
+},
+{
+  "id": "ex-finding-bases-for-matrix-subs",
+  "level": "2",
+  "url": "sec-rank-nullity-theorem.html#ex-finding-bases-for-matrix-subs",
+  "type": "Example",
+  "number": "10.2.1",
+  "title": "",
+  "body": "  Consider and its RREF : Find bases for , , and .  Following the rules above, we have    For :       For :       For : Let . Then  and So So is a basis for .      "
+},
+{
+  "id": "sec-rank-nullity-theorem-7",
+  "level": "2",
+  "url": "sec-rank-nullity-theorem.html#sec-rank-nullity-theorem-7",
+  "type": "Paragraph (with a defined term)",
+  "number": "",
+  "title": "",
+  "body": "Why does the row space method work? "
+},
+{
+  "id": "sec-rank-nullity-theorem-8",
+  "level": "2",
+  "url": "sec-rank-nullity-theorem.html#sec-rank-nullity-theorem-8",
+  "type": "Paragraph (with a defined term)",
+  "number": "",
+  "title": "",
+  "body": "Why does the column space method work? "
+},
+{
+  "id": "def-rank-and-nullity",
+  "level": "2",
+  "url": "sec-rank-nullity-theorem.html#def-rank-and-nullity",
+  "type": "Definition",
+  "number": "10.2.2",
+  "title": "",
+  "body": "  Let be a matrix. Then the rank of , denoted , is defined to be . The nullity of , denoted , is defined to be .   "
+},
+{
+  "id": "rem-alt-for-rank-and-nullity",
+  "level": "2",
+  "url": "sec-rank-nullity-theorem.html#rem-alt-for-rank-and-nullity",
+  "type": "Remark",
+  "number": "10.2.3",
+  "title": "",
+  "body": "  Note that it follows from the discussion above that the rank of a matrix is the number of leading 1s in its RREF, and the nullity of a matrix is the number of parameters appearing in the solution space; that is, the number of columns of the RREF without a leading 1.   "
+},
+{
+  "id": "thm-rank-nullity-thm",
+  "level": "2",
+  "url": "sec-rank-nullity-theorem.html#thm-rank-nullity-thm",
+  "type": "Theorem",
+  "number": "10.2.4",
+  "title": "",
+  "body": "  If is , then     For the RREF of we have    "
+},
+{
+  "id": "sec-characterisations-of-invertibility-take2",
+  "level": "1",
+  "url": "sec-characterisations-of-invertibility-take2.html",
+  "type": "Section",
+  "number": "10.3",
+  "title": "Characterisations of invertibility (take 2!)",
+  "body": " Characterisations of invertibility (take 2!)  We are now in a position to add to with numerous other characterisations of a matrix being invertible. It is a good exercise to convince yourself why each new equivalence is true.   Characterisations of Invertibility (Part 2)   Let be an matrix. The following are equivalent:    is invertible.     has a unique solution for all .    If with , then .    The RREF of is .     is a product of elementary matrices.     .     .    The columns of are linearly independent.    The columns of span .    The columns of are a basis for .    The rows of are linearly independent.    The rows of span .    The rows of are a basis for .       The above result implies something very handy about a basis for a vector space: to check whether a subset of vectors in is a basis for , you only need to check one of the spanning or linear independence properties; not both. We state this now.    If consists of elements, then we have and hence we have and     "
+},
+{
+  "id": "thm-COI2",
+  "level": "2",
+  "url": "sec-characterisations-of-invertibility-take2.html#thm-COI2",
+  "type": "Theorem",
+  "number": "10.3.1",
+  "title": "Characterisations of Invertibility (Part 2).",
+  "body": " Characterisations of Invertibility (Part 2)   Let be an matrix. The following are equivalent:    is invertible.     has a unique solution for all .    If with , then .    The RREF of is .     is a product of elementary matrices.     .     .    The columns of are linearly independent.    The columns of span .    The columns of are a basis for .    The rows of are linearly independent.    The rows of span .    The rows of are a basis for .      "
+},
+{
+  "id": "cor-one-check-for-basis",
+  "level": "2",
+  "url": "sec-characterisations-of-invertibility-take2.html#cor-one-check-for-basis",
+  "type": "Corollary",
+  "number": "10.3.2",
+  "title": "",
+  "body": "  If consists of elements, then we have and hence we have and    "
+},
+{
+  "id": "sec-linear-transformations",
+  "level": "1",
+  "url": "sec-linear-transformations.html",
+  "type": "Section",
+  "number": "11.1",
+  "title": "Linear transformations",
+  "body": " Linear transformations    A linear transformation (or linear map ) is a function satisfying    for all , and     for all .       Conditions 1 and 2 above ensure that a linear transformation 'preserves the vector space structure', in the sense that the image of the sum of vectors is the sum of the images, and the image of a scalar multiple is the scalar multiple of the image.    The map given by is not linear because, for instance, we have and       Show that given by is linear. We have We leave it as an exercise to prove that , hence showing that is linear.     Let be , and let be given by Then we have and and hence is linear.    The previous example says that left multiplication by a matrix is a linear transformation. The next theorem says that this is the only type of linear transformation.    Let be linear. Then the matrix satisfies for all .    We have       We illustrate this result with . We have So . We now check:     In we discussed how matrix multiplication is defined in a complicated way because it is meant to model composition of functions. We can now be more precise about this. We leave the proof as an exercise.    If and and linear transformations, then the composition is linear, and we have     "
+},
+{
+  "id": "def-linear-transformation",
+  "level": "2",
+  "url": "sec-linear-transformations.html#def-linear-transformation",
+  "type": "Definition",
+  "number": "11.1.1",
+  "title": "",
+  "body": "  A linear transformation (or linear map ) is a function satisfying    for all , and     for all .      "
+},
+{
+  "id": "ex-linear-trans-non-eg",
+  "level": "2",
+  "url": "sec-linear-transformations.html#ex-linear-trans-non-eg",
+  "type": "Example",
+  "number": "11.1.2",
+  "title": "",
+  "body": "  The map given by is not linear because, for instance, we have and    "
+},
+{
+  "id": "ex-tpical-lin-trans",
+  "level": "2",
+  "url": "sec-linear-transformations.html#ex-tpical-lin-trans",
+  "type": "Example",
+  "number": "11.1.3",
+  "title": "",
+  "body": "  Show that given by is linear. We have We leave it as an exercise to prove that , hence showing that is linear.  "
+},
+{
+  "id": "ex-left-mult-by-matrix-is-linear",
+  "level": "2",
+  "url": "sec-linear-transformations.html#ex-left-mult-by-matrix-is-linear",
+  "type": "Example",
+  "number": "11.1.4",
+  "title": "",
+  "body": "  Let be , and let be given by Then we have and and hence is linear.   "
+},
+{
+  "id": "thm-all-linear-trans-are-matrices",
+  "level": "2",
+  "url": "sec-linear-transformations.html#thm-all-linear-trans-are-matrices",
+  "type": "Theorem",
+  "number": "11.1.5",
+  "title": "",
+  "body": "  Let be linear. Then the matrix satisfies for all .    We have    "
+},
+{
+  "id": "ex-checking-main-lt-thm",
+  "level": "2",
+  "url": "sec-linear-transformations.html#ex-checking-main-lt-thm",
+  "type": "Example",
+  "number": "11.1.6",
+  "title": "",
+  "body": "  We illustrate this result with . We have So . We now check:    "
+},
+{
+  "id": "thm-martix-mult-is-composition",
+  "level": "2",
+  "url": "sec-linear-transformations.html#thm-martix-mult-is-composition",
+  "type": "Theorem",
+  "number": "11.1.7",
+  "title": "",
+  "body": "  If and and linear transformations, then the composition is linear, and we have    "
+},
+{
+  "id": "sec-examples-of-linear-transformations",
+  "level": "1",
+  "url": "sec-examples-of-linear-transformations.html",
+  "type": "Section",
+  "number": "11.2",
+  "title": "Examples",
+  "body": " Examples  We discuss two classes of linear transformations in this section.    Rotation: An important example of a linear transformation is rotation. Given an angle (which for the purposes of our diagrams we will think of as an angle between 0 and , but this all works for any angle), we define the function by setting $ to be the result of rotating anticlockwise by angle . This function is linear. We illustrate the additivity (property 1 of being linear) in , and we will leave drawing a diagram for scaling as an exercise.   This figure illustrates that rotation is additive (one half of being linear): adding and and then rotating to get gives the same vector as rotating first to get and , and then adding to get .      What is the matrix for ?    Fact: The matrix corresponding to the rotation transformation is    We illustrate this with an acute angle in .   Working out the matrix corresponding to .    Rotating by .       Rotating by .           Reflection: If you think about the operation of reflecting vectors in about the line , you can convince yourself that this is linear, and that the formula is Let's check this with the corresponding matrix.   Working out the matrix corresponding to reflection about .    Reflecting about .       Reflecting about .        We see from that and hence reflection is given by which does match the formula we had an educated guess about earlier.   "
+},
+{
+  "id": "ex-rotation",
+  "level": "2",
+  "url": "sec-examples-of-linear-transformations.html#ex-rotation",
+  "type": "Example",
+  "number": "11.2.1",
+  "title": "",
+  "body": "  Rotation: An important example of a linear transformation is rotation. Given an angle (which for the purposes of our diagrams we will think of as an angle between 0 and , but this all works for any angle), we define the function by setting $ to be the result of rotating anticlockwise by angle . This function is linear. We illustrate the additivity (property 1 of being linear) in , and we will leave drawing a diagram for scaling as an exercise.   This figure illustrates that rotation is additive (one half of being linear): adding and and then rotating to get gives the same vector as rotating first to get and , and then adding to get .      What is the matrix for ?    Fact: The matrix corresponding to the rotation transformation is    We illustrate this with an acute angle in .   Working out the matrix corresponding to .    Rotating by .       Rotating by .        "
+},
+{
+  "id": "ex-reflection",
+  "level": "2",
+  "url": "sec-examples-of-linear-transformations.html#ex-reflection",
+  "type": "Example",
+  "number": "11.2.4",
+  "title": "",
+  "body": "  Reflection: If you think about the operation of reflecting vectors in about the line , you can convince yourself that this is linear, and that the formula is Let's check this with the corresponding matrix.   Working out the matrix corresponding to reflection about .    Reflecting about .       Reflecting about .        We see from that and hence reflection is given by which does match the formula we had an educated guess about earlier.  "
 },
 {
   "id": "sec-calculating-nxn-determinants",
   "level": "1",
   "url": "sec-calculating-nxn-determinants.html",
   "type": "Section",
-  "number": "8.1",
+  "number": "12.1",
   "title": "Calculating determinants",
   "body": " Calculating determinants  We will sometimes use straight lines to denote the determinant of the matrix matrix , and similarly to denote the determinant of matrices.    If is a matrix, define the determinant . Now let be any matrix with . For each , the - minor of , denoted by , is the matrix obtained by deleting the th row and the th column of . The determinant of is the real number .    Let's get a feel for what this definition means by working through a few examples.    Let be an arbitrary matrix. Then the minors are matrices, or numbers. Specifically, we find by deleting the first row and column of , and by deleting the first row and second column of . The determinant formula now gives . This is consistent with our previous definition of the determinant of a matrix.      If , then the determinant formula says that       The determinant of is     Calculating the determinant using this formula is called expanding along the first row , because the coefficients all come from the first row, and their corresponding minors come from deleting the first row (and some column).  In fact, the determinant can be calculated by expanding along any row or column: there is nothing special about the first row.    Let be an matrix for . Then for any , we can calculate by the expansion along the  -th row  or by the expansion along the  -th column  .    To remember the sign of each coefficient in the determinant formula, it can be helpful to imagine a checkerboard pattern of plus and minus signs, for example .  To calculate the determinant, pick any column or row, and then expand along it. When expanding, multiply each entry of the chosen column or row by its plus or minus sign from the checkboard pattern, and by the determinant of its minor.    Let . In , we calculated that by expanding along the first row. If we instead expand along the second column, we get , as before.    Expanding along a row or column with zeroes makes the calculation easier.    We will calculate the following determinant by expanding along the first column, since it's mostly zero:     "
 },
@@ -2102,7 +2669,7 @@ var ptx_lunr_docs = [
   "level": "2",
   "url": "sec-calculating-nxn-determinants.html#def-determinant",
   "type": "Definition",
-  "number": "8.1.1",
+  "number": "12.1.1",
   "title": "",
   "body": "  If is a matrix, define the determinant . Now let be any matrix with . For each , the - minor of , denoted by , is the matrix obtained by deleting the th row and the th column of . The determinant of is the real number .   "
 },
@@ -2111,7 +2678,7 @@ var ptx_lunr_docs = [
   "level": "2",
   "url": "sec-calculating-nxn-determinants.html#ex-2x2-det-check",
   "type": "Example",
-  "number": "8.1.2",
+  "number": "12.1.2",
   "title": "",
   "body": "  Let be an arbitrary matrix. Then the minors are matrices, or numbers. Specifically, we find by deleting the first row and column of , and by deleting the first row and second column of . The determinant formula now gives . This is consistent with our previous definition of the determinant of a matrix.   "
 },
@@ -2120,7 +2687,7 @@ var ptx_lunr_docs = [
   "level": "2",
   "url": "sec-calculating-nxn-determinants.html#ex-det-general-3x3",
   "type": "Example",
-  "number": "8.1.3",
+  "number": "12.1.3",
   "title": "",
   "body": "  If , then the determinant formula says that    "
 },
@@ -2129,7 +2696,7 @@ var ptx_lunr_docs = [
   "level": "2",
   "url": "sec-calculating-nxn-determinants.html#ex-det",
   "type": "Example",
-  "number": "8.1.4",
+  "number": "12.1.4",
   "title": "",
   "body": "  The determinant of is    "
 },
@@ -2147,7 +2714,7 @@ var ptx_lunr_docs = [
   "level": "2",
   "url": "sec-calculating-nxn-determinants.html#thm-det-any-row-col",
   "type": "Theorem",
-  "number": "8.1.5",
+  "number": "12.1.5",
   "title": "",
   "body": "  Let be an matrix for . Then for any , we can calculate by the expansion along the  -th row  or by the expansion along the  -th column  .   "
 },
@@ -2156,7 +2723,7 @@ var ptx_lunr_docs = [
   "level": "2",
   "url": "sec-calculating-nxn-determinants.html#ex-checking-det-expansions",
   "type": "Example",
-  "number": "8.1.6",
+  "number": "12.1.6",
   "title": "",
   "body": "  Let . In , we calculated that by expanding along the first row. If we instead expand along the second column, we get , as before.   "
 },
@@ -2165,7 +2732,7 @@ var ptx_lunr_docs = [
   "level": "2",
   "url": "sec-calculating-nxn-determinants.html#ex-triangular",
   "type": "Example",
-  "number": "8.1.7",
+  "number": "12.1.7",
   "title": "",
   "body": "  We will calculate the following determinant by expanding along the first column, since it's mostly zero:    "
 },
@@ -2174,7 +2741,7 @@ var ptx_lunr_docs = [
   "level": "1",
   "url": "sec-props-of-determinants.html",
   "type": "Section",
-  "number": "8.2",
+  "number": "12.2",
   "title": "Properties of determinants",
   "body": " Properties of determinants  The following definition gives a name to matrices like whose nonzero entries form a triangular shape.    An matrix is upper triangular if all entries below the diagonal are zero (so for ), lower triangular if all entries above the diagonal are zero (so for ), and triangular if it is either upper triangular or lower triangular.    The matrix in is upper triangular. Notice that its determinant is the product of its diagonal entries. >This is true for any triangular matrix , which can be shown by expanding along the row or column which is zero apart from (possibly) one entry.    Find the determinant of the matrices .  These are triangular, so , and .    If a matrix has a row or column that is completely zero, we can expand along it to see that the determinant is zero.  The next theorem states how determinants interact with elementary row or column operations.    Let and be matrices.   If is obtained from by swapping two rows or columns, then .    If is obtained from by scaling one row or column by , then .    If is obtained from by adding a multiple of one row or column to another, then .        If is obtained from by applying a sequence of elementary row operations, then for some nonzero .    First assume that is obtained from by applying a single ERO. From , where or . Note that must be nonzero since scaling by zero is not an ERO. Thus . This proves the corollary in this case.  To prove the full corollary, we can repeatedly apply the version of it proved in the previous paragraph: will be a product of nonzero numbers and hence nonzero.    The theorem allows us to row reduce the matrix to a simpler one with more zeroes.    Find the determinant of the matrix .  Performing EROs on , we get . We have by , due to the row swap (the other operations did not affect the determinant). Thus       Let and be matrices, and let . Then               If is invertible, then and           Property 1 holds because is a triangular matrix with all diagonal entries equal to , so .  Property 2 follows from , since is obtained from by performing the sequence of EROs each of which multiply the determinant by .  We will not prove Property 3; it is beyond the scope of this course. However, if you are interested, this is proved as Theorem 4.7 of Poole's textbook.  For Property 4, suppose that is invertible. Then by Properties 1 and 3, which means that and .  Finally, Property 5 holds because expanding along the th row of gives the same number as expanding along the th column of .      Let and be invertible matrices such that and . Then     Remember that the reason we introduced the determinant was because we wanted a number which tells us whether a matrix is invertible. We can now show that this is precisely what the determinant does.    An matrix is invertible if and only if .    Consider the augmented matrix and its RREF . If is invertible, then there is a sequence of EROs that reduces to , so by applying , there is a constant such that so . (Alternatively, we already showed this in .)  On the other hand, if is not invertible, then must have a row of zeroes, so . Again applying , there is a nonzero constant such that . This shows that     "
 },
@@ -2183,7 +2750,7 @@ var ptx_lunr_docs = [
   "level": "2",
   "url": "sec-props-of-determinants.html#def-triangular-matrix",
   "type": "Definition",
-  "number": "8.2.1",
+  "number": "12.2.1",
   "title": "",
   "body": "  An matrix is upper triangular if all entries below the diagonal are zero (so for ), lower triangular if all entries above the diagonal are zero (so for ), and triangular if it is either upper triangular or lower triangular.   "
 },
@@ -2192,7 +2759,7 @@ var ptx_lunr_docs = [
   "level": "2",
   "url": "sec-props-of-determinants.html#ex-det-for-tri-matrices",
   "type": "Example",
-  "number": "8.2.2",
+  "number": "12.2.2",
   "title": "",
   "body": "  Find the determinant of the matrices .  These are triangular, so , and .   "
 },
@@ -2201,7 +2768,7 @@ var ptx_lunr_docs = [
   "level": "2",
   "url": "sec-props-of-determinants.html#thm-EROdet",
   "type": "Theorem",
-  "number": "8.2.3",
+  "number": "12.2.3",
   "title": "",
   "body": "  Let and be matrices.   If is obtained from by swapping two rows or columns, then .    If is obtained from by scaling one row or column by , then .    If is obtained from by adding a multiple of one row or column to another, then .     "
 },
@@ -2210,7 +2777,7 @@ var ptx_lunr_docs = [
   "level": "2",
   "url": "sec-props-of-determinants.html#cor-EROdet",
   "type": "Corollary",
-  "number": "8.2.4",
+  "number": "12.2.4",
   "title": "",
   "body": "  If is obtained from by applying a sequence of elementary row operations, then for some nonzero .    First assume that is obtained from by applying a single ERO. From , where or . Note that must be nonzero since scaling by zero is not an ERO. Thus . This proves the corollary in this case.  To prove the full corollary, we can repeatedly apply the version of it proved in the previous paragraph: will be a product of nonzero numbers and hence nonzero.   "
 },
@@ -2219,7 +2786,7 @@ var ptx_lunr_docs = [
   "level": "2",
   "url": "sec-props-of-determinants.html#ex-dets-through-EROs",
   "type": "Example",
-  "number": "8.2.5",
+  "number": "12.2.5",
   "title": "",
   "body": "  Find the determinant of the matrix .  Performing EROs on , we get . We have by , due to the row swap (the other operations did not affect the determinant). Thus    "
 },
@@ -2228,7 +2795,7 @@ var ptx_lunr_docs = [
   "level": "2",
   "url": "sec-props-of-determinants.html#thm-det",
   "type": "Theorem",
-  "number": "8.2.6",
+  "number": "12.2.6",
   "title": "",
   "body": "  Let and be matrices, and let . Then               If is invertible, then and           Property 1 holds because is a triangular matrix with all diagonal entries equal to , so .  Property 2 follows from , since is obtained from by performing the sequence of EROs each of which multiply the determinant by .  We will not prove Property 3; it is beyond the scope of this course. However, if you are interested, this is proved as Theorem 4.7 of Poole's textbook.  For Property 4, suppose that is invertible. Then by Properties 1 and 3, which means that and .  Finally, Property 5 holds because expanding along the th row of gives the same number as expanding along the th column of .   "
 },
@@ -2237,7 +2804,7 @@ var ptx_lunr_docs = [
   "level": "2",
   "url": "sec-props-of-determinants.html#ex-det-and-matrix-algebra",
   "type": "Example",
-  "number": "8.2.7",
+  "number": "12.2.7",
   "title": "",
   "body": "  Let and be invertible matrices such that and . Then    "
 },
@@ -2246,97 +2813,25 @@ var ptx_lunr_docs = [
   "level": "2",
   "url": "sec-props-of-determinants.html#thm-invdet",
   "type": "Theorem",
-  "number": "8.2.8",
+  "number": "12.2.8",
   "title": "",
   "body": "  An matrix is invertible if and only if .    Consider the augmented matrix and its RREF . If is invertible, then there is a sequence of EROs that reduces to , so by applying , there is a constant such that so . (Alternatively, we already showed this in .)  On the other hand, if is not invertible, then must have a row of zeroes, so . Again applying , there is a nonzero constant such that . This shows that    "
-},
-{
-  "id": "sec-span",
-  "level": "1",
-  "url": "sec-span.html",
-  "type": "Section",
-  "number": "9.1",
-  "title": "Span",
-  "body": " Span  Text of section.  "
-},
-{
-  "id": "sec-linear-independence",
-  "level": "1",
-  "url": "sec-linear-independence.html",
-  "type": "Section",
-  "number": "9.2",
-  "title": "Linear independence",
-  "body": " Linear independence  Text of section.  "
-},
-{
-  "id": "sec-subspaces",
-  "level": "1",
-  "url": "sec-subspaces.html",
-  "type": "Section",
-  "number": "10.1",
-  "title": "Subspaces",
-  "body": " Subspaces  Text of section.  "
-},
-{
-  "id": "sec-row-and-column-spaces",
-  "level": "1",
-  "url": "sec-row-and-column-spaces.html",
-  "type": "Section",
-  "number": "10.2",
-  "title": "Row and column spaces",
-  "body": " Row and column spaces  Text of section.  "
-},
-{
-  "id": "sec-null-spaces",
-  "level": "1",
-  "url": "sec-null-spaces.html",
-  "type": "Section",
-  "number": "10.3",
-  "title": "Null spaces",
-  "body": " Null spaces  Text of section.  "
-},
-{
-  "id": "sec-bases",
-  "level": "1",
-  "url": "sec-bases.html",
-  "type": "Section",
-  "number": "11.1",
-  "title": "Bases",
-  "body": " Bases  Text of section.  "
-},
-{
-  "id": "sec-dimension",
-  "level": "1",
-  "url": "sec-dimension.html",
-  "type": "Section",
-  "number": "11.2",
-  "title": "Dimension",
-  "body": " Dimension  Text of section.  "
-},
-{
-  "id": "sec-rank-nullity-theorem",
-  "level": "1",
-  "url": "sec-rank-nullity-theorem.html",
-  "type": "Section",
-  "number": "11.3",
-  "title": "The rank-nullity theorem",
-  "body": " The rank-nullity theorem  Text of section.  "
 },
 {
   "id": "sec-evalues-evectors-espaces",
   "level": "1",
   "url": "sec-evalues-evectors-espaces.html",
   "type": "Section",
-  "number": "12.1",
+  "number": "13.1",
   "title": "Eigenvalues, eigenvectors, and eigenspaces",
-  "body": " Eigenvalues, eigenvectors, and eigenspaces    Let be an matrix. Suppose that there exists a scalar and a nonzero vector such that . Then is an eigenvalue of and is an eigenvector of corresponding to .      In this definition, to calculate we are viewing as a column matrix. This is the convention that we will use to multiply vectors by matrices.   In other words, an eigenvector is a vector such that multiplying it on the left by scales it, and the eiegenvalue is the scaling factor. This is shown in .   scales its eigenvector by the corresponding eigenvalue      We have excluded from the definition of an eigenvector, because any matrix satisfies for every . However, is allowed to be an eigenvalue, and in the following definition of eigenspace, it is convenient to include the zero vector.    If is an eigenvalue of an matrix , the set is the eigenspace of corresponding to .      is the set of all eigenvectors of corresponding to , together with the zero vector . Note that if , then , since . In general, if , one can similarly show that any linear combination of these vectors remains in .     Let . Show that and are eigenvectors of , and find the corresponding eigenvalues.  By direct calculation, , so is an eigenvector of with eigenvalue , and is an eigenvector of with eigenvalue .    Given an matrix , we now show how to find its eigenvalues and eigenvectors. Since , the matrix equation rearranges to the equation .  The next theorem shows us how to find the eigenvalues of .     is an eigenvalue of if and only if .    From , if and only if is not invertible, so the theorem says that is an eigenvalue of if and only if is not invertible.  If is not invertible, then its RREF has at least one column without a leading entry, so has infinitely many solutions, so it has a nonzero solution . Rearranging, , so is an eigenvector for with corresponding eigenvalue .  On the other hand, if is invertible, then the unique solution to is (see NEEDS REF TO COI1). Since is never an eigenvector, this means cannot be an eigenvalue of .      If is an matrix, then the characteristic polynomial of is , and the characteristic equation of is .    The meaning of the theorem is summarised in the next box.    How to find eigenvalues and eigenvectors: Calculate the characteristic polynomial and find its roots, which satisfy the characteristic equation . These are all the eigenvalues of . For each eigenvalue , the eigenvectors corresponding to are the solutions to the matrix equation for , which can be solved by Gaussian elimination.    "
+  "body": " Eigenvalues, eigenvectors, and eigenspaces    Let be an matrix. Suppose that there exists a scalar and a nonzero vector such that . Then is an eigenvalue of and is an eigenvector of corresponding to .      In this definition, to calculate we are viewing as a column matrix. This is the convention that we will use to multiply vectors by matrices.   In other words, an eigenvector is a vector such that multiplying it on the left by scales it, and the eiegenvalue is the scaling factor. This is shown in .   scales its eigenvector by the corresponding eigenvalue      We have excluded from the definition of an eigenvector, because any matrix satisfies for every . However, is allowed to be an eigenvalue, and in the following definition of eigenspace, it is convenient to include the zero vector.    If is an eigenvalue of an matrix , the set is the eigenspace of corresponding to .      is the set of all eigenvectors of corresponding to , together with the zero vector . Note that if , then , since . In general, if , one can similarly show that any linear combination of these vectors remains in .     Let . Show that and are eigenvectors of , and find the corresponding eigenvalues.  By direct calculation, , so is an eigenvector of with eigenvalue , and is an eigenvector of with eigenvalue .    Given an matrix , we now show how to find its eigenvalues and eigenvectors. Since , the matrix equation rearranges to the equation .  The next theorem shows us how to find the eigenvalues of .     is an eigenvalue of if and only if .    From , if and only if is not invertible, so the theorem says that is an eigenvalue of if and only if is not invertible.  If is not invertible, then its RREF has at least one column without a leading entry, so has infinitely many solutions, so it has a nonzero solution . Rearranging, , so is an eigenvector for with corresponding eigenvalue .  On the other hand, if is invertible, then the unique solution to is (see NEEDS REF TO COI1). Since is never an eigenvector, this means cannot be an eigenvalue of .      If is an matrix, then the characteristic polynomial of is , and the characteristic equation of is .    The meaning of the theorem is summarised in the next box.    How to find eigenvalues and eigenvectors: Calculate the characteristic polynomial and find its roots, which satisfy the characteristic equation . These are all the eigenvalues of . For each eigenvalue , the eigenvectors corresponding to are the solutions to the matrix equation for , which can be solved by Gaussian elimination.     By expanding the determinant, we see that the characteristic polynomial is a polynomial of degree when has size . Therefore it has a root by the Fundamental Theorem of Algebra, and it has roots if counted with multiplicity. However, the roots may be in . So even for a matrix with real entries, its eigenvalues may all be in . For simplicity, we will focus on examples where all the roots of the characteristic polynomial are real.     "
 },
 {
   "id": "def-evalue-evector",
   "level": "2",
   "url": "sec-evalues-evectors-espaces.html#def-evalue-evector",
   "type": "Definition",
-  "number": "12.1.1",
+  "number": "13.1.1",
   "title": "",
   "body": "  Let be an matrix. Suppose that there exists a scalar and a nonzero vector such that . Then is an eigenvalue of and is an eigenvector of corresponding to .   "
 },
@@ -2345,7 +2840,7 @@ var ptx_lunr_docs = [
   "level": "2",
   "url": "sec-evalues-evectors-espaces.html#rem-vecs-as-cols",
   "type": "Remark",
-  "number": "12.1.2",
+  "number": "13.1.2",
   "title": ".",
   "body": "  In this definition, to calculate we are viewing as a column matrix. This is the convention that we will use to multiply vectors by matrices.  "
 },
@@ -2354,7 +2849,7 @@ var ptx_lunr_docs = [
   "level": "2",
   "url": "sec-evalues-evectors-espaces.html#fig-evec",
   "type": "Figure",
-  "number": "12.1.3",
+  "number": "13.1.3",
   "title": "",
   "body": " scales its eigenvector by the corresponding eigenvalue     "
 },
@@ -2363,7 +2858,7 @@ var ptx_lunr_docs = [
   "level": "2",
   "url": "sec-evalues-evectors-espaces.html#def-eigenspace",
   "type": "Definition",
-  "number": "12.1.4",
+  "number": "13.1.4",
   "title": "",
   "body": "  If is an eigenvalue of an matrix , the set is the eigenspace of corresponding to .   "
 },
@@ -2372,7 +2867,7 @@ var ptx_lunr_docs = [
   "level": "2",
   "url": "sec-evalues-evectors-espaces.html#rem-espace-descrip",
   "type": "Remark",
-  "number": "12.1.5",
+  "number": "13.1.5",
   "title": "",
   "body": "  is the set of all eigenvectors of corresponding to , together with the zero vector . Note that if , then , since . In general, if , one can similarly show that any linear combination of these vectors remains in .  "
 },
@@ -2381,7 +2876,7 @@ var ptx_lunr_docs = [
   "level": "2",
   "url": "sec-evalues-evectors-espaces.html#ex-evector-checking",
   "type": "Example",
-  "number": "12.1.6",
+  "number": "13.1.6",
   "title": "",
   "body": "  Let . Show that and are eigenvectors of , and find the corresponding eigenvalues.  By direct calculation, , so is an eigenvector of with eigenvalue , and is an eigenvector of with eigenvalue .   "
 },
@@ -2390,7 +2885,7 @@ var ptx_lunr_docs = [
   "level": "2",
   "url": "sec-evalues-evectors-espaces.html#thm-evalue-char",
   "type": "Theorem",
-  "number": "12.1.7",
+  "number": "13.1.7",
   "title": "",
   "body": "   is an eigenvalue of if and only if .    From , if and only if is not invertible, so the theorem says that is an eigenvalue of if and only if is not invertible.  If is not invertible, then its RREF has at least one column without a leading entry, so has infinitely many solutions, so it has a nonzero solution . Rearranging, , so is an eigenvector for with corresponding eigenvalue .  On the other hand, if is invertible, then the unique solution to is (see NEEDS REF TO COI1). Since is never an eigenvector, this means cannot be an eigenvalue of .   "
 },
@@ -2399,7 +2894,7 @@ var ptx_lunr_docs = [
   "level": "2",
   "url": "sec-evalues-evectors-espaces.html#def-char-poly",
   "type": "Definition",
-  "number": "12.1.8",
+  "number": "13.1.8",
   "title": "",
   "body": "  If is an matrix, then the characteristic polynomial of is , and the characteristic equation of is .   "
 },
@@ -2413,11 +2908,20 @@ var ptx_lunr_docs = [
   "body": "How to find eigenvalues and eigenvectors: "
 },
 {
+  "id": "rem-complex-evalues",
+  "level": "2",
+  "url": "sec-evalues-evectors-espaces.html#rem-complex-evalues",
+  "type": "Remark",
+  "number": "13.1.9",
+  "title": "",
+  "body": "  By expanding the determinant, we see that the characteristic polynomial is a polynomial of degree when has size . Therefore it has a root by the Fundamental Theorem of Algebra, and it has roots if counted with multiplicity. However, the roots may be in . So even for a matrix with real entries, its eigenvalues may all be in . For simplicity, we will focus on examples where all the roots of the characteristic polynomial are real.   "
+},
+{
   "id": "sec-evalue-examples",
   "level": "1",
   "url": "sec-evalue-examples.html",
   "type": "Section",
-  "number": "12.2",
+  "number": "13.2",
   "title": "Examples",
   "body": " Examples    Find the eigenvalues of the matrix . For each eigenvalue, find all its eigenvectors, find its eigenspace, and give a specific example of an eigenvector.  The characteristic polynomial is . So the roots of the characteristic equation are and , which means these are the eigenvalues of .  For , we solve for . Row reducing, . The solutions are , , for . So the eigenvectors for are for . For the eigenspace, we include , so we can also include to get . Taking , a specific eigenvector is .  For , we solve for . Row reducing, . The solutions are , for . So the eigenvectors are for , the eigenspace is and taking gives that is an eigenvector.      Find the eigenvalues of the matrix . For each eigenvalue, find a corresponding eigenvector.  The characteristic polynomial is . So the eigenvalues of are and .  For , we solve .  The solutions are , for . Taking , is an eigenvector for .  For , .  The solutions are , , , for . Taking gives that is an eigenvector for .     If is a triangular matrix, then because is a diagonal matrix, is still triangular. If the diagonal entries of are , then is a triangular matrix with on its diagonal. Since the determinant of a triangular matrix is the product of its diagonal entries, . Therefore the solutions of the characteristic equation are .    Conclusion: The eigenvalues of a triangular matrix are its diagonal entries.     Find the eigenvalues of the matrix .   is upper triangular, so its eigenvalues are the diagonal entries , and .    "
 },
@@ -2426,7 +2930,7 @@ var ptx_lunr_docs = [
   "level": "2",
   "url": "sec-evalue-examples.html#ex-finding-ethings1",
   "type": "Example",
-  "number": "12.2.1",
+  "number": "13.2.1",
   "title": "",
   "body": "  Find the eigenvalues of the matrix . For each eigenvalue, find all its eigenvectors, find its eigenspace, and give a specific example of an eigenvector.  The characteristic polynomial is . So the roots of the characteristic equation are and , which means these are the eigenvalues of .  For , we solve for . Row reducing, . The solutions are , , for . So the eigenvectors for are for . For the eigenspace, we include , so we can also include to get . Taking , a specific eigenvector is .  For , we solve for . Row reducing, . The solutions are , for . So the eigenvectors are for , the eigenspace is and taking gives that is an eigenvector.   "
 },
@@ -2435,7 +2939,7 @@ var ptx_lunr_docs = [
   "level": "2",
   "url": "sec-evalue-examples.html#ex-finding-ethings2",
   "type": "Example",
-  "number": "12.2.2",
+  "number": "13.2.2",
   "title": "",
   "body": "  Find the eigenvalues of the matrix . For each eigenvalue, find a corresponding eigenvector.  The characteristic polynomial is . So the eigenvalues of are and .  For , we solve .  The solutions are , for . Taking , is an eigenvector for .  For , .  The solutions are , , , for . Taking gives that is an eigenvector for .   "
 },
@@ -2453,7 +2957,7 @@ var ptx_lunr_docs = [
   "level": "2",
   "url": "sec-evalue-examples.html#ex-finding-evalues-tri-matrix",
   "type": "Example",
-  "number": "12.2.3",
+  "number": "13.2.3",
   "title": "",
   "body": "  Find the eigenvalues of the matrix .   is upper triangular, so its eigenvalues are the diagonal entries , and .   "
 },
@@ -2462,7 +2966,7 @@ var ptx_lunr_docs = [
   "level": "1",
   "url": "sec-evalue-multiplicities.html",
   "type": "Section",
-  "number": "12.3",
+  "number": "13.3",
   "title": "Eigenvalue multiplicities",
   "body": " Eigenvalue multiplicities    Let be an matrix, and let be an eigenvalue of . If when fully factored, the characteristic polynomial has the factor , then the algebraic multiplicity of is . The geometric multiplicity of is the number of parameters appearing in .    The algebraic multiplicity of is just the number of times the factor appears in the characteristic polynomial. The geometric multiplicity is essentially the `dimension' of the eigenspace . For example, if is , then an eigenvalue has geometric multiplicity 1 if represents a line, geometric multiplicity 2 if represents a plane, or 3 if is all of .     Find the multiplicities of the eigenvalues of .  We first calculate the characteristic polynomial (by expanding across the first row) , after factoring. So the eigenvalues are and . The eigenvalue has algebraic multiplicity because of the factor . The eigenvalue has algebraic multiplicity , because it is not a repeated root.  To calculate the geometric multiplicities, we first need to calculate the eigenspaces. First we calculate for : . Let , . Then and row 1 gives that , so . So . This has 1 parameter, so the geometric multiplicity of is .  For , we solve . Let . Then and also. So the eigenspace is , which has 1 parameter, so the geometric multiplicity of is . The answer is summarised in .   Multiplicities in       Eigenvalue  Algebraic multiplicity  Geometric multiplicity                 If is , the sum of the algebraic multiplicities is (because the characteristic polynomial has degree ). In , notice that the geometric multiplicity of the eigenvalues are less than or equal to their algebraic multiplicities. In fact, this is always true.    The geometric multiplicity of an eigenvalue is less than or equal to its algebraic multiplicity.     Here's an important special case when the multiplicities are simple: suppose is a matrix with  distinct eigenvalues . This means that all the algebraic multiplicities are 1. So by , all the geometric multiplicities are less than or equal to 1. But the geometric multiplicity of an eigenvalue is always at least 1. We conclude that:  If is an matrix with distinct eigenvalues, both the algebraic and geometric multiplicity of every eigenvalue are 1.   "
 },
@@ -2471,7 +2975,7 @@ var ptx_lunr_docs = [
   "level": "2",
   "url": "sec-evalue-multiplicities.html#def-multiplicities",
   "type": "Definition",
-  "number": "12.3.1",
+  "number": "13.3.1",
   "title": "",
   "body": "  Let be an matrix, and let be an eigenvalue of . If when fully factored, the characteristic polynomial has the factor , then the algebraic multiplicity of is . The geometric multiplicity of is the number of parameters appearing in .   "
 },
@@ -2480,7 +2984,7 @@ var ptx_lunr_docs = [
   "level": "2",
   "url": "sec-evalue-multiplicities.html#ex-mult",
   "type": "Example",
-  "number": "12.3.2",
+  "number": "13.3.2",
   "title": "",
   "body": "  Find the multiplicities of the eigenvalues of .  We first calculate the characteristic polynomial (by expanding across the first row) , after factoring. So the eigenvalues are and . The eigenvalue has algebraic multiplicity because of the factor . The eigenvalue has algebraic multiplicity , because it is not a repeated root.  To calculate the geometric multiplicities, we first need to calculate the eigenspaces. First we calculate for : . Let , . Then and row 1 gives that , so . So . This has 1 parameter, so the geometric multiplicity of is .  For , we solve . Let . Then and also. So the eigenspace is , which has 1 parameter, so the geometric multiplicity of is . The answer is summarised in .   Multiplicities in       Eigenvalue  Algebraic multiplicity  Geometric multiplicity                "
 },
@@ -2489,7 +2993,7 @@ var ptx_lunr_docs = [
   "level": "2",
   "url": "sec-evalue-multiplicities.html#thm-gleqa",
   "type": "Theorem",
-  "number": "12.3.4",
+  "number": "13.3.4",
   "title": "",
   "body": "  The geometric multiplicity of an eigenvalue is less than or equal to its algebraic multiplicity.   "
 },
@@ -2498,34 +3002,88 @@ var ptx_lunr_docs = [
   "level": "2",
   "url": "sec-evalue-multiplicities.html#rmk-distinct",
   "type": "Remark",
-  "number": "12.3.5",
+  "number": "13.3.5",
   "title": "",
   "body": " Here's an important special case when the multiplicities are simple: suppose is a matrix with  distinct eigenvalues . This means that all the algebraic multiplicities are 1. So by , all the geometric multiplicities are less than or equal to 1. But the geometric multiplicity of an eigenvalue is always at least 1. We conclude that:  If is an matrix with distinct eigenvalues, both the algebraic and geometric multiplicity of every eigenvalue are 1.  "
 },
 {
-  "id": "sec-characterisations-of-invertibility-take2",
+  "id": "sec-characterisations-of-invertibility-take3",
   "level": "1",
-  "url": "sec-characterisations-of-invertibility-take2.html",
+  "url": "sec-characterisations-of-invertibility-take3.html",
   "type": "Section",
-  "number": "12.4",
-  "title": "Characterisations of invertibility (take 2!)",
-  "body": " Characterisations of invertibility (take 2!)  Text of section.  "
+  "number": "13.4",
+  "title": "Characterisations of invertibility (take 3!)",
+  "body": " Characterisations of invertibility (take 3!)  Now that we've since determinants and eigenvalues, we can add a couple more characterisations of a matrix being invertible to get our final version of this theorem.   Characterisations of Invertibility (Part 3)   Let be an matrix. The following are equivalent:    is invertible.     has a unique solution for all .    If with , then .    The RREF of is .     is a product of elementary matrices.     .     .    The columns of are linearly independent.    The columns of span .    The columns of are a basis for .    The rows of are linearly independent.    The rows of span .    The rows of are a basis for .     .    0 is not an eigenvalue of .       "
+},
+{
+  "id": "thm-COI3",
+  "level": "2",
+  "url": "sec-characterisations-of-invertibility-take3.html#thm-COI3",
+  "type": "Theorem",
+  "number": "13.4.1",
+  "title": "Characterisations of Invertibility (Part 3).",
+  "body": " Characterisations of Invertibility (Part 3)   Let be an matrix. The following are equivalent:    is invertible.     has a unique solution for all .    If with , then .    The RREF of is .     is a product of elementary matrices.     .     .    The columns of are linearly independent.    The columns of span .    The columns of are a basis for .    The rows of are linearly independent.    The rows of span .    The rows of are a basis for .     .    0 is not an eigenvalue of .      "
 },
 {
   "id": "sec-similarity",
   "level": "1",
   "url": "sec-similarity.html",
   "type": "Section",
-  "number": "13.1",
+  "number": "14.1",
   "title": "Similarity",
-  "body": " Similarity  Text of section.  "
+  "body": " Similarity    Let be matrices. We say that is similar to if there is an invertible matrix such that . We write .    Similarity is an example of what is called an equivalence relation . This means that, in the setting of the definition above, we have    ( is reflexive)     ( is symmetric)     ( is transitive).   We prove 3 and leave the others as an exercise. If and , then there are invertible matrices and satisfying Then Since is invertible, this says that .  Similarity looks like an odd definition, but we care about this notion because similarity preserves so many interesting properties of a matrix, as we now see in the next result.    If , then    .     is invertible  is invertible.     .     have the same eigenvalues.     for all .    If is invertible, for all .       We prove property 4 and will the rest as an exercise.   We have and so have the same eigenvalues.     Are any of similar?  We have and . So we see that and .  Now assume that . Then , which means the only matrix similar to is . Hence , and so none of the matrices are similar.    "
+},
+{
+  "id": "def-similarity",
+  "level": "2",
+  "url": "sec-similarity.html#def-similarity",
+  "type": "Definition",
+  "number": "14.1.1",
+  "title": "",
+  "body": "  Let be matrices. We say that is similar to if there is an invertible matrix such that . We write .   "
+},
+{
+  "id": "sec-similarity-3",
+  "level": "2",
+  "url": "sec-similarity.html#sec-similarity-3",
+  "type": "Paragraph (with a defined term)",
+  "number": "",
+  "title": "",
+  "body": "equivalence relation "
+},
+{
+  "id": "thm-props-of-similarity",
+  "level": "2",
+  "url": "sec-similarity.html#thm-props-of-similarity",
+  "type": "Theorem",
+  "number": "14.1.2",
+  "title": "",
+  "body": "  If , then    .     is invertible  is invertible.     .     have the same eigenvalues.     for all .    If is invertible, for all .      "
+},
+{
+  "id": "sec-similarity-7",
+  "level": "2",
+  "url": "sec-similarity.html#sec-similarity-7",
+  "type": "Proof",
+  "number": "14.1.1",
+  "title": "",
+  "body": " We have and so have the same eigenvalues.  "
+},
+{
+  "id": "ex-sim-matrices",
+  "level": "2",
+  "url": "sec-similarity.html#ex-sim-matrices",
+  "type": "Example",
+  "number": "14.1.3",
+  "title": "",
+  "body": "  Are any of similar?  We have and . So we see that and .  Now assume that . Then , which means the only matrix similar to is . Hence , and so none of the matrices are similar.   "
 },
 {
   "id": "sec-diagonalisation",
   "level": "1",
   "url": "sec-diagonalisation.html",
   "type": "Section",
-  "number": "13.2",
+  "number": "14.2",
   "title": "Diagonalisation",
   "body": " Diagonalisation    An matrix is diagonalisable if there is an invertible matrix and a diagonal matrix such that .      If a matrix is already diagonal, intuitively it should be diagonalisable. This is true; using the definition, we can take . Then shows that is diagonalisable.    Let be an diagonalisable matrix (where is diagonal). Let where the blank elements of are zero, and the columns of are the vectors . Then implies that . Writing this out gives . The left-hand side equals , which you are asked to calculate in NEED REF below. The right-hand side equals . Comparing columns, this shows that for all . Moreover, each column is nonzero since is invertible. Therefore the eigenvectors of are (which are the columns of ) and the corresponding eigenvalues are (which are the corresponding diagonal entries of ).   Similarly, if has distinct eigenvalues such that is invertible, then is diagonalisable and , where is the diagonal matrix of eigenvalues, as above. (To see this, consisting of eigenvalues means Multiplying by , we conclude .)  We summarise the previous calculations in the following theorem.    An matrix is diagonalisable if and only if there are eigenvectors such that is invertible. In this case, for where each is the eigenvalue for , and the blank elements of are zero.    For this theorem to be useful, we need a convenient criterion for when is invertible. (We know that this is when its determinant is nonzero, but we would still need a way to check that.) In fact, it is invertible whenever our two types of multiplicity are equal.    Let be a matrix. There is an invertible matrix consisting of eigenvectors of if and only if the algebraic multiplicity of every eigenvalue equals its geometric multiplicity.    Combining and gives the following criterion, which is how we will check in practice whether a matrix is diagonalisable.    Let be an matrix. Then is diagonalisable if and only if the algebraic multiplicity of every eigenvalue equals its geometric multiplicity. In this case, where and are the same as in .    So in an example, we can calculate the eigenspaces and then check the multiplicities to see if they match. An important special case is when all the eigenvalues are different.    If is a matrix with distinct eigenvalues, then is diagonalisable.    This is because by , if has distinct eigenvalues then every eigenvalue has geometric and algebraic multiplicity equal to 1. So the multiplicities match. Then by , is diagonalisable.  "
 },
@@ -2534,7 +3092,7 @@ var ptx_lunr_docs = [
   "level": "2",
   "url": "sec-diagonalisation.html#def-diagonalisable",
   "type": "Definition",
-  "number": "13.2.1",
+  "number": "14.2.1",
   "title": "",
   "body": "  An matrix is diagonalisable if there is an invertible matrix and a diagonal matrix such that .   "
 },
@@ -2543,7 +3101,7 @@ var ptx_lunr_docs = [
   "level": "2",
   "url": "sec-diagonalisation.html#ex-diag-is-diagonalisable",
   "type": "Example",
-  "number": "13.2.2",
+  "number": "14.2.2",
   "title": "",
   "body": "  If a matrix is already diagonal, intuitively it should be diagonalisable. This is true; using the definition, we can take . Then shows that is diagonalisable.   "
 },
@@ -2552,7 +3110,7 @@ var ptx_lunr_docs = [
   "level": "2",
   "url": "sec-diagonalisation.html#thm-criterion",
   "type": "Theorem",
-  "number": "13.2.3",
+  "number": "14.2.3",
   "title": "",
   "body": "  An matrix is diagonalisable if and only if there are eigenvectors such that is invertible. In this case, for where each is the eigenvalue for , and the blank elements of are zero.   "
 },
@@ -2561,7 +3119,7 @@ var ptx_lunr_docs = [
   "level": "2",
   "url": "sec-diagonalisation.html#thm-criterion-1-half",
   "type": "Theorem",
-  "number": "13.2.4",
+  "number": "14.2.4",
   "title": "",
   "body": "  Let be a matrix. There is an invertible matrix consisting of eigenvectors of if and only if the algebraic multiplicity of every eigenvalue equals its geometric multiplicity.   "
 },
@@ -2570,7 +3128,7 @@ var ptx_lunr_docs = [
   "level": "2",
   "url": "sec-diagonalisation.html#thm-criterion2",
   "type": "Theorem",
-  "number": "13.2.5",
+  "number": "14.2.5",
   "title": "",
   "body": "  Let be an matrix. Then is diagonalisable if and only if the algebraic multiplicity of every eigenvalue equals its geometric multiplicity. In this case, where and are the same as in .   "
 },
@@ -2579,7 +3137,7 @@ var ptx_lunr_docs = [
   "level": "2",
   "url": "sec-diagonalisation.html#cor-dist-evalues",
   "type": "Corollary",
-  "number": "13.2.6",
+  "number": "14.2.6",
   "title": "",
   "body": "  If is a matrix with distinct eigenvalues, then is diagonalisable.   "
 },
@@ -2588,7 +3146,7 @@ var ptx_lunr_docs = [
   "level": "1",
   "url": "sec-examples-of-diagonalisation.html",
   "type": "Section",
-  "number": "13.3",
+  "number": "14.3",
   "title": "Examples of diagonalisation",
   "body": " Examples of diagonalisation    Is diagonalisable? If so, write out .  First, we compute the characteristic polynomial. To simplify the calculation, we will start with one step of row-reduction: . So the eigenvalues are (with algebraic multiplicity 2) and (with algebraic multiplicity 1). Next we calculate eigenspaces.  For , we have . Since the second and third rows don't have a leading entry, we need to let and , for . Then implies that . So the eigenspace is . This has 2 parameters, so the geometric multiplicity of is 2, which is equal to its algebraic multiplicity. Taking and gives that is an eigenvector, and taking and gives that is also an eigenvector (corresponding to a different parameter).  For , we have . Let , for . Then the second row gives , and the first gives . Therefore the 3-eigenspace is . This has 1 parameter, so the geometric multiplicity of is 1, which is equal to its algebraic multiplicity. Taking , an eigenvector is . Therefore both eigenvalues have geometric multiplicity = algebraic multiplicity, so is diagonalisable, and we can write as . The columns of are the eigenvectors of .  Notice that since has algebraic multiplicity 2, we needed to find 2 eigenvectors corresponding to 2 different parameters in , and the eigenvalue 2 appears twice in the diagonal matrix (in the corresponding positions to its eigenvectors in ).      Consider the matrix from . The algebraic multiplicity of the eigenvalue is 2, while its geometric multiplicity is 1. Therefore is not diagonalisable.    "
 },
@@ -2597,7 +3155,7 @@ var ptx_lunr_docs = [
   "level": "2",
   "url": "sec-examples-of-diagonalisation.html#ex-diagl",
   "type": "Example",
-  "number": "13.3.1",
+  "number": "14.3.1",
   "title": "",
   "body": "  Is diagonalisable? If so, write out .  First, we compute the characteristic polynomial. To simplify the calculation, we will start with one step of row-reduction: . So the eigenvalues are (with algebraic multiplicity 2) and (with algebraic multiplicity 1). Next we calculate eigenspaces.  For , we have . Since the second and third rows don't have a leading entry, we need to let and , for . Then implies that . So the eigenspace is . This has 2 parameters, so the geometric multiplicity of is 2, which is equal to its algebraic multiplicity. Taking and gives that is an eigenvector, and taking and gives that is also an eigenvector (corresponding to a different parameter).  For , we have . Let , for . Then the second row gives , and the first gives . Therefore the 3-eigenspace is . This has 1 parameter, so the geometric multiplicity of is 1, which is equal to its algebraic multiplicity. Taking , an eigenvector is . Therefore both eigenvalues have geometric multiplicity = algebraic multiplicity, so is diagonalisable, and we can write as . The columns of are the eigenvectors of .  Notice that since has algebraic multiplicity 2, we needed to find 2 eigenvectors corresponding to 2 different parameters in , and the eigenvalue 2 appears twice in the diagonal matrix (in the corresponding positions to its eigenvectors in ).   "
 },
@@ -2606,7 +3164,7 @@ var ptx_lunr_docs = [
   "level": "2",
   "url": "sec-examples-of-diagonalisation.html#ex-diagl2",
   "type": "Example",
-  "number": "13.3.2",
+  "number": "14.3.2",
   "title": "",
   "body": "  Consider the matrix from . The algebraic multiplicity of the eigenvalue is 2, while its geometric multiplicity is 1. Therefore is not diagonalisable.   "
 },
@@ -2615,7 +3173,7 @@ var ptx_lunr_docs = [
   "level": "1",
   "url": "sec-apps-of-diagonalisation.html",
   "type": "Section",
-  "number": "13.4",
+  "number": "14.4",
   "title": "Applications of diagonalisation",
   "body": " Applications of diagonalisation  One of the useful things about diagonalisation is that it allows us to quickly compute large powers of matrices. If , then most of the and terms will cancel: we have . Similarly, for any integer power , we have . Recall that if is a diagonal matrix, the power can be computed simply by taking the th power of each diagonal entry. Then we just need to multiply it by (on the left) and (on the right) to find .    Use diagonalisation to calculate where .  In , we saw that is diagonalisable, with . Therefore . This could be simplified further by evaluating the inverse and the matrix products.    "
 },
@@ -2624,7 +3182,7 @@ var ptx_lunr_docs = [
   "level": "2",
   "url": "sec-apps-of-diagonalisation.html#ex-power-using-diagl",
   "type": "Example",
-  "number": "13.4.1",
+  "number": "14.4.1",
   "title": "",
   "body": "  Use diagonalisation to calculate where .  In , we saw that is diagonalisable, with . Therefore . This could be simplified further by evaluating the inverse and the matrix products.   "
 },
@@ -2633,54 +3191,279 @@ var ptx_lunr_docs = [
   "level": "1",
   "url": "sec-prob-vectors-and-stochastic-matrices.html",
   "type": "Section",
-  "number": "14.1",
+  "number": "15.1",
   "title": "Probability vectors and stochastic matrices",
-  "body": " Probability vectors and stochastic matrices  Text of section.  "
+  "body": " Probability vectors and stochastic matrices  You may know that probabilities are numbers between 0 and 1, and they add up to 1 when we consider all outcomes. This suggests that vectors with entries like this should be related to probabilities.    A probability vector is a vector such that for all and .    For example, the vectors are all probability vectors, while none of the following vectors are probability vectors: . The first is not a probability vector because it has a negative entry, and the rest are not because they do not add up to 1.      A stochastic matrix is a matrix in which every column is a probability vector.    An matrix is positive if for all .    A stochastic matrix is regular if is positive for some integer .        Determine whether the following matrices are stochastic, and if so, whether they are regular: .  First, both matrices are stochastic because all their columns have entries between and and sum to . Next, is not positive, but , so is positive. This shows that is regular.  The matrix is not positive. We have which is also not positive. Then , and . In general, . Therefore is not positive for any power , and hence is not regular.      The matrix is regular since is positive.      Let be a square matrix, and a positive integer.   If is stochastic, then is stochastic.    If is positive, then is positive.      The second property is because if and are any matrices, then is positive. This is because and for every , so the -entry of  is positive.  The first result will appear on a tutorial sheet.  "
+},
+{
+  "id": "def-prob-vector",
+  "level": "2",
+  "url": "sec-prob-vectors-and-stochastic-matrices.html#def-prob-vector",
+  "type": "Definition",
+  "number": "15.1.1",
+  "title": "",
+  "body": "  A probability vector is a vector such that for all and .   "
+},
+{
+  "id": "def-stochastic-etc",
+  "level": "2",
+  "url": "sec-prob-vectors-and-stochastic-matrices.html#def-stochastic-etc",
+  "type": "Definition",
+  "number": "15.1.2",
+  "title": "",
+  "body": "    A stochastic matrix is a matrix in which every column is a probability vector.    An matrix is positive if for all .    A stochastic matrix is regular if is positive for some integer .     "
+},
+{
+  "id": "ex-finding-stochastic",
+  "level": "2",
+  "url": "sec-prob-vectors-and-stochastic-matrices.html#ex-finding-stochastic",
+  "type": "Example",
+  "number": "15.1.3",
+  "title": "",
+  "body": "  Determine whether the following matrices are stochastic, and if so, whether they are regular: .  First, both matrices are stochastic because all their columns have entries between and and sum to . Next, is not positive, but , so is positive. This shows that is regular.  The matrix is not positive. We have which is also not positive. Then , and . In general, . Therefore is not positive for any power , and hence is not regular.   "
+},
+{
+  "id": "ex-regular-matrix",
+  "level": "2",
+  "url": "sec-prob-vectors-and-stochastic-matrices.html#ex-regular-matrix",
+  "type": "Example",
+  "number": "15.1.4",
+  "title": "",
+  "body": "  The matrix is regular since is positive.   "
+},
+{
+  "id": "thm-props-of-stochastic",
+  "level": "2",
+  "url": "sec-prob-vectors-and-stochastic-matrices.html#thm-props-of-stochastic",
+  "type": "Theorem",
+  "number": "15.1.5",
+  "title": "",
+  "body": "  Let be a square matrix, and a positive integer.   If is stochastic, then is stochastic.    If is positive, then is positive.     "
 },
 {
   "id": "sec-markov-chains",
   "level": "1",
   "url": "sec-markov-chains.html",
   "type": "Section",
-  "number": "14.2",
+  "number": "15.2",
   "title": "Markov chains",
-  "body": " Markov chains  Text of section.  "
+  "body": " Markov chains  We will introduce the concept of a Markov chain by example.    Suppose there are two chains of grocery stores, and , and that each month   90\\% of people that shop at continue to shop at in the next month,    10\\% of people that shop at will switch to in the next month,    70\\% of people that shop at continue to shop at in the next month, and    30\\% of people that shop at will switch to in the next month.   This is represented graphically in .   Diagram representing the probability of where a person will shop next month (tip of the arrow), depending on where they shopped this month (tail of the arrow).      Suppose that initially 100 people shop at and people shop at .   Question: How many people shop at and in the following month?  For short, we will say that a person is in state  if they shop at that month, and in state  if they shop at . Then and , which answers the question. Note that so if is the vector encoding the initial states (the amount of customers in the current month), then is the vector encoding the states after 1 month (the next month).    The important thing about this model is that what happens in the next month only depends on the states in the current month. This abstracts into the idea of a Markov chain.    A Markov chain is a process that changes over time. It consists of:   A finite number of states . At each step, the process can be in any one of the states.    At the next step, the process can either stay in the same state, or switch to a different state.    The probability of moving from state to state is constant. At any step, this probability only depends on the two states and .       This is sometimes called a discrete time Markov chain, because the time steps (the intervals at which the process changes) are not continuous.    Notation and terminology:    We will use to label the states.    We write for the vector whose th entry is the number of members (people\/objects etc.) in state after steps. We call a state vector . So is the initial data, called the initial state vector , and is the data after 1 step, is the data after 2 steps, and so on.    We write for the probability of moving from state to state in 1 step, called a transition probability .    The transition matrix is , where are the transition probabilities      Warning: do not confuse with the probability of moving from state to state , which is . We write it this way to make the formulas neater later.   For all and , we have , since they are probabilities. And because this is the probability of moving to 1 from 1, or to 1 from 2, , or to 1 from , and state 1 must move to one of the states. Therefore the first column of sums to 1. Similarly, each of the other columns sum to 1, so the transition matrix is stochastic . (Check this in .)    In , let state 1 be and state 2 be . Then the initial state vector is and the transition matrix is . After month, . After months, . So after months,       Fact: if is the transition matrix of a Markov chain, then the probability of moving from state to state in steps is the -entry of .     In , what is the probability that someone who shops at this month will shop at in two months time?  This is the probability of moving from state 1 to state 2 in 2 steps, which is the -entry of . We have which has -entry 0.16. Therefore the probability is 0.16.    "
+},
+{
+  "id": "ex-markov",
+  "level": "2",
+  "url": "sec-markov-chains.html#ex-markov",
+  "type": "Example",
+  "number": "15.2.1",
+  "title": "",
+  "body": "  Suppose there are two chains of grocery stores, and , and that each month   90\\% of people that shop at continue to shop at in the next month,    10\\% of people that shop at will switch to in the next month,    70\\% of people that shop at continue to shop at in the next month, and    30\\% of people that shop at will switch to in the next month.   This is represented graphically in .   Diagram representing the probability of where a person will shop next month (tip of the arrow), depending on where they shopped this month (tail of the arrow).      Suppose that initially 100 people shop at and people shop at .   Question: How many people shop at and in the following month?  For short, we will say that a person is in state  if they shop at that month, and in state  if they shop at . Then and , which answers the question. Note that so if is the vector encoding the initial states (the amount of customers in the current month), then is the vector encoding the states after 1 month (the next month).   "
+},
+{
+  "id": "def-markov-chain",
+  "level": "2",
+  "url": "sec-markov-chains.html#def-markov-chain",
+  "type": "Definition",
+  "number": "15.2.3",
+  "title": "",
+  "body": "  A Markov chain is a process that changes over time. It consists of:   A finite number of states . At each step, the process can be in any one of the states.    At the next step, the process can either stay in the same state, or switch to a different state.    The probability of moving from state to state is constant. At any step, this probability only depends on the two states and .     "
+},
+{
+  "id": "rem-discrete-time-markov",
+  "level": "2",
+  "url": "sec-markov-chains.html#rem-discrete-time-markov",
+  "type": "Remark",
+  "number": "15.2.4",
+  "title": "",
+  "body": " This is sometimes called a discrete time Markov chain, because the time steps (the intervals at which the process changes) are not continuous.  "
+},
+{
+  "id": "sec-markov-chains-7",
+  "level": "2",
+  "url": "sec-markov-chains.html#sec-markov-chains-7",
+  "type": "Paragraph (with a defined term)",
+  "number": "",
+  "title": "",
+  "body": "Notation and terminology: state vector initial state vector transition probability transition matrix "
+},
+{
+  "id": "rem-probs-and-indices",
+  "level": "2",
+  "url": "sec-markov-chains.html#rem-probs-and-indices",
+  "type": "Remark",
+  "number": "15.2.5",
+  "title": "",
+  "body": " Warning: do not confuse with the probability of moving from state to state , which is . We write it this way to make the formulas neater later.  "
+},
+{
+  "id": "ex-markov-setup",
+  "level": "2",
+  "url": "sec-markov-chains.html#ex-markov-setup",
+  "type": "Example",
+  "number": "15.2.6",
+  "title": "",
+  "body": "  In , let state 1 be and state 2 be . Then the initial state vector is and the transition matrix is . After month, . After months, . So after months,    "
+},
+{
+  "id": "transition-probs-1",
+  "level": "2",
+  "url": "sec-markov-chains.html#transition-probs-1",
+  "type": "Paragraph (with a defined term)",
+  "number": "",
+  "title": "",
+  "body": "Fact: "
+},
+{
+  "id": "ex-finding-markov-probs",
+  "level": "2",
+  "url": "sec-markov-chains.html#ex-finding-markov-probs",
+  "type": "Example",
+  "number": "15.2.7",
+  "title": "",
+  "body": "  In , what is the probability that someone who shops at this month will shop at in two months time?  This is the probability of moving from state 1 to state 2 in 2 steps, which is the -entry of . We have which has -entry 0.16. Therefore the probability is 0.16.   "
 },
 {
   "id": "sec-steady-state-vectors",
   "level": "1",
   "url": "sec-steady-state-vectors.html",
   "type": "Section",
-  "number": "14.3",
+  "number": "15.3",
   "title": "Steady state vectors",
-  "body": " Steady state vectors  Text of section.  "
+  "body": " Steady state vectors  Suppose that we model the weather in Sydney by the three states 1: sunny, 2: cloudy, and 3: rainy, with transition probabilities given by the diagram .   Transition probabilities for the weather Markov chain      The transition matrix is therefore .  Suppose the weather is rainy (state 3) on day 0, so the initial state vector is . What are the weather probabilities on day 2? They are . So on day 2 the probability of sunny weather is 0.1875, of cloudy weather is 0.375, and of rainy weather is 0.4375. It is possible to calculate that in 7 days time and that in 15 days time . It seems like as . Let . We calculate . Therefore , or in other words is an eigenvector of with eigenvalue . It is an example of a steady state probability vector, which we define next.    Let be the transition matrix of a Markov chain. A steady state vector (SSV) is a vector such that , with entries which are non-negative and sum to the total number of members in the Markov chain. A steady state probability vector (SSPV) is a probability vector such that .     If is a SSV or SSPV, then . Thus , and and so on. Therefore for all integers .     If is a transition matrix for a Markov chain, then is an eigenvalue of .    This theorem is important because it means that there is a nonzero vector such that . We can scale to make it a SSV or SSPV.   Let be the row matrix whose entries are all 1s. Then .  Here we used that , the sum of the th column of , is since is stochastic. This shows that . Taking transposes gives that , so is an eigenvector of with eigenvalue 1. Since the matrices and have the same characteristic polynomial, and hence the same eigenvalues. This proves that there is an eigenvector of with eigenvalue 1.   To find a SSV or SSPV, solve the equation . By the previous theorem, this matrix equation has a nonzero solution, and therefore infinitely many solutions. By substituting the appropriate value of the parameter, we can make the vector add up to the total number of members in the Markov chain to get a SSV, or add up to 1 to get a SSPV.    Consider the grocery store Markov chain from with transition matrix and initial state vector . Find a steady state vector and a steady state probability vector.  First we solve to get . Let , then . So the solutions are given by the 1-eigenspace . The total population is , so a SSV is a vector in with nonnegative entries that add up to 180. This means that , so . Substituting in gives that a SSV is . To find a SSPV, we solve for , so . Therefore a SSPV is     "
+},
+{
+  "id": "fig-weather",
+  "level": "2",
+  "url": "sec-steady-state-vectors.html#fig-weather",
+  "type": "Figure",
+  "number": "15.3.1",
+  "title": "",
+  "body": " Transition probabilities for the weather Markov chain     "
+},
+{
+  "id": "def-steady-state",
+  "level": "2",
+  "url": "sec-steady-state-vectors.html#def-steady-state",
+  "type": "Definition",
+  "number": "15.3.2",
+  "title": "",
+  "body": "  Let be the transition matrix of a Markov chain. A steady state vector (SSV) is a vector such that , with entries which are non-negative and sum to the total number of members in the Markov chain. A steady state probability vector (SSPV) is a probability vector such that .   "
+},
+{
+  "id": "rem-steady-ssv",
+  "level": "2",
+  "url": "sec-steady-state-vectors.html#rem-steady-ssv",
+  "type": "Remark",
+  "number": "15.3.3",
+  "title": "",
+  "body": " If is a SSV or SSPV, then . Thus , and and so on. Therefore for all integers .  "
+},
+{
+  "id": "thm-",
+  "level": "2",
+  "url": "sec-steady-state-vectors.html#thm-",
+  "type": "Theorem",
+  "number": "15.3.4",
+  "title": "",
+  "body": "  If is a transition matrix for a Markov chain, then is an eigenvalue of .   "
+},
+{
+  "id": "sec-steady-state-vectors-10",
+  "level": "2",
+  "url": "sec-steady-state-vectors.html#sec-steady-state-vectors-10",
+  "type": "Proof",
+  "number": "15.3.1",
+  "title": "",
+  "body": " Let be the row matrix whose entries are all 1s. Then .  Here we used that , the sum of the th column of , is since is stochastic. This shows that . Taking transposes gives that , so is an eigenvector of with eigenvalue 1. Since the matrices and have the same characteristic polynomial, and hence the same eigenvalues. This proves that there is an eigenvector of with eigenvalue 1.  "
+},
+{
+  "id": "ex-grocery-SSV",
+  "level": "2",
+  "url": "sec-steady-state-vectors.html#ex-grocery-SSV",
+  "type": "Example",
+  "number": "15.3.5",
+  "title": "",
+  "body": "  Consider the grocery store Markov chain from with transition matrix and initial state vector . Find a steady state vector and a steady state probability vector.  First we solve to get . Let , then . So the solutions are given by the 1-eigenspace . The total population is , so a SSV is a vector in with nonnegative entries that add up to 180. This means that , so . Substituting in gives that a SSV is . To find a SSPV, we solve for , so . Therefore a SSPV is    "
 },
 {
   "id": "sec-regular-markov-chains",
   "level": "1",
   "url": "sec-regular-markov-chains.html",
   "type": "Section",
-  "number": "14.4",
+  "number": "15.4",
   "title": "Regular Markov chains",
-  "body": " Regular Markov chains  Text of section.  "
+  "body": " Regular Markov chains  When does tend towards a unique steady state vector? The next example shows that steady state vectors do not need to be unique.    Consider a Markov chain for a population of 600 people, with transition probabilities given by .   Transition probabilities for      First, the transition matrix is . Solving , we get . Let . Then the second row gives . So the solutions are . So there are two different steady state vectors, (where , ) and (where and ). There are also two different SSPVs (from , ) and (from .  Notice that if the initial state vector is because is a SSV. But if the initial state vector is , the other SSV, then for all instead.    Recall that a stochastic matrix is regular if is positive for some integer .    A Markov chain is regular if its transition matrix is regular.    For regular Markov chains, there is a unique SSV and SSPV.    Let be the transition matrix of a regular Markov chain. Then   there is a unique SSV ,    there is a unique SSPV ,    for every possible initial state vector , we have as , and    as , . We call the long range transition matrix .        A psychologist places a rat in a cage as in .   The three compartments and the doors between them    The rat has been trained so that each time it hears a bell, it changes compartment, and it is equally to choose each door. Describe the long term behaviour of the rat.  Based on the number of doors, the transition matrix is . Since is which is positive, is regular. Therefore applies. Solving for the unique steady-state probability vector: . Let . Then , so , and implies that . So .  For the SSPV we need , so . Therefore the SSPV is . This means that in the long term, the rat is in compartment 1 with probability 1\/4, compartment 2 with probability 3\/8, and compartment 3 with probability 3\/8.    "
+},
+{
+  "id": "ex-unstable-SSV",
+  "level": "2",
+  "url": "sec-regular-markov-chains.html#ex-unstable-SSV",
+  "type": "Example",
+  "number": "15.4.1",
+  "title": "",
+  "body": "  Consider a Markov chain for a population of 600 people, with transition probabilities given by .   Transition probabilities for      First, the transition matrix is . Solving , we get . Let . Then the second row gives . So the solutions are . So there are two different steady state vectors, (where , ) and (where and ). There are also two different SSPVs (from , ) and (from .  Notice that if the initial state vector is because is a SSV. But if the initial state vector is , the other SSV, then for all instead.   "
+},
+{
+  "id": "def-regular-markov-chain",
+  "level": "2",
+  "url": "sec-regular-markov-chains.html#def-regular-markov-chain",
+  "type": "Definition",
+  "number": "15.4.3",
+  "title": "",
+  "body": "  A Markov chain is regular if its transition matrix is regular.   "
+},
+{
+  "id": "thm-regMC",
+  "level": "2",
+  "url": "sec-regular-markov-chains.html#thm-regMC",
+  "type": "Theorem",
+  "number": "15.4.4",
+  "title": "",
+  "body": "  Let be the transition matrix of a regular Markov chain. Then   there is a unique SSV ,    there is a unique SSPV ,    for every possible initial state vector , we have as , and    as , . We call the long range transition matrix .     "
+},
+{
+  "id": "ex-rats",
+  "level": "2",
+  "url": "sec-regular-markov-chains.html#ex-rats",
+  "type": "Example",
+  "number": "15.4.5",
+  "title": "",
+  "body": "  A psychologist places a rat in a cage as in .   The three compartments and the doors between them    The rat has been trained so that each time it hears a bell, it changes compartment, and it is equally to choose each door. Describe the long term behaviour of the rat.  Based on the number of doors, the transition matrix is . Since is which is positive, is regular. Therefore applies. Solving for the unique steady-state probability vector: . Let . Then , so , and implies that . So .  For the SSPV we need , so . Therefore the SSPV is . This means that in the long term, the rat is in compartment 1 with probability 1\/4, compartment 2 with probability 3\/8, and compartment 3 with probability 3\/8.   "
 },
 {
   "id": "sec-pop-models-and-leslie-matrices",
   "level": "1",
   "url": "sec-pop-models-and-leslie-matrices.html",
   "type": "Section",
-  "number": "15.1",
+  "number": "16.1",
   "title": "Population models and Leslie matrices",
-  "body": " Population models and Leslie matrices  Text of section.  "
+  "body": " Population models and Leslie matrices  We study the female population of some species divided into ages groups of equal duration. We let    be the population of age group ,     be how many (female) offspring each of the has,     be the survival rate of age group , and     be the population vector at time .      Question: What will the populations be at time ?  The populations at time will be  Group 1:  Group 2:  Group 3:     Group : .    We think of this process as a linear transformation given by The associated matrix of this linear transformation is called a (named after Patrick Leslie, who was a Scottish physiologist best known for his work on population dynamics).  We present the following facts about Leslie matrices without proof. You will prove some of these results in tutorials; others are not so obvious.   Facts about Leslie matrices:    Every Leslie matrix has a unique positive eigenvalue . This eigenvalue has algebraic and geometric multiplicity 1, and has a corresponding eigenvector that can be written with positive components.    If two consecutive birth rates are positive (ie. there is some with ), then for all other eigenvalues of we have .    We have    populations stabilise,     populations grow to infinity, and     populations fall to zero.       If two consecutive birth rates are positive, then the ratio of populations stabilise in the ratio of the components of an eigenvector for .       Consider the Leslie matrix Check carefully, or use an online calculator, to verify the following:    is the unique positive eigenvalue.     is an eigenvector for .    We have which illustrates the long-term behaviour of how the ratios of populations behave.       "
 },
 {
-  "id": "sec-long-term-behaviour",
-  "level": "1",
-  "url": "sec-long-term-behaviour.html",
-  "type": "Section",
-  "number": "15.2",
-  "title": "Long term behaviour",
-  "body": " Long term behaviour  Text of section.  "
+  "id": "sec-pop-models-and-leslie-matrices-3",
+  "level": "2",
+  "url": "sec-pop-models-and-leslie-matrices.html#sec-pop-models-and-leslie-matrices-3",
+  "type": "Paragraph (with a defined term)",
+  "number": "",
+  "title": "",
+  "body": "Question: "
+},
+{
+  "id": "sec-pop-models-and-leslie-matrices-7",
+  "level": "2",
+  "url": "sec-pop-models-and-leslie-matrices.html#sec-pop-models-and-leslie-matrices-7",
+  "type": "Paragraph (with a defined term)",
+  "number": "",
+  "title": "",
+  "body": "Facts about Leslie matrices: "
+},
+{
+  "id": "ex-leslie-matrix",
+  "level": "2",
+  "url": "sec-pop-models-and-leslie-matrices.html#ex-leslie-matrix",
+  "type": "Example",
+  "number": "16.1.1",
+  "title": "",
+  "body": "  Consider the Leslie matrix Check carefully, or use an online calculator, to verify the following:    is the unique positive eigenvalue.     is an eigenvector for .    We have which illustrates the long-term behaviour of how the ratios of populations behave.      "
 },
 {
   "id": "backmatter-2",

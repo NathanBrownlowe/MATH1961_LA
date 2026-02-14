@@ -14,7 +14,7 @@
 <!--******************************************-->
 <head xmlns:og="http://ogp.me/ns#" xmlns:book="https://ogp.me/ns/book#">
 <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
-<title>Bases</title>
+<title>Bases and dimension</title>
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin="">
 <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@24,400,0,0">
@@ -129,7 +129,7 @@ eBookConfig.enable_chatcodes =  false;
 <ol id="searchresults" class="searchresults"></ol>
 </div>
 </div>
-<span class="nav-other-controls"><button id="light-dark-button" class="light-dark-button button" title="Dark Mode"><span class="icon material-symbols-outlined" aria-hidden="true">&#xe51c;</span><span class="name">Dark Mode</span></button></span><span class="treebuttons"><a class="previous-button button" href="ch-basis-dim-ranknullity.html" title="Previous"><span class="icon material-symbols-outlined" aria-hidden="true">&#xe5cb;</span><span class="name">Prev</span></a><a class="up-button button" href="ch-basis-dim-ranknullity.html" title="Up"><span class="icon material-symbols-outlined" aria-hidden="true">&#xe5ce;</span><span class="name">Up</span></a><a class="next-button button" href="sec-dimension.html" title="Next"><span class="name">Next</span><span class="icon material-symbols-outlined" aria-hidden="true">&#xe5cc;</span></a></span>
+<span class="nav-other-controls"><button id="light-dark-button" class="light-dark-button button" title="Dark Mode"><span class="icon material-symbols-outlined" aria-hidden="true">&#xe51c;</span><span class="name">Dark Mode</span></button></span><span class="treebuttons"><a class="previous-button button" href="ch-basis-dim-ranknullity.html" title="Previous"><span class="icon material-symbols-outlined" aria-hidden="true">&#xe5cb;</span><span class="name">Prev</span></a><a class="up-button button" href="ch-basis-dim-ranknullity.html" title="Up"><span class="icon material-symbols-outlined" aria-hidden="true">&#xe5ce;</span><span class="name">Up</span></a><a class="next-button button" href="sec-rank-nullity-theorem.html" title="Next"><span class="name">Next</span><span class="icon material-symbols-outlined" aria-hidden="true">&#xe5cc;</span></a></span>
 </div></nav><div id="latex-macros" class="hidden-content process-math" style="display:none"><span class="process-math">\(\require{mathtools}\newcommand{\N}{\mathbb N} 
 \newcommand{\Z}{\mathbb Z} 
 \newcommand{\Q}{\mathbb Q} 
@@ -139,6 +139,7 @@ eBookConfig.enable_chatcodes =  false;
 \newcommand{\proj}[2]{\operatorname{proj}_{#1}\!\left(#2\right)}
 \newcommand{\p}{\mathcal P}
 \newcommand{\inv}{^{-1}}
+\newcommand{\lspan}{\mathrm{span}}
 
 \newcommand{\colvec}[2]{\begin{bmatrix}#1\\#2\end{bmatrix}}
 \newenvironment{amatrix}[1]{
@@ -231,79 +232,219 @@ eBookConfig.enable_chatcodes =  false;
 </ul>
 </li>
 <li class="toc-item toc-chapter">
-<div class="toc-title-box"><a href="ch-determinants.html" class="internal"><span class="codenumber">8</span> <span class="title">Determinants</span></a></div>
+<div class="toc-title-box"><a href="ch-span-and-li.html" class="internal"><span class="codenumber">8</span> <span class="title">Span and Linear Independence</span></a></div>
 <ul class="structural toc-item-list">
-<li class="toc-item toc-section"><div class="toc-title-box"><a href="sec-calculating-nxn-determinants.html" class="internal"><span class="codenumber">8.1</span> <span class="title">Calculating determinants</span></a></div></li>
-<li class="toc-item toc-section"><div class="toc-title-box"><a href="sec-props-of-determinants.html" class="internal"><span class="codenumber">8.2</span> <span class="title">Properties of determinants</span></a></div></li>
+<li class="toc-item toc-section"><div class="toc-title-box"><a href="sec-span.html" class="internal"><span class="codenumber">8.1</span> <span class="title">Span</span></a></div></li>
+<li class="toc-item toc-section"><div class="toc-title-box"><a href="sec-linear-independence.html" class="internal"><span class="codenumber">8.2</span> <span class="title">Linear independence</span></a></div></li>
 </ul>
 </li>
 <li class="toc-item toc-chapter">
-<div class="toc-title-box"><a href="ch-span-and-li.html" class="internal"><span class="codenumber">9</span> <span class="title">Span and Linear Independence</span></a></div>
+<div class="toc-title-box"><a href="ch-subspaces.html" class="internal"><span class="codenumber">9</span> <span class="title">Subspaces</span></a></div>
 <ul class="structural toc-item-list">
-<li class="toc-item toc-section"><div class="toc-title-box"><a href="sec-span.html" class="internal"><span class="codenumber">9.1</span> <span class="title">Span</span></a></div></li>
-<li class="toc-item toc-section"><div class="toc-title-box"><a href="sec-linear-independence.html" class="internal"><span class="codenumber">9.2</span> <span class="title">Linear independence</span></a></div></li>
-</ul>
-</li>
-<li class="toc-item toc-chapter">
-<div class="toc-title-box"><a href="ch-subspaces.html" class="internal"><span class="codenumber">10</span> <span class="title">Subspaces</span></a></div>
-<ul class="structural toc-item-list">
-<li class="toc-item toc-section"><div class="toc-title-box"><a href="sec-subspaces.html" class="internal"><span class="codenumber">10.1</span> <span class="title">Subspaces</span></a></div></li>
-<li class="toc-item toc-section"><div class="toc-title-box"><a href="sec-row-and-column-spaces.html" class="internal"><span class="codenumber">10.2</span> <span class="title">Row and column spaces</span></a></div></li>
-<li class="toc-item toc-section"><div class="toc-title-box"><a href="sec-null-spaces.html" class="internal"><span class="codenumber">10.3</span> <span class="title">Null spaces</span></a></div></li>
+<li class="toc-item toc-section"><div class="toc-title-box"><a href="sec-subspaces.html" class="internal"><span class="codenumber">9.1</span> <span class="title">Subspaces</span></a></div></li>
+<li class="toc-item toc-section"><div class="toc-title-box"><a href="sec-row-and-column-spaces.html" class="internal"><span class="codenumber">9.2</span> <span class="title">Row, column and null spaces</span></a></div></li>
 </ul>
 </li>
 <li class="toc-item toc-chapter contains-active">
-<div class="toc-title-box"><a href="ch-basis-dim-ranknullity.html" class="internal"><span class="codenumber">11</span> <span class="title">Bases, Dimension, and the Rank-Nullity Theorem</span></a></div>
+<div class="toc-title-box"><a href="ch-basis-dim-ranknullity.html" class="internal"><span class="codenumber">10</span> <span class="title">Bases, Dimension, and the Rank-Nullity Theorem</span></a></div>
 <ul class="structural toc-item-list contains-active">
-<li class="toc-item toc-section active"><div class="toc-title-box"><a href="sec-bases.html" class="internal"><span class="codenumber">11.1</span> <span class="title">Bases</span></a></div></li>
-<li class="toc-item toc-section"><div class="toc-title-box"><a href="sec-dimension.html" class="internal"><span class="codenumber">11.2</span> <span class="title">Dimension</span></a></div></li>
-<li class="toc-item toc-section"><div class="toc-title-box"><a href="sec-rank-nullity-theorem.html" class="internal"><span class="codenumber">11.3</span> <span class="title">The rank-nullity theorem</span></a></div></li>
+<li class="toc-item toc-section active"><div class="toc-title-box"><a href="sec-bases.html" class="internal"><span class="codenumber">10.1</span> <span class="title">Bases and dimension</span></a></div></li>
+<li class="toc-item toc-section"><div class="toc-title-box"><a href="sec-rank-nullity-theorem.html" class="internal"><span class="codenumber">10.2</span> <span class="title">The rank-nullity theorem</span></a></div></li>
+<li class="toc-item toc-section"><div class="toc-title-box"><a href="sec-characterisations-of-invertibility-take2.html" class="internal"><span class="codenumber">10.3</span> <span class="title">Characterisations of invertibility (take 2!)</span></a></div></li>
 </ul>
 </li>
 <li class="toc-item toc-chapter">
-<div class="toc-title-box"><a href="ch-eigenvectors.html" class="internal"><span class="codenumber">12</span> <span class="title">Eigenvalues and Eigenvectors</span></a></div>
+<div class="toc-title-box"><a href="ch-linear-transformations.html" class="internal"><span class="codenumber">11</span> <span class="title">Linear transformations</span></a></div>
 <ul class="structural toc-item-list">
-<li class="toc-item toc-section"><div class="toc-title-box"><a href="sec-evalues-evectors-espaces.html" class="internal"><span class="codenumber">12.1</span> <span class="title">Eigenvalues, eigenvectors, and eigenspaces</span></a></div></li>
-<li class="toc-item toc-section"><div class="toc-title-box"><a href="sec-evalue-examples.html" class="internal"><span class="codenumber">12.2</span> <span class="title">Examples</span></a></div></li>
-<li class="toc-item toc-section"><div class="toc-title-box"><a href="sec-evalue-multiplicities.html" class="internal"><span class="codenumber">12.3</span> <span class="title">Eigenvalue multiplicities</span></a></div></li>
-<li class="toc-item toc-section"><div class="toc-title-box"><a href="sec-characterisations-of-invertibility-take2.html" class="internal"><span class="codenumber">12.4</span> <span class="title">Characterisations of invertibility (take 2!)</span></a></div></li>
+<li class="toc-item toc-section"><div class="toc-title-box"><a href="sec-linear-transformations.html" class="internal"><span class="codenumber">11.1</span> <span class="title">Linear transformations</span></a></div></li>
+<li class="toc-item toc-section"><div class="toc-title-box"><a href="sec-examples-of-linear-transformations.html" class="internal"><span class="codenumber">11.2</span> <span class="title">Examples</span></a></div></li>
 </ul>
 </li>
 <li class="toc-item toc-chapter">
-<div class="toc-title-box"><a href="ch-sim-and-diag.html" class="internal"><span class="codenumber">13</span> <span class="title">Similarity and Diagonalisation</span></a></div>
+<div class="toc-title-box"><a href="ch-determinants.html" class="internal"><span class="codenumber">12</span> <span class="title">Determinants</span></a></div>
 <ul class="structural toc-item-list">
-<li class="toc-item toc-section"><div class="toc-title-box"><a href="sec-similarity.html" class="internal"><span class="codenumber">13.1</span> <span class="title">Similarity</span></a></div></li>
-<li class="toc-item toc-section"><div class="toc-title-box"><a href="sec-diagonalisation.html" class="internal"><span class="codenumber">13.2</span> <span class="title">Diagonalisation</span></a></div></li>
-<li class="toc-item toc-section"><div class="toc-title-box"><a href="sec-examples-of-diagonalisation.html" class="internal"><span class="codenumber">13.3</span> <span class="title">Examples of diagonalisation</span></a></div></li>
-<li class="toc-item toc-section"><div class="toc-title-box"><a href="sec-apps-of-diagonalisation.html" class="internal"><span class="codenumber">13.4</span> <span class="title">Applications of diagonalisation</span></a></div></li>
+<li class="toc-item toc-section"><div class="toc-title-box"><a href="sec-calculating-nxn-determinants.html" class="internal"><span class="codenumber">12.1</span> <span class="title">Calculating determinants</span></a></div></li>
+<li class="toc-item toc-section"><div class="toc-title-box"><a href="sec-props-of-determinants.html" class="internal"><span class="codenumber">12.2</span> <span class="title">Properties of determinants</span></a></div></li>
 </ul>
 </li>
 <li class="toc-item toc-chapter">
-<div class="toc-title-box"><a href="ch-markov-chains.html" class="internal"><span class="codenumber">14</span> <span class="title">Markov Chains</span></a></div>
+<div class="toc-title-box"><a href="ch-eigenvectors.html" class="internal"><span class="codenumber">13</span> <span class="title">Eigenvalues and Eigenvectors</span></a></div>
 <ul class="structural toc-item-list">
-<li class="toc-item toc-section"><div class="toc-title-box"><a href="sec-prob-vectors-and-stochastic-matrices.html" class="internal"><span class="codenumber">14.1</span> <span class="title">Probability vectors and stochastic matrices</span></a></div></li>
-<li class="toc-item toc-section"><div class="toc-title-box"><a href="sec-markov-chains.html" class="internal"><span class="codenumber">14.2</span> <span class="title">Markov chains</span></a></div></li>
-<li class="toc-item toc-section"><div class="toc-title-box"><a href="sec-steady-state-vectors.html" class="internal"><span class="codenumber">14.3</span> <span class="title">Steady state vectors</span></a></div></li>
-<li class="toc-item toc-section"><div class="toc-title-box"><a href="sec-regular-markov-chains.html" class="internal"><span class="codenumber">14.4</span> <span class="title">Regular Markov chains</span></a></div></li>
+<li class="toc-item toc-section"><div class="toc-title-box"><a href="sec-evalues-evectors-espaces.html" class="internal"><span class="codenumber">13.1</span> <span class="title">Eigenvalues, eigenvectors, and eigenspaces</span></a></div></li>
+<li class="toc-item toc-section"><div class="toc-title-box"><a href="sec-evalue-examples.html" class="internal"><span class="codenumber">13.2</span> <span class="title">Examples</span></a></div></li>
+<li class="toc-item toc-section"><div class="toc-title-box"><a href="sec-evalue-multiplicities.html" class="internal"><span class="codenumber">13.3</span> <span class="title">Eigenvalue multiplicities</span></a></div></li>
+<li class="toc-item toc-section"><div class="toc-title-box"><a href="sec-characterisations-of-invertibility-take3.html" class="internal"><span class="codenumber">13.4</span> <span class="title">Characterisations of invertibility (take 3!)</span></a></div></li>
 </ul>
 </li>
 <li class="toc-item toc-chapter">
-<div class="toc-title-box"><a href="ch-pop-models.html" class="internal"><span class="codenumber">15</span> <span class="title">Population Models</span></a></div>
+<div class="toc-title-box"><a href="ch-sim-and-diag.html" class="internal"><span class="codenumber">14</span> <span class="title">Similarity and Diagonalisation</span></a></div>
 <ul class="structural toc-item-list">
-<li class="toc-item toc-section"><div class="toc-title-box"><a href="sec-pop-models-and-leslie-matrices.html" class="internal"><span class="codenumber">15.1</span> <span class="title">Population models and Leslie matrices</span></a></div></li>
-<li class="toc-item toc-section"><div class="toc-title-box"><a href="sec-long-term-behaviour.html" class="internal"><span class="codenumber">15.2</span> <span class="title">Long term behaviour</span></a></div></li>
+<li class="toc-item toc-section"><div class="toc-title-box"><a href="sec-similarity.html" class="internal"><span class="codenumber">14.1</span> <span class="title">Similarity</span></a></div></li>
+<li class="toc-item toc-section"><div class="toc-title-box"><a href="sec-diagonalisation.html" class="internal"><span class="codenumber">14.2</span> <span class="title">Diagonalisation</span></a></div></li>
+<li class="toc-item toc-section"><div class="toc-title-box"><a href="sec-examples-of-diagonalisation.html" class="internal"><span class="codenumber">14.3</span> <span class="title">Examples of diagonalisation</span></a></div></li>
+<li class="toc-item toc-section"><div class="toc-title-box"><a href="sec-apps-of-diagonalisation.html" class="internal"><span class="codenumber">14.4</span> <span class="title">Applications of diagonalisation</span></a></div></li>
 </ul>
+</li>
+<li class="toc-item toc-chapter">
+<div class="toc-title-box"><a href="ch-markov-chains.html" class="internal"><span class="codenumber">15</span> <span class="title">Markov Chains</span></a></div>
+<ul class="structural toc-item-list">
+<li class="toc-item toc-section"><div class="toc-title-box"><a href="sec-prob-vectors-and-stochastic-matrices.html" class="internal"><span class="codenumber">15.1</span> <span class="title">Probability vectors and stochastic matrices</span></a></div></li>
+<li class="toc-item toc-section"><div class="toc-title-box"><a href="sec-markov-chains.html" class="internal"><span class="codenumber">15.2</span> <span class="title">Markov chains</span></a></div></li>
+<li class="toc-item toc-section"><div class="toc-title-box"><a href="sec-steady-state-vectors.html" class="internal"><span class="codenumber">15.3</span> <span class="title">Steady state vectors</span></a></div></li>
+<li class="toc-item toc-section"><div class="toc-title-box"><a href="sec-regular-markov-chains.html" class="internal"><span class="codenumber">15.4</span> <span class="title">Regular Markov chains</span></a></div></li>
+</ul>
+</li>
+<li class="toc-item toc-chapter">
+<div class="toc-title-box"><a href="ch-pop-models.html" class="internal"><span class="codenumber">16</span> <span class="title">Population Models</span></a></div>
+<ul class="structural toc-item-list"><li class="toc-item toc-section"><div class="toc-title-box"><a href="sec-pop-models-and-leslie-matrices.html" class="internal"><span class="codenumber">16.1</span> <span class="title">Population models and Leslie matrices</span></a></div></li></ul>
 </li>
 <li class="toc-item toc-backmatter"><div class="toc-title-box"><a href="backmatter.html" class="internal"><span class="title">Backmatter</span></a></div></li>
 </ul></nav></div>
 <main class="ptx-main"><div id="ptx-content" class="ptx-content"><section class="section" id="sec-bases"><h2 class="heading hide-type">
-<span class="type">Section</span><span class="space heading-divison-mark heading-divison-mark__space"> </span><span class="codenumber">11.1</span><span class="space heading-divison-mark heading-divison-mark__space"> </span><span class="title">Bases</span>
+<span class="type">Section</span><span class="space heading-divison-mark heading-divison-mark__space"> </span><span class="codenumber">10.1</span><span class="space heading-divison-mark heading-divison-mark__space"> </span><span class="title">Bases and dimension</span>
 </h2>
-<div class="para" id="sec-bases-2">Text of section.<div class="autopermalink" data-description="Paragraph"><a href="#sec-bases-2" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
+<article class="definition definition-like" id="def-basis"><h3 class="heading">
+<span class="type">Definition</span><span class="space heading-divison-mark heading-divison-mark__space"> </span><span class="codenumber">10.1.1</span><span class="period heading-divison-mark heading-divison-mark__period">.</span>
+</h3>
+<div class="para logical" id="def-basis-1-1">
+<div class="para">A <dfn class="terminology">basis</dfn> for <span class="process-math">\(\R^n\)</span> is a set of vectors <span class="process-math">\(\mathcal{B}=\{\vect{v}_1,\dots,\vect{v}_k\}\subseteq \R^n\)</span> such that</div>
+<ul class="disc" id="def-basis-1-1-4">
+<li id="def-basis-1-1-4-1">
+<div class="para" id="def-basis-1-1-4-1-1">
+<span class="process-math">\(\lspan(\mathcal{B})=\R^n\text{,}\)</span> and<div class="autopermalink" data-description="Paragraph"><a href="#def-basis-1-1-4-1-1" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
 </div>
-<div class="autopermalink" data-description="Section 11.1: Bases"><a href="#sec-bases" title="Copy heading and permalink for Section 11.1: Bases" aria-label="Copy heading and permalink for Section 11.1: Bases">🔗</a></div></section></div>
+<div class="autopermalink" data-description="Item"><a href="#def-basis-1-1-4-1" title="Copy heading and permalink for Item" aria-label="Copy heading and permalink for Item">🔗</a></div>
+</li>
+<li id="def-basis-1-1-4-2">
+<div class="para" id="def-basis-1-1-4-2-1">
+<span class="process-math">\(\mathcal{B}\)</span> is linearly independent.<div class="autopermalink" data-description="Paragraph"><a href="#def-basis-1-1-4-2-1" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
+</div>
+<div class="autopermalink" data-description="Item"><a href="#def-basis-1-1-4-2" title="Copy heading and permalink for Item" aria-label="Copy heading and permalink for Item">🔗</a></div>
+</li>
+</ul>
+<div class="autopermalink" data-description="Paragraph"><a href="#def-basis-1-1" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
+</div>
+<div class="autopermalink" data-description="Definition 10.1.1"><a href="#def-basis" title="Copy heading and permalink for Definition 10.1.1" aria-label="Copy heading and permalink for Definition 10.1.1">🔗</a></div></article><article class="remark remark-like" id="rem-basis-for-gen-vec-space"><h3 class="heading">
+<span class="type">Remark</span><span class="space heading-divison-mark heading-divison-mark__space"> </span><span class="codenumber">10.1.2</span><span class="period heading-divison-mark heading-divison-mark__period">.</span>
+</h3>
+<div class="para" id="rem-basis-for-gen-vec-space-1-1">Note that the same definition holds in general: a basis for a vector space <span class="process-math">\(V\)</span> is a subset of <span class="process-math">\(V\)</span> that spans <span class="process-math">\(V\)</span> and is linearly independent.<div class="autopermalink" data-description="Paragraph"><a href="#rem-basis-for-gen-vec-space-1-1" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
+</div>
+<div class="autopermalink" data-description="Remark 10.1.2"><a href="#rem-basis-for-gen-vec-space" title="Copy heading and permalink for Remark 10.1.2" aria-label="Copy heading and permalink for Remark 10.1.2">🔗</a></div></article><article class="example example-like" id="ex-standard-basis-is-basis"><h3 class="heading">
+<span class="type">Example</span><span class="space heading-divison-mark heading-divison-mark__space"> </span><span class="codenumber">10.1.3</span><span class="period heading-divison-mark heading-divison-mark__period">.</span>
+</h3>
+<div class="para" id="ex-standard-basis-is-basis-1-1">The standard basis <span class="process-math">\(\{\vect{e}_1,\dots,\vect{e}_n\}\)</span> is a basis for <span class="process-math">\(\R^n\text{.}\)</span><div class="autopermalink" data-description="Paragraph"><a href="#ex-standard-basis-is-basis-1-1" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
+</div>
+<div class="autopermalink" data-description="Example 10.1.3"><a href="#ex-standard-basis-is-basis" title="Copy heading and permalink for Example 10.1.3" aria-label="Copy heading and permalink for Example 10.1.3">🔗</a></div></article><article class="example example-like" id="ex-finding-a-basis"><h3 class="heading">
+<span class="type">Example</span><span class="space heading-divison-mark heading-divison-mark__space"> </span><span class="codenumber">10.1.4</span><span class="period heading-divison-mark heading-divison-mark__period">.</span>
+</h3>
+<div class="para logical" id="ex-finding-a-basis-1-1">
+<div class="para">Find a basis for</div>
+<div class="displaymath process-math" id="ex-finding-a-basis-1-1-1">
+\begin{equation*}
+\lspan\left(\begin{bmatrix}1\\2\\3\end{bmatrix}, \begin{bmatrix}-2\\0\\4\end{bmatrix},
+\begin{bmatrix}0\\4\\10\end{bmatrix}\right).
+\end{equation*}
+</div>
+<div class="autopermalink" data-description="Paragraph"><a href="#ex-finding-a-basis-1-1" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
+</div> <div class="para logical" id="ex-finding-a-basis-1-2">
+<div class="para">We need to check for linear independence. We have</div>
+<div class="displaymath process-math" id="ex-finding-a-basis-1-2-1">
+\begin{align*}
+\begin{amatrix}{ccc}1\amp -2\amp 0\amp 0\\2\amp 0\amp 4\amp 0\\3\amp 4\amp 10\amp 0\end{amatrix}
+\amp\xrightarrow[R_3\to R_3-3R_1]{R_2\to R_2-2R_1}
+\begin{amatrix}{ccc}1\amp -2\amp 0\amp 0\\0\amp 4\amp 4\amp 0\\0\amp 10\amp 10\amp 0\end{amatrix}\\
+\amp\xrightarrow{R_3\to R_3-\frac{10}{4}R_2}
+\begin{amatrix}{ccc}1\amp -2\amp 0\amp 0\\0\amp 4\amp 4\amp 0\\0\amp 0\amp 0\amp 0\end{amatrix}\text{.}
+\end{align*}
+</div>
+<div class="para">Let <span class="process-math">\(z=t\text{,}\)</span> <span class="process-math">\(t\in\R\text{.}\)</span> Then</div>
+<div class="displaymath process-math" id="ex-finding-a-basis-1-2-4">
+\begin{equation*}
+4y+4z=0\implies 4y+4t=0\implies y=-t,
+\end{equation*}
+</div>
+<div class="para">and</div>
+<div class="displaymath process-math" id="ex-finding-a-basis-1-2-5">
+\begin{equation*}
+x-2y=0\implies x+2t=0\implies x=-2t.
+\end{equation*}
+</div>
+<div class="autopermalink" data-description="Paragraph"><a href="#ex-finding-a-basis-1-2" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
+</div> <div class="para logical" id="ex-finding-a-basis-1-3">
+<div class="para">Since there are infinite solutions here, we know the vectors are not linearly independent. In particular, if we take <span class="process-math">\(t=1\text{,}\)</span> then we get solution <span class="process-math">\(x=-2,y=-1,z=1\text{,}\)</span> and so</div>
+<div class="displaymath process-math" id="ex-finding-a-basis-1-3-3">
+\begin{equation*}
+-2\begin{bmatrix}1\\2\\3\end{bmatrix}-\begin{bmatrix}-2\\0\\4\end{bmatrix}
++\begin{bmatrix}0\\4\\10\end{bmatrix}=\begin{bmatrix}0\\0\\0\end{bmatrix},
+\end{equation*}
+</div>
+<div class="para">or</div>
+<div class="displaymath process-math" id="ex-finding-a-basis-1-3-4">
+\begin{equation*}
+\begin{bmatrix}0\\4\\10\end{bmatrix}=2\begin{bmatrix}1\\2\\3\end{bmatrix}
++\begin{bmatrix}-2\\0\\4\end{bmatrix}.
+\end{equation*}
+</div>
+<div class="para">This means that <span class="process-math">\(\begin{bmatrix}0\\4\\10\end{bmatrix}\)</span> is in the span of the other two vectors, and hence we have</div>
+<div class="displaymath process-math" id="ex-finding-a-basis-1-3-6">
+\begin{equation*}
+\lspan\left(\begin{bmatrix}1\\2\\3\end{bmatrix}, \begin{bmatrix}-2\\0\\4\end{bmatrix},
+\begin{bmatrix}0\\4\\10\end{bmatrix}\right)=\lspan\left(\begin{bmatrix}1\\2\\3\end{bmatrix}, 
+\begin{bmatrix}-2\\0\\4\end{bmatrix}\right).
+\end{equation*}
+</div>
+<div class="para">Since <span class="process-math">\(\begin{bmatrix}1\\2\\3\end{bmatrix}\)</span> and <span class="process-math">\(\begin{bmatrix}-2\\0\\4\end{bmatrix}\)</span> are linearly independent, they form a basis for the original span.</div>
+<div class="autopermalink" data-description="Paragraph"><a href="#ex-finding-a-basis-1-3" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
+</div>
+<div class="autopermalink" data-description="Example 10.1.4"><a href="#ex-finding-a-basis" title="Copy heading and permalink for Example 10.1.4" aria-label="Copy heading and permalink for Example 10.1.4">🔗</a></div></article><article class="remark remark-like" id="rem-comments-on-span-example"><h3 class="heading">
+<span class="type">Remark</span><span class="space heading-divison-mark heading-divison-mark__space"> </span><span class="codenumber">10.1.5</span><span class="period heading-divison-mark heading-divison-mark__period">.</span>
+</h3>
+<div class="para logical" id="rem-comments-on-span-example-1-1">
+<ol class="decimal" id="rem-comments-on-span-example-1-1-1">
+<li id="rem-comments-on-span-example-1-1-1-1">
+<div class="para logical" id="rem-comments-on-span-example-1-1-1-1-1">
+<div class="para">In the above example we threw away the vector <span class="process-math">\(\begin{bmatrix}0\\4\\10\end{bmatrix}\)</span> from the span as it was not needed. In that example we could have thrown away any of the vectors (why?), but this is not always the case. For example, we have</div>
+<div class="displaymath process-math" id="rem-comments-on-span-example-1-1-1-1-1-2">
+\begin{align*}
+\lspan\left(\begin{bmatrix}-1\\2\end{bmatrix},\begin{bmatrix}3\\5\end{bmatrix},
+\begin{bmatrix}6\\10\end{bmatrix}\right) \amp = 
+\lspan\left(\begin{bmatrix}-1\\2\end{bmatrix},\begin{bmatrix}3\\5\end{bmatrix}\right)\\
+\amp \not= \lspan\left(\begin{bmatrix}3\\5\end{bmatrix},\begin{bmatrix}6\\10\end{bmatrix}\right).
+\end{align*}
+</div>
+<div class="autopermalink" data-description="Paragraph"><a href="#rem-comments-on-span-example-1-1-1-1-1" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
+</div>
+<div class="autopermalink" data-description="Item 1"><a href="#rem-comments-on-span-example-1-1-1-1" title="Copy heading and permalink for Item 1" aria-label="Copy heading and permalink for Item 1">🔗</a></div>
+</li>
+<li id="rem-comments-on-span-example-1-1-1-2">
+<div class="para" id="rem-comments-on-span-example-1-1-1-2-1">The working in the previous example was fairly detailed. In <a href="sec-rank-nullity-theorem.html" class="internal" title="Section 10.2: The rank-nullity theorem">Section 10.2</a> we will see a more streamlined (and much easier) way of dealing with such an example.<div class="autopermalink" data-description="Paragraph"><a href="#rem-comments-on-span-example-1-1-1-2-1" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
+</div>
+<div class="autopermalink" data-description="Item 2"><a href="#rem-comments-on-span-example-1-1-1-2" title="Copy heading and permalink for Item 2" aria-label="Copy heading and permalink for Item 2">🔗</a></div>
+</li>
+</ol>
+<div class="autopermalink" data-description="Paragraph"><a href="#rem-comments-on-span-example-1-1" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
+</div>
+<div class="autopermalink" data-description="Remark 10.1.5"><a href="#rem-comments-on-span-example" title="Copy heading and permalink for Remark 10.1.5" aria-label="Copy heading and permalink for Remark 10.1.5">🔗</a></div></article><article class="theorem theorem-like" id="thm-basis-theorem"><h3 class="heading">
+<span class="type">Theorem</span><span class="space heading-divison-mark heading-divison-mark__space"> </span><span class="codenumber">10.1.6</span><span class="period heading-divison-mark heading-divison-mark__period">.</span><span class="space heading-divison-mark heading-divison-mark__space"> </span><span class="title">(Basis Theorem).</span>
+</h3>
+<div class="para" id="thm-basis-theorem-2-1">Any two bases of a vector space have the same number of elements.<div class="autopermalink" data-description="Paragraph"><a href="#thm-basis-theorem-2-1" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
+</div>
+<div class="autopermalink" data-description="Theorem 10.1.6: (Basis Theorem)"><a href="#thm-basis-theorem" title="Copy heading and permalink for Theorem 10.1.6: (Basis Theorem)" aria-label="Copy heading and permalink for Theorem 10.1.6: (Basis Theorem)">🔗</a></div></article><div class="para" id="sec-bases-8">The proof of the Basis Theorem is within the scope of the unit, but it is very fiddly, so we will leave it as an exercise (to at least look up and understand if you are keen). But note what it means: the number of elements in a basis is a unique number we can associate to a vector space. So let’s give this number a name!<div class="autopermalink" data-description="Paragraph"><a href="#sec-bases-8" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
+</div>
+<article class="definition definition-like" id="def-dimension"><h3 class="heading">
+<span class="type">Definition</span><span class="space heading-divison-mark heading-divison-mark__space"> </span><span class="codenumber">10.1.7</span><span class="period heading-divison-mark heading-divison-mark__period">.</span>
+</h3>
+<div class="para" id="def-dimension-1-1">The <dfn class="terminology">dimension</dfn> of a vector space <span class="process-math">\(V\text{,}\)</span> denoted <span class="process-math">\(\operatorname{dim}(V)\text{,}\)</span> is the number of elements in a basis for <span class="process-math">\(V\text{.}\)</span><div class="autopermalink" data-description="Paragraph"><a href="#def-dimension-1-1" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
+</div>
+<div class="autopermalink" data-description="Definition 10.1.7"><a href="#def-dimension" title="Copy heading and permalink for Definition 10.1.7" aria-label="Copy heading and permalink for Definition 10.1.7">🔗</a></div></article><article class="example example-like" id="ex-dim-of-Rn"><h3 class="heading">
+<span class="type">Example</span><span class="space heading-divison-mark heading-divison-mark__space"> </span><span class="codenumber">10.1.8</span><span class="period heading-divison-mark heading-divison-mark__period">.</span>
+</h3>
+<div class="para" id="ex-dim-of-Rn-1-1">So what is the dimension of <span class="process-math">\(\R^n\text{?}\)</span><div class="autopermalink" data-description="Paragraph"><a href="#ex-dim-of-Rn-1-1" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
+</div> <div class="para" id="ex-dim-of-Rn-1-2">Since we know that the standard basis <span class="process-math">\(\{\vect{e}_1,\dots,\vect{e}_n\}\)</span> is a basis for <span class="process-math">\(\R^n\text{,}\)</span> we have <span class="process-math">\(\operatorname{dim}(\R^n)=n\text{.}\)</span> This matches our expectation: <span class="process-math">\(\R^3\)</span> is 3-dimensional!<div class="autopermalink" data-description="Paragraph"><a href="#ex-dim-of-Rn-1-2" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
+</div>
+<div class="autopermalink" data-description="Example 10.1.8"><a href="#ex-dim-of-Rn" title="Copy heading and permalink for Example 10.1.8" aria-label="Copy heading and permalink for Example 10.1.8">🔗</a></div></article><div class="autopermalink" data-description="Section 10.1: Bases and dimension"><a href="#sec-bases" title="Copy heading and permalink for Section 10.1: Bases and dimension" aria-label="Copy heading and permalink for Section 10.1: Bases and dimension">🔗</a></div></section></div>
 <div id="ptx-content-footer" class="ptx-content-footer">
-<a class="previous-button button" href="ch-basis-dim-ranknullity.html" title="Previous"><span class="icon material-symbols-outlined" aria-hidden="true">&#xe5cb;</span><span class="name">Prev</span></a><a class="top-button button" href="#" title="Top"><span class="icon material-symbols-outlined" aria-hidden="true">&#xe5ce;</span><span class="name">Top</span></a><a class="next-button button" href="sec-dimension.html" title="Next"><span class="name">Next</span><span class="icon material-symbols-outlined" aria-hidden="true">&#xe5cc;</span></a>
+<a class="previous-button button" href="ch-basis-dim-ranknullity.html" title="Previous"><span class="icon material-symbols-outlined" aria-hidden="true">&#xe5cb;</span><span class="name">Prev</span></a><a class="top-button button" href="#" title="Top"><span class="icon material-symbols-outlined" aria-hidden="true">&#xe5ce;</span><span class="name">Top</span></a><a class="next-button button" href="sec-rank-nullity-theorem.html" title="Next"><span class="name">Next</span><span class="icon material-symbols-outlined" aria-hidden="true">&#xe5cc;</span></a>
 </div></main>
 </div>
 <div id="ptx-page-footer" class="ptx-page-footer">

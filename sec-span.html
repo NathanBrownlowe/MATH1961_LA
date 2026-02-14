@@ -139,6 +139,7 @@ eBookConfig.enable_chatcodes =  false;
 \newcommand{\proj}[2]{\operatorname{proj}_{#1}\!\left(#2\right)}
 \newcommand{\p}{\mathcal P}
 \newcommand{\inv}{^{-1}}
+\newcommand{\lspan}{\mathrm{span}}
 
 \newcommand{\colvec}[2]{\begin{bmatrix}#1\\#2\end{bmatrix}}
 \newenvironment{amatrix}[1]{
@@ -230,78 +231,284 @@ eBookConfig.enable_chatcodes =  false;
 <li class="toc-item toc-section"><div class="toc-title-box"><a href="sec-characterisations-of-invertibility.html" class="internal"><span class="codenumber">7.6</span> <span class="title">Characterisations of invertibility</span></a></div></li>
 </ul>
 </li>
-<li class="toc-item toc-chapter">
-<div class="toc-title-box"><a href="ch-determinants.html" class="internal"><span class="codenumber">8</span> <span class="title">Determinants</span></a></div>
-<ul class="structural toc-item-list">
-<li class="toc-item toc-section"><div class="toc-title-box"><a href="sec-calculating-nxn-determinants.html" class="internal"><span class="codenumber">8.1</span> <span class="title">Calculating determinants</span></a></div></li>
-<li class="toc-item toc-section"><div class="toc-title-box"><a href="sec-props-of-determinants.html" class="internal"><span class="codenumber">8.2</span> <span class="title">Properties of determinants</span></a></div></li>
-</ul>
-</li>
 <li class="toc-item toc-chapter contains-active">
-<div class="toc-title-box"><a href="ch-span-and-li.html" class="internal"><span class="codenumber">9</span> <span class="title">Span and Linear Independence</span></a></div>
+<div class="toc-title-box"><a href="ch-span-and-li.html" class="internal"><span class="codenumber">8</span> <span class="title">Span and Linear Independence</span></a></div>
 <ul class="structural toc-item-list contains-active">
-<li class="toc-item toc-section active"><div class="toc-title-box"><a href="sec-span.html" class="internal"><span class="codenumber">9.1</span> <span class="title">Span</span></a></div></li>
-<li class="toc-item toc-section"><div class="toc-title-box"><a href="sec-linear-independence.html" class="internal"><span class="codenumber">9.2</span> <span class="title">Linear independence</span></a></div></li>
+<li class="toc-item toc-section active"><div class="toc-title-box"><a href="sec-span.html" class="internal"><span class="codenumber">8.1</span> <span class="title">Span</span></a></div></li>
+<li class="toc-item toc-section"><div class="toc-title-box"><a href="sec-linear-independence.html" class="internal"><span class="codenumber">8.2</span> <span class="title">Linear independence</span></a></div></li>
 </ul>
 </li>
 <li class="toc-item toc-chapter">
-<div class="toc-title-box"><a href="ch-subspaces.html" class="internal"><span class="codenumber">10</span> <span class="title">Subspaces</span></a></div>
+<div class="toc-title-box"><a href="ch-subspaces.html" class="internal"><span class="codenumber">9</span> <span class="title">Subspaces</span></a></div>
 <ul class="structural toc-item-list">
-<li class="toc-item toc-section"><div class="toc-title-box"><a href="sec-subspaces.html" class="internal"><span class="codenumber">10.1</span> <span class="title">Subspaces</span></a></div></li>
-<li class="toc-item toc-section"><div class="toc-title-box"><a href="sec-row-and-column-spaces.html" class="internal"><span class="codenumber">10.2</span> <span class="title">Row and column spaces</span></a></div></li>
-<li class="toc-item toc-section"><div class="toc-title-box"><a href="sec-null-spaces.html" class="internal"><span class="codenumber">10.3</span> <span class="title">Null spaces</span></a></div></li>
+<li class="toc-item toc-section"><div class="toc-title-box"><a href="sec-subspaces.html" class="internal"><span class="codenumber">9.1</span> <span class="title">Subspaces</span></a></div></li>
+<li class="toc-item toc-section"><div class="toc-title-box"><a href="sec-row-and-column-spaces.html" class="internal"><span class="codenumber">9.2</span> <span class="title">Row, column and null spaces</span></a></div></li>
 </ul>
 </li>
 <li class="toc-item toc-chapter">
-<div class="toc-title-box"><a href="ch-basis-dim-ranknullity.html" class="internal"><span class="codenumber">11</span> <span class="title">Bases, Dimension, and the Rank-Nullity Theorem</span></a></div>
+<div class="toc-title-box"><a href="ch-basis-dim-ranknullity.html" class="internal"><span class="codenumber">10</span> <span class="title">Bases, Dimension, and the Rank-Nullity Theorem</span></a></div>
 <ul class="structural toc-item-list">
-<li class="toc-item toc-section"><div class="toc-title-box"><a href="sec-bases.html" class="internal"><span class="codenumber">11.1</span> <span class="title">Bases</span></a></div></li>
-<li class="toc-item toc-section"><div class="toc-title-box"><a href="sec-dimension.html" class="internal"><span class="codenumber">11.2</span> <span class="title">Dimension</span></a></div></li>
-<li class="toc-item toc-section"><div class="toc-title-box"><a href="sec-rank-nullity-theorem.html" class="internal"><span class="codenumber">11.3</span> <span class="title">The rank-nullity theorem</span></a></div></li>
+<li class="toc-item toc-section"><div class="toc-title-box"><a href="sec-bases.html" class="internal"><span class="codenumber">10.1</span> <span class="title">Bases and dimension</span></a></div></li>
+<li class="toc-item toc-section"><div class="toc-title-box"><a href="sec-rank-nullity-theorem.html" class="internal"><span class="codenumber">10.2</span> <span class="title">The rank-nullity theorem</span></a></div></li>
+<li class="toc-item toc-section"><div class="toc-title-box"><a href="sec-characterisations-of-invertibility-take2.html" class="internal"><span class="codenumber">10.3</span> <span class="title">Characterisations of invertibility (take 2!)</span></a></div></li>
 </ul>
 </li>
 <li class="toc-item toc-chapter">
-<div class="toc-title-box"><a href="ch-eigenvectors.html" class="internal"><span class="codenumber">12</span> <span class="title">Eigenvalues and Eigenvectors</span></a></div>
+<div class="toc-title-box"><a href="ch-linear-transformations.html" class="internal"><span class="codenumber">11</span> <span class="title">Linear transformations</span></a></div>
 <ul class="structural toc-item-list">
-<li class="toc-item toc-section"><div class="toc-title-box"><a href="sec-evalues-evectors-espaces.html" class="internal"><span class="codenumber">12.1</span> <span class="title">Eigenvalues, eigenvectors, and eigenspaces</span></a></div></li>
-<li class="toc-item toc-section"><div class="toc-title-box"><a href="sec-evalue-examples.html" class="internal"><span class="codenumber">12.2</span> <span class="title">Examples</span></a></div></li>
-<li class="toc-item toc-section"><div class="toc-title-box"><a href="sec-evalue-multiplicities.html" class="internal"><span class="codenumber">12.3</span> <span class="title">Eigenvalue multiplicities</span></a></div></li>
-<li class="toc-item toc-section"><div class="toc-title-box"><a href="sec-characterisations-of-invertibility-take2.html" class="internal"><span class="codenumber">12.4</span> <span class="title">Characterisations of invertibility (take 2!)</span></a></div></li>
+<li class="toc-item toc-section"><div class="toc-title-box"><a href="sec-linear-transformations.html" class="internal"><span class="codenumber">11.1</span> <span class="title">Linear transformations</span></a></div></li>
+<li class="toc-item toc-section"><div class="toc-title-box"><a href="sec-examples-of-linear-transformations.html" class="internal"><span class="codenumber">11.2</span> <span class="title">Examples</span></a></div></li>
 </ul>
 </li>
 <li class="toc-item toc-chapter">
-<div class="toc-title-box"><a href="ch-sim-and-diag.html" class="internal"><span class="codenumber">13</span> <span class="title">Similarity and Diagonalisation</span></a></div>
+<div class="toc-title-box"><a href="ch-determinants.html" class="internal"><span class="codenumber">12</span> <span class="title">Determinants</span></a></div>
 <ul class="structural toc-item-list">
-<li class="toc-item toc-section"><div class="toc-title-box"><a href="sec-similarity.html" class="internal"><span class="codenumber">13.1</span> <span class="title">Similarity</span></a></div></li>
-<li class="toc-item toc-section"><div class="toc-title-box"><a href="sec-diagonalisation.html" class="internal"><span class="codenumber">13.2</span> <span class="title">Diagonalisation</span></a></div></li>
-<li class="toc-item toc-section"><div class="toc-title-box"><a href="sec-examples-of-diagonalisation.html" class="internal"><span class="codenumber">13.3</span> <span class="title">Examples of diagonalisation</span></a></div></li>
-<li class="toc-item toc-section"><div class="toc-title-box"><a href="sec-apps-of-diagonalisation.html" class="internal"><span class="codenumber">13.4</span> <span class="title">Applications of diagonalisation</span></a></div></li>
+<li class="toc-item toc-section"><div class="toc-title-box"><a href="sec-calculating-nxn-determinants.html" class="internal"><span class="codenumber">12.1</span> <span class="title">Calculating determinants</span></a></div></li>
+<li class="toc-item toc-section"><div class="toc-title-box"><a href="sec-props-of-determinants.html" class="internal"><span class="codenumber">12.2</span> <span class="title">Properties of determinants</span></a></div></li>
 </ul>
 </li>
 <li class="toc-item toc-chapter">
-<div class="toc-title-box"><a href="ch-markov-chains.html" class="internal"><span class="codenumber">14</span> <span class="title">Markov Chains</span></a></div>
+<div class="toc-title-box"><a href="ch-eigenvectors.html" class="internal"><span class="codenumber">13</span> <span class="title">Eigenvalues and Eigenvectors</span></a></div>
 <ul class="structural toc-item-list">
-<li class="toc-item toc-section"><div class="toc-title-box"><a href="sec-prob-vectors-and-stochastic-matrices.html" class="internal"><span class="codenumber">14.1</span> <span class="title">Probability vectors and stochastic matrices</span></a></div></li>
-<li class="toc-item toc-section"><div class="toc-title-box"><a href="sec-markov-chains.html" class="internal"><span class="codenumber">14.2</span> <span class="title">Markov chains</span></a></div></li>
-<li class="toc-item toc-section"><div class="toc-title-box"><a href="sec-steady-state-vectors.html" class="internal"><span class="codenumber">14.3</span> <span class="title">Steady state vectors</span></a></div></li>
-<li class="toc-item toc-section"><div class="toc-title-box"><a href="sec-regular-markov-chains.html" class="internal"><span class="codenumber">14.4</span> <span class="title">Regular Markov chains</span></a></div></li>
+<li class="toc-item toc-section"><div class="toc-title-box"><a href="sec-evalues-evectors-espaces.html" class="internal"><span class="codenumber">13.1</span> <span class="title">Eigenvalues, eigenvectors, and eigenspaces</span></a></div></li>
+<li class="toc-item toc-section"><div class="toc-title-box"><a href="sec-evalue-examples.html" class="internal"><span class="codenumber">13.2</span> <span class="title">Examples</span></a></div></li>
+<li class="toc-item toc-section"><div class="toc-title-box"><a href="sec-evalue-multiplicities.html" class="internal"><span class="codenumber">13.3</span> <span class="title">Eigenvalue multiplicities</span></a></div></li>
+<li class="toc-item toc-section"><div class="toc-title-box"><a href="sec-characterisations-of-invertibility-take3.html" class="internal"><span class="codenumber">13.4</span> <span class="title">Characterisations of invertibility (take 3!)</span></a></div></li>
 </ul>
 </li>
 <li class="toc-item toc-chapter">
-<div class="toc-title-box"><a href="ch-pop-models.html" class="internal"><span class="codenumber">15</span> <span class="title">Population Models</span></a></div>
+<div class="toc-title-box"><a href="ch-sim-and-diag.html" class="internal"><span class="codenumber">14</span> <span class="title">Similarity and Diagonalisation</span></a></div>
 <ul class="structural toc-item-list">
-<li class="toc-item toc-section"><div class="toc-title-box"><a href="sec-pop-models-and-leslie-matrices.html" class="internal"><span class="codenumber">15.1</span> <span class="title">Population models and Leslie matrices</span></a></div></li>
-<li class="toc-item toc-section"><div class="toc-title-box"><a href="sec-long-term-behaviour.html" class="internal"><span class="codenumber">15.2</span> <span class="title">Long term behaviour</span></a></div></li>
+<li class="toc-item toc-section"><div class="toc-title-box"><a href="sec-similarity.html" class="internal"><span class="codenumber">14.1</span> <span class="title">Similarity</span></a></div></li>
+<li class="toc-item toc-section"><div class="toc-title-box"><a href="sec-diagonalisation.html" class="internal"><span class="codenumber">14.2</span> <span class="title">Diagonalisation</span></a></div></li>
+<li class="toc-item toc-section"><div class="toc-title-box"><a href="sec-examples-of-diagonalisation.html" class="internal"><span class="codenumber">14.3</span> <span class="title">Examples of diagonalisation</span></a></div></li>
+<li class="toc-item toc-section"><div class="toc-title-box"><a href="sec-apps-of-diagonalisation.html" class="internal"><span class="codenumber">14.4</span> <span class="title">Applications of diagonalisation</span></a></div></li>
 </ul>
+</li>
+<li class="toc-item toc-chapter">
+<div class="toc-title-box"><a href="ch-markov-chains.html" class="internal"><span class="codenumber">15</span> <span class="title">Markov Chains</span></a></div>
+<ul class="structural toc-item-list">
+<li class="toc-item toc-section"><div class="toc-title-box"><a href="sec-prob-vectors-and-stochastic-matrices.html" class="internal"><span class="codenumber">15.1</span> <span class="title">Probability vectors and stochastic matrices</span></a></div></li>
+<li class="toc-item toc-section"><div class="toc-title-box"><a href="sec-markov-chains.html" class="internal"><span class="codenumber">15.2</span> <span class="title">Markov chains</span></a></div></li>
+<li class="toc-item toc-section"><div class="toc-title-box"><a href="sec-steady-state-vectors.html" class="internal"><span class="codenumber">15.3</span> <span class="title">Steady state vectors</span></a></div></li>
+<li class="toc-item toc-section"><div class="toc-title-box"><a href="sec-regular-markov-chains.html" class="internal"><span class="codenumber">15.4</span> <span class="title">Regular Markov chains</span></a></div></li>
+</ul>
+</li>
+<li class="toc-item toc-chapter">
+<div class="toc-title-box"><a href="ch-pop-models.html" class="internal"><span class="codenumber">16</span> <span class="title">Population Models</span></a></div>
+<ul class="structural toc-item-list"><li class="toc-item toc-section"><div class="toc-title-box"><a href="sec-pop-models-and-leslie-matrices.html" class="internal"><span class="codenumber">16.1</span> <span class="title">Population models and Leslie matrices</span></a></div></li></ul>
 </li>
 <li class="toc-item toc-backmatter"><div class="toc-title-box"><a href="backmatter.html" class="internal"><span class="title">Backmatter</span></a></div></li>
 </ul></nav></div>
 <main class="ptx-main"><div id="ptx-content" class="ptx-content"><section class="section" id="sec-span"><h2 class="heading hide-type">
-<span class="type">Section</span><span class="space heading-divison-mark heading-divison-mark__space"> </span><span class="codenumber">9.1</span><span class="space heading-divison-mark heading-divison-mark__space"> </span><span class="title">Span</span>
+<span class="type">Section</span><span class="space heading-divison-mark heading-divison-mark__space"> </span><span class="codenumber">8.1</span><span class="space heading-divison-mark heading-divison-mark__space"> </span><span class="title">Span</span>
 </h2>
-<div class="para" id="sec-span-2">Text of section.<div class="autopermalink" data-description="Paragraph"><a href="#sec-span-2" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
+<div class="para logical" id="sec-span-2">
+<div class="para">Recall from <a href="sec-vectors-in-Rn.html#def-lincomb" class="xref" data-knowl="./knowl/xref/def-lincomb.html" data-reveal-label="Reveal" data-close-label="Close" title="Definition 1.3.8: (Linear combination)">Definition 1.3.8</a> that a vector <span class="process-math">\(\vect{v} \in \R^n\)</span> is a linear combination of vectors <span class="process-math">\(\vect{v}_1, \vect{v}_2, \dots, \vect{v}_k \in \R^n\)</span> if</div>
+<div class="displaymath process-math" data-contains-math-knowls="./knowl/xref/def-lincomb.html" id="sec-span-2-4">
+\begin{equation*}
+\vect{v} = c_1\vect{v}_1 + c_2\vect{v}_2 + \dots + c_k\vect{v}_k
+\end{equation*}
 </div>
-<div class="autopermalink" data-description="Section 9.1: Span"><a href="#sec-span" title="Copy heading and permalink for Section 9.1: Span" aria-label="Copy heading and permalink for Section 9.1: Span">🔗</a></div></section></div>
+<div class="para">for scalars <span class="process-math">\(c_1, c_2, \dots, c_k \in \R\text{.}\)</span>
+</div>
+<div class="autopermalink" data-description="Paragraph"><a href="#sec-span-2" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
+</div>
+<article class="definition definition-like" id="span"><h3 class="heading">
+<span class="type">Definition</span><span class="space heading-divison-mark heading-divison-mark__space"> </span><span class="codenumber">8.1.1</span><span class="period heading-divison-mark heading-divison-mark__period">.</span>
+</h3>
+<div class="para" id="span-1-1">Let <span class="process-math">\(S = \{\vect{v}_1, \vect{v}_2, \dots, \vect{v}_k\}\)</span> be a set of vectors in <span class="process-math">\(\R^n\text{.}\)</span> The <dfn class="terminology">span</dfn> of <span class="process-math">\(S\text{,}\)</span> or the span of <span class="process-math">\(\vect{v}_1, \vect{v}_2, \dots, \vect{v}_k\text{,}\)</span> is the set of all linear combinations of <span class="process-math">\(\vect{v}_1, \vect{v}_2, \dots, \vect{v}_k\text{,}\)</span> and is denoted by <span class="process-math">\(\lspan{(S)}\)</span> or <span class="process-math">\(\lspan{(\vect{v}_1, \vect{v}_2, \dots, \vect{v}_k)}\text{.}\)</span><div class="autopermalink" data-description="Paragraph"><a href="#span-1-1" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
+</div>
+<div class="autopermalink" data-description="Definition 8.1.1"><a href="#span" title="Copy heading and permalink for Definition 8.1.1" aria-label="Copy heading and permalink for Definition 8.1.1">🔗</a></div></article><div class="para logical" id="sec-span-4">
+<div class="para">By definition,</div>
+<div class="displaymath process-math" id="sec-span-4-1">
+\begin{align*}
+\lspan{(S)} \amp  = \lspan{(\vect{v}_1, \vect{v}_2, \dots, \vect{v}_k)}                                                                                             \\
+\amp  = \{\vect{v} \in \R^n \; | \; \vect{v} = c_1\vect{v}_1 + c_2\vect{v}_2 + \dots + c_k\vect{v}_k \quad \text{for }\, c_1, c_2, \dots, c_k \in \R\}\text{.}
+\end{align*}
+</div>
+<div class="autopermalink" data-description="Paragraph"><a href="#sec-span-4" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
+</div>
+<article class="example example-like" id="ex-spans"><h3 class="heading">
+<span class="type">Example</span><span class="space heading-divison-mark heading-divison-mark__space"> </span><span class="codenumber">8.1.2</span><span class="period heading-divison-mark heading-divison-mark__period">.</span>
+</h3>
+<div class="para logical" id="ex-spans-1-1">
+<ul class="disc" id="ex-spans-1-1-1">
+<li id="ex-spans-1-1-1-1">
+<div class="para" id="ex-spans-1-1-1-1-1">Every span contains the zero vector since if <span class="process-math">\(S = \{\vect{v}_1, \vect{v}_2, \dots, \vect{v}_k\}\)</span> is any set of vectors in <span class="process-math">\(\R^n\text{,}\)</span> we have <span class="process-math">\(\vect{0} = 0\vect{v}_1 + 0\vect{v}_2 + \dots + 0\vect{v}_k\text{.}\)</span><div class="autopermalink" data-description="Paragraph"><a href="#ex-spans-1-1-1-1-1" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
+</div>
+<div class="autopermalink" data-description="Item"><a href="#ex-spans-1-1-1-1" title="Copy heading and permalink for Item" aria-label="Copy heading and permalink for Item">🔗</a></div>
+</li>
+<li id="ex-spans-1-1-1-2">
+<div class="para logical" id="ex-spans-1-1-1-2-1">
+<div class="para">If <span class="process-math">\(S = \{\vect{0}\}\text{,}\)</span> then</div>
+<div class="displaymath process-math" id="ex-spans-1-1-1-2-1-2">
+\begin{align*}
+\lspan({\{\vect{0}\}}) \amp  = \{\vect{v} \in \R^n \;|\; \vect{v} = c\vect{0} \quad\text{for }\, c\in \R\} \\
+\amp  = \{\vect{v} \in \R^n \;|\; \vect{v} = \vect{0}\}                             \\
+\amp  = \{\vect{0}\}\text{.}
+\end{align*}
+</div>
+<div class="autopermalink" data-description="Paragraph"><a href="#ex-spans-1-1-1-2-1" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
+</div>
+<div class="autopermalink" data-description="Item"><a href="#ex-spans-1-1-1-2" title="Copy heading and permalink for Item" aria-label="Copy heading and permalink for Item">🔗</a></div>
+</li>
+<li id="ex-spans-1-1-1-3">
+<div class="para logical" id="ex-spans-1-1-1-3-1">
+<div class="para">If <span class="process-math">\(S = \{\vect{d}\}\)</span> for some <span class="process-math">\(\vect{d}\)</span> in <span class="process-math">\(\R^2\)</span> with <span class="process-math">\(\vect{d} \ne \vect{0}\text{,}\)</span> then <span class="process-math">\(\lspan{(S)}\)</span> is</div>
+<div class="displaymath process-math" data-contains-math-knowls="./knowl/xref/fig-span-line.html" id="ex-spans-1-1-1-3-1-6">
+\begin{equation*}
+\lspan({\vect{d}}) = \{\vect{x} \in \R^2 \;|\; \vect{x} = t\vect{d}\quad\text{for }\, t\in \R\}
+\end{equation*}
+</div>
+<div class="para">which is the line through the origin with direction vector <span class="process-math">\(\vect{d}\text{,}\)</span> as shown in <a href="sec-span.html#fig-span-line" class="xref" data-knowl="./knowl/xref/fig-span-line.html" data-reveal-label="Reveal" data-close-label="Close" title="Figure 8.1.3">Figure 8.1.3</a>. <figure class="figure figure-like" id="fig-span-line"><div class="image-box" style="width: 60%; margin-left: 20%; margin-right: 20%;"><img src="generated/latex-image/fig-span-line-2.svg" role="img" class="contained"></div>
+<figcaption><span class="type">Figure</span><span class="space heading-divison-mark heading-divison-mark__space"> </span><span class="codenumber">8.1.3<span class="period heading-divison-mark heading-divison-mark__period">.</span></span><span class="space heading-divison-mark heading-divison-mark__space"> </span>The span of <span class="process-math">\(\vect{d}\)</span> is the dashed line through the origin<div class="autopermalink" data-description="Figure 8.1.3"><a href="#fig-span-line" title="Copy heading and permalink for Figure 8.1.3" aria-label="Copy heading and permalink for Figure 8.1.3">🔗</a></div></figcaption></figure>
+</div>
+<div class="autopermalink" data-description="Paragraph"><a href="#ex-spans-1-1-1-3-1" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
+</div>
+<div class="autopermalink" data-description="Item"><a href="#ex-spans-1-1-1-3" title="Copy heading and permalink for Item" aria-label="Copy heading and permalink for Item">🔗</a></div>
+</li>
+<li id="ex-spans-1-1-1-4">
+<div class="para logical" id="ex-spans-1-1-1-4-1">
+<div class="para">If <span class="process-math">\(S = \{\vect{d}, \vect{u}\}\)</span> for nonzero <span class="process-math">\(\vect{d}, \vect{u}\)</span> in <span class="process-math">\(\R^2\)</span> such that <span class="process-math">\(\vect{d}\)</span> and <span class="process-math">\(\vect{u}\)</span> are parallel, then <span class="process-math">\(\lspan{(S)}\)</span> is still the line through the origin with direction vector <span class="process-math">\(\vect{d}\text{.}\)</span> This is because since <span class="process-math">\(\vect{d}\)</span> and <span class="process-math">\(\vect{u}\)</span> parallel, we have <span class="process-math">\(\vect{u} =c\vect{d}\)</span> for some <span class="process-math">\(c\in \R\text{,}\)</span> so</div>
+<div class="displaymath process-math" id="ex-spans-1-1-1-4-1-12">
+\begin{align*}
+\lspan{(\vect{d}, \vect{u})} \amp  = \{\vect{x} \in \R^2 \;|\; \vect{x} = t_1\vect{d} + t_2\vect{u} \quad\text{for }\, t_1, t_2\in \R\}   \\
+\amp  = \{\vect{x} \in \R^2\;|\; \vect{x} = t_1\vect{d} + t_2(c\vect{d}) \quad\text{for }\, t_1, t_2\in \R\} \\
+\amp  = \{\vect{x} \in \R^2 \;|\; \vect{x} = (t_1 + ct_2)\vect{d} \quad\text{for }\, t_1, t_2\in \R\}\text{,}
+\end{align*}
+</div>
+<div class="para">which is the line with vector form <span class="process-math">\(\vect{x} = t\vect{d}\text{,}\)</span> for <span class="process-math">\(t\in \R\text{.}\)</span>
+</div>
+<div class="autopermalink" data-description="Paragraph"><a href="#ex-spans-1-1-1-4-1" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
+</div>
+<div class="autopermalink" data-description="Item"><a href="#ex-spans-1-1-1-4" title="Copy heading and permalink for Item" aria-label="Copy heading and permalink for Item">🔗</a></div>
+</li>
+<li id="ex-spans-1-1-1-5">
+<div class="para logical" id="ex-spans-1-1-1-5-1">
+<div class="para">If we take <span class="process-math">\(\vect{d}\)</span> and <span class="process-math">\(\vect{u}\)</span> in <span class="process-math">\(\R^3\)</span> instead for the previous two examples, they still describe a line. On the other hand, if <span class="process-math">\(S = \{\vect{u}, \vect{v}\}\)</span> for nonzero vectors <span class="process-math">\(\vect{u}, \vect{v}\)</span> in <span class="process-math">\(\R^3\)</span> which are not parallel, then</div>
+<div class="displaymath process-math" data-contains-math-knowls="./knowl/xref/fig-span-plane.html" id="ex-spans-1-1-1-5-1-7">
+\begin{equation*}
+\lspan{(\vect{u}, \vect{v})} = \{\vect{x}\in \R^3 \;|\; \vect{x} = s\vect{u} + t\vect{v}, \quad \text{for }\,s, t \in \R\}
+\end{equation*}
+</div>
+<div class="para">is the plane</div>
+<div class="displaymath process-math" data-contains-math-knowls="./knowl/xref/fig-span-plane.html" id="ex-spans-1-1-1-5-1-8">
+\begin{equation*}
+\vect{x} = s\vect{u} + t\vect{v}, \qquad \text{for}\; s,t \in \R
+\end{equation*}
+</div>
+<div class="para">through the origin in <span class="process-math">\(\R^3\)</span> with direction vectors <span class="process-math">\(\vect{u}\)</span> and <span class="process-math">\(\vect{v}\text{,}\)</span> shown in <a href="sec-span.html#fig-span-plane" class="xref" data-knowl="./knowl/xref/fig-span-plane.html" data-reveal-label="Reveal" data-close-label="Close" title="Figure 8.1.4">Figure 8.1.4</a>. <figure class="figure figure-like" id="fig-span-plane"><div class="image-box" style="width: 60%; margin-left: 20%; margin-right: 20%;"><img src="generated/latex-image/fig-span-plane-2.svg" role="img" class="contained"></div>
+<figcaption><span class="type">Figure</span><span class="space heading-divison-mark heading-divison-mark__space"> </span><span class="codenumber">8.1.4<span class="period heading-divison-mark heading-divison-mark__period">.</span></span><span class="space heading-divison-mark heading-divison-mark__space"> </span>The span of non-parallel <span class="process-math">\(\vect{u}\)</span> and <span class="process-math">\(\vect{v}\)</span> is a plane<div class="autopermalink" data-description="Figure 8.1.4"><a href="#fig-span-plane" title="Copy heading and permalink for Figure 8.1.4" aria-label="Copy heading and permalink for Figure 8.1.4">🔗</a></div></figcaption></figure>
+</div>
+<div class="autopermalink" data-description="Paragraph"><a href="#ex-spans-1-1-1-5-1" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
+</div>
+<div class="autopermalink" data-description="Item"><a href="#ex-spans-1-1-1-5" title="Copy heading and permalink for Item" aria-label="Copy heading and permalink for Item">🔗</a></div>
+</li>
+</ul>
+<div class="autopermalink" data-description="Paragraph"><a href="#ex-spans-1-1" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
+</div>
+<div class="autopermalink" data-description="Example 8.1.2"><a href="#ex-spans" title="Copy heading and permalink for Example 8.1.2" aria-label="Copy heading and permalink for Example 8.1.2">🔗</a></div></article><article class="example example-like" id="ex-checking-span"><h3 class="heading">
+<span class="type">Example</span><span class="space heading-divison-mark heading-divison-mark__space"> </span><span class="codenumber">8.1.5</span><span class="period heading-divison-mark heading-divison-mark__period">.</span>
+</h3>
+<div class="para" id="ex-checking-span-1-1">Is <span class="process-math">\([8, -5, -15] \in \lspan{([1, 2, 0], [-2, 3, 5]})\text{?}\)</span><div class="autopermalink" data-description="Paragraph"><a href="#ex-checking-span-1-1" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
+</div> <div class="para logical" id="ex-checking-span-1-2">
+<div class="para">We need to look for <span class="process-math">\(c_1, c_2 \in\R\)</span> such that</div>
+<div class="displaymath process-math" id="ex-checking-span-1-2-2">
+\begin{equation*}
+[8, -5, -15] = c_1[1, 2, 0] +c_2[-2, 3, 5]\text{.}
+\end{equation*}
+</div>
+<div class="para">Comparing components gives the system of linear equations</div>
+<div class="displaymath process-math" id="ex-checking-span-1-2-3">
+\begin{equation*}
+\begin{cases}
+c_1 - 2c_2  \amp  = 8  \\
+2c_1 + 3c_2 \amp  = -5 \\
+5c_2        \amp  = -15
+\end{cases}\text{.}
+\end{equation*}
+</div>
+<div class="para">The third equation gives that <span class="process-math">\(c_2 = -3\text{,}\)</span> and then the first equation gives that</div>
+<div class="displaymath process-math" id="ex-checking-span-1-2-5">
+\begin{equation*}
+c_1 = 8+ 2c_2 = 8 + 2(-3) = 2\text{.}
+\end{equation*}
+</div>
+<div class="para">These values also satisfy the second equation, since <span class="process-math">\(2(2) + 3(-3) = -5\text{.}\)</span> So <span class="process-math">\([8, -5, -15] \in \lspan{([1, 2, 0], [-2, 3, 5]})\text{,}\)</span> with coefficients <span class="process-math">\(c_1 = 2\)</span> and <span class="process-math">\(c_2 = -3\text{.}\)</span>
+</div>
+<div class="autopermalink" data-description="Paragraph"><a href="#ex-checking-span-1-2" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
+</div>
+<div class="autopermalink" data-description="Example 8.1.5"><a href="#ex-checking-span" title="Copy heading and permalink for Example 8.1.5" aria-label="Copy heading and permalink for Example 8.1.5">🔗</a></div></article><article class="definition definition-like" id="def-spanning-set"><h3 class="heading">
+<span class="type">Definition</span><span class="space heading-divison-mark heading-divison-mark__space"> </span><span class="codenumber">8.1.6</span><span class="period heading-divison-mark heading-divison-mark__period">.</span>
+</h3>
+<div class="para" id="def-spanning-set-1-1">Let <span class="process-math">\(S = \{\vect{v}_1, \vect{v}_2, \dots, \vect{v}_k\}\)</span> be a set of vectors in <span class="process-math">\(\R^n\text{.}\)</span> If <span class="process-math">\(\lspan{(S)} = \R^n\text{,}\)</span> we say that <span class="process-math">\(S\)</span> is a <dfn class="terminology">spanning set</dfn> for <span class="process-math">\(\R^n\text{.}\)</span><div class="autopermalink" data-description="Paragraph"><a href="#def-spanning-set-1-1" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
+</div>
+<div class="autopermalink" data-description="Definition 8.1.6"><a href="#def-spanning-set" title="Copy heading and permalink for Definition 8.1.6" aria-label="Copy heading and permalink for Definition 8.1.6">🔗</a></div></article><article class="example example-like" id="ex-stan-basis-spanning-set"><h3 class="heading">
+<span class="type">Example</span><span class="space heading-divison-mark heading-divison-mark__space"> </span><span class="codenumber">8.1.7</span><span class="period heading-divison-mark heading-divison-mark__period">.</span>
+</h3>
+<div class="para logical" id="ex-stan-basis-spanning-set-1-1">
+<div class="para">Recall the standard unit vectors <span class="process-math">\(\vect{e}_1 = [1, 0]\)</span> and <span class="process-math">\(\vect{e}_2 = [0, 1]\)</span> in <span class="process-math">\(\R^2\text{.}\)</span> The set <span class="process-math">\(\{\vect{e}_1, \vect{e}_2\}\)</span> is a spanning set for <span class="process-math">\(\R^2\text{,}\)</span> since if <span class="process-math">\([x, y]\)</span> is an arbitrary vector in <span class="process-math">\(\R^2\text{,}\)</span> we have</div>
+<div class="displaymath process-math" id="ex-stan-basis-spanning-set-1-1-8">
+\begin{equation*}
+[x, y] = x\vect{e}_1 + y\vect{e}_2 \in \lspan{(\vect{e}_1, \vect{e}_2)}.
+\end{equation*}
+</div>
+<div class="autopermalink" data-description="Paragraph"><a href="#ex-stan-basis-spanning-set-1-1" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
+</div>
+<div class="autopermalink" data-description="Example 8.1.7"><a href="#ex-stan-basis-spanning-set" title="Copy heading and permalink for Example 8.1.7" aria-label="Copy heading and permalink for Example 8.1.7">🔗</a></div></article><article class="example example-like" id="ex-is-spanning-set"><h3 class="heading">
+<span class="type">Example</span><span class="space heading-divison-mark heading-divison-mark__space"> </span><span class="codenumber">8.1.8</span><span class="period heading-divison-mark heading-divison-mark__period">.</span>
+</h3>
+<div class="para" id="ex-is-spanning-set-1-1">Determine whether <span class="process-math">\(S = \{[1, 1], [-2, -2]\}\)</span> is a spanning set for <span class="process-math">\(\R^2\text{.}\)</span><div class="autopermalink" data-description="Paragraph"><a href="#ex-is-spanning-set-1-1" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
+</div> <div class="para logical" id="ex-is-spanning-set-1-2">
+<div class="para">We have that</div>
+<div class="displaymath process-math" id="ex-is-spanning-set-1-2-1">
+\begin{align*}
+\lspan{(S)} \amp  = \{\vect{x} \in \R^2 \;|\; \vect{x} = c_1[1, 1] + c_2[-2, -2], \quad\text{for }\, c_1, c_2 \in \R\} \\
+\amp  = \{\vect{x} \in \R^2 \;|\; \vect{x} = (c_1-2c_2)[1, 1], \quad\text{for }\, c_1, c_2 \in \R\}        \\
+\amp  = \lspan{([1, 1])}\text{,}
+\end{align*}
+</div>
+<div class="para">which is the line through the origin with equation <span class="process-math">\(t[1, 1]\text{,}\)</span> for <span class="process-math">\(t\in \R\text{.}\)</span> So any vector not on that line is not in <span class="process-math">\(\lspan{(S)}\text{.}\)</span> We can check for example that <span class="process-math">\(\vect{e}_1 \notin \lspan{(S)}\text{;}\)</span> if</div>
+<div class="displaymath process-math" id="ex-is-spanning-set-1-2-6">
+\begin{equation*}
+\vect{e}_1 = c_1[1, 1] + c_2[-2, -2]
+\end{equation*}
+</div>
+<div class="para">for <span class="process-math">\(c_1, c_2 \in \R\text{,}\)</span> which simplifies to</div>
+<div class="displaymath process-math" id="ex-is-spanning-set-1-2-8">
+\begin{equation*}
+[1, 0] = [c_1 - 2c_2, c_1 - 2c_2],
+\end{equation*}
+</div>
+<div class="para">we can compare coefficients to get the system of linear equations</div>
+<div class="displaymath process-math" id="ex-is-spanning-set-1-2-9">
+\begin{equation*}
+\begin{cases}
+1 \amp  = c_1 - 2c_2 \\
+0 \amp  = c_1 - 2c_2
+\end{cases}\text{.}
+\end{equation*}
+</div>
+<div class="para">This is inconsistent, so there are no solutions, so <span class="process-math">\(\vect{e}_1 \notin \lspan{(S)}\text{.}\)</span> Hence <span class="process-math">\(S\)</span> is not a spanning set for <span class="process-math">\(\R^2\text{.}\)</span>
+</div>
+<div class="autopermalink" data-description="Paragraph"><a href="#ex-is-spanning-set-1-2" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
+</div>
+<div class="autopermalink" data-description="Example 8.1.8"><a href="#ex-is-spanning-set" title="Copy heading and permalink for Example 8.1.8" aria-label="Copy heading and permalink for Example 8.1.8">🔗</a></div></article><div class="para" id="sec-span-10">The issue is that <span class="process-math">\([-2, -2]\)</span> is parallel to <span class="process-math">\([1, 1]\text{,}\)</span> so it doesn’t contribute anything extra to the span. In the language of the next section, we will say that <span class="process-math">\([1, 1]\)</span> and <span class="process-math">\([-2, -2]\)</span> are `linearly dependent’.<div class="autopermalink" data-description="Paragraph"><a href="#sec-span-10" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
+</div>
+<div class="para" id="sec-span-11">We present the following two results without proof. It is a good exercise to at least think about why they are true.<div class="autopermalink" data-description="Paragraph"><a href="#sec-span-11" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
+</div>
+<article class="theorem theorem-like" id="thm-char-span"><h3 class="heading">
+<span class="type">Theorem</span><span class="space heading-divison-mark heading-divison-mark__space"> </span><span class="codenumber">8.1.9</span><span class="period heading-divison-mark heading-divison-mark__period">.</span>
+</h3>
+<div class="para" id="thm-char-span-1-1">We have <span class="process-math">\(\vect{b}\in\lspan(\vect{v}_1,\dots,\vect{v}_k)\)</span> if and only if the system with augmented matrix <span class="process-math">\(\begin{amatrix}{ccc} \vect{v}_1 \amp \cdots \amp \vect{v}_k \amp \vect{b}\end{amatrix}\)</span> is consistent.<div class="autopermalink" data-description="Paragraph"><a href="#thm-char-span-1-1" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
+</div>
+<div class="autopermalink" data-description="Theorem 8.1.9"><a href="#thm-char-span" title="Copy heading and permalink for Theorem 8.1.9" aria-label="Copy heading and permalink for Theorem 8.1.9">🔗</a></div></article><article class="theorem theorem-like" id="thm-span-and-dimension"><h3 class="heading">
+<span class="type">Theorem</span><span class="space heading-divison-mark heading-divison-mark__space"> </span><span class="codenumber">8.1.10</span><span class="period heading-divison-mark heading-divison-mark__period">.</span>
+</h3>
+<div class="para" id="thm-span-and-dimension-1-1">If <span class="process-math">\(S\)</span> is a subset of <span class="process-math">\(\R^n\)</span> and <span class="process-math">\(\lspan(S)=\R^n\text{,}\)</span> then <span class="process-math">\(S\)</span> has at least <span class="process-math">\(n\)</span> elements.<div class="autopermalink" data-description="Paragraph"><a href="#thm-span-and-dimension-1-1" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
+</div>
+<div class="autopermalink" data-description="Theorem 8.1.10"><a href="#thm-span-and-dimension" title="Copy heading and permalink for Theorem 8.1.10" aria-label="Copy heading and permalink for Theorem 8.1.10">🔗</a></div></article><div class="autopermalink" data-description="Section 8.1: Span"><a href="#sec-span" title="Copy heading and permalink for Section 8.1: Span" aria-label="Copy heading and permalink for Section 8.1: Span">🔗</a></div></section></div>
 <div id="ptx-content-footer" class="ptx-content-footer">
 <a class="previous-button button" href="ch-span-and-li.html" title="Previous"><span class="icon material-symbols-outlined" aria-hidden="true">&#xe5cb;</span><span class="name">Prev</span></a><a class="top-button button" href="#" title="Top"><span class="icon material-symbols-outlined" aria-hidden="true">&#xe5ce;</span><span class="name">Top</span></a><a class="next-button button" href="sec-linear-independence.html" title="Next"><span class="name">Next</span><span class="icon material-symbols-outlined" aria-hidden="true">&#xe5cc;</span></a>
 </div></main>

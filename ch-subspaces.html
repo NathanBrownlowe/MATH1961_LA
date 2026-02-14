@@ -139,6 +139,7 @@ eBookConfig.enable_chatcodes =  false;
 \newcommand{\proj}[2]{\operatorname{proj}_{#1}\!\left(#2\right)}
 \newcommand{\p}{\mathcal P}
 \newcommand{\inv}{^{-1}}
+\newcommand{\lspan}{\mathrm{span}}
 
 \newcommand{\colvec}[2]{\begin{bmatrix}#1\\#2\end{bmatrix}}
 \newenvironment{amatrix}[1]{
@@ -231,80 +232,82 @@ eBookConfig.enable_chatcodes =  false;
 </ul>
 </li>
 <li class="toc-item toc-chapter">
-<div class="toc-title-box"><a href="ch-determinants.html" class="internal"><span class="codenumber">8</span> <span class="title">Determinants</span></a></div>
+<div class="toc-title-box"><a href="ch-span-and-li.html" class="internal"><span class="codenumber">8</span> <span class="title">Span and Linear Independence</span></a></div>
 <ul class="structural toc-item-list">
-<li class="toc-item toc-section"><div class="toc-title-box"><a href="sec-calculating-nxn-determinants.html" class="internal"><span class="codenumber">8.1</span> <span class="title">Calculating determinants</span></a></div></li>
-<li class="toc-item toc-section"><div class="toc-title-box"><a href="sec-props-of-determinants.html" class="internal"><span class="codenumber">8.2</span> <span class="title">Properties of determinants</span></a></div></li>
-</ul>
-</li>
-<li class="toc-item toc-chapter">
-<div class="toc-title-box"><a href="ch-span-and-li.html" class="internal"><span class="codenumber">9</span> <span class="title">Span and Linear Independence</span></a></div>
-<ul class="structural toc-item-list">
-<li class="toc-item toc-section"><div class="toc-title-box"><a href="sec-span.html" class="internal"><span class="codenumber">9.1</span> <span class="title">Span</span></a></div></li>
-<li class="toc-item toc-section"><div class="toc-title-box"><a href="sec-linear-independence.html" class="internal"><span class="codenumber">9.2</span> <span class="title">Linear independence</span></a></div></li>
+<li class="toc-item toc-section"><div class="toc-title-box"><a href="sec-span.html" class="internal"><span class="codenumber">8.1</span> <span class="title">Span</span></a></div></li>
+<li class="toc-item toc-section"><div class="toc-title-box"><a href="sec-linear-independence.html" class="internal"><span class="codenumber">8.2</span> <span class="title">Linear independence</span></a></div></li>
 </ul>
 </li>
 <li class="toc-item toc-chapter contains-active">
-<div class="toc-title-box"><a href="ch-subspaces.html" class="internal"><span class="codenumber">10</span> <span class="title">Subspaces</span></a></div>
+<div class="toc-title-box"><a href="ch-subspaces.html" class="internal"><span class="codenumber">9</span> <span class="title">Subspaces</span></a></div>
 <ul class="structural toc-item-list active">
-<li class="toc-item toc-section"><div class="toc-title-box"><a href="sec-subspaces.html" class="internal"><span class="codenumber">10.1</span> <span class="title">Subspaces</span></a></div></li>
-<li class="toc-item toc-section"><div class="toc-title-box"><a href="sec-row-and-column-spaces.html" class="internal"><span class="codenumber">10.2</span> <span class="title">Row and column spaces</span></a></div></li>
-<li class="toc-item toc-section"><div class="toc-title-box"><a href="sec-null-spaces.html" class="internal"><span class="codenumber">10.3</span> <span class="title">Null spaces</span></a></div></li>
+<li class="toc-item toc-section"><div class="toc-title-box"><a href="sec-subspaces.html" class="internal"><span class="codenumber">9.1</span> <span class="title">Subspaces</span></a></div></li>
+<li class="toc-item toc-section"><div class="toc-title-box"><a href="sec-row-and-column-spaces.html" class="internal"><span class="codenumber">9.2</span> <span class="title">Row, column and null spaces</span></a></div></li>
 </ul>
 </li>
 <li class="toc-item toc-chapter">
-<div class="toc-title-box"><a href="ch-basis-dim-ranknullity.html" class="internal"><span class="codenumber">11</span> <span class="title">Bases, Dimension, and the Rank-Nullity Theorem</span></a></div>
+<div class="toc-title-box"><a href="ch-basis-dim-ranknullity.html" class="internal"><span class="codenumber">10</span> <span class="title">Bases, Dimension, and the Rank-Nullity Theorem</span></a></div>
 <ul class="structural toc-item-list">
-<li class="toc-item toc-section"><div class="toc-title-box"><a href="sec-bases.html" class="internal"><span class="codenumber">11.1</span> <span class="title">Bases</span></a></div></li>
-<li class="toc-item toc-section"><div class="toc-title-box"><a href="sec-dimension.html" class="internal"><span class="codenumber">11.2</span> <span class="title">Dimension</span></a></div></li>
-<li class="toc-item toc-section"><div class="toc-title-box"><a href="sec-rank-nullity-theorem.html" class="internal"><span class="codenumber">11.3</span> <span class="title">The rank-nullity theorem</span></a></div></li>
+<li class="toc-item toc-section"><div class="toc-title-box"><a href="sec-bases.html" class="internal"><span class="codenumber">10.1</span> <span class="title">Bases and dimension</span></a></div></li>
+<li class="toc-item toc-section"><div class="toc-title-box"><a href="sec-rank-nullity-theorem.html" class="internal"><span class="codenumber">10.2</span> <span class="title">The rank-nullity theorem</span></a></div></li>
+<li class="toc-item toc-section"><div class="toc-title-box"><a href="sec-characterisations-of-invertibility-take2.html" class="internal"><span class="codenumber">10.3</span> <span class="title">Characterisations of invertibility (take 2!)</span></a></div></li>
 </ul>
 </li>
 <li class="toc-item toc-chapter">
-<div class="toc-title-box"><a href="ch-eigenvectors.html" class="internal"><span class="codenumber">12</span> <span class="title">Eigenvalues and Eigenvectors</span></a></div>
+<div class="toc-title-box"><a href="ch-linear-transformations.html" class="internal"><span class="codenumber">11</span> <span class="title">Linear transformations</span></a></div>
 <ul class="structural toc-item-list">
-<li class="toc-item toc-section"><div class="toc-title-box"><a href="sec-evalues-evectors-espaces.html" class="internal"><span class="codenumber">12.1</span> <span class="title">Eigenvalues, eigenvectors, and eigenspaces</span></a></div></li>
-<li class="toc-item toc-section"><div class="toc-title-box"><a href="sec-evalue-examples.html" class="internal"><span class="codenumber">12.2</span> <span class="title">Examples</span></a></div></li>
-<li class="toc-item toc-section"><div class="toc-title-box"><a href="sec-evalue-multiplicities.html" class="internal"><span class="codenumber">12.3</span> <span class="title">Eigenvalue multiplicities</span></a></div></li>
-<li class="toc-item toc-section"><div class="toc-title-box"><a href="sec-characterisations-of-invertibility-take2.html" class="internal"><span class="codenumber">12.4</span> <span class="title">Characterisations of invertibility (take 2!)</span></a></div></li>
+<li class="toc-item toc-section"><div class="toc-title-box"><a href="sec-linear-transformations.html" class="internal"><span class="codenumber">11.1</span> <span class="title">Linear transformations</span></a></div></li>
+<li class="toc-item toc-section"><div class="toc-title-box"><a href="sec-examples-of-linear-transformations.html" class="internal"><span class="codenumber">11.2</span> <span class="title">Examples</span></a></div></li>
 </ul>
 </li>
 <li class="toc-item toc-chapter">
-<div class="toc-title-box"><a href="ch-sim-and-diag.html" class="internal"><span class="codenumber">13</span> <span class="title">Similarity and Diagonalisation</span></a></div>
+<div class="toc-title-box"><a href="ch-determinants.html" class="internal"><span class="codenumber">12</span> <span class="title">Determinants</span></a></div>
 <ul class="structural toc-item-list">
-<li class="toc-item toc-section"><div class="toc-title-box"><a href="sec-similarity.html" class="internal"><span class="codenumber">13.1</span> <span class="title">Similarity</span></a></div></li>
-<li class="toc-item toc-section"><div class="toc-title-box"><a href="sec-diagonalisation.html" class="internal"><span class="codenumber">13.2</span> <span class="title">Diagonalisation</span></a></div></li>
-<li class="toc-item toc-section"><div class="toc-title-box"><a href="sec-examples-of-diagonalisation.html" class="internal"><span class="codenumber">13.3</span> <span class="title">Examples of diagonalisation</span></a></div></li>
-<li class="toc-item toc-section"><div class="toc-title-box"><a href="sec-apps-of-diagonalisation.html" class="internal"><span class="codenumber">13.4</span> <span class="title">Applications of diagonalisation</span></a></div></li>
+<li class="toc-item toc-section"><div class="toc-title-box"><a href="sec-calculating-nxn-determinants.html" class="internal"><span class="codenumber">12.1</span> <span class="title">Calculating determinants</span></a></div></li>
+<li class="toc-item toc-section"><div class="toc-title-box"><a href="sec-props-of-determinants.html" class="internal"><span class="codenumber">12.2</span> <span class="title">Properties of determinants</span></a></div></li>
 </ul>
 </li>
 <li class="toc-item toc-chapter">
-<div class="toc-title-box"><a href="ch-markov-chains.html" class="internal"><span class="codenumber">14</span> <span class="title">Markov Chains</span></a></div>
+<div class="toc-title-box"><a href="ch-eigenvectors.html" class="internal"><span class="codenumber">13</span> <span class="title">Eigenvalues and Eigenvectors</span></a></div>
 <ul class="structural toc-item-list">
-<li class="toc-item toc-section"><div class="toc-title-box"><a href="sec-prob-vectors-and-stochastic-matrices.html" class="internal"><span class="codenumber">14.1</span> <span class="title">Probability vectors and stochastic matrices</span></a></div></li>
-<li class="toc-item toc-section"><div class="toc-title-box"><a href="sec-markov-chains.html" class="internal"><span class="codenumber">14.2</span> <span class="title">Markov chains</span></a></div></li>
-<li class="toc-item toc-section"><div class="toc-title-box"><a href="sec-steady-state-vectors.html" class="internal"><span class="codenumber">14.3</span> <span class="title">Steady state vectors</span></a></div></li>
-<li class="toc-item toc-section"><div class="toc-title-box"><a href="sec-regular-markov-chains.html" class="internal"><span class="codenumber">14.4</span> <span class="title">Regular Markov chains</span></a></div></li>
+<li class="toc-item toc-section"><div class="toc-title-box"><a href="sec-evalues-evectors-espaces.html" class="internal"><span class="codenumber">13.1</span> <span class="title">Eigenvalues, eigenvectors, and eigenspaces</span></a></div></li>
+<li class="toc-item toc-section"><div class="toc-title-box"><a href="sec-evalue-examples.html" class="internal"><span class="codenumber">13.2</span> <span class="title">Examples</span></a></div></li>
+<li class="toc-item toc-section"><div class="toc-title-box"><a href="sec-evalue-multiplicities.html" class="internal"><span class="codenumber">13.3</span> <span class="title">Eigenvalue multiplicities</span></a></div></li>
+<li class="toc-item toc-section"><div class="toc-title-box"><a href="sec-characterisations-of-invertibility-take3.html" class="internal"><span class="codenumber">13.4</span> <span class="title">Characterisations of invertibility (take 3!)</span></a></div></li>
 </ul>
 </li>
 <li class="toc-item toc-chapter">
-<div class="toc-title-box"><a href="ch-pop-models.html" class="internal"><span class="codenumber">15</span> <span class="title">Population Models</span></a></div>
+<div class="toc-title-box"><a href="ch-sim-and-diag.html" class="internal"><span class="codenumber">14</span> <span class="title">Similarity and Diagonalisation</span></a></div>
 <ul class="structural toc-item-list">
-<li class="toc-item toc-section"><div class="toc-title-box"><a href="sec-pop-models-and-leslie-matrices.html" class="internal"><span class="codenumber">15.1</span> <span class="title">Population models and Leslie matrices</span></a></div></li>
-<li class="toc-item toc-section"><div class="toc-title-box"><a href="sec-long-term-behaviour.html" class="internal"><span class="codenumber">15.2</span> <span class="title">Long term behaviour</span></a></div></li>
+<li class="toc-item toc-section"><div class="toc-title-box"><a href="sec-similarity.html" class="internal"><span class="codenumber">14.1</span> <span class="title">Similarity</span></a></div></li>
+<li class="toc-item toc-section"><div class="toc-title-box"><a href="sec-diagonalisation.html" class="internal"><span class="codenumber">14.2</span> <span class="title">Diagonalisation</span></a></div></li>
+<li class="toc-item toc-section"><div class="toc-title-box"><a href="sec-examples-of-diagonalisation.html" class="internal"><span class="codenumber">14.3</span> <span class="title">Examples of diagonalisation</span></a></div></li>
+<li class="toc-item toc-section"><div class="toc-title-box"><a href="sec-apps-of-diagonalisation.html" class="internal"><span class="codenumber">14.4</span> <span class="title">Applications of diagonalisation</span></a></div></li>
 </ul>
+</li>
+<li class="toc-item toc-chapter">
+<div class="toc-title-box"><a href="ch-markov-chains.html" class="internal"><span class="codenumber">15</span> <span class="title">Markov Chains</span></a></div>
+<ul class="structural toc-item-list">
+<li class="toc-item toc-section"><div class="toc-title-box"><a href="sec-prob-vectors-and-stochastic-matrices.html" class="internal"><span class="codenumber">15.1</span> <span class="title">Probability vectors and stochastic matrices</span></a></div></li>
+<li class="toc-item toc-section"><div class="toc-title-box"><a href="sec-markov-chains.html" class="internal"><span class="codenumber">15.2</span> <span class="title">Markov chains</span></a></div></li>
+<li class="toc-item toc-section"><div class="toc-title-box"><a href="sec-steady-state-vectors.html" class="internal"><span class="codenumber">15.3</span> <span class="title">Steady state vectors</span></a></div></li>
+<li class="toc-item toc-section"><div class="toc-title-box"><a href="sec-regular-markov-chains.html" class="internal"><span class="codenumber">15.4</span> <span class="title">Regular Markov chains</span></a></div></li>
+</ul>
+</li>
+<li class="toc-item toc-chapter">
+<div class="toc-title-box"><a href="ch-pop-models.html" class="internal"><span class="codenumber">16</span> <span class="title">Population Models</span></a></div>
+<ul class="structural toc-item-list"><li class="toc-item toc-section"><div class="toc-title-box"><a href="sec-pop-models-and-leslie-matrices.html" class="internal"><span class="codenumber">16.1</span> <span class="title">Population models and Leslie matrices</span></a></div></li></ul>
 </li>
 <li class="toc-item toc-backmatter"><div class="toc-title-box"><a href="backmatter.html" class="internal"><span class="title">Backmatter</span></a></div></li>
 </ul></nav></div>
 <main class="ptx-main"><div id="ptx-content" class="ptx-content"><section class="chapter" id="ch-subspaces"><h2 class="heading">
-<span class="type">Chapter</span><span class="space heading-divison-mark heading-divison-mark__space"> </span><span class="codenumber">10</span><span class="space heading-divison-mark heading-divison-mark__space"> </span><span class="title">Subspaces</span>
+<span class="type">Chapter</span><span class="space heading-divison-mark heading-divison-mark__space"> </span><span class="codenumber">9</span><span class="space heading-divison-mark heading-divison-mark__space"> </span><span class="title">Subspaces</span>
 </h2>
-<section class="introduction" id="ch-subspaces-2"><div class="para" id="ch-subspaces-2-1">Text before the first section.<div class="autopermalink" data-description="Paragraph"><a href="#ch-subspaces-2-1" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
+<section class="introduction" id="ch-subspaces-2"><div class="para" id="ch-subspaces-2-1">Once we define a mathematical structure that we’re interested in, it is common to look for sub-objects that inherit the same structure. When we work with vector spaces, we are interested in smaller subsets that are themselves vector spaces under the same addition and vector space operations. In this chapter we look at subspaces of <span class="process-math">\(\R^n\text{,}\)</span> and then examine how we can naturally associate a number of subspaces to a matrix.<div class="autopermalink" data-description="Paragraph"><a href="#ch-subspaces-2-1" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
 </div></section><nav class="summary-links"><ul>
-<li><a href="sec-subspaces.html" class="internal"><span class="codenumber">10.1</span> <span class="title">Subspaces</span></a></li>
-<li><a href="sec-row-and-column-spaces.html" class="internal"><span class="codenumber">10.2</span> <span class="title">Row and column spaces</span></a></li>
-<li><a href="sec-null-spaces.html" class="internal"><span class="codenumber">10.3</span> <span class="title">Null spaces</span></a></li>
-</ul></nav><div class="autopermalink" data-description="Chapter 10: Subspaces"><a href="#ch-subspaces" title="Copy heading and permalink for Chapter 10: Subspaces" aria-label="Copy heading and permalink for Chapter 10: Subspaces">🔗</a></div></section></div>
+<li><a href="sec-subspaces.html" class="internal"><span class="codenumber">9.1</span> <span class="title">Subspaces</span></a></li>
+<li><a href="sec-row-and-column-spaces.html" class="internal"><span class="codenumber">9.2</span> <span class="title">Row, column and null spaces</span></a></li>
+</ul></nav><div class="autopermalink" data-description="Chapter 9: Subspaces"><a href="#ch-subspaces" title="Copy heading and permalink for Chapter 9: Subspaces" aria-label="Copy heading and permalink for Chapter 9: Subspaces">🔗</a></div></section></div>
 <div id="ptx-content-footer" class="ptx-content-footer">
 <a class="previous-button button" href="sec-linear-independence.html" title="Previous"><span class="icon material-symbols-outlined" aria-hidden="true">&#xe5cb;</span><span class="name">Prev</span></a><a class="top-button button" href="#" title="Top"><span class="icon material-symbols-outlined" aria-hidden="true">&#xe5ce;</span><span class="name">Top</span></a><a class="next-button button" href="sec-subspaces.html" title="Next"><span class="name">Next</span><span class="icon material-symbols-outlined" aria-hidden="true">&#xe5cc;</span></a>
 </div></main>
