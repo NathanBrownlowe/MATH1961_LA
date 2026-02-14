@@ -80,6 +80,9 @@ of <m>\vect{v}</m> in the direction of <m>\vect{u}</m>.
 </p>
 
 <definition xml:id="def-projection">
+    <title>(Projection vector)</title>
+    
+    
 <statement>
 <p>Let <m>\vect{u}, \vect{v} \in \R^n</m> with <m>\vect{u} \ne 0</m>. The <term>projection</term> of 
 <m>\vect{v}</m> onto <m>\vect{u}</m> is the vector
@@ -96,10 +99,13 @@ Going back to our problem, using geometric vector addition, we have
 </me>.
 So <m>\overrightarrow{PQ} = \proj{u}{v}- \vect{v}</m>, so the distance is 
 <m>\|\overrightarrow{PQ}\| = \|\proj{u}{v} - \vect{v}\|</m>. We summarise this calculation 
-as a theorem.
+as a theorem (without proof).
 </p>
 
 <theorem xml:id="thm-distproj">
+    <title>(Shortest distance point to line)</title>
+    
+    
 <statement>
 <p>
 In the plane, let <m>P</m> be a point, <m>\ell</m> be a line, and <m>\vect{u}</m> a nonzero vector 
@@ -125,10 +131,18 @@ The projection of <m>\vect{v} = [4, -4, -1]</m> onto <m>\vect{u} = [1, 1, -1]</m
 </example>
 
 <example xml:id="ex-more-projections">
+    <title>(Finding a projection)</title>
+    
+    
 <statement>
 <p>
 Find the projections of <m>\vect{u} = [2, 3]</m> onto <m>\vect{e}_1 = [1, 0]</m> and onto 
-<m>\vect{e}_2 = [0, 1]</m>. We have
+<m>\vect{e}_2 = [0, 1]</m>. 
+</p>
+</statement>
+<solution>
+    <p>
+We have
 <md>
 <mrow>
 \operatorname{proj}_{\vect{e}_1}{\vect{u}} \amp  = \frac{\vect{e}_1 \cdot \vect{u}}{\vect{e}_1\cdot\vect{e}_1}\vect{e}_1 = \frac{[1, 0]\cdot[2, 3]}{[1, 0]\cdot[1, 0]}[1, 0] \\
@@ -143,9 +157,8 @@ This is illustrated by <xref ref="fig-proje1"/>. For <m>\vect{e}_2</m>,
 </mrow>
 </md>
 </p>
-</statement>
+</solution>
 </example>
-
 <figure xml:id="fig-proje1">
 <caption>The projection of <m>[2, 3]</m> onto <m>\vect{e}_1</m> is <m>[2, 0]</m></caption>
 <image width="60%">
@@ -153,14 +166,16 @@ This is illustrated by <xref ref="fig-proje1"/>. For <m>\vect{e}_2</m>,
 \begin{tikzpicture}[scale = 0.8]
     \draw [vector,->] (-2, 0) -- (4, 0) node [right] {$x$};
     \draw [vector,->] (0, -2) -- (0, 4) node [above] {$y$};
-    \draw [vector,->,ultra thick, blue] (0, 0) -- (2, 3) node [right] {$\vect{u} = [2, 3]$};
+    \draw [vector,->,ultra thick, red] (0, 0) -- (2, 3) node [right] {$\vect{u} = [2, 3]$};
     \draw [vector,->,ultra thick] (0, 0) -- (1, 0) node [below] {$\vect{e}_1$};
-    \draw [vector,->,ultra thick, blue] (0, 0) -- (2, 0) node [below, xshift = 1cm] {$\mathrm{proj}_{\vect{e}_1}\mathbf{u} = [2, 0]$};
+
+    \draw [vector,->,ultra thick, red] (0, 0) -- (2, 0) node [below, xshift = 1cm] {$\mathrm{proj}_{\vect{e}_1}\mathbf{u} = [2, 0]$};
     \draw [dashed] (2, 3) -- (2, 0);
 \end{tikzpicture}
 </latex-image>
 </image>
 </figure>
+
 
 <p>
 In general, the projection of a vector <m>\vect{v} = [v_1, v_2, \dots, v_n]</m> onto the standard unit 

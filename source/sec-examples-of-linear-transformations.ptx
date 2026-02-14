@@ -7,6 +7,7 @@
     We discuss two classes of linear transformations in this section.
   </p>
 
+  <example xml:id="ex-rotation">
   <p>
 <term>Rotation:</term> An important example of a linear transformation is rotation. Given an angle <m>\theta</m> (which for the purposes
 of our diagrams we will think of as an angle between 0 and <m>\pi/2</m>, but this all works for any angle), we define the 
@@ -141,8 +142,10 @@ scaling as an exercise.
 	</figure>
 </sidebyside>
     </figure>
-
+    
+  </example>
   
+  <example xml:id="ex-reflection">
 <p>
   <term>Reflection:</term> If you think about the operation <m>T</m> of reflecting vectors in <m>\R^2</m> about
   the line <m>y=x</m>, you can convince yourself that this is linear, and that the formula is 
@@ -167,14 +170,15 @@ scaling as an exercise.
 
     %arrows
     \draw [vector,->, blue, ultra thick] (0, 0) -- (1, 0.0);
-    \draw [vector,->, blue, ultra thick] (0.0, 0.0) -- (0,1);
+    \draw [vector,->, red, ultra thick] (0.0, 0.0) -- (0,1);
     
     \draw [dashed, black] (-0.2,-0.2) -- (1.1,1.1);
 
     %labels
     \draw (1, -0.1) node [below, blue] {$[1,0]$};
-    \draw (-0.2, 1) node [left, blue] {$T([1,0])=[0,1]$};
-    \draw (1, 1.1) node [left, black] {$y=x$};
+    \draw (0.05, 1) node [right, red] {$T([1,0])$};
+    \draw (0.25, 0.9) node [right, red] {$=[0,1]$};
+    \draw (1.05, 1) node [right, black] {$y=x$};
 \end{tikzpicture}
 </latex-image>
 </image>
@@ -190,15 +194,15 @@ scaling as an exercise.
     \draw [vector,->] (0, -0.2) -- (0,1.15) node [above] {$y$};
 
     %arrows
-    \draw [vector,->, blue, ultra thick] (0, 0) -- (1, 0.0);
+    \draw [vector,->, red, ultra thick] (0, 0) -- (1, 0.0);
     \draw [vector,->, blue, ultra thick] (0.0, 0.0) -- (0,1);
     
     \draw [dashed, black] (-0.2,-0.2) -- (1.1,1.1);
 
     %labels
-    \draw (1, -0.1) node [below, blue] {$T([0,1])=[1,0]$};
-    \draw (-0.2, 1) node [left, blue] {$[0,1]$};
-    \draw (1, 1.1) node [left, black] {$y=x$};
+    \draw (1, -0.1) node [below, red] {$T([0,1])=[1,0]$};
+    \draw (0, 1) node [left, blue] {$[0,1]$};
+    \draw (1.05, 1) node [right, black] {$y=x$};
 \end{tikzpicture}
 </latex-image>
 </image>
@@ -206,6 +210,18 @@ scaling as an exercise.
 </sidebyside>
     </figure>
 
-
-
+<p>
+  We see from <xref ref="fig-matrix-reflection"/> that 
+  <md>
+    A_T=\begin{bmatrix}0 \amp 1\\1\amp 0\end{bmatrix},
+  </md>
+and hence reflection is given by 
+<md>
+  T\left(\begin{bmatrix}x\\y\end{bmatrix}\right)=\begin{bmatrix}0 \amp 1\\1\amp 0\end{bmatrix}\begin{bmatrix}x\\y\end{bmatrix}
+  =\begin{bmatrix}y\\x\end{bmatrix},
+</md>
+which does match the formula we had an educated guess about earlier. 
+</p>
+    
+  </example>
 </section>

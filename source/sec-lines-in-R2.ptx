@@ -4,6 +4,9 @@
   <title>Lines in <m>\mathbb{R}^2</m></title>
 
  <definition xml:id="def-normal-vector">
+  <title>(Normal vector)</title>
+  
+  
 <statement>
 <p>
 Let <m>\ell</m> be a line in <m>\R^2</m>. A <term>normal vector</term> for <m>\ell</m> is a nonzero 
@@ -47,7 +50,7 @@ in <xref ref="fig-normal"/>.
 % Vectors
 \draw[vector,->, blue] (0,0) -- (P) node[midway, left] {$\vect{p}$} node[circle, scale = 0.18, fill = blue] {} node [above] {$P$};
 \draw[vector,->, red] (0,0) -- (X) node[midway, below, yshift = -1mm] {$\vect{x}$} node[circle, scale = 0.18, fill = red] {} node [above right] {$X$};
-\draw[vector,->, violet] (N) -- ++(0.75,1.5) node[above] {$\vec{n}$};
+\draw[vector,->, violet] (N) -- ++(0.75,1.5) node[above] {$\vect{n}$};
 
 \draw[thick, violet] (N) -- ++ (0.078, 0.16) -- ++ (0.16, -0.078) -- ++ (-0.078, -0.16);
 \end{tikzpicture}

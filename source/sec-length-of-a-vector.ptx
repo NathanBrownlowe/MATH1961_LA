@@ -13,6 +13,9 @@
 
 
   <definition xml:id="def-length">
+    <title>(Vector length)</title>
+    
+    
   <statement>
   <p>
   The <term>length</term> of a vector <m>\vect{v} = [v_1, v_2, \dots, v_n] \in \R^n</m> is given by
@@ -65,6 +68,9 @@
 
 
   <definition xml:id="def-unit-vector">
+    <title>(Unit vector)</title>
+    
+    
   <statement>
   <p>
   A <term>unit vector</term> is a vector of length <m>1</m>.
@@ -101,7 +107,11 @@
   </statement>
   </example>
   
-  <p>
+  <definition xml:id="def-standard-unit-vectors">
+    <title>(Standard unit vectors)</title>
+  
+    <statement>
+     <p>
   In <m>\R^n</m>, for all <m>i=1, 2, \dots, n</m>, let <m>\vect{e}_i</m> be the vector with 1 in 
   the <m>i</m>th component and <m>0</m> in every other component. The vectors 
   <m>\vect{e}_1, \vect{e}_2, \dots, \vect{e}_n</m> are unit vectors, called the <term>standard unit 
@@ -121,8 +131,8 @@
 \begin{tikzpicture} [scale = 2]
 \draw [vector,->] (-1, 0) -- (2, 0) node [right] {$x$};
 \draw [vector,->] (0, -1) -- (0, 2) node [above] {$y$};
-\draw [vector,->, blue,very thick] (0, 0) -- (1, 0) node [below] {$\vect{e}_1$};
-\draw [vector,->, red,very thick] (0, 0) -- (0, 1) node [left] {$\vect{e}_2$};
+\draw [very thick, -\gt,blue] (0, 0) -- (1, 0) node [below] {$\vect{e}_1$};
+\draw [very thick, -\gt,red] (0, 0) -- (0, 1) node [left] {$\vect{e}_2$};
 \end{tikzpicture}
 </latex-image>
 </image>
@@ -137,15 +147,18 @@
     \draw[vector,->] (0,0,0) -- (2,0,0) node[right] {$y$};
     \draw[vector,->] (0,0,0) -- (0,2,0) node[above] {$z$};
 
-    \draw[vector,->, blue,very thick] (0, 0, 0) -- (0, 0, 1) node [left] {$\vect{e}_1$};
-    \draw[vector,->, red,very thick] (0, 0, 0) -- (1, 0, 0) node [below] {$\vect{e}_2$};
-    \draw[vector,->, violet,very thick] (0, 0, 0) -- (0, 1, 0) node [left] {$\vect{e}_3$};
+    \draw[very thick, -\gt,blue] (0, 0, 0) -- (0, 0, 1) node [left] {$\vect{e}_1$};
+    \draw[very thick, -\gt,red] (0, 0, 0) -- (1, 0, 0) node [below] {$\vect{e}_2$};
+    \draw[very thick, -\gt,violet] (0, 0, 0) -- (0, 1, 0) node [left] {$\vect{e}_3$};
 \end{tikzpicture}
 </latex-image>
 </image>
 	</figure>
 </sidebyside>
     </figure>
+    </statement>
+  </definition>
+  
     
 
 

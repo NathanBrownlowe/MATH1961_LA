@@ -4,7 +4,13 @@
   <title>Cross Products</title>
 
   <introduction>
-    <p> Text before the first section. </p>
+    <p> 
+      In this chapter a new operation on vectors. This operation, called the cross product, does take two vectors
+      and outputs a vector (unlike the dot product), but it is only defined in <m>\R^3</m>. (Well, it is also
+      defined in <m>\R^7</m>, but we will leave the very technical reasons why this is the case for the interested reader.) The cross product 
+    is a nice operation in the sense that it does, again, encode geometric information about vectors. But it also 
+  has some less desirable qualities, such as a lack of associativity.
+</p>
   </introduction>
 
   <!-- include sections -->

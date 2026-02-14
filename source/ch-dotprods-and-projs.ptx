@@ -6,10 +6,11 @@
   <introduction>
 
     <p>
-So far, we have not introduced any way to take the product of two vectors. In this chapter, we introduce 
-the dot product, which results in a scalar, and the cross product, which results in another vector but is 
-only defined in <m>\R^3</m>. Applications of the dot product include calculating angles and projections, 
-while the cross product can be used to measure the area of parallelograms and to find orthogonal vectors.
+So far, we have not introduced any way to take the product of two vectors. This will remain the case, although
+in this chapter we introduce an operation called the dot product, which is a kind of product of two vectors
+that results in a scalar. We define this purely algebraically, but then will see that this formula contains 
+geometric information. We finish this chapter with an application of dot products to a very important notion 
+called a projection.
 </p>
   
 </introduction>

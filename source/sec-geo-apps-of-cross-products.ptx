@@ -15,6 +15,9 @@ illustrated in <xref ref="fig-cross_area"/>.
 </p>
 
 <corollary xml:id="cor-area-of-parallelogram">
+  <title>(Areas of traingles and parallelograms)</title>
+  
+  
 <statement>
 <p>
 Let <m>\vect{u}, \vect{v} \in \R^3</m>. Then <m>\|\vect{u}\times \vect{v}\|</m> is the area of the 

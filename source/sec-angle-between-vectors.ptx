@@ -27,6 +27,9 @@ related to the angle between them.
 </figure>
 
 <theorem xml:id="thm-geo-form-dot-product">
+  <title>(Geometric formula for the dot product)</title>
+  
+  
 <statement>
 <p>
 Let <m>\vect{u}, \vect{v} \in \R^n</m>, and <m>\theta</m> be the angle between them. Then
@@ -65,14 +68,17 @@ Similarly,
 </mrow>
 </md>
 Therefore <m>|\vect{u} \cdot \vect{v}| \le \|\vect{u}\| \|\vect{v}\|</m>. This provides another proof of 
-and a geometric interpretation of the Cauchy--Schwarz inequality. There are two reasons that we presented 
-the first, more complicated-seeming proof of the Cauchy--Schwarz: part of that proof is used for the proof of 
+and a geometric interpretation of the Cauchy&#x2013;Schwarz inequality. There are two reasons that we presented 
+the first, more complicated-seeming proof of the Cauchy&#x2013;Schwarz: part of that proof is used for the proof of 
 the triangle inequality, and it gives a purely algebraic proof (without relying on properties of the <m>\cos</m> 
 function).
 </p>
 </remark>
 
 <definition xml:id="def-orthogonal">
+  <title>(Orthogonal vectors)</title>
+  
+  
 <statement>
 <p>
 Two vectors <m>\vect{u}, \vect{v} \in \R^n</m> are orthogonal if <m>\vect{u}\cdot\vect{v} = 0</m>.
@@ -89,12 +95,16 @@ Orthogonal vectors are perpendicular, since, if <m>\theta</m> is the angle betwe
 </p>
 
 <example xml:id="ex-angle-vecs">
+  <title>(Determining angles)</title>
+  
+  
 <statement>
 <p>
 Determine whether the angle between <m>\vect{u} = [2, -1, 1]</m> and <m>\vect{v} = [1, -2, -1]</m> is acute, 
 obtuse, or a right angle.
 </p>
-
+</statement>
+<solution>
 <p>
 We have
 <me>
@@ -102,14 +112,19 @@ We have
 </me>
 so <m>\theta</m> is acute. In fact, <m>\theta = \cos\inv(\frac{1}{2}) = \frac{\pi}{3}</m>.
 </p>
-</statement>
+</solution>
 </example>
 
 <example xml:id="ex-orthogonal-vecs">
+  <title>(Determining orthogonality)</title>
+  
+  
 <statement>
 <p>
 Find <m>k\in \R</m> such that <m>\vect{a} = [1, -1, 2]</m> and <m>\vect{b} = [k^2, k, -3]</m> are orthogonal.
 </p>
+</statement>
+<solution>
 
 <p>
 If <m>\vect{a}\cdot\vect{b} = 0</m>, then
@@ -118,7 +133,7 @@ If <m>\vect{a}\cdot\vect{b} = 0</m>, then
 </me>
 which factorises to give <m>(k+2)(k-3) = 0</m>. Therefore, <m>k=-2</m> or <m>k=3</m>.
 </p>
-</statement>
+</solution>
 </example>
 
 </section>

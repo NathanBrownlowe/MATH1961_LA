@@ -5,9 +5,12 @@
 
   <introduction>
     <p> Vectors are mathematical objects characterised by their magnitude (also called length) and direction. 
-      Especially for applications to physics or engineering, we can think of vectors as measurable quantities 
+      In applications such as physics and engineering, we think of vectors as measurable quantities 
       that have a direction: for example, displacement, velocity, and force are vectors, while distance, speed, 
-      and mass are not. In this chapter we define vectors and introduce their main properties. </p>
+      and mass are not. In this chapter we define vectors and introduce their main properties. We start with
+      a focus on vectors in the plane <m>\R^2</m>, before moving to the more general <m>\R^n</m>, and 
+      finishing with an abstraction to vector spaces over the real numbers. 
+      main class of  </p>
   </introduction>
 
   <!-- include sections -->

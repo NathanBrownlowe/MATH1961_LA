@@ -10,6 +10,9 @@ output is another vector in <m>\R^3</m>.
 
 
 <definition xml:id="def-cross-product">
+  <title>(Cross product)</title>
+  
+  
 <statement>
 <p>
 The <term>cross product</term> of the vectors <m>\vect{u}=[u_1, u_2, u_3], \vect{v} = [v_1, v_2, v_3] \in \R^3</m>
@@ -110,10 +113,18 @@ Notice that <m>\vect{u} \times \vect{v} = - \vect{v} \times \vect{u}</m>.
 </figure>
 
 <example xml:id="ex-dot-and-cross">
+  <title>(Finding cross product)</title>
+  
+  
 <statement>
 <p>
 Find <m>\vect{u}\cdot (\vect{u}\times\vect{v})</m> and <m>\vect{v}\cdot (\vect{u}\times\vect{v})</m> 
-for <m>\vect{u} = [3, 1, 2]</m> and <m>\vect{v} = [5, 0, 4]</m>. From the previous example, we know 
+for <m>\vect{u} = [3, 1, 2]</m> and <m>\vect{v} = [5, 0, 4]</m>. 
+</p>
+</statement>
+<solution>
+  <p>
+  From the previous example, we know 
 <m>\vect{u} \times\vect{v} = [4, -2, -5]</m>. So
 <me>
 \vect{u}\cdot(\vect{u}\times\vect{v}) = [3, 1, 2] \cdot [4, -2, -5] = 12-2-10 = 0,
@@ -122,7 +133,7 @@ for <m>\vect{u} = [3, 1, 2]</m> and <m>\vect{v} = [5, 0, 4]</m>. From the previo
 \vect{v}\cdot (\vect{u}\times\vect{v}) = [5, 0, 4] \cdot [4, -2, -5] = 20+0-20 = 0.
 </me>
 </p>
-</statement>
+</solution>
 </example>
 
 <example xml:id="ex-uxuiszero">
@@ -140,6 +151,9 @@ The next theorem lists the main properties of the cross product.
 
 
 <theorem xml:id="thm-cross-product-props">
+  <title>(Properties of cross products)</title>
+  
+  
 <statement>
 <p>
 Let <m>\vect{u}, \vect{v}, \vect{w} \in\R^3</m> and <m>c\in \R</m>. Then
@@ -229,9 +243,17 @@ while
 </p>
 
 <example xml:id="ex-cross-product-algebra">
+  <title>(Simplifying a cross product)</title>
+  
+  
 <statement>
 <p>
 Simplify <m>(\vect{u} + \vect{v}) \times (\vect{u} - \vect{v})</m> using the properties in the theorem.
+</p>
+</statement>
+<solution>
+  <p>
+  We have
 <md>
 <mrow>
 (\vect{u} + \vect{v}) \times (\vect{u} - \vect{v}) \amp  =  (\vect{u} + \vect{v}) \times \vect{u} + (\vect{u} + \vect{v}) \times (-\vect{v})\quad \text{(Property 5)} \\
@@ -242,7 +264,7 @@ Simplify <m>(\vect{u} + \vect{v}) \times (\vect{u} - \vect{v})</m> using the pro
 </mrow>
 </md>
 </p>
-</statement>
+</solution>
 </example>
 
 <p>
@@ -287,11 +309,13 @@ plane_normals.tikz
 </figure>
 
 <p>
-The direction of <m>\vect{u} \times \vect{v}</m> is given by the right hand rule.
+  So the cross product can only point in one of two directions, but which one is it?
 </p>
 
 <assemblage xml:id="right-hand-rule">
-<term>Right-hand rule:</term>
+  <title>(Right-hand rule)</title>
+  <p>
+The direction of <m>\vect{u} \times \vect{v}</m> is given by the right hand rule:
 <ol>
 <li>
 <p>Point the fingers of your right hand straight in the direction of <m>\vect{u}</m>.</p>
@@ -303,24 +327,26 @@ The direction of <m>\vect{u} \times \vect{v}</m> is given by the right hand rule
 <p>Your thumb points in the direction of <m>\vect{u}\times \vect{v}</m>.</p>
 </li>
 </ol>
-</assemblage>
-
-
+</p>
 <figure xml:id="fig-rhr">
 <caption>The right hand rule</caption>
 <!--RHR pic needed-->
 </figure>
+</assemblage>
+
 
 <p>
-Now we know the direction of <m>\vect{u}\times \vect{v}</m>. Next, we want to calculate its magnitude (length). 
+Now that we know the direction of <m>\vect{u}\times \vect{v}</m>, we want to calculate its magnitude. 
 First, it will help to have the following fact (we leave the proof as an exercise).
 </p>
 
 
 <assemblage xml:id="fact-length-of-cross">
 <p>
-Let <m>\vect{u}, \vect{v} \in \R^3</m>. Then 
-<m>\|\vect{u} \times\vect{v}\|^2 = \|\vect{u}\|^2\|\vect{v}\|^2 - |\vect{u}\cdot\vect{v}|^2</m>.
+Let <m>\vect{u}, \vect{v} \in \R^3</m>. Then we have
+<md>
+  \|\vect{u} \times\vect{v}\|^2 = \|\vect{u}\|^2\|\vect{v}\|^2 - |\vect{u}\cdot\vect{v}|^2
+</md>.
 </p>
 </assemblage>
 
@@ -330,6 +356,9 @@ Now we can calculate the length of a cross product.
 
 
 <theorem xml:id="Thm-lengpara">
+  <title>(Length of cross product)</title>
+  
+  
 <statement>
 <p>
 Let <m>\vect{u}, \vect{v} \in \R^3</m>, and <m>\theta</m> be the angle between <m>\vect{u}</m> and 
@@ -358,10 +387,17 @@ result.
 </theorem>
 
 <example xml:id="ex-length-of-cross">
+  <title>(Calculating length of cross product)</title>
+  
+  
 <statement>
 <p>
 Suppose <m>\vect{u}, \vect{v} \in \R^3</m> are such that <m>\|\vect{u}\| = \sqrt{6}, \|\vect{v}\| = \sqrt{35}</m>, and 
 <m>\vect{u}\cdot\vect{v} = 14</m>. Find <m>\|\vect{u} \times \vect{v}\|</m>.
+</p>
+</statement>
+<solution>
+  <p>
 We first calculate that
 <me>
 \cos\theta = \frac{\vect{u}\cdot\vect{v}}{\|\vect{u}\|\|\vect{v}\|} = \frac{14}{\sqrt{6}\sqrt{35}} = \frac{14}{\sqrt{210}}
@@ -372,7 +408,7 @@ Then <m>\sin^2\theta = 1- \cos^2\theta = \frac{1}{15}</m>, so <m>\sin\theta = \f
 \|\vect{u} \times \vect{v}\| = \|\vect{u}\|\|\vect{v}\|\sin\theta = \sqrt{\frac{210}{15}} = \sqrt{14}.
 </me>
 </p>
-</statement>
+</solution>
 </example>
 
 

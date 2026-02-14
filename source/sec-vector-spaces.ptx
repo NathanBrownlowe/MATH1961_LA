@@ -6,10 +6,18 @@
   <p>
 In <xref ref="thm-vec-prop"/> we identified eight properties satisfied by vector addition
 and scalar multiplication on <m>{\mathbb R}^n</m>. It turns out that these properties are
-exactly what is needed to produce the more general notion of a vector space.
+exactly what is needed to produce the more general notion of a vector space. 
+</p>
+
+<p>
+  Vector spaces are ubiquitous across mathematics, and you will learn a lot more about them in higher-level
+  units.
 </p>
 
  <definition xml:id="def-vec-spaces">
+  <title>(Vector space over <m>\R</m>)</title>
+  
+  
   <statement>
   <p>
   A <term>vector space <m>V</m> over <m>\mathbb R</m></term> is a set <m>V</m> together with
@@ -126,7 +134,7 @@ Here are some other examples of vector spaces. We will leave the proofs as an ex
   <md>
 <mrow>
 \amp P_n(\mathbb R)=\{\text{polynomials } a_0+a_1x+\dots+a_nx^n:a_i\in\mathbb R\}\\
-\amp C(\mathbb R)=\{\text{continuously functions } \mathbb R\to\mathbb R\}\\
+\amp C(\mathbb R)=\{\text{continuous functions } \mathbb R\to\mathbb R\}\\
 \amp C^1(\mathbb{R})=\{\text{continuously differentiable functions } \mathbb R\to\mathbb R\}
 </mrow>
 </md>
@@ -135,14 +143,14 @@ Here are some other examples of vector spaces. We will leave the proofs as an ex
   </li>
   <li>
     <p>
-  We will later see that the set of <m>m\times n</m> with real entries is a vector space
+  We will later see that the set of <m>m\times n</m> matrices with real entries is a vector space
   over <m>\mathbb R</m> under the usual operations of matrix addition and scalar
   multiplication.
     </p>
   </li>
   <li>
     <p>
-  Suppose <m>V=\{\vect{x}\in\R : \vect{x}>0\}</m>, and for <m>\vect{x},\vect{y}\in V</m>, <m>c\in \R</m>, define additions
+  Suppose <m>V=\{\vect{x}\in\R : \vect{x}>0\}</m>, and for <m>\vect{x},\vect{y}\in V</m>, <m>c\in \R</m>, define addition
   and scalar multiplication by 
   <md>
     \vect{x}+\vect{y}:=\vect{x}\vect{y}\text{ and }c\vect{x}:=\vect{x}^c.
@@ -154,5 +162,10 @@ Here are some other examples of vector spaces. We will leave the proofs as an ex
 </p>
 </statement>
 </example>
+
+<p>
+  So much of what we will do the rest of the way would also work at the level of general vector spaces, but to keep
+  things simple, we will almost exclusively focus on the example <m>\R^n</m> for the rest of these notes.
+</p>
 
 </section>

@@ -4,6 +4,9 @@
   <title>Dot products</title>
 
 <definition xml:id="def-dot-product">
+  <title>(Dot product)</title>
+  
+  
 <statement>
 <p>The <term>dot product</term> of the vectors <m>\vect{u} = [u_1, u_2, \dots, u_n]</m> and 
 <m>\vect{v} = [v_1, v_2, \dots, v_n] \in \R^n</m> is the scalar
@@ -32,6 +35,9 @@ The dot product has the following properties.
 </p>
 
 <theorem xml:id="thm-props-dot-product">
+  <title>(Properties of the dot product)</title>
+  
+  
 <statement>
 <p>Let <m>\vect{u}, \vect{v}, \vect{w} \in \R^n</m>, and <m>c \in \R</m>. Then
 <ol>
@@ -56,7 +62,7 @@ The dot product has the following properties.
 </p>
 </li>
 <li>
-<p><m>|\vect{u}\cdot\vect{v}| \le \|\vect{u}\|\|\vect{v}\|\quad</m> (Cauchy--Schwarz inequality)
+<p><m>|\vect{u}\cdot\vect{v}| \le \|\vect{u}\|\|\vect{v}\|\quad</m> (Cauchy&#x2013;Schwarz inequality)
 </p>
 </li>
 <li>
@@ -109,7 +115,7 @@ Applying this with <m>c = \frac{\vect{u}\cdot \vect{v}}{\|\vect{v}\|^2}</m>, we 
 <p>
 Therefore <m>\frac{(\vect{u}\cdot\vect{v})^2}{\|\vect{v}\|^2} \le \|\vect{u}\|^2</m>, which rearranges to 
 give <m>(\vect{u}\cdot\vect{v})^2 \le \|\vect{u}\|^2\|\vect{v}\|^2</m>. Taking square roots, 
-<m>|\vect{u}\cdot\vect{v}| \le \|\vect{u}\|\|\vect{v}\|</m>, which proves the Cauchy--Schwarz inequality.
+<m>|\vect{u}\cdot\vect{v}| \le \|\vect{u}\|\|\vect{v}\|</m>, which proves the Cauchy&#x2013;Schwarz inequality.
 </p>
 
 <p>
@@ -127,7 +133,7 @@ Taking <m>c = -1</m> in the first calculation during the proof of Property 6, we
 \amp  = (\|\vect{u}\| + \|\vect{v}\|)^2
 </mrow>
 </md>,
-where in the second-last line we used the Cauchy--Schwarz inequality. This proves the triangle inequality.
+where in the second-last line we used the Cauchy&#x2013;Schwarz inequality. This proves the triangle inequality.
 </p>
 </proof>
 

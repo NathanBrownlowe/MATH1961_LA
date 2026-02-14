@@ -9,7 +9,7 @@
   </p>
 
   <definition xml:id="def-vectors-in-Rn">
-  <title>Vectors in <m>\R^n</m></title>
+  <title>(Vectors in <m>\R^n</m>)</title>
   <statement>
   <p>
   A <term>vector</term> <m>\vect{a}</m> in <m>\R^n</m> is an expression of the form
@@ -27,7 +27,13 @@
 
   <p>
   The definition of vector addition and scaling in <m>\R^n</m> is component-wise, like in 
-  <m>\R^2</m>. Let <m>c\in \R</m> be a scalar, and 
+  <m>\R^2</m>. 
+  </p>
+  <definition xml:id="def-vec-alg-in-Rn">
+    <title>(Vector algebra in <m>\R^n</m>)</title>
+    <statement>
+      <p>
+        Let <m>c\in \R</m> be a scalar, and 
   <m>\vect{a} = [a_1, a_2, \dots, a_n], \vect{b} = [b_1, b_2, \dots, b_n] \in \R^n</m> be vectors. 
   Then we define the <term>sum</term>
   <me>
@@ -45,7 +51,9 @@
   \vect{0} = [0, 0, \dots, 0]
   </me>
   having <m>n</m> components which are all zero.
-  </p>
+      </p>
+    </statement>
+  </definition>
 
   <p>
   A vector in <m>\R^n</m> can still be interpreted as a directed line segment in <m>n</m>-dimensional space. 
@@ -116,6 +124,9 @@
   </p>
 
   <theorem xml:id="thm-vec-prop">
+    <title>(Properties of vectors in <m>\R^n</m>)</title>
+    
+    
   <statement>
   <p>Let <m>\vect{u}, \vect{v}, \vect{w} \in \R^n</m> and <m>c, d \in \R</m>. Then
   <ol>
@@ -155,7 +166,7 @@
   </theorem>
   
   <p>
-  Properties 5 and 6 are both known as distributivity. Associativity (Property 2) allows us to write sums of 
+  Associativity (Property 2) allows us to write sums of 
   several vectors
   <me>
   \vect{u} + \vect{v} + \vect{w}
@@ -180,7 +191,7 @@
   \amp  = [u_1 + 0, u_2 + 0, \dots, u_n + 0]         \\
   \amp  = \vect{u}
   </mrow>
-  </md>,
+  </md>.
   Property 4 holds since
   <me>
   \vect{u} + (-\vect{u}) = [u_1 - u_1, \dots, u_n - u_n] = \vect{0},
@@ -202,7 +213,7 @@
   \amp  = [cu_1 + du_1, cu_2 + du_2, \dots, cu_n + du_n] \\
   \amp  = c\vect{u} + d\vect{u}
   </mrow>
-  </md>.
+  </md>
   proves Property 6.</p>
   </proof>
   
@@ -211,10 +222,19 @@
   </p>
 
   <example xml:id="ex-algebraic-props">
+    <title>(Simplifying expression)</title>
+    
+    
   <statement>
   <p>
-  Let <m>\vect{a}, \vect{b} \in \R^n</m>. The expression 
-  <m>3(2\vect{a} - \vect{b}) + (\vect{a} - 3\vect{b})</m> is simplified by
+  Let <m>\vect{a}, \vect{b} \in \R^n</m>. Carefully use the properties of vectors in <m>\R^n</m>
+  to simplify the expression 
+  <m>3(2\vect{a} - \vect{b}) + (\vect{a} - 3\vect{b})</m>.
+  </p>
+  </statement>
+  <solution>
+    <p>
+      We have
   <md>
   <mrow>
   \amp 3(2\vect{a} - \vect{b}) + (\vect{a} - 3\vect{b}) \\
@@ -228,7 +248,7 @@
   </mrow>
   </md>
   </p>
-  </statement>
+</solution>
   </example>
   
   <p>
@@ -246,6 +266,9 @@
   </p>
 
   <definition xml:id="def-lincomb">
+    <title>(Linear combination)</title>
+    
+    
   <statement>
   <p>
   A vector <m>\vect{v}\in \R^n</m> is a <term>linear combination</term> of vectors 
@@ -263,10 +286,17 @@
   </definition>
 
   <example xml:id="ex-lincomb">
+    <title>(Determining a linear combination)</title>
+    
   <statement>
   <p>
   Write <m>\vect{u} = [2, 2]</m> as a linear combination of <m>\vect{v} = [-1, 1]</m> and 
-  <m>\vect{w} = [0, 4]</m>. Let <m>\vect{u} = c_1\vect{v} + c_2\vect{w}</m>, i.e\
+  <m>\vect{w} = [0, 4]</m>. 
+  </p>
+</statement>
+<solution>
+  <p>
+  Let <m>\vect{u} = c_1\vect{v} + c_2\vect{w}</m>, i.e.
   <me>
     [2, 2] = c_1[-1, 1] + c_2[0, 4]
   </me>.
@@ -308,16 +338,20 @@
 </latex-image>
 </image>
   </figure>
-  </statement>
+  </solution>
   </example>
   
   <example xml:id="ex-non-lc">
+    <title>(Are all vectors linear combinations?)</title>
+    
+    
   <statement>
   <p>
   Is it possible to write <m>\vect{u} = [2, 2]</m> as a linear combination of <m>\vect{v} = [-1, 1]</m> and 
   <m>\vect{x} = [3, -3]</m>?
   </p>
-  
+</statement>
+<solution>
   <p>
   Suppose we try to write <m>\vect{u} = c_1\vect{v} + c_2\vect{x}</m>, so
     <me>
@@ -366,7 +400,7 @@
 </latex-image>
 </image>
   </figure>
-  </statement>
+</solution>
   </example>
   
   
