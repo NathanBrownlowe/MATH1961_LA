@@ -36,6 +36,9 @@ as shown in <xref ref="fig-plane_setup"/>.
 </figure>
 
 <definition xml:id="def-normal-to-a-plane">
+  <title>(Normal vector for plane)</title>
+  
+  
 <statement>
 <p>
 Let <m>\p</m> be a plane in <m>\R^3</m>. A <term>normal vector</term> for <m>\p</m> is a 
@@ -45,6 +48,9 @@ nonzero vector <m>\vect{n}</m> which is orthogonal to <m>\p</m>.
 </definition>
 
 <definition xml:id="def-normal-form-of-plane">
+  <title>(Normal form of plane)</title>
+  
+  
 <statement>
 <p>
 The <term>normal form</term> of the equation of a plane <m>\p</m> in <m>\R^3</m> is
@@ -72,6 +78,7 @@ where <m>d = \vect{n}\cdot\vect{p} = ap_1 + bp_2 + cp_3</m>.
 </p>
 
 <definition xml:id="def-general-form-of-plane">
+  <title>(General form of plane)</title>
 <statement>
 <p>
 The <term>general form</term> of the equation of a plane <m>\p</m> in <m>\R^3</m> is
@@ -85,28 +92,35 @@ where <m>\vect{p}</m> is the position vector of a point <m>P</m> on <m>\p</m>.
 </definition>
 
 <example xml:id="ex-norm-form-plane">
+  <title>(Finding normal form of plane)</title>
 <statement>
 <p>
 Find a normal form for the plane with general equation
 <me>
 2x - y + z = 5
 </me>.
-
+</p>
+</statement>
+<solution>
+  <p>
 A normal vector is <m>\vect{n} = [2, -1, 1]</m>. A point on the plane is <m>P= (0, 0, 5)</m>, so 
 <m>\vect{p} = [0, 0, 5]</m>. So the normal form is
   <me>
   [2, -1, 1] \cdot ([x, y, z] - [0, 0, 5]) =0.
 </me>
 </p>
-</statement>
+</solution>
 </example>
 
 <example xml:id="ex-norm-and-general-plane">
+  <title>(Finding normal and general forms)</title>
 <statement>
 <p>
 Find a normal form and general form for the plane that passes through the point <m>(1, 0, 6)</m> and has 
 normal vector <m>[1, 2, 3]</m>.
 </p>
+</statement>
+<solution>
 <p>
 We take <m>\vect{n} = [1, 2, 3]</m> and <m>P = (1, 0, 6)</m>, so <m>\vect{p} = [1, 0, 6]</m>. 
 The normal form is
@@ -115,7 +129,7 @@ The normal form is
 </me>
 and the general form is <m>x+2y+3z = 19</m>.
 </p>
-</statement>
+</solution>
 </example>
 
 <remark xml:id="rem-int-plane-line">
@@ -126,6 +140,7 @@ infinitely many points if the line lies on the plane.
 </remark>
 
 <example xml:id="ex-int-line-plane">
+  <title>(Intersection of line and plane)</title>
 <statement>
 <p>
 Determine whether the line
@@ -134,6 +149,8 @@ Determine whether the line
 </me>
 intersects the plane <m>x+2y+3z = 19</m>, and if so, find the intersection.
 </p>
+</statement>
+<solution>
 <p>
 The parametric equations of the line are
 <me>
@@ -159,7 +176,7 @@ x = 1+4 = 5, \qquad y = 2+2 = 4, \qquad z = -2+4 = 2,
 </me>
 so there is one intersection point at <m>(5, 4, 2)</m>.
 </p>
-</statement>
+</solution>
 </example>
 
 <p>
@@ -167,6 +184,7 @@ We can also describe planes using direction vectors.
 </p>
 
 <definition xml:id="def-direction-vec-plane">
+  <title>(Direction vector for plane)</title>
 <statement>
 <p>
 A <term>direction vector</term> for a plane <m>\p</m> in <m>\R^3</m> is a nonzero vector 
@@ -239,6 +257,7 @@ The next definition summarises these calculations.
 </p>
 
 <definition xml:id="def-vec-para-plane">
+  <title>(Vector form of plane)</title>
 <statement>
 <p>
 The <term>vector form</term> of a plane <m>\p</m> is
@@ -288,11 +307,14 @@ non-collinear. Since <m>\vect{u}\times\vect{v}</m> is orthogonal to <m>\vect{u}<
 
 
 <example xml:id="ex-planes-all-forms">
+  <title>(Finding all forms of a plane)</title>
 <statement>
 <p>
 Find the vector form, parametric equations, normal form and general form for the plane <m>\p</m> 
 containing the points <m>P = (2,1, 0)</m>, <m>Q = (-1, 1, 2)</m> and <m>R = (4, 0, 2)</m>.
 </p>
+</statement>
+<solution>
 <p>
 We can take
 <md>
@@ -330,7 +352,7 @@ Therefore the normal form is
 </me>
 and the general form is <m>2x+10y+3z = 14</m>.
 </p>
-</statement>
+</solution>
 </example>
 
 </section>

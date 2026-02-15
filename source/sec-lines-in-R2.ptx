@@ -67,7 +67,7 @@ X \in \ell \amp  \iff \overrightarrow{PX} \text{ is parallel to } \ell       \\
 \amp  \iff \overrightarrow{PX} \cdot \vect{n} = 0
 </mrow>
 </md>
-(The symbol <m>\iff</m> stands for `if and only if'.) We also have <m>\overrightarrow{PX} = \overrightarrow{OX} - \overrightarrow{OP}</m>, so
+We also have <m>\overrightarrow{PX} = \overrightarrow{OX} - \overrightarrow{OP}</m>, so
 <md>
 <mrow>
 X \in \ell \amp  \iff (\vect{x} - \vect{p}) \cdot \vect{n} = 0          \\
@@ -79,6 +79,9 @@ The next definition summarises this calculation and gives the equation a name.
 </p>
 
 <definition xml:id="def-normal-form">
+  <title>(Normal form of line in <m>\R^2</m>)</title>
+  
+  
 <statement>
 <p>
 The <term>normal form</term> of the equation of a line <m>\ell</m> in <m>\R^2</m> is
@@ -108,6 +111,7 @@ which is <m>ax + by = ap_1 +bp_2</m>, or <m>ax + by = c</m> where
 </p>
 
 <definition xml:id="def-general-form">
+  <title>(General form of line in <m>\R^2</m>)</title>
 <statement>
 <p>
 The <term>general form</term> of the equation of a line <m>\ell</m> in <m>\R^2</m> is
@@ -129,10 +133,18 @@ coefficients. Any nonzero scalar multiple of <m>[3, -1]</m> would also be a norm
 </example>
 
 <example xml:id="ex-normal-and-general-form">
+  <title>(Finding normal and general forms in <m>\R^2</m>)</title>
+  
+  
 <statement>
 <p>
 Find the normal and general forms of the equation of a line through <m>(2, -1)</m> and perpendicular to 
-the vector <m>[3, 4]</m>. We take <m>\vect{n} = [3, 4]</m> and <m>P = (2, -1)</m>, so 
+the vector <m>[3, 4]</m>. 
+</p>
+</statement>
+<solution>
+  <p>
+    We take <m>\vect{n} = [3, 4]</m> and <m>P = (2, -1)</m>, so 
 <m>\vect{p} =[2, -1]</m>. We have
 <me>
 \vect{n}\cdot \vect{p} = [3, 4]\cdot [2, -1] = 6 - 4 = 2,
@@ -143,7 +155,7 @@ so the normal form is <m>[3, 4] \cdot [x, y] = [3, 4] \cdot [2, -1]</m>, which s
 </me>
 and the general form is <m>3x + 4y = 2</m>.
 </p>
-</statement>
+</solution>
 </example>
 
 <p>
@@ -175,6 +187,7 @@ line, instead of a vector normal to the line.
 </p>
 
 <definition xml:id="def-direction-vector">
+  <title>(Direction vector)</title>
 <statement>
 <p>
 A <term>direction vector</term> for a line <m>\ell</m> in <m>\R^2</m> is a nonzero vector 
@@ -201,6 +214,7 @@ This is summarised in the next definition.</p>
 
 
 <definition xml:id="def-vector-form">
+  <title>(Vector form of line in <m>\R^2</m>)</title>
 <statement>
 <p>The <term>vector form</term> of the equation of a line <m>\ell</m> in <m>\R^2</m> which passes 
 through a point <m>P</m> with position vector <m>\vect{p}</m>, and is parallel to a vector 
@@ -231,6 +245,7 @@ Comparing components gives <me>
 </p>
 
 <definition xml:id="def-parametric-eqs">
+  <title>(Parametric equations for line in <m>\R^2</m>)</title>
 <statement>
 <p>
 The <term>parametric equations</term> of a line in <m>\R^2</m> which passes through a point <m>P</m> 
@@ -283,10 +298,16 @@ in <xref ref="fig-finding_d"/>.
 </figure>
 
 <example xml:id="ex-vector-and-para-forms">
+  <title>(Finding vect form and para eqs in <m>\R^2</m>)</title>
 <statement>
 <p>
 Find the vector form and parametric equations for the line <m>\ell</m> through the points 
-<m>A= (1, 2)</m> and <m>B = (5, 7)</m>. We can take
+<m>A= (1, 2)</m> and <m>B = (5, 7)</m>. 
+</p>
+</statement>
+<solution>
+  <p>
+    We can take
 <md>
 <mrow>
 \vect{p} \amp  = \overrightarrow{OA} = [1, 2]                   \\
@@ -307,7 +328,7 @@ and parametric equations are
 \right. \qquad t\in\R.\
 </me>
 </p>
-</statement>
+</solution>
 </example>
 
 <p>
@@ -348,11 +369,15 @@ This observation can help us find <m>\vect{d}</m> if we know <m>\vect{n}</m>, or
 
 
 <example xml:id="ex-dir-vector">
+  <title>(Finding direction vector)</title>
+  
+  
 <statement>
 <p>
 Find a direction vector <m>\vect{d}</m> for the line with normal form <m>x + 2y = 5</m>.
 </p>
-
+</statement>
+<solution>
 <p>
 A normal vector is <m>\vect{n} = [1, 2]</m>. Let <m>\vect{d} = [d_1, d_2]</m>. We must have
 <me>
@@ -360,10 +385,13 @@ A normal vector is <m>\vect{n} = [1, 2]</m>. Let <m>\vect{d} = [d_1, d_2]</m>. W
 </me>
 so <m>d_1 = -2d_2</m>. Choosing <m>d_2 = 1</m>, a direction vector is <m>\vect{d} = [-2, 1]</m>.
 </p>
-</statement>
+</solution>
 </example>
 
 <example xml:id="ex-finding-normal-vector">
+  <title>(Finding normal vector)</title>
+  
+  
 <statement>
 <p>
 Find a normal vector for the line with parametric equations
@@ -375,10 +403,14 @@ Find a normal vector for the line with parametric equations
 \end{aligned}
 \right. \qquad t\in\R
 </me>.
+</p>
+</statement>
+<solution>
+  <p>
 A direction vector is <m>\vect{d} = [2, 3]</m>, so <m>\vect{n} = [-3, 2]</m> is a normal vector, 
 since <m>\vect{d}\cdot \vect{n} = 2(-3) + 2\cdot 3 = 0.</m>
 </p>
-</statement>
+</solution>
 </example>
 
 </section>

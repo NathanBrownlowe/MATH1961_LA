@@ -13,6 +13,9 @@ works for <m>\R^3</m> as well.
 
 
 <definition xml:id="def-vec-and-para-in-R3">
+  <title>(Vector form, papra eqs of lines in <m>\R^3</m>)</title>
+  
+  
 <statement>
 <p>
 Consider a line <m>\ell</m> in <m>\R^3</m> that passes through a point <m>P = (p_1, p_2, p_3)</m> and 
@@ -37,9 +40,16 @@ for <m>\ell</m> are
 </definition>
 
 <example xml:id="ex-vec-form-in-R3">
+  <title>(Finding a vector form)</title>
+  
+  
 <statement>
 <p>
-Find the vector form for the line that passes through the points <m>A = (1, 1, 3)</m> and <m>B = (2, 1, 5)</m>. 
+Find the vector form for the line that passes through the points <m>A = (1, 1, 3)</m> and <m>B = (2, 1, 5)</m>.
+</p>
+</statement>
+<solution>
+  <p>
 We take <m>\vect{p} = \overrightarrow{OA} = [1, 1, 3]</m> and 
 <m>\vect{d} = \overrightarrow{AB} = [2, 1, 5] - [1, 1, 3] = [1, 0, 2]</m>, 
 so the vector form is
@@ -47,7 +57,7 @@ so the vector form is
   [x, y,z] = [1, 1, 3] + t[1, 0, 2], \qquad t\in \R.
 </me>
 </p>
-</statement>
+</solution>
 </example>
 
 <remark xml:id="rem-no-gen-form-in-R3">
@@ -91,6 +101,9 @@ In <m>\R^3</m>, there is another possibility, which is called being skew.
 </p>
 
 <definition xml:id="def-skew-lines">
+  <title>(Skew lines)</title>
+  
+  
 <statement>
 <p>Two lines in <m>\R^n</m> are called <term>skew</term> if they do not intersect and are not 
 parallel.
@@ -137,6 +150,9 @@ parallel.
     </figure>
 
   <example xml:id="ex-not-skew">
+    <title>(Non skew lines)</title>
+    
+    
 <statement>
 <p>
 Show that the lines with the following vector forms are not skew:
@@ -146,14 +162,21 @@ Show that the lines with the following vector forms are not skew:
 \ell_2: \amp  \qquad \vect{x} = t[1, 2, 3], \qquad t\in \R
 </mrow>
 </md>.
+</p>
+</statement>
+<solution>
+  <p>
 Substituting <m>s = 0</m> into the vector form for <m>\ell_1</m> gives <m>\vect{x} = [0, 0, 0]</m>. 
 Substituting <m>t = 0</m> into the vector form for <m>\ell_2</m> gives <m>\vect{x} = [0, 0, 0]</m>. 
 Therefore the lines intersect at <m>(0, 0, 0)</m>, so they are not skew.
 </p>
-</statement>
+</solution>
 </example>
 
 <example xml:id="ex-determining-skew">
+  <title>(Skew or not?)</title>
+  
+  
 <statement>
 <p>
 Determine whether the lines with the following vector forms are skew
@@ -163,6 +186,10 @@ Determine whether the lines with the following vector forms are skew
 \ell_2: \amp  \qquad \vect{x} = [1, 2, 3] + t[1, -1, -2], \qquad t\in \R
 </mrow>
 </md>.
+</p>
+</statement>
+<solution>
+  <p>
 The lines are not parallel since the direction vectors <m>\vect{d}_1 = [1, 1, 1]</m> and 
 <m>\vect{d}_2 = [1, -1, 2]</m> are not parallel. To determine whether the lines intersect, we 
 try to equate their parametric equations:
@@ -185,7 +212,7 @@ Solving the first two equations gives <m>s = t=1</m>, but substituting this into
 gives <m>s + 2t = 3 \ne 5</m>. Therefore this system of equations has no solutions, so the lines do 
 not intersect. Therefore <m>\ell_1</m> and <m>\ell_2</m> are skew.
 </p>
-</statement>
+</solution>
 </example>
 
 </section>

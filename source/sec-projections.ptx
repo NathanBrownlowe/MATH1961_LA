@@ -166,7 +166,7 @@ This is illustrated by <xref ref="fig-proje1"/>. For <m>\vect{e}_2</m>,
 \begin{tikzpicture}[scale = 0.8]
     \draw [vector,->] (-2, 0) -- (4, 0) node [right] {$x$};
     \draw [vector,->] (0, -2) -- (0, 4) node [above] {$y$};
-    \draw [vector,->,ultra thick, red] (0, 0) -- (2, 3) node [right] {$\vect{u} = [2, 3]$};
+    \draw [vector,->,ultra thick, blue] (0, 0) -- (2, 3) node [right] {$\vect{u} = [2, 3]$};
     \draw [vector,->,ultra thick] (0, 0) -- (1, 0) node [below] {$\vect{e}_1$};
 
     \draw [vector,->,ultra thick, red] (0, 0) -- (2, 0) node [below, xshift = 1cm] {$\mathrm{proj}_{\vect{e}_1}\mathbf{u} = [2, 0]$};

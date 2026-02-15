@@ -328,12 +328,12 @@ The direction of <m>\vect{u} \times \vect{v}</m> is given by the right hand rule
 </li>
 </ol>
 </p>
-<figure xml:id="fig-rhr">
-<caption>The right hand rule</caption>
-<!--RHR pic needed-->
-</figure>
 </assemblage>
 
+<figure xml:id="fig-rhr">
+<caption>The right hand rule</caption>
+<image source="RHR-thumbs.png" width="70%"/>
+</figure>
 
 <p>
 Now that we know the direction of <m>\vect{u}\times \vect{v}</m>, we want to calculate its magnitude. 
